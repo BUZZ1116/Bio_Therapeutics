@@ -1,0 +1,2222 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISO 19011:2026 條款導讀細版 - 可鍵盤換頁 HTML</title>
+  <style>
+    body {
+      margin:0;
+      padding:10px 12px 30px;
+      overflow:auto;
+      background:#fafafa;
+      box-sizing:border-box;
+    }
+    @media (max-width: 900px) {
+      body {
+        padding:8px 8px 28px;
+      }
+    }
+  </style>
+<style>
+.kb-presentation-copyright{position:fixed;left:14px;bottom:6px;z-index:9999;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.9);color:#64748b;font:9px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;box-shadow:0 1px 4px rgba(15,23,42,.1);pointer-events:none}
+@media print{.kb-presentation-copyright{bottom:5mm;left:12mm;right:12mm;text-align:left;background:#fff;box-shadow:none}}
+</style>
+</head>
+<body>
+<!-- ISO 19011:2026 條款導讀細版：可貼入 Moodle HTML 原始碼模式。支援左右鍵、PageUp/PageDown、空白鍵、Home/End 換頁。 -->
+<div id="iso19011-2026-detail-deck" class="iso19011-deck" tabindex="0" aria-label="ISO 19011:2026 條款導讀細版投影片">
+  <style>
+    #iso19011-2026-detail-deck {
+      --ink:#111;
+      --muted:#555;
+      --soft:#f7f7f7;
+      --panel:#ededed;
+      --rule:#b8bcc4;
+      --accent:#ff6b35;
+      font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',Arial,sans-serif;
+      color:var(--ink);
+      background:#fafafa;
+      border:1px solid #ddd;
+      max-width:1120px;
+      margin:0 auto;
+      padding:18px;
+      outline:none;
+      box-sizing:border-box;
+    }
+    #iso19011-2026-detail-deck * {
+      box-sizing:border-box;
+    }
+    #iso19011-2026-detail-deck .deck-frame {
+      position:relative;
+      background:#fff;
+      min-height:min(650px, calc(100vh - 116px));
+      border:1px solid #d8d8d8;
+      overflow:visible;
+    }
+    #iso19011-2026-detail-deck .iso19011-slide {
+      display:none;
+      padding:34px;
+      min-height:min(582px, calc(100vh - 184px));
+    }
+    #iso19011-2026-detail-deck .iso19011-slide.is-active {
+      display:block;
+    }
+    #iso19011-2026-detail-deck .meta {
+      font-size:14px;
+      color:#666;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+    #iso19011-2026-detail-deck h2 {
+      font-size:32px;
+      line-height:1.2;
+      margin:0 0 8px 0;
+      font-weight:900;
+      letter-spacing:0;
+    }
+    #iso19011-2026-detail-deck h3 {
+      font-size:20px;
+      line-height:1.25;
+      margin:0 0 10px 0;
+      font-weight:850;
+      letter-spacing:0;
+    }
+    #iso19011-2026-detail-deck .subtitle {
+      font-size:19px;
+      line-height:1.45;
+      color:var(--muted);
+      margin:0 0 22px 0;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:16px;
+    }
+    #iso19011-2026-detail-deck .lead-strong {
+      font-size:22px;
+      line-height:1.55;
+      font-weight:800;
+      margin:0 0 22px 0;
+    }
+    #iso19011-2026-detail-deck .flow-track {
+      display:grid;
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:10px;
+      margin:0 0 20px 0;
+      padding:12px;
+      background:#f8fafc;
+      border:1px solid #d2d8e2;
+    }
+    #iso19011-2026-detail-deck .flow-step {
+      min-height:86px;
+      padding:12px;
+      border:1px solid #c7cfda;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      gap:10px;
+    }
+    #iso19011-2026-detail-deck .flow-step.is-current {
+      background:#e6e8ec;
+      border:2px solid #2f4d6f;
+      box-shadow:inset 0 0 0 1px #2f4d6f;
+    }
+    #iso19011-2026-detail-deck .flow-code {
+      width:44px;
+      height:34px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:2px solid #2f4d6f;
+      color:#2f4d6f;
+      background:#fff;
+      font-size:15px;
+      line-height:1;
+      font-weight:900;
+    }
+    #iso19011-2026-detail-deck .flow-label {
+      font-size:16px;
+      line-height:1.25;
+      font-weight:900;
+      color:#111;
+    }
+    #iso19011-2026-detail-deck .grid {
+      display:grid;
+      gap:14px;
+      margin:18px 0;
+    }
+    #iso19011-2026-detail-deck .grid.two {
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+    #iso19011-2026-detail-deck .grid.three {
+      grid-template-columns:1.05fr 1fr 1fr;
+    }
+    #iso19011-2026-detail-deck .card {
+      background:var(--soft);
+      border:1px solid var(--rule);
+      border-left:7px solid var(--accent);
+      padding:18px 20px;
+      min-width:0;
+    }
+    #iso19011-2026-detail-deck .card.dark {
+      background:#111;
+      color:#fff;
+      border-color:#111;
+      border-left-color:#111;
+    }
+    #iso19011-2026-detail-deck .card p,
+    #iso19011-2026-detail-deck .card li,
+    #iso19011-2026-detail-deck li {
+      font-size:16px;
+      line-height:1.62;
+      color:inherit;
+      margin:0;
+    }
+    #iso19011-2026-detail-deck ul {
+      margin:0 0 0 20px;
+      padding:0;
+    }
+    #iso19011-2026-detail-deck li + li {
+      margin-top:6px;
+    }
+    #iso19011-2026-detail-deck .callout {
+      margin-top:20px;
+      padding:16px 18px;
+      background:#111;
+      color:#fff;
+      font-size:18px;
+      line-height:1.55;
+      font-weight:700;
+    }
+    #iso19011-2026-detail-deck table {
+      width:100%;
+      border-collapse:collapse;
+      margin:18px 0;
+      font-size:15px;
+      background:#fff;
+    }
+    #iso19011-2026-detail-deck th {
+      background:#111;
+      color:#fff;
+      padding:10px;
+      text-align:left;
+      border:1px solid #111;
+      vertical-align:top;
+    }
+    #iso19011-2026-detail-deck td {
+      padding:9px 10px;
+      border:1px solid #c9c9c9;
+      vertical-align:top;
+      line-height:1.48;
+    }
+    #iso19011-2026-detail-deck td:first-child {
+      color:var(--accent);
+      font-weight:850;
+      width:130px;
+    }
+    #iso19011-2026-detail-deck tr:nth-child(even) td {
+      background:#f7f7f7;
+    }
+    #iso19011-2026-detail-deck .deck-controls {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:12px;
+    }
+    #iso19011-2026-detail-deck button {
+      border:1px solid #111;
+      background:#111;
+      color:#fff;
+      font-weight:800;
+      padding:8px 14px;
+      cursor:pointer;
+      font-size:14px;
+      font-family:inherit;
+      min-height:38px;
+    }
+    #iso19011-2026-detail-deck button.secondary {
+      background:#fff;
+      color:#111;
+    }
+    #iso19011-2026-detail-deck button:focus {
+      outline:3px solid var(--accent);
+      outline-offset:2px;
+    }
+    #iso19011-2026-detail-deck .status {
+      margin-left:auto;
+      font-size:14px;
+      color:#555;
+      font-weight:700;
+    }
+    #iso19011-2026-detail-deck .progress {
+      height:4px;
+      background:#ddd;
+      margin-top:12px;
+    }
+    #iso19011-2026-detail-deck .progress > div {
+      height:4px;
+      width:0.9804%;
+      background:var(--accent);
+      transition:width 160ms ease;
+    }
+    #iso19011-2026-detail-deck:fullscreen {
+      width:100vw;
+      height:100vh;
+      max-width:none;
+      margin:0;
+      padding:18px;
+      border:0;
+      overflow:auto;
+      background:#fbfbfa;
+    }
+    #iso19011-2026-detail-deck:fullscreen .deck-frame {
+      min-height:calc(100vh - 112px);
+    }
+    #iso19011-2026-detail-deck:fullscreen .iso19011-slide {
+      min-height:calc(100vh - 184px);
+    }
+    @media (max-width: 900px) {
+      #iso19011-2026-detail-deck {
+        padding:10px;
+      }
+      #iso19011-2026-detail-deck .deck-frame {
+        min-height:auto;
+      }
+      #iso19011-2026-detail-deck .iso19011-slide {
+        padding:22px;
+        min-height:auto;
+      }
+      #iso19011-2026-detail-deck h2 {
+        font-size:27px;
+      }
+      #iso19011-2026-detail-deck .subtitle {
+        font-size:18px;
+      }
+      #iso19011-2026-detail-deck .lead-strong {
+        font-size:19px;
+      }
+      #iso19011-2026-detail-deck .flow-track {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      #iso19011-2026-detail-deck .flow-step {
+        min-height:78px;
+      }
+      #iso19011-2026-detail-deck .grid.two,
+      #iso19011-2026-detail-deck .grid.three {
+        grid-template-columns:1fr;
+      }
+      #iso19011-2026-detail-deck table {
+        display:block;
+        overflow-x:auto;
+        white-space:normal;
+      }
+      #iso19011-2026-detail-deck .deck-controls {
+        flex-wrap:wrap;
+      }
+      #iso19011-2026-detail-deck .status {
+        width:100%;
+        margin-left:0;
+      }
+    }
+  </style>
+  <div class="deck-frame">
+<section class="iso19011-slide is-active" data-slide="1" aria-hidden="false">
+              <div class="meta">01 / 102 | 2026 聚焦</div>
+              <h2>新版優先掌握的變化</h2>
+              <p class="subtitle">遠端稽核方法、虛擬場所、ICT 與新興技術能力</p>
+              <div class="grid two">
+          <article class="card"><h3>遠端稽核正式納入方法選擇</h3><p>新版明確銜接 ISO/IEC TS 17012，要求遠端方法與現場方法一樣被規劃、評估、平衡使用。</p></article>
+          <article class="card"><h3>虛擬場所進入範圍與計畫</h3><p>稽核範圍、資訊存取與計畫細節要描述實體與虛擬位置，並確認證據可取得與可驗證。</p></article>
+          <article class="card"><h3>資訊安全與保密更前置</h3><p>從方案風險、稽核計畫、資訊存取到報告分發，都要考量資料保護、平台安全與保密安排。</p></article>
+          <article class="card"><h3>稽核員需理解技術工具</h3><p>能力要求納入 ICT 與新興技術，例如使用 AI 型評估工具或稽核新興技術流程時的適當性與後果。</p></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="2" aria-hidden="true">
+              <div class="meta">02 / 102 | 1</div>
+              <h2>1 適用範圍</h2>
+              <p class="subtitle">Scope</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>本文件提供管理系統稽核指引，涵蓋稽核原則、稽核方案管理、單次稽核執行，以及參與稽核過程人員的能力評估。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認本次稽核屬於管理系統稽核或可合理延伸使用。</li><li>分清楚 ISO 19011 是指引，不是被稽核管理系統的要求。</li><li>若用於其他稽核類型，先補足特定能力要求。</li><li>使用本指引時，應涵蓋稽核原則、稽核方案管理、管理系統稽核執行及相關人員能力評估。</li><li>對所有需要規劃、執行管理系統稽核或管理稽核方案的組織，均可依其狀況調整採用。</li><li>用於其他類型稽核時，應先明確該稽核特定能力與預期成果。</li></ul></article>
+        </div>
+        <div class="callout">現場問題：這次稽核究竟依什麼準則判定，而 ISO 19011 在其中扮演方法還是要求？</div>
+            </section>
+<section class="iso19011-slide" data-slide="3" aria-hidden="true">
+              <div class="meta">03 / 102 | 2</div>
+              <h2>2 規範性引用</h2>
+              <p class="subtitle">Normative references</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>本文件沒有規範性引用。正式符合性判定仍需回到適用的管理系統標準、法規、合約、政策或其他稽核準則。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>不要把 ISO 19011 條文直接當作受稽核者的不符合準則。</li><li>把稽核方法要求與管理系統要求分開記錄。</li><li>在報告中清楚標明每項發現對應的實際準則。</li><li>本文件沒有規範性引用，使用時不需要先套用其他引用文件。</li><li>稽核準則應由適用標準、政策、程序、法規、合約或其他要求決定。</li><li>引用 ISO 19011 時，應把它作為稽核方法與能力指引，而非受稽核者符合性準則。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="4" aria-hidden="true">
+              <div class="meta">04 / 102 | 3</div>
+              <h2>條款 3 術語與定義：稽核證據鏈</h2>
+              <p class="subtitle">Terms and definitions</p>
+              <table>
+          <tr><th>術語群</th><th>關鍵詞</th><th>導讀重點</th></tr>
+          <tr><td>稽核關係</td><td>3.1 audit、3.2 combined audit、3.3 joint audit、3.4 remote auditing method</td><td>確認是第一方、第二方、第三方、合併、聯合、現場、遠端或混合稽核。</td></tr>
+          <tr><td>方案與範圍</td><td>3.5 audit programme、3.6 audit scope、3.7 audit plan、3.8 audit criteria</td><td>把目的、邊界、活動安排與判定基準分開管理。</td></tr>
+          <tr><td>證據與結論</td><td>3.9 objective evidence、3.10 audit evidence、3.11 audit findings、3.12 audit conclusion</td><td>從可驗證資訊形成發現，再依目的與全部發現形成結論。</td></tr>
+          <tr><td>角色與能力</td><td>3.13 audit client、3.14 auditee、3.15 audit team、3.16 auditor、3.17 technical expert</td><td>分清楚委託者、受稽核者、稽核小組、稽核員與技術專家的權責。</td></tr>
+          <tr><td>管理系統語言</td><td>3.19 management system、3.20 risk、3.21 conformity、3.22 nonconformity、3.23 competence</td><td>用共同語言描述系統、風險、符合性與能力。</td></tr>
+        </table>
+        <div class="callout">課程口訣：先有準則，再有證據；證據形成發現，發現支持結論。</div>
+            </section>
+<section class="iso19011-slide" data-slide="5" aria-hidden="true">
+              <div class="meta">05 / 102 | 4.1</div>
+              <h2>4.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核原則讓稽核成為有效且可靠的管理工具，並讓不同稽核員在類似情況下能形成相近結論。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>把七項原則套用到方案、執行、報告與能力評估。</li><li>用原則檢查稽核活動是否可信。</li><li>在爭議時回到原則判斷。</li><li>稽核應支援管理政策與控制，並提供組織可用於改善績效的資訊。</li><li>遵循原則是形成相關且充分稽核結論的基本條件。</li><li>第 5 至第 7 章的所有指引，均應以七項稽核原則作為基礎。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="6" aria-hidden="true">
+              <div class="meta">06 / 102 | 4.2</div>
+              <h2>4.2 正直</h2>
+              <p class="subtitle">Integrity</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>正直是專業素養基礎，要求誠實、負責、具能力才承接稽核，並保持公平與不偏頗。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認自身能力與利益衝突。</li><li>面對壓力時維持判斷獨立。</li><li>只做可承擔的專業判斷。</li><li>稽核員與管理稽核方案者應以倫理、誠實及負責方式執行工作。</li><li>只有在具備能力時才承接稽核活動，避免超出自身能力界線。</li><li>執行稽核時應保持公平、不偏頗，並警覺可能影響判斷的因素。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="7" aria-hidden="true">
+              <div class="meta">07 / 102 | 4.3</div>
+              <h2>4.3 公平陳述</h2>
+              <p class="subtitle">Fair presentation</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>發現、結論與報告需真實、準確、客觀、及時、清楚且完整，重大障礙與未解決歧見也要揭露。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>不選擇性呈現證據。</li><li>記錄限制、障礙與歧見。</li><li>讓未到現場的人也能理解結論依據。</li><li>稽核發現、結論及報告應忠實且準確反映稽核活動。</li><li>稽核中的重大障礙，以及稽核小組與受稽核者尚未解決的不同意見，應納入報告。</li><li>稽核溝通應真實、準確、客觀、及時、清楚且完整。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="8" aria-hidden="true">
+              <div class="meta">08 / 102 | 4.4</div>
+              <h2>4.4 專業關注</h2>
+              <p class="subtitle">Due professional care</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>依工作重要性與受託信任程度投入相稱的勤勉與判斷力。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>事前理解準則、範圍、風險與背景。</li><li>對模糊證據追問與交叉查證。</li><li>記錄判斷依據與限制。</li><li>稽核員應依工作重要性及委託者與利害相關者信任程度，投入相稱注意。</li><li>專業關注的核心，是在各種稽核情況下作出有理由的判斷。</li><li>面對證據不足或情況模糊時，應以勤勉與判斷力決定下一步查核方式。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="9" aria-hidden="true">
+              <div class="meta">09 / 102 | 4.5</div>
+              <h2>4.5 保密性</h2>
+              <p class="subtitle">Confidentiality</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核取得的資訊不得不當使用，敏感或機密資訊需妥善處理。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認資訊使用、保存、傳輸與釋出規則。</li><li>避免把稽核資訊用於個人或不當利益。</li><li>遠端稽核時確認錄影、截圖與平台安全。</li><li>稽核員應審慎使用並保護稽核活動中取得的資訊。</li><li>稽核資訊不得被稽核員或委託者用於個人利益或損害受稽核者正當利益。</li><li>敏感或機密資訊的處理，是保密性原則的一部分。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="10" aria-hidden="true">
+              <div class="meta">10 / 102 | 4.6</div>
+              <h2>4.6 獨立性</h2>
+              <p class="subtitle">Independence</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>獨立性支撐稽核公正性與結論客觀性；內部稽核若無法完全獨立，也要降低偏見。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>避免稽核自己負責的活動。</li><li>揭露利益衝突與偏見來源。</li><li>用證據而非立場形成發現。</li><li>只要可行，稽核員應獨立於受稽核活動。</li><li>在所有情況下，稽核員都應避免偏見與利益衝突。</li><li>若內部稽核無法完全獨立於受稽核活動，仍應盡力移除偏見並促進客觀性。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="11" aria-hidden="true">
+              <div class="meta">11 / 102 | 4.7</div>
+              <h2>4.7 證據為憑</h2>
+              <p class="subtitle">Evidence-based approach</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>以可驗證證據形成可靠且可再現的結論，並承認稽核時間與資源有限造成抽樣限制。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>只接受可驗證資訊作為稽核證據。</li><li>說明抽樣方式與限制。</li><li>把結論信心與證據充分性連在一起。</li><li>稽核證據應可驗證，並以可取得資訊的樣本為基礎。</li><li>稽核是在有限期間與有限資源下執行，因此抽樣使用會影響結論可信度。</li><li>抽樣應被適當使用，並與對稽核結論可放置的信心連結。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="12" aria-hidden="true">
+              <div class="meta">12 / 102 | 4.8</div>
+              <h2>4.8 基於風險</h2>
+              <p class="subtitle">Risk-based approach</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>規劃、執行與報告應實質考量風險與機會，使稽核聚焦重要事項與方案目的。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>把高固有風險、低績效與重大變更列為焦點。</li><li>依風險調整方法、時間與抽樣。</li><li>報告結論連結風險與機會。</li><li>基於風險的方法應實質影響稽核方案規劃與實施。</li><li>單次稽核的規劃、執行及報告也應反映風險與機會。</li><li>稽核應聚焦於對委託者及方案目標具有重要性的事項。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="13" aria-hidden="true">
+              <div class="meta">13 / 102 | 5.1</div>
+              <h2>5.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核方案可包含一個或多個管理系統標準或其他要求，應依組織規模、複雜度、風險、機會與成熟度調整。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>建立可監督與可改進的方案。</li><li>把數位工具、資訊安全與保密需求納入全景考量。</li><li>優先配置資源到重要與高風險事項。</li><li>稽核方案可涵蓋一個或多個管理系統標準或其他要求，並可分開或合併執行。</li><li>方案範圍應依受稽核者規模、性質、系統功能、複雜度、風險、機會及成熟度決定。</li><li>方案應考量組織目標、內外部議題、利害相關者需求、數位工具、資訊安全及保密要求。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="14" aria-hidden="true">
+              <div class="meta">14 / 102 | 5.2</div>
+              <h2>5.2 建立稽核方案目標</h2>
+              <p class="subtitle">Establishing audit programme objectives</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step is-current">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案目標應連到委託者策略方向、組織全景、管理系統政策與目標。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依利害相關者、流程變更、供應鏈、績效與過去稽核設定目標。</li><li>確認目標足以引導規劃與執行。</li><li>將目標轉成可檢查的稽核焦點。</li><li>委託者應確保稽核方案目標已建立，並能引導稽核規劃及執行。</li><li>方案目標應與委託者策略方向、組織全景、管理系統政策及目標一致。</li><li>目標可包含評估組織全景判定、風險機會處理、符合法規要求、供應鏈信心及管理系統有效性。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="15" aria-hidden="true">
+              <div class="meta">15 / 102 | 5.3</div>
+              <h2>5.3 決定及評估方案風險與機會</h2>
+              <p class="subtitle">Determining and evaluating audit programme risks and opportunities</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案本身有規劃、資源、稽核小組、方法、溝通、紀錄、安全與受稽核者合作等風險，也有提升效率與效果的機會。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>辨識方案層級風險與機會。</li><li>向委託者呈現資源需求與應對措施。</li><li>評估遠端/現場方法是否能達成目標。</li><li>方案管理者應識別與受稽核者全景相關，且可能影響方案目標達成的風險與機會。</li><li>風險可能來自規劃、資源、稽核小組選擇、方法選擇、溝通、實施、文件資訊控制及監督改進。</li><li>機會可包含合併訪查、減少旅行、能力匹配，以及依資訊與通訊技術可用性選擇方法。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="16" aria-hidden="true">
+              <div class="meta">16 / 102 | 5.4</div>
+              <h2>5.4 建立稽核方案</h2>
+              <p class="subtitle">Establishing the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>建立方案需明確角色、責任、能力、範圍與資源，並取得委託者核准。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>定義方案管理流程。</li><li>配置角色與權限。</li><li>建立紀錄、溝通、爭議、跟催與改進安排。</li><li>建立方案時，應先明確方案管理者的角色、責任與權限。</li><li>方案應包含目標、範圍、準則、方法、排程、資源、稽核小組選派及紀錄控制。</li><li>方案建立完成後，方案管理者應向委託者請求核准。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="17" aria-hidden="true">
+              <div class="meta">17 / 102 | 5.4.1</div>
+              <h2>5.4.1 管理稽核方案人員之角色與責任</h2>
+              <p class="subtitle">Roles and responsibilities of individuals managing the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案管理者需維持方案完整性，避免不當影響，設定範圍，整合風險與機會，選派稽核小組並監督改進。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確保方案不受不當干預。</li><li>建立目標、範圍、準則、方法與稽核小組選派流程。</li><li>安排爭議、抱怨、跟催、報告與溝通。</li><li>方案管理者應確保方案完整性，並避免任何不當影響施加於方案。</li><li>方案範圍應依相關目標與已知限制建立。</li><li>方案管理者應建立爭議解決、抱怨處理、跟催、報告及外部/內部溝通流程。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="18" aria-hidden="true">
+              <div class="meta">18 / 102 | 5.4.2</div>
+              <h2>5.4.2 管理稽核方案人員之能力</h2>
+              <p class="subtitle">Competence of individuals managing the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案管理者需具備稽核原則、方法、管理系統標準、受稽核者全景、法規與必要 ICT 知識。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認方案管理者能力足以處理複雜方案。</li><li>需要時補強風險、專案、流程與 ICT 能力。</li><li>安排持續專業發展。</li><li>方案管理者應具備有效且高效率管理方案所需能力。</li><li>能力應涵蓋稽核原則、方法、流程、管理系統標準、參考文件及受稽核者全景。</li><li>必要時，應考量風險管理、專案管理、流程管理及資訊通訊技術相關知識。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="19" aria-hidden="true">
+              <div class="meta">19 / 102 | 5.4.3</div>
+              <h2>5.4.3 建立稽核方案範圍</h2>
+              <p class="subtitle">Establishing the scope of the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案範圍會受目標、準則、活動場所、前次結果、利害相關者關切、重大變更、ICT 可用性與營運風險影響。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>界定要稽核的場所、功能、活動與流程。</li><li>把遠端方法所需 ICT 條件納入範圍判斷。</li><li>依事件、變更與風險調整方案。</li><li>方案範圍可隨委託者或受稽核者提供的全景資訊而不同。</li><li>範圍因素包含稽核目的、每次稽核期間、稽核數量、報告方式及是否需要跟催。</li><li>資訊通訊技術可用性，特別是支援遠端稽核方法的能力，應納入方案範圍考量。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="20" aria-hidden="true">
+              <div class="meta">20 / 102 | 5.4.4</div>
+              <h2>5.4.4 決定稽核方案資源</h2>
+              <p class="subtitle">Determining audit programme resources</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>資源包含時間、預算、稽核方法、稽核員與技術專家、時區語言、遠端協作技術、文件資訊與場所要求。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>估算時間與成本。</li><li>確認能力與工具可用性。</li><li>安排旅行、存取、PPE、保密與安全需求。</li><li>資源決定應考量開發、實施、管理及改進稽核活動所需財務與時間。</li><li>應考量稽核方法、稽核員與技術專家可用性，以及符合目標所需能力。</li><li>遠端協作技術、時區語言、必要文件資訊、場所安全及個人防護要求，均屬資源考量。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="21" aria-hidden="true">
+              <div class="meta">21 / 102 | 5.5</div>
+              <h2>5.5 實施稽核方案</h2>
+              <p class="subtitle">Implementing the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案建立後，要把規劃轉成可執行的排程、單次稽核安排、稽核小組配置、紀錄管理與監督控制。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>溝通相關方案資訊。</li><li>排程並協調所有稽核活動。</li><li>執行中管理操作風險、機會與問題。</li><li>方案建立及資源決定後，應實施方案內所有活動的操作規劃與協調。</li><li>方案管理者應向相關方溝通方案中相關部分，包括涉及的風險與機會。</li><li>方案實施時應管理部署過程中的操作風險、機會及問題。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="22" aria-hidden="true">
+              <div class="meta">22 / 102 | 5.5.1</div>
+              <h2>5.5.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>實施階段要完成方案內所有活動的操作規劃與協調，並確保稽核依方案進行。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>定期告知相關方進度與風險。</li><li>定義每次稽核目的、範圍與準則。</li><li>監督紀錄管理與運作控制。</li><li>方案管理者應定義每次稽核目的、範圍及準則。</li><li>方案管理者應選擇稽核方法，並協調排程與其他相關活動。</li><li>方案管理者應確認稽核小組能力、提供資源、管理紀錄，並建立監督所需操作控制。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="23" aria-hidden="true">
+              <div class="meta">23 / 102 | 5.5.2</div>
+              <h2>5.5.2 定義單次稽核目的、範圍與準則</h2>
+              <p class="subtitle">Defining the objectives, scope and criteria for an individual audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>每次稽核都需明確目的、範圍與準則，並與整體方案目標一致。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>把目的轉成要達成的信心或評估結果。</li><li>界定場所、功能、活動、流程與期間。</li><li>確認準則來源與變更溝通。</li><li>每次稽核都應以明確的稽核目的、範圍及準則為基礎。</li><li>稽核目的可包含符合性、法規要求能力、有效性、改進機會、適切性及風險機會處理能力。</li><li>若目的、範圍或準則變更，必要時應修訂方案並向相關方溝通取得核准。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="24" aria-hidden="true">
+              <div class="meta">24 / 102 | 5.5.3</div>
+              <h2>5.5.3 選擇及決定稽核方法</h2>
+              <p class="subtitle">Selecting and determining auditing methods</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核可採現場、遠端或混合方法，方法選擇要能有效且有效率地達成目的，並考量風險與機會。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>評估現場/遠端/混合方法適切性。</li><li>在聯合或合併稽核時協調方法。</li><li>參考 Annex A 方法、訪談、文件審查、抽樣與觀察。</li><li>方案管理者應依稽核目的、範圍及準則，選擇能有效且有效率執行稽核的方法。</li><li>稽核可現場、遠端或混合執行，方法平衡應考量相關風險與機會。</li><li>聯合稽核或合併稽核時，相關方案管理者應協調方法、資源及規劃影響。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="25" aria-hidden="true">
+              <div class="meta">25 / 102 | 5.5.4</div>
+              <h2>5.5.4 選擇稽核小組成員</h2>
+              <p class="subtitle">Selecting audit team members</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核小組組成需覆蓋達成稽核目的所需整體能力；單一稽核員時也需履行稽核組組長職責。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>辨識所需能力。</li><li>選派稽核組組長、稽核員、技術專家與見習稽核員。</li><li>處理利益衝突、能力缺口與變更。</li><li>方案管理者應指派稽核組組長、稽核員及必要技術專家。</li><li>稽核小組選擇應考量達成單次稽核目的所需能力。</li><li>稽核小組組成應考量稽核複雜度、合併或聯合稽核、方法、客觀性、語言文化、時區及場所數量。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="26" aria-hidden="true">
+              <div class="meta">26 / 102 | 5.5.5</div>
+              <h2>5.5.5 指派單次稽核責任給稽核組組長</h2>
+              <p class="subtitle">Assigning responsibility for an individual audit to the audit team leader</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案管理者需在稽核前足夠時間指派稽核組組長，並提供目的、準則、範圍、方法、稽核小組、場所、資源與風險資訊。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>正式指派稽核組組長。</li><li>提供規劃所需資訊。</li><li>說明保密、資訊安全、健康安全、遠端存取與協調要求。</li><li>方案管理者應在稽核日期前足夠時間，將單次稽核責任指派給稽核組組長。</li><li>提供給稽核組組長的資訊應包含目的、準則、範圍、方法、稽核小組組成、場所、期間、資源及風險機會資訊。</li><li>指派資訊可包含語言、結論分發、保密、資訊安全、健康安全、遠端場所存取及與其他稽核協調要求。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="27" aria-hidden="true">
+              <div class="meta">27 / 102 | 5.5.6</div>
+              <h2>5.5.6 管理稽核方案結果</h2>
+              <p class="subtitle">Managing audit programme results</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案管理者需確認每次稽核目標達成、報告審查核准、行動有效性、報告分發與是否需要跟催。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>評估每次稽核成果。</li><li>審查報告是否符合範圍與目的。</li><li>將結論與良好實務適當分享。</li><li>方案管理者應評估每次稽核是否達成其目的。</li><li>方案管理者應審查並核准稽核報告，確認其符合稽核範圍及目的。</li><li>必要時，方案管理者應決定是否需要跟催稽核，並考量將結論與良好實務分享至組織其他區域。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="28" aria-hidden="true">
+              <div class="meta">28 / 102 | 5.5.7</div>
+              <h2>5.5.7 管理稽核相關紀錄</h2>
+              <p class="subtitle">Managing audit related records</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核紀錄需證明方案已實施，並處理資訊安全與保密需求。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>建立紀錄保存與保護流程。</li><li>保存方案、單次稽核與稽核小組能力相關紀錄。</li><li>確保紀錄細度足以證明目標達成。</li><li>方案管理者應確保稽核紀錄被產生、管理及保存，以證明方案實施。</li><li>紀錄管理流程應處理稽核紀錄相關資訊安全及保密需求。</li><li>紀錄可涵蓋方案排程、目標、風險機會、單次稽核計畫與報告、證據、發現及稽核小組能力資料。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="29" aria-hidden="true">
+              <div class="meta">29 / 102 | 5.6</div>
+              <h2>5.6 監督稽核方案</h2>
+              <p class="subtitle">Monitoring the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>監督確認排程、目標、稽核小組績效、計畫執行能力、回饋與文件資訊是否充分。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>追蹤排程與目標達成。</li><li>蒐集委託者、受稽核者、稽核小組與技術專家回饋。</li><li>依變更、不符合、成熟度或利益衝突調整方案。</li><li>方案管理者應評估稽核排程是否被遵守，以及方案目標是否達成。</li><li>監督應包含稽核組組長、稽核員及技術專家績效，以及稽核小組執行計畫能力。</li><li>若稽核發現、受稽核者成熟度、方案有效性、範圍、要求、供應鏈、利益衝突或委託者要求變更，可能需修訂方案。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="30" aria-hidden="true">
+              <div class="meta">30 / 102 | 5.7</div>
+              <h2>5.7 審查及改進稽核方案</h2>
+              <p class="subtitle">Reviewing and improving the audit programme</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">5.2</span>
+              <span class="flow-label">方案目標</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.3</span>
+              <span class="flow-label">風險/機會</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.4</span>
+              <span class="flow-label">建立方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.5</span>
+              <span class="flow-label">實施方案</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5.6</span>
+              <span class="flow-label">監督</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5.7</span>
+              <span class="flow-label">審查改進</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>方案審查確認目標是否達成，並將經驗教訓、趨勢、新方法與資訊安全議題轉為改進。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>審查整體實施結果。</li><li>識別改進機會與必要變更。</li><li>向委託者及相關方報告審查結果。</li><li>方案管理者及委託者應審查方案，以評估其目標是否達成。</li><li>方案審查的經驗教訓應作為方案改進輸入。</li><li>審查應考量監督結果與趨勢、方案流程符合性、利害相關者需求變化、新稽核方法、新評估方法及資訊安全保密議題。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="31" aria-hidden="true">
+              <div class="meta">31 / 102 | 6.1</div>
+              <h2>6.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>條款 6 說明特定稽核的準備與執行，適用程度取決於單次稽核目的與範圍。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依目的與範圍裁剪活動。</li><li>維持從啟動到完成的責任鏈。</li><li>必要時調整活動順序。</li><li>條款 6 的適用程度取決於特定稽核目的與範圍。</li><li>典型稽核活動可依受稽核者、流程及特定稽核情況調整。</li><li>單次稽核應作為稽核方案的一部分進行準備與執行。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="32" aria-hidden="true">
+              <div class="meta">32 / 102 | 6.2</div>
+              <h2>6.2 啟動稽核</h2>
+              <p class="subtitle">Initiating the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step is-current">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>啟動階段確認責任、聯絡、授權、資訊、安排與可行性，讓稽核能合理開始。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認稽核組組長責任。</li><li>與受稽核者建立聯絡。</li><li>評估可行性並處理替代方案。</li><li>啟動稽核時，應確認單次稽核責任仍由指定稽核組組長負責直到完成。</li><li>啟動步驟應依受稽核者、流程及稽核情況調整順序。</li><li>啟動階段應確保有足夠條件可支持稽核目的達成。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="33" aria-hidden="true">
+              <div class="meta">33 / 102 | 6.2.1</div>
+              <h2>6.2.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step is-current">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核組組長對單次稽核執行負責，直到稽核完成；啟動步驟順序可依情況調整。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認稽核組組長已接收任務。</li><li>判斷哪些啟動活動需提前或合併。</li><li>保留啟動決策紀錄。</li><li>啟動稽核時，稽核組組長的責任應自指派後延續至稽核完成。</li><li>圖示流程中的啟動步驟可被考量，但不一定固定順序。</li><li>順序調整應依受稽核者、流程及特定稽核情況決定。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="34" aria-hidden="true">
+              <div class="meta">34 / 102 | 6.2.2</div>
+              <h2>6.2.2 與受稽核者建立聯絡</h2>
+              <p class="subtitle">Establishing contact with the auditee</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step is-current">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>聯絡目的在確認溝通管道、稽核權限、目的範圍準則方法、稽核小組組成、資訊需求、保密處理與場所安排。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認授權與聯絡窗口。</li><li>請求規劃所需資訊與風險機會資料。</li><li>安排存取、健康安全、保密、導引、觀察者與解決稽核小組組成議題。</li><li>稽核組組長應在適當時間內確保與受稽核者建立聯絡。</li><li>聯絡應確認溝通管道、稽核權限、目的、範圍、準則、方法及稽核小組組成。</li><li>聯絡時應請求規劃資訊，包括受稽核者已識別的風險機會及其處理方式。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="35" aria-hidden="true">
+              <div class="meta">35 / 102 | 6.2.3</div>
+              <h2>6.2.3 決定稽核可行性</h2>
+              <p class="subtitle">Determining the feasibility of the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step is-current">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>可行性評估提供合理信心，確認稽核目的能被達成；若不可行需提出替代方案。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認資訊、合作、時間與資源充分。</li><li>評估地方、區域或全球事件影響。</li><li>遠端稽核時確認 ICT 存取與可用性。</li><li>可行性評估應提供合理信心，確認稽核目的可以達成。</li><li>評估因素包含規劃與執行所需資訊、受稽核者合作、時間及其他資源。</li><li>當稽核不可行時，應與受稽核者協議後，向委託者提出替代方案。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="36" aria-hidden="true">
+              <div class="meta">36 / 102 | 6.3</div>
+              <h2>6.3 準備稽核活動</h2>
+              <p class="subtitle">Preparing auditing activities</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>準備階段把文件資訊、風險導向規劃、稽核小組分工與工作文件連成可執行計畫。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>審查文件資訊。</li><li>建立風險導向稽核計畫。</li><li>分派工作並準備檢核表、抽樣與紀錄工具。</li><li>準備活動應以文件化資訊審查、風險導向規劃、稽核小組分工及工作文件為核心。</li><li>準備深度應反映稽核目的、範圍、準則及受稽核組織全景。</li><li>準備工作應保持彈性，因為稽核中取得的新資訊可能改變活動安排。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="37" aria-hidden="true">
+              <div class="meta">37 / 102 | 6.3.1</div>
+              <h2>6.3.1 執行文件化資訊審查</h2>
+              <p class="subtitle">Performing the review of documented information</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>審查管理系統文件與紀錄，以了解營運、固有風險、稽核準則與可能關切區域。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>蒐集背景資訊。</li><li>初步判斷文件化管理系統與準則的關係。</li><li>注意缺漏、衝突與範圍不一致。</li><li>稽核小組成員應審查相關管理系統文件化資訊，以了解受稽核者營運與固有風險。</li><li>審查目的包含準備稽核活動及適用工作文件。</li><li>審查應建立文件化資訊範圍概觀，以發現潛在符合性、缺漏、遺漏或衝突。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="38" aria-hidden="true">
+              <div class="meta">38 / 102 | 6.3.2</div>
+              <h2>6.3.2 稽核規劃</h2>
+              <p class="subtitle">Audit planning</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核計畫要讓委託者、稽核小組與受稽核者對稽核執行方式有共同理解，並保留彈性因應進展。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>連結目的、範圍與準則。</li><li>納入風險、機會、地點、方法、角色與資源。</li><li>將計畫提交並解決分歧。</li><li>稽核組組長應依稽核方案資訊及受稽核者文件化資訊規劃稽核。</li><li>計畫應促成有效率的稽核活動排程與協調，以有效達成稽核目的。</li><li>計畫詳細程度應反映稽核範圍與複雜度，且足夠彈性以允許稽核進展中的必要變更。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="39" aria-hidden="true">
+              <div class="meta">39 / 102 | 6.3.2.1</div>
+              <h2>6.3.2.1 風險導向規劃</h2>
+              <p class="subtitle">Risk-based approach to planning</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核組組長應以稽核方案資訊與受稽核者提供的文件為基礎，採風險導向規劃稽核。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依流程複雜度、客訴、過去發現與環境變更設定焦點。</li><li>考量抽樣、規劃失效風險、稽核效率機會與對受稽核者的風險。</li><li>合併與聯合稽核要注意流程互動與稽核小組協調。</li><li>風險導向規劃可依產品或流程複雜度、客訴、過去發現及法規或營運變更設定稽核焦點。</li><li>稽核組組長應考量稽核小組組成與整體能力，以及適當抽樣技術。</li><li>規劃時也應考量低效規劃對稽核目的造成的風險，以及稽核對受稽核者造成的風險。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="40" aria-hidden="true">
+              <div class="meta">40 / 102 | 6.3.2.2</div>
+              <h2>6.3.2.2 稽核計畫細節</h2>
+              <p class="subtitle">Audit planning details</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>計畫應涵蓋目的、範圍、準則、實體與虛擬場所、日期時間、方法、角色、資源、保密與資訊安全等。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>列明實體與虛擬位置。</li><li>確認熟悉場所或 ICT 的安排。</li><li>規劃報告內容、物流、溝通、跟催與聯合稽核協調。</li><li>稽核計畫應處理目的、範圍、準則、參考文件、實體與虛擬場所、日期、時間及活動期間。</li><li>計畫應包含稽核方法、抽樣程度、稽核小組成員角色，以及導引、觀察者或翻譯角色。</li><li>計畫還應考量保密、資訊安全、物流、溝通、後續活動及與其他稽核活動的協調。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="41" aria-hidden="true">
+              <div class="meta">41 / 102 | 6.3.3</div>
+              <h2>6.3.3 指派稽核小組工作</h2>
+              <p class="subtitle">Assigning work to the audit team</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核組組長應依能力、客觀性、資源效率與角色分工，分派流程、活動、功能或場所。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依成員能力分派任務。</li><li>安排稽核小組會議調整工作。</li><li>讓見習稽核員與技術專家角色清楚。</li><li>稽核組組長應與稽核小組協商，將流程、活動、功能或場所分派給成員。</li><li>分派應考量稽核員能力、客觀性、資源有效使用，以及稽核員、見習稽核員與技術專家不同角色。</li><li>稽核小組會議可用於分派工作及決定必要變更，確保稽核目的達成。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="42" aria-hidden="true">
+              <div class="meta">42 / 102 | 6.3.4</div>
+              <h2>6.3.4 準備稽核文件化資訊</h2>
+              <p class="subtitle">Preparing documented information for the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核小組成員需為各自任務準備工作文件，例如檢核表、抽樣細節與影音資訊，且不得限制稽核活動彈性。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>準備檢核表與抽樣計畫。</li><li>保護含機密或專有資訊的文件與影像。</li><li>保留至稽核完成或依方案要求保存。</li><li>稽核小組成員應蒐集並審查與其任務相關資訊，並準備適當媒介的稽核文件化資訊。</li><li>工作文件可包含檢核表、抽樣細節及影音資訊。</li><li>工作文件不應限制稽核活動範圍，因為活動可能依稽核中取得資訊而變更。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="43" aria-hidden="true">
+              <div class="meta">43 / 102 | 6.4</div>
+              <h2>6.4 執行稽核活動</h2>
+              <p class="subtitle">Conducting auditing activities</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>執行階段通常依序進行，但可依特定情況調整；活動之間會相互依賴。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依計畫進行並保留彈性。</li><li>持續評估證據與目的達成。</li><li>必要時變更計畫並記錄。</li><li>稽核活動通常依流程進行，但可為符合特定稽核情況而調整。</li><li>稽核活動可並行執行，且可依先前稽核活動結果而定。</li><li>稽核小組應持續使活動安排與稽核目的、範圍及證據需求保持一致。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="44" aria-hidden="true">
+              <div class="meta">44 / 102 | 6.4.1</div>
+              <h2>6.4.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核活動通常按既定順序執行，但可依特定稽核情況調整，且活動可並行或依前一活動結果而定。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>不要把流程當成僵硬順序。</li><li>用稽核目的決定活動調整。</li><li>記錄調整原因與影響。</li><li>稽核活動通常按照既定順序進行，但該順序不是固定要求。</li><li>活動順序可依特定稽核情況調整。</li><li>部分稽核活動可以同時進行，也可能取決於前一項活動結果。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="45" aria-hidden="true">
+              <div class="meta">45 / 102 | 6.4.2</div>
+              <h2>6.4.2 指派導引與觀察者角色及責任</h2>
+              <p class="subtitle">Assigning the roles and responsibilities of guides and observers</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>導引與觀察者可陪同稽核小組，但不得影響或干擾稽核；必要時稽核組組長可限制其參與。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認導引/觀察者核准與角色。</li><li>管理存取、健康安全、環境、安全與保密安排。</li><li>確保導引只協助，不替受稽核者回答或影響證據。</li><li>導引與觀察者須取得稽核組組長、委託者或受稽核者必要核准後才能陪同稽核小組。</li><li>導引與觀察者不得影響或干擾稽核進行；若無法確保，稽核組組長可拒絕其參與部分活動。</li><li>導引應依稽核組組長或被指派稽核員要求，協助安排訪談、進入場所、遵守安全保密規則及必要時協助蒐集資訊。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="46" aria-hidden="true">
+              <div class="meta">46 / 102 | 6.4.3</div>
+              <h2>6.4.3 舉行起始會議</h2>
+              <p class="subtitle">Conducting the opening meeting</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>起始會議確認各方同意稽核計畫、介紹稽核小組與角色，並確認所有稽核活動可執行。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認目的、範圍、準則、計畫、會議時間與溝通管道。</li><li>說明抽樣、保密、資訊安全、場所規則與發現報告方式。</li><li>依受稽核者熟悉程度調整正式程度。</li><li>起始會議目的在確認所有參與者同意稽核計畫，介紹稽核小組角色，並確認計畫活動可執行。</li><li>會議正式程度應依受稽核者對稽核流程的熟悉程度調整。</li><li>起始會議應說明目的、範圍、準則、計畫、溝通管道、語言、抽樣、資源、保密、資訊安全及場所安排。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="47" aria-hidden="true">
+              <div class="meta">47 / 102 | 6.4.4</div>
+              <h2>6.4.4 稽核期間溝通</h2>
+              <p class="subtitle">Communicating during the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核期間需安排稽核小組內部、受稽核者、委託者與可能外部相關方的正式溝通，重大風險需即時通報。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>定期交換資訊、評估進度與調整分工。</li><li>向受稽核者與委託者回報重大發現與關切。</li><li>若目的不可達成，提出變更、縮減或終止建議。</li><li>稽核期間可能需要正式安排稽核小組內部、受稽核者、委託者及外部相關方之間的溝通。</li><li>稽核小組應定期交換資訊、評估進度，並視需要重新分派工作。</li><li>若證據顯示稽核目的無法達成，稽核組組長應向相關方說明理由並決定適當行動。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="48" aria-hidden="true">
+              <div class="meta">48 / 102 | 6.4.5</div>
+              <h2>6.4.5 提供稽核資訊存取</h2>
+              <p class="subtitle">Providing access to audit information</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核方法取決於目的、範圍、準則、期間與資訊所在位置；資訊可位於實體或虛擬場所。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認資訊在哪裡建立、使用、儲存與取得。</li><li>決定存取時間、地點與方法。</li><li>必要時在稽核中調整方法。</li><li>稽核方法取決於稽核目的、範圍、準則、期間及資訊所在位置。</li><li>資訊所在位置可能是實體場所，也可能是虛擬場所。</li><li>何時、何地及如何取得資訊，對稽核至關重要，且不取決於資訊建立、使用或儲存之處。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="49" aria-hidden="true">
+              <div class="meta">49 / 102 | 6.4.6</div>
+              <h2>6.4.6 稽核中審查文件化資訊</h2>
+              <p class="subtitle">Reviewing documented information while conducting the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核過程中的文件審查用來確認管理系統文件與準則的符合性，並支援其他稽核活動。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>將文件審查與訪談、觀察結合。</li><li>若無法在計畫時間內取得適當文件，通知方案管理者與受稽核者。</li><li>判斷是否續行或暫停稽核。</li><li>稽核中應審查受稽核者相關文件化資訊，以確認文件層面的管理系統與準則符合情形。</li><li>文件審查也用於蒐集支援稽核活動的資訊。</li><li>若計畫時間內無法提供足夠文件化資訊，稽核組組長應通知方案管理者與受稽核者，並決定續行或暫停。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="50" aria-hidden="true">
+              <div class="meta">50 / 102 | 6.4.7</div>
+              <h2>6.4.7 蒐集及驗證資訊</h2>
+              <p class="subtitle">Collecting and verifying information</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>與目的、範圍、準則相關的資訊應透過適當抽樣蒐集並盡可能驗證，只有可被某種程度驗證者才能成為稽核證據。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>蒐集訪談、觀察與文件資訊。</li><li>評估資訊可驗證程度與可依賴程度。</li><li>記錄支持發現的證據與新風險/機會。</li><li>稽核期間應蒐集與目的、範圍及準則相關的資訊，包括功能、活動及流程介面資訊。</li><li>資訊應透過適當抽樣取得，並盡可能驗證。</li><li>若驗證程度低，稽核員應用專業判斷決定可依賴程度，且支持發現的證據應被記錄。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="51" aria-hidden="true">
+              <div class="meta">51 / 102 | 6.4.8</div>
+              <h2>6.4.8 產生稽核發現</h2>
+              <p class="subtitle">Generating the audit findings</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核證據應對照準則形成發現，可呈現符合、不符合、良好實務、改進機會或建議。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>記錄不符合與支持證據。</li><li>若分級不符合，先定義並溝通分級準則。</li><li>與受稽核者確認證據準確且不符合被理解。</li><li>稽核證據應對照稽核準則評估，以決定稽核發現。</li><li>發現可呈現符合或不符合，也可包含良好實務、改進機會及建議。</li><li>不符合及其支持證據應被記錄，並與受稽核者確認證據準確且不符合已被理解。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="52" aria-hidden="true">
+              <div class="meta">52 / 102 | 6.4.9</div>
+              <h2>6.4.9 決定稽核結論</h2>
+              <p class="subtitle">Determining the audit conclusions</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核結論應綜合發現、目的、範圍、準則與不確定性，必要時形成改進或後續稽核建議。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>在結束會議前稽核小組內部確認發現與結論。</li><li>考量抽樣與不確定性。</li><li>避免建議影響公正性。</li><li>稽核小組應在結束會議前共同審查發現及其他資訊，並對照稽核目的。</li><li>稽核小組應考量稽核過程固有不確定性後同意稽核結論。</li><li>若稽核計畫要求，可準備改進建議與跟催活動討論。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="53" aria-hidden="true">
+              <div class="meta">53 / 102 | 6.4.9.1</div>
+              <h2>6.4.9.1 準備結束會議</h2>
+              <p class="subtitle">Preparing for the closing meeting</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核小組需在結束會議前審查發現與其他資訊，對照稽核目的，並一致同意結論。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>彙整所有發現。</li><li>討論不確定性與抽樣限制。</li><li>準備建議與跟催活動。</li><li>結束會議前，稽核小組應審查所有稽核發現及其他適當資訊。</li><li>稽核小組應在考量稽核過程不確定性後，就稽核結論達成一致。</li><li>若計畫指定，應準備建議並討論稽核跟催活動。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="54" aria-hidden="true">
+              <div class="meta">54 / 102 | 6.4.9.2</div>
+              <h2>6.4.9.2 決定稽核結論內容</h2>
+              <p class="subtitle">Determining the content of the audit conclusions</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>結論應涵蓋符合程度、管理系統強健性、目的達成、範圍覆蓋、準則履行，以及跨區域或前次稽核趨勢。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>評估管理系統達成預期結果與處理風險的有效性。</li><li>確認目的、範圍與準則是否被充分覆蓋。</li><li>辨識趨勢與未來稽核方向。</li><li>稽核結論應處理符合程度及管理系統強健性，包括預期結果達成、風險識別及風險處理有效性。</li><li>結論應涵蓋管理系統有效實施、維持與改進。</li><li>結論也可用於辨識跨區域、聯合稽核或前次稽核中相似發現所形成的趨勢。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="55" aria-hidden="true">
+              <div class="meta">55 / 102 | 6.4.10</div>
+              <h2>6.4.10 舉行結束會議</h2>
+              <p class="subtitle">Conducting the closing meeting</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>結束會議由稽核組組長主持，向高階管理與相關責任者呈現發現與結論，並說明信心限制、處理流程與跟催。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>說明抽樣限制與可靠度影響因素。</li><li>確認發現被理解與承認。</li><li>記錄未解決歧見與跟催安排。</li><li>結束會議應由稽核組組長主持，並向受稽核者高階管理及相關責任者呈現發現與結論。</li><li>稽核組組長應說明可能降低稽核結論信心的情況，以及行動計畫時限安排。</li><li>結束會議應說明抽樣限制、報告方法、發現處理程序、不處理後果、跟催活動及未解決歧見。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="56" aria-hidden="true">
+              <div class="meta">56 / 102 | 6.5</div>
+              <h2>6.5 準備及分發稽核報告</h2>
+              <p class="subtitle">Preparing and distributing the audit report</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核報告需完整、準確、簡潔且清楚，並依方案規定分發與保護。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依方案報告結論。</li><li>包含必要資訊與抽樣限制聲明。</li><li>確保分發對象與保密措施正確。</li><li>稽核組組長應依稽核方案報告稽核結論。</li><li>稽核報告應完整、準確、簡潔且清楚。</li><li>報告分發及接受應依稽核方案或稽核計畫所定要求辦理。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="57" aria-hidden="true">
+              <div class="meta">57 / 102 | 6.5.1</div>
+              <h2>6.5.1 準備稽核報告</h2>
+              <p class="subtitle">Preparing the audit report</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>報告需記錄目的、範圍、委託者、稽核小組、受稽核者參與者、日期場所、準則、發現、證據、結論、符合程度與未解決歧見。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確保報告可追溯到證據與準則。</li><li>說明未涵蓋區域、障礙、證據可用性與保密限制。</li><li>不要加入未在稽核或結束會議中提出的不符合。</li><li>報告應包含或引用目的、範圍、委託者、稽核小組、受稽核者參與者、日期場所、準則、發現、證據及結論。</li><li>報告應陳述準則達成程度及抽樣限制，並記錄未解決不同意見。</li><li>未在稽核或結束會議中提出並討論的不符合，不應納入報告。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="58" aria-hidden="true">
+              <div class="meta">58 / 102 | 6.5.2</div>
+              <h2>6.5.2 分發稽核報告</h2>
+              <p class="subtitle">Distributing the audit report</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>報告應在約定期間內發出；若延遲需告知原因，並依方案審查、接受及分發給指定相關方。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>追蹤報告發行期限。</li><li>延遲時通知受稽核者與方案管理者。</li><li>分發時採取保密措施。</li><li>報告應在約定期間內發出；延遲時應向受稽核者及方案管理者溝通原因。</li><li>報告應依稽核方案完成日期、審查及必要接受。</li><li>報告分發對象應是方案或計畫定義的相關方，且應採取保密措施。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="59" aria-hidden="true">
+              <div class="meta">59 / 102 | 6.6</div>
+              <h2>6.6 完成稽核</h2>
+              <p class="subtitle">Completing the audit</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>完成所有計畫稽核活動或依委託者約定後，稽核才算完成；文件資訊依約定保存或處置。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認所有活動已完成或已有替代約定。</li><li>依要求保存或處置稽核文件。</li><li>未經核准不得揭露稽核資訊或報告。</li><li>完成所有計畫稽核活動，或依委託者另行約定後，稽核才算完成。</li><li>稽核文件化資訊應依參與方約定、稽核方案及適用要求保存或處置。</li><li>未經委託者及必要時受稽核者明確核准，不應向其他方揭露稽核資訊或報告。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="60" aria-hidden="true">
+              <div class="meta">60 / 102 | 6.7</div>
+              <h2>6.7 執行稽核跟催</h2>
+              <p class="subtitle">Conducting the audit follow-up</p>
+              <div class="flow-track" aria-label="章節流程"><div class="flow-step">
+              <span class="flow-code">6.2</span>
+              <span class="flow-label">啟動</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.3</span>
+              <span class="flow-label">準備</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.4</span>
+              <span class="flow-label">執行</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.5</span>
+              <span class="flow-label">報告</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6.6</span>
+              <span class="flow-label">完成</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6.7</span>
+              <span class="flow-label">跟催</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核結果可能導致更正、矯正措施或改進機會，通常由受稽核者決定並執行，其完成與有效性需被驗證。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認行動期限與責任。</li><li>追蹤狀態並驗證完成與有效性。</li><li>將結果回報方案管理者與委託者管理審查。</li><li>稽核結果可指出需要更正、矯正措施或改進機會。</li><li>這些行動通常由受稽核者在約定期間內決定並執行。</li><li>行動完成及有效性應被驗證，且結果應回報方案管理者及委託者供管理審查使用。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="61" aria-hidden="true">
+              <div class="meta">61 / 102 | 7.1</div>
+              <h2>7.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核過程信心取決於稽核員與稽核組組長能力；評估過程需客觀、一致、公平且可靠。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>決定所需能力。</li><li>建立評估準則。</li><li>選擇方法並執行評估。</li><li>能力評估應定期進行，並考量個人行為及運用知識技能達成預期結果的能力。</li><li>評估過程應依稽核方案需求及目標進行規劃、實施及文件化。</li><li>評估結果應支援稽核小組成員選派、能力提升需求判定及稽核員持續績效評估。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="62" aria-hidden="true">
+              <div class="meta">62 / 102 | 7.2</div>
+              <h2>7.2 決定稽核員能力</h2>
+              <p class="subtitle">Determining auditor competence</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員能力需依組織、方法、領域、系統複雜度、風險機會、方案範圍與不確定性判定。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>把能力需求對照稽核目的。</li><li>確認個人行為與知識技能。</li><li>必要時以稽核小組整體能力與技術專家補足。</li><li>判定能力時，應考量組織規模、性質、複雜度、產品、服務及流程。</li><li>應考量稽核方法，包括用於促成稽核或稽核新興技術流程的新興技術。</li><li>應考量管理系統領域、系統複雜度、風險與機會評估方法、方案目的範圍及目的達成不確定性。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="63" aria-hidden="true">
+              <div class="meta">63 / 102 | 7.2.1</div>
+              <h2>7.2.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>判定能力時應考量組織規模與複雜度、稽核方法、新興技術、管理系統領域、風險機會與其他要求。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認方法與技術工具所需能力。</li><li>納入稽核目的不確定性。</li><li>對照 7.2.3 知識技能。</li><li>必要能力應與稽核員要執行或參與的稽核相匹配。</li><li>能力判定應涵蓋稽核方法與新興技術應用。</li><li>能力資訊應與 7.2.3 所列知識及技能相互對照。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="64" aria-hidden="true">
+              <div class="meta">64 / 102 | 7.2.2</div>
+              <h2>7.2.2 個人行為</h2>
+              <p class="subtitle">Personal behaviour</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員應具備能支撐條款 4 原則的專業行為，例如倫理、開放心態、外交手腕、觀察力、適應性、果斷與協作。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>在選派與評估中納入行為。</li><li>觀察稽核現場互動。</li><li>用回饋與見證稽核確認行為穩定性。</li><li>稽核員應展現符合稽核原則的專業行為。</li><li>期望行為包含倫理、開放心態、外交手腕、觀察力、感知力、適應性、堅定及果斷。</li><li>期望行為也包含自立、願意改進、文化敏感及與稽核小組和受稽核者有效協作。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="65" aria-hidden="true">
+              <div class="meta">65 / 102 | 7.2.3</div>
+              <h2>7.2.3 知識與技能</h2>
+              <p class="subtitle">Knowledge and skills</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員需具備達成預期結果的通用能力，以及特定領域與產業知識；稽核組組長另需領導能力。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認通用與領域能力。</li><li>安排技術專家或補訓。</li><li>讓能力需求與稽核範圍匹配。</li><li>稽核員應具備達成預期稽核結果所需知識與技能。</li><li>稽核員應具備通用能力，以及領域與產業特定知識技能。</li><li>稽核組組長應具備額外知識技能，以提供稽核小組領導。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="66" aria-hidden="true">
+              <div class="meta">66 / 102 | 7.2.3.1</div>
+              <h2>7.2.3.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員需具備執行預期稽核所需知識技能，以及通用與領域/產業特定能力。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認每位稽核員角色所需能力。</li><li>稽核組組長需另外具備帶領稽核小組能力。</li><li>避免要求每個人都相同，但稽核小組整體要足夠。</li><li>稽核員能力應涵蓋執行其預期稽核所需知識與技能。</li><li>通用能力與領域/產業特定能力都應被考量。</li><li>稽核組組長除一般稽核員能力外，還需具備領導稽核小組所需額外能力。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="67" aria-hidden="true">
+              <div class="meta">67 / 102 | 7.2.3.2</div>
+              <h2>7.2.3.2 管理系統稽核員通用知識與技能</h2>
+              <p class="subtitle">Generic knowledge and skills of management system auditors</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>通用能力涵蓋稽核原則、流程方法、風險導向、計畫組織、溝通、訪談觀察、抽樣、ICT/新興技術、驗證證據與報告。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>有效規劃並在時程內執行。</li><li>優先處理重要事項並確認證據充分。</li><li>理解 ICT、遠端與 AI 型工具使用的適當性與後果。</li><li>稽核員應了解稽核相關風險與機會，以及基於風險的稽核方法。</li><li>稽核員應能有效規劃組織工作、按時執行、聚焦重要事項，並有效口頭及書面溝通。</li><li>稽核員應能訪談、聆聽、觀察、審查文件資訊、理解抽樣後果、運用 ICT 與新興技術、驗證資訊並保護資訊安全。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="68" aria-hidden="true">
+              <div class="meta">68 / 102 | 7.2.3.3</div>
+              <h2>7.2.3.3 稽核員之領域與產業特定能力</h2>
+              <p class="subtitle">Discipline-specific and sector-specific competence of auditors</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核小組需具備稽核特定管理系統與產業所需的集體能力，能產生適當發現與結論。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>辨識管理系統要求與產業方法。</li><li>理解領域風險與機會。</li><li>需要時配置具特定知識的稽核員或技術專家。</li><li>稽核小組應具備適用於所稽核管理系統類型及產業的集體領域能力。</li><li>領域能力應涵蓋管理系統要求與原則及其應用。</li><li>領域能力也應涵蓋相關方法、技術、流程與實務，以產生適當發現及結論。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="69" aria-hidden="true">
+              <div class="meta">69 / 102 | 7.2.3.4</div>
+              <h2>7.2.3.4 稽核組組長通用能力</h2>
+              <p class="subtitle">Generic competence of the audit team leader</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核組組長需能規劃、分派任務、與高階管理討論策略議題、管理資源與不確定性、解決衝突、帶領結論並完成報告。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認稽核組組長具備規劃稽核與任務分派能力。</li><li>維持稽核小組合作與健康安全。</li><li>代表稽核小組與方案管理者、委託者、受稽核者溝通。</li><li>稽核組組長應能依個別成員能力規劃稽核並分派任務。</li><li>稽核組組長應能與受稽核者高階管理討論策略議題，以及其風險與機會考量。</li><li>稽核組組長應管理資源、不確定性、健康安全、成員指導、見習稽核員方向、衝突問題、溝通、結論及報告完成。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="70" aria-hidden="true">
+              <div class="meta">70 / 102 | 7.2.3.5</div>
+              <h2>7.2.3.5 多領域稽核知識與技能</h2>
+              <p class="subtitle">Knowledge and skills for auditing multiple disciplines</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>多領域管理系統稽核需理解不同管理系統間互動與綜效，並認清各領域能力限制。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>辨識管理系統交互作用。</li><li>避免重複稽核與遺漏交界流程。</li><li>稽核組組長需理解各標準要求與自身能力界線。</li><li>多領域稽核時，稽核小組成員應理解不同管理系統之間的互動及綜效。</li><li>稽核組組長應理解各被稽核管理系統標準要求。</li><li>稽核組組長也應辨識自身在各領域能力上的限制。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="71" aria-hidden="true">
+              <div class="meta">71 / 102 | 7.2.4</div>
+              <h2>7.2.4 取得稽核員能力</h2>
+              <p class="subtitle">Achieving auditor competence</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>能力可透過通用訓練、相關技術/管理/專業工作經驗、特定領域教育訓練與受監督稽核經驗取得。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>規劃訓練與實務經驗。</li><li>安排受監督稽核。</li><li>依課程類型確認完成或考試通過。</li><li>稽核員能力可透過通用稽核知識與技能訓練取得。</li><li>能力也可透過涉及判斷、決策、問題解決及溝通的相關技術、管理或專業工作經驗取得。</li><li>特定領域教育訓練及在同領域合格稽核員監督下取得的稽核經驗，也可形成能力。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="72" aria-hidden="true">
+              <div class="meta">72 / 102 | 7.2.5</div>
+              <h2>7.2.5 取得稽核組組長能力</h2>
+              <p class="subtitle">Achieving audit team leader competence</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核組組長需額外稽核經驗，並在另一位稽核組組長指導下發展 7.2.3.4 所列能力。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>安排副手或見習稽核組組長經驗。</li><li>由合格稽核組組長指導。</li><li>評估帶隊、溝通、結論與報告能力。</li><li>稽核組組長應取得額外稽核經驗，以發展 7.2.3.4 所列能力。</li><li>額外經驗應在另一位稽核組組長指導與方向下取得。</li><li>稽核組組長能力發展應特別重視規劃、帶領、溝通、衝突處理、結論形成及報告完成。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="73" aria-hidden="true">
+              <div class="meta">73 / 102 | 7.3</div>
+              <h2>7.3 建立稽核員評估準則</h2>
+              <p class="subtitle">Establishing the auditor evaluation criteria</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>評估準則可為定性或定量，例如行為、知識、技能、工作年資、教育、稽核次數與訓練時數。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>設定符合方案需求的準則。</li><li>混合定性與定量指標。</li><li>明確區分稽核員與稽核組組長準則。</li><li>評估準則可為定性，例如展現期望行為、知識或技能表現。</li><li>評估準則也可為定量，例如工作年資、教育、稽核次數或稽核訓練時數。</li><li>準則應能對照 7.2 中決定的能力需求。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="74" aria-hidden="true">
+              <div class="meta">74 / 102 | 7.4</div>
+              <h2>7.4 選擇適當稽核員評估方法</h2>
+              <p class="subtitle">Selecting the appropriate auditor evaluation method</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>評估需使用兩種以上方法，方法可靠度不同，應組合使用以取得客觀、一致、公平且可靠的結果。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>選擇紀錄審查、回饋、面談、觀察、測驗或稽核後審查。</li><li>依情況選擇可靠方法組合。</li><li>避免只用單一證據判斷能力。</li><li>稽核員評估應使用兩種以上方法。</li><li>可選方法包含紀錄審查、回饋、面談、觀察、測驗及稽核後審查。</li><li>不同方法可靠度不同，應組合使用以確保結果客觀、一致、公平且可靠。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="75" aria-hidden="true">
+              <div class="meta">75 / 102 | 7.5</div>
+              <h2>7.5 執行稽核員評估</h2>
+              <p class="subtitle">Conducting the auditor evaluation</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>把蒐集到的稽核員資訊與準則比較；若未符合，需安排訓練、工作或稽核經驗後再評估。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>收集並比對評估資料。</li><li>判定是否符合參與方案條件。</li><li>規劃補強與再評估。</li><li>收集到的稽核員資訊應與 7.2.3 準則比較。</li><li>若預期參與方案的稽核員未符合準則，應安排額外訓練、工作或稽核經驗。</li><li>補強後應執行後續再評估。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="76" aria-hidden="true">
+              <div class="meta">76 / 102 | 7.6</div>
+              <h2>7.6 維持及提升稽核員能力</h2>
+              <p class="subtitle">Maintaining and improving auditor competence</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員與稽核組組長需透過定期參與稽核與持續專業發展維持能力，並依技術、標準、領域與回饋變化更新。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>建立持續評估機制。</li><li>追蹤標準、技術與稽核實務變化。</li><li>分析受稽核者與利害相關者回饋。</li><li>稽核員與稽核組組長應持續改進能力。</li><li>能力維持可透過定期參與管理系統稽核及持續專業發展達成。</li><li>持續專業發展應考量個人與組織需求變化、稽核實務及技術發展、相關標準變化、領域或產業變化及回饋分析。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="77" aria-hidden="true">
+              <div class="meta">77 / 102 | A.1</div>
+              <h2>A.1 應用稽核方法</h2>
+              <p class="subtitle">Applying auditing methods</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>附錄 A.1 說明稽核方法可單獨或組合使用；方法取決於目的、範圍、準則、期間、地點、能力與方法不確定性。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>平衡現場與遠端方法。</li><li>辨識人員互動與非人員互動活動。</li><li>確認方法能達成方案目的。</li><li>稽核方法應依目的、範圍、準則、期間及地點選擇。</li><li>也應考量稽核員能力及方法應用所產生的不確定性。</li><li>若稽核小組有多名成員，可同時採用現場及遠端方法；遠端方法可行性取決於風險、信任程度及法規要求等因素。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="78" aria-hidden="true">
+              <div class="meta">78 / 102 | A.2</div>
+              <h2>A.2 流程稽核</h2>
+              <p class="subtitle">Auditing of processes</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>管理系統稽核主要是稽核流程及其互動，確認流程作為系統運作以達成一致且可預期結果。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>追蹤流程輸入、活動、輸出與互動。</li><li>不要只逐條查文件。</li><li>確認流程與管理系統預期結果的關係。</li><li>稽核管理系統時，主要是稽核組織流程及其與一個或多個管理系統標準的互動。</li><li>稽核員應理解相互關聯流程需作為一致系統運作，才能達成可預期結果。</li><li>流程稽核應避免只看孤立要求，而要關注流程之間如何共同支援管理系統。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="79" aria-hidden="true">
+              <div class="meta">79 / 102 | A.3</div>
+              <h2>A.3 專業判斷</h2>
+              <p class="subtitle">Professional judgement</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員應避免只看標準條文表面符合，而忽略管理系統預期結果。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>用專業判斷確認條文意圖是否達成。</li><li>記錄判斷依據。</li><li>對不易文件比對的要求採多源證據。</li><li>稽核員應在稽核過程中運用專業判斷。</li><li>不應只聚焦標準各條款要求，而忽略管理系統預期結果。</li><li>對不易用程序或作業指導書直接比對的條款，稽核員應判斷其意圖是否達成。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="80" aria-hidden="true">
+              <div class="meta">80 / 102 | A.4</div>
+              <h2>A.4 績效結果</h2>
+              <p class="subtitle">Performance results</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核應聚焦管理系統預期結果與績效，同時考量不同管理系統整合程度。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>檢查績效指標與目標。</li><li>判斷文件缺失在高風險情況下的重要性。</li><li>連結流程結果與系統結果。</li><li>稽核員應在整個稽核過程中聚焦管理系統預期結果。</li><li>流程及其成果重要，但管理系統結果及績效才是核心。</li><li>在高風險或複雜組織中，文件化資訊缺失可能重要；在其他組織則可能較不顯著。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="81" aria-hidden="true">
+              <div class="meta">81 / 102 | A.5</div>
+              <h2>A.5 驗證資訊</h2>
+              <p class="subtitle">Verifying information</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員應考量資訊是否完整、正確、一致、即時，並評估不同媒介資訊的完整性與資料安全。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>檢查資訊完整性與版本。</li><li>交叉查證來源。</li><li>保護範圍外但被看見的資料。</li><li>稽核員應盡可能確認資訊能否提供足夠客觀證據。</li><li>資訊應檢查是否完整、正確、一致及即時。</li><li>若資訊以非預期方式提供，應評估證據完整性，並注意資料安全及保存期限屆滿後的處置。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="82" aria-hidden="true">
+              <div class="meta">82 / 102 | A.6</div>
+              <h2>A.6 抽樣</h2>
+              <p class="subtitle">Sampling</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>抽樣用於無法實際或經濟地檢查全部資訊時，目的在提供足夠信心，但會帶來抽樣風險。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>設定抽樣目的與母體。</li><li>選擇抽樣方法與樣本數。</li><li>記錄結果、估計與信賴限制。</li><li>抽樣適用於無法實際或不具成本效益地檢查全部資訊時。</li><li>抽樣目的在提供稽核員對稽核目的可達成的信心。</li><li>抽樣風險是樣本可能無法代表母體，因此結論可能不同於檢查全部母體所得結論。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="83" aria-hidden="true">
+              <div class="meta">83 / 102 | A.6.1</div>
+              <h2>A.6.1 一般</h2>
+              <p class="subtitle">General</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>抽樣是從總資料集合中選取少於百分之百的項目，以形成對母體特性的結論。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>說明抽樣目的。</li><li>確認資料品質。</li><li>報告樣本大小、方法、估計與信賴程度。</li><li>抽樣通常包含設定抽樣目的、選定母體範圍與組成、選擇方法、決定樣本數、執行抽樣及彙整報告結果。</li><li>抽樣時應考量可用資料品質，因不足或不正確資料不會提供有用結果。</li><li>報告樣本時可納入樣本大小、選擇方法、估計及信賴水準。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="84" aria-hidden="true">
+              <div class="meta">84 / 102 | A.6.2</div>
+              <h2>A.6.2 判斷式抽樣</h2>
+              <p class="subtitle">Judgement-based sampling</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>判斷式抽樣依賴稽核小組能力與經驗，可考量前次稽核、要求複雜度、流程互動、技術或人因變更與已知風險。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>說明選樣理由。</li><li>考量風險後果。</li><li>承認無法統計估計不確定性。</li><li>判斷式抽樣依賴稽核小組能力與經驗。</li><li>判斷式抽樣可考量過去稽核經驗、要求複雜度、流程互動、技術或人因變更、已知重大風險及監視結果。</li><li>判斷式抽樣的限制，是無法統計估計稽核發現及結論的不確定性影響。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="85" aria-hidden="true">
+              <div class="meta">85 / 102 | A.6.3</div>
+              <h2>A.6.3 統計抽樣</h2>
+              <p class="subtitle">Statistical sampling</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>統計抽樣依機率理論建立樣本選擇流程，可採屬性抽樣或變量抽樣，需記錄參數與結果。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>判斷樣本結果屬於屬性或變量。</li><li>設定可接受信賴水準或抽樣風險。</li><li>記錄母體、準則、方法、樣本數與結果。</li><li>統計抽樣計畫應依稽核目的及已知母體特性制定。</li><li>統計抽樣包含基於機率理論的樣本選擇流程，可採屬性或變量方式。</li><li>統計抽樣應記錄預定母體、評估準則、統計參數與方法、樣本數及結果。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="86" aria-hidden="true">
+              <div class="meta">86 / 102 | A.7</div>
+              <h2>A.7 管理系統內合規稽核</h2>
+              <p class="subtitle">Auditing compliance within a management system</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>當法規要求作為準則時，稽核小組應確認受稽核者是否具備識別、管理與評估合規狀態的有效流程。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>檢查法規識別與變更管理。</li><li>確認合規能力與紀錄。</li><li>查核內稽與管理審查是否涵蓋合規績效。</li><li>當法規要求作為稽核準則時，稽核小組應考量受稽核者是否有有效流程識別要求。</li><li>稽核小組應確認受稽核者如何管理活動、產品與服務以達成合規。</li><li>稽核小組也應確認受稽核者如何評估合規狀態、管理變更、處理不合規並於管理審查中考量合規績效。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="87" aria-hidden="true">
+              <div class="meta">87 / 102 | A.8</div>
+              <h2>A.8 稽核組織全景</h2>
+              <p class="subtitle">Auditing organization panorama</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>多數管理系統要求組織判定組織全景、利害相關者需求與內外部議題；稽核員需確認過程有效。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>查核方法、參與者能力、結果與應用。</li><li>確認組織全景結果如何影響範圍與系統發展。</li><li>定期審查組織全景。</li><li>稽核員應確認組織已建立適當流程，以判定組織全景、利害相關者需求與內外部議題。</li><li>稽核員應查看方法、參與者能力、結果及結果如何用於管理系統範圍與發展。</li><li>稽核員應具備相關產業知識，以判斷組織判定組織全景方法的有效性。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="88" aria-hidden="true">
+              <div class="meta">88 / 102 | A.9</div>
+              <h2>A.9 稽核領導與承諾</h2>
+              <p class="subtitle">Auditing leadership and commitment</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>稽核員應取得高階管理參與管理系統決策與承諾的客觀證據，不只停留於文件。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>訪談高階管理。</li><li>審查政策、目標、資源、溝通與管理審查。</li><li>必要時查核其他管理層級的領導承諾。</li><li>稽核員應取得高階管理參與管理系統決策及承諾的客觀證據。</li><li>可透過審查政策、目標、資源、溝通及管理審查等流程結果取得證據。</li><li>稽核員也應訪談高階管理，確認其承認責任並理解與管理系統相關的領域議題及組織全景。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="89" aria-hidden="true">
+              <div class="meta">89 / 102 | A.10</div>
+              <h2>A.10 稽核風險與機會</h2>
+              <p class="subtitle">Auditing risks and opportunities</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>風險與機會稽核不宜作為孤立活動，而應貫穿整個管理系統稽核，包含高階管理訪談。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認風險機會識別輸入。</li><li>了解評估方法。</li><li>以專業判斷查核風險處理與接受水準。</li><li>風險與機會稽核可包含確認識別流程可信度、正確判定與管理，以及組織如何處理。</li><li>風險與機會不應作為孤立活動稽核，而應隱含於整個管理系統稽核，包括高階管理訪談。</li><li>稽核員應查看輸入來源、評估方法，以及組織對風險機會的處理和可接受風險水準。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="90" aria-hidden="true">
+              <div class="meta">90 / 102 | A.11</div>
+              <h2>A.11 生命週期</h2>
+              <p class="subtitle">Life cycle</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>某些管理系統要求生命週期觀點，稽核員需判斷組織如何考量產品或服務各階段的控制與影響。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認生命週期觀點不是要求採用特定生命週期方法。</li><li>查核供應鏈、產品複雜度與組織影響力。</li><li>在整合管理系統中注意重疊議題。</li><li>某些領域管理系統要求產品與服務生命週期觀點，但這不等於要求採用生命週期方法。</li><li>稽核員應判斷組織如何考量其對產品或服務生命週期階段的控制與影響。</li><li>策略判斷可考量產品或服務生命、供應鏈影響、供應鏈複雜度及產品技術複雜度。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="91" aria-hidden="true">
+              <div class="meta">91 / 102 | A.12</div>
+              <h2>A.12 供應鏈稽核</h2>
+              <p class="subtitle">Audit of supply chain</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>供應鏈稽核可針對管理系統、單一流程、產品、配置或供應條件，常用於第二方稽核與風險管理。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>建立適用準則與範圍。</li><li>依供應風險或機會啟動稽核。</li><li>必要時規劃多場所與多組織活動。</li><li>供應鏈稽核方案應依供應鏈組織類型建立適用稽核準則。</li><li>供應鏈稽核範圍可為完整管理系統、單一流程、產品或配置稽核。</li><li>第二方稽核可用於供應合約前風險識別、確認約定流程運作、監督持續符合及改善績效。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="92" aria-hidden="true">
+              <div class="meta">92 / 102 | A.13</div>
+              <h2>A.13 準備稽核工作文件</h2>
+              <p class="subtitle">Preparing audit working documents</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>工作文件應支援特定稽核活動與紀錄產出，合併稽核時應避免重複稽核活動。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>為每份工作文件確認用途、使用者與所需資訊。</li><li>整合同類要求。</li><li>用任一適當媒介準備文件。</li><li>準備工作文件時，稽核小組應確認該文件會產生哪一項稽核紀錄。</li><li>稽核小組應確認工作文件連結哪一項稽核活動、誰會使用，以及需要哪些資訊。</li><li>合併稽核工作文件應群組相似要求並協調檢核表或問卷內容，以避免重複稽核。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="93" aria-hidden="true">
+              <div class="meta">93 / 102 | A.14</div>
+              <h2>A.14 選擇資訊來源</h2>
+              <p class="subtitle">Selecting sources of information</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>資訊來源可包括訪談、觀察、文件、紀錄、資料分析、績效指標、外部報告、資料庫、網站、模擬與模型。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>依範圍與複雜度選擇來源。</li><li>多源交叉驗證。</li><li>記錄來源與證據關係。</li><li>資訊來源應依稽核範圍與複雜度選擇。</li><li>來源可包含員工及其他人員訪談、活動及工作環境觀察、文件化資訊、紀錄、資料分析及績效指標。</li><li>來源也可包含外部報告、資料庫、網站、模擬及模型。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="94" aria-hidden="true">
+              <div class="meta">94 / 102 | A.15</div>
+              <h2>A.15 訪查受稽核者場所</h2>
+              <p class="subtitle">Visiting the auditee&#x27;s location</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>訪查場所需降低對受稽核者作業干擾，並確保稽核小組健康安全、保密與場所規則被遵守。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>事前確認權限、PPE、文化規範、工時與拍攝規則。</li><li>現場避免不必要干擾。</li><li>未經允許不觸碰設備或複製資料。</li><li>規劃場所訪查時，應確認進入權限、安全健康資訊、文化規範、工作時間、PPE 及攝影或行動裝置使用安排。</li><li>現場執行時應避免不必要干擾，遵守 PPE、緊急程序及溝通安排。</li><li>未經明確允許，不應觸碰或操作設備；複製任何媒介文件前，應先取得許可並考量保密及安全。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="95" aria-hidden="true">
+              <div class="meta">95 / 102 | A.16</div>
+              <h2>A.16 使用遠端稽核方法</h2>
+              <p class="subtitle">Using remote auditing methods</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>遠端稽核使用技術執行觀察、訪談與證據驗證，可用於虛擬場所，但也帶來額外風險與機會。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>確認遠端存取協定、設備與軟體。</li><li>事前技術測試與備援計畫。</li><li>管理資料安全、保密、錄影截圖授權與休息期間隱私。</li><li>遠端稽核方法可為稽核員與受稽核者帶來效益，但雙方共同負責確保稽核有效並達成目的。</li><li>遠端方法可能是稽核虛擬場所的必要方式，並會在觀察、訪談及客觀證據驗證中使用技術。</li><li>使用遠端方法時，應確認存取協定、設備軟體、技術檢查、備援計畫、資料安全、保密、截圖錄影許可及休息期間隱私。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="96" aria-hidden="true">
+              <div class="meta">96 / 102 | A.17</div>
+              <h2>A.17 執行訪談</h2>
+              <p class="subtitle">Conducting interviews</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>訪談是蒐集資訊的重要方法，應依情況與受訪者調整，可面對面或透過其他溝通方式進行。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>選擇適當層級與職能受訪者。</li><li>說明訪談目的與記錄方式。</li><li>善用問題類型並在虛擬情況注意非語言訊號限制。</li><li>訪談應與稽核範圍內適當層級及職能的人員進行。</li><li>訪談通常應在受訪者工作時間及正常工作場所進行，並先讓受訪者理解訪談理由及記錄方式。</li><li>問題類型應謹慎選擇；虛擬情況中非語言溝通有限，應更重視問題設計以尋找客觀證據。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="97" aria-hidden="true">
+              <div class="meta">97 / 102 | A.18</div>
+              <h2>A.18 稽核發現</h2>
+              <p class="subtitle">Audit findings</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>附錄 A.18 補充發現判定、符合紀錄、不符合紀錄，以及多準則發現處理。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>將證據與準則清楚連結。</li><li>區分符合、不符合、改進機會與良好實務。</li><li>處理多準則發現時避免重複與矛盾。</li><li>決定發現時，應考量前次稽核紀錄與結論，以及委託者要求。</li><li>符合與不符合都應與稽核準則及支持證據連結。</li><li>多準則發現應清楚處理其對不同準則的關係，避免混淆符合、不符合及改進機會。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="98" aria-hidden="true">
+              <div class="meta">98 / 102 | A.18.1</div>
+              <h2>A.18.1 決定稽核發現</h2>
+              <p class="subtitle">Determining audit findings</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>決定發現時應考量前次稽核、委託者要求、證據準確性、樣本充分性、發現重要性與改進機會。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>回顧前次結論與跟催。</li><li>確認證據支持程度。</li><li>判斷發現對管理系統目的的意義。</li><li>決定發現時，應考量前次稽核紀錄與結論。</li><li>應考量委託者要求及支持證據的準確性、充分性與適用性。</li><li>應注意發現可能代表的風險、機會、趨勢或改進方向。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="99" aria-hidden="true">
+              <div class="meta">99 / 102 | A.18.2</div>
+              <h2>A.18.2 記錄符合事項</h2>
+              <p class="subtitle">Recording conformities</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>若適用，符合事項應清楚記錄準則、支持證據與範圍，避免只寫籠統肯定。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>記錄符合對應準則。</li><li>保留支持證據。</li><li>可記錄良好實務與有效控制。</li><li>記錄符合時，應清楚指出符合所對應的稽核準則。</li><li>符合紀錄應包含支持符合判斷的稽核證據。</li><li>若適用，可記錄有效實施、良好實務或足以支援結論的控制狀態。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="100" aria-hidden="true">
+              <div class="meta">100 / 102 | A.18.3</div>
+              <h2>A.18.3 記錄不符合事項</h2>
+              <p class="subtitle">Recording nonconformities</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>不符合應對應明確準則與支持證據，並讓受稽核者理解事實與要求落差。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>寫清楚要求、事實與證據。</li><li>避免主觀或解決方案式描述。</li><li>確認受稽核者理解與歧見處理。</li><li>記錄不符合時，應清楚描述稽核準則與客觀證據之間的落差。</li><li>不符合描述應避免主觀推測，並以可驗證證據支持。</li><li>不符合應與受稽核者審查，以確認證據準確且不符合被理解。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="101" aria-hidden="true">
+              <div class="meta">101 / 102 | A.18.4</div>
+              <h2>A.18.4 處理與多項準則相關的稽核發現</h2>
+              <p class="subtitle">Dealing with audit findings related to multiple criteria</p>
+              <div class="grid two">
+          <article class="card"><h3>條款導讀</h3><p>合併或整合管理系統稽核中，一項發現可能涉及多項準則，需清楚界定適用關係。</p></article>
+          <article class="card"><h3>稽核員指引</h3><ul><li>建立多準則對照。</li><li>避免同一證據被重複誇大。</li><li>確認報告能呈現共同原因與各準則影響。</li><li>當一項發現涉及多項準則時，應清楚指出各準則與同一證據之間的關係。</li><li>合併或整合管理系統稽核中，應避免重複記錄同一問題而造成失真。</li><li>必要時，應呈現共同原因及其對各管理系統準則的影響。</li></ul></article>
+        </div>
+            </section>
+<section class="iso19011-slide" data-slide="102" aria-hidden="true">
+              <div class="meta">102 / 102 | 收尾</div>
+              <h2>稽核現場四句檢查</h2>
+              
+              <div class="grid two">
+          <article class="card dark"><h3>目的清楚嗎？</h3><p>稽核目的、範圍、準則與利害相關者期望是否對齊。</p></article>
+          <article class="card dark"><h3>方法適合嗎？</h3><p>現場、遠端或混合方法是否能取得足夠、相關且可驗證的證據。</p></article>
+          <article class="card dark"><h3>證據可信嗎？</h3><p>抽樣、資訊來源、驗證程度、限制與不確定性是否被處理。</p></article>
+          <article class="card dark"><h3>結論可說明嗎？</h3><p>發現、結論、報告與跟催是否能追溯到準則、證據與稽核目的。</p></article>
+        </div>
+            </section>
+  </div>
+  <div class="deck-controls" aria-label="投影片控制">
+    <button type="button" class="secondary" data-action="first">第一頁</button>
+    <button type="button" class="secondary" data-action="prev">上一頁</button>
+    <button type="button" data-action="next">下一頁</button>
+    <button type="button" class="secondary" data-action="last">最後頁</button>
+    <button type="button" class="secondary" data-action="fullscreen" aria-pressed="false">全螢幕</button>
+    <span class="status" aria-live="polite">1 / 102</span>
+  </div>
+  <div class="progress" aria-hidden="true"><div></div></div>
+  <script>
+    (function () {
+      var deck = document.getElementById('iso19011-2026-detail-deck');
+      if (!deck) return;
+      var slides = Array.prototype.slice.call(deck.querySelectorAll('.iso19011-slide'));
+      var status = deck.querySelector('.status');
+      var progress = deck.querySelector('.progress > div');
+      var fullscreenButton = deck.querySelector('button[data-action="fullscreen"]');
+      var current = 0;
+      function show(index) {
+        if (index < 0 || index >= slides.length) return;
+        slides[current].classList.remove('is-active');
+        slides[current].setAttribute('aria-hidden', 'true');
+        current = index;
+        slides[current].classList.add('is-active');
+        slides[current].setAttribute('aria-hidden', 'false');
+        if (status) status.textContent = (current + 1) + ' / ' + slides.length;
+        if (progress) progress.style.width = (((current + 1) / slides.length) * 100) + '%';
+      }
+      function next() { show(Math.min(current + 1, slides.length - 1)); }
+      function prev() { show(Math.max(current - 1, 0)); }
+      function getFullscreenElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement;
+      }
+      function requestDeckFullscreen() {
+        if (deck.requestFullscreen) return deck.requestFullscreen();
+        if (deck.webkitRequestFullscreen) return deck.webkitRequestFullscreen();
+      }
+      function exitDeckFullscreen() {
+        if (document.exitFullscreen) return document.exitFullscreen();
+        if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+      }
+      function updateFullscreenButton() {
+        if (!fullscreenButton) return;
+        var active = getFullscreenElement() === deck;
+        fullscreenButton.textContent = active ? '離開全螢幕' : '全螢幕';
+        fullscreenButton.setAttribute('aria-pressed', active ? 'true' : 'false');
+      }
+      function toggleFullscreen() {
+        var active = getFullscreenElement() === deck;
+        var action = active ? exitDeckFullscreen() : requestDeckFullscreen();
+        if (action && action.catch) action.catch(function () {});
+        setTimeout(function () {
+          updateFullscreenButton();
+          try { deck.focus({ preventScroll: true }); } catch (error) { deck.focus(); }
+        }, 0);
+      }
+      deck.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+          event.preventDefault();
+          next();
+        } else if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+          event.preventDefault();
+          prev();
+        } else if (event.key === 'Home') {
+          event.preventDefault();
+          show(0);
+        } else if (event.key === 'End') {
+          event.preventDefault();
+          show(slides.length - 1);
+        } else if ((event.key === 'f' || event.key === 'F') && !event.ctrlKey && !event.metaKey && !event.altKey) {
+          event.preventDefault();
+          toggleFullscreen();
+        }
+      });
+      document.addEventListener('fullscreenchange', updateFullscreenButton);
+      document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+      deck.querySelectorAll('button[data-action]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var action = button.getAttribute('data-action');
+          if (action === 'next') next();
+          if (action === 'prev') prev();
+          if (action === 'first') show(0);
+          if (action === 'last') show(slides.length - 1);
+          if (action === 'fullscreen') toggleFullscreen();
+          deck.focus();
+        });
+      });
+      show(0);
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+        try { deck.focus({ preventScroll: true }); } catch (error) { deck.focus(); window.scrollTo(0, 0); }
+      }, 0);
+    })();
+  </script>
+</div>
+<div class="kb-presentation-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+</body>
+</html>

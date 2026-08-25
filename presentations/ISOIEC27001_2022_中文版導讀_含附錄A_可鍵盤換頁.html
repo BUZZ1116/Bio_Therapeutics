@@ -1,0 +1,3353 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISO/IEC 27001:2022 中文版導讀 - 含附錄 A 控制措施</title>
+  <style>
+    body {
+      margin:0;
+      padding:10px 12px 30px;
+      overflow:auto;
+      background:#f7f7f5;
+      box-sizing:border-box;
+    }
+    @media (max-width: 900px) {
+      body { padding:8px 8px 28px; }
+    }
+  </style>
+<style>
+.kb-presentation-copyright{position:fixed;left:14px;bottom:6px;z-index:9999;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.9);color:#64748b;font:9px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;box-shadow:0 1px 4px rgba(15,23,42,.1);pointer-events:none}
+@media print{.kb-presentation-copyright{bottom:5mm;left:12mm;right:12mm;text-align:left;background:#fff;box-shadow:none}}
+</style>
+</head>
+<body>
+<!-- ISO/IEC 27001:2022 中文版導讀：可貼入 Moodle HTML 原始碼模式。支援左右鍵、PageUp/PageDown、空白鍵、Home/End 換頁。 -->
+<div id="iso27001-2022-zh-deck" class="iso27001-deck" tabindex="0" aria-label="ISO/IEC 27001:2022 中文版導讀投影片">
+  <style>
+    #iso27001-2022-zh-deck {
+      --ink:#141414;
+      --muted:#565656;
+      --soft:#f5f7f7;
+      --panel:#e8ecec;
+      --rule:#b8c1c4;
+      --accent:#0f766e;
+      --accent2:#d97706;
+      font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',Arial,sans-serif;
+      color:var(--ink);
+      background:#fbfbfa;
+      border:1px solid #d9d9d2;
+      max-width:1180px;
+      margin:0 auto;
+      padding:18px;
+      outline:none;
+      box-sizing:border-box;
+    }
+    #iso27001-2022-zh-deck * { box-sizing:border-box; }
+    #iso27001-2022-zh-deck .deck-frame {
+      position:relative;
+      background:#fff;
+      min-height:min(680px, calc(100vh - 116px));
+      border:1px solid #d5d8d9;
+      overflow:visible;
+    }
+    #iso27001-2022-zh-deck .iso27001-slide {
+      display:none;
+      padding:32px;
+      min-height:min(612px, calc(100vh - 184px));
+    }
+    #iso27001-2022-zh-deck .iso27001-slide.is-active { display:block; }
+    #iso27001-2022-zh-deck h2 {
+      font-size:31px;
+      line-height:1.2;
+      margin:0 0 8px 0;
+      font-weight:900;
+      letter-spacing:0;
+    }
+    #iso27001-2022-zh-deck h3 {
+      font-size:20px;
+      line-height:1.25;
+      margin:0 0 10px 0;
+      font-weight:850;
+      letter-spacing:0;
+    }
+    #iso27001-2022-zh-deck .subtitle {
+      font-size:18px;
+      line-height:1.45;
+      color:var(--muted);
+      margin:0 0 20px 0;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:14px;
+    }
+    #iso27001-2022-zh-deck .lead-strong {
+      font-size:22px;
+      line-height:1.55;
+      font-weight:850;
+      margin:0 0 22px 0;
+    }
+    #iso27001-2022-zh-deck .flow-track {
+      display:grid;
+      gap:10px;
+      margin:0 0 20px 0;
+      padding:12px;
+      background:#f7faf9;
+      border:1px solid #cfd8dc;
+    }
+    #iso27001-2022-zh-deck .requirement-flow { grid-template-columns:repeat(7,minmax(0,1fr)); }
+    #iso27001-2022-zh-deck .annex-flow { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    #iso27001-2022-zh-deck .flow-step {
+      min-height:82px;
+      padding:12px;
+      border:1px solid #c2ccd0;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      gap:10px;
+    }
+    #iso27001-2022-zh-deck .flow-step.is-current {
+      background:#e4ebea;
+      border:2px solid #275f5a;
+      box-shadow:inset 0 0 0 1px #275f5a;
+    }
+    #iso27001-2022-zh-deck .all-current .flow-step:first-child {
+      border-left:6px solid var(--accent);
+    }
+    #iso27001-2022-zh-deck .flow-code {
+      min-width:46px;
+      width:max-content;
+      height:34px;
+      padding:0 8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:2px solid #275f5a;
+      color:#275f5a;
+      background:#fff;
+      font-size:15px;
+      line-height:1;
+      font-weight:900;
+    }
+    #iso27001-2022-zh-deck .flow-label {
+      font-size:16px;
+      line-height:1.25;
+      font-weight:900;
+      color:#111;
+    }
+    #iso27001-2022-zh-deck .grid {
+      display:grid;
+      gap:14px;
+      margin:18px 0;
+    }
+    #iso27001-2022-zh-deck .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    #iso27001-2022-zh-deck .grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    #iso27001-2022-zh-deck .card {
+      background:var(--soft);
+      border:1px solid var(--rule);
+      border-left:7px solid var(--accent);
+      padding:18px 20px;
+      min-width:0;
+    }
+    #iso27001-2022-zh-deck .card.compact {
+      margin-top:0;
+      background:#fffaf0;
+      border-left-color:var(--accent2);
+    }
+    #iso27001-2022-zh-deck .detail-card {
+      background:#fffaf0;
+      border-left-color:var(--accent2);
+      margin-top:4px;
+    }
+    #iso27001-2022-zh-deck .annex-control-layout {
+      display:grid;
+      grid-template-rows:auto 1fr;
+      gap:14px;
+      margin:14px 0 0 0;
+    }
+    #iso27001-2022-zh-deck .control-brief {
+      display:grid;
+      grid-template-columns:165px minmax(0,1fr);
+      align-items:start;
+      gap:18px;
+      padding:14px 18px;
+      background:#fff;
+    }
+    #iso27001-2022-zh-deck .control-brief h3 {
+      margin:0;
+    }
+    #iso27001-2022-zh-deck .control-brief p {
+      font-size:18px;
+      line-height:1.48;
+      font-weight:760;
+    }
+    #iso27001-2022-zh-deck .implementation-card {
+      padding:16px 20px;
+    }
+    #iso27001-2022-zh-deck .implementation-list {
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:8px 22px;
+    }
+    #iso27001-2022-zh-deck .implementation-list li {
+      position:relative;
+      padding-left:18px;
+      font-size:15.4px;
+      line-height:1.46;
+      margin:0;
+      break-inside:avoid;
+    }
+    #iso27001-2022-zh-deck .implementation-list li::before {
+      content:"•";
+      position:absolute;
+      left:0;
+      top:0;
+      font-weight:900;
+      color:#111;
+    }
+    #iso27001-2022-zh-deck .implementation-list li + li {
+      margin-top:0;
+    }
+    #iso27001-2022-zh-deck .card p,
+    #iso27001-2022-zh-deck .card li,
+    #iso27001-2022-zh-deck li {
+      font-size:16px;
+      line-height:1.58;
+      color:inherit;
+      margin:0;
+    }
+    #iso27001-2022-zh-deck ul {
+      margin:0 0 0 20px;
+      padding:0;
+    }
+    #iso27001-2022-zh-deck li + li { margin-top:6px; }
+    #iso27001-2022-zh-deck .clause-detail {
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid var(--rule);
+    }
+    #iso27001-2022-zh-deck .clause-detail h4 {
+      font-size:16px;
+      line-height:1.25;
+      margin:0 0 8px 0;
+      font-weight:900;
+      letter-spacing:0;
+    }
+    #iso27001-2022-zh-deck .clause-detail-list {
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    #iso27001-2022-zh-deck .clause-detail-list > li {
+      font-size:15.2px;
+      line-height:1.44;
+      margin:0;
+    }
+    #iso27001-2022-zh-deck .clause-detail-list > li + li {
+      margin-top:5px;
+    }
+    #iso27001-2022-zh-deck .clause-sublist {
+      list-style:none;
+      margin:4px 0 0 26px;
+      padding:0;
+    }
+    #iso27001-2022-zh-deck .clause-sublist li {
+      font-size:15.2px;
+      line-height:1.42;
+      margin:0;
+    }
+    #iso27001-2022-zh-deck .clause-sublist li + li {
+      margin-top:3px;
+    }
+    #iso27001-2022-zh-deck .card.control-brief p {
+      font-size:18px;
+      line-height:1.48;
+      font-weight:760;
+    }
+    #iso27001-2022-zh-deck .implementation-card .implementation-list li {
+      font-size:15.4px;
+      line-height:1.46;
+      margin:0;
+    }
+    #iso27001-2022-zh-deck .implementation-card .implementation-list li + li {
+      margin-top:0;
+    }
+    #iso27001-2022-zh-deck .callout {
+      margin-top:18px;
+      padding:15px 18px;
+      background:#141414;
+      color:#fff;
+      font-size:17px;
+      line-height:1.52;
+      font-weight:750;
+    }
+    #iso27001-2022-zh-deck table {
+      width:100%;
+      border-collapse:collapse;
+      margin:18px 0;
+      font-size:15px;
+      background:#fff;
+    }
+    #iso27001-2022-zh-deck th {
+      background:#141414;
+      color:#fff;
+      padding:10px;
+      text-align:left;
+      border:1px solid #141414;
+      vertical-align:top;
+    }
+    #iso27001-2022-zh-deck td {
+      padding:9px 10px;
+      border:1px solid #c9c9c9;
+      vertical-align:top;
+      line-height:1.48;
+    }
+    #iso27001-2022-zh-deck td:first-child {
+      color:var(--accent);
+      font-weight:850;
+      width:150px;
+    }
+    #iso27001-2022-zh-deck tr:nth-child(even) td { background:#f7f7f7; }
+    #iso27001-2022-zh-deck .deck-controls {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:12px;
+    }
+    #iso27001-2022-zh-deck button {
+      border:1px solid #141414;
+      background:#141414;
+      color:#fff;
+      font-weight:850;
+      padding:8px 14px;
+      cursor:pointer;
+      font-size:14px;
+      font-family:inherit;
+      min-height:38px;
+    }
+    #iso27001-2022-zh-deck button.secondary {
+      background:#fff;
+      color:#141414;
+    }
+    #iso27001-2022-zh-deck button:focus {
+      outline:3px solid var(--accent2);
+      outline-offset:2px;
+    }
+    #iso27001-2022-zh-deck .status {
+      margin-left:auto;
+      font-size:14px;
+      color:#555;
+      font-weight:800;
+    }
+    #iso27001-2022-zh-deck .progress {
+      height:4px;
+      background:#ddd;
+      margin-top:12px;
+    }
+    #iso27001-2022-zh-deck .progress > div {
+      height:4px;
+      width:0.7246%;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      transition:width 160ms ease;
+    }
+    #iso27001-2022-zh-deck:fullscreen {
+      width:100vw;
+      height:100vh;
+      max-width:none;
+      margin:0;
+      padding:18px;
+      border:0;
+      overflow:auto;
+      background:#fbfbfa;
+    }
+    #iso27001-2022-zh-deck:fullscreen .deck-frame {
+      min-height:calc(100vh - 112px);
+    }
+    #iso27001-2022-zh-deck:fullscreen .iso27001-slide {
+      min-height:calc(100vh - 184px);
+    }
+    @media (max-width: 900px) {
+      #iso27001-2022-zh-deck { padding:10px; }
+      #iso27001-2022-zh-deck .deck-frame { min-height:auto; }
+      #iso27001-2022-zh-deck .iso27001-slide {
+        padding:21px;
+        min-height:auto;
+      }
+      #iso27001-2022-zh-deck h2 { font-size:26px; }
+      #iso27001-2022-zh-deck .subtitle { font-size:17px; }
+      #iso27001-2022-zh-deck .lead-strong { font-size:19px; }
+      #iso27001-2022-zh-deck .requirement-flow,
+      #iso27001-2022-zh-deck .annex-flow {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      #iso27001-2022-zh-deck .flow-step { min-height:76px; }
+      #iso27001-2022-zh-deck .grid.two,
+      #iso27001-2022-zh-deck .grid.three {
+        grid-template-columns:1fr;
+      }
+      #iso27001-2022-zh-deck .control-brief,
+      #iso27001-2022-zh-deck .implementation-list {
+        grid-template-columns:1fr;
+      }
+      #iso27001-2022-zh-deck table {
+        display:block;
+        overflow-x:auto;
+        white-space:normal;
+      }
+      #iso27001-2022-zh-deck .deck-controls { flex-wrap:wrap; }
+      #iso27001-2022-zh-deck .status {
+        width:100%;
+        margin-left:0;
+      }
+    }
+  </style>
+  <div class="deck-frame">
+<section class="iso27001-slide is-active" data-slide="1" aria-hidden="false">
+              <h2>ISO/IEC 27001 導讀地圖</h2>
+              <p class="subtitle">從全景到風險，再從控制到改善</p>
+              <div class="flow-track requirement-flow all-current" aria-label="要求條款總覽">
+          <div class="flow-step"><span class="flow-code">4</span><span class="flow-label">組織全景</span></div><div class="flow-step"><span class="flow-code">5</span><span class="flow-label">領導力</span></div><div class="flow-step"><span class="flow-code">6</span><span class="flow-label">規劃</span></div><div class="flow-step"><span class="flow-code">7</span><span class="flow-label">支援</span></div><div class="flow-step"><span class="flow-code">8</span><span class="flow-label">運作</span></div><div class="flow-step"><span class="flow-code">9</span><span class="flow-label">績效評估</span></div><div class="flow-step"><span class="flow-code">10</span><span class="flow-label">改善</span></div>
+        </div>
+        <div class="grid two">
+          <article class="card"><h3>要求條款</h3><p>條款 4 到 10 建立 ISMS 的治理、規劃、支援、運作、績效與改善閉環；每一章都應能對應到實際流程與責任。</p></article>
+          <article class="card"><h3>附錄 A</h3><p>附錄 A 是控制措施參引清單，組織透過 6.1.3 與 SoA 說明每項控制的納入、排除與實作狀態。</p></article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="2" aria-hidden="true">
+              <h2>0.1 一般</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>ISO/IEC 27001:2022 是資訊安全管理系統要求標準，用來建立、實作、維持並持續改善 ISMS，並透過風險管理保護資訊的機密性、完整性與可用性。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>先把本標準視為管理系統要求，而不是單純的技術控制清單。</li><li>導讀時可先說明 ISMS 的目的：讓資訊安全風險被系統化識別、處理、監督與改善。</li><li>說明條款 4 到 10 是管理系統骨架，附錄 A 是風險處理時可參引的控制措施。</li><li>提醒學員 ISO/IEC 27001 要求的是組織能證明管理系統有效，而不是只擁有文件。</li><li>把管理系統活動連到日常營運、法律合約要求、客戶信任與事故韌性。</li><li>介紹時用風險評鑑、風險處理、SoA、目標、稽核、管理審查與改善串成一條主線。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="3" aria-hidden="true">
+              <h2>0.2 詞句表達方式</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>標準用語會區分要求、建議、允許與能力/可能性；理解這些語氣，有助於判斷哪些內容是必須符合的要求。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>解讀條文時，先辨識哪些語句是強制要求，哪些是可採用的建議或範例。</li><li>稽核時不要把備考、參考或指引誤當成必須符合的要求。</li><li>文件化要求若以「應具備文件化資訊」表示，就要能看到建立、維護或保存的安排。</li><li>要求語句要能追到責任、方法、輸入、輸出或判斷準則。</li><li>對模糊用語可追問組織如何定義適切性、充分性、有效性與可接受風險。</li><li>導讀時可提醒學員：符合性判斷要回到標準文字、組織範圍與適用要求。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="4" aria-hidden="true">
+              <h2>0.3 與其他管理系統標準之相容性</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>ISO/IEC 27001 採用管理系統高階架構，能與品質、服務、隱私、營運持續等管理系統整合。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>說明 4 到 10 的架構與其他管理系統標準相容，便於整合治理。</li><li>若組織已有 ISO 9001、ISO 20000、ISO 22301 或 ISO/IEC 27701，可共用部分流程。</li><li>整合時要保留資訊安全的特定要求，例如風險評鑑、風險處理與 SoA。</li><li>避免把整合做成文件合併而已，仍要確認 ISMS 目標、績效與改善有效。</li><li>稽核時可查看管理審查、內部稽核與矯正措施是否能同時支援資訊安全結果。</li><li>導讀時強調整合的核心是共同管理流程，不是降低控制要求。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="5" aria-hidden="true">
+              <h2>1 適用範圍</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>本標準規定建立、實作、維持與持續改善 ISMS 的要求，也包含依組織需要評鑑與處理資訊安全風險的要求。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認組織要用本標準達成什麼管理目的與驗證或合規需求。</li><li>把「ISMS 要求」與「產品、服務或技術方案要求」分清楚。</li><li>說明標準適用於各類型與規模組織，但實作方式會依全景、風險與範圍調整。</li><li>稽核時要避免用單一最佳實務取代標準要求，應回到組織風險與適用性。</li><li>若組織宣稱不適用某些控制措施，需能在 SoA 中看到納入或排除理由。</li><li>導讀時可用「管理系統要求 + 風險處理控制」作為整體定位。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="6" aria-hidden="true">
+              <h2>2 引用標準</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>ISO/IEC 27001:2022 引用 ISO/IEC 27000 作為資訊安全管理系統詞彙與概念的基礎。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>術語解讀應優先回到 ISO/IEC 27000 的定義，避免各部門自行解讀。</li><li>若導讀對象包含非資安人員，需先釐清 ISMS、風險、控制措施、文件化資訊等核心用語。</li><li>稽核時若對術語有爭議，應回到引用標準與組織文件化定義。</li><li>引用標準不取代 ISO/IEC 27001 的要求，但提供一致語言。</li><li>跨管理系統整合時，術語差異要被管理，避免同字不同義。</li><li>導讀時可將 ISO/IEC 27000 視為詞彙底座，ISO/IEC 27001 視為要求，ISO/IEC 27002 視為控制實作參考。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="7" aria-hidden="true">
+              <h2>3.1 一般要求</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>條款 3 用來承接 ISO/IEC 27000 的術語與定義，確保組織在導入與稽核時使用一致的語言。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>先確認導入文件、訓練教材與稽核用語是否與標準詞彙一致。</li><li>對風險、控制措施、資訊安全事件、文件化資訊等詞彙，要能在組織內被一致理解。</li><li>稽核時可抽問不同職能人員，確認核心概念是否被理解並能運用。</li><li>若組織另有內部術語，應確認其不會抵觸標準定義。</li><li>導讀時可用實例把「風險評鑑」「風險處理」「控制措施」串起來。</li><li>術語一致性會直接影響後續範圍、風險、目標與績效判斷。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="8" aria-hidden="true">
+              <h2>3.2 其他參考資料</h2>
+              
+              <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>導入 ISO/IEC 27001 時，常會同時參照 ISO/IEC 27002 控制實作指引與其他管理系統、驗證或法規文件。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>先界定哪些參考文件是要求來源，哪些只是實作指引或補充資料。</li><li>ISO/IEC 27002 可協助理解附錄 A 控制措施，但不會自動變成所有控制的強制要求。</li><li>法律、監管、合約與客戶要求若被納入 ISMS，就要進入風險與合規管理。</li><li>稽核時要確認組織如何維持外部要求清單，並追蹤變更。</li><li>導讀時可提醒：參照文件越多，越需要清楚管理適用性與優先順序。</li><li>對驗證場景，要能說明標準要求、驗證要求與組織內部要求的界線。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="9" aria-hidden="true">
+              <h2>4.1 瞭解組織及其全景</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step is-current">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需判定與目的相關、且會影響 ISMS 預期結果的外部與內部議題，作為範圍、風險與管理系統設計的基礎。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>辨識外部議題，例如法規、威脅環境、市場、技術、供應鏈與社會期待。</li><li>辨識內部議題，例如組織架構、流程、文化、資源、技術架構與治理成熟度。</li><li>確認這些議題如何影響 ISMS 預期結果與資訊安全風險。</li><li>稽核時不要只看 SWOT 表格，要追問議題如何進入範圍、風險評鑑與目標設定。</li><li>當組織環境變更時，確認是否觸發風險評鑑、控制措施或管理審查更新。</li><li>導讀時可用「全景不是背景介紹，而是管理系統設計輸入」來說明。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="10" aria-hidden="true">
+              <h2>4.2 瞭解關注方之需要及期望</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step is-current">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需判定與 ISMS 相關的關注方，以及其中哪些要求會成為資訊安全管理系統要求。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 決定與資訊安全管理系統有關之關注方。</li><li>b) 決定此等關注方之相關要求事項。</li><li>c) 決定此等要求事項中，哪些將透過資訊安全管理系統因應。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>識別關注方，例如客戶、主管機關、員工、供應商、股東、合作夥伴與資料主體。</li><li>區分期望、承諾與必須遵守的要求，避免把所有期待都視為硬性要求。</li><li>將法律、監管、合約、服務承諾與內部政策要求連到 ISMS。</li><li>稽核時確認要求清單是否被維護，且能反映變更與責任分派。</li><li>把關注方要求帶入 6.1 風險機會、6.2 目標、8.1 運作控制與 9.3 管理審查。</li><li>導讀時可用 SoA 的納入或排除理由，示範關注方要求如何影響控制選擇。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="11" aria-hidden="true">
+              <h2>4.3 決定資訊安全管理系統之範圍</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step is-current">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需決定 ISMS 的邊界與適用性，並考量組織全景、關注方要求、介面與依存關係。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 決定範圍時，考量 4.1 所提及之外部及內部議題。</li><li>b) 決定範圍時，考量 4.2 所提及之要求事項。</li><li>c) 決定範圍時，考量組織執行活動與其他組織活動間之介面及相依性。</li><li>文件化資訊：資訊安全管理系統範圍應以文件化資訊提供。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>範圍要說清楚涵蓋的組織單位、場所、流程、產品服務、資訊資產與技術環境。</li><li>確認範圍如何考量 4.1 的內外部議題與 4.2 的相關要求。</li><li>識別與範圍外單位、供應商、雲服務、共享基礎設施或外包流程的介面。</li><li>稽核時檢查範圍描述是否足以支援風險評鑑與驗證邊界。</li><li>範圍不能用來不合理排除重大風險或關鍵依存關係。</li><li>導讀時可把範圍視為後續所有風險與控制措施判斷的邊界條件。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="12" aria-hidden="true">
+              <h2>4.4 資訊安全管理系統</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step is-current">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需依本標準要求建立、實作、維持並持續改善 ISMS，包括所需流程與其交互作用。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認 ISMS 不只是文件集合，而是有流程、責任、輸入輸出與監督改進的系統。</li><li>辨識 ISMS 核心流程，例如風險管理、文件控制、能力、溝通、運作控制、績效評估與改善。</li><li>稽核時追蹤流程之間如何銜接，例如風險評鑑如何產生 SoA 與風險處理計畫。</li><li>確認外包或供應商參與的流程是否被納入控制。</li><li>ISMS 應能隨全景、威脅、組織與技術變更而維持有效。</li><li>導讀時可用 4.4 作為整套標準的總開關：所有條款都要變成可運作的系統。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="13" aria-hidden="true">
+              <h2>5.1 領導及承諾</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>最高管理階層需展現對 ISMS 的領導與承諾，確保政策、目標、資源、整合、有效性與持續改善被推動。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 確保資訊安全政策及資訊安全目標已建立，且與組織策略方向相容。</li><li>b) 確保資訊安全管理系統要求事項整合入組織各項過程。</li><li>c) 確保資訊安全管理系統所需資源可取得。</li><li>d) 傳達有效資訊安全管理及符合 ISMS 要求事項的重要性。</li><li>e) 確保資訊安全管理系統達成其預期成果。</li><li>f) 指導及支援人員，以促進資訊安全管理系統有效性。</li><li>g) 宣導持續改善。</li><li>h) 支持其他相關管理角色，以展現其領導責任。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認最高管理階層是否對 ISMS 有明確責任，而不是只授權資安部門處理。</li><li>查看資訊安全政策與目標是否與策略方向一致，且能支援營運。</li><li>確認管理階層是否提供必要資源，並促進基於風險的方法。</li><li>稽核時可訪談高階管理，確認其理解重大資訊安全風險與管理系統績效。</li><li>確認 ISMS 要求是否整合進組織流程，而不是額外附加活動。</li><li>導讀時強調領導承諾的判斷重點是行動、決策與資源，而非口頭支持。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="14" aria-hidden="true">
+              <h2>5.2 政策</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>資訊安全政策需適合組織目的、提供目標框架、包含符合要求與持續改善承諾，並被溝通與可取得。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 資訊安全政策應適合組織目的。</li><li>b) 資訊安全政策應包括資訊安全目標，或提供設定資訊安全目標的框架。</li><li>c) 資訊安全政策應包括滿足資訊安全適用要求事項的承諾。</li><li>d) 資訊安全政策應包括持續改善資訊安全管理系統的承諾。</li><li>e) 資訊安全政策應以文件化資訊提供。</li><li>f) 資訊安全政策應於組織內傳達。</li><li>g) 適用時，資訊安全政策應提供予關注方。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認政策與組織全景、策略、範圍與資訊安全風險相稱。</li><li>政策應提供建立資訊安全目標的框架，而不是孤立宣言。</li><li>確認政策包含符合適用要求與持續改善 ISMS 的承諾。</li><li>稽核時檢查政策是否被文件化、溝通、理解，且對相關關注方可取得。</li><li>政策需能連動主題特定政策，例如存取控制、分類、事件管理、供應商與備份。</li><li>導讀時可把政策視為管理階層對資訊安全治理方向的正式承諾。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="15" aria-hidden="true">
+              <h2>5.3 組織角色、責任及權限</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>最高管理階層需確保 ISMS 相關角色、責任與權限被分派、溝通並理解。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>前段：資訊安全相關角色之責任及權限，應於組織內指派並傳達。</li><li>a) 指派責任及權限，以確保資訊安全管理系統符合本標準要求事項。</li><li>b) 指派責任及權限，以向最高管理階層報告資訊安全管理系統績效。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>明確分派 ISMS 維護、風險管理、控制執行、事件回應、稽核與報告責任。</li><li>確認責任與權限被溝通到相關角色，而非只存在組織圖中。</li><li>指定人員需能向最高管理階層報告 ISMS 績效與改進需要。</li><li>稽核時追問流程擁有者如何知道自己的資訊安全責任。</li><li>角色分派需與職務區隔、供應商責任與雲服務責任相容。</li><li>導讀時可用 RACI 或責任矩陣說明，但重點是責任真的被執行。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="16" aria-hidden="true">
+              <h2>6.1 因應風險及機會之行動</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需規劃行動以處理與 ISMS 有關的風險與機會，確保 ISMS 達成預期結果、防止不期望影響並持續改善。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>以 4.1、4.2 與 4.3 作為風險與機會規劃的輸入。</li><li>辨識哪些風險可能影響 ISMS 達成預期結果，哪些機會可提升資訊安全績效。</li><li>確認風險與機會行動會被整合到 ISMS 流程中，而不是停留在清單。</li><li>稽核時追蹤行動是否被實作、評估有效性並進入管理審查。</li><li>風險處理需連接控制措施選擇、風險處理計畫與 SoA。</li><li>導讀時可把 6.1 視為標準中把全景轉成行動的核心條款。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="17" aria-hidden="true">
+              <h2>6.1.1 一般要求</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>規劃 ISMS 時，組織需考量全景、關注方與範圍，判定需要處理的風險與機會。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 確保資訊安全管理系統能達成其預期成果。</li><li>b) 預防或減少非所欲之影響。</li><li>c) 達成持續改善。</li><li>d) 規劃因應此等風險及機會之行動。</li><li>e) 規劃執行方法，包括將行動整合及實作於 ISMS 過程，並評估此等行動之有效性。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認風險與機會的來源包含內外部議題、關注方要求與 ISMS 範圍。</li><li>規劃行動需支援 ISMS 預期結果、增強期望效果、避免不利影響與達成改善。</li><li>行動不只要被計畫，也要納入 ISMS 流程並評估有效性。</li><li>稽核時可從管理審查輸入、風險登錄表與改善計畫交叉確認。</li><li>注意「機會」不等於商業機會而已，也可能是提升安全成熟度或效率的方式。</li><li>導讀時先講一般風險機會，再進入資訊安全風險評鑑與處理。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="18" aria-hidden="true">
+              <h2>6.1.2 資訊安全風險評鑑</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需定義並應用資訊安全風險評鑑流程，建立風險準則，識別、分析與評估風險，並保留文件化資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 建立及維持資訊安全風險準則，包括風險接受準則及執行資訊安全風險評鑑之準則。</li><li>b) 確保重複之資訊安全風險評鑑產生一致、有效及可比較的結果。</li><li>c) 識別資訊安全風險。<ul class="clause-sublist"><li>1) 應用風險評鑑過程，識別 ISMS 範圍內與喪失資訊機密性、完整性及可用性相關聯的風險。</li><li>2) 識別風險當責者。</li></ul></li><li>d) 分析資訊安全風險。<ul class="clause-sublist"><li>1) 評鑑風險實際發生時可能導致之潛在後果。</li><li>2) 評鑑風險發生的實際可能性。</li><li>3) 判定風險等級。</li></ul></li><li>e) 評估資訊安全風險，包括以風險準則比較風險分析結果，並訂定風險處理優先序。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認風險準則包含風險接受準則與評鑑方法，且能產生一致、有效、可比較的結果。</li><li>風險識別需連到機密性、完整性、可用性損失與相關風險擁有者。</li><li>風險分析需評估後果與可能性，並決定風險等級。</li><li>風險評估需將分析結果與準則比較，決定優先順序。</li><li>稽核時查看方法是否實際被一致使用，而不是只有模板存在。</li><li>導讀時強調 6.1.2 是控制措施選擇前的判斷基礎。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="19" aria-hidden="true">
+              <h2>6.1.3 資訊安全風險處理</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需定義並應用風險處理流程，選擇處理選項與控制措施，與附錄 A 比對，產生 SoA 並建立風險處理計畫。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 考量風險評鑑結果，選擇適切之資訊安全風險處理選項。</li><li>b) 對所選定資訊安全風險處理選項，決定所有必須實作之控制措施。</li><li>c) 將 6.1.3 b) 所決定之控制措施與附錄 A 比較，查證未忽略必要控制措施。</li><li>d) 產生適用性聲明 SoA，包含必要控制措施、納入理由、是否實作、以及排除附錄 A 控制措施之理由。</li><li>e) 制訂資訊安全風險處理計畫 RTP。</li><li>f) 取得風險擁有者對風險處理計畫之核准，以及對剩餘資訊安全風險之接受。</li><li>文件化資訊：保存資訊安全風險處理過程之文件化資訊。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>依風險評鑑結果選擇適當風險處理選項，例如降低、避免、轉移或接受。</li><li>決定必要控制措施，並與附錄 A 進行比對，確保沒有遺漏必要控制。</li><li>SoA 需包含必要控制措施、納入理由、實作狀態，以及附錄 A 控制是否排除與排除理由。</li><li>建立風險處理計畫，並取得風險擁有者對計畫與剩餘風險的核准。</li><li>稽核時追蹤風險、控制措施、SoA、處理計畫與實作狀態之間是否一致。</li><li>導讀時可把 6.1.3 作為附錄 A 93 項控制措施的入口。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="20" aria-hidden="true">
+              <h2>6.2 資訊安全目標及其達成之規劃</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需在相關職能與層級建立資訊安全目標，並規劃如何達成、量測、監督、溝通與更新。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 資訊安全目標應與資訊安全政策一致。</li><li>b) 資訊安全目標應可量測，若可行時。</li><li>c) 資訊安全目標應考量適用資訊安全要求事項、風險評鑑結果及風險處理結果。</li><li>d) 資訊安全目標應受監視。</li><li>e) 資訊安全目標應被傳達。</li><li>f) 資訊安全目標應於適切時更新。</li><li>g) 資訊安全目標應以文件化資訊提供，且組織應保存相關文件化資訊。</li><li>h) 規劃如何達成目標時，決定待辦事項。</li><li>i) 決定所要求資源。</li><li>j) 決定負責人員。</li><li>k) 決定完成時間。</li><li>l) 決定結果之評估方式。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>目標需與資訊安全政策一致，並考量適用要求與風險評鑑、風險處理結果。</li><li>目標要可量測或可評估，且能被監督、溝通與適時更新。</li><li>規劃需說明要做什麼、需要哪些資源、誰負責、何時完成與如何評估結果。</li><li>稽核時查看目標是否只是口號，或真的連到績效數據與改善行動。</li><li>資訊安全目標可涵蓋事件降低、控制有效性、訓練完成、漏洞修補、供應商管理等。</li><li>導讀時強調目標是把政策與風險處理轉成可管理成果。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="21" aria-hidden="true">
+              <h2>6.3 變更之規劃</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>當組織判定需要變更 ISMS 時，需以規劃方式執行，避免變更破壞管理系統有效性。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：當組織決定需要對資訊安全管理系統變更時，應以規劃之方式執行變更。</li><li>講解重點：變更規劃涵蓋管理系統過程與組織核心過程，實作層面可再連到附錄 A.8.32 變更管理。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認變更來源，例如範圍調整、組織改組、技術轉換、法規變更、重大事故或供應鏈變化。</li><li>規劃變更時要考量目的、潛在後果、ISMS 完整性、資源與責任分派。</li><li>稽核時查看重大變更是否觸發風險評鑑、控制更新、文件更新與溝通。</li><li>變更管理不只適用 IT 系統，也適用管理系統流程與治理安排。</li><li>對技術變更可連到附錄 A 的變更管理、安全開發與組態管理控制。</li><li>導讀時可把 6.3 視為保護 ISMS 不被變更衝垮的條款。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="22" aria-hidden="true">
+              <h2>7.1 資源</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需決定並提供建立、實作、維持與持續改善 ISMS 所需資源。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：決定並提供建立、實作、維持及持續改善資訊安全管理系統所需之資源。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>辨識人力、技術、工具、預算、時間、外部支援與基礎設施需求。</li><li>資源配置需與 ISMS 範圍、風險、目標與控制措施相稱。</li><li>稽核時確認高風險控制是否因資源不足而無法有效運作。</li><li>資源不只包含資安團隊，也包含流程擁有者、IT、法務、人資、採購與供應商。</li><li>資源決策應能在管理審查或治理會議中被追蹤。</li><li>導讀時強調沒有資源的承諾，很難形成有效的 ISMS。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="23" aria-hidden="true">
+              <h2>7.2 能力</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需確保影響資訊安全績效的人員具備必要能力，並保留能力證明的文件化資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 決定於組織控制下執行工作、影響資訊安全績效人員之必要能力。</li><li>b) 確保此等人員於適切教育、訓練或經驗之基礎上能勝任。</li><li>c) 適用時，採取行動取得必要能力，並評估所採取行動之有效性。</li><li>d) 保存適切文件化資訊，作為勝任之證據。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>決定哪些角色會影響資訊安全績效，例如系統管理員、開發者、採購、人資、使用者與稽核員。</li><li>定義能力需求，可包含教育、訓練、經驗、專業證照或實作能力。</li><li>採取行動取得能力，例如訓練、輔導、外部支援或人員配置。</li><li>評估能力行動是否有效，而不是只記錄上課時數。</li><li>稽核時抽查高風險角色是否理解其控制責任。</li><li>導讀時可連到附錄 A 的人員控制與管理階層責任。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="24" aria-hidden="true">
+              <h2>7.3 認知</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>相關人員需認知資訊安全政策、其對 ISMS 有效性的貢獻，以及不符合 ISMS 要求的影響。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 於組織控制下執行工作之人員，應認知資訊安全政策。</li><li>b) 應認知其對資訊安全管理系統有效性之貢獻，包括改善資訊安全績效之益處。</li><li>c) 應認知未遵循資訊安全管理系統要求事項之可能後果。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認人員知道資訊安全政策與其工作相關的要求。</li><li>讓人員理解自己的行為如何支持 ISMS 有效性與資訊安全目標。</li><li>說明不符合要求可能造成的後果，例如事故、違規、客戶影響或紀律處理。</li><li>稽核時可用訪談確認認知，而不是只查看訓練紀錄。</li><li>認知內容應依角色差異調整，管理者、開發者、一般使用者與供應商不一定相同。</li><li>導讀時強調認知是讓控制措施在日常行為中落地。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="25" aria-hidden="true">
+              <h2>7.4 溝通或傳達</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需決定與 ISMS 有關的內外部溝通，包括溝通內容、時機、對象、方式與責任。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 決定溝通或傳達事項。</li><li>b) 決定溝通或傳達時間。</li><li>c) 決定溝通或傳達對象。</li><li>d) 決定溝通或傳達方式。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認 ISMS 溝通計畫涵蓋內部人員、管理階層、供應商、客戶與主管機關。</li><li>定義何時溝通，例如政策發布、事件通報、控制變更、稽核結果、管理審查後。</li><li>定義溝通責任與管道，避免事件或合規議題發生時不知道誰對外回應。</li><li>稽核時查看關鍵資訊是否傳達到需要知道的人員與外部關注方。</li><li>敏感資訊溝通需同時考量保密性與完整性。</li><li>導讀時可將 7.4 連到事件通報、權責機關聯絡與供應商溝通。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="26" aria-hidden="true">
+              <h2>7.5 文件化資訊</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>ISMS 需包含標準要求的文件化資訊，以及組織判定為 ISMS 有效性所需的文件化資訊。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>先區分需要維持的文件與需要保存的紀錄。</li><li>文件化資訊的多少要依組織規模、流程複雜度、能力與風險而定。</li><li>標準明示的文件化資訊不可省略，例如範圍、政策、風險評鑑與風險處理結果、SoA 等。</li><li>稽核時檢查文件是否能支援流程有效運作，而不只是形式存在。</li><li>文件化資訊需被建立、更新、控制並防止不當使用。</li><li>導讀時可說明文件不是目的，文件化資訊是讓管理系統可重複、可追溯、可證明。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="27" aria-hidden="true">
+              <h2>7.5.1 一般要求</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>文件化資訊包含標準要求的項目，以及組織判定對 ISMS 有效性必要的其他資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) ISMS 應包括本標準要求之文件化資訊。</li><li>b) ISMS 應包括組織決定對 ISMS 有效性必要之文件化資訊。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>建立文件化資訊清單，辨識哪些來自標準要求，哪些來自組織需要。</li><li>確認不同流程所需文件與紀錄足以支持一致運作。</li><li>文件化程度要與組織複雜度、風險與人員能力相稱。</li><li>稽核時不要只數文件數量，要判斷文件是否被使用且有效。</li><li>外部來源文件，例如法規、標準、合約與供應商文件，也要被適當管理。</li><li>導讀時可把 7.5.1 作為文件化資訊範圍的判定條款。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="28" aria-hidden="true">
+              <h2>7.5.2 制訂及更新</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>制訂與更新文件化資訊時，需確保適當識別、格式、媒介、審查與核准。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 制訂及更新文件化資訊時，確保適切之識別及描述，例如標題、日期、作者或參引號碼。</li><li>b) 確保適切之格式及媒體，例如語言、軟體版本、圖形、紙本或電子。</li><li>c) 確保合宜性及適切性之審查及核可。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>文件需有名稱、日期、作者或版次等識別方式。</li><li>格式與媒介可依需要選擇，例如文件、系統紀錄、流程工具或資料庫。</li><li>文件發布前需經適當審查與核准，以確保適切與充分。</li><li>稽核時確認版本、核准與實際使用文件一致。</li><li>變更文件時要考量相關流程、角色、訓練與控制措施是否也需更新。</li><li>導讀時可用政策、程序、SoA、風險評鑑表作為例子。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="29" aria-hidden="true">
+              <h2>7.5.3 文件化資訊之控制</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>文件化資訊需被控制，以確保可取得、適用並受到充分保護。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 文件化資訊於需要處及需要時為可用及適用。</li><li>b) 文件化資訊受適切保護，例如防止漏失機密性、不當使用或漏失完整性。</li><li>c) 適用時，闡明派送、存取、檢索及使用。</li><li>d) 適用時，闡明儲存及保存，包括可讀性之保存。</li><li>e) 適用時，闡明變更之控制，例如版本控制。</li><li>f) 適用時，闡明留存及屆期處置。</li><li>外部來源：對 ISMS 規劃及運作必要之外部來源文件化資訊，應於適切時識別及控制。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認需要使用文件的人能在需要時取得正確版本。</li><li>保護文件化資訊免於不當揭露、修改、遺失或誤用。</li><li>控制可包含分發、存取、取回、使用、儲存、保存、變更控制與處置。</li><li>外部來源文件若為 ISMS 所需，也要被識別並控制。</li><li>稽核時查看文件系統權限、版本紀錄、保留期限與作廢文件處理。</li><li>導讀時強調文件控制本身也是資訊安全控制的一部分。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="30" aria-hidden="true">
+              <h2>8.1 運作之規劃及控制</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需規劃、實作與控制滿足 ISMS 要求所需流程，並實作 6.1 與 6.2 所規劃的行動。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：規劃、實作及控制符合要求事項所需之過程，並實作第 6 節所決定之行動。</li><li>過程準則：建立過程之準則，並依準則實作過程控制措施。</li><li>文件化資訊：保存足以使人相信過程已依規劃執行之文件化資訊。</li><li>變更控制：控制規劃之變更，並審查非預期變更後果，必要時減輕負面效果。</li><li>外部提供：確保與 ISMS 相關之外部所提供過程、產品或服務受控制。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>將風險處理計畫、資訊安全目標與控制措施轉成可執行的運作流程。</li><li>建立流程準則，並依準則實施控制。</li><li>保存必要文件化資訊，以證明流程已依規劃執行。</li><li>控制計畫性變更，並審查非預期變更的後果。</li><li>外包流程需被決定並控制，不能因外包而移出 ISMS 責任。</li><li>導讀時可把 8.1 視為把規劃落地成日常控制運作的條款。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="31" aria-hidden="true">
+              <h2>8.2 資訊安全風險評鑑</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需依規劃或重大變更時執行資訊安全風險評鑑，並保存結果文件化資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：依規劃期間，或當提議或發生重大變更時，依 6.1.2 a) 之準則執行資訊安全風險評鑑。</li><li>文件化資訊：保存資訊安全風險評鑑結果之文件化資訊。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認風險評鑑依 6.1.2 定義的方法與準則執行。</li><li>風險評鑑需在規劃期間進行，也需在重大變更發生時重新評估。</li><li>保存風險評鑑結果，讓後續風險處理與 SoA 可追溯。</li><li>稽核時檢查最近變更、事故或威脅變化是否觸發重新評鑑。</li><li>風險評鑑結果要能支持優先順序與控制措施選擇。</li><li>導讀時說明 8.2 是 6.1.2 方法在運作階段的實際執行。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="32" aria-hidden="true">
+              <h2>8.3 資訊安全風險處理</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需依風險處理計畫實作資訊安全風險處理，並保存結果文件化資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：實作資訊安全風險處理計畫。</li><li>文件化資訊：保存資訊安全風險處理結果之文件化資訊。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認風險處理計畫已被執行，並與 SoA 的控制措施狀態一致。</li><li>保存風險處理結果，讓剩餘風險、控制有效性與管理審查可追溯。</li><li>若控制未完成或無效，應有例外、風險接受或改善安排。</li><li>稽核時抽查高風險項目，追蹤從風險到控制、責任人、期限與狀態。</li><li>風險處理不是一次性專案，需配合威脅、變更、事故與績效結果更新。</li><li>導讀時說明 8.3 是 6.1.3 風險處理規劃的執行與證明。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="33" aria-hidden="true">
+              <h2>9.1 監督、量測、分析及評估</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需決定需要監督與量測的項目、方法、時機、責任，並評估資訊安全績效與 ISMS 有效性。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 決定需要監督及量測之事項，包括資訊安全過程及控制措施。</li><li>b) 決定監督、量測、分析及評估之適用方法，以確保有效結果。</li><li>c) 決定應執行監督及量測之時間。</li><li>d) 決定應執行監督及量測之人員。</li><li>e) 決定監督及量測結果應分析及評估之時間。</li><li>f) 決定應執行分析及評估此等結果之人員。</li><li>文件化資訊：具備文件化資訊作為結果證據，並評估資訊安全績效與 ISMS 有效性。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>定義要監督量測的對象，例如控制有效性、事件趨勢、目標達成、風險處理進度與合規狀態。</li><li>定義量測方法，確保結果有效、可比較且能支援決策。</li><li>決定何時監督、何時分析、何時評估，以及誰負責。</li><li>保存監督量測、分析與評估結果的文件化資訊。</li><li>稽核時查看指標是否真的被用於改善，而不是只為了報表。</li><li>導讀時強調 9.1 是判斷 ISMS 是否有效的資料基礎。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="34" aria-hidden="true">
+              <h2>9.2 內部稽核</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需依規劃期間執行內部稽核，以提供 ISMS 是否符合組織要求、本標準要求且有效實作維持的資訊。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>建立內部稽核方案，考量流程重要性、變更、前次稽核結果與風險。</li><li>稽核準則與範圍需清楚，稽核員需保持客觀與公正。</li><li>稽核結果需向相關管理者報告，並保存稽核方案與稽核結果文件化資訊。</li><li>稽核時確認內部稽核是否涵蓋 ISMS 的關鍵流程與附錄 A 控制措施。</li><li>內部稽核發現需連到矯正措施、管理審查與持續改善。</li><li>導讀時可連到 ISO 19011，說明稽核方案與單次稽核的方法。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="35" aria-hidden="true">
+              <h2>9.2.1 一般要求</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>內部稽核需確認 ISMS 是否符合組織自身要求與 ISO/IEC 27001 要求，且是否有效實作與維持。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 內部稽核應提供 ISMS 是否符合組織自身 ISMS 要求與本標準要求之資訊。<ul class="clause-sublist"><li>1) 確認是否符合組織本身對其 ISMS 之要求事項。</li><li>2) 確認是否符合本標準之要求事項。</li></ul></li><li>b) 確認 ISMS 是否有效實作及維持。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>稽核目的需涵蓋符合性與有效性，而不只是文件是否存在。</li><li>稽核準則可包含本標準、組織政策程序、法律合約要求與 SoA。</li><li>稽核範圍應足以覆蓋 ISMS 邊界與重大風險。</li><li>稽核時要查流程結果、控制運作與績效，而不是只查條文清單。</li><li>稽核結論需能提供管理審查與改善決策使用。</li><li>導讀時強調內部稽核是 ISMS 的自我確認機制。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="36" aria-hidden="true">
+              <h2>9.2.2 內部稽核方案管理</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需規劃、建立、實作並維持稽核方案，定義頻率、方法、責任、規劃要求與報告。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>前段：規劃、建立、實作及維持稽核方案，包括頻率、方法、責任、規劃要求事項及報告。</li><li>前段：建立內部稽核方案時，考量所關切過程之重要性及先前稽核結果。</li><li>a) 定義各稽核之稽核準則及稽核範圍。</li><li>b) 選擇稽核員及施行稽核，以確保稽核過程公正性及稽核結論客觀性。</li><li>c) 確保稽核結果對相關管理階層報告。</li><li>文件化資訊：具備文件化資訊，作為稽核方案實作及稽核結果之證據。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>稽核方案需考量相關流程重要性、影響組織的變更與前次稽核結果。</li><li>每次稽核需定義準則與範圍，並選擇能確保客觀公正的稽核員。</li><li>稽核結果需向相關管理階層報告，並保留方案與結果文件化資訊。</li><li>稽核方案應涵蓋風險評鑑、風險處理、SoA、關鍵控制與管理審查。</li><li>稽核時查看內部稽核是否依計畫執行，延誤或變更是否有合理理由。</li><li>導讀時可把稽核方案視為一年內 ISMS 確認活動的總規劃。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="37" aria-hidden="true">
+              <h2>9.3 管理審查</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>最高管理階層需於規劃期間審查 ISMS，以確保其持續合宜性、適切性與有效性。</p>
+            
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>管理審查需由最高管理階層參與，並對 ISMS 做出決策。</li><li>審查不只是會議記錄，而是管理系統績效、風險與改善的治理活動。</li><li>輸入需涵蓋變更、績效、稽核、目標、風險評鑑與風險處理計畫狀態等。</li><li>輸出需包含持續改善機會與 ISMS 變更需求的決策。</li><li>稽核時確認管理審查結果是否被追蹤並落實。</li><li>導讀時可把管理審查視為最高管理階層對 ISMS 的定期校準。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="38" aria-hidden="true">
+              <h2>9.3.1 一般要求</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>最高管理階層需在規劃期間審查 ISMS，確認其持續合宜、適切與有效。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：最高管理階層應於規劃期間審查 ISMS，以確保其持續合宜性、適切性及有效性。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認管理審查頻率與時程符合組織風險與管理節奏。</li><li>審查應能判斷 ISMS 是否仍適合組織目的與全景。</li><li>審查應能判斷 ISMS 是否足以滿足標準、法規、合約與組織要求。</li><li>審查應能判斷 ISMS 是否完成規劃活動並達成預期結果。</li><li>稽核時查看審查是否有高階決策，而不是例行報告會。</li><li>導讀時可用合宜性、適切性、有效性三個詞作為說明主軸。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="39" aria-hidden="true">
+              <h2>9.3.2 管理審查輸入</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>管理審查需考量前次決議狀態、內外部議題與關注方變更、資訊安全績效回饋、風險評鑑與風險處理狀態及改善機會。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 考量過往管理審查決議的處理狀態。</li><li>b) 考量與 ISMS 有關之外部及內部議題的變更。</li><li>c) 考量與 ISMS 相關關注方之需要及期望的變更。</li><li>d) 考量資訊安全績效之回饋，包括趨勢。<ul class="clause-sublist"><li>1) 不符合事項及矯正措施。</li><li>2) 監督及量測結果。</li><li>3) 稽核結果。</li><li>4) 資訊安全目標之達成。</li></ul></li><li>e) 考量關注方之回饋。</li><li>f) 考量風險評鑑結果及風險處理計畫之狀態。</li><li>g) 考量持續改善之機會。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>追蹤過往管理審查決議的處理狀態。</li><li>納入與 ISMS 有關的外部內部議題及關注方需求變更。</li><li>分析不符合與矯正措施、監督量測、稽核結果與目標達成趨勢。</li><li>納入關注方回饋、風險評鑑結果與風險處理計畫狀態。</li><li>稽核時確認輸入資料是否完整、即時，且足以支援管理決策。</li><li>導讀時可把輸入視為最高管理階層理解 ISMS 健康狀態的儀表板。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="40" aria-hidden="true">
+              <h2>9.3.3 管理審查結果</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>管理審查結果需包含與持續改善機會及 ISMS 變更需求相關的決策，並保存文件化資訊。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>結果：管理審查結果應包括與持續改善機會相關的決策。</li><li>結果：管理審查結果應包括任何對 ISMS 變更之需要。</li><li>文件化資訊：具備文件化資訊，以作為管理審查結果之證據。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>確認管理審查輸出包含明確決策，而不只是討論摘要。</li><li>決策可包含資源、風險處理、控制改善、政策目標調整、範圍或流程變更。</li><li>管理審查結果需被文件化並可追蹤。</li><li>稽核時追蹤審查輸出是否進入行動計畫、責任分派與完成狀態。</li><li>若長期沒有改善或變更決策，需確認 ISMS 是否真的被有效評估。</li><li>導讀時強調管理審查是改善與治理閉環的關鍵出口。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="41" aria-hidden="true">
+              <h2>10.1 持續改善</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>組織需持續改善 ISMS 的合宜性、適切性與有效性。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>要求：持續改善資訊安全管理系統之合宜性、適切性及有效性。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>持續改善可來自稽核、監督量測、事故、風險評鑑、管理審查與關注方回饋。</li><li>改善需聚焦 ISMS 是否更適合組織目的、更能滿足要求、更能達成預期結果。</li><li>稽核時查看改善活動是否有優先順序、責任、資源與完成追蹤。</li><li>改善不一定都是大型專案，也可以是流程、控制、能力或監督方法的調整。</li><li>若相同問題反覆發生，需檢查改善是否沒有處理系統性原因。</li><li>導讀時可把 10.1 作為整個 PDCA 管理閉環的收束。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="42" aria-hidden="true">
+              <h2>10.2 不符合事項及矯正措施</h2>
+              
+              <div class="flow-track requirement-flow" aria-label="ISO 27001 條款流程"><div class="flow-step">
+              <span class="flow-code">4</span>
+              <span class="flow-label">組織全景</span>
+            </div><div class="flow-step">
+              <span class="flow-code">5</span>
+              <span class="flow-label">領導力</span>
+            </div><div class="flow-step">
+              <span class="flow-code">6</span>
+              <span class="flow-label">規劃</span>
+            </div><div class="flow-step">
+              <span class="flow-code">7</span>
+              <span class="flow-label">支援</span>
+            </div><div class="flow-step">
+              <span class="flow-code">8</span>
+              <span class="flow-label">運作</span>
+            </div><div class="flow-step">
+              <span class="flow-code">9</span>
+              <span class="flow-label">績效評估</span>
+            </div><div class="flow-step is-current">
+              <span class="flow-code">10</span>
+              <span class="flow-label">改善</span>
+            </div></div>
+        <div class="grid two">
+          <article class="card clause-card">
+            <h3>條款導讀</h3>
+            <p>發生不符合時，組織需反應、控制與修正、處理後果，評估消除原因的行動需求，實作並審查矯正措施有效性。</p>
+            
+            <div class="clause-detail">
+              <h4>條文重點</h4>
+              <ul class="clause-detail-list"><li>a) 對不符合事項反應，並於適用時採取行動控制並修正之，且處理其後果。<ul class="clause-sublist"><li>1) 採取行動，以控制並修正不符合事項。</li><li>2) 處理不符合事項後果。</li></ul></li><li>b) 評估消除不符合事項原因之行動需要，使其不再發生且不於他處發生。<ul class="clause-sublist"><li>1) 審查不符合事項。</li><li>2) 判定不符合事項之原因。</li><li>3) 判定是否有類似不符合事項存在或可能發生。</li></ul></li><li>c) 實作所有所需行動。</li><li>d) 審查所有所採取矯正措施之有效性。</li><li>e) 必要時，對資訊安全管理系統進行變更。</li><li>文件化資訊：保存不符合事項本質、後續行動及所有矯正措施結果之證據。</li></ul>
+            </div>
+        
+          </article>
+          <article class="card">
+            <h3>導入/稽核指引</h3>
+            <ul><li>先控制並修正不符合事項，並處理已發生的後果。</li><li>分析原因，判定是否有類似不符合存在或可能發生。</li><li>實作必要矯正措施，並確認措施與不符合影響相稱。</li><li>審查矯正措施有效性，必要時變更 ISMS。</li><li>保存不符合性質、後續行動與矯正措施結果的文件化資訊。</li><li>導讀時強調矯正措施不是補文件，而是消除原因並防止再發。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="43" aria-hidden="true">
+              <h2>附錄 A 控制措施總覽</h2>
+              <p class="subtitle">控制措施參引、屬性與適用性聲明 SoA</p>
+              <div class="grid two">
+              <article class="card"><h3>控制措施不是孤立清單</h3><p>附錄 A 協助組織檢查風險處理時是否漏掉必要控制；是否採用，仍要回到風險評鑑、適用要求與 SoA 理由。</p></article>
+              <article class="card"><h3>四大主題</h3><ul><li>組織控制：治理、資產、存取、供應商、事故、持續與合規。</li><li>人員控制：聘用、認知、保密、遠端與通報。</li><li>實體控制：場所、設備、媒體與環境保護。</li><li>技術控制：端點、身分、網路、開發、日誌、備份與變更。</li></ul></article>
+            </div>
+            </section>
+<section class="iso27001-slide" data-slide="44" aria-hidden="true">
+              <h2>控制措施屬性導讀</h2>
+              <p class="subtitle">控制型式、資訊安全性質、網宇安全概念、運作能力與安全領域</p>
+              <div class="grid two">
+              <article class="card"><h3>屬性的用途</h3><p>屬性用來從不同角度檢視控制措施，例如控制何時作用、保護 CIA 哪一種性質、對應哪一類網宇安全概念，以及需要哪種運作能力。</p></article>
+              <article class="card"><h3>導讀方式</h3><p>介紹附錄 A 時，可先說明控制措施目的，再說明其與風險處理、SoA、控制有效性監督及持續改善之間的關係。</p></article>
+            </div>
+            <table>
+              <tr><th>屬性</th><th>導讀重點</th></tr>
+              <tr><td>控制措施型式</td><td>預防、偵測或矯正，說明控制在事件前、中、後如何降低風險。</td></tr>
+              <tr><td>資訊安全性質</td><td>連到機密性、完整性、可用性的保護需求。</td></tr>
+              <tr><td>網宇安全概念</td><td>可對應識別、保護、檢測、回應、恢復等概念。</td></tr>
+              <tr><td>運作能力/安全領域</td><td>協助組織由治理、資產、人力、實體、系統、網路、應用、供應商、事故、持續與合規等角度管理控制。</td></tr>
+            </table>
+            </section>
+<section class="iso27001-slide" data-slide="45" aria-hidden="true">
+              <h2>A.5.1 資訊安全政策</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保管理方向、資訊安全支持與政策持續合宜、適切、有效。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「於最高層級上定義資訊安全政策，明列組織管理其資訊安全之作法，並由最高」納入「資訊安全政策」的實作範圍並界定適用情境。</li><li>針對「營運策略及要求事項」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「法規、法律及契約」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「目前及預想之資訊安全風險及威脅」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊安全之定義」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資訊安全目標或設定資訊安全目標之框架」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「引導與資訊安全相關之所有活動的原則」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「滿足與資訊安全相關之適用要求事項的承諾」是否仍適切。</li><li>保留「資訊安全管理系統持續改善之承諾」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「資訊安全管理之責任指派予已定義的角色」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="46" aria-hidden="true">
+              <h2>A.5.2 資訊安全之角色及責任</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>建立已定義、經核可且被理解的資訊安全角色與責任架構。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「依資訊安全政策及主題特定政策」納入「資訊安全之角色及責任」的實作範圍並界定適用情境。</li><li>針對「保護資訊及其他相關聯資產」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「執行特定資訊安全過程」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「資訊安全風險管理活動，尤其是接受剩餘風險」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「組織資訊及其他相關聯資產之所有人員」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資訊安全之角色及責任」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「已定義、經核可且被理解的資訊安全角色與責任架構」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="47" aria-hidden="true">
+              <h2>A.5.3 職務區隔</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>降低詐欺、錯誤與繞過資訊安全控制措施的風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「職務區隔及責任範圍區隔，旨在分隔不同個人間相互衝突之職務，以防止一個」納入「職務區隔」的實作範圍並界定適用情境。</li><li>針對「啟動、核可及執行變更」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「請求、核可及實作存取權限」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「設計、實作及審視程式碼」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「開發軟體及管理生產系統」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「及管理應用程式」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「應用程式及管理資料庫」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「設計、稽核及保證資訊安全控制措施」是否仍適切。</li><li>保留「職務區隔」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「降低詐欺、錯誤與繞過資訊安全控制措施的風險」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="48" aria-hidden="true">
+              <h2>A.5.4 管理階層責任</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保管理階層推動人員依政策、程序與責任實施資訊安全。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「管理階層宜展現對資訊安全政策、主題特定政策、程序及資訊安全控制措施之」納入「管理階層責任」的實作範圍並界定適用情境。</li><li>針對「獲得對組織資訊及其他相關聯資產之存取權限前，已被正確告知其資訊安全角」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「提供指導綱要，闡明對其於組織內之角色的資訊安全期望」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「獲授權執行組織之資訊安全政策及主題特定政策」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「達到與其於組織內之角色及責任相稱的資訊安全認知等級」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「遵循聘用條款及條件、契約或協議」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「透過持續專業教育訓練，持續具有適切之資訊安全技能及資格」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「可行時，提供機密管道」是否仍適切。</li><li>保留「提供適切資源及專案規劃時間」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「管理階層責任」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="49" aria-hidden="true">
+              <h2>A.5.5 與權責機關之聯繫</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保組織能與法律、法規與監督權責機關保持適切資訊流。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「規定聯繫權責機關之時機及人員」納入「與權責機關之聯繫」的實作範圍並界定適用情境。</li><li>針對「與權責機關之聯繫亦宜」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「與權責機關之聯繫」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「組織能與法律、法規與監督權責機關保持適切資訊流」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「控制範圍與適用性」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「責任分派與核准流程」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「文件化規則與作業程序」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「監督、審查與例外處理」是否仍適切。</li><li>保留「外部聯繫、專家資訊、威脅情資或專案治理能回饋到風險管理」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「檢視資訊流、通報時機、授權窗口與保密限制是否清楚」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="50" aria-hidden="true">
+              <h2>A.5.6 與特殊關注群組之聯繫</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保組織能取得專家社群、論壇或安全團體的相關資訊。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「將加入特殊關注群組或論壇成為會員，視為達成下列目的之方法」納入「與特殊關注群組之聯繫」的實作範圍並界定適用情境。</li><li>針對「增進關於最佳實務作法之知識，並即時取得最新相關安全資訊」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「對資訊安全環境之瞭解為現行」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「接收有關攻擊及脆弱性之預警警訊、建議及修補程式」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「取得專家資訊安全建議之管道」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「分享並交換關於新技術、產品、服務、威脅或脆弱性之資訊」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「處理資訊安全事故時，提供合適之聯絡窗口」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「與特殊關注群組之聯繫」是否仍適切。</li><li>保留「組織能取得專家社群、論壇或安全團體的相關資訊」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="51" aria-hidden="true">
+              <h2>A.5.7 威脅情資</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>蒐集並分析威脅資訊，以理解威脅環境並採取適切減緩措施。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「蒐集並分析有關既有或新出現威脅之資訊」納入「威脅情資」的實作範圍並界定適用情境。</li><li>針對「促進採取知情行動，以防止威脅對組織造成傷害」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「降低此等威脅之衝擊」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「策略威脅情資」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「戰術威脅情資」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「運作威脅情資」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「威脅情資」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「具洞察力」是否仍適切。</li><li>保留「全景，以提供狀況認知」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「可採取行動(亦即組織可快速有效對資訊採取行動)」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="52" aria-hidden="true">
+              <h2>A.5.8 專案管理之資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在專案生命週期中納入資訊安全，以因應專案與交付項目的風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「將資訊安全整合入專案管理方法中，以確保因應資訊安全風險作為專案管理之」納入「專案管理之資訊安全」的實作範圍並界定適用情境。</li><li>針對「早期階段，且定期評鑑及處理資訊安全風險，作為整個專案生命週期中專案風」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「專案之早期階段，因應資訊安全要求事項」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「整個專案生命週期中，考量並處理與專案執行相關聯之資訊安全風險，諸如內」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「審查資訊安全風險處理之進度，並評估及測試處理的有效性」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「所涉及之資訊內容(資訊判定)、對應的資訊安全需要之內容」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「資訊及其他涉及之相關聯資產所要求之保護需要，特別是於機密性、完整性及」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「個體所宣稱身分所要求之信心度或保證等級，俾導出鑑別要求事項」是否仍適切。</li><li>保留「客戶及其他潛在營運使用者」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「告知使用者其職責」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="53" aria-hidden="true">
+              <h2>A.5.9 資訊及其他關聯資產之盤點清冊</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>識別資訊與相關資產，指定擁有權並支援適當保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「清冊組織宜識別其資訊及其他相關聯資產，並依資訊安全判定其重要性」納入「資訊及其他關聯資產之盤點清冊」的實作範圍並界定適用情境。</li><li>針對「資產清冊對所識別資訊及其他相關聯資產進行定期審查」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「安裝、變更或移除資產之過程中，自動進行清冊更新」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「資訊及其他相關聯資產進行盤點」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊及其他相關聯資產適切分類分級並保護之」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「定期審查分類分級」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「列出並關聯支援技術資產之組件，諸如資料庫、儲存體、軟體組件及子組件」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「可接受使用資訊及其他相關聯資產」是否仍適切。</li><li>保留「存取限制事項係與分類分級相對應且係有效並定期審查」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「資訊及其他相關聯資產於刪除或棄置時，以安全方式處理並由清冊中移除」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="54" aria-hidden="true">
+              <h2>A.5.10 可接受使用資訊及其他關聯資產</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊與相關資產被適當使用、處理與保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「令使用組織資訊及其他相關聯資產或具有其存取權限之人員及外部使用者，認」納入「可接受使用資訊及其他關聯資產」的實作範圍並界定適用情境。</li><li>針對「由資訊安全之觀點而言，個人的預期且不可接受之行為」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「允許及禁止使用資訊及其他相關聯資產」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「組織進行之活動」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「支援各分類分級等級之保護要求事項的存取限制事項」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「維護資訊及其他相關聯資產之授權使用者的紀錄」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「保護資訊之暫時或永久複本，與原始資訊保護一致的等級」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「製造者之規格，儲存與資訊相關聯的資產」是否仍適切。</li><li>保留「清楚標記所有儲存媒體(電子或實體)複本，以供經授權接收者注意」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「可接受使用資訊及其他關聯資產」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="55" aria-hidden="true">
+              <h2>A.5.11 資產之歸還</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在人員、契約或協議終止或變更時，將組織資產納入保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「變更或終止過程宜正式化，以納入歸還所有先前配發之組織擁有或託管的實體」納入「資產之歸還」的實作範圍並界定適用情境。</li><li>針對「者端點裝置」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「可攜式儲存裝置」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「用於資訊系統、場域及實體歸檔之鑑別硬體」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊之實體複本」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資產之歸還」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「在人員、契約或協議終止或變更時，將組織資產納入保護」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="56" aria-hidden="true">
+              <h2>A.5.12 資訊之分類分級</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>依資訊重要性與保護需求，識別並理解資訊保護要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立資訊分類分級之主題特定政策，並將其對所有相關關注方溝通或傳達」納入「資訊之分類分級」的實作範圍並界定適用情境。</li><li>針對「考量分類分級方案中對機密性、完整性及可用性之要求事項」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「資訊之分類分級及其相關聯的保護式控制措施，宜考量對分享資訊或限制資訊」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「非資訊之資產的分類分級亦可依資產中所儲存、所處理，或以其他方式處置或」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊之擁有者宜對資訊的分類分級負全責」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「分類分級方案宜」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「依資訊於其生命週期中之價值、敏感性及關鍵性的變更而更新分類分級結果」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「該方案宜與存取控制之主題特定政策保持一致」是否仍適切。</li><li>保留「分類分級可由資訊洩露對組織之衝擊程度判定」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「賦予方案中定義之各等級於分類分級方案應用全景中，具意義的名稱」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="57" aria-hidden="true">
+              <h2>A.5.13 資訊之標示</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>促進分類分級的溝通，並支援資訊處理與管理自動化。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「資訊標示之程序宜涵蓋所有格式的資訊及其他相關聯資產」納入「資訊之標示」的實作範圍並界定適用情境。</li><li>針對「省略標示之情況」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「如何標示藉由電子或實體方式或任何其他格式，發送或儲存之資訊」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「如何處置無法標示之情況」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「詮釋資料」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「橡皮圖章」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「資訊之標示」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「促進分類分級的溝通，並支援資訊處理與管理自動化」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="58" aria-hidden="true">
+              <h2>A.5.14 資訊傳送</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>維護組織內部及與外部關注方傳送資訊時的安全性。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般組織宜建立資訊傳送主題特定政策，並向所有相關關注方溝通或傳達」納入「資訊傳送」的實作範圍並界定適用情境。</li><li>針對「資訊傳送」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「可追溯性及不可否認性之控制措施」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「與傳送相關之適切聯絡窗口」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「發生資訊安全事故」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「敏感或關鍵資訊使用議定之標籤系統，確保標籤的意涵可立即瞭解且資訊受適」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「傳送服務之可靠性及可用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「關於可接受使用資訊傳送設施之主題特定政策或指導綱要」是否仍適切。</li><li>保留「所有營運紀錄」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「考量與資訊傳送相關之所有其他相關法律、法令、法規及契約要求事項」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="59" aria-hidden="true">
+              <h2>A.5.15 存取控制</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保對資訊與相關資產的授權存取，並防止未授權存取。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「資訊及其他相關聯資產之擁有者宜判定與存取控制相關的資訊安全及營運要求」納入「存取控制」的實作範圍並界定適用情境。</li><li>針對「判定哪些個體對資訊及其他相關聯資產要求哪些型式之存取」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「用系統之安全性」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「實體進出，需由適切之實體進入的控制措施支援」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊散播及授權」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「特殊權限存取之限制」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「有關限制存取資料或服務之相關法律、法規及所有契約義務」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「存取控制功能之區隔」是否仍適切。</li><li>保留「存取請求之正式授權」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「存取控制」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="60" aria-hidden="true">
+              <h2>A.5.16 身分管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>管理身分全生命週期，唯一識別個人與系統並支援權限指派。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「身分管理全景中使用之過程宜確保」納入「身分管理」的實作範圍並界定適用情境。</li><li>針對「於指派予個人之身分，特定身分僅與單一個人關聯」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「指派予多個個人之身分，僅於因營運或運作而必要時，方允許使用，且需經專」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「指派予非人類個體之識別資訊，受適切區隔的核可及獨立之持續監督」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「身分管理」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「特定領域中，單一識別資訊對映至單一個體」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「保存有關使用者身分及鑑別資訊之使用與管理的所有重大事件之紀錄」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「管理身分全生命週期，唯一識別個人與系統並支援權限指派」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="61" aria-hidden="true">
+              <h2>A.5.17 鑑別資訊</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保正確個體鑑別，並防止鑑別資訊管理失效。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「鑑別資訊之配置配置及管理過程宜確保」納入「鑑別資訊」的實作範圍並界定適用情境。</li><li>針對「註冊過程期間自動產生之個人通行碼或個人識別號碼，因暫時秘密鑑別資訊係」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「備妥程序，以於提供新的、替換或暫時鑑別資訊前，查證使用者身分」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「以安全之方式，將鑑別資訊」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「者於收到鑑別資訊時，回應收悉」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「由廠商預定義或提供之預設鑑別資訊，於安裝系統或軟體後立即變更」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「保存與鑑別資訊之配置及管理有關的重大事件之紀錄，且賦予其機密性，並核」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「保持秘密鑑別資訊(諸如通行碼)之機密性」是否仍適切。</li><li>保留「收到破解通知或任何其他指示後，立即變更受影響或遭破解之鑑別資訊」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「鑑別資訊」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="62" aria-hidden="true">
+              <h2>A.5.18 存取權限</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>依營運要求定義、授權、審查、修改與撤銷存取權限。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「存取權限之提供及撤銷指派或撤銷賦予個體鑑別身分之實體及邏輯存取權限的」納入「存取權限」的實作範圍並界定適用情境。</li><li>針對「取得資訊及其他相關聯資產之擁有者的授權，以使用資訊及其他相關聯資產」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「考量營運要求事項及組織關於存取控制之主題特定政策與規則」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「考量職務區隔」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「於某人不再需存取資訊及其他相關聯資產時移除存取權限，特別是確保及時移」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「考量於有限時段內提供暫時存取權限並於逾期日期將其撤銷，特別是對臨時人」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「查證所賦予存取等級符合存取控制之主題特定政策」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「僅於授權程序成功完成後，方啟動存取權限」是否仍適切。</li><li>保留「據以存取資訊及其他相關聯資產所賦予各使用者之識別符(邏輯或實體ID)」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「修改已變更角色或工作之使用者的存取權限」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="63" aria-hidden="true">
+              <h2>A.5.19 供應商關係中之資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在供應商關係中維持議定的資訊安全水準。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立關於供應商關係之主題特定政策，並向所有相關關注方溝通或傳達」納入「供應商關係中之資訊安全」的實作範圍並界定適用情境。</li><li>針對「並記錄可能影響組織資訊之機密性、完整性及可用性的供應商形式」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「如何依資訊、產品及服務之敏感性，評估及選擇供應商」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「評估及選擇具適切資訊安全控制措施之供應商產品或服務，並對其進行審查」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「供應商可存取、監視、控制或使用組織之資訊、ICT服務及實體基礎設施」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「供應商提供之可能影響組織資訊的機密性、完整性及可用性之ICT基礎設施」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「評鑑並管理與下列相關聯之資訊安全風險」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「對各種形式之供應商及存取型式的所建立資訊安全要求事項之遵循性」是否仍適切。</li><li>保留「減輕供應商之非遵循性，不論此係透過監視亦或藉由其他方式偵測出」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「與供應商產品及服務相關聯之事故處理及應變措施」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="64" aria-hidden="true">
+              <h2>A.5.20 於供應商協議中處理資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>把資訊安全要求納入供應商協議並維持共同理解。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「於待提供或存取之資訊」納入「於供應商協議中處理資訊安全」的實作範圍並界定適用情境。</li><li>針對「組織之分類分級方案」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「組織本身分類分級方案與供應商分類分級方案間之對映」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「法律、法令、法規及契約之要求事項」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「契約雙方實作所議定之整套控制措施的義務」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「可接受使用資訊及其他相關聯資產之規則，必要時」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「授權及移除供應商人員使用組織之資訊及其他相關聯資產的授權之程序或條件」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「關於供應商ICT基礎設施之資訊安全要求事項」是否仍適切。</li><li>保留「約用人員未能符合要求事項之補償及修補措施」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「針對特定程序及資訊安全要求事項之教育訓練及認知要求事項」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="65" aria-hidden="true">
+              <h2>A.5.21 管理 ICT 供應鏈之資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>管理 ICT 產品與服務供應鏈中可能影響資訊安全的風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「除對供應商關係之一般資訊安全要求事項外，亦宜考量下列主題，以因應IC」納入「管理 ICT 供應鏈之資訊安全」的實作範圍並界定適用情境。</li><li>針對「適用於獲取ICT產品或服務之資訊安全要求事項」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「管理 ICT 供應鏈之資訊安全」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「請求ICT產品供應商，提供描述產品中使用之軟體組件的資訊」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「請求ICT產品供應商，提供描述其產品實作之安全功能及其安全運作所要求」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「監視過程及各種可接受之方法」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「過程，以識別及記錄對維護功能性至關重要之產品或服務組件，因此」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「取得關於關鍵組件及其來源於整個供應鏈可追溯之保證」是否仍適切。</li><li>保留「取得關於所交付之ICT產品可如預期運作，無任何非預期或非所欲功能的保」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「取得ICT產品達到所要求安全等級之保證，例」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="66" aria-hidden="true">
+              <h2>A.5.22 供應商服務之監督、審查及變更管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>依協議監督供應商服務，並管理服務變更的資訊安全影響。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「供應商服務之監視、審查及變更管理，宜確保遵循協議中的資訊安全條款與條」納入「供應商服務之監督、審查及變更管理」的實作範圍並界定適用情境。</li><li>針對「服務效能水準，以查證協議之遵循性」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「供應商所做之變更」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「供應商服務之變更」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「協議要求，審查供應商產出之服務報告，並安排定期的進度會議」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「實施對供應商及次供應商之稽核，同時審查」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「協議及所有支援性指導綱要與程序之要求，提供關於資訊安全事故之資訊，並」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「審查供應商稽核存底」是否仍適切。</li><li>保留「回應並管理所有已識別出之資訊安全事件或事故」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「資訊安全脆弱性並管理之」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="67" aria-hidden="true">
+              <h2>A.5.23 使用雲服務之資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>規定並管理雲服務取得、使用、管理與退出時的資訊安全。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立使用雲端服務之主題特定政策，並向所有相關關注方溝通或傳達」納入「使用雲服務之資訊安全」的實作範圍並界定適用情境。</li><li>針對「與使用雲端服務相關聯之所有相關資訊安全要求事項」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「雲端服務選擇準則及雲端服務使用範圍」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「與雲端服務之使用及管理相關的角色及責任」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊安全控制措施哪些係由雲端服務提供者管理，哪些係由作為雲端服務客戶」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「如何取得並利用雲端服務提供者所提供之資訊安全能力」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「如何取得對雲端服務提供者所實作之資訊安全控制措施的保證」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「使用雲服務之資訊安全」是否仍適切。</li><li>保留「處理與雲端服務使用相關之資訊安全事故的程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「審查及評估持續使用雲端服務管理資訊安全風險之作法」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="68" aria-hidden="true">
+              <h2>A.5.24 資訊安全事故管理規劃及準備</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保組織能快速、一致、有效地管理資訊安全事故。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「角色及責任組織宜建立適切之資訊安全事故管理過程」納入「資訊安全事故管理規劃及準備」的實作範圍並界定適用情境。</li><li>針對「通報資訊安全事件之共同方法」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「事故管理過程，以提供組織管理資訊安全事故之能力」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「事故回應過程，以提供組織評鑑、回應資訊安全事故並從中學習之能力」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「僅容許稱職人員處置組織內與資訊安全事故相關之事宜」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「過程，以識別所要求之事故回應人員的教育訓練、證照及持續專業發展」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「構成資訊安全事故之準則，評估資訊安全事件」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資訊安全事故管理規劃及準備」是否仍適切。</li><li>保留「事故之型式及種類、可能的危機管理啟動及持續計畫啟動、事故之受控復原」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「與內部及外部關注方協調，諸如權責機關、外部關注群組及論壇、供應商及客」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="69" aria-hidden="true">
+              <h2>A.5.25 資訊安全事件之評鑑及決策</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>有效評估事件並決定是否分類為資訊安全事故。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「議定資訊安全事故之分類及定優先序方案」納入「資訊安全事件之評鑑及決策」的實作範圍並界定適用情境。</li><li>針對「該方案宜」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「聯絡窗口宜使用議定之方案評鑑各資訊安全事件」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「負責協調及回應資訊安全事故之人員，宜對資訊安全事件進行評鑑並做出決策」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「詳細記錄評鑑及決策之結果，供未來引用及查證的用途」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資訊安全事件之評鑑及決策」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「有效評估事件並決定是否分類為資訊安全事故」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="70" aria-hidden="true">
+              <h2>A.5.26 對資訊安全事故之回應</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>有效率且有效地回應資訊安全事故並降低影響。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立資訊安全事故回應程序，並將其向所有相關關注方溝通或傳達」納入「對資訊安全事故之回應」的實作範圍並界定適用情境。</li><li>針對「對資訊安全事故之回應」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「發生事故後，儘速蒐集證據」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「要求提報」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊安全事故之回應」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「有效率且有效地回應資訊安全事故並降低影響」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="71" aria-hidden="true">
+              <h2>A.5.27 由資訊安全事故中學習</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>降低未來事故發生的可能性或影響。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立程序，量化並監視資訊安全事故之型式、數量及成本」納入「由資訊安全事故中學習」的實作範圍並界定適用情境。</li><li>針對「強化事故管理計畫」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「重複發生或嚴重之事故及其原因，以更新組織的資訊安全風險評鑑，並判定且」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「藉由提供未來可能發生何事故、如何回應該等事故及如何避免的示例，以增強」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「由資訊安全事故中學習」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「降低未來事故發生的可能性或影響」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="72" aria-hidden="true">
+              <h2>A.5.28 證據之蒐集</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保與資訊安全事件相關的證據能被一致且適切蒐集。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「處理與資訊安全事故相關之證據時，宜制定並遵循內部程序，供獎懲及法律行」納入「證據之蒐集」的實作範圍並界定適用情境。</li><li>針對「紀錄完整且未遭以任何方式竄改」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「電子證據之複本可能與原件相同」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「蒐集證據之所有資訊系統，於記錄證據時運作正常」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「證據之蒐集」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「與資訊安全事件相關的證據能被一致且適切蒐集」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="73" aria-hidden="true">
+              <h2>A.5.29 中斷期間之資訊安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在中斷期間維持資訊與相關資產的保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「判定其於中斷期間調適資訊安全控制措施之要求事項」納入「中斷期間之資訊安全」的實作範圍並界定適用情境。</li><li>針對「營運持續及ICT持續計畫內之資訊安全控制措施、支援系統及工具」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「中斷期間維護既有資訊安全控制措施之過程」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「中斷期間無法維持之資訊安全控制措施的補充控制措施」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「中斷期間之資訊安全」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「在中斷期間維持資訊與相關資產的保護」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="74" aria-hidden="true">
+              <h2>A.5.30 營運持續之 ICT 備妥</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保 ICT 能支援組織在中斷期間達成營運持續目標。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「營運持續之ICT備妥」納入「營運持續之 ICT 備妥」的實作範圍並界定適用情境。</li><li>針對「ICT能支援組織在中斷期間達成營運持續目標」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「控制範圍與適用性」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「責任分派與核准流程」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「文件化規則與作業程序」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「監督、審查與例外處理」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「中斷情境、營運持續需求與ICT備妥安排互相一致」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「檢視持續運作、復原優先順序、備援與演練結果是否支援資訊安全要求」是否仍適切。</li><li>保留「營運持續之 ICT 備妥」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「營運持續之 ICT 備妥」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="75" aria-hidden="true">
+              <h2>A.5.31 法律、法令、法規及契約要求事項</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保遵循與資訊安全相關的法律、監管與契約要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「資訊安全政策及程序」納入「法律、法令、法規及契約要求事項」的實作範圍並界定適用情境。</li><li>針對「設計、實作或變更資訊安全控制措施」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「資訊及其他相關聯資產進行分類分級，作為對內部需要或對供應商協議設定資」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「進行資訊安全風險評鑑，並判定資訊安全風險處理活動」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「判定與資訊安全相關之過程及相關角色與責任」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「判定相關於組織及產品與服務之供應範圍的供應商契約之要求事項」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「相關於組織資訊安全之所有法律及法規，以認知其行業別的要求事項」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「考量於所有相關國家之遵循性」是否仍適切。</li><li>保留「定期審查所識別之法律及法規，以適時變更並識別新法律」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「並書面記錄符合此等要求事項之特定過程及個人責任」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="76" aria-hidden="true">
+              <h2>A.5.32 智慧財產權</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保遵循智慧財產權與專有軟體、資料或內容使用要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量下列指導綱要，以保護所有可能視為智慧財產之資材」納入「智慧財產權」的實作範圍並界定適用情境。</li><li>針對「並傳達或溝通關於智慧財產權保護之主題特定政策」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「公布智慧財產權遵循程序，此程序定義軟體及資訊產品之合法使用」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「僅透過知名且信譽良好之來源獲取軟體，確保不違反著作權」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「維持適切之資產清冊，並識別具智慧財產權保護要求事項的所有資產」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「維護使用授權及說明書等之擁有權的證明及證據」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「不超過所有使用授權內允許之使用者或資源」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「進行審查，以確保僅安裝經授權之軟體及具使用授權的產品」是否仍適切。</li><li>保留「提供維護適切之使用授權狀況的程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「提供銷毀軟體或將軟體移轉他人之程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="77" aria-hidden="true">
+              <h2>A.5.33 記錄之保護</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保記錄免於遺失、破壞、偽造、未授權存取或未授權釋出。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「採取下列步驟以保護紀錄之真確性、可靠性、完整性及可使用性，因其營運全」納入「記錄之保護」的實作範圍並界定適用情境。</li><li>針對「發布紀錄之儲存、處置監管鏈及銷毀的指導綱要」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「留存時程表，定義紀錄及宜對其留存之期限」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「記錄之保護」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「記錄免於遺失、破壞、偽造、未授權存取或未授權釋出」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「控制範圍與適用性」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「責任分派與核准流程」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「文件化規則與作業程序」是否仍適切。</li><li>保留「監督、審查與例外處理」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「法律、合約、記錄、隱私、獨立審查與程序要求已被識別並維護」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="78" aria-hidden="true">
+              <h2>A.5.34 隱私及個人可識別資訊 PII 之保護</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊安全面向能支援 PII 保護與隱私要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「制定關於隱私及PII保護之主題特定政策，並向所有相關關注方溝通或傳達」納入「隱私及個人可識別資訊 PII 之保護」的實作範圍並界定適用情境。</li><li>針對「制定並實作組織對隱私保護及PII保護之程序」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「此等程序宜向所有參與處理個人可識別資訊之相關關注方溝通或傳達」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「遵循此等程序及所有關於隱私保護及PII保護之相關法律及法規，須有適切」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「通常最好指派諸如隱私保護專員之專人負責，以達成此目的，此人宜對人員」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「處理PII之責任，宜考量對相關法律及法規之因應」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「實作適切之技術措施及組織措施，以保護PII」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「隱私及個人可識別資訊PII之保護」是否仍適切。</li><li>保留「資訊安全面向能支援PII保護與隱私要求」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="79" aria-hidden="true">
+              <h2>A.5.35 資訊安全之獨立審查</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊安全管理方法與控制措施受到獨立審查。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「具進行獨立審查之過程」納入「資訊安全之獨立審查」的實作範圍並界定適用情境。</li><li>針對「影響組織之法律及法規變更」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「發生重大事故」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「組織開始新業務或變更目前業務」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「組織開始使用新產品或服務，或變更目前產品或服務之使用」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「組織顯著變更資訊安全控制措施及程序」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「資訊安全之獨立審查」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資訊安全管理方法與控制措施受到獨立審查」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="80" aria-hidden="true">
+              <h2>A.5.36 資訊安全的政策、規則及標準之遵循性</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保人員與流程遵循組織的資訊安全政策、規則與標準。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「管理者及服務、產品或資訊之擁有者，宜識別如何審查於資訊安全政策、主題」納入「資訊安全的政策、規則及標準之遵循性」的實作範圍並界定適用情境。</li><li>針對「不符合事項之原因」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「評估是否需採取矯正措施，以達成遵循性」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「適切之矯正措施」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「資訊安全的政策、規則及標準之遵循性」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「人員與流程遵循組織的資訊安全政策、規則與標準」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="81" aria-hidden="true">
+              <h2>A.5.37 書面記錄之運作程序</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊處理設施與資訊安全作業依一致程序正確運作。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「備妥書面記錄之程序，用於組織與資訊安全相關聯的運作活動，例」納入「書面記錄之運作程序」的實作範圍並界定適用情境。</li><li>針對「書面記錄之運作程序」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「活動移交予新人員前」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「系統之安全安裝及組態設定」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「自動及人工之資訊處理及處置」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「事項之排程」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「遭遇非預期之運作或技術困難時的支援及提報聯絡窗口」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「儲存媒體之處置指示」是否仍適切。</li><li>保留「系統失效時，所使用之系統重新啟動及復原程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「諸如容量、績效及安全性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="82" aria-hidden="true">
+              <h2>A.6.1 篩選</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保候選人與人員符合角色要求，並降低聘用前相關風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「篩選」納入「篩選」的實作範圍並界定適用情境。</li><li>針對「令人滿意之徵詢的可用性」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「徵者簡歷表」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「所宣稱之學歷及專業資格」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「獨立之身分查證」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「更詳細之查證，諸如信用審查或犯罪紀錄審查(候選者擔任關鍵角色時)」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「具備必要能力，以履行此安全角色」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「可受信任，以承擔此角色，尤其是組織之關鍵角色」是否仍適切。</li><li>保留「延遲部署公司資產」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「降低存取權限之入職」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="83" aria-hidden="true">
+              <h2>A.6.2 聘用條款及條件</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>讓人員理解其資訊安全責任與聘用關係中的要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「人員之契約義務，宜考量組織的資訊安全政策及相關主題特定政策」納入「聘用條款及條件」的實作範圍並界定適用情境。</li><li>針對「賦予機密資訊存取權限之人員，宜於賦予資訊及其他相關聯資產存取權限前」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「法律責任及權利」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「人員對其所處理之組織資訊、對與資訊相關聯的其他資產」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「處理接收自關注方之資訊的責任」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「聘用條款及條件」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「讓人員理解其資訊安全責任與聘用關係中的要求」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="84" aria-hidden="true">
+              <h2>A.6.3 資訊安全認知、教育及訓練</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保人員與相關關注方理解並履行資訊安全責任。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般資訊安全認知及教育訓練計畫之制定，宜與組織資訊安全政策、主題特定」納入「資訊安全認知、教育及訓練」的實作範圍並界定適用情境。</li><li>針對「管理階層對整個組織資訊安全之承諾」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「資訊安全政策與主題特定政策、標準、法律、法令、法規、契約及協議納入考」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「個人自身之作為及不作為的個人可歸責性」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「基本資訊安全程序」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資訊安全事宜」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「資訊安全認知、教育及訓練」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「人員與相關關注方理解並履行資訊安全責任」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="85" aria-hidden="true">
+              <h2>A.6.4 獎懲過程</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保人員與相關關注方理解違反資訊安全政策的後果。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「未查證已發生資訊安全政策違反前」納入「獎懲過程」的實作範圍並界定適用情境。</li><li>針對「違反之性質(何人、內容、何時及如何)」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「觸犯係蓄意」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「此是否為初犯或累犯」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「違反者是否經適」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「獎懲過程」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「人員與相關關注方理解違反資訊安全政策的後果」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="86" aria-hidden="true">
+              <h2>A.6.5 聘用終止或變更後之責任</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在終止或變更後仍維持組織資訊與資產保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「聘用終止或變更後之責任」納入「聘用終止或變更後之責任」的實作範圍並界定適用情境。</li><li>針對「在終止或變更後仍維持組織資訊與資產保護」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「控制範圍與適用性」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「責任分派與核准流程」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「文件化規則與作業程序」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「監督、審查與例外處理」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制涵蓋聘用前、聘用中、變更、終止與外部人員互動」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「檢視角色責任、保密義務、訓練認知、遠端工作與事件通報是否落到人員行為」是否仍適切。</li><li>保留「聘用終止或變更後之責任」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「聘用終止或變更後之責任」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="87" aria-hidden="true">
+              <h2>A.6.6 機密性或保密協議</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護人員或外部各方可接觸的機密資訊。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「機密性或保密協議宜使用具法律效力之用語，闡明對保護機密資訊之要求事項」納入「機密性或保密協議」的實作範圍並界定適用情境。</li><li>針對「待保護資訊之定義」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「協議之預期持續期間」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「協議終止時所要求之作為」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「簽署者避免未經授權的資訊揭露之責任及作為」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資訊、營業秘密及智慧財產之所有權」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「機密資訊之准許使用的權限」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「高度敏感之情況中，對涉及機密資訊的稽核及監視活動之權力」是否仍適切。</li><li>保留「通知及通報未經授權揭露或機密資訊洩漏之過程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「協議終止時，資訊歸還或銷毀之條款」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="88" aria-hidden="true">
+              <h2>A.6.7 遠端工作</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保人員遠端工作時資訊安全得到保護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「遠端工作」納入「遠端工作」的實作範圍並界定適用情境。</li><li>針對「遠端工作場域之既有或擬議的實體安全，將地點及」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「遠端實體環境之規則及安全機制，諸如可上鎖的檔案櫃、不同地點間之安全運」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「預期之實體遠端工作環境」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「通訊安全要求事項，考量對遠端存取組織系統之需要、將經由通訊鏈路存取及」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「遠端存取，諸如支援於私有設備上，處理及儲存資訊之虛擬桌面存取」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「遠端工作場域之其他人未經授權存取資訊或資源的威脅」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「公共場所其他人未經授權存取資訊或資源之威脅」是否仍適切。</li><li>保留「家用網路及公眾網路之使用」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「安全措施，諸如防火牆及防範惡意軟體」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="89" aria-hidden="true">
+              <h2>A.6.8 資訊安全事件通報</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>支援及時、一致、有效地通報資訊安全事件。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「使所有人員及使用者認知其儘速通報資訊安全事件之責任，以防止或最小化資」納入「資訊安全事件通報」的實作範圍並界定適用情境。</li><li>針對「無效之資訊安全控制措施」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「破壞資訊機密性、完整性或可用性之期望」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「未遵循資訊安全政策、主題特定政策或適用標準」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「違反實體安全措施」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「未透過變更管理過程之系統變更」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「軟體或硬體之故障或其他異常的系統行為」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資訊安全事件通報」是否仍適切。</li><li>保留「支援及時、一致、有效地通報資訊安全事件」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="90" aria-hidden="true">
+              <h2>A.7.1 實體安全周界</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止未授權實體進入、損害或干擾資訊與相關資產。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「適切時，宜考量並實作實體安全周界之下列指導綱要」納入「實體安全周界」的實作範圍並界定適用情境。</li><li>針對「與周界內資產相關之資訊安全要求事項，定義安全周界及各周界的位置與強度」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「包含資訊處理設施之建物或場域具有實體上堅固的周界」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「安全周界中之所有防火門宜設置警報、受監視並經測試，連同牆壁依適宜的標」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「實體安全周界」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防止未授權實體進入、損害或干擾資訊與相關資產」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="91" aria-hidden="true">
+              <h2>A.7.2 實體進入</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保只有經授權人員可進入安全區域。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般對諸如交付及裝卸區」納入「實體進入」的實作範圍並界定適用情境。</li><li>針對「僅限經授權者，方得進出場域或建物」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「安全維持及監視所有進出之實體登記簿或電子稽核存底，並保護所有日誌及敏」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「並實作過程及技術機制，以管理對處理或儲存資訊區域之進出」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「設置由人員或其他方式監視之接待區域，以控制該場域或建物的實體進出」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「進出時，檢視及檢查人員及關注方之個人物品」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「所有人員及關注方佩戴某種形式之可目視識別證」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「僅於必要時，方准許供應商人員，受限進出保全區域或存取資訊處理設施」是否仍適切。</li><li>保留「建物中存有多個組織之資產的情況下，特別注意實體進出安全」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「設計實體安全措施」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="92" aria-hidden="true">
+              <h2>A.7.3 保全辦公室、房間及設施</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止辦公室、房間與設施遭未授權進入、損害或干擾。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量下列指導綱要，以保全辦公室、房間及設施」納入「保全辦公室、房間及設施」的實作範圍並界定適用情境。</li><li>針對「關鍵設施宜避免置於公眾進出之場所」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「保全辦公室、房間及設施」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「設定設施之組態，以防範由外部可看見及聽見機密資訊或活動」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「機密資訊處理設施地點之通訊錄、內部電話簿及線上可存取地圖，不宜使未經」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防止辦公室、房間與設施遭未授權進入、損害或干擾」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="93" aria-hidden="true">
+              <h2>A.7.4 實體安全監視</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>偵測並阻止未授權實體進入。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「實體場所宜由監控系統監視」納入「實體安全監視」的實作範圍並界定適用情境。</li><li>針對「視訊監視系統(諸如閉路電視)，以查看並記錄組織場所內外敏感區域之進出」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「相關適用標準安裝，並定期測試觸發諸如下列各種方式之入侵者警報器的接觸」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「上述警報器以涵蓋所有連外大門及可接近之窗戶」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「實體安全監視」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「偵測並阻止未授權實體進入」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="94" aria-hidden="true">
+              <h2>A.7.5 防範實體及環境威脅</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止或降低實體與環境威脅造成的後果。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「於實體場域開始關鍵運作前進行風險評鑑，並定期實施，以識別實體及環境威」納入「防範實體及環境威脅」的實作範圍並界定適用情境。</li><li>針對「本地地形，諸如適切之海拔高度、水體及結構斷層線」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「城市威脅，諸如具引發政治動盪、犯罪活動或恐怖攻擊之敏感地點」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「防範實體及環境威脅」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「電氣突波」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「爆裂物及武器」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「防止或降低實體與環境威脅造成的後果」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="95" aria-hidden="true">
+              <h2>A.7.6 於安全區域內工作</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護安全區域內資訊與相關資產。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「安全區域內工作之安全措施，宜適用於所有人員，並涵蓋於安全區域內進行的」納入「於安全區域內工作」的實作範圍並界定適用情境。</li><li>針對「僅知原則，使人員僅知悉安全區域的存在或安全區域內所進行之活動」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「基於安全理由及降低惡意活動之機會，安全區域內宜避免進行未受監督之工作」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「實體上鎖並定期檢視空置之安全區域」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「除非經授權，否則不容許使用拍照、錄影、錄音或其他記錄設備，諸如使用者」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「適切控制安全區域內使用者端點裝置之攜帶及使用」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「以易於看到或可存取之方式，公告緊急應變程序」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「安全區域內工作」是否仍適切。</li><li>保留「保護安全區域內資訊與相關資產」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="96" aria-hidden="true">
+              <h2>A.7.7 桌面淨空與螢幕淨空</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>降低工作時間內外未授權存取、遺失或損害資訊的風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立並向所有相關之關注方溝通或傳達，關於桌面淨空及螢幕淨空的主題特定」納入「桌面淨空與螢幕淨空」的實作範圍並界定適用情境。</li><li>針對「桌面淨空與螢幕淨空」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「不使用或無人看管時，藉由鑰匙鎖或其他安全措施，保護使用者端點裝置」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「使原列印者立即收集印表機或多功能裝置之輸出」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「及傳達螢幕上彈出視窗之組態的規則及指引」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「不再使用時，清除白板及其他型式顯示器上之敏感或關鍵資訊」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「降低工作時間內外未授權存取、遺失或損害資訊的風險」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="97" aria-hidden="true">
+              <h2>A.7.8 設備安置及保護</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>降低實體、環境威脅與未授權存取造成的風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「安置設備以將非必要進出工作區降至最低，並避免未經授權之進出」納入「設備安置及保護」的實作範圍並界定適用情境。</li><li>針對「謹慎放置處理敏感性資料之資訊處理設施，以降低使用過程中資訊遭未經授權」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「控制措施，以將潛在之實體及環境威脅的風險降至最低」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「資訊處理設施附近之飲食及吸菸的指導綱要」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「可能對資訊處理設施之運作有不利影響的環境狀況，諸如溫度及濕度」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「所有建物設置避雷保護，所有進入之電源及通訊線路配置避雷濾波器」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「考量對工業環境中之設備使用特殊保護方法，諸如鍵盤護膜」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「保護處理機密資料之設備，使電磁溢波造成資訊洩漏之風險降至最低」是否仍適切。</li><li>保留「實體隔離由組織管理之資訊處理設施與非由組織管理的資訊處理設施」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「設備安置及保護」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="98" aria-hidden="true">
+              <h2>A.7.9 場所外資產之安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止場域外裝置與資訊遺失、損害、竊取或危害。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「組織場所外使用之儲存或處理資訊的所有裝置」納入「場所外資產之安全」的實作範圍並界定適用情境。</li><li>針對「攜出場所外之設備及儲存媒體，於公共及不安全場所不宜無人看管」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「隨時遵守製造者之設備保護說明」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「場所外資產之安全」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「必要及實際可行時，由組織場所移除設備及媒體要求授權，並保存此種移除之」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防止於公共交通工具上查看裝置上之資訊」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「位置追蹤及遠端抹除裝置之能力」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「實體安全監視」是否仍適切。</li><li>保留「防止實體及環境威脅」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「實體進出及防破壞之控制措施」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="99" aria-hidden="true">
+              <h2>A.7.10 儲存媒體</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保存取、揭露、修改、移除或銷毀儲存媒體時受到授權與控制。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「儲存媒體」納入「儲存媒體」的實作範圍並界定適用情境。</li><li>針對「存取、揭露、修改、移除或銷毀儲存媒體時受到授權與控制」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「控制範圍與適用性」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「責任分派與核准流程」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「文件化規則與作業程序」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「監督、審查與例外處理」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「安全區域、設備、媒體、環境與公用服務的實體保護需求已被界定」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「檢視進入控制、監視、維護、汰除與場域外使用是否與資產風險相稱」是否仍適切。</li><li>保留「儲存媒體」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「儲存媒體」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="100" aria-hidden="true">
+              <h2>A.7.11 支援之公用服務</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止公用服務失效造成資訊處理設施中斷或受損。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「組織依賴公用設施，以支援其資訊處理設施」納入「支援之公用服務」的實作範圍並界定適用情境。</li><li>針對「支援公用設施之設備，依相關製造者規格進行組態設定、運作及維護」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「定期評量公用設施之容量，以符營運成長及與其他支援的公用設施之互動」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「定期檢視及測試支援公用設施之設備，確保其正常運行」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「必要時，發出警報以偵測公用設施故障」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「必要時，確保公用設施以不同之實體選路提供多重饋線」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「支援公用設施之設備與資訊處理設施」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「支援公用設施之設備，僅於需要時以安全方式連接至網際網路」是否仍適切。</li><li>保留「支援之公用服務」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「防止公用服務失效造成資訊處理設施中斷或受損」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="101" aria-hidden="true">
+              <h2>A.7.12 佈纜安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止通訊與電力佈纜遭攔截、干擾或損害。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「佈纜安全」納入「佈纜安全」的實作範圍並界定適用情境。</li><li>針對「電源纜線與通訊纜線隔離，以防止干擾」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「敏感或關鍵之系統，所考量之進一步控制措施」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「纜線各端標示充分之來源及目的地細節，使能對纜線進行實體識別及檢視」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「防止通訊與電力佈纜遭攔截、干擾或損害」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「控制範圍與適用性」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「責任分派與核准流程」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「文件化規則與作業程序」是否仍適切。</li><li>保留「監督、審查與例外處理」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「安全區域、設備、媒體、環境與公用服務的實體保護需求已被界定」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="102" aria-hidden="true">
+              <h2>A.7.13 設備維護</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止設備維護不當造成資訊或相關資產損害。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「供應商所建議之服務頻率及規格，維護設備」納入「設備維護」的實作範圍並界定適用情境。</li><li>針對「由組織實作並監視維護計畫」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「僅由經授權之維護人員執行修理及維護設備」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「保存對所有可疑或實際故障」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「設備維護」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「現場進行維修時，監督維修人員」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「授權並控制遠端維護之存取」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「遵循保險所規定之所有維護要求事項」是否仍適切。</li><li>保留「防止設備維護不」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="103" aria-hidden="true">
+              <h2>A.7.14 設備汰除或重新使用之安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止待汰除或重新使用設備中的資訊外洩。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「汰除或重新使用前，宜查證設備以確保是否包含儲存媒體」納入「設備汰除或重新使用之安全」的實作範圍並界定適用情境。</li><li>針對「恢復設施至原始狀況之租賃協議」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「最小化將具敏感性資訊之系統留予下一租戶的風險」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「重新使用控制措施於下一設施之能力」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「設備汰除或重新使用之安全」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防止待汰除或重新使用設備中的資訊外洩」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「控制範圍與適用性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「責任分派與核准流程」是否仍適切。</li><li>保留「文件化規則與作業程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「監督、審查與例外處理」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="104" aria-hidden="true">
+              <h2>A.8.1 使用者端點裝置</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護端點裝置儲存、處理或可存取的資訊。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「可移除式儲存媒體宜考量下列管理可移除式儲存媒體之指導綱要」納入「使用者端點裝置」的實作範圍並界定適用情境。</li><li>針對「關於可移除式儲存媒體管理之主題特定政策，並將此種主題特定政策向使用或」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「必要及實際可行時，由組織移除儲存媒體要求授權，並保存此種移除之紀錄」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「所有儲存媒體依製造者規格，依其資訊分類分級儲存於安全且保全之環境，並」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「使用者端點裝置」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「降低儲存媒體劣化之風險，所儲存資訊仍有需要時，宜於資料變成無法讀取前」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「有價值資訊之多份複本儲存於不同個別儲存媒體上，以進一步降低資訊意外毀」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「考量將可移除式儲存媒體註冊登載，以減少資訊遺失之機會」是否仍適切。</li><li>保留「僅於具組織理由而使用時，方可啟用可移除式儲存媒體埠」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「需使用可移除式儲存媒體時，監視將資訊移至此種儲存媒體之轉移」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="105" aria-hidden="true">
+              <h2>A.8.2 特殊存取權限</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>限制並管理特殊權限，以避免濫用或未授權操作。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「依相關存取控制主題特定政策」納入「特殊存取權限」的實作範圍並界定適用情境。</li><li>針對「對各系統或過程需特殊存取權限之使用者」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「遵循存取控制主題特定政策」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「維護所配置所有特殊權限之授權過程」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「及實作特殊存取權限逾期之要求事項」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「措施確保使用者認知其特殊存取權限」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「特殊存取權限之鑑別要求事項可能高於正常存取權限的要求事項」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「任何組織變更後，定期審查使用特殊存取權限之使用者，以查證其職務、角色」是否仍適切。</li><li>保留「系統之組態能力，建立特定規則，以避免使用通用管理使用者ID」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「僅於實作經核可之變更或活動所必要的時段內，授予暫時特殊存取權限，而非」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="106" aria-hidden="true">
+              <h2>A.8.3 資訊存取限制</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>依存取控制政策限制對資訊與相關資產的存取。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「依已建立之主題特定政策，限制對資訊及其他相關聯資產的存取」納入「資訊存取限制」的實作範圍並界定適用情境。</li><li>針對「不容許未知使用者身分或匿名存取敏感性資訊」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「提供組態設定機制，控制對系統、應用程式及服務中資訊之存取」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「控制特定使用者能存取之資料」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「控制哪些身分或身分群組具哪些存取權限，諸如讀取、寫入、刪除及執行等權」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「需精細控制何人可於何期間以何方式存取此等資訊」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「希望與組織外部之人員分享此種資訊，並控制誰可存取」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「希望即時動態管理此等資訊之使用及分發」是否仍適切。</li><li>保留「希望保護此等資訊免受未經授權之變更、複製及分發」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「希望監視資訊之使用」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="107" aria-hidden="true">
+              <h2>A.8.4 對原始碼之存取</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止未授權功能、變更或資訊洩漏進入原始碼。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「程式原始碼及程式原始碼函式庫之存取，依已建立的程序管理」納入「對原始碼之存取」的實作範圍並界定適用情境。</li><li>針對「營運需要，授予對原始碼之讀寫權限，並依已建立的程序管理，以因應更改或」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「變更控制程序」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「不授予開發者直接存取原始碼儲存庫之權限，而是透過開發者工具，控制對原」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「程式清單保存於安全環境中，其讀寫存取權限宜適切管理及指派」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「維持對原始碼之所有存取及所有變更的稽核日誌」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「原始碼之存取」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「防止未授權功能、變更或資訊洩漏進入原始碼」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="108" aria-hidden="true">
+              <h2>A.8.5 安全鑑別</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在系統、應用程式與服務存取前確認身分。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「選定合適之鑑別技術，以證實使用者、軟體、訊息及其他個體所宣稱的身分」納入「安全鑑別」的實作範圍並界定適用情境。</li><li>針對「登入過程未成功完成前，不顯示敏感之系統或應用程式資訊，避免提供未經授」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「顯示通用告示，以警示僅經授權之使用者，方能存取系統、應用程式或服務」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「不於登入程序期間，提供協助訊息，以避免對未經授權使用者提供協助」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「僅於所有資料輸入完成後，方驗核登入資訊」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防範對使用者名稱及通行碼之暴力式登入嘗試」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「存錄不成功及成功之嘗試」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「安全鑑別」是否仍適切。</li><li>保留「成功登入完成後，於不同管道上顯示或發送下列資訊」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「鍵入通行碼時，不以明文顯示通行碼」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="109" aria-hidden="true">
+              <h2>A.8.6 容量管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊處理資源能滿足現在與未來容量需求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「識別資訊處理設施、人力資源、辦公室及其他設施之容量要求，將所關注系統」納入「容量管理」的實作範圍並界定適用情境。</li><li>針對「取得新的設施或空間」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「獲取更強大之處理系統、記憶體及儲存體」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「具直接因應容量問題之固有特性之雲端運算」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「刪除過時資料」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「銷毀已達留存期限之紙本紀錄」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「用程式、系統、資料庫或環境之除役」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「批次處理及排程之最佳化」是否仍適切。</li><li>保留「用程式碼或資料庫查詢之最佳化」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「阻絕或限制需耗用資源之非關鍵服務的頻寬」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="110" aria-hidden="true">
+              <h2>A.8.7 防範惡意軟體</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊與相關資產免受惡意軟體危害。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「防範惡意軟體之措施，宜依惡意軟體偵測與修復之軟體、資訊安全認知及適切」納入「防範惡意軟體」的實作範圍並界定適用情境。</li><li>針對「規則及控制措施，預防或偵測未經授權軟體之使用」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「控制措施，預防或偵測已知或有嫌疑之惡意網站的使用」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「降低可能遭惡意軟體利用之脆弱性」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「系統之軟體及資料內容，進行定期自動化驗核，尤其是對支援關鍵營運過程的」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「防護措施，防範源自或經由外部網路或任何其他媒體上，取得檔案及軟體之相」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「並定期更新惡意軟體偵測與修復軟體，掃描電腦及電子儲存媒體」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「風險評鑑結果，判定惡意軟體偵測與修復之工具的置放及組態，並考量下列事」是否仍適切。</li><li>保留「維護期間及緊急應變程序期間，謹慎防範惡意軟體之引入，其可能跳過正常之」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「防範惡意軟體」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="111" aria-hidden="true">
+              <h2>A.8.8 技術脆弱性管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防範技術脆弱性被利用並降低相關風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「技術脆弱性組織宜具備準確之資產清冊，作為有效技術脆弱性管理之先決條件」納入「技術脆弱性管理」的實作範圍並界定適用情境。</li><li>針對「並建立與技術脆弱性管理相關聯之角色及責任」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「於軟體及其他技術」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「資訊系統」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「適合所使用技術之脆弱性掃描工具，以識別脆弱性並查證脆弱性修補是否成功」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「由有能力及經授權之人員進行有計畫、書面記錄及可重複的滲透測試或脆弱性」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「追蹤第三方函式庫及原始碼之使用是否存在脆弱性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「偵測其產品及服務」是否仍適切。</li><li>保留「接收來自內部或外部來源之脆弱性報告」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「分析並查證報告，以判定需哪些回應及修補活動」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="112" aria-hidden="true">
+              <h2>A.8.9 組態管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保硬體、軟體、服務與網路依安全組態運作。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般組織宜定義並實作過程及工具，以於硬體、軟體、服務及網路、新安裝之」納入「組態管理」的實作範圍並界定適用情境。</li><li>針對「公開可取得之指引」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「考量所需之保護等級，以判定足夠的安全等級」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「支援組織之資訊安全政策、主題特定政策、標準及其他安全要求事項」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「考量組織全景中之安全組態的可行性及適用性」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「具特殊權限或系統管理者等級之存取權限的身分數目減至最小」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「停用非必要、未使用或不安全之身分」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「停用或限制非必要之功能及服務」是否仍適切。</li><li>保留「對強效公用程式及主機參數設定之存取權限」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「後，立即變更廠商預設鑑別資訊(諸如預設通行碼)，並審查其他重要預設安」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="113" aria-hidden="true">
+              <h2>A.8.10 資訊刪除</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>防止敏感資訊在不再需要後被非必要保留或揭露。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般敏感性資訊之保存，不宜超過所要求時間，以降低非所欲揭露的風險」納入「資訊刪除」的實作範圍並界定適用情境。</li><li>針對「營運要求，並考量相關法律及法規，選擇刪除方法」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「刪除之結果記錄下來，作為證據」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「資訊刪除之服務供應商時，向其取得資訊刪除的證據」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「設定系統組態，以於資訊不再屬必要時，安全銷毀之」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「過時之版本、複本及暫時檔案刪除，不論其位於何處」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「經核可之安全刪除軟體，永久刪除資訊，以協助確保資訊無法使用專業復原或」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「經核可且經驗證之安全棄置服務提供者」是否仍適切。</li><li>保留「適合於遭汰除儲存媒體型式之棄置機制」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「資訊刪除」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="114" aria-hidden="true">
+              <h2>A.8.11 資料遮蔽</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>限制敏感資料與 PII 的暴露。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量敏感性資料之保護的情況下，組織宜考量使用諸如資料遮蔽、假名化或匿」納入「資料遮蔽」的實作範圍並界定適用情境。</li><li>針對「資料遮蔽」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「清空或刪除字元」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「變更數字及日期」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「以雜湊值替換原值」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「不對所有使用者授予存取所有資料之權限，因此設計查詢及遮罩」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「某些情況下，不宜使資料集之某些紀錄的使用者看見某些資料」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「法律或法規之所有要求」是否仍適切。</li><li>保留「經處理之資料的用途，要求之資料遮蔽、假名化或匿名化的強度等級」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「經處理之資料的存取控制措施」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="115" aria-hidden="true">
+              <h2>A.8.12 資料洩露預防</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>偵測並防止個人或系統未授權揭露或擷取資訊。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量下列事項以降低資料洩露之風險」納入「資料洩露預防」的實作範圍並界定適用情境。</li><li>針對「資訊並將其分類分級，以防範洩露」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「資料洩漏管道」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「措施以防止資訊洩露」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「及監視具未經授權揭露風險之敏感性資訊」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「偵測敏感性資訊之洩露」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「封鎖暴露敏感性資訊之使用者動作或網路傳輸」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資料洩露預防」是否仍適切。</li><li>保留「偵測並防止個人或系統未授權揭露或擷取資訊」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="116" aria-hidden="true">
+              <h2>A.8.13 資訊備份</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>讓資訊、軟體與系統可從資料遺失或受損中復原。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立關於備份之主題特定政策，以因應組織之資料留存及資訊安全要求事項」納入「資訊備份」的實作範圍並界定適用情境。</li><li>針對「產生備份複本之準確完整紀錄」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「備份之程度及頻率，反映組織的營運要求事項」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「儲存備份於安全且保全之遠端地點，其距離足以避免主場域發生災害時遭波及」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「賦予備份資訊適切等級之實體及環境保護，與主場域適用的標準一致」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「定期測試備份媒體，以確保於必要時，可據以供緊急使用」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「所識別風險，藉由加密保護備份」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「注意確保於進行備份前，偵測是否有非蓄意之資料遺失」是否仍適切。</li><li>保留「資訊備份」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「讓資訊、軟體與系統可從資料遺失或受損中復原」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="117" aria-hidden="true">
+              <h2>A.8.14 資訊處理設施之備援</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保資訊處理設施可持續滿足可用性要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「與2或多個網路及關鍵資訊處理設施供應商」納入「資訊處理設施之備援」的實作範圍並界定適用情境。</li><li>針對「多備網路」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「具鏡像系統之2個地理上分開的資料中心」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「實體上多備之電源或來源」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「軟體組件之多個平行實例，其間具自動負載平衡」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「系統或網路中具複製之組件」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「資訊處理設施之備援」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資訊處理設施可持續滿足可用性要求」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="118" aria-hidden="true">
+              <h2>A.8.15 存錄</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>記錄事件、產生日誌並支援監視、調查與責任追溯。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般組織宜判定建立日誌之目的、蒐集及存錄之資料內容」納入「存錄」的實作範圍並界定適用情境。</li><li>針對「相關事件之日期、時間及細節」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「裝置識別資訊、系統識別符及位置」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「網路位址及協定」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「系統之成功及遭拒絕存取嘗試」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「資料及其他資源之成功及遭拒絕存取嘗試」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「系統組態之變更」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「特殊權限之使用」是否仍適切。</li><li>保留「公用程式及應用程式之使用」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「所存取檔案及存取型式」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="119" aria-hidden="true">
+              <h2>A.8.16 監視活動</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>偵測異常行為與潛在資訊安全事故。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「依營運及資訊安全要求事項，並考量相關法律及法規，判定監視範圍及等級」納入「監視活動」的實作範圍並界定適用情境。</li><li>針對「網路、系統及應用程式之出向與入向訊務」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「系統、伺服器、網路設備、監視系統、關鍵應用程式等之存取」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「關鍵或管理等級之系統及網路組態檔案」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「源自安全工具」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「與系統及網路活動相關之事件日誌」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「核對執行之程式碼，是否獲授權於系統中運行，且其未遭竄改」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「資源之使用及其效能」是否仍適切。</li><li>保留「審查系統於正常時期及尖峰時期之使用率」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「各使用者或使用者群組之平常存取時間、存取位置及存取頻率」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="120" aria-hidden="true">
+              <h2>A.8.17 鐘訊同步</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>讓安全事件與相關紀錄可以被可靠關聯與分析。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「書面記錄對時間表示法、可靠同步化及準確度之外部及內部要求事項」納入「鐘訊同步」的實作範圍並界定適用情境。</li><li>針對「此等要求事項可能源自法律、法令、法規、契約、標準及內部監視之需要」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「針對所有系統」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「連接至源自國家標準時間或全球定位系統之無線電時間廣播的鐘訊，宜作為存」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「一致且受信任之日期及時間源，以確保準確時戳」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「使用諸如網路時間協定或精密時間協定之協定，以使所有聯網系統與基準鐘訊」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「組織可同時使用2個外部時間源，以改善外部鐘訊之可靠性，並適切管理所有」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「多個雲端服務或同時使用雲端服務及本地服務時，鐘訊同步可能係屬困難」是否仍適切。</li><li>保留「鐘訊同步」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「讓安全事件與相關紀錄可以被可靠關聯與分析」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="121" aria-hidden="true">
+              <h2>A.8.18 具特殊權限公用程式之使用</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>限制並嚴密控制可能覆蓋系統控制的公用程式。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「可能篡越系統及應用程式之控制措施的公用程式，宜考量下列指導綱要」納入「具特殊權限公用程式之使用」的實作範圍並界定適用情境。</li><li>針對「公用程式之使用，僅限於有實際需要的最少數之受信任、經授權使用者」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「公用程式，使用識別、鑑別及授權程序」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「並書面記錄公用程式之授權等級」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「公用程式之臨時使用的授權」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「要求職務區隔時，對系統上之應用程式具存取權限的使用者，不可使其使用公」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「移除或停用所有非必要之公用程式」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「至少，邏輯區隔應用軟體與公用程式」是否仍適切。</li><li>保留「公用程式之可用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「存錄公用程式之所有使用」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="122" aria-hidden="true">
+              <h2>A.8.19 運作中系統之軟體安裝</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>維持運作中系統完整性並降低未授權軟體風險。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量下列指導綱要．以安全管理運作中系統上的軟體變更及安裝」納入「運作中系統之軟體安裝」的實作範圍並界定適用情境。</li><li>針對「僅由受過訓練之管理者，於獲得適切的管理階層授權後，方能執行運作中軟體」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「於運作中系統上，僅安裝經核可之可執行程式碼，而不安裝開發程式或編譯器」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「僅於廣泛及成功測試」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「更新所有對應之程式原始碼函式庫」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「組態控制系統，以保持對所有運作中軟體」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「實作變更前，定義還原策略」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「維持對運作中軟體的所有更新之稽核日誌」是否仍適切。</li><li>保留「運作中系統之軟體安裝」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「維持運作中系統完整性並降低未授權軟體風險」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="123" aria-hidden="true">
+              <h2>A.8.20 網路安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護網路及其支援資訊處理服務的安全。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「實作控制措施，以確保網路中資訊之安全，並保護所連接的服務免遭未經授權」納入「網路安全」的實作範圍並界定適用情境。</li><li>針對「網路可支援之資訊的型式及分類分級等級」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「管理網路設備及裝置之各項責任及程序」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「維護最新的文件」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「適用時，將網路運作責任與ICT系統之運作分開」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「控制措施，以保護經由公眾網路、第三方網路或無線網路所傳送資料的機密性」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「適切存錄及監視」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「密切協調網路管理活動，以最佳化對組織之服務，並確保控制措施一體施行於」是否仍適切。</li><li>保留「鑑別網路上之系統」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「並過濾連接至網路之系統」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="124" aria-hidden="true">
+              <h2>A.8.21 網路服務之安全</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保使用網路服務時維持適當安全水準。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「(由內部或外部網路服務提供者)識別及實作特定服務所必要之安全措施，諸」納入「網路服務之安全」的實作範圍並界定適用情境。</li><li>針對「所容許存取之網路及網路服務」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「存取各種網路服務之鑑別要求事項」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「授權程序」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「網路管理及技術控制措施與程序」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「網路服務之安全」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「者於存取時之時間、位置及其他屬性」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「網路服務之使用」是否仍適切。</li><li>保留「網路服務安全所使用之技術，諸如鑑別、加密及網路連線控制」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「安全及網路連接規則，安全的與網路服務連接所要求之技術參數」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="125" aria-hidden="true">
+              <h2>A.8.22 網路區隔</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在安全界限上分割網路以限制風險擴散。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「考量藉由將大型網路劃分成分隔之網域，並將其與公眾網路(亦即網際網路)」納入「網路區隔」的實作範圍並界定適用情境。</li><li>針對「可依信任等級、關鍵性及敏感性、依組織單位或依某種組合，選擇網域」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「區隔可使用實體上不同之網路，或使用不同的邏輯網路」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「明確定義各網域之周界」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「網路區隔」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「依對各網域之安全要求事項的評鑑，訂定將網路區隔成網域之準則」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「評鑑宜依存取控制主題特定政策」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「因無線網路之網路周界難以界定，故必須特別處理」是否仍適切。</li><li>保留「無線網路之區隔宜考量無線電涵蓋範圍調整」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「於機敏之環境，宜考量於授予內部系統存取權限前，先將所有無線存取視為外」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="126" aria-hidden="true">
+              <h2>A.8.23 網頁過濾</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護系統免受惡意或未授權網頁內容危害。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「降低其人員存取含有非法資訊或已知含有病毒或網路釣魚資材之網站的風險」納入「網頁過濾」的實作範圍並界定適用情境。</li><li>針對「具資訊上傳功能之網站，除非基於正」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「已知或可疑之惡意網站」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「指揮控制」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「由威脅情資中獲取之惡意網站」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「分享非法內容之網站」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「網頁過濾」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「保護系統免受惡意或未授權網頁內容危害」是否仍適切。</li><li>保留「控制範圍與適用性」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「責任分派與核准流程」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="127" aria-hidden="true">
+              <h2>A.8.24 密碼技術之使用</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>依營運與資訊安全要求有效使用密碼技術。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般使用密碼技術時，宜考量下列下列因素」納入「密碼技術之使用」的實作範圍並界定適用情境。</li><li>針對「組織定義之密碼技術主題特定政策」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「所要求資訊保護及分類分級之等級，從而建立所要求密碼演算法的型式、強度」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「密碼技術」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「金鑰管理之作法」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「下列事宜之角色及責任」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「經核可或要求使用於組織之標準、密碼演算法、加密器強度、密碼式解決方案」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「經加密資訊，對依賴內容檢視之控制措施的衝擊」是否仍適切。</li><li>保留「不同密碼系統及不同應用產生金鑰」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「核發及取得公鑰憑證」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="128" aria-hidden="true">
+              <h2>A.8.25 安全開發生命週期</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保軟體與系統在生命週期中納入資訊安全。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「安全開發係一項要求」納入「安全開發生命週期」的實作範圍並界定適用情境。</li><li>針對「開發環境、測試環境及生產環境之區隔」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「關於軟體開發生命週期中之安全性的指引」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「規格及設計階段中之安全要求事項」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「各專案中之安全查核點」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「系統及安全測試，諸如迴歸測試、程式碼掃描及滲透測試」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「原始碼及組態之安全儲存庫」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「版本控制之安全」是否仍適切。</li><li>保留「所要求之應用程式安全知識及教育訓練」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「開發者避開、找出及修補脆弱性之能力」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="129" aria-hidden="true">
+              <h2>A.8.26 應用系統安全要求事項</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保應用系統在開發或取得時滿足資訊安全要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「一般宜識別並規定應用程式安全要求事項」納入「應用系統安全要求事項」的實作範圍並界定適用情境。</li><li>針對「個體身分之信任程度」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「由應用系統將處理之資訊型式及分類分級等級」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「用系統中對資料及功能之存取區隔與存取權限等級的需要」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「防範惡意攻擊或非蓄意中斷之韌性」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「產生、處理、完成或儲存交易所在地之管轄權的法律、法令及法規要求事項」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「與所有相關各方相關聯之隱私需要」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「所有機密資訊之保護要求事項」是否仍適切。</li><li>保留「保護於處理時、傳輸中及靜止時之資料」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「與所有相關各方間之通訊進行安全加密的需要」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="130" aria-hidden="true">
+              <h2>A.8.27 安全系統架構及工程原則</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>讓資訊系統依安全工程原則被設計、實作與維護。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「建立及書面記錄安全工程原則，並套用於資訊系統工程活動」納入「安全系統架構及工程原則」的實作範圍並界定適用情境。</li><li>針對「保護資訊及系統免遭已識別威脅，所要求之全範圍安全控制措施」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「安全系統架構及工程原則」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「特定營運過程所要求之特定安全控制措施」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「何處及如何套用安全控制措施」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「個別安全控制措施(手動及自動化)如何協同工作，以產生1組整合之控制措」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「與安全架構整合之需要」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「技術性安全基礎設施」是否仍適切。</li><li>保留「組織開發及支援所選定技術之能力」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「符合安全要求事項之成本、時間及複雜性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="131" aria-hidden="true">
+              <h2>A.8.28 安全程式設計</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保軟體以安全方式撰寫並降低弱點。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「組織特定期望及經核可之原則，用於組織內部及委外程式碼開發的安全程式設」納入「安全程式設計」的實作範圍並界定適用情境。</li><li>針對「導致資訊安全脆弱性之常見及歷史程式開發實務作法及缺陷」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「設定開發工具」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「適用時，遵循開發工具及執行環境提供者所發布之指引」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「維護及使用更新之開發工具」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「開發者撰寫安全程式碼之資格」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「安全設計及架構」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「安全程式設計標準，並於相關處強制使用」是否仍適切。</li><li>保留「供開發用之受控環境」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「特定於所使用之程式語言及技術的安全程式設計實務作法」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="132" aria-hidden="true">
+              <h2>A.8.29 開發及驗收中之安全測試</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>驗證應用程式或程式碼在部署前符合安全要求。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「新資訊系統、升級及新版本宜於開發過程期間澈底測試及查證」納入「開發及驗收中之安全測試」的實作範圍並界定適用情境。</li><li>針對「安全功能」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「安全程式設計」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「安全組態」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「活動及測試之詳細排程」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「各項條件之範圍下之輸入及預期輸出」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「開發及驗收中之安全測試」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「必要時將採取之進一步行動的決策」是否仍適切。</li><li>保留「進行程式碼審查活動，作為測試安全缺陷」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「進行弱點掃描，以識別不安全之組態及系統脆弱性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="133" aria-hidden="true">
+              <h2>A.8.30 委外開發</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保委外系統開發中的資訊安全要求被指引、監督與驗收。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「系統開發委外時，組織宜傳達及議定要求事項及期望，並持續監視及審查委外」納入「委外開發」的實作範圍並界定適用情境。</li><li>針對「與委外內容相關之使用授權協議、程式碼所有權及智慧財產權」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「安全設計、程式開發及測試實務作法之契約要求事項」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「提供威脅模型供外部開發者考量」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「交付項目之品質及準確性的驗收測試」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「提供證據，證明已建立最低可接受等級之安全及隱私保護能力」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「提供證據，證明交付時已進行充分測試，防範出現」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「提供證據，證明已進行充分測試，防範出現已知脆弱性」是否仍適切。</li><li>保留「軟體原始碼之託管協議」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「稽核開發過程及控制措施之契約權利」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="134" aria-hidden="true">
+              <h2>A.8.31 開發、測試與運作環境之區隔</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>保護生產環境與資料免於開發或測試活動影響。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「識別並實作於生產環境、測試環境與開發環境間，防護生產問題所必要之區隔」納入「開發、測試與運作環境之區隔」的實作範圍並界定適用情境。</li><li>針對「充分區隔開發系統與生產系統，並使其於不同區域中運作」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「書面記錄及實作，關於軟體由開發狀態部署至生產狀態之規則及授權」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「套用至生產系統前，在測試性或階段性環境中，測試對生產系統及應用程式之」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「除於已定義並經核可之情況下，否則不於生產環境中進行測試」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「非必要，不可由生產系統存取編譯器、編輯器及其他開發工具或公用程式」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「選單中，顯示適切之環境識別標籤，以降低錯誤風險」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「除非開發系統及測試系統提供同等之控制措施，否則不複製敏感資訊至開發環」是否仍適切。</li><li>保留「修補及更新所有開發、整合及測試工具」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「系統及軟體之安全組態」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="135" aria-hidden="true">
+              <h2>A.8.32 變更管理</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>在變更資訊處理設施與系統時保護資訊安全。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「新系統之引進及對既有系統的重大變更，宜遵循議定之規則」納入「變更管理」的實作範圍並界定適用情境。</li><li>針對「考量所有相依性，規劃並評鑑變更之可能衝擊」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「傳達變更予相關之關注方」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「變更之測試及測試的驗收」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「變更之實作」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「緊急應變考量事項」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「變更管理」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「於必要時變更操作文件」是否仍適切。</li><li>保留「於必要時變更ICT持續計畫及回應與復原程序」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「在變更資訊處理設施與系統時保護資訊安全」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="136" aria-hidden="true">
+              <h2>A.8.33 測試資訊</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>確保測試資料適當選擇、保護與管理。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「測試資訊之選擇宜保證測試結果之可靠性及相關運作中資訊之機密性」納入「測試資訊」的實作範圍並界定適用情境。</li><li>針對「測試環境套用與套用於運作環境之存取控制程序相同的存取控制程序」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「每次複製運作中資訊至測試環境時，皆具不同個別授權」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「運作中資訊之複製及使用皆存錄，以提供稽核存底」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「測試資訊」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「測試完成後，立即由測試環境中適切刪除」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「測試資料適」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「控制範圍與適用性」是否仍適切。</li><li>保留「責任分派與核准流程」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「文件化規則與作業程序」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="137" aria-hidden="true">
+              <h2>A.8.34 稽核測試期間資訊系統之保護</h2>
+              
+              <div class="annex-control-layout">
+          <article class="card control-brief">
+            <h3>控制措施導讀</h3>
+            <p>極小化稽核與保證活動對運作中系統與資料的影響。</p>
+          </article>
+          <article class="card implementation-card">
+            <h3>實作指引</h3>
+            <ul class="implementation-list"><li>將「與適切之管理階層議定存取系統及存取資料的稽核請求」納入「稽核測試期間資訊系統之保護」的實作範圍並界定適用情境。</li><li>針對「議定並控制技術式稽核測試之範圍」建立可執行的規則、程序、技術設定或作業標準。</li><li>為「稽核測試對軟體及資料之僅讀存取」指定責任角色、核准權限、執行頻率與留存紀錄方式。</li><li>把「稽核測試期間資訊系統之保護」連結到風險評鑑、風險處理、SoA 與必要控制措施。</li><li>確認「僅讀存取外之存取行為，僅容許施行於隔離的系統檔案複本，且於稽核完成時」已被溝通給相關人員、供應商或關注方，並能被理解與遵循。</li><li>對「並議定特殊或額外處理」設定監督、審查、例外處理與重大變更時的更新機制。</li><li>以抽查、系統紀錄、訪談或設定檢視，確認「可能影響系統可用性之稽核測試於營運時間外運行」已有效運作。</li><li>在事件、事故、稽核發現或威脅變化後，重新檢視「並存錄用於稽核及測試目的之所有存取」是否仍適切。</li><li>保留「極小化稽核與保證活動對運作中系統與資料的影響」相關決策、核准、執行與改善紀錄，以支援追溯與稽核。</li><li>將「控制範圍與適用性」的有效性回饋到 9.1 監督量測、9.3 管理審查與 10.2 矯正措施。</li></ul>
+          </article>
+        </div>
+            </section>
+<section class="iso27001-slide" data-slide="138" aria-hidden="true">
+              <h2>導讀收束：用 SoA 串起要求與控制</h2>
+              <p class="subtitle">從條款到控制措施，再回到績效與改善</p>
+              <div class="grid two">
+          <article class="card"><h3>主條款的收束</h3><p>4 到 10 要能看出 ISMS 如何被建立、實作、維持與改善；6.1.2 與 6.1.3 則把風險轉成控制措施與處理計畫。</p></article>
+          <article class="card"><h3>附錄 A 的收束</h3><p>93 項控制措施要透過 SoA 說明納入、排除與實作狀態，並回到 9.1 監督、9.3 管理審查與 10.2 矯正措施。</p></article>
+        </div>
+        <div class="callout">講解邏輯：全景與要求 -> 範圍 -> 風險評鑑 -> 風險處理 -> SoA -> 運作控制 -> 績效評估 -> 改善。</div>
+            </section>
+  </div>
+  <div class="deck-controls" aria-label="投影片控制">
+    <button type="button" class="secondary" data-action="first">第一頁</button>
+    <button type="button" class="secondary" data-action="prev">上一頁</button>
+    <button type="button" data-action="next">下一頁</button>
+    <button type="button" class="secondary" data-action="last">最後頁</button>
+    <button type="button" class="secondary" data-action="fullscreen" aria-pressed="false">全螢幕</button>
+    <span class="status" aria-live="polite">1 / 138</span>
+  </div>
+  <div class="progress" aria-hidden="true"><div></div></div>
+  <script>
+    (function () {
+      var deck = document.getElementById('iso27001-2022-zh-deck');
+      if (!deck) return;
+      var slides = Array.prototype.slice.call(deck.querySelectorAll('.iso27001-slide'));
+      var status = deck.querySelector('.status');
+      var progress = deck.querySelector('.progress > div');
+      var fullscreenButton = deck.querySelector('button[data-action="fullscreen"]');
+      var current = 0;
+      function show(index) {
+        if (index < 0 || index >= slides.length) return;
+        slides[current].classList.remove('is-active');
+        slides[current].setAttribute('aria-hidden', 'true');
+        current = index;
+        slides[current].classList.add('is-active');
+        slides[current].setAttribute('aria-hidden', 'false');
+        if (status) status.textContent = (current + 1) + ' / ' + slides.length;
+        if (progress) progress.style.width = (((current + 1) / slides.length) * 100) + '%';
+      }
+      function next() { show(Math.min(current + 1, slides.length - 1)); }
+      function prev() { show(Math.max(current - 1, 0)); }
+      function getFullscreenElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement;
+      }
+      function requestDeckFullscreen() {
+        if (deck.requestFullscreen) return deck.requestFullscreen();
+        if (deck.webkitRequestFullscreen) return deck.webkitRequestFullscreen();
+      }
+      function exitDeckFullscreen() {
+        if (document.exitFullscreen) return document.exitFullscreen();
+        if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+      }
+      function updateFullscreenButton() {
+        if (!fullscreenButton) return;
+        var active = getFullscreenElement() === deck;
+        fullscreenButton.textContent = active ? '離開全螢幕' : '全螢幕';
+        fullscreenButton.setAttribute('aria-pressed', active ? 'true' : 'false');
+      }
+      function toggleFullscreen() {
+        var active = getFullscreenElement() === deck;
+        var action = active ? exitDeckFullscreen() : requestDeckFullscreen();
+        if (action && action.catch) action.catch(function () {});
+        setTimeout(function () {
+          updateFullscreenButton();
+          try { deck.focus({ preventScroll: true }); } catch (error) { deck.focus(); }
+        }, 0);
+      }
+      deck.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+          event.preventDefault();
+          next();
+        } else if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+          event.preventDefault();
+          prev();
+        } else if (event.key === 'Home') {
+          event.preventDefault();
+          show(0);
+        } else if (event.key === 'End') {
+          event.preventDefault();
+          show(slides.length - 1);
+        } else if ((event.key === 'f' || event.key === 'F') && !event.ctrlKey && !event.metaKey && !event.altKey) {
+          event.preventDefault();
+          toggleFullscreen();
+        }
+      });
+      document.addEventListener('fullscreenchange', updateFullscreenButton);
+      document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+      deck.querySelectorAll('button[data-action]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var action = button.getAttribute('data-action');
+          if (action === 'next') next();
+          if (action === 'prev') prev();
+          if (action === 'first') show(0);
+          if (action === 'last') show(slides.length - 1);
+          if (action === 'fullscreen') toggleFullscreen();
+          deck.focus();
+        });
+      });
+      show(0);
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+        try { deck.focus({ preventScroll: true }); } catch (error) { deck.focus(); window.scrollTo(0, 0); }
+      }, 0);
+    })();
+  </script>
+</div>
+<div class="kb-presentation-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+</body>
+</html>
