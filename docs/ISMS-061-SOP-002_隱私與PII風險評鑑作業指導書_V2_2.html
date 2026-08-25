@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-061-SOP-002 隱私與PII風險評鑑作業指導書</title>
+<style>body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.65;margin:24px;color:#222}.isms-document{max-width:1800px;margin:auto}h1{font-size:28px;border-bottom:3px solid #333;padding-bottom:8px}h2{margin-top:30px;font-size:21px;color:#1f3b5b}h3{margin-top:18px;font-size:17px}table{width:100%;border-collapse:collapse;margin:12px 0 24px}th{background:#f2f2f2;text-align:left}td,th{border:1px solid #555;padding:8px;vertical-align:top}p,li{font-size:15px}.reference-list{margin:0;padding-left:20px}.reference-list li{margin:3px 0}.reference-list a{color:#0f5c58;text-decoration:underline;text-underline-offset:2px}.reference-list a:hover,.reference-list a:focus{color:#0b3d3a}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document"><h1>ISMS-061-SOP-002 隱私與PII風險評鑑作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width:100%;border-collapse:collapse" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件編號</th>
+<th>文件名稱</th>
+<th>文件類型</th>
+<th>版本</th>
+<th>保存等級 / 期限</th>
+<th>文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-061-SOP-002</td>
+<td>隱私與PII風險評鑑作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V2.2</td>
+<td>R5 / 5 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width:100%;border-collapse:collapse" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>組織名稱</th>
+<th>適用條款</th>
+<th>文件Owner</th>
+<th>核准權責</th>
+<th>保存位置</th>
+<th>正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-6 / ISMS-061-SOP-002</td>
+<td>完成審查、核准、清冊登錄及受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width:100%;border-collapse:collapse" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件狀態</th>
+<th>生效日期</th>
+<th>審查週期</th>
+<th>下次審查日</th>
+<th>審查權責</th>
+<th>變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>1. 目的與定位</h2>
+<p>以資料主體權益與個人資料處理生命週期為核心，執行隱私與PII風險評鑑。</p>
+<h2>2. 適用範圍與管理系統介面</h2>
+<p>適用於蒐集、使用、分析、共享、跨境、保存、刪除及委外處理個人資料的活動。</p>
+<p><strong>主要介面：</strong>ISO/IEC 27701、ISO/IEC 29134、適用個資法規、客戶與資料處理契約。</p>
+<h2>3. 啟動條件與必要輸入</h2>
+<p>新處理目的、新資料類別、敏感PII、大規模監控、跨境傳輸、AI剖析、資料事件或法規變更。</p>
+<h2>4. 作業步驟</h2>
+<table>
+<thead><tr>
+<th>步驟</th>
+<th>執行要求</th>
+<th>最低輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 建立情境</td>
+<td>確認處理目的、合法基礎、角色、資料流、資料主體、保存期限與接收方。</td>
+<td>範圍、目的、內外部議題、適用要求與假設</td>
+</tr>
+<tr>
+<td>2. 識別風險與機會</td>
+<td>識別不透明、過度蒐集、目的外利用、錯誤、歧視、未授權揭露與權利受阻風險。</td>
+<td>原因—事件—後果、機會、受影響對象與Owner</td>
+</tr>
+<tr>
+<td>3. 分析</td>
+<td>評估對資料主體權利、自由、財務、名譽、身心與可救濟性的影響。</td>
+<td>固有風險、既有控制、證據、可能性與衝擊</td>
+</tr>
+<tr>
+<td>4. 評估</td>
+<td>套用 ISMS-061-FRM-002，與風險胃納、法規、合約及專項門檻比較。</td>
+<td>接受、處理、升級或機會投入決策</td>
+</tr>
+<tr>
+<td>5. 處理與驗證</td>
+<td>採資料最小化、隱私設計、告知同意、權利流程、去識別、存取與刪除控制。</td>
+<td>處理計畫、控制證據、剩餘風險與驗證結果</td>
+</tr>
+<tr>
+<td>6. 監督與溝通</td>
+<td>追蹤權利請求、事件、保留期限、第三方處理、跨境安排與DPIA行動。</td>
+<td>KRI、重評日期、管理審查與跨系統介面</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 專項評估準則</h2>
+<table>
+<thead><tr>
+<th>評估面向</th>
+<th>應考量內容</th>
+<th>升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>處理正當性</td>
+<td>目的、合法基礎、必要性、比例性與透明度</td>
+<td>無合法基礎或高侵入性處理</td>
+</tr>
+<tr>
+<td>資料主體影響</td>
+<td>敏感性、規模、脆弱群體、可逆性與救濟</td>
+<td>可能造成重大或不可逆傷害</td>
+</tr>
+<tr>
+<td>第三方與跨境</td>
+<td>處理者、再委託、地區、契約與監督</td>
+<td>未具適當保障或不可監督</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 工具、表單與紀錄</h2>
+<table>
+<thead><tr>
+<th>用途</th>
+<th>文件化資訊</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>共同準則</td>
+<td>ISMS-061-FRM-002 風險準則與接受準則表</td>
+</tr>
+<tr>
+<td>專項評估</td>
+<td>ISMS-061-FRM-006 隱私風險評估表</td>
+</tr>
+<tr>
+<td>處理與接受</td>
+<td>ISMS-061-FRM-003 管理系統風險處理計畫；ISMS-061-FRM-004 剩餘風險接受單</td>
+</tr>
+<tr>
+<td>登錄與監督</td>
+<td>ISMS-061-REG-003 隱私與PII風險登錄表；ISMS-061-REG-007 管理系統風險與機會總登錄表</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 證據、升級與跨系統整合</h2>
+<p>保存資料流、處理活動、DPIA、合法基礎、告知同意、資料處理契約、權利回應與控制測試。</p>
+<p>同時涉及資訊安全或AI時，應連結ISMS與AIMS風險，避免只評估資料外洩而忽略權益與倫理影響。</p>
+<h2>8. 紀錄保存與重評</h2>
+<p>評估、核准、處理、驗證、溝通與重評紀錄至少保存七年；法規、合約、驗證、訴訟、事故或客戶要求較長者從其要求。重大變更、事件、控制失效、趨勢惡化或適用要求變更時應立即重評。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

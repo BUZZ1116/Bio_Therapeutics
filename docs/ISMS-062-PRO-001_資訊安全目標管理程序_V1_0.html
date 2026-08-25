@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-062-PRO-001 資訊安全目標管理程序</title>
+<style>body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}.isms-document{max-width:3200px;margin:0 auto}h1{text-align:center;color:#1f4e79;border-bottom:3px solid #333;padding-bottom:8px}h2{margin-top:30px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}th{background:#d9eaf7;text-align:left}td,th{vertical-align:top!important}.note{background:#fff7e6;border:1px solid #f0c36d;padding:12px;margin:12px 0}.small{font-size:13px;color:#555}
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-062-PRO-001 資訊安全目標管理程序</h1>
+<div class="note">
+<strong>程序定位：</strong>本程序為 ISO/IEC 27001:2022 Clause 6.2 資訊安全目標及其達成計畫之核心程序，將政策、組織全景、關注方需求、風險與機會、SoA、控制措施、KPI/KRI、管理審查、CAPA與持續改善整合為可操作、可量測、可稽核之管理閉環。</div>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-062-PRO-001</td>
+<td>資訊安全目標管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 6 / 風險、目標與變更規劃</td>
+<td>資訊安全風險管理負責人 / ISMS管理代表</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Clause-6 / ISMS-062-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資訊安全風險管理負責人 / ISMS管理代表 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">績效評估負責人 / ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">內部稽核主管</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層 / 資訊安全治理委員會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 文件目的</h2>
+<p>本程序用於定義組織如何建立、規劃、核准、溝通、實施、監督、量測、分析、評估及持續改善資訊安全目標，確保資訊安全目標符合組織策略方向、資訊安全政策、ISMS範圍、風險與機會、法規與合約要求、關注方需求、控制措施有效性及整合管理系統要求。</p>
+<p>本程序要求每一項資訊安全目標均具備明確Owner、KPI/KRI、基準值、目標值、完成期限、資源需求、監督頻率、升級門檻、證據位置與未達標處理方式。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">程序章節 / 管理主題</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1. 文件目的</td>
+<td style="vertical-align: top !important;">將政策、風險、量測、管理審查、CAPA及持續改善連結成目標管理閉環。</td>
+<td style="vertical-align: top !important;">程序目的與PDCA閉環。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2. 適用範圍</td>
+<td style="vertical-align: top !important;">確認目標涵蓋ISMS/PIMS/AI/GHG範圍、資產、AI服務、碳足跡資料、系統與供應商。</td>
+<td style="vertical-align: top !important;">目標適用範圍與範圍聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4. 管理原則</td>
+<td style="vertical-align: top !important;">建立政策一致、風險導向、可量測、資源可行、持續改善及證據可稽核之原則。</td>
+<td style="vertical-align: top !important;">目標建立原則與最低證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5~8. 流程、角色與目標來源</td>
+<td style="vertical-align: top !important;">從組織全景、關注方、法規、風險、SoA、稽核、事件與管理審查萃取目標並指派責任。</td>
+<td style="vertical-align: top !important;">目標來源分析、RACI、任命書、目標規劃表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9~12. SMART、風險/SoA整合、溝通與量測</td>
+<td style="vertical-align: top !important;">審查SMART完整性，將目標追溯至風險、SoA與控制，並依頻率監督量測。</td>
+<td style="vertical-align: top !important;">SMART審查、追溯矩陣、KPI/KRI追蹤紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">13~16. 未達標、變更、管理審查與專項目標</td>
+<td style="vertical-align: top !important;">對未達標、KRI超標、重大變更、PIMS、AI與GHG目標進行升級、審查、管理審查與改善。</td>
+<td style="vertical-align: top !important;">CAPA、變更紀錄、管理審查輸入、專項治理目標證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">17~20. 指標庫、年度時程、有效性與例外</td>
+<td style="vertical-align: top !important;">建立建議指標、時程、有效性準則、例外處理與風險接受要求。</td>
+<td style="vertical-align: top !important;">KPI/KRI指標庫、年度時程、例外核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">21~24. RACI、條文、Annex A與稽核驗證</td>
+<td style="vertical-align: top !important;">證明本程序支援ISO條款、Annex A控制與內外部稽核驗證。</td>
+<td style="vertical-align: top !important;">RACI、條文對應、Annex A對應、稽核查核提示。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>適用於ISMS範圍內所有部門、流程、資訊資產、系統、資料、雲端服務、供應商、外包流程、資料中心及客戶服務。</li>
+<li>適用於年度資訊安全目標、專案型目標、重大風險改善目標、控制有效性目標、合規目標、隱私目標、AI治理目標與GHG/CO2資料治理目標。</li>
+<li>適用於內部稽核、外部驗證、客戶稽核、管理審查、CAPA、持續改善及績效評估活動。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標</td>
+<td style="vertical-align: top !important;">組織為達成資訊安全政策、ISMS預期成果、風險處理、控制有效性、法規合約與關注方要求而設定之可量測目標。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI</td>
+<td style="vertical-align: top !important;">績效指標，用於量測目標或流程活動是否達成預期結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KRI</td>
+<td style="vertical-align: top !important;">關鍵風險指標，用於監控風險升高、控制失效、事件趨勢或目標偏離。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SMART</td>
+<td style="vertical-align: top !important;">Specific、Measurable、Achievable、Relevant、Time-bound，目標制定原則。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標Owner</td>
+<td style="vertical-align: top !important;">對特定目標之規劃、資源、執行、監督、證據保存及改善負責之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">負責彙整KPI/KRI資料、分析目標達成情形、提報管理審查及追蹤改善之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA</td>
+<td style="vertical-align: top !important;">不符合與矯正措施，用於處理未達標、KRI超標、稽核缺失或控制失效。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 管理原則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">原則</th>
+<th style="vertical-align: top !important;">要求說明</th>
+<th style="vertical-align: top !important;">最低證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政策一致性</td>
+<td style="vertical-align: top !important;">資訊安全目標應與資訊安全政策、組織策略、ISMS範圍、風險與機會、合規義務及關注方需求一致。</td>
+<td style="vertical-align: top !important;">政策、目標規劃表、管理審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SMART與可量測</td>
+<td style="vertical-align: top !important;">每項目標均應具備Owner、KPI/KRI、基準值、目標值、完成期限、資源需求、監督頻率與證據要求。</td>
+<td style="vertical-align: top !important;">SMART檢核、KPI/KRI定義、目標追蹤紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與控制追溯</td>
+<td style="vertical-align: top !important;">目標應追溯至風險登錄、風險處理計畫、SoA、Annex A控制措施及管理審查決議。</td>
+<td style="vertical-align: top !important;">風險與目標矩陣、SoA對應、控制證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查閉環</td>
+<td style="vertical-align: top !important;">目標結果應納入監督量測、管理審查及持續改善。</td>
+<td style="vertical-align: top !important;">績效分析、管理審查輸入、改善追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">未達標處理</td>
+<td style="vertical-align: top !important;">未達標、KRI超標、重大事件、稽核不符合或管理審查決議應觸發CAPA或目標調整。</td>
+<td style="vertical-align: top !important;">CAPA、RCA、有效性驗證。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 資訊安全目標管理政策要求</h2>
+<ul>
+<li>資訊安全目標應由CISO、ISMS管理代表、績效評估負責人及相關Owner共同規劃，並由最高管理階層核准。</li>
+<li>目標不得僅為宣示性文字，應具備可量測指標、資料來源、基準值、目標值、責任人、頻率、期限與證據。</li>
+<li>涉及重大風險、合規義務、客戶承諾或控制措施有效性之目標，應優先納入年度目標。</li>
+<li>目標達成狀況應至少每季追蹤，年度納入管理審查；重大風險或重大事件時應即時檢討。</li>
+</ul>
+<h2>6. 角色、責任與權限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">主要責任</th>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">核准資訊安全目標、資源、重大風險接受及目標調整方向。</td>
+<td style="vertical-align: top !important;">策略方向、政策、管理審查輸入、重大風險。</td>
+<td style="vertical-align: top !important;">核准紀錄、資源決議、管理審查輸出。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO</td>
+<td style="vertical-align: top !important;">確保目標與政策、風險、SoA及控制措施一致，監督目標達成。</td>
+<td style="vertical-align: top !important;">風險登錄、控制測試、事件、稽核發現。</td>
+<td style="vertical-align: top !important;">年度目標、改善方向、治理報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">維護目標管理程序與規劃表，協調各Owner執行與證據保存。</td>
+<td style="vertical-align: top !important;">程序文件、目標草案、KPI/KRI資料。</td>
+<td style="vertical-align: top !important;">目標規劃表、績效彙整、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">定義KPI/KRI、收集資料、分析趨勢、提報偏差與改善。</td>
+<td style="vertical-align: top !important;">KPI/KRI資料、目標值、基準值。</td>
+<td style="vertical-align: top !important;">績效分析報告、儀表板、偏差分析。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">確保資訊安全目標與風險評估、風險處理及剩餘風險連結。</td>
+<td style="vertical-align: top !important;">風險登錄、風險處理計畫、風險接受單。</td>
+<td style="vertical-align: top !important;">風險與目標對應矩陣、風險改善建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / AI / GHG治理負責人</td>
+<td style="vertical-align: top !important;">整合隱私、AI、GHG/CO2資料治理目標與專項證據。</td>
+<td style="vertical-align: top !important;">隱私風險評估、AI風險評估、碳證據、專項法規要求。</td>
+<td style="vertical-align: top !important;">專項目標、專項KPI/KRI、專項證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核主管</td>
+<td style="vertical-align: top !important;">查核目標管理程序、證據完整性、績效追蹤及CAPA有效性。</td>
+<td style="vertical-align: top !important;">稽核準則、目標規劃表、績效報告。</td>
+<td style="vertical-align: top !important;">稽核發現、稽核報告、改善建議。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 資訊安全目標管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">步驟</th>
+<th style="vertical-align: top !important;">流程活動</th>
+<th style="vertical-align: top !important;">主要輸入</th>
+<th style="vertical-align: top !important;">主要輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1</td>
+<td style="vertical-align: top !important;">蒐集目標來源與輸入，包括組織全景、關注方需求、法規合約、風險評估、SoA、事件、稽核與管理審查決議。</td>
+<td style="vertical-align: top !important;">內外部議題、需求清冊、風險登錄、稽核報告。</td>
+<td style="vertical-align: top !important;">目標來源分析。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2</td>
+<td style="vertical-align: top !important;">分析風險、控制有效性、合規差距及治理需求，提出年度目標候選清單。</td>
+<td style="vertical-align: top !important;">風險評估、控制測試、合規缺口、KPI/KRI趨勢。</td>
+<td style="vertical-align: top !important;">目標候選清單。</td>
+<td style="vertical-align: top !important;">CISO / 績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">3</td>
+<td style="vertical-align: top !important;">依SMART原則定義目標、KPI/KRI、基準值、目標值、頻率、Owner、資源與期限。</td>
+<td style="vertical-align: top !important;">目標候選清單、基準資料、資源需求。</td>
+<td style="vertical-align: top !important;">資訊安全目標規劃表。</td>
+<td style="vertical-align: top !important;">目標Owner / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4</td>
+<td style="vertical-align: top !important;">審查目標適切性、可達成性、風險連結、SoA連結、法規合規及資源需求。</td>
+<td style="vertical-align: top !important;">目標規劃表、風險/SoA矩陣、預算資料。</td>
+<td style="vertical-align: top !important;">審查意見與修正結果。</td>
+<td style="vertical-align: top !important;">CISO / 風險管理 / 法務 / DPO / AI / GHG</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5</td>
+<td style="vertical-align: top !important;">由最高管理階層或授權代表核准年度資訊安全目標及所需資源。</td>
+<td style="vertical-align: top !important;">審查後目標、資源計畫、重大風險。</td>
+<td style="vertical-align: top !important;">核准版目標與資源決議。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6</td>
+<td style="vertical-align: top !important;">溝通已核准目標、責任、時程、KPI/KRI與證據要求至相關部門與Owner。</td>
+<td style="vertical-align: top !important;">核准版目標、RACI、溝通矩陣。</td>
+<td style="vertical-align: top !important;">公告、會議或訓練紀錄。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / HR / 目標Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7</td>
+<td style="vertical-align: top !important;">依年度推動計畫執行目標活動並定期保存證據。</td>
+<td style="vertical-align: top !important;">目標計畫、SOP、資源與工具。</td>
+<td style="vertical-align: top !important;">執行紀錄、控制證據。</td>
+<td style="vertical-align: top !important;">目標Owner / Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8</td>
+<td style="vertical-align: top !important;">依規定頻率收集KPI/KRI資料，進行趨勢分析、偏差分析與風險判斷。</td>
+<td style="vertical-align: top !important;">KPI/KRI資料、事件、稽核、弱掃、訓練報表。</td>
+<td style="vertical-align: top !important;">績效分析報告、儀表板。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9</td>
+<td style="vertical-align: top !important;">對未達標、KRI超標、重大偏差或控制失效進行原因分析並啟動CAPA。</td>
+<td style="vertical-align: top !important;">偏差資料、稽核發現、事件RCA。</td>
+<td style="vertical-align: top !important;">CAPA或改善計畫。</td>
+<td style="vertical-align: top !important;">CAPA負責人 / 目標Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10</td>
+<td style="vertical-align: top !important;">將目標達成情形、風險趨勢、資源需求及改善建議納入管理審查。</td>
+<td style="vertical-align: top !important;">績效報告、CAPA、風險與SoA狀態。</td>
+<td style="vertical-align: top !important;">管理審查輸入與決議。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 目標來源與輸入管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">目標來源</th>
+<th style="vertical-align: top !important;">輸入內容</th>
+<th style="vertical-align: top !important;">分析方式</th>
+<th style="vertical-align: top !important;">可能形成之目標</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織全景</td>
+<td style="vertical-align: top !important;">內外部議題、技術趨勢、營運策略、氣候與AI議題。</td>
+<td style="vertical-align: top !important;">分析對ISMS目的、範圍與預期成果之影響。</td>
+<td style="vertical-align: top !important;">資安成熟度、營運韌性、AI治理、雲端安全目標。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">內外部議題分析表、組織全景分析報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關注方需求</td>
+<td style="vertical-align: top !important;">客戶、主管機關、資料主體、供應商、員工、驗證機構要求。</td>
+<td style="vertical-align: top !important;">判定應納入ISMS之需求與承諾。</td>
+<td style="vertical-align: top !important;">客戶履約、通報、隱私、供應鏈與服務可用性目標。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+<td style="vertical-align: top !important;">關注方需求與期望分析表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規與合約要求</td>
+<td style="vertical-align: top !important;">資訊安全、個資、AI、GHG、雲端、供應鏈及服務合約。</td>
+<td style="vertical-align: top !important;">進行適用性與符合性差距分析。</td>
+<td style="vertical-align: top !important;">合規符合率、SLA達成率、供應商評估目標。</td>
+<td style="vertical-align: top !important;">法務法遵 / DPO</td>
+<td style="vertical-align: top !important;">資訊安全法規與合約要求清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險評估結果</td>
+<td style="vertical-align: top !important;">高風險、剩餘風險、風險處理計畫、風險接受條件。</td>
+<td style="vertical-align: top !important;">依風險優先順序設定改善與控制強化目標。</td>
+<td style="vertical-align: top !important;">高風險降低率、風險處理完成率、KRI降低目標。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">風險登錄表、風險處理計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA與控制有效性</td>
+<td style="vertical-align: top !important;">Annex A控制適用性、實施狀態、控制測試結果。</td>
+<td style="vertical-align: top !important;">識別控制缺口、弱控制或無證據控制。</td>
+<td style="vertical-align: top !important;">控制證據完整率、控制測試通過率。</td>
+<td style="vertical-align: top !important;">CISO / Control Owner</td>
+<td style="vertical-align: top !important;">SoA、控制措施與風險對應矩陣、控制有效性測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核、事件與管理審查</td>
+<td style="vertical-align: top !important;">稽核發現、重大事件、RCA、管理審查決議。</td>
+<td style="vertical-align: top !important;">將重大發現、事件教訓及決議轉為目標或CAPA。</td>
+<td style="vertical-align: top !important;">稽核缺失準時結案率、MTTD/MTTR改善、資源補強。</td>
+<td style="vertical-align: top !important;">稽核主管 / CAPA負責人 / CISO</td>
+<td style="vertical-align: top !important;">稽核發現追蹤、事件紀錄、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. SMART目標審查與核准準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">審查項目</th>
+<th style="vertical-align: top !important;">審查問題</th>
+<th style="vertical-align: top !important;">通過標準</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政策一致性</td>
+<td style="vertical-align: top !important;">目標是否支持資訊安全政策及組織策略方向？</td>
+<td style="vertical-align: top !important;">明確對應政策、策略或管理審查決議。</td>
+<td style="vertical-align: top !important;">CISO</td>
+<td style="vertical-align: top !important;">政策對應紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">可量測性</td>
+<td style="vertical-align: top !important;">目標是否有KPI/KRI、基準值、目標值及資料來源？</td>
+<td style="vertical-align: top !important;">KPI/KRI完整且資料可取得。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">KPI/KRI定義表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">可達成性</td>
+<td style="vertical-align: top !important;">資源、工具、人力與時程是否足以達成目標？</td>
+<td style="vertical-align: top !important;">已確認資源並取得核准或列入資源計畫。</td>
+<td style="vertical-align: top !important;">目標Owner / CISO</td>
+<td style="vertical-align: top !important;">資源與預算規劃。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險連結</td>
+<td style="vertical-align: top !important;">目標是否對應重大風險、風險處理或剩餘風險？</td>
+<td style="vertical-align: top !important;">可追溯至風險編號或風險處理計畫。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">風險與目標對應矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制連結</td>
+<td style="vertical-align: top !important;">目標是否支援SoA或Annex A控制措施？</td>
+<td style="vertical-align: top !important;">可追溯至控制措施與證據要求。</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">SoA與控制對應紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">整合治理</td>
+<td style="vertical-align: top !important;">PIMS、AI、GHG與供應鏈需求是否納入？</td>
+<td style="vertical-align: top !important;">適用專項目標已指派Owner並定義證據。</td>
+<td style="vertical-align: top !important;">DPO / AI / GHG</td>
+<td style="vertical-align: top !important;">專項目標整合表。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 目標與風險、SoA及控制措施整合要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">整合對象</th>
+<th style="vertical-align: top !important;">整合要求</th>
+<th style="vertical-align: top !important;">最低輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">風險登錄表</td>
+<td style="vertical-align: top !important;">目標應對應風險編號、風險等級、風險Owner及預期剩餘風險。</td>
+<td style="vertical-align: top !important;">風險與目標對應矩陣。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險處理計畫</td>
+<td style="vertical-align: top !important;">目標應支援風險降低、避免、移轉或接受條件。</td>
+<td style="vertical-align: top !important;">目標改善活動與風險處理進度。</td>
+<td style="vertical-align: top !important;">風險Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA</td>
+<td style="vertical-align: top !important;">目標應支援適用控制之實施、證據與有效性。</td>
+<td style="vertical-align: top !important;">SoA與目標對應矩陣。</td>
+<td style="vertical-align: top !important;">CISO / Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Annex A控制措施</td>
+<td style="vertical-align: top !important;">技術、人員、組織與實體控制可轉化為KPI/KRI。</td>
+<td style="vertical-align: top !important;">控制措施與目標對應矩陣。</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA與改善</td>
+<td style="vertical-align: top !important;">不符合與改善事項可形成短期或年度目標。</td>
+<td style="vertical-align: top !important;">CAPA與目標連結表。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 目標溝通與認知要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">溝通對象</th>
+<th style="vertical-align: top !important;">溝通內容</th>
+<th style="vertical-align: top !important;">溝通方式</th>
+<th style="vertical-align: top !important;">頻率 / 時點</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">年度目標、資源需求、重大風險與管理審查輸入。</td>
+<td style="vertical-align: top !important;">治理會議、管理審查、報告。</td>
+<td style="vertical-align: top !important;">年度/季度/重大變更時</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">會議紀錄、簡報、核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">各部門主管</td>
+<td style="vertical-align: top !important;">目標Owner責任、KPI/KRI、執行計畫、證據要求。</td>
+<td style="vertical-align: top !important;">會議、公告、工作坊。</td>
+<td style="vertical-align: top !important;">目標核准後/季度追蹤</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">公告、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全體員工</td>
+<td style="vertical-align: top !important;">資訊安全政策、年度目標、人員責任、訓練與通報要求。</td>
+<td style="vertical-align: top !important;">內部公告、教育訓練、宣導。</td>
+<td style="vertical-align: top !important;">年度/新進/重大更新</td>
+<td style="vertical-align: top !important;">HR / ISMS</td>
+<td style="vertical-align: top !important;">訓練紀錄、公告截圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商 / 外包方</td>
+<td style="vertical-align: top !important;">與供應商相關之安全目標、SLA、證據與改善要求。</td>
+<td style="vertical-align: top !important;">合約、供應商會議、評估通知。</td>
+<td style="vertical-align: top !important;">合約/年度評估/重大變更</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">合約、供應商評估紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 監督、量測、分析與評估要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">監督活動</th>
+<th style="vertical-align: top !important;">資料來源</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">分析方法</th>
+<th style="vertical-align: top !important;">輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">KPI資料收集</td>
+<td style="vertical-align: top !important;">訓練系統、弱掃平台、事件系統、供應商系統、AI/GHG/PIMS文件庫。</td>
+<td style="vertical-align: top !important;">每月/每季</td>
+<td style="vertical-align: top !important;">實績與目標值比較、趨勢分析。</td>
+<td style="vertical-align: top !important;">KPI追蹤表、績效報告。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KRI風險監測</td>
+<td style="vertical-align: top !important;">事件、弱點、稽核、供應商、AI監控、隱私事件資料。</td>
+<td style="vertical-align: top !important;">即時/每月</td>
+<td style="vertical-align: top !important;">門檻判斷、紅黃綠燈、升級條件。</td>
+<td style="vertical-align: top !important;">KRI儀表板、升級紀錄。</td>
+<td style="vertical-align: top !important;">風險管理 / SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制有效性檢查</td>
+<td style="vertical-align: top !important;">SoA、控制測試、稽核抽查、技術紀錄。</td>
+<td style="vertical-align: top !important;">每季/稽核前</td>
+<td style="vertical-align: top !important;">控制證據完整性與有效性判斷。</td>
+<td style="vertical-align: top !important;">控制有效性報告。</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查彙整</td>
+<td style="vertical-align: top !important;">KPI/KRI、CAPA、風險、稽核、事件與資源需求。</td>
+<td style="vertical-align: top !important;">年度/季度</td>
+<td style="vertical-align: top !important;">整體適切性、充分性與有效性分析。</td>
+<td style="vertical-align: top !important;">管理審查輸入。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 未達標、KRI超標與CAPA處理程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">觸發條件</th>
+<th style="vertical-align: top !important;">處理要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">最低證據</th>
+<th style="vertical-align: top !important;">升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">目標未達成</td>
+<td style="vertical-align: top !important;">執行偏差分析，識別原因、影響與改善措施。</td>
+<td style="vertical-align: top !important;">目標Owner / 績效評估負責人</td>
+<td style="vertical-align: top !important;">偏差分析、改善計畫。</td>
+<td style="vertical-align: top !important;">連續兩期未達標或影響重大風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KRI超過門檻</td>
+<td style="vertical-align: top !important;">依KRI升級規則通知CISO與風險管理，必要時更新風險登錄。</td>
+<td style="vertical-align: top !important;">風險管理負責人 / CISO</td>
+<td style="vertical-align: top !important;">KRI報告、風險重評。</td>
+<td style="vertical-align: top !important;">紅燈或涉及客戶/監管/重大事件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大事件或事故</td>
+<td style="vertical-align: top !important;">啟動事件應變、RCA、CAPA並檢視相關目標是否需調整。</td>
+<td style="vertical-align: top !important;">SOC / 事件管理負責人</td>
+<td style="vertical-align: top !important;">事件報告、RCA、CAPA。</td>
+<td style="vertical-align: top !important;">重大事件或法規通報事件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核或驗證不符合</td>
+<td style="vertical-align: top !important;">依不符合與矯正措施管理程序啟動CAPA，追蹤至有效性驗證。</td>
+<td style="vertical-align: top !important;">CAPA負責人 / 稽核主管</td>
+<td style="vertical-align: top !important;">不符合報告、CAPA登錄。</td>
+<td style="vertical-align: top !important;">重大不符合或重複不符合。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. Clause 6.3 變更規劃與目標調整程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">變更類型</th>
+<th style="vertical-align: top !important;">觸發條件</th>
+<th style="vertical-align: top !important;">應檢查項目</th>
+<th style="vertical-align: top !important;">需更新文件 / 證據</th>
+<th style="vertical-align: top !important;">核准角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織或角色變更</td>
+<td style="vertical-align: top !important;">組織調整、Owner異動、職責變更。</td>
+<td style="vertical-align: top !important;">目標Owner、RACI、資源、證據責任。</td>
+<td style="vertical-align: top !important;">目標規劃表、RACI、責任任命書。</td>
+<td style="vertical-align: top !important;">CISO / 最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍變更</td>
+<td style="vertical-align: top !important;">新增地點、流程、系統、供應商、AI或PII處理活動。</td>
+<td style="vertical-align: top !important;">目標適用性、KPI/KRI、風險與SoA連結。</td>
+<td style="vertical-align: top !important;">ISMS範圍、目標規劃表、風險登錄、SoA。</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規或合約變更</td>
+<td style="vertical-align: top !important;">新法規、監管公告、客戶合約、DPA、SLA變更。</td>
+<td style="vertical-align: top !important;">合規目標、證據要求、通報期限、資源。</td>
+<td style="vertical-align: top !important;">法規清冊、目標規劃表、KPI/KRI。</td>
+<td style="vertical-align: top !important;">法務 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大風險變更</td>
+<td style="vertical-align: top !important;">新高風險、剩餘風險升高、重大事件。</td>
+<td style="vertical-align: top !important;">目標是否足以降低風險，是否需新增KRI。</td>
+<td style="vertical-align: top !important;">風險登錄、風險處理計畫、目標規劃表。</td>
+<td style="vertical-align: top !important;">風險管理 / CISO</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 管理審查輸入與輸出要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">管理審查輸入</th>
+<th style="vertical-align: top !important;">內容要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">可能輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">目標達成狀況</td>
+<td style="vertical-align: top !important;">年度目標、KPI/KRI、達成率、趨勢、偏差原因。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">目標調整、改善決議、資源配置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大未達標與KRI超標</td>
+<td style="vertical-align: top !important;">未達標目標、風險升高、控制失效或事件趨勢。</td>
+<td style="vertical-align: top !important;">CISO / 風險管理</td>
+<td style="vertical-align: top !important;">CAPA、風險重評、控制強化。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與SoA狀態</td>
+<td style="vertical-align: top !important;">目標是否有效降低風險並支援控制措施實施。</td>
+<td style="vertical-align: top !important;">風險管理 / Control Owner</td>
+<td style="vertical-align: top !important;">風險接受、SoA更新、控制測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG整合目標</td>
+<td style="vertical-align: top !important;">隱私、AI、碳資料治理目標達成與缺口。</td>
+<td style="vertical-align: top !important;">DPO / AI / GHG</td>
+<td style="vertical-align: top !important;">專項改善、資源補強、治理決議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源與預算需求</td>
+<td style="vertical-align: top !important;">達成目標所需人力、工具、預算與外部支援。</td>
+<td style="vertical-align: top !important;">CISO / 各Owner</td>
+<td style="vertical-align: top !important;">資源核准或優先順序調整。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. PIMS / AI / GHG / ICT供應鏈目標整合要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">整合領域</th>
+<th style="vertical-align: top !important;">目標管理要求</th>
+<th style="vertical-align: top !important;">主要Owner</th>
+<th style="vertical-align: top !important;">KPI/KRI範例</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">PIMS / ISO 27701</td>
+<td style="vertical-align: top !important;">隱私目標應涵蓋PII清冊、隱私風險評估、資料主體請求、隱私事件、DPA與委外處理。</td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">隱私風險評估完成率、資料主體請求準時率、隱私事件通報逾期數。</td>
+<td style="vertical-align: top !important;">PII清冊、隱私風險評估、DPA、請求紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理 / ISO 42001</td>
+<td style="vertical-align: top !important;">AI治理目標應涵蓋AI清冊、AI風險評估、模型卡、人類監督、上線審查與AI供應商。</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI風險評估覆蓋率、高風險AI上線審查率、模型監控異常處置率。</td>
+<td style="vertical-align: top !important;">AI清冊、AI風險評估、模型卡、AI審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">碳資料目標應涵蓋活動數據、排放係數、碳證據、揭露前審查與查證準備。</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">碳證據完整率、揭露前審查完成率、供應鏈碳資料回收率。</td>
+<td style="vertical-align: top !important;">碳證據清冊、盤查底稿、揭露審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ICT供應鏈與雲端</td>
+<td style="vertical-align: top !important;">供應鏈與雲端目標應涵蓋供應商分級、合約安全、SLA、SOC報告、第四方風險與雲端設定。</td>
+<td style="vertical-align: top !important;">供應商管理 / Cloud Owner</td>
+<td style="vertical-align: top !important;">高風險供應商評估完成率、供應商改善逾期數、雲端基準符合率。</td>
+<td style="vertical-align: top !important;">供應商評估、合約、SLA、SOC報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. KPI/KRI指標庫與建議門檻</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">類別</th>
+<th style="vertical-align: top !important;">KPI/KRI範例</th>
+<th style="vertical-align: top !important;">適用目標</th>
+<th style="vertical-align: top !important;">建議門檻</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">資料來源</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">事件管理</td>
+<td style="vertical-align: top !important;">重大資安事件數、MTTD、MTTR、事件後檢討完成率</td>
+<td style="vertical-align: top !important;">重大事件降低、回應效率提升</td>
+<td style="vertical-align: top !important;">重大事件0件；MTTR ≤ ___小時</td>
+<td style="vertical-align: top !important;">即時/月</td>
+<td style="vertical-align: top !important;">事件管理系統</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">弱點管理</td>
+<td style="vertical-align: top !important;">高風險弱點修補率、逾期弱點數、重測通過率</td>
+<td style="vertical-align: top !important;">弱點修補效率提升</td>
+<td style="vertical-align: top !important;">修補率≥95%；逾期0件</td>
+<td style="vertical-align: top !important;">週/月</td>
+<td style="vertical-align: top !important;">弱掃平台</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練認知</td>
+<td style="vertical-align: top !important;">訓練完成率、測驗通過率、釣魚演練失敗率</td>
+<td style="vertical-align: top !important;">資安認知提升</td>
+<td style="vertical-align: top !important;">完成率100%；失敗率≤___%</td>
+<td style="vertical-align: top !important;">季/年</td>
+<td style="vertical-align: top !important;">LMS/演練平台</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商安全</td>
+<td style="vertical-align: top !important;">高風險供應商評估完成率、改善逾期件數、SLA違反件數</td>
+<td style="vertical-align: top !important;">供應商安全治理</td>
+<td style="vertical-align: top !important;">完成率100%；逾期0件</td>
+<td style="vertical-align: top !important;">季</td>
+<td style="vertical-align: top !important;">供應商管理系統</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私治理</td>
+<td style="vertical-align: top !important;">隱私風險評估完成率、資料主體請求準時率、隱私事件數</td>
+<td style="vertical-align: top !important;">PII風險降低</td>
+<td style="vertical-align: top !important;">完成率100%；逾期0件</td>
+<td style="vertical-align: top !important;">月/季</td>
+<td style="vertical-align: top !important;">PIMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">AI風險評估覆蓋率、高風險AI上線審查率、AI事件數</td>
+<td style="vertical-align: top !important;">AI治理成熟度提升</td>
+<td style="vertical-align: top !important;">覆蓋率100%；AI事件0件</td>
+<td style="vertical-align: top !important;">月/季</td>
+<td style="vertical-align: top !important;">AI治理文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料</td>
+<td style="vertical-align: top !important;">碳證據完整率、資料品質異常件數、揭露前審查完成率</td>
+<td style="vertical-align: top !important;">碳資料治理提升</td>
+<td style="vertical-align: top !important;">完整率≥98%</td>
+<td style="vertical-align: top !important;">季/揭露前</td>
+<td style="vertical-align: top !important;">GHG文件庫</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 年度作業時程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">時程</th>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Q4或年度規劃前</td>
+<td style="vertical-align: top !important;">蒐集下一年度目標來源與基準值。</td>
+<td style="vertical-align: top !important;">風險、稽核、管理審查、KPI/KRI。</td>
+<td style="vertical-align: top !important;">目標候選清單。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Q1</td>
+<td style="vertical-align: top !important;">核准年度資訊安全目標並溝通至Owner。</td>
+<td style="vertical-align: top !important;">目標草案、資源需求。</td>
+<td style="vertical-align: top !important;">核准版目標、公告紀錄。</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">每月</td>
+<td style="vertical-align: top !important;">收集KPI/KRI與重大偏差。</td>
+<td style="vertical-align: top !important;">系統報表、事件、弱掃、訓練資料。</td>
+<td style="vertical-align: top !important;">月度績效摘要。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">召開目標績效追蹤會議。</td>
+<td style="vertical-align: top !important;">月度資料、偏差、CAPA。</td>
+<td style="vertical-align: top !important;">季度績效報告。</td>
+<td style="vertical-align: top !important;">CISO / ISMS</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查前</td>
+<td style="vertical-align: top !important;">彙整年度目標達成、趨勢、資源與改善建議。</td>
+<td style="vertical-align: top !important;">年度績效資料、CAPA、風險。</td>
+<td style="vertical-align: top !important;">管理審查輸入。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 目標有效性評估準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">評估面向</th>
+<th style="vertical-align: top !important;">評估問題</th>
+<th style="vertical-align: top !important;">有效性判定</th>
+<th style="vertical-align: top !important;">可能處置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">適切性</td>
+<td style="vertical-align: top !important;">目標是否仍符合政策、策略、風險與合規要求？</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+<td style="vertical-align: top !important;">維持、修訂或取消目標。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">充分性</td>
+<td style="vertical-align: top !important;">目標是否涵蓋重大風險、關鍵控制及關注方要求？</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+<td style="vertical-align: top !important;">新增目標或擴大目標範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性</td>
+<td style="vertical-align: top !important;">目標是否實際降低風險或提升控制有效性？</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+<td style="vertical-align: top !important;">調整KPI/KRI、啟動CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">可量測性</td>
+<td style="vertical-align: top !important;">資料來源、公式、頻率與基準是否穩定可靠？</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+<td style="vertical-align: top !important;">修正指標、資料來源或基準值。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 例外與風險接受要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">例外類型</th>
+<th style="vertical-align: top !important;">最低審查內容</th>
+<th style="vertical-align: top !important;">核准角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資源不足</td>
+<td style="vertical-align: top !important;">影響目標、風險與控制有效性之分析。</td>
+<td style="vertical-align: top !important;">CISO / 最高管理階層</td>
+<td style="vertical-align: top !important;">資源需求與核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術不可行</td>
+<td style="vertical-align: top !important;">替代控制、臨時措施與剩餘風險。</td>
+<td style="vertical-align: top !important;">CISO / IT主管 / 風險管理</td>
+<td style="vertical-align: top !important;">技術評估、風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商依賴</td>
+<td style="vertical-align: top !important;">供應商責任、SLA、改善期限與合約措施。</td>
+<td style="vertical-align: top !important;">供應商管理 / CISO</td>
+<td style="vertical-align: top !important;">供應商改善計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">業務優先順序調整</td>
+<td style="vertical-align: top !important;">業務影響、風險接受、管理階層決議。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">管理審查或治理會議紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">最高管理階層</th>
+<th style="vertical-align: top !important;">CISO</th>
+<th style="vertical-align: top !important;">ISMS管理代表</th>
+<th style="vertical-align: top !important;">績效評估</th>
+<th style="vertical-align: top !important;">風險管理</th>
+<th style="vertical-align: top !important;">目標Owner</th>
+<th style="vertical-align: top !important;">Control Owner</th>
+<th style="vertical-align: top !important;">DPO/AI/GHG</th>
+<th style="vertical-align: top !important;">內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准年度資訊安全目標</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">建立目標與KPI/KRI</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">確認風險與SoA連結</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">溝通目標與責任</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">未達標原因分析與CAPA</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">提報管理審查</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">查核目標管理有效性</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+</tr>
+</tbody>
+</table>
+<h2>22. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important;">本程序對應內容</th>
+<th style="vertical-align: top !important;">程序證據位置</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">4.1 理解組織與其情境</td>
+<td style="vertical-align: top !important;">組織全景作為目標來源與策略輸入。</td>
+<td style="vertical-align: top !important;">第8節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.2 理解關注方需求與期望</td>
+<td style="vertical-align: top !important;">關注方、法規、客戶合約與驗證要求轉化為目標。</td>
+<td style="vertical-align: top !important;">第8節</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.3 決定ISMS範圍</td>
+<td style="vertical-align: top !important;">目標適用於ISMS範圍內之部門、流程、資產、系統與外包。</td>
+<td style="vertical-align: top !important;">第2節</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.1 領導與承諾</td>
+<td style="vertical-align: top !important;">最高管理階層核准目標與資源。</td>
+<td style="vertical-align: top !important;">第7、15節</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.3 角色責任與權限</td>
+<td style="vertical-align: top !important;">定義目標Owner、KPI Owner與RACI。</td>
+<td style="vertical-align: top !important;">第6、21節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1 風險與機會</td>
+<td style="vertical-align: top !important;">風險評估與風險處理結果轉化為目標。</td>
+<td style="vertical-align: top !important;">第8、10節</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2 資訊安全目標及達成計畫</td>
+<td style="vertical-align: top !important;">本程序為Clause 6.2核心程序文件。</td>
+<td style="vertical-align: top !important;">第7至20節</td>
+<td style="vertical-align: top !important;">CISO / ISMS</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.3 變更規劃</td>
+<td style="vertical-align: top !important;">重大變更時重新評估目標、資源、責任與風險。</td>
+<td style="vertical-align: top !important;">第14節</td>
+<td style="vertical-align: top !important;">變更管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 溝通</td>
+<td style="vertical-align: top !important;">目標核准、宣導、通報與績效回報。</td>
+<td style="vertical-align: top !important;">第11節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 文件化資訊</td>
+<td style="vertical-align: top !important;">程序、目標規劃表、KPI/KRI及證據需受控保存。</td>
+<td style="vertical-align: top !important;">第25節</td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1 監督、量測、分析與評估</td>
+<td style="vertical-align: top !important;">KPI/KRI與績效追蹤為監督量測證據。</td>
+<td style="vertical-align: top !important;">第12、17節</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2 內部稽核</td>
+<td style="vertical-align: top !important;">稽核目標管理程序、追蹤與證據完整性。</td>
+<td style="vertical-align: top !important;">第24、27、28節</td>
+<td style="vertical-align: top !important;">內部稽核</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3 管理審查</td>
+<td style="vertical-align: top !important;">目標達成、偏差、資源與改善納入管理審查。</td>
+<td style="vertical-align: top !important;">第15節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.1 / 10.2 持續改善與矯正措施</td>
+<td style="vertical-align: top !important;">未達標或重大偏差啟動CAPA並追蹤有效性。</td>
+<td style="vertical-align: top !important;">第13、20節</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>23. Annex A控制措施對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">Annex A控制</th>
+<th style="vertical-align: top !important;">與目標管理之關聯</th>
+<th style="vertical-align: top !important;">目標管理要求</th>
+<th style="vertical-align: top !important;">主要證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">A.5.1 資訊安全政策</td>
+<td style="vertical-align: top !important;">目標需支持政策方向與承諾。</td>
+<td style="vertical-align: top !important;">政策審查時確認目標一致性。</td>
+<td style="vertical-align: top !important;">政策核准、目標規劃表。</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.2 角色與責任</td>
+<td style="vertical-align: top !important;">目標Owner與控制Owner需明確。</td>
+<td style="vertical-align: top !important;">所有目標均應指派Owner與代理人。</td>
+<td style="vertical-align: top !important;">RACI、責任任命書。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.7 威脅情資</td>
+<td style="vertical-align: top !important;">威脅情資可形成風險降低目標。</td>
+<td style="vertical-align: top !important;">依威脅情資調整KRI或年度目標。</td>
+<td style="vertical-align: top !important;">情資報告、處置紀錄。</td>
+<td style="vertical-align: top !important;">SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.19-A.5.23 供應商與雲端安全</td>
+<td style="vertical-align: top !important;">供應商安全目標與雲端治理目標。</td>
+<td style="vertical-align: top !important;">高風險供應商評估、雲端基準符合率。</td>
+<td style="vertical-align: top !important;">供應商評估、SLA、SOC報告。</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.24-A.5.28 事件管理</td>
+<td style="vertical-align: top !important;">事件降低與回應效率目標。</td>
+<td style="vertical-align: top !important;">MTTD、MTTR、事件後檢討完成率。</td>
+<td style="vertical-align: top !important;">事件紀錄、演練紀錄。</td>
+<td style="vertical-align: top !important;">SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.3 資安認知訓練</td>
+<td style="vertical-align: top !important;">人員訓練與認知目標。</td>
+<td style="vertical-align: top !important;">訓練完成率、釣魚演練失敗率。</td>
+<td style="vertical-align: top !important;">LMS報表、測驗。</td>
+<td style="vertical-align: top !important;">HR / ISMS</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7 實體控制</td>
+<td style="vertical-align: top !important;">資料中心、門禁、設備與環境安全目標。</td>
+<td style="vertical-align: top !important;">門禁例外、環境事件處理率。</td>
+<td style="vertical-align: top !important;">門禁、巡檢、環境監控。</td>
+<td style="vertical-align: top !important;">設施 / IT</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8 技術控制</td>
+<td style="vertical-align: top !important;">技術安全、弱點、備份、日誌、開發安全目標。</td>
+<td style="vertical-align: top !important;">弱點修補率、備份成功率、日誌覆蓋率。</td>
+<td style="vertical-align: top !important;">技術紀錄、掃描報告。</td>
+<td style="vertical-align: top !important;">IT / SOC / DevSecOps</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.13 資訊備份</td>
+<td style="vertical-align: top !important;">支援可用性與復原目標。</td>
+<td style="vertical-align: top !important;">備份成功率、還原測試完成率、RPO/RTO達成率。</td>
+<td style="vertical-align: top !important;">備份紀錄、還原測試。</td>
+<td style="vertical-align: top !important;">備份管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.24 密碼學使用</td>
+<td style="vertical-align: top !important;">支援資料保護與加密目標。</td>
+<td style="vertical-align: top !important;">加密覆蓋率、金鑰輪替準時率、憑證逾期件數。</td>
+<td style="vertical-align: top !important;">加密設定、金鑰管理、憑證清冊。</td>
+<td style="vertical-align: top !important;">密碼管理負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Clause 6.2 目標程序</td>
+<td style="vertical-align: top !important;">組織是否建立資訊安全目標管理程序並定義目標規劃方法？</td>
+<td style="vertical-align: top !important;">本程序、資訊安全目標規劃表。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標與政策一致性</td>
+<td style="vertical-align: top !important;">目標是否支持資訊安全政策與管理階層方向？</td>
+<td style="vertical-align: top !important;">政策、目標規劃表、管理審查。</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標與風險連結</td>
+<td style="vertical-align: top !important;">目標是否可追溯至風險評估、風險處理與剩餘風險？</td>
+<td style="vertical-align: top !important;">風險登錄、目標對應矩陣。</td>
+<td style="vertical-align: top !important;">風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI/KRI有效性</td>
+<td style="vertical-align: top !important;">KPI/KRI是否具資料來源、公式、頻率與門檻？</td>
+<td style="vertical-align: top !important;">KPI/KRI定義、追蹤報告。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">未達標處理</td>
+<td style="vertical-align: top !important;">未達標是否啟動原因分析與CAPA？</td>
+<td style="vertical-align: top !important;">偏差分析、CAPA、有效性驗證。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查閉環</td>
+<td style="vertical-align: top !important;">管理審查是否依目標結果做出決議並追蹤？</td>
+<td style="vertical-align: top !important;">管理審查輸入、輸出、追蹤表。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+</tbody>
+</table>
+<h2>25. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄項目</th>
+<th style="vertical-align: top !important;">保存責任</th>
+<th style="vertical-align: top !important;">保存位置</th>
+<th style="vertical-align: top !important;">保存期限</th>
+<th style="vertical-align: top !important;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准版資訊安全目標管理程序</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 文件管制負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年，或依法規/合約/驗證要求較長者。</td>
+<td style="vertical-align: top !important;">應保留簽核、版本與修訂紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標規劃表</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 績效評估負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / GRC系統</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">應保留年度目標、基準值、目標值與Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標追蹤紀錄</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / 儀表板</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保留計算方式、資料來源與趨勢分析。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">未達標分析與CAPA</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">CAPA系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">結案後至少5年。</td>
+<td style="vertical-align: top !important;">需包含根因、措施、期限與有效性驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入與輸出</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保留決議、資源核准與追蹤紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG專項目標證據</td>
+<td style="vertical-align: top !important;">DPO / AI治理 / GHG治理</td>
+<td style="vertical-align: top !important;">專項文件庫 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">依專項要求或R3/R4保存。</td>
+<td style="vertical-align: top !important;">應依資料分類分級管理存取權限。</td>
+</tr>
+</tbody>
+</table>
+<h2>26. 附件與證據索引</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">附件編號</th>
+<th style="vertical-align: top !important;">附件 / 證據名稱</th>
+<th>資訊來源 / 系統</th>
+<th style="vertical-align: top !important;">責任單位</th>
+<th style="vertical-align: top !important;">保存位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ATT-01</td>
+<td style="vertical-align: top !important;">資訊安全目標規劃表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-02</td>
+<td style="vertical-align: top !important;">KPI/KRI追蹤報告</td>
+<td style="vertical-align: top !important;">儀表板 / GRC</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-03</td>
+<td style="vertical-align: top !important;">風險登錄表與風險處理計畫</td>
+<td style="vertical-align: top !important;">風險管理文件</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-04</td>
+<td style="vertical-align: top !important;">SoA與控制測試證據</td>
+<td style="vertical-align: top !important;">SoA / Control Evidence Repository</td>
+<td style="vertical-align: top !important;">CISO / Control Owner</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-05</td>
+<td style="vertical-align: top !important;">資安訓練紀錄</td>
+<td style="vertical-align: top !important;">LMS / HR系統</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">LMS / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-06</td>
+<td style="vertical-align: top !important;">供應商安全評估與改善紀錄</td>
+<td style="vertical-align: top !important;">供應商管理系統</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">採購系統 / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-07</td>
+<td style="vertical-align: top !important;">AI風險評估、模型卡、AI審查紀錄</td>
+<td style="vertical-align: top !important;">AI治理文件庫</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI治理 / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-08</td>
+<td style="vertical-align: top !important;">隱私風險評估、PII清冊、隱私事件紀錄</td>
+<td style="vertical-align: top !important;">PIMS文件庫</td>
+<td style="vertical-align: top !important;">DPO</td>
+<td style="vertical-align: top !important;">PIMS / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-09</td>
+<td style="vertical-align: top !important;">碳證據清冊與揭露審查紀錄</td>
+<td style="vertical-align: top !important;">GHG文件庫</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">GHG / ISMS文件庫</td>
+</tr>
+</tbody>
+</table>
+<h2>27. Stage 1 驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Clause 6.2 目標程序</td>
+<td style="vertical-align: top !important;">組織是否建立資訊安全目標管理程序？</td>
+<td style="vertical-align: top !important;">本程序、程序核准紀錄。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標來源</td>
+<td style="vertical-align: top !important;">資訊安全目標是否來自政策、風險、關注方與合規義務？</td>
+<td style="vertical-align: top !important;">目標來源分析、風險登錄、法規清冊。</td>
+<td style="vertical-align: top !important;">CISO / 風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標規劃完整性</td>
+<td style="vertical-align: top !important;">目標是否包含Owner、KPI/KRI、資源、期限與證據？</td>
+<td style="vertical-align: top !important;">資訊安全目標規劃表。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件化資訊</td>
+<td style="vertical-align: top !important;">程序與表單是否受控保存？</td>
+<td style="vertical-align: top !important;">文件總清冊、版本紀錄。</td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>28. Stage 2 驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">目標執行證據</td>
+<td style="vertical-align: top !important;">年度資訊安全目標是否依計畫執行並保留證據？</td>
+<td style="vertical-align: top !important;">目標推動計畫、執行證據。</td>
+<td style="vertical-align: top !important;">目標Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI/KRI監督</td>
+<td style="vertical-align: top !important;">KPI/KRI是否依頻率收集、分析並報告？</td>
+<td style="vertical-align: top !important;">KPI/KRI追蹤表、績效報告。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">未達標處理</td>
+<td style="vertical-align: top !important;">未達標或KRI超標是否執行原因分析與CAPA？</td>
+<td style="vertical-align: top !important;">偏差分析、CAPA、有效性驗證。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與SoA追溯</td>
+<td style="vertical-align: top !important;">目標是否可追溯至風險處理、SoA與Annex A控制？</td>
+<td style="vertical-align: top !important;">風險對應矩陣、SoA對應矩陣。</td>
+<td style="vertical-align: top !important;">風險管理 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG整合</td>
+<td style="vertical-align: top !important;">隱私、AI與GHG目標是否納入績效監督與證據管理？</td>
+<td style="vertical-align: top !important;">隱私風險評估、AI風險評估、碳證據清冊。</td>
+<td style="vertical-align: top !important;">DPO / AI / GHG</td>
+</tr>
+</tbody>
+</table>
+<h2>29. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">文件類型</th>
+<th style="vertical-align: top !important;">與本程序之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">MAN</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 組織全景與內外部議題管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS組織全景分析報告</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 關注方需求與法規遵循管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS與PIMS範圍管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程整合管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程與條款對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全領導與治理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全治理委員會會議紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI資訊安全與治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全責任任命書</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標規劃表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標追蹤紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS變更影響評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 能力、認知與教育訓練管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS文件總清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS運作規劃與控制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核發現事項追蹤表</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查輸入資料彙整表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI服務與碳足跡資料資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資訊安全目標管理之輸入、執行、監督、證據保存、稽核或管理審查依據。</td>
+<td style="vertical-align: top !important;">於目標來源分析、KPI/KRI規劃、風險/SoA對應、管理審查、CAPA與持續改善時作為依據及證據來源。</td>
+</tr>
+</tbody>
+</table>
+<h2>31. Enterprise Certification Declaration</h2>
+<p>本程序為資訊安全目標管理之正式企業級程序，可支援ISO/IEC 27001:2022 Clause 6.2資訊安全目標及達成計畫，並與Clause 9.1監督量測分析與評估、Clause 9.3管理審查、Clause 10.1持續改善及Clause 10.2不符合與矯正措施形成閉環。實際採用時，應依組織ISMS範圍、風險準則、資訊安全政策、法規合約要求、PIMS/AI/GHG治理成熟度、供應鏈模式、KPI/KRI資料來源及驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>

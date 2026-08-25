@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-072-PRO-001 能力、認知與教育訓練管理程序</title>
+<style>body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}.isms-document{max-width:3600px;margin:0 auto}h1{text-align:center;color:#1f4e79;border-bottom:3px solid #333;padding-bottom:8px}h2{margin-top:30px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}th{background:#d9eaf7;text-align:left}td,th{vertical-align:top!important}.note{background:#fff7e6;border:1px solid #f0c36d;padding:12px;margin:12px 0}.small{font-size:13px;color:#555}
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-072-PRO-001 能力、認知與教育訓練管理程序</h1>
+<div class="note">
+<strong>程序定位：</strong>本程序規範組織如何識別、建立、維持、評估與改善資訊安全相關能力、認知與教育訓練，並將角色責任、風險、SoA控制、資訊安全目標、事件、稽核、隱私、AI、備份、備援、復原、GHG/CO2資料治理、供應商與雲端安全需求轉換為可執行、可追蹤、可稽核之能力與訓練管理機制。</div>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-072-PRO-001</td>
+<td>能力、認知與教育訓練管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 7 / 資源、能力、認知、溝通與文件化資訊</td>
+<td>能力與訓練Owner / ISMS管理代表</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Clause-7 / ISMS-072-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>能力與訓練Owner / ISMS管理代表 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR訓練負責人 / ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">人力資源負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">內部稽核主管</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">備份、備援與復原負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商管理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層授權代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 程序目的</h2>
+<p>本程序用於規範組織如何識別、建立、維持、評估與改善資訊安全相關能力、認知與教育訓練，確保所有在ISMS控制下工作之人員具備其職務所需能力，理解資訊安全政策、資訊安全目標、個人責任、控制要求、不符合後果及通報義務，並能有效支持資訊安全管理系統之建立、實施、維持與持續改善。</p>
+<p>本程序為ISO/IEC 27001:2022 Clause 7.2 Competence與Clause 7.3 Awareness之核心證據，並支援Clause 7.1資源、7.4溝通、7.5文件化資訊、8.1運作控制、9.1績效評估、9.2內部稽核、9.3管理審查及10.2矯正措施要求。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">程序章節 / 管理主題</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">0. 文件基本資料與審查核准</td>
+<td style="vertical-align: top !important;">確認本程序之治理依據、資源支援、資訊安全目標連結、文件管制、核准與保存要求。</td>
+<td style="vertical-align: top !important;">受控程序文件、核准紀錄與保存要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">1~5. 目的、範圍、名詞、管理原則與流程總覽</td>
+<td style="vertical-align: top !important;">將政策、角色責任、風險與控制要求納入能力與訓練管理流程設計。</td>
+<td style="vertical-align: top !important;">程序目的、適用範圍、能力與訓練流程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6~11. 角色能力、訓練類型、需求識別、缺口分析與年度計畫</td>
+<td style="vertical-align: top !important;">建立角色能力要求、能力缺口、年度教育訓練計畫、資源需求與風險處置連結。</td>
+<td style="vertical-align: top !important;">能力需求矩陣、訓練計畫、能力缺口與資源需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12~18. 教材設計、訓練執行、測驗補訓、認知、專項、供應商與有效性</td>
+<td style="vertical-align: top !important;">規範課程設計、教材版控、訓練通知、測驗與補訓、全員認知、隱私/AI/復原/GHG專項訓練、供應商訓練與有效性評估。</td>
+<td style="vertical-align: top !important;">課程設計表、訓練紀錄、有效性評估、認知活動與專項訓練證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">19~25. KPI/KRI、例外、事件後再訓練、紀錄、資料保護、管理審查與RACI</td>
+<td style="vertical-align: top !important;">監督訓練績效、處理例外、事件後補訓、保存證據、保護個人資料、管理審查輸入與責任分工。</td>
+<td style="vertical-align: top !important;">KPI/KRI、例外紀錄、補訓紀錄、管理審查輸入與RACI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">26~35. ISO條文、Annex A、稽核、CAPA、保存、表單、Checklist、流程銜接與聲明</td>
+<td style="vertical-align: top !important;">建立條文與控制對應、稽核查核、CAPA與持續改善、保存要求、表單清單、認證檢核與流程銜接。</td>
+<td style="vertical-align: top !important;">完整可稽核能力、認知與教育訓練管理程序。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>適用於全體員工、新進人員、轉任人員、離職前交接人員、約聘人員、外包與供應商駐點人員。</li>
+<li>適用於最高管理階層、CISO、ISMS管理代表、風險管理、Control Owner、System Owner、Asset Owner、Data Owner、DPO、AI治理、備份/備援/復原、GHG/CO2資料治理、內部稽核員、文件管制、採購/供應商管理及HR等角色。</li>
+<li>適用於一般資訊安全認知、角色別能力、法規合約、隱私、AI、備份、備援、復原、GHG/CO2資料治理、雲端與供應鏈安全、事件應變、變更管理、內部稽核與管理審查相關訓練。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">能力</td>
+<td style="vertical-align: top !important;">人員基於教育、訓練、經驗、技能、證照或實務表現，能有效執行指定工作並達成預期結果之能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">認知</td>
+<td style="vertical-align: top !important;">人員對資訊安全政策、目標、責任、風險、控制措施、通報義務及不符合後果之理解與自覺。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教育訓練</td>
+<td style="vertical-align: top !important;">透過課程、工作坊、演練、宣導、線上學習、實作、測驗或輔導，使人員取得或維持必要能力之活動。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力矩陣</td>
+<td style="vertical-align: top !important;">用以定義各角色所需能力、現有能力、缺口、訓練計畫與有效性結果之矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色別訓練</td>
+<td style="vertical-align: top !important;">依職務、權限、風險與控制責任設計之差異化訓練。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性評估</td>
+<td style="vertical-align: top !important;">確認訓練或能力建置是否實際提升知識、技能、行為、控制成效或績效結果之活動。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關鍵角色</td>
+<td style="vertical-align: top !important;">對ISMS運作、風險處理、控制有效性、事件應變、隱私、AI、復原、GHG/CO2資料治理、稽核或合規具有重大影響之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練豁免</td>
+<td style="vertical-align: top !important;">因人員已具備同等能力、證照或經驗，而經核准可免參加特定訓練之情形。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">再訓練</td>
+<td style="vertical-align: top !important;">因測驗不合格、事件、違規、不符合、角色變更或控制失效而需補強之訓練。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 管理原則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">原則</th>
+<th style="vertical-align: top !important;">說明</th>
+<th style="vertical-align: top !important;">管理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">職務導向</td>
+<td style="vertical-align: top !important;">能力與訓練應依職務責任、控制Owner、系統權限與風險暴露程度設計。</td>
+<td style="vertical-align: top !important;">建立角色別能力矩陣與年度訓練計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險導向</td>
+<td style="vertical-align: top !important;">高風險角色、特權帳號、PII處理、AI系統、雲端管理與事件應變角色應優先訓練。</td>
+<td style="vertical-align: top !important;">訓練需求應連結風險登錄、SoA、事件與稽核發現。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全員認知</td>
+<td style="vertical-align: top !important;">所有在組織控制下工作之人員均需理解資訊安全政策、責任、通報與不符合後果。</td>
+<td style="vertical-align: top !important;">新進、年度、重大變更與事件後宣導應定期執行。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">證據導向</td>
+<td style="vertical-align: top !important;">教育訓練與能力評估需保留計畫、教材、簽到、測驗、評估與改善證據。</td>
+<td style="vertical-align: top !important;">訓練紀錄應可追溯至人員、角色、日期與課程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性導向</td>
+<td style="vertical-align: top !important;">訓練完成不等於有效，需評估學習、行為與績效改善。</td>
+<td style="vertical-align: top !important;">依課程重要性設定測驗、實作、演練或績效指標。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">持續改善</td>
+<td style="vertical-align: top !important;">訓練內容應依事件、威脅、稽核、CAPA、法規與技術變更更新。</td>
+<td style="vertical-align: top !important;">年度檢討並納入管理審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 能力、認知與訓練管理流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">流程階段</th>
+<th style="vertical-align: top !important;">主要活動</th>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1. 識別能力需求</td>
+<td style="vertical-align: top !important;">依角色、風險、控制、法規、目標與專項治理需求識別能力。</td>
+<td style="vertical-align: top !important;">職務說明、RACI、SoA、風險登錄、法規要求</td>
+<td style="vertical-align: top !important;">能力需求清單/能力矩陣</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2. 評估能力缺口</td>
+<td style="vertical-align: top !important;">比較現有能力、資格、經驗與所需能力。</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄、績效資料</td>
+<td style="vertical-align: top !important;">能力缺口分析</td>
+<td style="vertical-align: top !important;">HR / 部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">3. 建立訓練計畫</td>
+<td style="vertical-align: top !important;">設計年度與角色別訓練計畫、教材、頻率與測驗。</td>
+<td style="vertical-align: top !important;">缺口分析、風險、事件、稽核結果</td>
+<td style="vertical-align: top !important;">年度教育訓練計畫</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4. 執行訓練與宣導</td>
+<td style="vertical-align: top !important;">辦理新進、年度、角色別、專項、事件後與供應商訓練。</td>
+<td style="vertical-align: top !important;">訓練計畫、教材</td>
+<td style="vertical-align: top !important;">訓練紀錄、測驗結果</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5. 評估有效性</td>
+<td style="vertical-align: top !important;">評估測驗、演練、實作、行為與KPI/KRI改善。</td>
+<td style="vertical-align: top !important;">訓練紀錄、測驗、事件/稽核資料</td>
+<td style="vertical-align: top !important;">有效性評估紀錄</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6. 補強與改善</td>
+<td style="vertical-align: top !important;">對未完成、不合格或效果不足者進行補訓、CAPA或內容調整。</td>
+<td style="vertical-align: top !important;">有效性評估、CAPA、稽核發現</td>
+<td style="vertical-align: top !important;">補訓計畫、改善紀錄</td>
+<td style="vertical-align: top !important;">HR / CAPA負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7. 管理審查</td>
+<td style="vertical-align: top !important;">彙整能力、認知、訓練績效與資源需求。</td>
+<td style="vertical-align: top !important;">KPI/KRI、缺口、事件、稽核結果</td>
+<td style="vertical-align: top !important;">管理審查輸入</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 角色別能力要求矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色類別</th>
+<th style="vertical-align: top !important;">必要能力</th>
+<th style="vertical-align: top !important;">訓練/資格要求</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">責任Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">全體人員</td>
+<td style="vertical-align: top !important;">資訊安全政策、可接受使用、密碼/MFA、釣魚防範、資料分類、事件通報、社交工程防護。</td>
+<td style="vertical-align: top !important;">新進訓練、年度認知訓練、測驗。</td>
+<td style="vertical-align: top !important;">新進/年度/重大變更時</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">ISMS治理、風險與機會、資源承諾、管理審查、合規責任與重大事件決策。</td>
+<td style="vertical-align: top !important;">高階管理簡報、管理審查訓練。</td>
+<td style="vertical-align: top !important;">年度/管理審查前</td>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+<td style="vertical-align: top !important;">ISO 27001條款、SoA、風險管理、績效評估、內稽、管理審查、CAPA。</td>
+<td style="vertical-align: top !important;">標準訓練、稽核訓練、實務工作坊。</td>
+<td style="vertical-align: top !important;">年度/標準變更時</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">ISO 27005、風險準則、風險評估、處理、剩餘風險接受、KRI。</td>
+<td style="vertical-align: top !important;">風險管理訓練與案例演練。</td>
+<td style="vertical-align: top !important;">年度/方法變更時</td>
+<td style="vertical-align: top !important;">風險管理主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">控制目的、控制實施、證據保存、KPI/KRI、控制測試與改善。</td>
+<td style="vertical-align: top !important;">控制Owner訓練、SoA工作坊。</td>
+<td style="vertical-align: top !important;">年度/控制變更時</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">System / Asset Owner</td>
+<td style="vertical-align: top !important;">資產管理、組態管理、存取控制、弱點修補、備份、日誌與變更管理。</td>
+<td style="vertical-align: top !important;">技術控制訓練、工具操作訓練。</td>
+<td style="vertical-align: top !important;">年度/工具變更時</td>
+<td style="vertical-align: top !important;">IT主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SOC / IR人員</td>
+<td style="vertical-align: top !important;">監控、事件分類、通報、鑑識、威脅情資、事件復盤與CAPA。</td>
+<td style="vertical-align: top !important;">演練、桌上演練、技術訓練。</td>
+<td style="vertical-align: top !important;">半年/事件後</td>
+<td style="vertical-align: top !important;">CISO / SOC主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / PII角色</td>
+<td style="vertical-align: top !important;">PII、隱私風險評估、資料處理條款、資料主體權利、跨境傳輸、隱私事件通報。</td>
+<td style="vertical-align: top !important;">隱私與PII保護訓練。</td>
+<td style="vertical-align: top !important;">年度/法規變更時</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理角色</td>
+<td style="vertical-align: top !important;">AI風險、模型卡、人類監督、偏誤/漂移/幻覺、AI供應商、生成式AI安全使用。</td>
+<td style="vertical-align: top !important;">AI治理與AI風險訓練。</td>
+<td style="vertical-align: top !important;">年度/AI系統變更時</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援與復原角色</td>
+<td style="vertical-align: top !important;">RTO/RPO、備份、備援、還原、復原測試、危機溝通。</td>
+<td style="vertical-align: top !important;">備份、備援與復原訓練與演練。</td>
+<td style="vertical-align: top !important;">年度/演練時</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理角色</td>
+<td style="vertical-align: top !important;">碳資料品質、排放係數、證據保存、揭露前審查、查證支援與資料完整性。</td>
+<td style="vertical-align: top !important;">GHG/CO2資料與碳證據訓練。</td>
+<td style="vertical-align: top !important;">年度/揭露前</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">ISO 19011、稽核規劃、訪談、抽樣、發現撰寫、CAPA追蹤。</td>
+<td style="vertical-align: top !important;">內稽員訓練與見習。</td>
+<td style="vertical-align: top !important;">年度/稽核前</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商/外包人員</td>
+<td style="vertical-align: top !important;">合約安全要求、資料保護、存取規範、通報義務、保密與使用限制。</td>
+<td style="vertical-align: top !important;">供應商安全宣導或合約要求訓練。</td>
+<td style="vertical-align: top !important;">入場/年度/合約更新時</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 訓練類型與最低要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">訓練類型</th>
+<th style="vertical-align: top !important;">適用對象</th>
+<th style="vertical-align: top !important;">最低內容</th>
+<th style="vertical-align: top !important;">完成時限/頻率</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">新進人員資訊安全訓練</td>
+<td style="vertical-align: top !important;">新進員工、約聘、外包駐點</td>
+<td style="vertical-align: top !important;">政策、責任、可接受使用、資料分類、事件通報、密碼/MFA、釣魚防範。</td>
+<td style="vertical-align: top !important;">到職後___日內</td>
+<td style="vertical-align: top !important;">簽到、測驗、系統紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">年度資訊安全認知訓練</td>
+<td style="vertical-align: top !important;">全體人員</td>
+<td style="vertical-align: top !important;">年度資安政策、威脅趨勢、事件案例、資料保護、通報與違規後果。</td>
+<td style="vertical-align: top !important;">每年至少一次</td>
+<td style="vertical-align: top !important;">完成紀錄、測驗結果</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色別專業訓練</td>
+<td style="vertical-align: top !important;">關鍵角色與Control Owner</td>
+<td style="vertical-align: top !important;">依角色能力矩陣設計之專業能力訓練。</td>
+<td style="vertical-align: top !important;">年度或角色變更時</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">特權帳號與管理員訓練</td>
+<td style="vertical-align: top !important;">系統、雲端、資料庫、網路管理員</td>
+<td style="vertical-align: top !important;">最小權限、PAM、MFA、日誌、變更、備份、弱點與組態安全。</td>
+<td style="vertical-align: top !important;">年度/權限核發前</td>
+<td style="vertical-align: top !important;">權限訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件應變與演練</td>
+<td style="vertical-align: top !important;">SOC、IR、CISO、客服、法務、DPO、復原負責人</td>
+<td style="vertical-align: top !important;">事件分類、升級、通報、鑑識、溝通、復盤與CAPA。</td>
+<td style="vertical-align: top !important;">至少年度；重大事件後</td>
+<td style="vertical-align: top !important;">演練紀錄、復盤報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私與PII保護訓練</td>
+<td style="vertical-align: top !important;">DPO、Data Owner、PII處理人員</td>
+<td style="vertical-align: top !important;">PII、隱私風險評估、資料主體權利、資料處理條款、跨境、隱私事件通報。</td>
+<td style="vertical-align: top !important;">年度/法規變更時</td>
+<td style="vertical-align: top !important;">訓練與測驗紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理訓練</td>
+<td style="vertical-align: top !important;">AI Owner、模型開發、AI使用者、AI審查角色</td>
+<td style="vertical-align: top !important;">AI風險、模型卡、AI影響、偏誤、幻覺、Prompt Injection、人類監督。</td>
+<td style="vertical-align: top !important;">年度/AI變更時</td>
+<td style="vertical-align: top !important;">AI訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援與復原訓練</td>
+<td style="vertical-align: top !important;">復原負責人、IT、關鍵流程Owner</td>
+<td style="vertical-align: top !important;">RTO/RPO、備份、備援、還原、危機溝通、復原演練。</td>
+<td style="vertical-align: top !important;">年度/重大變更時</td>
+<td style="vertical-align: top !important;">演練與訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理訓練</td>
+<td style="vertical-align: top !important;">GHG資料Owner、ESG、財務、資料治理角色</td>
+<td style="vertical-align: top !important;">碳資料品質、證據保存、揭露前審查、查證支援、資料完整性。</td>
+<td style="vertical-align: top !important;">年度/揭露前</td>
+<td style="vertical-align: top !important;">GHG訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員訓練</td>
+<td style="vertical-align: top !important;">稽核員、稽核主管</td>
+<td style="vertical-align: top !important;">ISO 19011、稽核技巧、抽樣、發現、報告與CAPA。</td>
+<td style="vertical-align: top !important;">稽核前/年度</td>
+<td style="vertical-align: top !important;">資格與稽核紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件後/變更後補強訓練</td>
+<td style="vertical-align: top !important;">受事件、違規、稽核缺失或重大變更影響人員</td>
+<td style="vertical-align: top !important;">根因、正確作業、控制補強、Lessons Learned。</td>
+<td style="vertical-align: top !important;">事件/變更後___日內</td>
+<td style="vertical-align: top !important;">補訓紀錄、有效性評估</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 能力需求識別表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">需求編號</th>
+<th style="vertical-align: top !important;">角色/職位</th>
+<th style="vertical-align: top !important;">所需能力</th>
+<th style="vertical-align: top !important;">需求來源</th>
+<th style="vertical-align: top !important;">風險/控制連結</th>
+<th style="vertical-align: top !important;">需求等級</th>
+<th style="vertical-align: top !important;">Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">COMP-YYYY-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 職務　□ 風險　□ SoA　□ 稽核　□ 事件　□ 法規　□ 變更</td>
+<td style="vertical-align: top !important;">R/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 必要　□ 重要　□ 一般</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">COMP-YYYY-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 職務　□ 風險　□ SoA　□ 稽核　□ 事件　□ 法規　□ 變更</td>
+<td style="vertical-align: top !important;">R/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 必要　□ 重要　□ 一般</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">COMP-YYYY-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 職務　□ 風險　□ SoA　□ 稽核　□ 事件　□ 法規　□ 變更</td>
+<td style="vertical-align: top !important;">R/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 必要　□ 重要　□ 一般</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">COMP-YYYY-004</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 職務　□ 風險　□ SoA　□ 稽核　□ 事件　□ 法規　□ 變更</td>
+<td style="vertical-align: top !important;">R/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 必要　□ 重要　□ 一般</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>9. 能力缺口分析程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">步驟</th>
+<th style="vertical-align: top !important;">作業內容</th>
+<th style="vertical-align: top !important;">判定標準</th>
+<th style="vertical-align: top !important;">輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">9.1</td>
+<td style="vertical-align: top !important;">盤點角色與職務要求。</td>
+<td style="vertical-align: top !important;">依RACI、職務說明、系統權限與控制責任確認。</td>
+<td style="vertical-align: top !important;">角色能力需求清單</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2</td>
+<td style="vertical-align: top !important;">蒐集現有人員能力證據。</td>
+<td style="vertical-align: top !important;">教育、訓練、經驗、證照、工作表現與測驗結果。</td>
+<td style="vertical-align: top !important;">現有能力資料</td>
+<td style="vertical-align: top !important;">HR / 部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3</td>
+<td style="vertical-align: top !important;">比較所需能力與現有能力。</td>
+<td style="vertical-align: top !important;">差距可分為無缺口、輕微缺口、重大缺口。</td>
+<td style="vertical-align: top !important;">能力缺口表</td>
+<td style="vertical-align: top !important;">HR / 部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.4</td>
+<td style="vertical-align: top !important;">評估能力缺口風險。</td>
+<td style="vertical-align: top !important;">涉及高風險控制、特權、PII、AI、復原、GHG或稽核者優先處理。</td>
+<td style="vertical-align: top !important;">能力缺口風險等級</td>
+<td style="vertical-align: top !important;">CISO / 風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.5</td>
+<td style="vertical-align: top !important;">建立訓練、補強或外部支援計畫。</td>
+<td style="vertical-align: top !important;">需定義課程、期限、Owner、測驗與有效性評估。</td>
+<td style="vertical-align: top !important;">訓練補強計畫</td>
+<td style="vertical-align: top !important;">HR / 課程Owner</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 年度教育訓練計畫要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">計畫項目</th>
+<th style="vertical-align: top !important;">要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">年度需求彙整</td>
+<td style="vertical-align: top !important;">彙整能力矩陣、風險、目標、稽核、事件、法規與變更需求。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">年度訓練需求清單</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">課程分類</td>
+<td style="vertical-align: top !important;">區分全員認知、角色別訓練、專項訓練、演練、內稽員與管理階層訓練。</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">年度教育訓練計畫表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練頻率</td>
+<td style="vertical-align: top !important;">全員認知至少年度一次；新進人員依期限完成；高風險角色依需求增加頻率。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">訓練排程</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教材審查</td>
+<td style="vertical-align: top !important;">教材應反映最新政策、威脅、事件案例、法規、AI、隱私、復原、GHG與控制要求。</td>
+<td style="vertical-align: top !important;">課程Owner / CISO</td>
+<td style="vertical-align: top !important;">教材審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">完成追蹤</td>
+<td style="vertical-align: top !important;">訓練完成率、逾期、測驗結果與補訓需追蹤。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">訓練儀表板</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性評估</td>
+<td style="vertical-align: top !important;">依課程重要性採測驗、問卷、實作、演練、行為或KPI/KRI評估。</td>
+<td style="vertical-align: top !important;">HR / 課程Owner</td>
+<td style="vertical-align: top !important;">有效性評估紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">年度訓練績效、能力缺口與資源需求納入管理審查。</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">管理審查輸入</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 年度教育訓練計畫表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">課程編號</th>
+<th style="vertical-align: top !important;">課程名稱</th>
+<th style="vertical-align: top !important;">適用對象</th>
+<th style="vertical-align: top !important;">訓練類型</th>
+<th style="vertical-align: top !important;">預定月份</th>
+<th style="vertical-align: top !important;">完成標準</th>
+<th style="vertical-align: top !important;">課程Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-001</td>
+<td style="vertical-align: top !important;">年度資訊安全認知訓練</td>
+<td style="vertical-align: top !important;">全體人員</td>
+<td style="vertical-align: top !important;">□ 認知　□ 必修</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成課程並通過測驗</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-002</td>
+<td style="vertical-align: top !important;">新進人員資訊安全訓練</td>
+<td style="vertical-align: top !important;">新進人員</td>
+<td style="vertical-align: top !important;">□ 新進　□ 必修</td>
+<td style="vertical-align: top !important;">持續辦理</td>
+<td style="vertical-align: top !important;">到職後___日內完成</td>
+<td style="vertical-align: top !important;">HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-003</td>
+<td style="vertical-align: top !important;">Control Owner控制證據與SoA訓練</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">□ 角色別　□ 必修</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成課程與作業</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-004</td>
+<td style="vertical-align: top !important;">事件應變桌上演練</td>
+<td style="vertical-align: top !important;">SOC/IR/法務/DPO/復原負責人</td>
+<td style="vertical-align: top !important;">□ 演練　□ 專項</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成演練與復盤</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-005</td>
+<td style="vertical-align: top !important;">隱私與PII保護訓練</td>
+<td style="vertical-align: top !important;">DPO/Data Owner/PII處理人員</td>
+<td style="vertical-align: top !important;">□ 專項　□ 必修</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成測驗與案例練習</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-006</td>
+<td style="vertical-align: top !important;">AI治理與AI風險訓練</td>
+<td style="vertical-align: top !important;">AI治理/AI Owner/開發與使用者</td>
+<td style="vertical-align: top !important;">□ 專項　□ 必修</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成案例評估</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-007</td>
+<td style="vertical-align: top !important;">備份、備援與復原演練</td>
+<td style="vertical-align: top !important;">復原負責人/IT/關鍵流程Owner</td>
+<td style="vertical-align: top !important;">□ 演練　□ 專項</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成演練與改善追蹤</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-008</td>
+<td style="vertical-align: top !important;">內部稽核員訓練</td>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">□ 稽核　□ 角色別</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成稽核演練或見習</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TRN-YYYY-009</td>
+<td style="vertical-align: top !important;">GHG/CO2資料與碳證據治理訓練</td>
+<td style="vertical-align: top !important;">GHG資料Owner/ESG/資料治理角色</td>
+<td style="vertical-align: top !important;">□ 專項　□ 必修</td>
+<td style="vertical-align: top !important;">YYYY-MM</td>
+<td style="vertical-align: top !important;">完成資料品質與查證案例</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 教材與課程設計控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">課程設計要素</th>
+<th style="vertical-align: top !important;">要求</th>
+<th style="vertical-align: top !important;">審查重點</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">課程目標</td>
+<td style="vertical-align: top !important;">需明確說明學員完成後應具備之知識、技能或行為。</td>
+<td style="vertical-align: top !important;">目標是否可評估。</td>
+<td style="vertical-align: top !important;">課程設計表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">課程內容</td>
+<td style="vertical-align: top !important;">需涵蓋政策、控制、案例、作業要求、通報與不符合後果。</td>
+<td style="vertical-align: top !important;">是否符合最新政策與風險。</td>
+<td style="vertical-align: top !important;">教材版本</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色適配</td>
+<td style="vertical-align: top !important;">課程需依受訓對象調整深度與案例。</td>
+<td style="vertical-align: top !important;">是否符合角色責任。</td>
+<td style="vertical-align: top !important;">課程大綱</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗/評估</td>
+<td style="vertical-align: top !important;">必修與高風險角色課程應設定測驗或實作評估。</td>
+<td style="vertical-align: top !important;">通過分數與補訓規則是否明確。</td>
+<td style="vertical-align: top !important;">測驗題庫、評分紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教材審查</td>
+<td style="vertical-align: top !important;">CISO、ISMS代表或專項Owner應審查關鍵教材。</td>
+<td style="vertical-align: top !important;">內容正確性與適用性。</td>
+<td style="vertical-align: top !important;">教材審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">版本管制</td>
+<td style="vertical-align: top !important;">教材應受版本管理並保存歷史版本。</td>
+<td style="vertical-align: top !important;">版本、日期、Owner是否完整。</td>
+<td style="vertical-align: top !important;">教材版本紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 訓練執行與出席管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">執行項目</th>
+<th style="vertical-align: top !important;">要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">通知與報名</td>
+<td style="vertical-align: top !important;">訓練應事前通知對象、時間、方式、完成期限與必修要求。</td>
+<td style="vertical-align: top !important;">HR / 課程Owner</td>
+<td style="vertical-align: top !important;">通知紀錄、報名紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">出席紀錄</td>
+<td style="vertical-align: top !important;">實體課程需簽到，線上課程需系統完成紀錄。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">簽到表、LMS紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗與作業</td>
+<td style="vertical-align: top !important;">必修課程應保存測驗、作業或實作結果。</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+<td style="vertical-align: top !important;">測驗成績、作業紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">缺席追蹤</td>
+<td style="vertical-align: top !important;">未完成或缺席者需追蹤補課。</td>
+<td style="vertical-align: top !important;">HR / 部門主管</td>
+<td style="vertical-align: top !important;">缺席與補課紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練豁免</td>
+<td style="vertical-align: top !important;">豁免需有同等能力證據與核准。</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">豁免申請與核准紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部訓練</td>
+<td style="vertical-align: top !important;">外部訓練需保存課程資訊、證書、費用與學習回饋。</td>
+<td style="vertical-align: top !important;">受訓人 / HR</td>
+<td style="vertical-align: top !important;">證書、課程資料</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 測驗、通過標準與補訓規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">訓練類型</th>
+<th style="vertical-align: top !important;">建議通過標準</th>
+<th style="vertical-align: top !important;">未通過處理</th>
+<th style="vertical-align: top !important;">補訓期限</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">全員資訊安全認知訓練</td>
+<td style="vertical-align: top !important;">測驗分數 ≥ ___分或完成率100%</td>
+<td style="vertical-align: top !important;">重新測驗或補課</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">HR / 部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新進人員訓練</td>
+<td style="vertical-align: top !important;">完成必修課程並通過測驗</td>
+<td style="vertical-align: top !important;">未完成不得授予必要系統權限或需主管確認</td>
+<td style="vertical-align: top !important;">到職後___日內</td>
+<td style="vertical-align: top !important;">HR / IAM Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">特權帳號訓練</td>
+<td style="vertical-align: top !important;">測驗與實作皆通過</td>
+<td style="vertical-align: top !important;">暫緩或限制特權授權</td>
+<td style="vertical-align: top !important;">權限核發前</td>
+<td style="vertical-align: top !important;">IAM Owner / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件應變演練</td>
+<td style="vertical-align: top !important;">完成角色任務並參與復盤</td>
+<td style="vertical-align: top !important;">安排補演練或桌上演練</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">SOC / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / 復原 / GHG專項訓練</td>
+<td style="vertical-align: top !important;">通過案例或實作評估</td>
+<td style="vertical-align: top !important;">補訓並由專項Owner確認</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">專項Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員訓練</td>
+<td style="vertical-align: top !important;">完成稽核演練、見習或測驗</td>
+<td style="vertical-align: top !important;">不得獨立執行稽核直到合格</td>
+<td style="vertical-align: top !important;">稽核前</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 認知管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">認知主題</th>
+<th style="vertical-align: top !important;">全體人員應理解內容</th>
+<th style="vertical-align: top !important;">宣導方式</th>
+<th style="vertical-align: top !important;">頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資訊安全政策</td>
+<td style="vertical-align: top !important;">政策承諾、適用範圍、個人責任與違規後果。</td>
+<td style="vertical-align: top !important;">訓練、公告、入口網站</td>
+<td style="vertical-align: top !important;">新進/年度/政策更新</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標</td>
+<td style="vertical-align: top !important;">與自身工作相關之資訊安全目標、KPI/KRI與配合事項。</td>
+<td style="vertical-align: top !important;">部門宣導、管理會議</td>
+<td style="vertical-align: top !important;">年度/目標變更</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">個人責任</td>
+<td style="vertical-align: top !important;">保護帳密、資料分類、設備保護、可接受使用、事件通報。</td>
+<td style="vertical-align: top !important;">全員訓練、海報、短訊</td>
+<td style="vertical-align: top !important;">持續/年度</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">不符合後果</td>
+<td style="vertical-align: top !important;">違反政策、未通報、資料外洩、未遵守流程之風險與處置。</td>
+<td style="vertical-align: top !important;">訓練、案例宣導</td>
+<td style="vertical-align: top !important;">年度/事件後</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件通報</td>
+<td style="vertical-align: top !important;">可疑郵件、資料外洩、設備遺失、AI異常、供應商事件之通報管道。</td>
+<td style="vertical-align: top !important;">訓練、演練、內網公告</td>
+<td style="vertical-align: top !important;">年度/事件後</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / 復原 / GHG專項認知</td>
+<td style="vertical-align: top !important;">PII保護、AI使用限制、復原角色、供應鏈風險、氣候韌性與碳資料證據保護。</td>
+<td style="vertical-align: top !important;">角色別宣導、專項訓練</td>
+<td style="vertical-align: top !important;">年度/重大變更</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 專項訓練管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">專項領域</th>
+<th style="vertical-align: top !important;">訓練重點</th>
+<th style="vertical-align: top !important;">適用角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">隱私 / PII保護</td>
+<td style="vertical-align: top !important;">PII處理原則、隱私風險評估、資料處理條款、資料主體權利、跨境傳輸、隱私事件通報。</td>
+<td style="vertical-align: top !important;">DPO、Data Owner、PII處理人員、客服、法務</td>
+<td style="vertical-align: top !important;">隱私訓練紀錄、測驗、案例練習</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">AI風險、模型卡、AI影響、輸出監控、人類監督、AI供應商、生成式AI安全使用。</td>
+<td style="vertical-align: top !important;">AI Owner、AI開發、業務使用者、AI治理委員</td>
+<td style="vertical-align: top !important;">AI訓練紀錄、模型卡練習</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援與復原</td>
+<td style="vertical-align: top !important;">RTO/RPO、備份、還原、備援切換、危機溝通、桌上演練。</td>
+<td style="vertical-align: top !important;">復原負責人、IT、關鍵流程Owner、客服、管理階層</td>
+<td style="vertical-align: top !important;">演練紀錄、復盤報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端與供應鏈安全</td>
+<td style="vertical-align: top !important;">雲端共享責任、CSPM、供應商審查、SLA、SOC、資料處理條款、第四方風險。</td>
+<td style="vertical-align: top !important;">Cloud Owner、採購、供應商管理、法務、IT</td>
+<td style="vertical-align: top !important;">供應商訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">碳資料品質、排放係數、證據保存、揭露前審查、資料完整性。</td>
+<td style="vertical-align: top !important;">GHG資料Owner、ESG、財務、資料治理角色</td>
+<td style="vertical-align: top !important;">GHG訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">ISO 19011、稽核證據、抽樣、訪談、發現撰寫與CAPA追蹤。</td>
+<td style="vertical-align: top !important;">內部稽核員、稽核主管</td>
+<td style="vertical-align: top !important;">內稽員資格與見習紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 供應商與外部人員訓練要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">對象</th>
+<th style="vertical-align: top !important;">訓練/宣導內容</th>
+<th style="vertical-align: top !important;">完成時點</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">外包駐點人員</td>
+<td style="vertical-align: top !important;">資訊安全政策、保密、可接受使用、事件通報、資料分類與設備使用。</td>
+<td style="vertical-align: top !important;">入場前或入場後___日內</td>
+<td style="vertical-align: top !important;">供應商管理 / HR</td>
+<td style="vertical-align: top !important;">簽署與訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高風險供應商人員</td>
+<td style="vertical-align: top !important;">合約安全要求、SLA、通報義務、PII/AI/雲端安全要求。</td>
+<td style="vertical-align: top !important;">合約開始/年度/重大變更</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">供應商訓練證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">顧問與專家</td>
+<td style="vertical-align: top !important;">保密、交付物安全、資料處理限制、存取權限與退出要求。</td>
+<td style="vertical-align: top !important;">授權存取前</td>
+<td style="vertical-align: top !important;">專案Owner / 法務</td>
+<td style="vertical-align: top !important;">NDA、訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端/MSSP服務窗口</td>
+<td style="vertical-align: top !important;">事件通報、升級流程、責任分工、證據保存與聯絡清單。</td>
+<td style="vertical-align: top !important;">服務開始/演練前</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">會議與演練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI/資料處理供應商</td>
+<td style="vertical-align: top !important;">資料使用限制、模型與資料保護、資料處理條款、通報、刪除與保留要求。</td>
+<td style="vertical-align: top !important;">服務開始/變更時</td>
+<td style="vertical-align: top !important;">AI治理 / DPO</td>
+<td style="vertical-align: top !important;">供應商審查與訓練紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 訓練有效性評估方法</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">評估層級</th>
+<th style="vertical-align: top !important;">評估方式</th>
+<th style="vertical-align: top !important;">適用課程</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Level 1 反應</td>
+<td style="vertical-align: top !important;">滿意度問卷、回饋意見、課程適用性調查。</td>
+<td style="vertical-align: top !important;">一般認知與大多數課程</td>
+<td style="vertical-align: top !important;">問卷結果</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Level 2 學習</td>
+<td style="vertical-align: top !important;">測驗、案例分析、實作作業、情境題。</td>
+<td style="vertical-align: top !important;">必修課程、角色別課程、專項課程</td>
+<td style="vertical-align: top !important;">測驗成績、作業</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Level 3 行為</td>
+<td style="vertical-align: top !important;">主管觀察、抽查、釣魚演練、事件通報行為、作業遵循。</td>
+<td style="vertical-align: top !important;">認知訓練、特權帳號、PII/AI使用者</td>
+<td style="vertical-align: top !important;">抽查紀錄、演練結果</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Level 4 結果</td>
+<td style="vertical-align: top !important;">事件數、缺失數、弱點逾期、控制通過率、稽核結果、KPI/KRI改善。</td>
+<td style="vertical-align: top !important;">高風險角色、控制Owner、SOC/IR、隱私、AI、復原角色</td>
+<td style="vertical-align: top !important;">績效報表、稽核報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性結論</td>
+<td style="vertical-align: top !important;">綜合判斷訓練是否達成目標並形成改善。</td>
+<td style="vertical-align: top !important;">所有重大課程</td>
+<td style="vertical-align: top !important;">有效性評估紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 教育訓練績效指標與KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">監督項目</th>
+<th style="vertical-align: top !important;">KPI/KRI</th>
+<th style="vertical-align: top !important;">目標/門檻</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">全員訓練完成率</td>
+<td style="vertical-align: top !important;">已完成必修訓練人數 / 應完成訓練人數</td>
+<td style="vertical-align: top !important;">≥ ___%</td>
+<td style="vertical-align: top !important;">每月/每季</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">低於目標</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新進訓練準時率</td>
+<td style="vertical-align: top !important;">到職期限內完成訓練比例</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">每月</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">任一逾期且已取得高風險權限</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高風險角色訓練完成率</td>
+<td style="vertical-align: top !important;">高風險角色完成必要訓練比例</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">CISO / 部門主管</td>
+<td style="vertical-align: top !important;">未完成仍執行高風險工作</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗通過率</td>
+<td style="vertical-align: top !important;">通過測驗人數 / 參訓人數</td>
+<td style="vertical-align: top !important;">≥ ___%</td>
+<td style="vertical-align: top !important;">每課程</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+<td style="vertical-align: top !important;">低於門檻</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">釣魚演練失敗率</td>
+<td style="vertical-align: top !important;">點擊或輸入憑證比例</td>
+<td style="vertical-align: top !important;">≤ ___%</td>
+<td style="vertical-align: top !important;">每季/半年</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">高於門檻或重複失敗</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件通報率</td>
+<td style="vertical-align: top !important;">可疑事件主動通報數與有效通報比率</td>
+<td style="vertical-align: top !important;">監控趨勢</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">SOC / ISMS代表</td>
+<td style="vertical-align: top !important;">通報不足或延遲</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力缺口逾期數</td>
+<td style="vertical-align: top !important;">逾期未改善能力缺口數</td>
+<td style="vertical-align: top !important;">0件高風險逾期</td>
+<td style="vertical-align: top !important;">每月/每季</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">高風險缺口逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核發現重複率</td>
+<td style="vertical-align: top !important;">與訓練或認知不足相關之重複缺失</td>
+<td style="vertical-align: top !important;">下降趨勢</td>
+<td style="vertical-align: top !important;">每次稽核</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+<td style="vertical-align: top !important;">重複發生</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA訓練有效性</td>
+<td style="vertical-align: top !important;">補訓後問題是否再發</td>
+<td style="vertical-align: top !important;">不再發</td>
+<td style="vertical-align: top !important;">CAPA結案後</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">有效性未通過</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 訓練豁免、延期與例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">例外類型</th>
+<th style="vertical-align: top !important;">允許條件</th>
+<th style="vertical-align: top !important;">核准角色</th>
+<th style="vertical-align: top !important;">補償要求</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">訓練豁免</td>
+<td style="vertical-align: top !important;">已具備同等證照、訓練或可驗證經驗。</td>
+<td style="vertical-align: top !important;">HR / CISO / 課程Owner</td>
+<td style="vertical-align: top !important;">保留資格證明並定期檢討。</td>
+<td style="vertical-align: top !important;">豁免申請、證明文件</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練延期</td>
+<td style="vertical-align: top !important;">因業務、休假、派駐或不可抗力無法如期完成。</td>
+<td style="vertical-align: top !important;">直屬主管 / HR</td>
+<td style="vertical-align: top !important;">設定補課期限與臨時風險控制。</td>
+<td style="vertical-align: top !important;">延期核准紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗未通過</td>
+<td style="vertical-align: top !important;">首次測驗未達標準。</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+<td style="vertical-align: top !important;">補訓並重新測驗。</td>
+<td style="vertical-align: top !important;">補訓與重測紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高風險角色未完成訓練</td>
+<td style="vertical-align: top !important;">特權帳號、PII、AI、復原、GHG或SOC角色未完成必要訓練。</td>
+<td style="vertical-align: top !important;">CISO / 專項Owner</td>
+<td style="vertical-align: top !important;">限制權限、暫停任務或主管風險接受。</td>
+<td style="vertical-align: top !important;">例外核准與風險接受</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商訓練例外</td>
+<td style="vertical-align: top !important;">外部人員無法完成內部訓練。</td>
+<td style="vertical-align: top !important;">供應商管理 / CISO</td>
+<td style="vertical-align: top !important;">以合約條款、替代宣導或書面承諾補償。</td>
+<td style="vertical-align: top !important;">供應商承諾紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 事件、違規與不符合後之再訓練</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">觸發情境</th>
+<th style="vertical-align: top !important;">再訓練要求</th>
+<th style="vertical-align: top !important;">完成期限</th>
+<th style="vertical-align: top !important;">有效性確認</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">釣魚演練失敗或重複失敗</td>
+<td style="vertical-align: top !important;">釣魚識別與通報補訓。</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">重測或下次演練改善。</td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料分類或PII處理違規</td>
+<td style="vertical-align: top !important;">資料分類、PII處理、隱私風險評估與資料主體權利補訓。</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">主管抽查或案例測驗。</td>
+<td style="vertical-align: top !important;">DPO / Data Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI使用違規或AI事故</td>
+<td style="vertical-align: top !important;">AI使用政策、Prompt安全、AI風險與人類監督補訓。</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">案例練習或AI治理審查。</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">變更流程未遵循</td>
+<td style="vertical-align: top !important;">變更管理、核准、執行、驗證與PIR補訓。</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">下一次變更抽查。</td>
+<td style="vertical-align: top !important;">Change Manager</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件通報延遲</td>
+<td style="vertical-align: top !important;">事件分類、升級、通報與證據保存補訓。</td>
+<td style="vertical-align: top !important;">___日內</td>
+<td style="vertical-align: top !important;">桌上演練或事件模擬。</td>
+<td style="vertical-align: top !important;">SOC / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核不符合</td>
+<td style="vertical-align: top !important;">針對不符合條款、控制或程序進行補訓。</td>
+<td style="vertical-align: top !important;">CAPA期限內</td>
+<td style="vertical-align: top !important;">CAPA有效性驗證。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 訓練紀錄與證據管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄項目</th>
+<th style="vertical-align: top !important;">最低內容</th>
+<th style="vertical-align: top !important;">保存責任</th>
+<th style="vertical-align: top !important;">保存期限</th>
+<th style="vertical-align: top !important;">保存位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">年度訓練計畫</td>
+<td style="vertical-align: top !important;">課程、對象、日期、Owner、完成標準、評估方式。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">R3：至少5年，或依法規/合約要求較長者。</td>
+<td style="vertical-align: top !important;">HR系統 / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練簽到或完成紀錄</td>
+<td style="vertical-align: top !important;">姓名、部門、課程、日期、完成狀態。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">LMS / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教材與版本紀錄</td>
+<td style="vertical-align: top !important;">課程名稱、版本、Owner、審查人、日期。</td>
+<td style="vertical-align: top !important;">課程Owner / 文件管制</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">教材庫 / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗與評估結果</td>
+<td style="vertical-align: top !important;">分數、通過狀態、補訓紀錄、有效性結論。</td>
+<td style="vertical-align: top !important;">HR / 課程Owner</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">LMS / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力矩陣與缺口分析</td>
+<td style="vertical-align: top !important;">角色、所需能力、現有能力、缺口、改善計畫。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">HR系統 / ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">豁免、延期與例外紀錄</td>
+<td style="vertical-align: top !important;">理由、核准人、補償措施、期限。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">演練與復盤紀錄</td>
+<td style="vertical-align: top !important;">演練情境、參與者、結果、Lessons Learned、CAPA。</td>
+<td style="vertical-align: top !important;">CISO / 復原負責人 / 專項Owner</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 課程與能力資料保護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">資料類型</th>
+<th style="vertical-align: top !important;">保護要求</th>
+<th style="vertical-align: top !important;">存取權限</th>
+<th style="vertical-align: top !important;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">人員訓練紀錄</td>
+<td style="vertical-align: top !important;">依人事與個資要求保護，不得未授權揭露。</td>
+<td style="vertical-align: top !important;">HR、ISMS代表、主管、稽核授權人員</td>
+<td style="vertical-align: top !important;">含個人資料時依隱私與PII保護要求處理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗成績與能力評估</td>
+<td style="vertical-align: top !important;">僅供能力管理、稽核與改善使用。</td>
+<td style="vertical-align: top !important;">HR、主管、課程Owner</td>
+<td style="vertical-align: top !important;">不得用於未授權用途。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件後補訓紀錄</td>
+<td style="vertical-align: top !important;">需保留但避免不必要擴散。</td>
+<td style="vertical-align: top !important;">CISO、HR、CAPA負責人、主管</td>
+<td style="vertical-align: top !important;">涉及紀律或事件者需保密。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核員資格紀錄</td>
+<td style="vertical-align: top !important;">需保存資格、訓練與稽核經驗。</td>
+<td style="vertical-align: top !important;">稽核主管、ISMS代表</td>
+<td style="vertical-align: top !important;">支援外部驗證查核。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商人員訓練紀錄</td>
+<td style="vertical-align: top !important;">依合約與資料處理要求保護。</td>
+<td style="vertical-align: top !important;">供應商管理、CISO、法務</td>
+<td style="vertical-align: top !important;">退場時依紀錄保存要求處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 管理審查輸入彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">管理審查輸入</th>
+<th style="vertical-align: top !important;">是否納入</th>
+<th style="vertical-align: top !important;">輸入摘要</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">年度訓練完成率與趨勢</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高風險角色能力缺口</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大訓練逾期、豁免與例外</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件、稽核與CAPA導出之再訓練</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">釣魚演練、通報率與認知績效</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / 復原 / GHG專項能力需求</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教育訓練資源與預算需求</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR / CISO / 財務</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>25. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">最高管理階層</th>
+<th style="vertical-align: top !important;">CISO</th>
+<th style="vertical-align: top !important;">ISMS代表</th>
+<th style="vertical-align: top !important;">HR</th>
+<th style="vertical-align: top !important;">部門主管</th>
+<th style="vertical-align: top !important;">課程Owner</th>
+<th style="vertical-align: top !important;">風險管理</th>
+<th style="vertical-align: top !important;">DPO</th>
+<th style="vertical-align: top !important;">AI治理</th>
+<th style="vertical-align: top !important;">復原/GHG/稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准訓練政策與資源</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">識別能力需求</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">建立能力矩陣</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">制定年度訓練計畫</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">設計教材與測驗</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R（隱私）</td>
+<td style="vertical-align: top !important;">R（AI）</td>
+<td style="vertical-align: top !important;">R（復原/GHG/稽核）</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">執行訓練與追蹤完成率</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性評估</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">補訓與CAPA</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查提報</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存紀錄與支援稽核</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+</tr>
+</tbody>
+</table>
+<h2>26. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important;">本程序對應內容</th>
+<th style="vertical-align: top !important;">證據位置</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">5.1 領導與承諾</td>
+<td style="vertical-align: top !important;">管理階層支持能力、認知與訓練資源。</td>
+<td style="vertical-align: top !important;">第24、25章</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.2 政策</td>
+<td style="vertical-align: top !important;">訓練宣導資訊安全政策與個人責任。</td>
+<td style="vertical-align: top !important;">第15章</td>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.3 角色責任與權限</td>
+<td style="vertical-align: top !important;">依角色定義能力要求與訓練責任。</td>
+<td style="vertical-align: top !important;">第6、25章</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1 風險與機會</td>
+<td style="vertical-align: top !important;">能力缺口、事件與稽核結果導入風險與訓練需求。</td>
+<td style="vertical-align: top !important;">第8、9、21章</td>
+<td style="vertical-align: top !important;">風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2 資訊安全目標</td>
+<td style="vertical-align: top !important;">訓練支援資訊安全目標與KPI/KRI。</td>
+<td style="vertical-align: top !important;">第19、24章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1 Resources</td>
+<td style="vertical-align: top !important;">訓練資源、預算、人員與工具支援能力建立。</td>
+<td style="vertical-align: top !important;">第10、24章</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2 Competence</td>
+<td style="vertical-align: top !important;">識別能力、確保能力、保留能力證據。</td>
+<td style="vertical-align: top !important;">第6、8、9、22章</td>
+<td style="vertical-align: top !important;">HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.3 Awareness</td>
+<td style="vertical-align: top !important;">全員認知政策、目標、貢獻與不符合後果。</td>
+<td style="vertical-align: top !important;">第15章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 Communication</td>
+<td style="vertical-align: top !important;">訓練通知、完成追蹤、升級與管理審查溝通。</td>
+<td style="vertical-align: top !important;">第13、20、24章</td>
+<td style="vertical-align: top !important;">HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 Documented Information</td>
+<td style="vertical-align: top !important;">訓練、能力、測驗與有效性證據受控保存。</td>
+<td style="vertical-align: top !important;">第22、23章</td>
+<td style="vertical-align: top !important;">文件管制</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.1 Operational Planning and Control</td>
+<td style="vertical-align: top !important;">能力與訓練支援控制有效執行。</td>
+<td style="vertical-align: top !important;">第6、16章</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1 Performance Evaluation</td>
+<td style="vertical-align: top !important;">透過KPI/KRI監督訓練與認知有效性。</td>
+<td style="vertical-align: top !important;">第18、19章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2 Internal Audit</td>
+<td style="vertical-align: top !important;">稽核訓練管理與內部稽核員能力。</td>
+<td style="vertical-align: top !important;">第16、28章</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3 Management Review</td>
+<td style="vertical-align: top !important;">訓練績效、缺口與資源需求納入管理審查。</td>
+<td style="vertical-align: top !important;">第24章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.1/10.2 Improvement and Corrective Action</td>
+<td style="vertical-align: top !important;">事件、違規、稽核缺失導出再訓練與CAPA。</td>
+<td style="vertical-align: top !important;">第21、29章</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>27. Annex A與整合治理對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">控制/治理主題</th>
+<th style="vertical-align: top !important;">訓練與能力關聯</th>
+<th style="vertical-align: top !important;">主要證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">A.5.2 資訊安全角色與責任</td>
+<td style="vertical-align: top !important;">角色責任需透過能力矩陣與角色訓練落實。</td>
+<td style="vertical-align: top !important;">能力矩陣、RACI</td>
+<td style="vertical-align: top !important;">ISMS代表 / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.4 管理責任</td>
+<td style="vertical-align: top !important;">主管需推動人員遵循政策與訓練要求。</td>
+<td style="vertical-align: top !important;">主管追蹤紀錄</td>
+<td style="vertical-align: top !important;">部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.8 專案管理中的資訊安全</td>
+<td style="vertical-align: top !important;">專案人員需具備專案安全與變更風險能力。</td>
+<td style="vertical-align: top !important;">專案訓練紀錄</td>
+<td style="vertical-align: top !important;">PMO / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.24~A.5.28 事件管理</td>
+<td style="vertical-align: top !important;">事件應變角色需定期演練與復盤。</td>
+<td style="vertical-align: top !important;">演練紀錄、事件後訓練</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.29~A.5.30 ICT營運持續</td>
+<td style="vertical-align: top !important;">復原角色需具備備份、備援與復原能力。</td>
+<td style="vertical-align: top !important;">復原訓練與演練紀錄</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.31 法規、監管與合約要求</td>
+<td style="vertical-align: top !important;">相關人員需理解法規、合約、通報與客戶要求。</td>
+<td style="vertical-align: top !important;">法規合約訓練</td>
+<td style="vertical-align: top !important;">法務 / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.34 隱私與PII保護</td>
+<td style="vertical-align: top !important;">PII處理人員需完成隱私與PII保護訓練。</td>
+<td style="vertical-align: top !important;">隱私訓練紀錄</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.3 資訊安全認知、教育與訓練</td>
+<td style="vertical-align: top !important;">本程序為此控制之核心管理證據。</td>
+<td style="vertical-align: top !important;">年度訓練計畫、訓練紀錄</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.8 資訊安全事件報告</td>
+<td style="vertical-align: top !important;">全員需理解事件通報管道與時限。</td>
+<td style="vertical-align: top !important;">通報訓練、演練紀錄</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8 技術控制</td>
+<td style="vertical-align: top !important;">技術角色需具備工具、組態、弱點、備份、日誌與變更能力。</td>
+<td style="vertical-align: top !important;">角色別技術訓練</td>
+<td style="vertical-align: top !important;">IT / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私治理</td>
+<td style="vertical-align: top !important;">隱私治理、PII與隱私風險評估訓練。</td>
+<td style="vertical-align: top !important;">隱私訓練紀錄</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理與AI風險管理</td>
+<td style="vertical-align: top !important;">AI治理、AI風險與AI使用訓練。</td>
+<td style="vertical-align: top !important;">AI訓練紀錄</td>
+<td style="vertical-align: top !important;">AI治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">GHG/CO2資料與碳證據治理訓練。</td>
+<td style="vertical-align: top !important;">GHG訓練紀錄</td>
+<td style="vertical-align: top !important;">GHG資料治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO 19011內部稽核</td>
+<td style="vertical-align: top !important;">內部稽核員能力與訓練。</td>
+<td style="vertical-align: top !important;">稽核員資格與訓練紀錄</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+</tbody>
+</table>
+<h2>28. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">能力需求識別</td>
+<td style="vertical-align: top !important;">組織是否依角色、風險、控制與職務識別必要能力？</td>
+<td style="vertical-align: top !important;">能力矩陣、RACI、職務說明</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力證據</td>
+<td style="vertical-align: top !important;">人員能力是否有教育、訓練、經驗、證照或實務證據？</td>
+<td style="vertical-align: top !important;">訓練紀錄、證照、能力評估</td>
+<td style="vertical-align: top !important;">HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全員認知</td>
+<td style="vertical-align: top !important;">全員是否理解政策、目標、責任、通報與不符合後果？</td>
+<td style="vertical-align: top !important;">年度訓練、測驗、宣導紀錄</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色別訓練</td>
+<td style="vertical-align: top !important;">高風險角色是否完成必要訓練並具備能力？</td>
+<td style="vertical-align: top !important;">角色別訓練與測驗紀錄</td>
+<td style="vertical-align: top !important;">CISO / 部門主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項治理訓練</td>
+<td style="vertical-align: top !important;">隱私、AI、復原、GHG、供應商與稽核角色是否完成專項訓練？</td>
+<td style="vertical-align: top !important;">專項訓練紀錄</td>
+<td style="vertical-align: top !important;">專項Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練有效性</td>
+<td style="vertical-align: top !important;">訓練是否評估有效性，而非僅記錄出席？</td>
+<td style="vertical-align: top !important;">有效性評估、KPI/KRI、演練結果</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">補訓與CAPA</td>
+<td style="vertical-align: top !important;">事件、違規、稽核不符合是否導出補訓與CAPA？</td>
+<td style="vertical-align: top !important;">補訓紀錄、CAPA</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">紀錄保存</td>
+<td style="vertical-align: top !important;">訓練與能力紀錄是否受控保存且可追溯？</td>
+<td style="vertical-align: top !important;">LMS、簽到、教材版本、測驗紀錄</td>
+<td style="vertical-align: top !important;">文件管制</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">訓練績效、能力缺口與資源需求是否納入管理審查？</td>
+<td style="vertical-align: top !important;">管理審查輸入</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+</tbody>
+</table>
+<h2>29. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">觸發來源</th>
+<th style="vertical-align: top !important;">問題類型</th>
+<th style="vertical-align: top !important;">處理要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">訓練完成率低於目標</td>
+<td style="vertical-align: top !important;">必修訓練未完成或逾期。</td>
+<td style="vertical-align: top !important;">通知主管、補課、必要時升級管理審查。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">完成率報告、補訓紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗通過率低</td>
+<td style="vertical-align: top !important;">教材不清、學習效果不足或人員理解不足。</td>
+<td style="vertical-align: top !important;">檢討教材、增加案例、補訓與重測。</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+<td style="vertical-align: top !important;">測驗分析、教材修訂</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件或違規重複發生</td>
+<td style="vertical-align: top !important;">訓練未轉化為行為或控制未有效。</td>
+<td style="vertical-align: top !important;">根因分析、行為訓練、流程改善與CAPA。</td>
+<td style="vertical-align: top !important;">CISO / CAPA負責人</td>
+<td style="vertical-align: top !important;">事件報告、CAPA</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核發現能力不足</td>
+<td style="vertical-align: top !important;">角色未具備所需能力或證據不足。</td>
+<td style="vertical-align: top !important;">能力矩陣更新、補訓、資格要求調整。</td>
+<td style="vertical-align: top !important;">HR / 稽核主管</td>
+<td style="vertical-align: top !important;">稽核發現、補訓證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">釣魚演練失敗率高</td>
+<td style="vertical-align: top !important;">全員或特定部門認知不足。</td>
+<td style="vertical-align: top !important;">針對部門再訓練、微課程、模擬演練。</td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+<td style="vertical-align: top !important;">演練報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項治理能力不足</td>
+<td style="vertical-align: top !important;">隱私、AI、復原、GHG等專項角色能力不足。</td>
+<td style="vertical-align: top !important;">安排專項訓練、外部顧問、工作坊與演練。</td>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">專項訓練與評估</td>
+</tr>
+</tbody>
+</table>
+<h2>30. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄項目</th>
+<th style="vertical-align: top !important;">保存責任</th>
+<th style="vertical-align: top !important;">保存位置</th>
+<th style="vertical-align: top !important;">保存期限</th>
+<th style="vertical-align: top !important;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准版能力、認知與教育訓練管理程序</td>
+<td style="vertical-align: top !important;">文件管制 / ISMS代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">有效期間加R3：至少5年，或依法規/合約要求較長者。</td>
+<td style="vertical-align: top !important;">需保留版本、核准與修訂紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力矩陣與能力缺口分析</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">HR系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需與角色、風險與控制責任連結。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">年度教育訓練計畫</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">HR系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保留計畫、核准與變更紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練教材與版本紀錄</td>
+<td style="vertical-align: top !important;">課程Owner / 文件管制</td>
+<td style="vertical-align: top !important;">教材庫 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保留教材審查與版本。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練完成與出席紀錄</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">LMS / HR系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">含個資時依資料分類與隱私要求控管。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">測驗、演練與有效性評估紀錄</td>
+<td style="vertical-align: top !important;">HR / 課程Owner</td>
+<td style="vertical-align: top !important;">LMS / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需支援有效性證明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">豁免、延期、補訓與CAPA紀錄</td>
+<td style="vertical-align: top !important;">HR / CAPA負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / CAPA系統</td>
+<td style="vertical-align: top !important;">結案後R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保留核准、補償措施與有效性驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入與決議</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">管理審查文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">重大能力缺口與資源需求需追蹤。</td>
+</tr>
+</tbody>
+</table>
+<h2>31. 表單與紀錄清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">用途</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">使用方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">定義角色能力要求、現有能力與缺口。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">於能力需求識別、能力缺口分析及高風險角色能力確認時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">規劃年度ISMS訓練與認知活動。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">於年度訓練規劃、排程、核准與管理審查輸入時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">設計課程目標、教材、測驗與評估方式。</td>
+<td style="vertical-align: top !important;">課程Owner</td>
+<td style="vertical-align: top !important;">於課程設計、教材審查、測驗與有效性評估前使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存出席、完成、測驗與簽核紀錄。</td>
+<td style="vertical-align: top !important;">HR</td>
+<td style="vertical-align: top !important;">於訓練執行後保存完成證據與支援稽核。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">評估訓練成效與改善需求。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">於課後、季度或年度評估訓練有效性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">連結角色、能力、控制與SoA。</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">於控制Owner、角色別訓練與SoA能力要求對應時使用。</td>
+</tr>
+</tbody>
+</table>
+<h2>32. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">檢查項目</th>
+<th style="vertical-align: top !important;">完成</th>
+<th style="vertical-align: top !important;">證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">程序目的、範圍、名詞與管理原則完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色別能力要求與能力矩陣已建立</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">年度教育訓練計畫已依風險、目標、控制與稽核需求建立</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新進、年度、角色別、專項、事件後與內稽員訓練要求完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私、AI、復原、GHG、供應商訓練已納入</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教材、測驗、出席、補訓、豁免與延期管理要求完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練有效性評估方法與KPI/KRI已定義</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件、稽核、不符合與CAPA之再訓練機制已建立</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO條文、Annex A與整合治理對應完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件化資訊、保存要求與稽核提示完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入與持續改善機制完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>33. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">文件類型</th>
+<th style="vertical-align: top !important;">與本程序之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">MAN</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全領導與治理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI資訊安全與治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險評鑑表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 風險準則與接受準則表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險處理計畫</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 剩餘風險接受單</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI系統資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標規劃表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標達成報告</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS變更規劃與管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全資源需求表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源缺口分析表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS年度資源規劃表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源有效性檢討紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全能力需求矩陣</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 年度教育訓練計畫表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 教育訓練課程設計表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 教育訓練紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 教育訓練有效性評估紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 角色別能力與控制責任對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知活動計畫表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全宣導與認知活動紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通矩陣</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核發現事項追蹤表</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查輸入資料彙整表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊分類分級表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI工具與資料使用政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 威脅情資分析紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI服務與碳足跡資料資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI/雲端供應商GHG與資訊安全評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 日誌、監控與事件偵測作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI系統安全開發與使用作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 備份與還原作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 備援管理作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI模型能源效率與碳資料安全作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為能力、認知與教育訓練管理之治理依據、需求來源、訓練計畫、教材設計、訓練紀錄、有效性評估、資源支援、風險/控制連結、稽核、管理審查或改善行動之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於能力需求識別、訓練規劃、專項訓練、證據保存、KPI/KRI、CAPA、管理審查及稽核查核時使用。</td>
+</tr>
+</tbody>
+</table>
+<h2>35. Enterprise Certification Declaration</h2>
+<p>本文件為ISMS能力、認知與教育訓練管理之正式企業級程序文件，可支援ISO/IEC 27001:2022 Clause 7.2、7.3、7.1、7.4、7.5、5.1、6.1、6.2、8.1、9.1、9.2、9.3及10.2之符合性證明，並支援隱私、AI、GHG/CO2資料治理、供應鏈、雲端與氣候韌性之整合治理稽核證據。實際採用時，應依組織ISMS範圍、職務角色、風險準則、SoA、HR制度、LMS平台、法規合約要求、隱私/AI/GHG治理需求及驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>

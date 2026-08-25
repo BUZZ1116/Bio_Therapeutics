@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-071-PRO-001 ISMS資源管理程序</title>
+<style>body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}.isms-document{max-width:3600px;margin:0 auto}h1{text-align:center;color:#1f4e79;border-bottom:3px solid #333;padding-bottom:8px}h2{margin-top:30px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}th{background:#d9eaf7;text-align:left}td,th{vertical-align:top!important}.note{background:#fff7e6;border:1px solid #f0c36d;padding:12px;margin:12px 0}.small{font-size:13px;color:#555}
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-071-PRO-001 ISMS資源管理程序</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-071-PRO-001</td>
+<td>ISMS資源管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 7 / 資源、能力、認知、溝通與文件化資訊</td>
+<td>資源Owner / ISMS管理代表</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Clause-7 / ISMS-071-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資源Owner / ISMS管理代表 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 資源管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">人力資源負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">IT營運負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">財務/預算負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">採購/供應商管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">備份、備援與復原負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理 / 設施管理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層授權代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 程序目的</h2>
+<p>本程序用於規範組織如何識別、規劃、取得、配置、監督、檢討與改善ISMS所需資源，確保資訊安全管理系統能有效建立、實施、維持與持續改善，並能支援資訊安全目標、風險處理、控制措施、事件應變、備份、備援、復原、稽核驗證、隱私、AI、雲端與供應鏈治理、GHG/CO2資料治理及其他整合管理需求。</p>
+<p>本程序同時作為ISO/IEC 27001:2022 Clause 7.1 Resources之核心符合性證據，並支援Clause 5.1領導承諾、6.2資訊安全目標、8.1運作控制、9.1績效監督、9.3管理審查及10.1持續改善之資源決策閉環。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">程序章節 / 管理主題</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1~6. 程序目的、適用範圍、名詞、原則、資源類別與流程總覽</td>
+<td style="vertical-align: top !important;">定義資源治理原則、資源類別、責任角色、資產與資料資源範圍及流程輸入/輸出。</td>
+<td style="vertical-align: top !important;">資源管理框架與流程總覽。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7~11. 年度資源規劃、需求識別、登錄、缺口分析與優先排序</td>
+<td style="vertical-align: top !important;">將資源需求連結至目標、風險、風險處理、SoA控制、稽核發現、管理審查與年度資源規劃。</td>
+<td style="vertical-align: top !important;">年度資源需求、缺口分析、優先順序與預算輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12~18. 人力、能力、預算、技術工具、基礎設施、外部資源與專項資源</td>
+<td style="vertical-align: top !important;">管理人力與能力、供應商、雲端、AI、隱私、備份、備援、復原、資料中心、GHG/CO2資料與碳證據所需資源。</td>
+<td style="vertical-align: top !important;">專項資源需求、控制要求與證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">19~24. 資源配置核准、有效性監督、缺口升級、變更/風險連結與管理審查</td>
+<td style="vertical-align: top !important;">追蹤資源配置、有效性、KPI/KRI、升級、變更管理、風險管理、CAPA與管理審查輸入。</td>
+<td style="vertical-align: top !important;">資源配置、有效性與改善閉環。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">25~35. RACI、ISO條文、Annex A、表單清單、保存、稽核、CAPA、Checklist與流程銜接</td>
+<td style="vertical-align: top !important;">建立責任分工、條文與控制對應、表單清單、文件保存、稽核查核與持續改善。</td>
+<td style="vertical-align: top !important;">完整可稽核資源管理程序。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>適用於ISMS範圍內所有部門、流程、資訊資產、系統、資料、雲端服務、供應商、外包流程、資料中心、應用程式、AI系統、PII處理活動、GHG/CO2資料與關鍵營運服務。</li>
+<li>適用於年度資源規劃、專案資源規劃、重大變更資源規劃、風險處理資源、事件應變資源、稽核驗證資源、監控量測資源及CAPA改善資源。</li>
+<li>適用於人力、能力、預算、技術工具、基礎設施、資料資源、文件化資訊、外部服務、專家顧問、驗證與稽核資源之管理。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS資源</td>
+<td style="vertical-align: top !important;">組織為建立、實施、維持與持續改善ISMS所需之人員、能力、工具、技術、預算、設施、資料、供應商、時間與管理支持。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源需求</td>
+<td style="vertical-align: top !important;">為達成資訊安全目標、處理風險、執行控制、維持營運或符合稽核要求所需之具體資源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源Owner</td>
+<td style="vertical-align: top !important;">對特定資源之規劃、取得、配置、使用效率、維護與改善負責之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力資源</td>
+<td style="vertical-align: top !important;">執行ISMS活動所需之知識、技能、經驗、資格與訓練能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術資源</td>
+<td style="vertical-align: top !important;">支援資訊安全控制與營運之系統、工具、平台、監控、弱點掃描、SIEM、IAM、備份、EDR、DLP、雲端安全工具等。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部資源</td>
+<td style="vertical-align: top !important;">由供應商、顧問、驗證機構、雲端服務商、外包單位或專家提供之資源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源缺口</td>
+<td style="vertical-align: top !important;">現有資源無法滿足ISMS目標、風險處理、控制要求、事件應變或合規要求之差距。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源有效性</td>
+<td style="vertical-align: top !important;">資源是否足以支援目標達成、風險降低、控制有效、事件處理、稽核符合及持續改善之程度。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源升級</td>
+<td style="vertical-align: top !important;">當資源不足造成重大風險、目標未達、控制失效或不符合時，提交CISO、管理審查或最高管理階層決策之過程。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 資源管理原則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">原則</th>
+<th style="vertical-align: top !important;">說明</th>
+<th style="vertical-align: top !important;">管理要求</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">風險導向</td>
+<td style="vertical-align: top !important;">資源配置應優先支援高風險、重大控制缺口、法規合約義務與關鍵服務。</td>
+<td style="vertical-align: top !important;">資源需求應與風險登錄、SoA、資訊安全目標與管理審查連結。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標導向</td>
+<td style="vertical-align: top !important;">資源應支援資訊安全目標、KPI/KRI與管理系統績效。</td>
+<td style="vertical-align: top !important;">資源不足造成目標未達時，應啟動升級與改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全生命週期</td>
+<td style="vertical-align: top !important;">資源管理涵蓋需求識別、取得、配置、使用、維護、檢討、退場與改善。</td>
+<td style="vertical-align: top !important;">所有重要資源需有Owner、用途、證據與審查週期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">整合治理</td>
+<td style="vertical-align: top !important;">ISMS資源應與隱私、AI、GHG、雲端與供應鏈治理整合規劃。</td>
+<td style="vertical-align: top !important;">避免資源重複、孤島化與責任不清。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">可稽核性</td>
+<td style="vertical-align: top !important;">資源決策、配置、檢討與改善應保留文件化資訊。</td>
+<td style="vertical-align: top !important;">資源清冊、預算、核准、績效與管理審查紀錄需保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">持續改善</td>
+<td style="vertical-align: top !important;">資源有效性應定期檢討，並依事件、稽核、PIR、CAPA與管理審查改善。</td>
+<td style="vertical-align: top !important;">資源缺口應形成行動計畫、預算或改善案。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 資源類別與管理範圍</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">資源類別</th>
+<th style="vertical-align: top !important;">範圍說明</th>
+<th style="vertical-align: top !important;">主要Owner</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">人力資源</td>
+<td style="vertical-align: top !important;">ISMS管理代表、CISO、風險管理、控制Owner、SOC、IT、DPO、AI治理、稽核與文件管理人員。</td>
+<td style="vertical-align: top !important;">CISO / HR / 部門主管</td>
+<td style="vertical-align: top !important;">角色任命、RACI、職務說明、出勤與工時證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力與訓練資源</td>
+<td style="vertical-align: top !important;">ISMS運作所需能力、訓練、證照、意識宣導、專業技能與稽核能力。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄、證照、評估結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算與財務資源</td>
+<td style="vertical-align: top !important;">安全工具、顧問、驗證、教育訓練、雲端服務、監控、風險處理與改善預算。</td>
+<td style="vertical-align: top !important;">財務 / CISO</td>
+<td style="vertical-align: top !important;">年度預算、核准紀錄、採購單、費用報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術與工具資源</td>
+<td style="vertical-align: top !important;">SIEM、SOC、EDR、DLP、IAM、PAM、弱掃、CSPM、備份、加密、工單、GRC與監控平台。</td>
+<td style="vertical-align: top !important;">IT / CISO / Tool Owner</td>
+<td style="vertical-align: top !important;">工具清冊、授權、維護紀錄、監控報表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">基礎設施與設施資源</td>
+<td style="vertical-align: top !important;">資料中心、機房、網路、伺服器、端點、雲端平台、電力、冷卻、環控、門禁與備援。</td>
+<td style="vertical-align: top !important;">IT / Facilities</td>
+<td style="vertical-align: top !important;">資產清冊、設施維護、環境監控、復原測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料與資訊資源</td>
+<td style="vertical-align: top !important;">資產清冊、風險資料、日誌、監控資料、PII清冊、AI資料集、GHG/CO2資料、證據資料。</td>
+<td style="vertical-align: top !important;">Data Owner / ISMS代表</td>
+<td style="vertical-align: top !important;">資料清冊、存取權限、保存紀錄、品質檢查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部服務與供應商資源</td>
+<td style="vertical-align: top !important;">雲端服務商、MSSP、顧問、驗證機構、外包商、法務顧問、AI供應商與資料處理者。</td>
+<td style="vertical-align: top !important;">採購 / 供應商管理</td>
+<td style="vertical-align: top !important;">合約、SLA、DPA、SOC報告、供應商評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">時間與管理支持</td>
+<td style="vertical-align: top !important;">管理審查、CAB/ECAB、風險審查、稽核、事件應變、演練與改善所需時間與決策支持。</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+<td style="vertical-align: top !important;">會議紀錄、決策紀錄、管理審查輸入輸出。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 資源管理流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">流程階段</th>
+<th style="vertical-align: top !important;">主要活動</th>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">輸出</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1. 識別需求</td>
+<td style="vertical-align: top !important;">依ISMS目標、風險、控制、稽核、事件、變更與合規要求識別資源需求。</td>
+<td style="vertical-align: top !important;">目標、風險登錄、SoA、事件、稽核發現</td>
+<td style="vertical-align: top !important;">資源需求清單</td>
+<td style="vertical-align: top !important;">ISMS代表 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2. 評估缺口</td>
+<td style="vertical-align: top !important;">比較現有資源與需求，評估資源不足之風險與影響。</td>
+<td style="vertical-align: top !important;">資源清冊、能力矩陣、工具清冊</td>
+<td style="vertical-align: top !important;">資源缺口分析</td>
+<td style="vertical-align: top !important;">資源Owner / 風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">3. 規劃與優先順序</td>
+<td style="vertical-align: top !important;">依風險、合規、目標與營運影響排定資源優先順序。</td>
+<td style="vertical-align: top !important;">缺口分析、風險等級、預算限制</td>
+<td style="vertical-align: top !important;">資源規劃表</td>
+<td style="vertical-align: top !important;">CISO / 財務 / 管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4. 核准與取得</td>
+<td style="vertical-align: top !important;">取得預算、人力、工具、供應商或管理支持。</td>
+<td style="vertical-align: top !important;">資源規劃表、商業理由</td>
+<td style="vertical-align: top !important;">核准紀錄、採購/任命/合約</td>
+<td style="vertical-align: top !important;">最高管理階層 / 採購 / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5. 配置與實施</td>
+<td style="vertical-align: top !important;">將資源配置至流程、控制、系統、專案、事件或改善行動。</td>
+<td style="vertical-align: top !important;">核准資源、配置計畫</td>
+<td style="vertical-align: top !important;">配置紀錄、工具啟用、任務分派</td>
+<td style="vertical-align: top !important;">資源Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6. 監督有效性</td>
+<td style="vertical-align: top !important;">監控資源使用、績效、負荷、能力、成本與控制效果。</td>
+<td style="vertical-align: top !important;">KPI/KRI、監控報表、稽核結果</td>
+<td style="vertical-align: top !important;">資源績效報告</td>
+<td style="vertical-align: top !important;">ISMS代表 / 資源Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7. 檢討與改善</td>
+<td style="vertical-align: top !important;">將缺口、失效、逾期或不足納入管理審查與CAPA。</td>
+<td style="vertical-align: top !important;">績效報告、稽核、事件、CAPA</td>
+<td style="vertical-align: top !important;">改善計畫、管理審查輸入</td>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 年度ISMS資源規劃程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">步驟</th>
+<th style="vertical-align: top !important;">作業內容</th>
+<th style="vertical-align: top !important;">輸入資料</th>
+<th style="vertical-align: top !important;">審查重點</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">7.1</td>
+<td style="vertical-align: top !important;">彙整年度ISMS目標、風險處理計畫、SoA控制與稽核驗證計畫。</td>
+<td style="vertical-align: top !important;">資訊安全目標、風險登錄、SoA、稽核計畫</td>
+<td style="vertical-align: top !important;">是否涵蓋重大風險與合規要求。</td>
+<td style="vertical-align: top !important;">年度資源需求清單</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2</td>
+<td style="vertical-align: top !important;">盤點現有人力、能力、工具、預算、供應商與基礎設施。</td>
+<td style="vertical-align: top !important;">資源清冊、能力矩陣、工具清冊、預算紀錄</td>
+<td style="vertical-align: top !important;">現有資源是否仍有效且足夠。</td>
+<td style="vertical-align: top !important;">資源盤點結果</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.3</td>
+<td style="vertical-align: top !important;">分析資源缺口與不足可能造成之風險。</td>
+<td style="vertical-align: top !important;">缺口分析、KRI、事件與CAPA紀錄</td>
+<td style="vertical-align: top !important;">是否形成高風險或不符合。</td>
+<td style="vertical-align: top !important;">資源缺口與風險分析</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4</td>
+<td style="vertical-align: top !important;">提出資源取得、調整、增補或替代方案。</td>
+<td style="vertical-align: top !important;">商業理由、風險降低效益、成本效益</td>
+<td style="vertical-align: top !important;">是否具風險導向與成本合理性。</td>
+<td style="vertical-align: top !important;">年度資源規劃表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5</td>
+<td style="vertical-align: top !important;">送交CISO、財務、管理階層審查核准。</td>
+<td style="vertical-align: top !important;">資源規劃表、預算提案</td>
+<td style="vertical-align: top !important;">是否與策略、目標與風險相符。</td>
+<td style="vertical-align: top !important;">核准紀錄與預算配置</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.6</td>
+<td style="vertical-align: top !important;">依核准結果配置資源並建立追蹤機制。</td>
+<td style="vertical-align: top !important;">核准紀錄、採購/任命/配置資料</td>
+<td style="vertical-align: top !important;">Owner、期限、證據是否明確。</td>
+<td style="vertical-align: top !important;">資源配置與追蹤紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 資源需求識別來源</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">來源</th>
+<th style="vertical-align: top !important;">資源需求範例</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織情境與關注方需求</td>
+<td style="vertical-align: top !important;">新法規、客戶稽核、供應鏈要求、地區擴張造成之資源需求。</td>
+<td style="vertical-align: top !important;">ISMS代表 / 法務</td>
+<td style="vertical-align: top !important;">組織情境分析、關注方需求清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標</td>
+<td style="vertical-align: top !important;">為達成KPI/KRI、降低事件、提高訓練完成率或弱點修補率所需資源。</td>
+<td style="vertical-align: top !important;">目標Owner</td>
+<td style="vertical-align: top !important;">資訊安全目標規劃表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險評估與處理</td>
+<td style="vertical-align: top !important;">高風險控制、補償措施、工具導入、外部專家或預算需求。</td>
+<td style="vertical-align: top !important;">風險Owner</td>
+<td style="vertical-align: top !important;">風險登錄、風險處理計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA與Annex A控制</td>
+<td style="vertical-align: top !important;">控制實施、監控、驗證與證據保存所需工具、人力或程序。</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">SoA、控制證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件、弱點與威脅情資</td>
+<td style="vertical-align: top !important;">SOC監控、EDR、弱掃、應變演練、鑑識、事件通報資源。</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">事件紀錄、威脅情資報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">變更與專案</td>
+<td style="vertical-align: top !important;">新系統、新雲端、新AI系統、資料中心變更或供應商變更資源。</td>
+<td style="vertical-align: top !important;">Change Owner / PMO</td>
+<td style="vertical-align: top !important;">變更申請、專案計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核與外部驗證</td>
+<td style="vertical-align: top !important;">稽核人員、稽核工具、驗證機構、改善行動資源。</td>
+<td style="vertical-align: top !important;">稽核主管 / ISMS代表</td>
+<td style="vertical-align: top !important;">稽核計畫、驗證報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / 復原 / GHG專項治理</td>
+<td style="vertical-align: top !important;">隱私風險評估、AI風險評估、復原測試、碳資料治理所需資源。</td>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">專項評估與治理紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA與持續改善</td>
+<td style="vertical-align: top !important;">矯正措施、根因改善、訓練、工具補強或流程再設計資源。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">CAPA紀錄、有效性驗證</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 資源需求登錄表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">需求編號</th>
+<th style="vertical-align: top !important;">需求來源</th>
+<th style="vertical-align: top !important;">資源類別</th>
+<th style="vertical-align: top !important;">需求說明</th>
+<th style="vertical-align: top !important;">風險/目標連結</th>
+<th style="vertical-align: top !important;">優先順序</th>
+<th style="vertical-align: top !important;">需求Owner</th>
+<th style="vertical-align: top !important;">期限</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-001</td>
+<td style="vertical-align: top !important;">□ 目標　□ 風險　□ 稽核　□ 事件　□ 變更　□ 合規</td>
+<td style="vertical-align: top !important;">□ 人力　□ 能力　□ 預算　□ 工具　□ 供應商　□ 基礎設施</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R/OBJ-___</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-002</td>
+<td style="vertical-align: top !important;">□ 目標　□ 風險　□ 稽核　□ 事件　□ 變更　□ 合規</td>
+<td style="vertical-align: top !important;">□ 人力　□ 能力　□ 預算　□ 工具　□ 供應商　□ 基礎設施</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R/OBJ-___</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-003</td>
+<td style="vertical-align: top !important;">□ 目標　□ 風險　□ 稽核　□ 事件　□ 變更　□ 合規</td>
+<td style="vertical-align: top !important;">□ 人力　□ 能力　□ 預算　□ 工具　□ 供應商　□ 基礎設施</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R/OBJ-___</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-004</td>
+<td style="vertical-align: top !important;">□ 目標　□ 風險　□ 稽核　□ 事件　□ 變更　□ 合規</td>
+<td style="vertical-align: top !important;">□ 人力　□ 能力　□ 預算　□ 工具　□ 供應商　□ 基礎設施</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R/OBJ-___</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 資源缺口分析表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">資源類別</th>
+<th style="vertical-align: top !important;">現有資源</th>
+<th style="vertical-align: top !important;">所需資源</th>
+<th style="vertical-align: top !important;">缺口描述</th>
+<th style="vertical-align: top !important;">缺口風險</th>
+<th style="vertical-align: top !important;">建議處置</th>
+<th style="vertical-align: top !important;">責任人</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">人力資源</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 增聘　□ 外包　□ 重新配置　□ 接受</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力/訓練</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 訓練　□ 證照　□ 顧問　□ 知識移轉</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 增列預算　□ 分期　□ 重新排序　□ 升級核准</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術工具</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 採購　□ 升級　□ 整合　□ 替代方案</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">基礎設施/設施</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 擴充　□ 備援　□ 維護　□ 復原方案</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部服務/供應商</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 新增供應商　□ SLA調整　□ 顧問　□ 替代方案</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料與證據資源</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">□ 資料治理　□ 權限控管　□ 品質檢查　□ 保存改善</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 資源優先順序評估矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">評估因素</th>
+<th style="vertical-align: top !important;">權重/判定</th>
+<th style="vertical-align: top !important;">高優先條件</th>
+<th style="vertical-align: top !important;">評估結果</th>
+<th style="vertical-align: top !important;">備註</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">風險等級</td>
+<td style="vertical-align: top !important;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top !important;">高風險或極高風險需優先配置資源。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規/合約義務</td>
+<td style="vertical-align: top !important;">□ 無　□ 有</td>
+<td style="vertical-align: top !important;">涉及法律、監管、客戶SLA、資料處理條款或主管機關要求。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標影響</td>
+<td style="vertical-align: top !important;">□ 無　□ 有</td>
+<td style="vertical-align: top !important;">影響年度資訊安全目標、KPI/KRI或管理承諾。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制措施有效性</td>
+<td style="vertical-align: top !important;">□ 無影響　□ 有影響</td>
+<td style="vertical-align: top !important;">控制無法有效實施或證據不足。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援、復原與營運持續影響</td>
+<td style="vertical-align: top !important;">□ 無　□ 有</td>
+<td style="vertical-align: top !important;">影響關鍵服務、RTO/RPO或客戶可用性。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / GHG專項影響</td>
+<td style="vertical-align: top !important;">□ 無　□ 有</td>
+<td style="vertical-align: top !important;">涉及PII、AI、復原或碳資料治理重大缺口。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">成本效益與可行性</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">低成本高風險降低效益或具急迫性。</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>12. 人力資源管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">管理項目</th>
+<th style="vertical-align: top !important;">要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">角色任命</td>
+<td style="vertical-align: top !important;">ISMS關鍵角色應正式任命，包含CISO、ISMS代表、風險管理、Control Owner、文件管制、內部稽核、事件應變及專項Owner。</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+<td style="vertical-align: top !important;">任命紀錄、RACI、職務說明</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人力配置</td>
+<td style="vertical-align: top !important;">關鍵流程應有足夠人力與備援，避免單點人力依賴。</td>
+<td style="vertical-align: top !important;">部門主管 / CISO</td>
+<td style="vertical-align: top !important;">人力配置表、代理人清單</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">職責分離</td>
+<td style="vertical-align: top !important;">涉及核准、執行、驗證、稽核及風險接受之角色應適當分離。</td>
+<td style="vertical-align: top !important;">ISMS代表 / HR</td>
+<td style="vertical-align: top !important;">RACI、權限矩陣</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">工作負荷監控</td>
+<td style="vertical-align: top !important;">SOC、事件應變、弱點修補、稽核與CAPA等高負荷活動應監控工時與瓶頸。</td>
+<td style="vertical-align: top !important;">部門主管</td>
+<td style="vertical-align: top !important;">工時、案件量、KPI/KRI</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部支援</td>
+<td style="vertical-align: top !important;">人力不足時可使用顧問、MSSP、外包或專家支援，但需完成供應商審查與保密要求。</td>
+<td style="vertical-align: top !important;">採購 / CISO</td>
+<td style="vertical-align: top !important;">合約、NDA、供應商評估</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 能力與訓練資源管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">能力領域</th>
+<th style="vertical-align: top !important;">所需能力</th>
+<th style="vertical-align: top !important;">資源安排</th>
+<th style="vertical-align: top !important;">證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理</td>
+<td style="vertical-align: top !important;">ISO/IEC 27001條款、風險管理、控制措施、文件化資訊、稽核與管理審查。</td>
+<td style="vertical-align: top !important;">訓練、證照、內部工作坊、顧問輔導。</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄、證照</td>
+<td style="vertical-align: top !important;">ISMS代表 / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理</td>
+<td style="vertical-align: top !important;">風險識別、分析、評估、處理、剩餘風險接受與KRI。</td>
+<td style="vertical-align: top !important;">ISO 27005、ISO 31000訓練。</td>
+<td style="vertical-align: top !important;">風險評估紀錄、訓練證據</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">安全營運</td>
+<td style="vertical-align: top !important;">SOC、SIEM、EDR、事件應變、威脅情資、弱點管理與鑑識。</td>
+<td style="vertical-align: top !important;">技術訓練、演練、MSSP支援。</td>
+<td style="vertical-align: top !important;">演練紀錄、工具操作紀錄</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私保護</td>
+<td style="vertical-align: top !important;">PII處理、隱私風險評估、資料處理條款、資料主體權利與隱私事件通報。</td>
+<td style="vertical-align: top !important;">隱私訓練、DPO訓練、法務支援。</td>
+<td style="vertical-align: top !important;">隱私風險評估、訓練紀錄</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">AI風險、模型卡、人類監督、AI安全與AI供應商管理。</td>
+<td style="vertical-align: top !important;">AI治理訓練、AI風險工作坊。</td>
+<td style="vertical-align: top !important;">AI清冊、模型卡、AI風險評估</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援與復原</td>
+<td style="vertical-align: top !important;">RTO/RPO、備份、備援、復原程序、演練與危機管理。</td>
+<td style="vertical-align: top !important;">復原訓練、復原演練。</td>
+<td style="vertical-align: top !important;">復原演練、還原測試、備援測試</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">稽核原則、稽核計畫、訪談、抽樣、發現撰寫與CAPA追蹤。</td>
+<td style="vertical-align: top !important;">ISO 19011與內稽員訓練。</td>
+<td style="vertical-align: top !important;">稽核員資格、稽核紀錄</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 預算與財務資源管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">預算類別</th>
+<th style="vertical-align: top !important;">內容</th>
+<th style="vertical-align: top !important;">規劃要求</th>
+<th style="vertical-align: top !important;">核准角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">年度ISMS預算</td>
+<td style="vertical-align: top !important;">ISMS營運、人力、工具、稽核、驗證、訓練與改善預算。</td>
+<td style="vertical-align: top !important;">年度規劃並連結目標、風險與管理審查。</td>
+<td style="vertical-align: top !important;">最高管理階層 / 財務</td>
+<td style="vertical-align: top !important;">年度預算、核准紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險處理預算</td>
+<td style="vertical-align: top !important;">高風險控制、補償措施、工具導入、供應商改善。</td>
+<td style="vertical-align: top !important;">應依風險優先順序配置。</td>
+<td style="vertical-align: top !important;">CISO / 風險Owner</td>
+<td style="vertical-align: top !important;">風險處理計畫、預算申請</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件應變預算</td>
+<td style="vertical-align: top !important;">鑑識、外部專家、法律顧問、危機溝通、額外監控。</td>
+<td style="vertical-align: top !important;">應保留緊急預備額或快速核准機制。</td>
+<td style="vertical-align: top !important;">CISO / 高階管理</td>
+<td style="vertical-align: top !important;">事件預算紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練與能力預算</td>
+<td style="vertical-align: top !important;">內外部訓練、證照、演練、專家工作坊。</td>
+<td style="vertical-align: top !important;">應連結能力缺口與年度訓練計畫。</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">訓練計畫、費用紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證與稽核預算</td>
+<td style="vertical-align: top !important;">內部稽核、外部驗證、客戶稽核支援、顧問輔導。</td>
+<td style="vertical-align: top !important;">需納入年度驗證與改善週期。</td>
+<td style="vertical-align: top !important;">ISMS代表 / 財務</td>
+<td style="vertical-align: top !important;">驗證報價、採購紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端與供應商預算</td>
+<td style="vertical-align: top !important;">SaaS、MSSP、雲端安全、SOC服務、外包服務。</td>
+<td style="vertical-align: top !important;">需完成供應商審查與合約管理。</td>
+<td style="vertical-align: top !important;">採購 / CISO</td>
+<td style="vertical-align: top !important;">合約、SLA、採購紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 技術與工具資源管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">工具/技術類別</th>
+<th style="vertical-align: top !important;">用途</th>
+<th style="vertical-align: top !important;">最低管理要求</th>
+<th style="vertical-align: top !important;">Owner</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">GRC/ISMS管理工具</td>
+<td style="vertical-align: top !important;">風險、控制、SoA、稽核、CAPA與證據管理。</td>
+<td style="vertical-align: top !important;">需具備權限、版本、稽核軌跡與備份。</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">工具清冊、權限、紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SIEM / 日誌管理</td>
+<td style="vertical-align: top !important;">集中蒐集、分析、告警與事件調查。</td>
+<td style="vertical-align: top !important;">日誌來源、保留期間、告警規則與監控責任明確。</td>
+<td style="vertical-align: top !important;">SOC</td>
+<td style="vertical-align: top !important;">SIEM報表、告警紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">EDR / 防護工具</td>
+<td style="vertical-align: top !important;">端點偵測、防護、隔離與回應。</td>
+<td style="vertical-align: top !important;">覆蓋率、健康狀態、告警處理與例外管理。</td>
+<td style="vertical-align: top !important;">CISO / IT</td>
+<td style="vertical-align: top !important;">EDR報表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">弱點掃描與修補工具</td>
+<td style="vertical-align: top !important;">弱點識別、評分、追蹤與重測。</td>
+<td style="vertical-align: top !important;">掃描範圍、頻率、SLA與重測證據明確。</td>
+<td style="vertical-align: top !important;">弱點管理負責人</td>
+<td style="vertical-align: top !important;">弱掃報告、修補紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">IAM / PAM / MFA</td>
+<td style="vertical-align: top !important;">身分、權限、特權帳號與多因素驗證。</td>
+<td style="vertical-align: top !important;">最小權限、職責分離、定期覆核與異常監控。</td>
+<td style="vertical-align: top !important;">IAM Owner</td>
+<td style="vertical-align: top !important;">權限覆核紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份與復原工具</td>
+<td style="vertical-align: top !important;">資料備份、快照、還原與復原支援。</td>
+<td style="vertical-align: top !important;">備份成功率、還原測試、RTO/RPO與加密。</td>
+<td style="vertical-align: top !important;">備份管理負責人</td>
+<td style="vertical-align: top !important;">備份/還原報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端安全工具</td>
+<td style="vertical-align: top !important;">CSPM、CWPP、雲端日誌、金鑰、網路與組態安全。</td>
+<td style="vertical-align: top !important;">基準檢查、組態告警、權限與區域控管。</td>
+<td style="vertical-align: top !important;">Cloud Owner</td>
+<td style="vertical-align: top !important;">CSPM報表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理工具</td>
+<td style="vertical-align: top !important;">模型清冊、模型監控、偏誤測試、Prompt與輸出監控。</td>
+<td style="vertical-align: top !important;">需支援AI風險、模型版本與人工監督證據。</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI監控與模型卡</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 基礎設施、設施與環境資源管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">資源類別</th>
+<th style="vertical-align: top !important;">管理要求</th>
+<th style="vertical-align: top !important;">監督方式</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資料中心/機房</td>
+<td style="vertical-align: top !important;">門禁、電力、冷卻、消防、環境監控、容量與維護需受控。</td>
+<td style="vertical-align: top !important;">定期巡檢、環境告警、維護紀錄。</td>
+<td style="vertical-align: top !important;">Facilities / IT</td>
+<td style="vertical-align: top !important;">門禁、巡檢、環控紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">網路基礎設施</td>
+<td style="vertical-align: top !important;">防火牆、路由、交換、VPN、零信任與分段需有容量與安全管理。</td>
+<td style="vertical-align: top !important;">組態審查、監控、容量報表。</td>
+<td style="vertical-align: top !important;">Network Owner</td>
+<td style="vertical-align: top !important;">組態紀錄、監控報表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">伺服器與端點</td>
+<td style="vertical-align: top !important;">資產盤點、修補、組態、EDR、加密與生命週期管理。</td>
+<td style="vertical-align: top !important;">資產清冊、弱掃、EDR健康狀態。</td>
+<td style="vertical-align: top !important;">IT Operations</td>
+<td style="vertical-align: top !important;">資產與修補紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端平台</td>
+<td style="vertical-align: top !important;">帳號、區域、網路、日誌、金鑰、組態、成本與容量需受控。</td>
+<td style="vertical-align: top !important;">CSPM、成本報表、監控告警。</td>
+<td style="vertical-align: top !important;">Cloud Owner</td>
+<td style="vertical-align: top !important;">雲端報表、組態證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備援與復原環境</td>
+<td style="vertical-align: top !important;">備援架構、復原站點、復原程序與演練需維持可用。</td>
+<td style="vertical-align: top !important;">復原測試、RTO/RPO報告。</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+<td style="vertical-align: top !important;">復原測試紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">氣候與環境韌性</td>
+<td style="vertical-align: top !important;">高溫、洪水、停電、供水中斷、火災等氣候與環境風險需納入資源規劃。</td>
+<td style="vertical-align: top !important;">氣候風險評估、設施監控、復原演練。</td>
+<td style="vertical-align: top !important;">Facilities / 復原負責人</td>
+<td style="vertical-align: top !important;">氣候風險與演練紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 外部資源與供應商管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">外部資源類型</th>
+<th style="vertical-align: top !important;">管理要求</th>
+<th style="vertical-align: top !important;">必要控制</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">雲端服務商</td>
+<td style="vertical-align: top !important;">需審查服務範圍、SLA、資料位置、日誌、支援與責任分工。</td>
+<td style="vertical-align: top !important;">合約、SLA、資料處理條款、SOC報告、共享責任模型。</td>
+<td style="vertical-align: top !important;">Cloud Owner / 採購</td>
+<td style="vertical-align: top !important;">供應商評估、合約</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">MSSP / SOC服務</td>
+<td style="vertical-align: top !important;">需定義監控範圍、告警SLA、升級流程與事件報告。</td>
+<td style="vertical-align: top !important;">服務規格、SLA、演練、報告審查。</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">MSSP報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">顧問與專家</td>
+<td style="vertical-align: top !important;">需完成保密、利益衝突、交付物品質與知識移轉。</td>
+<td style="vertical-align: top !important;">NDA、SOW、交付驗收、權限控管。</td>
+<td style="vertical-align: top !important;">採購 / 專案Owner</td>
+<td style="vertical-align: top !important;">合約、交付物</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證機構/稽核員</td>
+<td style="vertical-align: top !important;">需確保獨立性、資格、範圍與排程。</td>
+<td style="vertical-align: top !important;">稽核計畫、資格證明、報告。</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">驗證報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI供應商</td>
+<td style="vertical-align: top !important;">需審查資料使用、模型輸出、風險、透明性、人類監督與供應商責任。</td>
+<td style="vertical-align: top !important;">AI供應商評估、資料處理條款、模型條款、監控證據。</td>
+<td style="vertical-align: top !important;">AI治理 / 法務</td>
+<td style="vertical-align: top !important;">AI供應商審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料處理者/外包商</td>
+<td style="vertical-align: top !important;">需管理PII處理、資料保存、刪除、跨境與事件通報。</td>
+<td style="vertical-align: top !important;">資料處理條款、隱私風險評估、供應商審查、通報條款。</td>
+<td style="vertical-align: top !important;">DPO / 採購</td>
+<td style="vertical-align: top !important;">資料處理條款、審查紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 隱私、AI、復原、GHG與供應鏈專項資源管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">專項領域</th>
+<th style="vertical-align: top !important;">資源需求</th>
+<th style="vertical-align: top !important;">管理要求</th>
+<th style="vertical-align: top !important;">Owner</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">隱私治理</td>
+<td style="vertical-align: top !important;">DPO、隱私風險評估工具、PII清冊、資料處理條款、資料主體請求工具與隱私事件資源。</td>
+<td style="vertical-align: top !important;">需確保隱私治理、通報、資料主體權利與委外處理資源充足。</td>
+<td style="vertical-align: top !important;">DPO</td>
+<td style="vertical-align: top !important;">隱私風險評估、PII清冊、請求紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">AI治理人員、模型監控、AI風險工具、模型卡、AI測試與人類監督資源。</td>
+<td style="vertical-align: top !important;">需確保AI系統風險管理、透明性與人工覆核資源充足。</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI清冊、模型卡、AI風險評估</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備份、備援與復原</td>
+<td style="vertical-align: top !important;">關鍵服務復原資源、備份、備援、演練、危機溝通與復原資源。</td>
+<td style="vertical-align: top !important;">需確保RTO/RPO與關鍵服務復原能力。</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+<td style="vertical-align: top !important;">備份紀錄、備援管理紀錄、演練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">碳資料平台、資料Owner、查證資源、資料品質檢查與證據保存資源。</td>
+<td style="vertical-align: top !important;">需確保碳資料完整性、可追溯性與揭露前審查。</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">碳證據清冊、查證紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端與ICT供應鏈</td>
+<td style="vertical-align: top !important;">雲端安全工具、供應商審查、SLA監督、第四方風險管理資源。</td>
+<td style="vertical-align: top !important;">需確保雲端與供應鏈安全責任落實。</td>
+<td style="vertical-align: top !important;">供應商管理 / Cloud Owner</td>
+<td style="vertical-align: top !important;">供應商清冊、SLA報告</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 資源配置與核准表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">需求編號</th>
+<th style="vertical-align: top !important;">資源名稱/項目</th>
+<th style="vertical-align: top !important;">配置方式</th>
+<th style="vertical-align: top !important;">核准狀態</th>
+<th style="vertical-align: top !important;">核准人</th>
+<th style="vertical-align: top !important;">配置日期</th>
+<th style="vertical-align: top !important;">Owner</th>
+<th style="vertical-align: top !important;">備註</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 新增　□ 調整　□ 續約　□ 外包　□ 替代方案</td>
+<td style="vertical-align: top !important;">□ 待審　□ 核准　□ 退回　□ 不核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 新增　□ 調整　□ 續約　□ 外包　□ 替代方案</td>
+<td style="vertical-align: top !important;">□ 待審　□ 核准　□ 退回　□ 不核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 新增　□ 調整　□ 續約　□ 外包　□ 替代方案</td>
+<td style="vertical-align: top !important;">□ 待審　□ 核准　□ 退回　□ 不核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RES-YYYY-004</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 新增　□ 調整　□ 續約　□ 外包　□ 替代方案</td>
+<td style="vertical-align: top !important;">□ 待審　□ 核准　□ 退回　□ 不核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>20. 資源有效性監督與KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">監督項目</th>
+<th style="vertical-align: top !important;">KPI/KRI</th>
+<th style="vertical-align: top !important;">目標/門檻</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">升級條件</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS關鍵角色配置率</td>
+<td style="vertical-align: top !important;">已任命關鍵角色 / 應任命關鍵角色</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">任一關鍵角色缺位</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力達成率</td>
+<td style="vertical-align: top !important;">完成必要訓練或具備資格人員比例</td>
+<td style="vertical-align: top !important;">≥95%</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">低於目標或高風險角色未訓練</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險處理資源準時率</td>
+<td style="vertical-align: top !important;">風險處理資源按期配置率</td>
+<td style="vertical-align: top !important;">≥90%</td>
+<td style="vertical-align: top !important;">每月/每季</td>
+<td style="vertical-align: top !important;">風險管理</td>
+<td style="vertical-align: top !important;">高風險處理逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">安全工具覆蓋率</td>
+<td style="vertical-align: top !important;">EDR、弱掃、監控、備份等工具覆蓋率</td>
+<td style="vertical-align: top !important;">依內部目標</td>
+<td style="vertical-align: top !important;">每月</td>
+<td style="vertical-align: top !important;">CISO / IT</td>
+<td style="vertical-align: top !important;">覆蓋率不足或關鍵資產未納入</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SOC/事件回應能力</td>
+<td style="vertical-align: top !important;">事件處理SLA、告警逾期數、P1/P2處理時間</td>
+<td style="vertical-align: top !important;">符合SLA</td>
+<td style="vertical-align: top !important;">每月</td>
+<td style="vertical-align: top !important;">SOC / CISO</td>
+<td style="vertical-align: top !important;">重大事件逾時</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核與驗證資源準備度</td>
+<td style="vertical-align: top !important;">稽核計畫、稽核員、證據準備完成率</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">稽核前</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+<td style="vertical-align: top !important;">稽核前未完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商資源有效性</td>
+<td style="vertical-align: top !important;">高風險供應商審查完成率、SLA達成率</td>
+<td style="vertical-align: top !important;">依供應商準則</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">高風險供應商未審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源缺口逾期數</td>
+<td style="vertical-align: top !important;">逾期未處理資源缺口件數</td>
+<td style="vertical-align: top !important;">0件</td>
+<td style="vertical-align: top !important;">每月</td>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+<td style="vertical-align: top !important;">任一高風險缺口逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算使用與風險降低效益</td>
+<td style="vertical-align: top !important;">預算執行率與風險降低成果</td>
+<td style="vertical-align: top !important;">依年度計畫</td>
+<td style="vertical-align: top !important;">每季</td>
+<td style="vertical-align: top !important;">CISO / 財務</td>
+<td style="vertical-align: top !important;">重大偏差或效益不足</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 資源缺口與升級處理程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">情境</th>
+<th style="vertical-align: top !important;">判定條件</th>
+<th style="vertical-align: top !important;">處理要求</th>
+<th style="vertical-align: top !important;">升級對象</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">高風險缺口</td>
+<td style="vertical-align: top !important;">資源不足導致高或極高風險無法處理。</td>
+<td style="vertical-align: top !important;">立即提出資源需求、臨時控制與風險接受建議。</td>
+<td style="vertical-align: top !important;">CISO / 最高管理階層</td>
+<td style="vertical-align: top !important;">風險評估、資源需求、會議紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">合規缺口</td>
+<td style="vertical-align: top !important;">資源不足導致法規、合約、資料處理條款、SLA或驗證要求無法滿足。</td>
+<td style="vertical-align: top !important;">啟動法務/合規審查並提出補救計畫。</td>
+<td style="vertical-align: top !important;">法務 / CISO / 管理階層</td>
+<td style="vertical-align: top !important;">合規差距、改善計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件應變能力不足</td>
+<td style="vertical-align: top !important;">監控、鑑識、通報或應變人力不足。</td>
+<td style="vertical-align: top !important;">啟用外部支援、MSSP或緊急預算。</td>
+<td style="vertical-align: top !important;">CISO / Incident Commander</td>
+<td style="vertical-align: top !important;">事件紀錄、資源調度紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">工具或技術不足</td>
+<td style="vertical-align: top !important;">控制工具無法覆蓋關鍵資產或產生重大盲區。</td>
+<td style="vertical-align: top !important;">提出工具導入、擴充或替代控制。</td>
+<td style="vertical-align: top !important;">CISO / IT主管</td>
+<td style="vertical-align: top !important;">工具缺口分析</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力不足</td>
+<td style="vertical-align: top !important;">關鍵角色缺乏必要能力、資格或訓練。</td>
+<td style="vertical-align: top !important;">啟動訓練、外部專家或代理安排。</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">能力缺口與訓練計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算不足</td>
+<td style="vertical-align: top !important;">核准預算不足以支援高優先風險或控制。</td>
+<td style="vertical-align: top !important;">提出風險導向商業理由與管理審查輸入。</td>
+<td style="vertical-align: top !important;">財務 / 最高管理階層</td>
+<td style="vertical-align: top !important;">預算申請、管理審查紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 資源變更與變更管理連結</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">資源變更類型</th>
+<th style="vertical-align: top !important;">是否需啟動變更管理</th>
+<th style="vertical-align: top !important;">常見風險</th>
+<th style="vertical-align: top !important;">必要文件</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">新增或更換安全工具</td>
+<td style="vertical-align: top !important;">□ 是　□ 視影響而定</td>
+<td style="vertical-align: top !important;">組態錯誤、監控中斷、權限風險、資料外洩</td>
+<td style="vertical-align: top !important;">變更申請、影響評估、執行驗證、PIR</td>
+<td style="vertical-align: top !important;">Change Owner / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新增外部供應商或MSSP</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">資料處理、SLA、資料處理條款、供應鏈與第四方風險</td>
+<td style="vertical-align: top !important;">供應商評估、合約、資料處理條款、風險評估</td>
+<td style="vertical-align: top !important;">採購 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端平台或區域變更</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">資料位置、可用性、權限、法規與日誌風險</td>
+<td style="vertical-align: top !important;">變更申請、雲端安全審查、隱私風險評估</td>
+<td style="vertical-align: top !important;">Cloud Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關鍵角色異動</td>
+<td style="vertical-align: top !important;">□ 視影響而定</td>
+<td style="vertical-align: top !important;">職責中斷、權限遺留、知識流失</td>
+<td style="vertical-align: top !important;">RACI更新、權限調整、交接紀錄</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算大幅調整</td>
+<td style="vertical-align: top !important;">□ 視影響而定</td>
+<td style="vertical-align: top !important;">控制延遲、風險處理失效、目標未達</td>
+<td style="vertical-align: top !important;">資源缺口分析、管理審查輸入</td>
+<td style="vertical-align: top !important;">CISO / 財務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">備援、復原或資料中心資源變更</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">RTO/RPO失效、服務中斷、氣候韌性不足</td>
+<td style="vertical-align: top !important;">復原程序更新、復原測試、氣候風險評估</td>
+<td style="vertical-align: top !important;">復原負責人 / Facilities</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 資源管理與風險管理連結</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">風險情境</th>
+<th style="vertical-align: top !important;">資源因素</th>
+<th style="vertical-align: top !important;">風險處理連結</th>
+<th style="vertical-align: top !important;">監督指標</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">弱點修補逾期</td>
+<td style="vertical-align: top !important;">弱點管理人力或工具不足</td>
+<td style="vertical-align: top !important;">新增工具、人力或MSSP支援</td>
+<td style="vertical-align: top !important;">高風險弱點逾期數</td>
+<td style="vertical-align: top !important;">CISO / 弱點管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件偵測不足</td>
+<td style="vertical-align: top !important;">日誌來源不足、SIEM規則不足、人員不足</td>
+<td style="vertical-align: top !important;">擴充SIEM、SOC服務與監控規則</td>
+<td style="vertical-align: top !important;">告警覆蓋率、MTTD/MTTR</td>
+<td style="vertical-align: top !important;">SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PII保護不足</td>
+<td style="vertical-align: top !important;">DPO資源不足、隱私風險評估工具不足</td>
+<td style="vertical-align: top !important;">增加隱私風險評估資源、顧問與自動化工具</td>
+<td style="vertical-align: top !important;">隱私風險評估完成率、隱私事件數</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI風險監控不足</td>
+<td style="vertical-align: top !important;">模型監控、人類監督或AI安全測試資源不足</td>
+<td style="vertical-align: top !important;">增加AI治理與測試資源</td>
+<td style="vertical-align: top !important;">AI事件數、模型監控覆蓋率</td>
+<td style="vertical-align: top !important;">AI治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">復原能力不足</td>
+<td style="vertical-align: top !important;">備援、備份、測試與演練資源不足</td>
+<td style="vertical-align: top !important;">復原資源擴充、演練與備援改善</td>
+<td style="vertical-align: top !important;">RTO/RPO達成率</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商風險過高</td>
+<td style="vertical-align: top !important;">供應商審查人力、工具或替代方案不足</td>
+<td style="vertical-align: top !important;">強化供應商審查、SLA與替代方案</td>
+<td style="vertical-align: top !important;">高風險供應商審查完成率</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 管理審查輸入彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">管理審查輸入</th>
+<th style="vertical-align: top !important;">是否納入</th>
+<th style="vertical-align: top !important;">輸入摘要</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">完成期限</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS資源充足性與有效性</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS代表 / CISO</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大資源缺口與高風險事項</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理 / CISO</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標與資源配置適切性</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">目標Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">安全工具、監控、事件應變與弱點管理資源</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私 / AI / 復原 / GHG專項資源需求</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商、雲端與外部資源風險</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算、訓練、能力與人力改善需求</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR / 財務 / CISO</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>25. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">最高管理階層</th>
+<th style="vertical-align: top !important;">CISO</th>
+<th style="vertical-align: top !important;">ISMS代表</th>
+<th style="vertical-align: top !important;">HR</th>
+<th style="vertical-align: top !important;">財務</th>
+<th style="vertical-align: top !important;">IT/工具Owner</th>
+<th style="vertical-align: top !important;">風險管理</th>
+<th style="vertical-align: top !important;">DPO</th>
+<th style="vertical-align: top !important;">AI治理</th>
+<th style="vertical-align: top !important;">復原/供應商/GHG</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准ISMS資源策略與重大預算</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">識別ISMS資源需求</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">盤點現有資源與缺口</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">規劃與排序資源需求</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">取得與配置資源</td>
+<td style="vertical-align: top !important;">A（重大）</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R（人力）</td>
+<td style="vertical-align: top !important;">R（預算）</td>
+<td style="vertical-align: top !important;">R（工具）</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">監督資源有效性</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">處理資源缺口與升級</td>
+<td style="vertical-align: top !important;">A（重大）</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存資源管理證據</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">提報管理審查</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+</tbody>
+</table>
+<h2>26. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important;">本程序對應內容</th>
+<th style="vertical-align: top !important;">證據位置</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">4.4 ISMS及其過程</td>
+<td style="vertical-align: top !important;">資源支援ISMS過程建立、實施、維持與改善。</td>
+<td style="vertical-align: top !important;">第6、9、20章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.1 領導與承諾</td>
+<td style="vertical-align: top !important;">最高管理階層確保ISMS資源可用。</td>
+<td style="vertical-align: top !important;">第19、21、24、25章</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.3 角色責任與權限</td>
+<td style="vertical-align: top !important;">資源Owner、RACI與關鍵角色配置。</td>
+<td style="vertical-align: top !important;">第12、25章</td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1 風險與機會</td>
+<td style="vertical-align: top !important;">資源需求與缺口連結風險與風險處理。</td>
+<td style="vertical-align: top !important;">第8、10、23章</td>
+<td style="vertical-align: top !important;">風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2 資訊安全目標</td>
+<td style="vertical-align: top !important;">資源支援資訊安全目標達成與KPI/KRI。</td>
+<td style="vertical-align: top !important;">第8、20、24章</td>
+<td style="vertical-align: top !important;">目標Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.3 變更規劃</td>
+<td style="vertical-align: top !important;">資源變更需納入變更管理。</td>
+<td style="vertical-align: top !important;">第22章</td>
+<td style="vertical-align: top !important;">Change Manager</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1 Resources</td>
+<td style="vertical-align: top !important;">本程序定義ISMS資源識別、規劃、提供、監督與改善。</td>
+<td style="vertical-align: top !important;">全表</td>
+<td style="vertical-align: top !important;">CISO / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2 Competence</td>
+<td style="vertical-align: top !important;">能力與訓練資源支援人員能力要求。</td>
+<td style="vertical-align: top !important;">第13章</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.3 Awareness</td>
+<td style="vertical-align: top !important;">資源支援資安認知與訓練。</td>
+<td style="vertical-align: top !important;">第13章</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 Communication</td>
+<td style="vertical-align: top !important;">資源需求、缺口與升級需適當溝通。</td>
+<td style="vertical-align: top !important;">第21、24章</td>
+<td style="vertical-align: top !important;">CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 Documented Information</td>
+<td style="vertical-align: top !important;">資源管理紀錄需受控保存。</td>
+<td style="vertical-align: top !important;">第29章</td>
+<td style="vertical-align: top !important;">文件管制</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.1 Operational Planning and Control</td>
+<td style="vertical-align: top !important;">資源支援控制措施與營運規劃。</td>
+<td style="vertical-align: top !important;">第15、16、17章</td>
+<td style="vertical-align: top !important;">IT / Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1 Performance Evaluation</td>
+<td style="vertical-align: top !important;">KPI/KRI監督資源有效性。</td>
+<td style="vertical-align: top !important;">第20章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2 Internal Audit</td>
+<td style="vertical-align: top !important;">稽核資源與證據支援內部稽核。</td>
+<td style="vertical-align: top !important;">第30章</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3 Management Review</td>
+<td style="vertical-align: top !important;">資源充足性與缺口納入管理審查。</td>
+<td style="vertical-align: top !important;">第24章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.1/10.2 Improvement and Corrective Action</td>
+<td style="vertical-align: top !important;">資源不足導致不符合時啟動CAPA與改善。</td>
+<td style="vertical-align: top !important;">第21、31章</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>27. Annex A與整合治理對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">控制/治理主題</th>
+<th style="vertical-align: top !important;">資源管理關聯</th>
+<th style="vertical-align: top !important;">主要證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">A.5.2 資訊安全角色與責任</td>
+<td style="vertical-align: top !important;">需提供角色任命、人力與責任配置。</td>
+<td style="vertical-align: top !important;">任命紀錄、RACI</td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.8 專案管理中的資訊安全</td>
+<td style="vertical-align: top !important;">專案需配置資安資源與審查能力。</td>
+<td style="vertical-align: top !important;">專案資源計畫</td>
+<td style="vertical-align: top !important;">PMO / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.19~A.5.23 供應商與雲端安全</td>
+<td style="vertical-align: top !important;">外部供應商與雲端服務需配置審查與監督資源。</td>
+<td style="vertical-align: top !important;">供應商評估、SLA、SOC報告</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.24~A.5.28 事件管理</td>
+<td style="vertical-align: top !important;">事件應變需SOC、工具、鑑識、通報與CAPA資源。</td>
+<td style="vertical-align: top !important;">事件資源紀錄</td>
+<td style="vertical-align: top !important;">CISO / SOC</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.29~A.5.30 ICT營運持續</td>
+<td style="vertical-align: top !important;">營運持續需備份、備援、演練與復原資源。</td>
+<td style="vertical-align: top !important;">備份紀錄、復原測試</td>
+<td style="vertical-align: top !important;">復原負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.31 法規、監管與合約要求</td>
+<td style="vertical-align: top !important;">合規義務需法務、證據、工具與審查資源。</td>
+<td style="vertical-align: top !important;">法規清冊、合規審查</td>
+<td style="vertical-align: top !important;">法務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.34 隱私與PII保護</td>
+<td style="vertical-align: top !important;">隱私治理需DPO、隱私風險評估、資料處理條款與隱私事件資源。</td>
+<td style="vertical-align: top !important;">隱私風險評估、PII清冊</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.36~A.5.37 符合性與文件化程序</td>
+<td style="vertical-align: top !important;">需配置文件管理與符合性審查資源。</td>
+<td style="vertical-align: top !important;">文件管制與符合性紀錄</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8 技術控制</td>
+<td style="vertical-align: top !important;">技術控制需工具、平台、監控、測試、備份與人力資源。</td>
+<td style="vertical-align: top !important;">工具清冊、監控報告</td>
+<td style="vertical-align: top !important;">IT / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私治理</td>
+<td style="vertical-align: top !important;">隱私治理資源。</td>
+<td style="vertical-align: top !important;">隱私風險評估、DPO資源、資料處理條款</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理與AI風險管理</td>
+<td style="vertical-align: top !important;">AI治理與AI風險管理資源。</td>
+<td style="vertical-align: top !important;">AI清冊、模型卡、AI風險</td>
+<td style="vertical-align: top !important;">AI治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">碳資料、查證底稿、AI模型能源效率與碳資料安全資源。</td>
+<td style="vertical-align: top !important;">GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">GHG資料治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核管理</td>
+<td style="vertical-align: top !important;">稽核資源與稽核員能力。</td>
+<td style="vertical-align: top !important;">稽核計畫、稽核員資格</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+</tbody>
+</table>
+<h2>28. 資源管理紀錄與表單清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">文件/紀錄</th>
+<th style="vertical-align: top !important;">用途</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">使用時機</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全資源需求表</td>
+<td style="vertical-align: top !important;">提出新增、調整、續約或替代資源需求。</td>
+<td style="vertical-align: top !important;">需求Owner</td>
+<td style="vertical-align: top !important;">發現資源需求或缺口時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源缺口分析表</td>
+<td style="vertical-align: top !important;">分析現有資源與所需資源差距。</td>
+<td style="vertical-align: top !important;">ISMS代表 / CISO</td>
+<td style="vertical-align: top !important;">年度規劃、風險處理、稽核或事件後使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS年度資源規劃表</td>
+<td style="vertical-align: top !important;">年度ISMS資源規劃與預算輸入。</td>
+<td style="vertical-align: top !important;">CISO / 財務</td>
+<td style="vertical-align: top !important;">年度預算編列及管理審查前使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源配置紀錄</td>
+<td style="vertical-align: top !important;">記錄核准、取得與配置狀態。</td>
+<td style="vertical-align: top !important;">資源Owner</td>
+<td style="vertical-align: top !important;">資源核准後至配置完成期間使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源有效性檢討紀錄</td>
+<td style="vertical-align: top !important;">定期檢討資源有效性、KPI/KRI與改善。</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">每季、管理審查前或重大資源變更後使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源與風險/控制對應矩陣</td>
+<td style="vertical-align: top !important;">連結資源、風險、控制與SoA。</td>
+<td style="vertical-align: top !important;">風險管理 / ISMS代表</td>
+<td style="vertical-align: top !important;">資源與控制措施、風險處理或SoA對應時使用。</td>
+</tr>
+</tbody>
+</table>
+<h2>29. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">紀錄項目</th>
+<th style="vertical-align: top !important;">保存責任</th>
+<th style="vertical-align: top !important;">保存位置</th>
+<th style="vertical-align: top !important;">保存期限</th>
+<th style="vertical-align: top !important;">注意事項</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准版ISMS資源管理程序</td>
+<td style="vertical-align: top !important;">文件管制 / ISMS代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">有效期間加R3：至少5年，或依法規/合約要求較長者。</td>
+<td style="vertical-align: top !important;">需保留版本、核准與修訂紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源需求、缺口與年度規劃紀錄</td>
+<td style="vertical-align: top !important;">ISMS代表 / CISO</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / 預算系統</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需連結風險、目標、SoA與管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算、採購與合約紀錄</td>
+<td style="vertical-align: top !important;">財務 / 採購</td>
+<td style="vertical-align: top !important;">財務系統 / 採購系統</td>
+<td style="vertical-align: top !important;">依財務與合約要求，至少5年或較長者。</td>
+<td style="vertical-align: top !important;">涉及供應商需保留合約、SLA、資料處理條款與評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力、訓練與資格紀錄</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">HR系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需支援能力符合性與稽核抽查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">工具、基礎設施與監控資源紀錄</td>
+<td style="vertical-align: top !important;">IT / Tool Owner</td>
+<td style="vertical-align: top !important;">ITSM / 技術平台 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">需保存授權、維護、健康狀態與監控報表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部資源與供應商紀錄</td>
+<td style="vertical-align: top !important;">採購 / 供應商管理</td>
+<td style="vertical-align: top !important;">供應商管理系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">合約有效期間加R3：至少5年，或合約/法規要求較長者。</td>
+<td style="vertical-align: top !important;">需保留供應商審查、SLA與績效紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源有效性與管理審查輸入</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">管理審查文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">重大資源缺口與改善決議需追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料與碳證據相關資源紀錄</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">GHG資料庫 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">依查證與法規要求，至少5年或較長者。</td>
+<td style="vertical-align: top !important;">需保留資料來源、版本、品質檢查與查證證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>30. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資源提供</td>
+<td style="vertical-align: top !important;">最高管理階層是否確保ISMS所需資源可取得？</td>
+<td style="vertical-align: top !important;">資源規劃、預算、管理審查紀錄</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源需求識別</td>
+<td style="vertical-align: top !important;">資源需求是否來自目標、風險、控制、事件、稽核與合規要求？</td>
+<td style="vertical-align: top !important;">資源需求登錄表、風險/目標連結</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源缺口分析</td>
+<td style="vertical-align: top !important;">是否分析現有資源與所需資源差距及其風險？</td>
+<td style="vertical-align: top !important;">缺口分析、風險評估</td>
+<td style="vertical-align: top !important;">CISO / 風險管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力與訓練</td>
+<td style="vertical-align: top !important;">關鍵角色是否具備必要能力與訓練？</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄、證照</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術與工具資源</td>
+<td style="vertical-align: top !important;">安全工具是否具足夠覆蓋率、有效性與維護？</td>
+<td style="vertical-align: top !important;">工具清冊、監控報表、維護紀錄</td>
+<td style="vertical-align: top !important;">IT / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部資源</td>
+<td style="vertical-align: top !important;">供應商、顧問、雲端與外包資源是否受控？</td>
+<td style="vertical-align: top !important;">供應商審查、合約、SLA、資料處理條款</td>
+<td style="vertical-align: top !important;">採購 / 供應商管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源有效性</td>
+<td style="vertical-align: top !important;">是否透過KPI/KRI監督資源有效性？</td>
+<td style="vertical-align: top !important;">資源績效報告、KPI/KRI</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">資源充足性與缺口是否納入管理審查？</td>
+<td style="vertical-align: top !important;">管理審查輸入與決議</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA與改善</td>
+<td style="vertical-align: top !important;">資源不足造成不符合時是否啟動CAPA？</td>
+<td style="vertical-align: top !important;">CAPA、改善計畫、有效性驗證</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>31. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">觸發來源</th>
+<th style="vertical-align: top !important;">問題類型</th>
+<th style="vertical-align: top !important;">處理要求</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資源缺口逾期</td>
+<td style="vertical-align: top !important;">高風險資源需求未按期配置。</td>
+<td style="vertical-align: top !important;">啟動CAPA或管理階層升級。</td>
+<td style="vertical-align: top !important;">CISO / CAPA負責人</td>
+<td style="vertical-align: top !important;">CAPA紀錄、升級紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">目標未達</td>
+<td style="vertical-align: top !important;">資源不足導致資訊安全目標或KPI/KRI未達。</td>
+<td style="vertical-align: top !important;">分析根因並調整資源配置。</td>
+<td style="vertical-align: top !important;">目標Owner</td>
+<td style="vertical-align: top !important;">目標達成報告、改善計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件或重大不符合</td>
+<td style="vertical-align: top !important;">資源不足導致事件擴大、控制失效或稽核不符合。</td>
+<td style="vertical-align: top !important;">啟動根因分析、資源補強與有效性驗證。</td>
+<td style="vertical-align: top !important;">CISO / CAPA負責人</td>
+<td style="vertical-align: top !important;">事件報告、CAPA</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商資源失效</td>
+<td style="vertical-align: top !important;">外部服務未達SLA或無法支援控制需求。</td>
+<td style="vertical-align: top !important;">啟動供應商改善、替代方案或合約調整。</td>
+<td style="vertical-align: top !important;">供應商管理</td>
+<td style="vertical-align: top !important;">SLA報告、供應商CAPA</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力不足</td>
+<td style="vertical-align: top !important;">關鍵角色能力不足或訓練未完成。</td>
+<td style="vertical-align: top !important;">補訓、資格要求、代理安排或外部支援。</td>
+<td style="vertical-align: top !important;">HR / ISMS代表</td>
+<td style="vertical-align: top !important;">訓練紀錄、能力評估</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">工具有效性不足</td>
+<td style="vertical-align: top !important;">工具覆蓋不足、告警品質不佳或維護失效。</td>
+<td style="vertical-align: top !important;">重新配置、調校、升級或替代工具。</td>
+<td style="vertical-align: top !important;">Tool Owner / CISO</td>
+<td style="vertical-align: top !important;">工具改善紀錄</td>
+</tr>
+</tbody>
+</table>
+<h2>32. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th style="vertical-align: top !important;">檢查項目</th>
+<th style="vertical-align: top !important;">完成</th>
+<th style="vertical-align: top !important;">證據/備註</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">程序目的、範圍、角色與管理原則完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源類別與管理範圍已定義</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源需求識別來源完整且與目標、風險、SoA連結</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源缺口分析與優先順序評估已建立</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人力、能力、預算、工具、基礎設施與外部資源管理要求完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私/AI/GHG/供應鏈專項資源已納入</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源配置、核准與升級機制已定義</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI/KRI與資源有效性監督已定義</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源缺口與CAPA/管理審查連結已建立</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO條文、Annex A與整合治理對應完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件化資訊、保存要求與稽核提示完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>33. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<th style="vertical-align: top !important;" ead></th>
+<tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">文件類型</th>
+<th style="vertical-align: top !important;">與本程序之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">MAN</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程整合管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程與條款對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全領導與治理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全治理委員會會議紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI資訊安全與治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全責任任命書</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險管理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險評鑑表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 風險準則與接受準則表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險處理計畫</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 剩餘風險接受單</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI系統資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標規劃表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全目標達成報告</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS變更規劃與管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS變更申請表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS變更影響評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 變更執行與驗證紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 變更實施後審查報告</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全資源需求表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源缺口分析表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS年度資源規劃表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源配置紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源有效性檢討紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源與風險/控制對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 能力、認知與教育訓練管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通矩陣</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS文件總清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件制修訂申請表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS運作規劃與控制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核發現事項追蹤表</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查輸入資料彙整表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊分類分級表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商資訊安全風險評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI工具與資料使用政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 威脅情資分析紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI服務與碳足跡資料資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI/雲端供應商GHG與資訊安全評估表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 實體安全控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 日誌、監控與事件偵測作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI系統安全開發與使用作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊刪除與資料清除作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資料遮罩作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> DLP作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 備份與還原作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 備援管理作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 加密與金鑰管理作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI模型能源效率與碳資料安全作業指導書</td>
+<td style="vertical-align: top !important;">SOP</td>
+<td style="vertical-align: top !important;">作為資源治理、需求識別、缺口分析、年度規劃、配置驗收、專項資源、績效監督、文件保存、稽核、管理審查或CAPA之依據或證據來源。</td>
+<td style="vertical-align: top !important;">於資源識別、規劃、取得、配置、監督、檢討、改善、附件索引與稽核查核時使用。</td>
+</tr>
+</tbody>
+</table>
+<h2>35. Enterprise Certification Declaration</h2>
+<p>本文件為ISMS資源管理之正式企業級程序文件，可支援ISO/IEC 27001:2022 Clause 7.1、7.2、7.3、7.4、7.5、5.1、6.1、6.2、8.1、9.1、9.3及10.2之符合性證明，並支援隱私、AI、GHG/CO2資料治理、供應鏈、雲端與氣候韌性之整合治理稽核證據。實際採用時，應依組織ISMS範圍、治理成熟度、預算流程、人力資源制度、ITSM流程、風險準則、SoA、法規合約要求、隱私/AI/GHG治理需求與驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>
