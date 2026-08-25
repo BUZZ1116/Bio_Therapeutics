@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISMS-075-REG-004 GHG/CO2資料與碳證據清冊</title>
+<style>
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #1f2933;
+  font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.72;
+}
+.page {
+  max-width: 1180px;
+  margin: 28px auto;
+  background: #fff;
+  border: 1px solid #d7dee8;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, .08);
+  padding: 34px 42px 52px;
+}
+h1 {
+  margin: 0 0 6px;
+  color: #163a5f;
+  font-size: 30px;
+}
+.subtitle {
+  color: #52616f;
+  margin: 0 0 24px;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 32px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #2d6f9f;
+  color: #1b4965;
+  font-size: 22px;
+}
+h3 {
+  color: #2a4d69;
+  margin-top: 22px;
+}
+table {
+  margin: 14px 0 22px;
+  font-size: 14px;
+}
+th {
+  background: #d9eaf7;
+  color: #163a5f;
+  text-align: left;
+}
+td {
+  background: #fff;
+}
+ul {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-left: 22px;
+}
+.note {
+  background: #eef6ff;
+  border-left: 5px solid #2d6f9f;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+.warning {
+  background: #fff7ed;
+  border-left: 5px solid #d97706;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+.footer {
+  margin-top: 38px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<main class="page">
+<h1>ISMS-075-REG-004 GHG/CO2資料與碳證據清冊</h1>
+<p class="subtitle">ISMS 文件｜ISO/IEC 27001:2022 Clause 7.5 / Documented Information / Integrated Management System</p>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-075-REG-004</td>
+<td>GHG/CO2資料與碳證據清冊</td>
+<td>第四階：表單與紀錄 / REG / 清冊</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 7.5 / Documented Information / Integrated Management System</td>
+<td>GHG資料Owner / 文件管制負責人</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權管理代表</td>
+<td>受控文件庫 / 管理系統 / ISMS-075 / ISMS-075-REG-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每季或盤查前</td>
+<td>待生效日確定後計算</td>
+<td>GHG資料Owner / 文件管制負責人 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 名詞中英文對照與使用規則</h2>
+<p>下列用語在本組文件中採一致譯名，以利 各類管理系統與永續治理文件整合。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">中文用語</th>
+<th style="vertical-align: top !important; width: 24%;">英文對照</th>
+<th style="vertical-align: top !important; width: 54%;">使用說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">最高管理階層</td>
+<td style="vertical-align: top !important; width: 24%;">Top management</td>
+<td style="vertical-align: top !important; width: 54%;">負責管理系統方向、資源、治理承諾與重要文件核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">管理系統代表</td>
+<td style="vertical-align: top !important; width: 24%;">Management System Representative</td>
+<td style="vertical-align: top !important; width: 54%;">協調管理系統文件、流程介面、稽核、管理審查與改善追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">查證</td>
+<td style="vertical-align: top !important; width: 24%;">Verification</td>
+<td style="vertical-align: top !important; width: 54%;">確認輸出是否符合輸入、規格、準則或要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">確證</td>
+<td style="vertical-align: top !important; width: 24%;">Validation</td>
+<td style="vertical-align: top !important; width: 54%;">確認結果、方法或系統在預期使用情境中是否能達成預期目的。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 清冊目的與證據鏈要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">目的</th>
+<th style="vertical-align: top !important; width: 76%;">要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">建立碳證據鏈</td>
+<td style="vertical-align: top !important; width: 76%;">確保GHG活動數據、排放係數、方法學、計算、查證與公開聲明能互相追溯。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">支援標準要求</td>
+<td style="vertical-align: top !important; width: 76%;">支援 ISO 14064、ISO 14065、ISO 14067、ISO 14068-1 與客戶、供應商、主管機關或揭露要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">保護資料品質</td>
+<td style="vertical-align: top !important; width: 76%;">標示資料來源、期間、邊界、方法、係數版本、資料品質等級與查證狀態。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">連結管理系統</td>
+<td style="vertical-align: top !important; width: 76%;">將碳資料要求連結到 管理系統 產品生命週期、供應商管理、文件保存、管理審查與改善。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 碳資料與證據類別</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 20%;">類別</th>
+<th style="vertical-align: top !important; width: 38%;">例子</th>
+<th style="vertical-align: top !important; width: 42%;">控制重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">Scope 1</td>
+<td style="vertical-align: top !important; width: 38%;">燃料、冷媒、製程排放、車隊燃料。</td>
+<td style="vertical-align: top !important; width: 42%;">保留原始活動數據、單位換算、設備或地點資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">Scope 2</td>
+<td style="vertical-align: top !important; width: 38%;">外購電力、蒸汽、熱能或冷能。</td>
+<td style="vertical-align: top !important; width: 42%;">確認帳單期間、地點、電力憑證、市場基準或地區基準。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">Scope 3</td>
+<td style="vertical-align: top !important; width: 38%;">採購商品、運輸、商務旅行、雲端服務、產品使用或報廢。</td>
+<td style="vertical-align: top !important; width: 42%;">確認供應商資料品質、估算方法與邊界限制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">產品碳足跡</td>
+<td style="vertical-align: top !important; width: 38%;">產品生命週期資料、BOM、製程、能源、運輸與報廢資料。</td>
+<td style="vertical-align: top !important; width: 42%;">連結設計與開發、變更、供應商資料與產品版本。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">碳中和聲明</td>
+<td style="vertical-align: top !important; width: 38%;">減量方案、殘餘排放、抵換或移除證據、聲明文本。</td>
+<td style="vertical-align: top !important; width: 42%;">確認聲明邊界、期間、證據充分性與避免誤導。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. GHG/CO2資料與碳證據清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 6%;">證據編號</th>
+<th style="vertical-align: top !important; width: 12%;">資料 / 證據名稱</th>
+<th style="vertical-align: top !important; width: 8%;">類型</th>
+<th style="vertical-align: top !important; width: 7%;">期間 / 邊界</th>
+<th style="vertical-align: top !important; width: 8%;">來源</th>
+<th style="vertical-align: top !important; width: 7%;">Owner</th>
+<th style="vertical-align: top !important; width: 10%;">方法 / 係數版本</th>
+<th style="vertical-align: top !important; width: 7%;">資料品質等級</th>
+<th style="vertical-align: top !important; width: 7%;">查證狀態</th>
+<th style="vertical-align: top !important; width: 8%;">保存位置</th>
+<th style="vertical-align: top !important; width: 7%;">分級</th>
+<th style="vertical-align: top !important; width: 5%;">保存期限</th>
+<th style="vertical-align: top !important; width: 7%;">關聯聲明 / 揭露</th>
+<th style="vertical-align: top !important; width: 6%;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-001</td>
+<td style="vertical-align: top !important; width: 12%;">組織邊界與報告邊界判定</td>
+<td style="vertical-align: top !important; width: 8%;">方法 / 邊界</td>
+<td style="vertical-align: top !important; width: 7%;">盤查年度</td>
+<td style="vertical-align: top !important; width: 8%;">最高管理階層 / GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 7%;">GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">ISO 14064-1邊界判定</td>
+<td style="vertical-align: top !important; width: 7%;">A</td>
+<td style="vertical-align: top !important; width: 7%;">未查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Boundary</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">GHG盤查報告</td>
+<td style="vertical-align: top !important; width: 6%;">應連結組織全景與營運邊界。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-002</td>
+<td style="vertical-align: top !important; width: 12%;">電費帳單與用電量資料</td>
+<td style="vertical-align: top !important; width: 8%;">活動數據</td>
+<td style="vertical-align: top !important; width: 7%;">月 / 年</td>
+<td style="vertical-align: top !important; width: 8%;">電力公司 / 財務系統</td>
+<td style="vertical-align: top !important; width: 7%;">設施Owner</td>
+<td style="vertical-align: top !important; width: 10%;">Scope 2 location-based / market-based</td>
+<td style="vertical-align: top !important; width: 7%;">A</td>
+<td style="vertical-align: top !important; width: 7%;">待抽樣</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Energy</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">組織盤查、產品碳足跡</td>
+<td style="vertical-align: top !important; width: 6%;">需保留帳單、期間、地點與計量單位。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-003</td>
+<td style="vertical-align: top !important; width: 12%;">燃料採購與使用紀錄</td>
+<td style="vertical-align: top !important; width: 8%;">活動數據</td>
+<td style="vertical-align: top !important; width: 7%;">月 / 年</td>
+<td style="vertical-align: top !important; width: 8%;">採購 / 設施 / 車隊</td>
+<td style="vertical-align: top !important; width: 7%;">設施Owner</td>
+<td style="vertical-align: top !important; width: 10%;">Scope 1燃料燃燒</td>
+<td style="vertical-align: top !important; width: 7%;">B</td>
+<td style="vertical-align: top !important; width: 7%;">待抽樣</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Fuel</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">組織盤查</td>
+<td style="vertical-align: top !important; width: 6%;">需確認單位、密度或換算方法。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-004</td>
+<td style="vertical-align: top !important; width: 12%;">冷媒補充與維修紀錄</td>
+<td style="vertical-align: top !important; width: 8%;">活動數據</td>
+<td style="vertical-align: top !important; width: 7%;">事件 / 年</td>
+<td style="vertical-align: top !important; width: 8%;">維修廠商 / 設施</td>
+<td style="vertical-align: top !important; width: 7%;">設施Owner</td>
+<td style="vertical-align: top !important; width: 10%;">Scope 1逸散排放</td>
+<td style="vertical-align: top !important; width: 7%;">B</td>
+<td style="vertical-align: top !important; width: 7%;">待抽樣</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Refrigerant</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">組織盤查</td>
+<td style="vertical-align: top !important; width: 6%;">需保留冷媒種類、補充量與設備。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-005</td>
+<td style="vertical-align: top !important; width: 12%;">供應商運輸與採購活動數據</td>
+<td style="vertical-align: top !important; width: 8%;">供應鏈資料</td>
+<td style="vertical-align: top !important; width: 7%;">月 / 年</td>
+<td style="vertical-align: top !important; width: 8%;">供應商 / ERP</td>
+<td style="vertical-align: top !important; width: 7%;">採購Owner</td>
+<td style="vertical-align: top !important; width: 10%;">Scope 3計算方法</td>
+<td style="vertical-align: top !important; width: 7%;">C</td>
+<td style="vertical-align: top !important; width: 7%;">待查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Supplier</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">Scope 3、供應商評估</td>
+<td style="vertical-align: top !important; width: 6%;">需評估資料品質與估算假設。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-006</td>
+<td style="vertical-align: top !important; width: 12%;">產品碳足跡生命週期資料表</td>
+<td style="vertical-align: top !important; width: 8%;">產品碳足跡</td>
+<td style="vertical-align: top !important; width: 7%;">產品 / 版本</td>
+<td style="vertical-align: top !important; width: 8%;">研發 / 生產 / 供應商</td>
+<td style="vertical-align: top !important; width: 7%;">產品Owner / GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">ISO 14067方法與邊界</td>
+<td style="vertical-align: top !important; width: 7%;">B</td>
+<td style="vertical-align: top !important; width: 7%;">未查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / PCF</td>
+<td style="vertical-align: top !important; width: 7%;">Highly Confidential / 高度機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">產品聲明、客戶要求</td>
+<td style="vertical-align: top !important; width: 6%;">應連結產品生命週期與設計變更。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-007</td>
+<td style="vertical-align: top !important; width: 12%;">雲端碳排報告 / AI運算估算</td>
+<td style="vertical-align: top !important; width: 8%;">外部資料 / 估算</td>
+<td style="vertical-align: top !important; width: 7%;">月 / 年</td>
+<td style="vertical-align: top !important; width: 8%;">雲端供應商 / IT系統</td>
+<td style="vertical-align: top !important; width: 7%;">IT Owner / GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">供應商方法或內部估算模型</td>
+<td style="vertical-align: top !important; width: 7%;">C</td>
+<td style="vertical-align: top !important; width: 7%;">待確認</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Cloud</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">Scope 3、AIMS</td>
+<td style="vertical-align: top !important; width: 6%;">需記錄供應商邊界、方法與可信度。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-008</td>
+<td style="vertical-align: top !important; width: 12%;">排放係數版本與適用性判定</td>
+<td style="vertical-align: top !important; width: 8%;">係數 / 方法</td>
+<td style="vertical-align: top !important; width: 7%;">盤查年度</td>
+<td style="vertical-align: top !important; width: 8%;">主管機關 / 資料庫</td>
+<td style="vertical-align: top !important; width: 7%;">GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">係數來源、版本、單位、適用性</td>
+<td style="vertical-align: top !important; width: 7%;">A</td>
+<td style="vertical-align: top !important; width: 7%;">待查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Factors</td>
+<td style="vertical-align: top !important; width: 7%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 5%;">PERM</td>
+<td style="vertical-align: top !important; width: 7%;">所有GHG計算</td>
+<td style="vertical-align: top !important; width: 6%;">錯用係數會影響重算與聲明可信度。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-009</td>
+<td style="vertical-align: top !important; width: 12%;">GHG盤查計算工作簿</td>
+<td style="vertical-align: top !important; width: 8%;">計算模型</td>
+<td style="vertical-align: top !important; width: 7%;">盤查年度</td>
+<td style="vertical-align: top !important; width: 8%;">GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 7%;">GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">組織盤查計算方法</td>
+<td style="vertical-align: top !important; width: 7%;">B</td>
+<td style="vertical-align: top !important; width: 7%;">待查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Inventory</td>
+<td style="vertical-align: top !important; width: 7%;">Highly Confidential / 高度機密</td>
+<td style="vertical-align: top !important; width: 5%;">R10</td>
+<td style="vertical-align: top !important; width: 7%;">GHG盤查報告與查證</td>
+<td style="vertical-align: top !important; width: 6%;">應鎖定公式、版本與輸入來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-010</td>
+<td style="vertical-align: top !important; width: 12%;">第三方查證報告與查證意見</td>
+<td style="vertical-align: top !important; width: 8%;">查證 (Verification) 證據</td>
+<td style="vertical-align: top !important; width: 7%;">盤查年度</td>
+<td style="vertical-align: top !important; width: 8%;">查證機構</td>
+<td style="vertical-align: top !important; width: 7%;">GHG資料Owner</td>
+<td style="vertical-align: top !important; width: 10%;">ISO 14064-3 / 查證方案</td>
+<td style="vertical-align: top !important; width: 7%;">A</td>
+<td style="vertical-align: top !important; width: 7%;">已查證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Verification</td>
+<td style="vertical-align: top !important; width: 7%;">Highly Confidential / 高度機密</td>
+<td style="vertical-align: top !important; width: 5%;">PERM</td>
+<td style="vertical-align: top !important; width: 7%;">外部揭露、管理審查</td>
+<td style="vertical-align: top !important; width: 6%;">需保留查證範圍、限制與聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 6%;">GHG-EV-011</td>
+<td style="vertical-align: top !important; width: 12%;">碳中和方案與聲明佐證</td>
+<td style="vertical-align: top !important; width: 8%;">CO2聲明證據</td>
+<td style="vertical-align: top !important; width: 7%;">方案期間</td>
+<td style="vertical-align: top !important; width: 8%;">組織 / 抵換或移除供應者</td>
+<td style="vertical-align: top !important; width: 7%;">GHG資料Owner / 最高管理階層</td>
+<td style="vertical-align: top !important; width: 10%;">ISO 14068-1方法與聲明規則</td>
+<td style="vertical-align: top !important; width: 7%;">B</td>
+<td style="vertical-align: top !important; width: 7%;">待確證</td>
+<td style="vertical-align: top !important; width: 8%;">受控文件庫 / GHG / Carbon Neutrality</td>
+<td style="vertical-align: top !important; width: 7%;">Highly Confidential / 高度機密</td>
+<td style="vertical-align: top !important; width: 5%;">PERM</td>
+<td style="vertical-align: top !important; width: 7%;">碳中和公開聲明</td>
+<td style="vertical-align: top !important; width: 6%;">應包含減量、抵換、殘餘排放與避免誤導聲明證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 資料品質等級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 12%;">等級</th>
+<th style="vertical-align: top !important; width: 52%;">判定準則</th>
+<th style="vertical-align: top !important; width: 36%;">允收與改善要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 12%;">A</td>
+<td style="vertical-align: top !important; width: 52%;">原始證據完整、來源可靠、期間與邊界清楚、單位一致、可直接追溯。</td>
+<td style="vertical-align: top !important; width: 36%;">可作為主要查證證據；<br>仍需抽樣確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 12%;">B</td>
+<td style="vertical-align: top !important; width: 52%;">證據大致完整，但需補充換算、對帳、供應商聲明或方法說明。</td>
+<td style="vertical-align: top !important; width: 36%;">可使用，但應列入改善清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 12%;">C</td>
+<td style="vertical-align: top !important; width: 52%;">資料來自估算、供應商平均值、外部報告或假設，直接證據不足。</td>
+<td style="vertical-align: top !important; width: 36%;">可暫用於估算；<br>若支援公開聲明，應提升資料品質。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 12%;">D</td>
+<td style="vertical-align: top !important; width: 52%;">來源不明、期間不清、單位不一致或無法追溯。</td>
+<td style="vertical-align: top !important; width: 36%;">不得作為查證或公開聲明主要證據；<br>應補件或排除。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 變更與查證控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">控制點</th>
+<th style="vertical-align: top !important; width: 76%;">要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">資料變更</td>
+<td style="vertical-align: top !important; width: 76%;">任何活動數據、係數、方法、邊界或計算公式變更，應保留變更原因、版本與影響分析。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">查證準備</td>
+<td style="vertical-align: top !important; width: 76%;">查證前應凍結證據包版本，並確保證據編號、計算工作簿與報告相互一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">聲明審查</td>
+<td style="vertical-align: top !important; width: 76%;">對外揭露或碳中和聲明前，應確認證據、範圍、期間、限制、核准權責與避免誤導聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">供應商資料</td>
+<td style="vertical-align: top !important; width: 76%;">供應商提供之碳資料應評估方法、邊界、期間、證據層級與是否經第三方查證。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 不符合事項發現與改善追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">不符合事項發現類型</th>
+<th style="vertical-align: top !important; width: 36%;">例子</th>
+<th style="vertical-align: top !important; width: 40%;">改善方向</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">原始資料缺失</td>
+<td style="vertical-align: top !important; width: 36%;">缺少帳單、發票、里程、重量或供應商活動數據。</td>
+<td style="vertical-align: top !important; width: 40%;">建立資料提交流程與截止日。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">係數版本不一致</td>
+<td style="vertical-align: top !important; width: 36%;">不同工作簿使用不同公告係數或單位。</td>
+<td style="vertical-align: top !important; width: 40%;">建立係數版本清單與鎖定機制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">邊界不清</td>
+<td style="vertical-align: top !important; width: 36%;">組織邊界、產品邊界、雲端服務邊界未定義。</td>
+<td style="vertical-align: top !important; width: 40%;">補充邊界判定與管理審查核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">聲明證據不足</td>
+<td style="vertical-align: top !important; width: 36%;">碳中和、減碳或產品碳足跡聲明缺少支持證據。</td>
+<td style="vertical-align: top !important; width: 40%;">暫緩發布並完成確證或查證。</td>
+</tr>
+</tbody>
+</table>
+<h2>相關文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">文件編號</th>
+<th style="vertical-align: top !important; width: 28%;">文件名稱</th>
+<th style="vertical-align: top !important; width: 54%;">關聯說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-PRO-001</td>
+<td style="vertical-align: top !important; width: 28%;">文件化資訊管制程序</td>
+<td style="vertical-align: top !important; width: 54%;">定義文件建立、審查、核准、發布、變更、保存、保護與作廢的共同程序。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-FRM-001</td>
+<td style="vertical-align: top !important; width: 28%;">文件制修訂申請表</td>
+<td style="vertical-align: top !important; width: 54%;">作為新增、修訂、作廢、合併或緊急變更的申請與審批紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-001</td>
+<td style="vertical-align: top !important; width: 28%;">管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 54%;">登錄受控文件、版本、狀態、Owner、適用系統與審查週期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-002</td>
+<td style="vertical-align: top !important; width: 28%;">管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 54%;">定義各類紀錄保存期限、保存位置、保護方式與處置方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-003</td>
+<td style="vertical-align: top !important; width: 28%;">外部來源文件清冊</td>
+<td style="vertical-align: top !important; width: 54%;">管制外部標準、法規、客戶要求、供應商文件與外部方法學。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-MTX-001</td>
+<td style="vertical-align: top !important; width: 28%;">文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 54%;">定義文件分級、角色權限、外部分享與保護要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-SOP-001</td>
+<td style="vertical-align: top !important; width: 28%;">受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 54%;">定義文件庫資料夾、命名、權限、版本、備份與發布作業。</td>
+</tr>
+</tbody>
+</table>
+<h2>版本修訂紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 12%;">版本</th>
+<th style="vertical-align: top !important; width: 13%;">日期</th>
+<th style="vertical-align: top !important; width: 39%;">修訂摘要</th>
+<th style="vertical-align: top !important; width: 12%;">提出 / 修訂</th>
+<th style="vertical-align: top !important; width: 12%;">審查</th>
+<th style="vertical-align: top !important; width: 12%;">核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 12%;">Draft V1.0</td>
+<td style="vertical-align: top !important; width: 13%;">2026-07-01</td>
+<td style="vertical-align: top !important; width: 39%;">建立 ISMS-075 GHG/CO2資料與碳證據清冊草案。</td>
+<td style="vertical-align: top !important; width: 12%;">Codex 產出草案</td>
+<td style="vertical-align: top !important; width: 12%;">管理系統代表 (Management System Representative) / 文件管制負責人 (Document Control Owner)</td>
+<td style="vertical-align: top !important; width: 12%;">最高管理階層 (Top management) / 管理系統治理委員會</td>
+</tr>
+</tbody>
+</table>
+
+<p class="footer">本文件為管理系統文件化資訊試產版本，用於建立 ISMS-075 共用文件架構；<br>正式發行前應完成文件制修訂申請、審查、核准與受控發布。</p>
+</main>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+<script src="../assets/document-dates.js"></script></body>
+</html>

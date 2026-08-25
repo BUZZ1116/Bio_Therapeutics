@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html><body>
+<meta charset="utf-8">
+<title>ISMS-083-FRM-001 資訊安全風險處理計畫表</title>
+<style>body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}
+.isms-document{max-width:7000px;margin:0 auto}
+h1{text-align:center;color:#1f4e79;border-bottom:3px solid #333;padding-bottom:8px}
+h2{margin-top:30px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}
+table{margin:12px 0 22px 0}
+th{background:#d9eaf7;text-align:left}
+td,th{vertical-align:top!important}
+.procedure-note{background:#f4f7fb;border-left:5px solid #5b7fa6;padding:12px 16px;margin:16px 0}
+.small{font-size:13px;color:#555}</style>
+
+
+<section class="isms-document">
+<h1>ISMS-083-FRM-001 資訊安全風險處理計畫表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-083-FRM-001</td>
+<td>資訊安全風險處理計畫表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.1</td>
+<td>R7 / 7 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 6.1.3、8.3；ISO/IEC 27005:2022 第8、9、10章</td>
+<td>資訊安全風險管理負責人 / ISMS管理代表</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-6-8 / ISMS-083-FRM-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資訊安全風險管理負責人 / ISMS管理代表 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:15.20%;">角色</th>
+<th style="vertical-align: top !important; width:15.20%;">姓名</th>
+<th style="vertical-align: top !important; width:15.20%;">職稱</th>
+<th style="vertical-align: top !important; width:15.20%;">簽核/確認</th>
+<th style="vertical-align: top !important; width:15.20%;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">計畫建立</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險Owner / 風險處理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">初審</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 風險管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">Control Owner代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">法務 / 法遵負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / 隱私負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">營運持續 / 復原負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商管理負責人（如適用）</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 最高管理階層授權代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 表單目的</h2>
+<p>本計畫表用於規劃、記錄、核准與追蹤資訊安全風險處理活動，確保不可接受風險、重大剩餘風險、控制缺口、合規風險、供應鏈風險、PII風險、AI風險、營運持續風險與GHG資料治理風險均具備明確處理策略、控制措施、責任人、期限、資源、有效性驗證與剩餘風險接受安排。</p>
+<p>本計畫表是ISO/IEC 27001:2022 Clause 6.1.3「資訊安全風險處理」與Clause 8.3「資訊安全風險處理計畫實施」之核心證據，亦支援適用性聲明、風險登錄表、運作控制計畫、CAPA與管理審查之完整追溯。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:20%;">章節 / 管理主題</th>
+<th style="vertical-align: top !important; width:20%;">如何使用</th>
+<th style="vertical-align: top !important; width:30%;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">0. 文件基本資料、審查與核准</td>
+<td style="vertical-align: top !important;">確認本計畫表之風險管理、風險登錄、風險處理計畫、剩餘風險接受、SoA、運作控制、文件管制與保存期限依據。</td>
+<td style="vertical-align: top !important;">受控資訊安全風險處理計畫、審查核准紀錄與保存依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">1~6. 目的、使用原則、計畫基本資料、關聯風險、處理策略與判定準則</td>
+<td style="vertical-align: top !important;">用於承接風險評鑑與風險登錄結果，確認不可接受風險、處理策略、替代方案、核准層級與接受限制。</td>
+<td style="vertical-align: top !important;">風險處理計畫基本資料、關聯風險清單、處理策略與判定依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7~19. 目標、措施、控制設計、Annex A/SoA、運作控制、資源、時程、RACI、溝通、依賴、例外與臨時控制</td>
+<td style="vertical-align: top !important;">將處理措施轉為控制設計、Annex A與SoA更新、運作控制、資源時程、責任分工、溝通、例外與臨時控制管理。</td>
+<td style="vertical-align: top !important;">處理目標、措施總覽、控制設計、SoA/運作控制對應、資源預算、時程、RACI、溝通與例外紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">20~25. 隱私、AI、供應商/雲端、營運持續、GHG資料與法規合約專項處理</td>
+<td style="vertical-align: top !important;">針對PII、AI、供應商、雲端、營運持續/復原、GHG資料與合規風險，規劃專項措施並取得專項Owner確認。</td>
+<td style="vertical-align: top !important;">專項風險處理規劃、專項Owner確認、合約/法務/客戶通知及GHG資料處理證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">26~38. 進度追蹤、逾期升級、有效性驗證、剩餘風險、接受轉銜、KPI/KRI、文件更新、證據、CAPA、管理審查、品質與關閉</td>
+<td style="vertical-align: top !important;">追蹤處理進度、逾期升級、驗證結果、剩餘風險、接受轉銜、KPI/KRI、文件清冊更新、證據保存、CAPA、管理審查與關閉確認。</td>
+<td style="vertical-align: top !important;">進度追蹤、有效性驗證、剩餘風險接受、KPI/KRI、文件與證據清單、CAPA、管理審查輸入與關閉紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">39~48. 條文、Annex A、整合標準、稽核、RACI、保存、檢查清單、流程銜接、版本與聲明</td>
+<td style="vertical-align: top !important;">建立ISO條文、Annex A、整合標準、稽核查核、責任矩陣、保存要求、完整性檢查、流程銜接與版本修訂依據。</td>
+<td style="vertical-align: top !important;">條文/Annex A/整合標準矩陣、稽核提示、RACI、保存要求、Certification Checklist、流程銜接與版本紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 使用原則</h2>
+<ul>
+<li>所有不可接受風險均應建立本計畫或於合併處理計畫中明確列示。</li>
+<li>風險處理策略應依風險準則與評分表判定，包含降低、避免、轉移、接受或補償控制。</li>
+<li>若處理後仍有中、高或極高剩餘風險，應建立剩餘風險接受申請並取得適當層級核准。</li>
+<li>所有新增、變更或停止控制措施，應同步評估 適用性聲明書 SoA、運作控制計畫、風險登錄表與相關文件是否需更新。</li>
+</ul>
+<h2>3. 風險處理計畫基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="vertical-align: top !important; width:19.00%;">風險處理計畫編號</th>
+<td style="vertical-align: top !important; width:19.00%;">RTP-YYYY-NNN</td>
+<th style="vertical-align: top !important; width:19.00%;">建立日期</th>
+<td style="vertical-align: top !important; width:19.00%;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">計畫名稱</th>
+<td colspan="3" style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 資訊安全風險登錄表<br> 資訊安全風險處理計畫</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">來源風險評鑑</th>
+<td style="vertical-align: top !important;"> / 編號：__________</td>
+<th style="vertical-align: top !important;">來源風險登錄</th>
+<td style="vertical-align: top !important;"> / 版本：__________</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">處理計畫類型</th>
+<td colspan="3" style="vertical-align: top !important;">□ 單一風險　□ 多風險合併　□ 控制缺口改善　□ 重大事件後處理　□ 專項治理處理　□ 管理審查決議</td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 資訊安全風險登錄表<br> 資訊安全風險處理計畫</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">計畫Owner</th>
+<td style="vertical-align: top !important;"></td>
+<th style="vertical-align: top !important;">Action Owner</th>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">預定完成日期</th>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<th style="vertical-align: top !important;">優先順序</th>
+<td style="vertical-align: top !important;">□ P1立即　□ P2高　□ P3中　□ P4低</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">計畫狀態</th>
+<td colspan="3" style="vertical-align: top !important;">□ 草稿　□ 待審查　□ 已核准　□ 執行中　□ 暫停　□ 逾期　□ 待驗證　□ 已完成　□ 已關閉</td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 資訊安全風險登錄表<br> 資訊安全風險處理計畫</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">摘要說明</th>
+<td colspan="3" style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 資訊安全風險登錄表<br> 資訊安全風險處理計畫</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 關聯風險清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">風險編號</th>
+<th style="vertical-align: top !important; width:9.50%;">風險名稱</th>
+<th style="vertical-align: top !important; width:9.50%;">風險類別</th>
+<th style="vertical-align: top !important; width:9.50%;">原風險等級</th>
+<th style="vertical-align: top !important; width:9.50%;">現有控制有效性</th>
+<th style="vertical-align: top !important; width:9.50%;">可接受性</th>
+<th style="vertical-align: top !important; width:9.50%;">處理必要性</th>
+<th style="vertical-align: top !important; width:9.50%;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ ISMS　□ 隱私　□ AI治理　□ 營運持續　□ 供應商　□ 雲端　□ GHG　□ 合規</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分　□ 無效　□ 待確認</td>
+<td style="vertical-align: top !important;">□ 可接受　□ 不可接受　□ 條件接受</td>
+<td style="vertical-align: top !important;">□ 必須處理　□ 建議處理　□ 監督</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ ISMS　□ 隱私　□ AI治理　□ 營運持續　□ 供應商　□ 雲端　□ GHG　□ 合規</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分　□ 無效　□ 待確認</td>
+<td style="vertical-align: top !important;">□ 可接受　□ 不可接受　□ 條件接受</td>
+<td style="vertical-align: top !important;">□ 必須處理　□ 建議處理　□ 監督</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ ISMS　□ 隱私　□ AI治理　□ 營運持續　□ 供應商　□ 雲端　□ GHG　□ 合規</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分　□ 無效　□ 待確認</td>
+<td style="vertical-align: top !important;">□ 可接受　□ 不可接受　□ 條件接受</td>
+<td style="vertical-align: top !important;">□ 必須處理　□ 建議處理　□ 監督</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>5. 風險處理策略選擇</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:12.67%;">風險編號</th>
+<th style="vertical-align: top !important; width:12.67%;">處理策略</th>
+<th style="vertical-align: top !important; width:12.67%;">策略選擇理由</th>
+<th style="vertical-align: top !important; width:12.67%;">替代方案</th>
+<th style="vertical-align: top !important; width:12.67%;">是否需管理階層核准</th>
+<th style="vertical-align: top !important; width:12.67%;">核准層級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-001</td>
+<td style="vertical-align: top !important;">□ 降低　□ 避免　□ 轉移　□ 接受　□ 補償控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-002</td>
+<td style="vertical-align: top !important;">□ 降低　□ 避免　□ 轉移　□ 接受　□ 補償控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-003</td>
+<td style="vertical-align: top !important;">□ 降低　□ 避免　□ 轉移　□ 接受　□ 補償控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 風險處理策略判定準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">策略</th>
+<th style="vertical-align: top !important; width:19.00%;">適用條件</th>
+<th style="vertical-align: top !important; width:19.00%;">限制條件</th>
+<th style="vertical-align: top !important; width:19.00%;">必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">降低</td>
+<td style="vertical-align: top !important;">可透過控制措施降低可能性或衝擊，且業務活動仍需持續。</td>
+<td style="vertical-align: top !important;">控制需可執行、可驗證且具資源支持。</td>
+<td style="vertical-align: top !important;">控制設計、執行計畫、驗證方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">避免</td>
+<td style="vertical-align: top !important;">活動或服務可停止、替代或調整，以移除風險來源。</td>
+<td style="vertical-align: top !important;">不得造成更高合規、營運或客戶風險。</td>
+<td style="vertical-align: top !important;">停止/替代決策、影響評估、溝通紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">轉移</td>
+<td style="vertical-align: top !important;">可透過保險、合約、SLA、外包或責任分工轉移部分風險。</td>
+<td style="vertical-align: top !important;">組織最終責任不可完全移轉，仍需監督。</td>
+<td style="vertical-align: top !important;">合約、SLA、保單、供應商監督證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">接受</td>
+<td style="vertical-align: top !important;">風險符合接受準則或短期內有合理接受理由。</td>
+<td style="vertical-align: top !important;">高/極高風險需高層核准，違法風險不得任意接受。</td>
+<td style="vertical-align: top !important;">剩餘風險接受申請、核准與重評日期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">補償控制</td>
+<td style="vertical-align: top !important;">原控制不可行時，以替代控制達成等效風險降低。</td>
+<td style="vertical-align: top !important;">需證明替代控制有效且有期限。</td>
+<td style="vertical-align: top !important;">補償控制評估、有效性驗證與例外核准。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 風險處理目標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:12.67%;">風險編號</th>
+<th style="vertical-align: top !important; width:12.67%;">處理目標</th>
+<th style="vertical-align: top !important; width:12.67%;">目標風險等級</th>
+<th style="vertical-align: top !important; width:12.67%;">目標完成日期</th>
+<th style="vertical-align: top !important; width:12.67%;">衡量指標</th>
+<th style="vertical-align: top !important; width:12.67%;">成功判定標準</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 高以下　□ 中以下　□ 低　□ 可接受</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 高以下　□ 中以下　□ 低　□ 可接受</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 高以下　□ 中以下　□ 低　□ 可接受</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 處理措施總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">措施編號</th>
+<th style="vertical-align: top !important; width:9.50%;">措施名稱</th>
+<th style="vertical-align: top !important; width:9.50%;">關聯風險</th>
+<th style="vertical-align: top !important; width:9.50%;">措施類型</th>
+<th style="vertical-align: top !important; width:9.50%;">Action Owner</th>
+<th style="vertical-align: top !important; width:9.50%;">開始日期</th>
+<th style="vertical-align: top !important; width:9.50%;">完成日期</th>
+<th style="vertical-align: top !important; width:9.50%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ACT-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 管理　□ 技術　□ 人員　□ 實體　□ 合約　□ 專項治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 管理　□ 技術　□ 人員　□ 實體　□ 合約　□ 專項治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 管理　□ 技術　□ 人員　□ 實體　□ 合約　□ 專項治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-004</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 管理　□ 技術　□ 人員　□ 實體　□ 合約　□ 專項治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 處理措施詳細規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">措施編號</th>
+<th style="vertical-align: top !important; width:10.86%;">措施描述</th>
+<th style="vertical-align: top !important; width:10.86%;">實施步驟</th>
+<th style="vertical-align: top !important; width:10.86%;">所需資源</th>
+<th style="vertical-align: top !important; width:10.86%;">相依條件</th>
+<th style="vertical-align: top !important; width:10.86%;">交付物</th>
+<th style="vertical-align: top !important; width:10.86%;">驗收標準</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ACT-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">1. 　<br>2. 　<br>3. </td>
+<td style="vertical-align: top !important;">□ 人力　□ 預算　□ 工具　□ 供應商　□ 系統變更</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">1. 　<br>2. 　<br>3. </td>
+<td style="vertical-align: top !important;">□ 人力　□ 預算　□ 工具　□ 供應商　□ 系統變更</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">1. 　<br>2. 　<br>3. </td>
+<td style="vertical-align: top !important;">□ 人力　□ 預算　□ 工具　□ 供應商　□ 系統變更</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>10. 控制措施設計表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">控制編號</th>
+<th style="vertical-align: top !important; width:9.50%;">控制名稱</th>
+<th style="vertical-align: top !important; width:9.50%;">控制目的</th>
+<th style="vertical-align: top !important; width:9.50%;">控制類型</th>
+<th style="vertical-align: top !important; width:9.50%;">控制頻率</th>
+<th style="vertical-align: top !important; width:9.50%;">Control Owner</th>
+<th style="vertical-align: top !important; width:9.50%;">證據要求</th>
+<th style="vertical-align: top !important; width:9.50%;">有效性驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">CTRL-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 預防　□ 偵測　□ 矯正　□ 補償</td>
+<td style="vertical-align: top !important;">□ 即時　□ 每日　□ 每週　□ 每月　□ 每季　□ 年度</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 測試　□ 抽查　□ 稽核　□ 監控　□ 演練</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CTRL-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 預防　□ 偵測　□ 矯正　□ 補償</td>
+<td style="vertical-align: top !important;">□ 即時　□ 每日　□ 每週　□ 每月　□ 每季　□ 年度</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 測試　□ 抽查　□ 稽核　□ 監控　□ 演練</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CTRL-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 預防　□ 偵測　□ 矯正　□ 補償</td>
+<td style="vertical-align: top !important;">□ 即時　□ 每日　□ 每週　□ 每月　□ 每季　□ 年度</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 測試　□ 抽查　□ 稽核　□ 監控　□ 演練</td>
+</tr>
+</tbody>
+</table>
+<h2>11. Annex A與 適用性聲明書 SoA對應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">Annex A控制</th>
+<th style="vertical-align: top !important; width:10.86%;">適用性</th>
+<th style="vertical-align: top !important; width:10.86%;"> 適用性聲明書 SoA實施狀態</th>
+<th style="vertical-align: top !important; width:10.86%;">是否需更新 適用性聲明書 SoA</th>
+<th style="vertical-align: top !important; width:10.86%;">更新內容</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">A.__.__</td>
+<td style="vertical-align: top !important;">□ 適用　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 未實施　□ 部分　□ 已實施</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 適用性　□ 實施狀態　□ 證據　□ 排除理由</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">A.__.__</td>
+<td style="vertical-align: top !important;">□ 適用　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 未實施　□ 部分　□ 已實施</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 適用性　□ 實施狀態　□ 證據　□ 排除理由</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">A.__.__</td>
+<td style="vertical-align: top !important;">□ 適用　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 未實施　□ 部分　□ 已實施</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 適用性　□ 實施狀態　□ 證據　□ 排除理由</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 運作控制對應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:12.67%;">處理措施</th>
+<th style="vertical-align: top !important; width:12.67%;">關聯運作控制計畫</th>
+<th style="vertical-align: top !important; width:12.67%;">關聯運作控制執行紀錄</th>
+<th style="vertical-align: top !important; width:12.67%;">流程Owner</th>
+<th style="vertical-align: top !important; width:12.67%;">控制證據</th>
+<th style="vertical-align: top !important; width:12.67%;">是否納入例行檢核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"> / OPC-PLAN-___</td>
+<td style="vertical-align: top !important;"> / OPC-REC-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"> / OPC-PLAN-___</td>
+<td style="vertical-align: top !important;"> / OPC-REC-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"> / OPC-PLAN-___</td>
+<td style="vertical-align: top !important;"> / OPC-REC-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 資源與預算規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">資源項目</th>
+<th style="vertical-align: top !important; width:10.86%;">需求說明</th>
+<th style="vertical-align: top !important; width:10.86%;">數量/金額</th>
+<th style="vertical-align: top !important; width:10.86%;">來源</th>
+<th style="vertical-align: top !important; width:10.86%;">核准人</th>
+<th style="vertical-align: top !important; width:10.86%;">核准狀態</th>
+<th style="vertical-align: top !important; width:10.86%;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">人力資源</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 內部　□ 外部　□ 供應商</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已核准　□ 待核准　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">工具/系統</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 新購　□ 既有　□ 雲端服務</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已核准　□ 待核准　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">顧問/供應商服務</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 既有供應商　□ 新供應商</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已核准　□ 待核准　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">訓練/能力提升</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 內訓　□ 外訓　□ 自學</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已核准　□ 待核准　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已核准　□ 待核准　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>14. 時程與里程碑</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">里程碑</th>
+<th style="vertical-align: top !important; width:10.86%;">預定日期</th>
+<th style="vertical-align: top !important; width:10.86%;">實際日期</th>
+<th style="vertical-align: top !important; width:10.86%;">責任人</th>
+<th style="vertical-align: top !important; width:10.86%;">完成條件</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+<th style="vertical-align: top !important; width:10.86%;">延遲原因</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">計畫核准</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">核准完成</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制設計完成</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">控制設計與證據要求完成</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">實施完成</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">措施落地並保留證據</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性驗證完成</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">驗證結果通過或缺口處理</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險評估完成</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">剩餘風險等級確認</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">計畫關閉</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">關閉核准完成</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 延遲</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 責任分工與RACI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:8.44%;">活動</th>
+<th style="vertical-align: top !important; width:8.44%;">CISO</th>
+<th style="vertical-align: top !important; width:8.44%;">ISMS代表</th>
+<th style="vertical-align: top !important; width:8.44%;">風險Owner</th>
+<th style="vertical-align: top !important; width:8.44%;">Control Owner</th>
+<th style="vertical-align: top !important; width:8.44%;">Action Owner</th>
+<th style="vertical-align: top !important; width:8.44%;">IT/SOC</th>
+<th style="vertical-align: top !important; width:8.44%;">專項Owner</th>
+<th style="vertical-align: top !important; width:8.44%;">內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准處理策略</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">建立處理計畫</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">執行處理措施</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R（適用）</td>
+<td style="vertical-align: top !important;">R（適用）</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存控制證據</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證有效性</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">評估剩餘風險</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">接受剩餘風險</td>
+<td style="vertical-align: top !important;">A（高/極高）</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關閉處理計畫</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核處理證據</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 溝通與利害關係人管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:12.67%;">利害關係人</th>
+<th style="vertical-align: top !important; width:12.67%;">溝通內容</th>
+<th style="vertical-align: top !important; width:12.67%;">溝通時機</th>
+<th style="vertical-align: top !important; width:12.67%;">溝通方式</th>
+<th style="vertical-align: top !important; width:12.67%;">責任人</th>
+<th style="vertical-align: top !important; width:12.67%;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">重大風險、資源、剩餘風險接受。</td>
+<td style="vertical-align: top !important;">□ 核准前　□ 重大變更　□ 管理審查</td>
+<td style="vertical-align: top !important;">□ 會議　□ 報告　□ 簽核</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險Owner</td>
+<td style="vertical-align: top !important;">處理策略、進度、缺口、剩餘風險。</td>
+<td style="vertical-align: top !important;">□ 每週　□ 每月　□ 里程碑</td>
+<td style="vertical-align: top !important;">□ 會議　□ Email　□ GRC</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">控制設計、執行證據、有效性驗證。</td>
+<td style="vertical-align: top !important;">□ 設計時　□ 執行時　□ 驗證時</td>
+<td style="vertical-align: top !important;">□ 會議　□ 工單　□ 文件</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">業務/客戶窗口</td>
+<td style="vertical-align: top !important;">服務影響、SLA、客戶承諾或合約事項。</td>
+<td style="vertical-align: top !important;">□ 必要時　□ 重大影響時</td>
+<td style="vertical-align: top !important;">□ Email　□ 報告　□ 會議</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商</td>
+<td style="vertical-align: top !important;">合約、SLA、技術變更、證據或修補要求。</td>
+<td style="vertical-align: top !important;">□ 執行前　□ 執行中　□ 驗證時</td>
+<td style="vertical-align: top !important;">□ 服務單　□ Email　□ 會議</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">隱私/AI治理/營運持續/GHG資料專項影響與證據。</td>
+<td style="vertical-align: top !important;">□ 設計時　□ 驗證時　□ 審查時</td>
+<td style="vertical-align: top !important;">□ 文件審查　□ 會議</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>17. 重大依賴與限制條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:12.67%;">依賴/限制類型</th>
+<th style="vertical-align: top !important; width:12.67%;">說明</th>
+<th style="vertical-align: top !important; width:12.67%;">影響</th>
+<th style="vertical-align: top !important; width:12.67%;">緩解措施</th>
+<th style="vertical-align: top !important; width:12.67%;">責任人</th>
+<th style="vertical-align: top !important; width:12.67%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">技術依賴</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商依賴</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">預算限制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人力限制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規/合約限制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">營運不中斷限制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 阻塞</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 例外與補償控制管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">例外編號</th>
+<th style="vertical-align: top !important; width:10.86%;">例外原因</th>
+<th style="vertical-align: top !important; width:10.86%;">原控制要求</th>
+<th style="vertical-align: top !important; width:10.86%;">補償控制</th>
+<th style="vertical-align: top !important; width:10.86%;">有效期限</th>
+<th style="vertical-align: top !important; width:10.86%;">核准人</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">EXC-YYYY-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待核准　□ 已核准　□ 已關閉　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">EXC-YYYY-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待核准　□ 已核准　□ 已關閉　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">EXC-YYYY-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待核准　□ 已核准　□ 已關閉　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 臨時控制與短期風險降低措施</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">臨時控制編號</th>
+<th style="vertical-align: top !important; width:10.86%;">適用風險</th>
+<th style="vertical-align: top !important; width:10.86%;">控制內容</th>
+<th style="vertical-align: top !important; width:10.86%;">啟用日期</th>
+<th style="vertical-align: top !important; width:10.86%;">失效/替代日期</th>
+<th style="vertical-align: top !important; width:10.86%;">Owner</th>
+<th style="vertical-align: top !important; width:10.86%;">監督方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">TC-001</td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TC-002</td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TC-003</td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>20. 隱私 / PII風險處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">PII風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">PII處理活動</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">DPIA/DPA更新</th>
+<th style="vertical-align: top !important; width:10.86%;">資料主體影響</th>
+<th style="vertical-align: top !important; width:10.86%;">DPO確認</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需DPIA　□ 需DPA　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需DPIA　□ 需DPA　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需DPIA　□ 需DPA　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>21. AI治理 / AI風險處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">AI風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">AI系統/工具</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">人類監督設計</th>
+<th style="vertical-align: top !important; width:10.86%;">AI供應商措施</th>
+<th style="vertical-align: top !important; width:10.86%;">AI治理確認</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 增強　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 增強　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 增強　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 供應商、外包與雲端風險處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">供應商/雲端服務</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">合約/SLA更新</th>
+<th style="vertical-align: top !important; width:10.86%;">SOC/ISO證據要求</th>
+<th style="vertical-align: top !important; width:10.86%;">退場/替代方案</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需更新　□ 不需更新</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需更新　□ 不需更新</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需更新　□ 不需更新</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 營運持續 / 復原風險處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">關鍵流程/系統</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">RTO/RPO影響</th>
+<th style="vertical-align: top !important; width:10.86%;">演練/測試需求</th>
+<th style="vertical-align: top !important; width:10.86%;">營運持續確認</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 改善　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 需演練　□ 需測試　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 改善　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 需演練　□ 需測試　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 改善　□ 維持　□ 不適用</td>
+<td style="vertical-align: top !important;">□ 需演練　□ 需測試　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>24. GHG資料治理風險處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">GHG資料/流程</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">資料品質改善</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證/查證/揭露影響</th>
+<th style="vertical-align: top !important; width:10.86%;">GHG Owner確認</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需要　□ 不需要</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需要　□ 不需要</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 需要　□ 不需要</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>25. 法規、合約與客戶要求處理規劃</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">要求來源</th>
+<th style="vertical-align: top !important; width:10.86%;">處理措施</th>
+<th style="vertical-align: top !important; width:10.86%;">法務/合規審查</th>
+<th style="vertical-align: top !important; width:10.86%;">客戶通知需求</th>
+<th style="vertical-align: top !important; width:10.86%;">核准人</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 法規　□ 監管　□ 合約　□ SLA　□ DPA　□ 客戶　□ 驗證</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 法規　□ 監管　□ 合約　□ SLA　□ DPA　□ 客戶　□ 驗證</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 法規　□ 監管　□ 合約　□ SLA　□ DPA　□ 客戶　□ 驗證</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>26. 風險處理進度追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">追蹤日期</th>
+<th style="vertical-align: top !important; width:9.50%;">措施編號</th>
+<th style="vertical-align: top !important; width:9.50%;">完成比例</th>
+<th style="vertical-align: top !important; width:9.50%;">進度摘要</th>
+<th style="vertical-align: top !important; width:9.50%;">阻礙/問題</th>
+<th style="vertical-align: top !important; width:9.50%;">下一步</th>
+<th style="vertical-align: top !important; width:9.50%;">責任人</th>
+<th style="vertical-align: top !important; width:9.50%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 正常　□ 風險　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>27. 逾期與升級管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">項目編號</th>
+<th style="vertical-align: top !important; width:9.50%;">逾期/升級原因</th>
+<th style="vertical-align: top !important; width:9.50%;">影響風險</th>
+<th style="vertical-align: top !important; width:9.50%;">影響說明</th>
+<th style="vertical-align: top !important; width:9.50%;">升級對象</th>
+<th style="vertical-align: top !important; width:9.50%;">升級日期</th>
+<th style="vertical-align: top !important; width:9.50%;">補救措施</th>
+<th style="vertical-align: top !important; width:9.50%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ CISO　□ 最高管理階層　□ 風險委員會</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已升級　□ 待處理　□ 已解除</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ CISO　□ 最高管理階層　□ 風險委員會</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已升級　□ 待處理　□ 已解除</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ CISO　□ 最高管理階層　□ 風險委員會</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 已升級　□ 待處理　□ 已解除</td>
+</tr>
+</tbody>
+</table>
+<h2>28. 有效性驗證計畫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">驗證編號</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證對象</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證方式</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證日期</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證人</th>
+<th style="vertical-align: top !important; width:10.86%;">通過標準</th>
+<th style="vertical-align: top !important; width:10.86%;">輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">VAL-001</td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 文件審查　□ 抽樣　□ 測試　□ 掃描　□ 演練　□ 稽核</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">VAL-002</td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 文件審查　□ 抽樣　□ 測試　□ 掃描　□ 演練　□ 稽核</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">VAL-003</td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 文件審查　□ 抽樣　□ 測試　□ 掃描　□ 演練　□ 稽核</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>29. 有效性驗證結果</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">驗證編號</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證結果</th>
+<th style="vertical-align: top !important; width:10.86%;">證據位置</th>
+<th style="vertical-align: top !important; width:10.86%;">缺口</th>
+<th style="vertical-align: top !important; width:10.86%;">是否需補救</th>
+<th style="vertical-align: top !important; width:10.86%;">補救期限</th>
+<th style="vertical-align: top !important; width:10.86%;">驗證結論</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">VAL-001</td>
+<td style="vertical-align: top !important;">□ 通過　□ 部分通過　□ 未通過</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">VAL-002</td>
+<td style="vertical-align: top !important;">□ 通過　□ 部分通過　□ 未通過</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">VAL-003</td>
+<td style="vertical-align: top !important;">□ 通過　□ 部分通過　□ 未通過</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 有效　□ 部分有效　□ 無效</td>
+</tr>
+</tbody>
+</table>
+<h2>30. 剩餘風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:9.50%;">風險編號</th>
+<th style="vertical-align: top !important; width:9.50%;">處理前等級</th>
+<th style="vertical-align: top !important; width:9.50%;">處理後可能性</th>
+<th style="vertical-align: top !important; width:9.50%;">處理後衝擊</th>
+<th style="vertical-align: top !important; width:9.50%;">剩餘風險等級</th>
+<th style="vertical-align: top !important; width:9.50%;">是否可接受</th>
+<th style="vertical-align: top !important; width:9.50%;">是否需正式接受</th>
+<th style="vertical-align: top !important; width:9.50%;">重評日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-001</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-002</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-003</td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 極高　□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>31. 剩餘風險接受轉銜</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">風險編號</th>
+<th style="vertical-align: top !important; width:10.86%;">剩餘風險摘要</th>
+<th style="vertical-align: top !important; width:10.86%;">接受申請編號</th>
+<th style="vertical-align: top !important; width:10.86%;">核准層級</th>
+<th style="vertical-align: top !important; width:10.86%;">接受期限</th>
+<th style="vertical-align: top !important; width:10.86%;">接受條件</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">RAA-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待申請　□ 待核准　□ 已接受　□ 不接受</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">RAA-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待申請　□ 待核准　□ 已接受　□ 不接受</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">RAA-YYYY-___</td>
+<td style="vertical-align: top !important;">□ 風險Owner　□ CISO　□ 最高管理階層</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 待申請　□ 待核准　□ 已接受　□ 不接受</td>
+</tr>
+</tbody>
+</table>
+<h2>32. KPI/KRI與監督指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">指標名稱</th>
+<th style="vertical-align: top !important; width:10.86%;">關聯風險/控制</th>
+<th style="vertical-align: top !important; width:10.86%;">目標/門檻</th>
+<th style="vertical-align: top !important; width:10.86%;">資料來源</th>
+<th style="vertical-align: top !important; width:10.86%;">頻率</th>
+<th style="vertical-align: top !important; width:10.86%;">Owner</th>
+<th style="vertical-align: top !important; width:10.86%;">異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">處理措施準時完成率</td>
+<td style="vertical-align: top !important;">R-YYYY-___ / CTRL-___</td>
+<td style="vertical-align: top !important;">≥ ___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每月　□ 每季</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高風險降低率</td>
+<td style="vertical-align: top !important;">R-YYYY-___</td>
+<td style="vertical-align: top !important;">≥ ___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每月　□ 每季</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制有效性驗證通過率</td>
+<td style="vertical-align: top !important;">CTRL-___</td>
+<td style="vertical-align: top !important;">≥ ___%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每季　□ 半年</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">逾期處理措施數</td>
+<td style="vertical-align: top !important;">ACT-___</td>
+<td style="vertical-align: top !important;">0或下降趨勢</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每月</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險接受逾期數</td>
+<td style="vertical-align: top !important;">RAA-___</td>
+<td style="vertical-align: top !important;">0</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每月</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA更新準時率</td>
+<td style="vertical-align: top !important;">A.__.__</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 每季</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>33. 文件、程序與控制清冊更新</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">更新項目</th>
+<th style="vertical-align: top !important; width:10.86%;">是否需要</th>
+<th style="vertical-align: top !important; width:10.86%;">文件/清冊名稱</th>
+<th style="vertical-align: top !important; width:10.86%;">更新內容</th>
+<th style="vertical-align: top !important; width:10.86%;">責任人</th>
+<th style="vertical-align: top !important; width:10.86%;">期限</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">更新政策或程序</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新運作控制計畫</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新運作控制與風險矩陣</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新風險登錄表</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新供應商/AI/PII/營運持續/GHG清冊</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 完成　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+<h2>34. 證據清單與保存位置</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">證據編號</th>
+<th style="vertical-align: top !important; width:10.86%;">證據名稱</th>
+<th style="vertical-align: top !important; width:10.86%;">關聯措施/控制</th>
+<th style="vertical-align: top !important; width:10.86%;">證據類型</th>
+<th style="vertical-align: top !important; width:10.86%;">保存位置</th>
+<th style="vertical-align: top !important; width:10.86%;">Owner</th>
+<th style="vertical-align: top !important; width:10.86%;">完整性</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">EVD-001</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 報表　□ 截圖　□ 工單　□ 日誌　□ 合約　□ 測試結果　□ 會議紀錄</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 完整　□ 部分　□ 缺失</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">EVD-002</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 報表　□ 截圖　□ 工單　□ 日誌　□ 合約　□ 測試結果　□ 會議紀錄</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 完整　□ 部分　□ 缺失</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">EVD-003</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ACT/CTRL-___</td>
+<td style="vertical-align: top !important;">□ 報表　□ 截圖　□ 工單　□ 日誌　□ 合約　□ 測試結果　□ 會議紀錄</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 完整　□ 部分　□ 缺失</td>
+</tr>
+</tbody>
+</table>
+<h2>35. CAPA與持續改善轉銜</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:10.86%;">觸發條件</th>
+<th style="vertical-align: top !important; width:10.86%;">是否觸發CAPA</th>
+<th style="vertical-align: top !important; width:10.86%;">CAPA編號</th>
+<th style="vertical-align: top !important; width:10.86%;">原因摘要</th>
+<th style="vertical-align: top !important; width:10.86%;">責任人</th>
+<th style="vertical-align: top !important; width:10.86%;">期限</th>
+<th style="vertical-align: top !important; width:10.86%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">處理措施未達成目標</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">CAPA-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性驗證未通過</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">CAPA-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重複性缺口或逾期</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">CAPA-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大合規或合約缺口</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">CAPA-YYYY-___</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+<h2>36. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:15.20%;">輸入項目</th>
+<th style="vertical-align: top !important; width:15.20%;">是否納入</th>
+<th style="vertical-align: top !important; width:15.20%;">摘要</th>
+<th style="vertical-align: top !important; width:15.20%;">責任角色</th>
+<th style="vertical-align: top !important; width:15.20%;">提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">重大風險處理計畫進度</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險Owner / ISMS代表</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">高/極高剩餘風險接受</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 風險Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源、預算或工具需求</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 流程Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大處理措施逾期或失效</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA重大更新需求</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私/AI治理/營運持續/GHG資料專項重大風險</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">專項Owner</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商、雲端與合約重大處理事項</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商管理 / 法務</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>37. 計畫品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">品質檢查項目</th>
+<th style="vertical-align: top !important; width:19.00%;">檢查問題</th>
+<th style="vertical-align: top !important; width:19.00%;">結果</th>
+<th style="vertical-align: top !important; width:19.00%;">改善要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">風險完整性</td>
+<td style="vertical-align: top !important;">所有不可接受風險是否已納入處理計畫？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 退回</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">策略合理性</td>
+<td style="vertical-align: top !important;">處理策略是否符合風險準則與合規要求？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 退回</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">措施可執行性</td>
+<td style="vertical-align: top !important;">措施是否具備Owner、期限、資源、交付物與驗收標準？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 退回</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA一致性</td>
+<td style="vertical-align: top !important;">新增或變更控制是否同步更新 適用性聲明書 SoA？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">證據充分性</td>
+<td style="vertical-align: top !important;">是否定義控制執行與有效性驗證證據？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 退回</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險管理</td>
+<td style="vertical-align: top !important;">剩餘風險是否已評估並必要時轉入接受流程？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 退回</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項治理</td>
+<td style="vertical-align: top !important;">PII、AI、營運持續、GHG、供應商與合規風險是否有專項確認？</td>
+<td style="vertical-align: top !important;">□ 通過　□ 修正　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>38. 計畫關閉確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:15.20%;">關閉項目</th>
+<th style="vertical-align: top !important; width:15.20%;">確認結果</th>
+<th style="vertical-align: top !important; width:15.20%;">確認人</th>
+<th style="vertical-align: top !important; width:15.20%;">日期</th>
+<th style="vertical-align: top !important; width:15.20%;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">所有處理措施已完成或例外已核准</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性驗證已完成</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險已評估</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">必要之剩餘風險接受已核准</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險登錄表已更新</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA與控制清冊已更新</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA或改善事項已轉銜</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入已提交或確認不適用</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">本風險處理計畫正式關閉</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>39. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important; width:19.00%;">本計畫表對應內容</th>
+<th style="vertical-align: top !important; width:19.00%;">證據位置</th>
+<th style="vertical-align: top !important; width:19.00%;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">6.1.1</td>
+<td style="vertical-align: top !important;">處理風險與機會並規劃行動。</td>
+<td style="vertical-align: top !important;">第4-8章</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1.2</td>
+<td style="vertical-align: top !important;">承接風險評鑑結果與不可接受風險。</td>
+<td style="vertical-align: top !important;">第4、5章</td>
+<td style="vertical-align: top !important;">風險Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1.3</td>
+<td style="vertical-align: top !important;">定義並實施資訊安全風險處理計畫，並確定必要控制。</td>
+<td style="vertical-align: top !important;">全表</td>
+<td style="vertical-align: top !important;">CISO / 風險Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2</td>
+<td style="vertical-align: top !important;">處理目標、指標與完成條件支援目標管理。</td>
+<td style="vertical-align: top !important;">第7、32章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.3</td>
+<td style="vertical-align: top !important;">風險處理涉及變更時需規劃與控制。</td>
+<td style="vertical-align: top !important;">第14、17、33章</td>
+<td style="vertical-align: top !important;">Change Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1</td>
+<td style="vertical-align: top !important;">資源與預算需求。</td>
+<td style="vertical-align: top !important;">第13章</td>
+<td style="vertical-align: top !important;">CISO / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5</td>
+<td style="vertical-align: top !important;">風險處理計畫與證據受控保存。</td>
+<td style="vertical-align: top !important;">第34、44章</td>
+<td style="vertical-align: top !important;">文件管制</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.1</td>
+<td style="vertical-align: top !important;">處理措施轉入運作控制與流程執行。</td>
+<td style="vertical-align: top !important;">第12、33章</td>
+<td style="vertical-align: top !important;">流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.3</td>
+<td style="vertical-align: top !important;">風險處理計畫實施、追蹤與驗證。</td>
+<td style="vertical-align: top !important;">第8、26、28-30章</td>
+<td style="vertical-align: top !important;">Action Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1</td>
+<td style="vertical-align: top !important;">KPI/KRI與有效性驗證支援績效評估。</td>
+<td style="vertical-align: top !important;">第28-32章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2</td>
+<td style="vertical-align: top !important;">內部稽核可查核處理措施與證據。</td>
+<td style="vertical-align: top !important;">第37、43章</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3</td>
+<td style="vertical-align: top !important;">重大風險處理、剩餘風險與資源需求納入管理審查。</td>
+<td style="vertical-align: top !important;">第36章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.2</td>
+<td style="vertical-align: top !important;">處理失效、逾期或缺口導出CAPA。</td>
+<td style="vertical-align: top !important;">第35章</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>40. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">Annex A範圍</th>
+<th style="vertical-align: top !important; width:19.00%;">風險處理關聯</th>
+<th style="vertical-align: top !important; width:19.00%;">典型措施</th>
+<th style="vertical-align: top !important; width:19.00%;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">A.5 組織控制</td>
+<td style="vertical-align: top !important;">治理、政策、供應商、事件、合規與營運持續風險處理。</td>
+<td style="vertical-align: top !important;">政策修訂、供應商合約更新、事件流程強化、SoA更新。</td>
+<td style="vertical-align: top !important;">核准文件、合約、程序、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6 人員控制</td>
+<td style="vertical-align: top !important;">人員、能力、認知、保密與離退風險處理。</td>
+<td style="vertical-align: top !important;">訓練、職責調整、保密承諾、離職流程強化。</td>
+<td style="vertical-align: top !important;">訓練紀錄、HR紀錄、權限移除紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7 實體控制</td>
+<td style="vertical-align: top !important;">辦公室、機房、設備與環境風險處理。</td>
+<td style="vertical-align: top !important;">門禁強化、訪客管理、環控監控、設備保護。</td>
+<td style="vertical-align: top !important;">門禁紀錄、巡檢紀錄、設施報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8 技術控制</td>
+<td style="vertical-align: top !important;">存取、弱點、日誌、加密、備份、網路與系統安全風險處理。</td>
+<td style="vertical-align: top !important;">MFA、修補、SIEM、備份驗證、加密、網段隔離。</td>
+<td style="vertical-align: top !important;">系統報表、掃描報告、日誌、工單。</td>
+</tr>
+</tbody>
+</table>
+<h2>41. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">標準/治理領域</th>
+<th style="vertical-align: top !important; width:19.00%;">本計畫表對應要求</th>
+<th style="vertical-align: top !important; width:19.00%;">主要證據</th>
+<th style="vertical-align: top !important; width:19.00%;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27005</td>
+<td style="vertical-align: top !important;">風險處理選項、處理計畫、剩餘風險與監督。</td>
+<td style="vertical-align: top !important;">第5-8、28-31章</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO 31000</td>
+<td style="vertical-align: top !important;">風險處理、資源、責任、監督、溝通與紀錄。</td>
+<td style="vertical-align: top !important;">第13-16、26、36章</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27701</td>
+<td style="vertical-align: top !important;">PII風險處理、DPIA/DPA、資料主體與隱私控制。</td>
+<td style="vertical-align: top !important;">第20章</td>
+<td style="vertical-align: top !important;">DPO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 42001</td>
+<td style="vertical-align: top !important;">AI風險處理、AI人類監督、資料控制與AI供應商措施。</td>
+<td style="vertical-align: top !important;">第21章</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 23894</td>
+<td style="vertical-align: top !important;">AI風險處理措施、控制有效性、利害關係人影響與剩餘風險。</td>
+<td style="vertical-align: top !important;">第21、30章</td>
+<td style="vertical-align: top !important;">AI風險Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO 22301:2019</td>
+<td style="vertical-align: top !important;">營運持續/復原風險處理、RTO/RPO、演練與復原能力。</td>
+<td style="vertical-align: top !important;">第23章</td>
+<td style="vertical-align: top !important;">營運持續負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO 19011:2018</td>
+<td style="vertical-align: top !important;">提供稽核風險處理計畫、證據與有效性驗證依據。</td>
+<td style="vertical-align: top !important;">第37、43章</td>
+<td style="vertical-align: top !important;">稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 42001、ISO/IEC 23894</td>
+<td style="vertical-align: top !important;">AI治理決策、責任、風險處理與管理階層監督。</td>
+<td style="vertical-align: top !important;">第21、36章</td>
+<td style="vertical-align: top !important;">AI治理委員會</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料治理</td>
+<td style="vertical-align: top !important;">碳資料品質、係數、查證、揭露與供應鏈資料風險處理。</td>
+<td style="vertical-align: top !important;">第24章</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>42. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:19.00%;">查核主題</th>
+<th style="vertical-align: top !important; width:19.00%;">查核問題</th>
+<th style="vertical-align: top !important; width:19.00%;">應備證據</th>
+<th style="vertical-align: top !important; width:19.00%;">結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">處理完整性</td>
+<td style="vertical-align: top !important;">所有不可接受風險是否已建立處理措施？</td>
+<td style="vertical-align: top !important;">風險登錄表、處理計畫</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">策略合理性</td>
+<td style="vertical-align: top !important;">處理策略是否符合準則並經適當核准？</td>
+<td style="vertical-align: top !important;">處理策略、核准紀錄</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">措施執行性</td>
+<td style="vertical-align: top !important;">措施是否具Owner、期限、資源、交付物與驗收標準？</td>
+<td style="vertical-align: top !important;">第8-14章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA一致性</td>
+<td style="vertical-align: top !important;">處理產生之控制是否同步更新 適用性聲明書 SoA？</td>
+<td style="vertical-align: top !important;">第11、33章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性驗證</td>
+<td style="vertical-align: top !important;">措施完成後是否驗證控制有效性？</td>
+<td style="vertical-align: top !important;">第28、29章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險</td>
+<td style="vertical-align: top !important;">剩餘風險是否評估並必要時接受？</td>
+<td style="vertical-align: top !important;">第30、31章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項治理</td>
+<td style="vertical-align: top !important;">PII、AI、營運持續、GHG與供應商風險是否有專項處理？</td>
+<td style="vertical-align: top !important;">第20-25章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">重大處理事項與資源需求是否納入管理審查？</td>
+<td style="vertical-align: top !important;">第36章</td>
+<td style="vertical-align: top !important;">□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+<h2>43. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:7.60%;">活動</th>
+<th style="vertical-align: top !important; width:7.60%;">最高管理階層</th>
+<th style="vertical-align: top !important; width:7.60%;">CISO</th>
+<th style="vertical-align: top !important; width:7.60%;">ISMS代表</th>
+<th style="vertical-align: top !important; width:7.60%;">風險Owner</th>
+<th style="vertical-align: top !important; width:7.60%;">Control Owner</th>
+<th style="vertical-align: top !important; width:7.60%;">Action Owner</th>
+<th style="vertical-align: top !important; width:7.60%;">專項Owner</th>
+<th style="vertical-align: top !important; width:7.60%;">供應商管理</th>
+<th style="vertical-align: top !important; width:7.60%;">內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准重大風險處理策略</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">建立風險處理計畫</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">提供資源與預算</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">執行處理措施</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存處理證據</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證有效性</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">評估剩餘風險</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">接受剩餘風險</td>
+<td style="vertical-align: top !important;">A（重大）</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關閉處理計畫</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核處理計畫</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+</tr>
+</tbody>
+</table>
+<h2>44. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:15.20%;">紀錄項目</th>
+<th style="vertical-align: top !important; width:15.20%;">保存責任</th>
+<th style="vertical-align: top !important; width:15.20%;">保存位置</th>
+<th style="vertical-align: top !important; width:15.20%;">保存期限</th>
+<th style="vertical-align: top !important; width:15.20%;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准版風險處理計畫表</td>
+<td style="vertical-align: top !important;">風險Owner / ISMS代表</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+<td style="vertical-align: top !important;">風險關閉後R3：至少5年</td>
+<td style="vertical-align: top !important;">需保留審查、核准與關閉紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">處理措施執行證據</td>
+<td style="vertical-align: top !important;">Action Owner / Control Owner</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / ITSM / 系統平台</td>
+<td style="vertical-align: top !important;">R3：至少5年或依要求較長者</td>
+<td style="vertical-align: top !important;">需可追溯至風險、控制與措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">有效性驗證紀錄</td>
+<td style="vertical-align: top !important;">Control Owner / ISMS代表</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年</td>
+<td style="vertical-align: top !important;">需保留測試、抽樣或稽核結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">剩餘風險接受紀錄</td>
+<td style="vertical-align: top !important;">風險Owner / CISO</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+<td style="vertical-align: top !important;">接受期限後R3：至少5年</td>
+<td style="vertical-align: top !important;">需保存核准與重評條件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA與控制清冊更新紀錄</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">有效期間加R3：至少5年</td>
+<td style="vertical-align: top !important;">需保持與風險登錄一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專項風險處理證據</td>
+<td style="vertical-align: top !important;">DPO / AI / 營運持續 / GHG / 供應商Owner</td>
+<td style="vertical-align: top !important;">專項文件庫</td>
+<td style="vertical-align: top !important;">依專項要求</td>
+<td style="vertical-align: top !important;">敏感資訊需限制存取。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入與決議</td>
+<td style="vertical-align: top !important;">ISMS代表</td>
+<td style="vertical-align: top !important;">管理審查文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年</td>
+<td style="vertical-align: top !important;">重大事項需追蹤至結案。</td>
+</tr>
+</tbody>
+</table>
+<h2>45. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:20%;">檢查項目</th>
+<th style="vertical-align: top !important; width:30%;">完成</th>
+<th style="vertical-align: top !important; width:20%;">證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">文件基本資料、審查核准、目的與使用原則完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">計畫基本資料、關聯風險、策略選擇與目標完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">處理措施、控制設計、Annex A/SoA與運作控制對應完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源、時程、RACI、溝通、依賴、例外與臨時控制完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私、AI治理、供應商雲端、營運持續、GHG與合規專項規劃完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">進度追蹤、逾期升級、有效性驗證、剩餘風險與接受轉銜完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI/KRI、文件更新、證據清單、CAPA、管理審查與關閉確認完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO條文、Annex A、整合標準、稽核提示、RACI與保存要求完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>46. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th style="vertical-align: top !important; width:30%;">文件名稱/類型</th>
+<th style="vertical-align: top !important; width:20%;">與本計畫表之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全風險管理程序</td>
+<td style="vertical-align: top !important;">定義整體風險管理與處理框架。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全風險評鑑表</td>
+<td style="vertical-align: top !important;">提供風險等級、可接受性與處理需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全風險登錄表</td>
+<td style="vertical-align: top !important;">提供風險主檔與處理狀態追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全風險處理執行作業指導書</td>
+<td style="vertical-align: top !important;">定義本計畫表之使用流程與核准要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">剩餘風險接受申請表</td>
+<td style="vertical-align: top !important;">承接處理後仍需接受之剩餘風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險處理與 適用性聲明書 SoA對應矩陣</td>
+<td style="vertical-align: top !important;">對應處理措施、Annex A與 適用性聲明書 SoA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS運作規劃與控制程序</td>
+<td style="vertical-align: top !important;">運作規劃與控制文件</td>
+<td style="vertical-align: top !important;">承接風險處理措施至日常運作控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">適用性聲明</td>
+<td style="vertical-align: top !important;">記錄控制適用性、實施狀態與證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS KPI/KRI追蹤表<br> 稽核發現事項追蹤表<br> 管理審查決議與行動追蹤表<br> CAPA登錄表</td>
+<td style="vertical-align: top !important;">監督量測、稽核、管理審查與CAPA</td>
+<td style="vertical-align: top !important;">承接績效、稽核、管理決策與矯正改善。</td>
+</tr>
+</tbody>
+</table>
+<h2>061／082／083／063整合追溯欄位</h2>
+<p>承接082已評估及排定優先序的風險，完成處理選項、必要控制、SoA、計畫、實施、驗證及剩餘風險；凡涉及系統、流程、供應商或文件變更均由063受控實施。</p>
+<table>
+<thead><tr>
+<th>整合要求</th>
+<th>執行規則</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>共同識別碼</td>
+<td>風險ID、評鑑ID、處理計畫ID、變更ID與控制ID須互相引用，不得各自建立無法追溯的編號。</td>
+</tr>
+<tr>
+<td>單一Owner鏈</td>
+<td>Risk owner對風險當責；Change owner、Control owner及Action owner各自對執行負責，責任移交不改變Risk owner當責。</td>
+</tr>
+<tr>
+<td>準則與版本</td>
+<td>評鑑、處理及變更均記錄準則/方法/SoA版本、日期、決策人、證據位置與下一次重評。</td>
+</tr>
+<tr>
+<td>轉銜門檻</td>
+<td>新風險、風險惡化、控制失效、重大變更或剩餘風險不可接受時，必須回到相應流程，不得以結案狀態阻斷迭代。</td>
+</tr>
+</tbody>
+</table>
+<h3>直接使用的第三、第四階文件</h3>
+<ul class="reference-list">
+<li><a href="ISMS-061-SOP-001_%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%A9%95%E9%91%91%E8%88%87%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E4%BD%9C%E6%A5%AD%E6%8C%87%E5%B0%8E%E6%9B%B8_V2_3.html" target="_blank" rel="noopener">ISMS-061-SOP-001 資訊安全風險評鑑與風險處理作業指導書</a></li>
+<li><a href="ISMS-083-SOP-001_%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E5%9F%B7%E8%A1%8C%E4%BD%9C%E6%A5%AD%E6%8C%87%E5%B0%8E%E6%9B%B8_V1_1.html" target="_blank" rel="noopener">ISMS-083-SOP-001 資訊安全風險處理執行作業指導書</a></li>
+<li><a href="ISMS-083-FRM-001_%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E8%A8%88%E7%95%AB%E8%A1%A8_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-083-FRM-001 資訊安全風險處理計畫表（互動式）</a></li>
+<li><a href="ISMS-083-FRM-002_%E5%89%A9%E9%A4%98%E9%A2%A8%E9%9A%AA%E6%8E%A5%E5%8F%97%E7%94%B3%E8%AB%8B%E8%A1%A8_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-083-FRM-002 剩餘風險接受申請表（互動式）</a></li>
+<li><a href="ISMS-083-REC-001_%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E5%9F%B7%E8%A1%8C%E7%B4%80%E9%8C%84_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-083-REC-001 風險處理執行紀錄（互動式）</a></li>
+<li><a href="ISMS-083-REC-002_%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E6%9C%89%E6%95%88%E6%80%A7%E9%A9%97%E8%AD%89%E7%B4%80%E9%8C%84_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-083-REC-002 風險處理有效性驗證紀錄（互動式）</a></li>
+<li><a href="ISMS-083-MTX-001_%E9%A2%A8%E9%9A%AA%E8%99%95%E7%90%86%E8%88%87SoA%E5%B0%8D%E6%87%89%E7%9F%A9%E9%99%A3_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-083-MTX-001 風險處理與SoA對應矩陣（互動式）</a></li>
+<li><a href="ISMS-082-REG-001_%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E7%99%BB%E9%8C%84%E8%A1%A8_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-082-REG-001 資訊安全風險登錄表（互動式）</a></li>
+<li><a href="ISMS-063-SOP-001_%E9%A2%A8%E9%9A%AA%E5%B0%8E%E5%90%91%E8%AE%8A%E6%9B%B4%E8%A9%95%E4%BC%B0%E8%88%87%E8%BD%89%E9%8A%9C%E4%BD%9C%E6%A5%AD%E6%8C%87%E5%B0%8E%E6%9B%B8_V1_1.html" target="_blank" rel="noopener">ISMS-063-SOP-001 風險導向變更評估與轉銜作業指導書</a></li>
+<li><a href="ISMS-063-FRM-001_ISMS%E8%AE%8A%E6%9B%B4%E7%94%B3%E8%AB%8B%E8%A1%A8_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-063-FRM-001 ISMS變更申請表（互動式）</a></li>
+<li><a href="ISMS-063-REC-001_%E8%AE%8A%E6%9B%B4%E5%9F%B7%E8%A1%8C%E8%88%87%E9%A9%97%E8%AD%89%E7%B4%80%E9%8C%84_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-063-REC-001 變更執行與驗證紀錄（互動式）</a></li>
+<li><a href="ISMS-063-REC-002_%E8%AE%8A%E6%9B%B4%E5%AF%A6%E6%96%BD%E5%BE%8C%E5%AF%A9%E6%9F%A5%E5%A0%B1%E5%91%8A%EF%BC%88PIR%EF%BC%89_V1_1_Interactive.html" target="_blank" rel="noopener">ISMS-063-REC-002 變更實施後審查報告（PIR）（互動式）</a></li>
+</ul>
+<h2>48. Enterprise Certification Declaration</h2>
+<p>本文件為ISMS資訊安全風險處理計畫之正式企業級表單，可支援ISO/IEC 27001:2022 Clause 6.1.3與8.3之風險處理計畫、控制措施選擇、處理措施實施、剩餘風險接受與SoA更新證據，並支援ISO/IEC 27005、ISO 31000、ISO/IEC 27701、ISO/IEC 42001、ISO/IEC 23894、ISO 22301:2019、ISO 19011:2018、ISO/IEC 42001、ISO/IEC 23894與GHG資料治理整合治理之稽核證據。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+
+
+<script src="../assets/document-dates.js"></script></body></html>

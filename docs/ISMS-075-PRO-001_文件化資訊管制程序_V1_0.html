@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISMS-075-PRO-001 文件化資訊管制程序</title>
+<style>
+body {
+  margin: 0;
+  background: #eef2f7;
+  color: #1f2933;
+  font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.78;
+}
+.page {
+  max-width: 1240px;
+  margin: 28px auto;
+  background: #fff;
+  border: 1px solid #d5dde8;
+  box-shadow: 0 12px 34px rgba(31, 41, 51, .09);
+  padding: 34px 44px 56px;
+}
+h1 {
+  margin: 0 0 8px;
+  color: #12385f;
+  font-size: 31px;
+}
+.subtitle {
+  margin: 0 0 22px;
+  color: #52616f;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 34px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #235f8f;
+  color: #12385f;
+  font-size: 22px;
+}
+h3 {
+  margin: 24px 0 8px;
+  color: #1f4f78;
+}
+p {
+  margin: 10px 0 14px;
+}
+table {
+  margin: 14px 0 24px;
+  font-size: 14px;
+}
+th {
+  background: #dcebf8;
+  color: #12385f;
+  text-align: left;
+}
+td {
+  background: #fff;
+}
+ul {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  padding-left: 22px;
+}
+.note {
+  background: #edf6ff;
+  border-left: 5px solid #235f8f;
+  padding: 13px 16px;
+  margin: 16px 0 22px;
+}
+.statement {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+}
+.org-chart {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+  color: #12385f;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  overflow: auto;
+  white-space: pre;
+}
+.procedure-flow {
+  white-space: pre-wrap;
+}
+.ca-text-flow {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px;
+  margin: 18px 0 24px;
+}
+.ca-flow-title {
+  text-align: center;
+  color: #12385f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.ca-flow-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+.ca-flow-head {
+  background: #dcebf8;
+  border: 1px solid #7f9fbd;
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+}
+.ca-cell {
+  min-height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ca-box,
+.ca-note,
+.ca-decision-box {
+  border: 1px solid #12385f;
+  background: #fff;
+  color: #1f2933;
+  text-align: center;
+  padding: 10px 12px;
+  line-height: 1.35;
+  max-width: 300px;
+  width: 78%;
+}
+.ca-note {
+  border-style: dashed;
+}
+.ca-decision-box {
+  border-radius: 2px;
+  background: #eef6ff;
+  font-weight: 700;
+}
+.ca-down,
+.ca-cross,
+.ca-loop {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+}
+.ca-cross {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.ca-cross span,
+.ca-loop span {
+  display: block;
+  border-top: 2px solid #12385f;
+  padding-top: 3px;
+}
+.ca-cross .left {
+  text-align: left;
+}
+.ca-cross .right {
+  text-align: right;
+}
+.ca-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  justify-items: center;
+}
+.ca-simple-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-simple-flow .ca-box,
+.ca-simple-flow .ca-note,
+.ca-simple-flow .ca-decision-box {
+  max-width: 440px;
+  width: min(440px, 92%);
+}
+.ca-branch {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+  align-items: start;
+  justify-items: center;
+}
+.ca-branch-path {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-branch-label {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+}
+.ca-return {
+  border: 1px dashed #12385f;
+  color: #12385f;
+  background: #fff;
+  padding: 8px 10px;
+  text-align: center;
+  width: min(360px, 88%);
+}
+.flow-image-figure {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px;
+  margin: 18px 0 24px;
+  text-align: center;
+}
+.flow-image {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #7f9fbd;
+}
+.flowchart {
+  margin: 18px auto 24px;
+  max-width: 900px;
+}
+.flow-step {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px 16px;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.flow-id {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  background: #12385f;
+  min-width: 34px;
+  height: 28px;
+  padding: 0 8px;
+  flex: 0 0 auto;
+}
+.flow-text {
+  font-weight: 700;
+  color: #12385f;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+.flow-meta {
+  color: #52616f;
+  font-size: 13px;
+}
+.flow-arrow {
+  text-align: center;
+  font-weight: 700;
+  color: #235f8f;
+  padding: 6px 0;
+}
+.footer {
+  margin-top: 38px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<main class="page">
+<h1>ISMS-075-PRO-001 文件化資訊管制程序</h1>
+<p class="subtitle">ISMS 文件｜ISO/IEC 27001:2022 Clause 7.5 / Documented Information / Integrated Management System</p>
+<div class="note"><ul>
+<li>本文件以 【公司名稱】 作為待填組織名稱，正式發行前應替換為公司登記名稱、品牌名稱、營運據點與組織架構。</li>
+<li>本版文件以第三方驗證、供應商管理系統審查、跨管理系統整合及課程操作為目的進行重寫。</li>
+<li>所有表格格式、保存等級 / 期限及文件分級規則依 ISMS-075-PRO-001 文件化資訊管制程序執行。</li>
+</ul></div>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-075-PRO-001</td>
+<td>文件化資訊管制程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 7.5 / Documented Information / Integrated Management System</td>
+<td>管理系統代表 / 文件管制負責人</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權管理代表</td>
+<td>受控文件庫 / 管理系統 / ISMS-075 / ISMS-075-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>管理系統代表 / 文件管制負責人 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>1. 管理意圖</h2>
+<p>本程序建立管理系統文件化資訊的共同控制方法，確保所有手冊、政策、程序、作業指導書、表單、清冊、矩陣、紀錄、報告、外部來源文件、GHG/CO2資料與互動式表單輸出，都能在需要的地點與時機取得正確版本，並受到適當保護、保存、更新、作廢與追溯。</p>
+<p>文件化資訊控制不是行政性歸檔活動，而是支援第三方驗證、客戶與供應商審查、跨管理系統整合、營運控制、風險管理、查證 (Verification)、確證 (Validation)、稽核與管理審查的核心控制。</p>
+<h2>2. 適用範圍與邊界</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 20%;">範圍項目</th>
+<th style="vertical-align: top !important; width: 56%;">適用內容</th>
+<th style="vertical-align: top !important; width: 24%;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">管理系統範圍</td>
+<td style="vertical-align: top !important; width: 56%;">適用於組織建立或整合之各類管理系統與永續治理文件化資訊。</td>
+<td style="vertical-align: top !important; width: 24%;">若特定標準、法規、客戶或合約有較嚴格要求，採較嚴格者。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">文件類型範圍</td>
+<td style="vertical-align: top !important; width: 56%;">包含MAN、POL、PRO、SOP、MDL、MTX、FRM、REG、REC、RPT、Interactive、外部來源文件、系統紀錄、照片、報告、資料集與查證證據。</td>
+<td style="vertical-align: top !important; width: 24%;">互動式表單輸出若用於正式紀錄，應納入受控保存與審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">媒介與位置</td>
+<td style="vertical-align: top !important; width: 56%;">包含紙本、HTML、PDF、Word、Excel、系統畫面、資料庫、雲端文件庫、客戶/供應商平台與備份封存。</td>
+<td style="vertical-align: top !important; width: 24%;">不因媒介不同而免除版本、存取、保存與保護要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">排除說明</td>
+<td style="vertical-align: top !important; width: 56%;">個人筆記、臨時草稿、未核准討論稿不作為正式受控文件。</td>
+<td style="vertical-align: top !important; width: 24%;">若草稿被用於作業、訓練、客戶承諾或稽核證據，即應納入控制。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 角色、責任與權限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">角色</th>
+<th style="vertical-align: top !important; width: 52%;">主要責任</th>
+<th style="vertical-align: top !important; width: 26%;">最低證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">最高管理階層 (Top management)</td>
+<td style="vertical-align: top !important; width: 52%;">核准政策、方向、資源與重大風險接受；<br>確保管理系統與策略及營運流程整合。</td>
+<td style="vertical-align: top !important; width: 26%;">政策核准、管理審查紀錄、資源決策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">管理系統代表 (Management System Representative)</td>
+<td style="vertical-align: top !important; width: 52%;">維護管理系統架構、文件、流程互動、稽核方案、管理審查輸入與跨系統整合。</td>
+<td style="vertical-align: top !important; width: 26%;">文件總清冊、流程矩陣、稽核方案、管理審查資料。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">流程Owner</td>
+<td style="vertical-align: top !important; width: 52%;">定義流程輸入、輸出、準則、風險、KPI、文件化資訊與改善措施。</td>
+<td style="vertical-align: top !important; width: 26%;">流程卡、KPI、風險紀錄、作業紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">部門主管</td>
+<td style="vertical-align: top !important; width: 52%;">確保人員能力、資源、執行紀律、異常通報與紀錄完整。</td>
+<td style="vertical-align: top !important; width: 26%;">訓練紀錄、作業紀錄、異常處置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">文件管理者</td>
+<td style="vertical-align: top !important; width: 52%;">依ISMS-075控制文件建立、審查、核准、發布、保存、作廢與存取權限。</td>
+<td style="vertical-align: top !important; width: 26%;">文件總清冊、版本紀錄、發布紀錄。</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">活動內容</th>
+<th style="vertical-align: top !important; width: 13%;">最高管理階層</th>
+<th style="vertical-align: top !important; width: 17%;">管理系統代表</th>
+<th style="vertical-align: top !important; width: 17%;">文件管理者</th>
+<th style="vertical-align: top !important; width: 18%;">文件Owner / 流程Owner</th>
+<th style="vertical-align: top !important; width: 13%;">使用者</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">文件架構與規則核准</td>
+<td style="vertical-align: top !important; width: 13%;">A</td>
+<td style="vertical-align: top !important; width: 17%;">R</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 18%;">C</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">新增、修訂、作廢申請</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 18%;">R / A內容</td>
+<td style="vertical-align: top !important; width: 13%;">R需要時</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">文件審查與查證</td>
+<td style="vertical-align: top !important; width: 13%;">A重大文件</td>
+<td style="vertical-align: top !important; width: 17%;">R / A</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 18%;">R</td>
+<td style="vertical-align: top !important; width: 13%;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">受控發布與舊版封存</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 17%;">R / A</td>
+<td style="vertical-align: top !important; width: 18%;">C</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">存取權限與文件保護</td>
+<td style="vertical-align: top !important; width: 13%;">A重大或高度機密</td>
+<td style="vertical-align: top !important; width: 17%;">C</td>
+<td style="vertical-align: top !important; width: 17%;">R</td>
+<td style="vertical-align: top !important; width: 18%;">C</td>
+<td style="vertical-align: top !important; width: 13%;">R遵守規定</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">保存期限與期滿處置</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+<td style="vertical-align: top !important; width: 17%;">A</td>
+<td style="vertical-align: top !important; width: 17%;">R</td>
+<td style="vertical-align: top !important; width: 18%;">C</td>
+<td style="vertical-align: top !important; width: 13%;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">監督、稽核與改善</td>
+<td style="vertical-align: top !important; width: 13%;">A重大事項</td>
+<td style="vertical-align: top !important; width: 17%;">R</td>
+<td style="vertical-align: top !important; width: 17%;">R</td>
+<td style="vertical-align: top !important; width: 18%;">R</td>
+<td style="vertical-align: top !important; width: 13%;">C</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 作業流程圖</h2>
+<div class="flowchart">
+<div class="flow-step">
+<span class="flow-id">1</span><div class="flow-text">識別文件化資訊需求</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">2</span><div class="flow-text">判定文件類型、分級、保存等級與Owner</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">3</span><div class="flow-text">建立或修訂文件草案</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">4</span><div class="flow-text">執行內容審查、查證與影響評估</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">5</span><div class="flow-text">核准、生效、發布與通知</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">6</span><div class="flow-text">使用、存取、保護與保存文件化資訊</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">7</span><div class="flow-text">變更、作廢、封存或外部文件更新</div>
+</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">
+<span class="flow-id">8</span><div class="flow-text">監督有效性並輸入稽核與管理審查</div>
+</div>
+</div>
+<h2>5. 程序步驟與執行要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">步驟</th>
+<th style="vertical-align: top !important; width: 22%;">輸入資料</th>
+<th style="vertical-align: top !important; width: 32%;">活動內容</th>
+<th style="vertical-align: top !important; width: 20%;">輸出 / 客觀證據</th>
+<th style="vertical-align: top !important; width: 8%;">負責人員</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">1. 識別文件化資訊需求</td>
+<td style="vertical-align: top !important; width: 22%;">標準條款、法規、客戶要求、供應商要求、流程需求、風險評估、稽核發現、管理審查決議、GHG/CO2資料要求。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-REG-003 外部來源文件清冊<br>MS-042-REG-001 管理系統法規合約與利益相關方要求清冊<br>MS-061-REG-001 管理系統風險與機會登錄表</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>判定是否需要建立、維持或保留文件化資訊。</li>
+<li>確認該資訊是用來描述要求、指導作業、證明符合性、支援追溯、提供查證/確證，或作為管理審查輸入。</li>
+<li>若來源為外部文件，先確認來源、版本、適用範圍與授權限制。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">文件化資訊需求、來源紀錄、適用性判定、必要時文件制修訂申請。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-REG-003 外部來源文件清冊</td>
+<td style="vertical-align: top !important; width: 8%;">流程Owner / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">2. 判定文件類型、分級、保存等級與Owner</td>
+<td style="vertical-align: top !important; width: 22%;">文件化資訊需求、資料敏感度、法規/客戶/驗證要求、流程風險、使用者與保存需求。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-MTX-001 文件分級與存取控制矩陣<br>ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>判定文件類型，例如MAN、POL、PRO、SOP、FRM、REG、REC、RPT或Interactive。</li>
+<li>指派文件Owner、Reviewer、Approver與保存責任。</li>
+<li>判定文件分級、存取權限、保存等級/期限、保存位置與審查週期。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">文件類型、Owner、分級、保存等級/期限、保存位置與審查週期判定。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-REG-002 管理系統紀錄保存期限清冊<br>ISMS-075-MTX-001 文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 8%;">文件管理者 / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">3. 建立或修訂文件草案</td>
+<td style="vertical-align: top !important; width: 22%;">核准之文件需求、既有文件、標準條款、流程輸入輸出、表格格式規則、文件命名規則。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>依核准模板、文件編碼、章節結構與表格格式建立文件。</li>
+<li>所有表格應使用指定table格式，且每個th/td均需vertical-align: top !important。</li>
+<li>若段落使用「；<br>」代表不同項目，應換行呈現，以利閱讀與稽核抽樣。</li>
+<li>文件索引應使用「文件編號 文件名稱」格式。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">文件草案、修訂摘要、紅線版或差異說明、受影響文件清單。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-REG-001 管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 8%;">文件Owner / 文件管理者</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">4. 執行內容審查、查證與影響評估</td>
+<td style="vertical-align: top !important; width: 22%;">文件草案、修訂摘要、受影響流程、關聯文件、風險與保存要求。<br><br><strong>管理系統參考文件：</strong><br>MS-061-FRM-001 管理系統風險與機會評估表<br>ISMS-075-REG-001 管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>審查內容是否符合標準、法規、客戶、流程與管理系統要求。</li>
+<li>查證文件編號、版本、Owner、分級、保存期限、表格格式、引用文件與證據連結是否正確。</li>
+<li>評估對訓練、流程、系統權限、外部溝通、供應商、GHG/CO2證據與既有紀錄的影響。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">審查意見、補正紀錄、查證結果、影響評估、核准建議。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 8%;">Reviewer / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">5. 核准、生效、發布與通知</td>
+<td style="vertical-align: top !important; width: 22%;">審查完成文件、核准建議、生效日期、發布範圍、訓練或通知需求。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>依授權矩陣完成核准，重大政策、手冊、治理文件或高風險例外應由最高管理階層或授權治理角色核准。</li>
+<li>設定生效日、發布位置、存取權限與使用範圍。</li>
+<li>通知受影響人員，必要時完成訓練、簽收或系統公告。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">核准紀錄、正式版文件、發布紀錄、通知/訓練證據、文件總清冊更新。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-SOP-001 受控文件庫作業指導書<br>MS-072-REC-001 訓練與適任性評估紀錄</td>
+<td style="vertical-align: top !important; width: 8%;">Approver / 文件管理者</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">6. 使用、存取、保護與保存文件化資訊</td>
+<td style="vertical-align: top !important; width: 22%;">正式發布文件、權限矩陣、保存期限、使用者需求、系統或紙本保存位置。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-MTX-001 文件分級與存取控制矩陣<br>ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>確保使用者在需要的地點與時機取得最新版文件。</li>
+<li>保護文件免於未授權存取、遺失完整性、錯誤使用、未核准修改或機密性外洩。</li>
+<li>保留紀錄時應能追溯日期、責任人、活動、判定準則、結果與後續措施。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">存取紀錄、文件庫紀錄、保存證據、備份/封存證據、權限設定紀錄。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-SOP-001 受控文件庫作業指導書<br>ISMS-075-REG-002 管理系統紀錄保存期限清冊<br>ISMS-075-MTX-001 文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 8%;">文件管理者 / 使用者</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">7. 變更、作廢、封存或外部文件更新</td>
+<td style="vertical-align: top !important; width: 22%;">變更申請、外部來源文件變更、舊版文件、到期紀錄、作廢或封存需求。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-FRM-001 文件制修訂申請表<br>ISMS-075-REG-003 外部來源文件清冊</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>文件修訂、作廢、合併、緊急變更或外部文件更新時，應重新評估影響範圍。</li>
+<li>舊版文件應移除、標示、隔離或封存，防止誤用。</li>
+<li>若外部來源文件影響內部流程、合約、風險或GHG/CO2證據，應同步更新相關文件與清冊。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">新版文件、作廢/封存紀錄、外部來源文件更新紀錄、受影響文件同步證據。<br><br><strong>管理系統參考文件：</strong><br>ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-REG-003 外部來源文件清冊<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 8%;">文件管理者 / 法遵 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">8. 監督有效性並輸入稽核與管理審查</td>
+<td style="vertical-align: top !important; width: 22%;">KPI、文件抽查、內部稽核、第三方驗證、客戶/供應商審查、不符合事項發現、使用者回饋。<br><br><strong>管理系統參考文件：</strong><br>MS-091-FRM-001 管理系統KPI追蹤表<br>MS-092-REC-001 內部稽核報告<br>MS-102-FRM-001 不符合報告與根本原因分析表</td>
+<td style="vertical-align: top !important; width: 32%;"><ul>
+<li>監督文件完整率、版本一致率、逾期審查、錯版使用、外部文件更新及紀錄可取得性。</li>
+<li>分析異常趨勢，必要時啟動矯正措施、改善、訓練或文件架構調整。</li>
+<li>將文件化資訊控制有效性、重大異常與資源需求納入管理審查。</li>
+</ul></td>
+<td style="vertical-align: top !important; width: 20%;">KPI報表、抽查紀錄、CAPA、改善追蹤、管理審查輸入與決議。<br><br><strong>管理系統參考文件：</strong><br>MS-091-RPT-001 管理系統績效分析報告<br>MS-093-FRM-001 管理審查輸入彙整表<br>MS-093-REC-001 管理審查會議紀錄</td>
+<td style="vertical-align: top !important; width: 8%;">管理系統代表 / 文件管理者</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 主要管制點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">管制項</th>
+<th style="vertical-align: top !important; width: 50%;">控制要求</th>
+<th style="vertical-align: top !important; width: 26%;">客觀證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">可取得且適用</td>
+<td style="vertical-align: top !important; width: 50%;">文件化資訊在需要的地點與時機可取得，且內容適合使用目的。</td>
+<td style="vertical-align: top !important; width: 26%;">受控文件庫、使用者訪談、現場或系統畫面抽樣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">版本與狀態清楚</td>
+<td style="vertical-align: top !important; width: 50%;">正式版、草案、作廢、封存與外部來源文件狀態不得混淆。</td>
+<td style="vertical-align: top !important; width: 26%;">文件總清冊、版本紀錄、舊版封存證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">建立與更新受控</td>
+<td style="vertical-align: top !important; width: 50%;">文件建立、修訂、作廢、緊急發布均需申請、審查、核准與發布紀錄。</td>
+<td style="vertical-align: top !important; width: 26%;">文件制修訂申請表、審查紀錄、發布紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">完整性與機密性保護</td>
+<td style="vertical-align: top !important; width: 50%;">依文件分級與Need-to-know原則保護文件，避免未授權修改、洩漏、遺失或誤用。</td>
+<td style="vertical-align: top !important; width: 26%;">權限矩陣、系統權限、備份紀錄、存取紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">保存與可追溯</td>
+<td style="vertical-align: top !important; width: 50%;">紀錄保存期限、保存位置、起算點、期滿處置與Legal Hold需明確。</td>
+<td style="vertical-align: top !important; width: 26%;">保存期限清冊、封存紀錄、銷毀/保全紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">外部來源文件控制</td>
+<td style="vertical-align: top !important; width: 50%;">外部標準、法規、客戶要求、供應商文件、碳資料方法學需登錄並評估影響。</td>
+<td style="vertical-align: top !important; width: 26%;">外部來源文件清冊、影響評估、內部文件更新紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 文件化資訊分類與架構</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 16%;">文件類型</th>
+<th style="vertical-align: top !important; width: 48%;">用途</th>
+<th style="vertical-align: top !important; width: 36%;">核准與保存重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">MAN / 手冊</td>
+<td style="vertical-align: top !important; width: 48%;">描述管理系統架構、範圍、治理、流程互動與整體要求。</td>
+<td style="vertical-align: top !important; width: 36%;">通常由最高管理階層或授權治理角色核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">POL / 政策</td>
+<td style="vertical-align: top !important; width: 48%;">描述方向、承諾、高階要求與管理原則。</td>
+<td style="vertical-align: top !important; width: 36%;">需與組織全景、策略及目標一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">PRO / 程序書</td>
+<td style="vertical-align: top !important; width: 48%;">描述某項管理活動從輸入到輸出的流程、責任、控制與證據。</td>
+<td style="vertical-align: top !important; width: 36%;">應包含作業流程圖與程序步驟。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">SOP / 作業指導書</td>
+<td style="vertical-align: top !important; width: 48%;">描述特定工具、系統、文件庫或作業方法。</td>
+<td style="vertical-align: top !important; width: 36%;">需可供實作者直接操作。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">FRM / 表單</td>
+<td style="vertical-align: top !important; width: 48%;">提供填寫欄位，使活動形成可稽核紀錄。</td>
+<td style="vertical-align: top !important; width: 36%;">正式紀錄需完成審查、核准與保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">REG / 清冊或登錄表</td>
+<td style="vertical-align: top !important; width: 48%;">集中登錄可追蹤項目，例如文件、外部來源、風險、設備、供應商、碳證據。</td>
+<td style="vertical-align: top !important; width: 36%;">需有欄位要求、Owner、狀態與審查頻率。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">REC / 紀錄</td>
+<td style="vertical-align: top !important; width: 48%;">證明活動已按計畫執行或結果符合要求。</td>
+<td style="vertical-align: top !important; width: 36%;">需依保存期限與證據品質要求保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">MTX / 矩陣</td>
+<td style="vertical-align: top !important; width: 48%;">呈現要求、流程、角色、控制、文件或風險之對應關係。</td>
+<td style="vertical-align: top !important; width: 36%;">需定期確認矩陣仍與實際流程一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">RPT / 報告</td>
+<td style="vertical-align: top !important; width: 48%;">彙整分析、績效、稽核、管理審查或改善結果。</td>
+<td style="vertical-align: top !important; width: 36%;">需保留資料來源、分析邏輯與結論。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 文件編號、命名與版本規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 20%;">項目</th>
+<th style="vertical-align: top !important; width: 48%;">規則</th>
+<th style="vertical-align: top !important; width: 32%;">範例 / 說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">文件編號</td>
+<td style="vertical-align: top !important; width: 48%;">建議採管理系統/條款/文件類型/序號結構；<br>共用文件使用MS前綴。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-PRO-001、MS-061-REG-001。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">文件名稱</td>
+<td style="vertical-align: top !important; width: 48%;">文件名稱應能反映目的與活動，不使用模糊或過短名稱。</td>
+<td style="vertical-align: top !important; width: 32%;">文件化資訊管制程序、管理系統風險與機會登錄表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">版本</td>
+<td style="vertical-align: top !important; width: 48%;">正式文件應顯示版本；<br>重大內容修訂升主要版本，格式或文字微調可升次版本。</td>
+<td style="vertical-align: top !important; width: 32%;">V1.0、V1.1、V2.0。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">檔名</td>
+<td style="vertical-align: top !important; width: 48%;">檔名應包含文件編號、文件名稱與版本；<br>完整包副本可移除草案或內部產製字樣。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-PRO-001_文件化資訊管制程序_V1_0.html。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">引用文件</td>
+<td style="vertical-align: top !important; width: 48%;">文件索引與程序步驟中引用文件時，使用「文件編號 文件名稱」格式。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-REG-001 管理系統文件總清冊。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 表格與HTML產出規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">規則</th>
+<th style="vertical-align: top !important; width: 54%;">要求</th>
+<th style="vertical-align: top !important; width: 28%;">理由</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">表格開頭</td>
+<td style="vertical-align: top !important; width: 54%;">&lt;table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8"&gt;</td>
+<td style="vertical-align: top !important; width: 28%;">確保Moodle、瀏覽器與文件匯出時表格一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">儲存格對齊</td>
+<td style="vertical-align: top !important; width: 54%;">每個th與td必須包含 vertical-align: top !important。</td>
+<td style="vertical-align: top !important; width: 28%;">避免多行內容垂直置中造成閱讀困難。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">分項換行</td>
+<td style="vertical-align: top !important; width: 54%;">使用「；<br>」代表不同項目時，應換行呈現。</td>
+<td style="vertical-align: top !important; width: 28%;">避免多個要求擠在同一段落。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">欄位名稱</td>
+<td style="vertical-align: top !important; width: 54%;">表單、清冊與紀錄欄位應清楚描述輸入資料、活動內容、輸出/客觀證據、責任與狀態。</td>
+<td style="vertical-align: top !important; width: 28%;">讓文件可直接操作並可供稽核抽樣。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 文件分級、存取與保護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">分級</th>
+<th style="vertical-align: top !important; width: 48%;">適用內容</th>
+<th style="vertical-align: top !important; width: 30%;">最低保護要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">Public / 公開</td>
+<td style="vertical-align: top !important; width: 48%;">經核准可對外公開之政策、證書、一般說明。</td>
+<td style="vertical-align: top !important; width: 30%;">發布前需核准，避免過期或錯誤版本公開。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">Internal / 內部</td>
+<td style="vertical-align: top !important; width: 48%;">一般管理系統文件、程序、表單、清冊、訓練教材。</td>
+<td style="vertical-align: top !important; width: 30%;">限內部授權人員使用，外部分享需核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">Confidential / 機密</td>
+<td style="vertical-align: top !important; width: 48%;">客戶資料、供應商合約、稽核發現、設計資料、風險資料、管理審查資料。</td>
+<td style="vertical-align: top !important; width: 30%;">Need-to-know存取，分享、下載與列印受控。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">Highly Confidential / 高度機密</td>
+<td style="vertical-align: top !important; width: 48%;">個資、資安事件、AI高風險資料、重大不符合、GHG/CO2查證底稿、未公開碳聲明或法律保全資料。</td>
+<td style="vertical-align: top !important; width: 30%;">嚴格授權、必要時加密、存取日誌、禁止未核准外傳。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 紀錄保存、外部來源文件與期滿處置</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 20%;">控制主題</th>
+<th style="vertical-align: top !important; width: 52%;">管理要求</th>
+<th style="vertical-align: top !important; width: 28%;">主要文件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">保存期限</td>
+<td style="vertical-align: top !important; width: 52%;">依紀錄類型、風險、法規、客戶、驗證與Legal Hold要求設定保存等級/期限。</td>
+<td style="vertical-align: top !important; width: 28%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">外部來源文件</td>
+<td style="vertical-align: top !important; width: 52%;">外部標準、法規、客戶文件、供應商文件、方法學與碳資料來源需登錄、監測與影響評估。</td>
+<td style="vertical-align: top !important; width: 28%;">ISMS-075-REG-003 外部來源文件清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">GHG/CO2證據</td>
+<td style="vertical-align: top !important; width: 52%;">碳盤查、產品碳足跡、碳中和聲明與查證證據應建立資料鏈、版本與來源追溯。</td>
+<td style="vertical-align: top !important; width: 28%;">ISMS-075-REG-004 GHG-CO2資料與碳證據清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 20%;">期滿處置</td>
+<td style="vertical-align: top !important; width: 52%;">到期紀錄應經Owner確認是否銷毀、封存、延長保存或Legal Hold。</td>
+<td style="vertical-align: top !important; width: 28%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 監督、量測與有效性評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 26%;">指標</th>
+<th style="vertical-align: top !important; width: 38%;">判定方式</th>
+<th style="vertical-align: top !important; width: 36%;">管理用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">文件清冊完整率</td>
+<td style="vertical-align: top !important; width: 38%;">已登錄受控文件數 / 應登錄受控文件數。</td>
+<td style="vertical-align: top !important; width: 36%;">確認受控文件沒有散落在清冊外。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">版本一致率</td>
+<td style="vertical-align: top !important; width: 38%;">抽樣文件中，文件首頁、文件庫、清冊與使用現場版本一致之比例。</td>
+<td style="vertical-align: top !important; width: 36%;">發現錯版、舊版或未核准文件誤用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">文件審查準時率</td>
+<td style="vertical-align: top !important; width: 38%;">期限內完成定期或事件型審查的文件比例。</td>
+<td style="vertical-align: top !important; width: 36%;">確認Owner責任與審查紀律。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">外部文件更新準時率</td>
+<td style="vertical-align: top !important; width: 38%;">外部來源文件變更後，於規定時間內完成影響評估與內部更新之比例。</td>
+<td style="vertical-align: top !important; width: 36%;">降低法規、客戶或標準變更遺漏風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">紀錄抽樣可取得率</td>
+<td style="vertical-align: top !important; width: 38%;">稽核抽樣紀錄可於約定時間內取得且內容完整之比例。</td>
+<td style="vertical-align: top !important; width: 36%;">支持第三方驗證與客戶/供應商審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">錯版或失效文件誤用件數</td>
+<td style="vertical-align: top !important; width: 38%;">發生錯版、舊版、未核准文件被使用之事件數。</td>
+<td style="vertical-align: top !important; width: 36%;">發生即評估不符合事項發現與矯正措施。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 風險、例外與升級規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">情境</th>
+<th style="vertical-align: top !important; width: 46%;">最低處置</th>
+<th style="vertical-align: top !important; width: 30%;">升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">未核准文件被使用</td>
+<td style="vertical-align: top !important; width: 46%;">立即停止使用、確認影響範圍、替換正式版本並保留處置紀錄。</td>
+<td style="vertical-align: top !important; width: 30%;">影響產品/服務符合性、顧客承諾、法規或放行時啟動CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">錯版或舊版文件外流</td>
+<td style="vertical-align: top !important; width: 46%;">回收錯版、通知受影響方、評估是否需客戶或主管機關通知。</td>
+<td style="vertical-align: top !important; width: 30%;">涉及客戶資料、個資、資安、GHG/CO2公開聲明或合約時升級。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">外部法規或客戶要求更新未轉換</td>
+<td style="vertical-align: top !important; width: 46%;">補登外部來源文件、完成影響評估並更新內部文件。</td>
+<td style="vertical-align: top !important; width: 30%;">造成不符合、交付風險或驗證風險時升級管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">紀錄遺失或不可讀</td>
+<td style="vertical-align: top !important; width: 46%;">啟動資料復原、重新取得證據或建立替代證據說明。</td>
+<td style="vertical-align: top !important; width: 30%;">涉及重大稽核證據、法律保全或碳查證時升級最高管理階層。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">緊急文件發布</td>
+<td style="vertical-align: top !important; width: 46%;">可先臨時發布必要控制，但需標示有效期限並於指定期限內完成正式核准。</td>
+<td style="vertical-align: top !important; width: 30%;">緊急發布超期、影響重大風險或需對外承諾時升級。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 跨管理系統整合</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">管理系統</th>
+<th style="vertical-align: top !important; width: 50%;">文件化資訊整合重點</th>
+<th style="vertical-align: top !important; width: 32%;">典型證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">適用管理系統標準</td>
+<td style="vertical-align: top !important; width: 50%;">產品服務符合性、顧客要求、設計、供應商、放行、不符合與改善證據。</td>
+<td style="vertical-align: top !important; width: 32%;">MS-082-FRM-001 客戶要求與合約審查表<br>MS-084-REG-001 合格供應商名冊<br>MS-102-FRM-001 不符合報告與根本原因分析表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS / ISO/IEC 27001</td>
+<td style="vertical-align: top !important; width: 50%;">資訊資產、權限、日誌、事件、供應商與文件機密性控制。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-MTX-001 文件分級與存取控制矩陣<br>MS-061-REG-002 資訊安全風險登錄表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">PIMS / ISO/IEC 27701</td>
+<td style="vertical-align: top !important; width: 50%;">個資處理、資料主體權利、委外處理、保存與刪除證據。</td>
+<td style="vertical-align: top !important; width: 32%;">MS-061-REG-004 隱私風險登錄表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">AIMS / ISO/IEC 42001</td>
+<td style="vertical-align: top !important; width: 50%;">AI系統用途、資料、模型、風險、人工覆核、監督與事件紀錄。</td>
+<td style="vertical-align: top !important; width: 32%;">MS-061-REG-003 AI系統風險登錄表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">BCMS / ISO 22301</td>
+<td style="vertical-align: top !important; width: 50%;">BIA、BCP、演練、事件復原與營運持續證據。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">GHG / Carbon</td>
+<td style="vertical-align: top !important; width: 50%;">ISO 14064、14065、14067、14068-1相關資料、係數、查證、產品碳足跡與碳中和證據鏈。</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-075-REG-004 GHG-CO2資料與碳證據清冊<br>MS-061-REG-005 氣候變遷與GHG-CO2風險登錄表</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 稽核與驗證準備重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">稽核問題</th>
+<th style="vertical-align: top !important; width: 46%;">可接受回答</th>
+<th style="vertical-align: top !important; width: 30%;">應準備證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">文件化資訊是否依適用管理系統標準 7.5控制？</td>
+<td style="vertical-align: top !important; width: 46%;">組織能說明建立、更新、可取得、保護、保存、作廢與外部來源文件控制方法。</td>
+<td style="vertical-align: top !important; width: 30%;">ISMS-075-PRO-001 文件化資訊管制程序<br>ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">使用者如何知道最新版？</td>
+<td style="vertical-align: top !important; width: 46%;">正式文件以受控文件庫與文件總清冊為準，現場或系統不得使用未核准版本。</td>
+<td style="vertical-align: top !important; width: 30%;">ISMS-075-REG-001 管理系統文件總清冊<br>ISMS-075-SOP-001 受控文件庫作業指導書</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">紀錄保存期限如何判定？</td>
+<td style="vertical-align: top !important; width: 46%;">保存期限依紀錄類型、法規、客戶、驗證、風險與Legal Hold要求從嚴判定。</td>
+<td style="vertical-align: top !important; width: 30%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">外部來源文件如何更新？</td>
+<td style="vertical-align: top !important; width: 46%;">外部標準、法規、客戶要求、供應商文件與碳資料方法學均有登錄、監測與影響評估。</td>
+<td style="vertical-align: top !important; width: 30%;">ISMS-075-REG-003 外部來源文件清冊<br>ISMS-075-REG-004 GHG-CO2資料與碳證據清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">文件控制是否有效？</td>
+<td style="vertical-align: top !important; width: 46%;">可提供KPI、抽樣紀錄、內部稽核、CAPA與管理審查輸入證明控制有效。</td>
+<td style="vertical-align: top !important; width: 30%;">MS-091-RPT-001 管理系統績效分析報告<br>MS-092-REC-001 內部稽核報告<br>MS-093-REC-001 管理審查會議紀錄<br>MS-102-REC-001 CAPA登錄表</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 相關文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">文件編號</th>
+<th style="vertical-align: top !important; width: 28%;">文件名稱</th>
+<th style="vertical-align: top !important; width: 54%;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-FRM-001</td>
+<td style="vertical-align: top !important; width: 28%;">文件制修訂申請表</td>
+<td style="vertical-align: top !important; width: 54%;">新增、修訂、作廢、合併、緊急變更與格式轉換之申請、審查及核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-001</td>
+<td style="vertical-align: top !important; width: 28%;">管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 54%;">受控文件主索引，登錄版本、狀態、Owner、分級、位置與審查週期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-002</td>
+<td style="vertical-align: top !important; width: 28%;">管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 54%;">定義紀錄保存期限、起算點、保存位置、保護及期滿處置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-003</td>
+<td style="vertical-align: top !important; width: 28%;">外部來源文件清冊</td>
+<td style="vertical-align: top !important; width: 54%;">登錄外部標準、法規、客戶、供應商文件與方法學。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-REG-004</td>
+<td style="vertical-align: top !important; width: 28%;">GHG-CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important; width: 54%;">保存GHG/CO2資料、產品碳足跡、碳中和與查證證據鏈。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-MTX-001</td>
+<td style="vertical-align: top !important; width: 28%;">文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 54%;">定義文件分級、角色權限、外部分享與保護要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">ISMS-075-SOP-001</td>
+<td style="vertical-align: top !important; width: 28%;">受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 54%;">定義文件庫命名、版本、權限、發布、封存、備份與日誌。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 版本修訂紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">版本</th>
+<th style="vertical-align: top !important; width: 16%;">日期</th>
+<th style="vertical-align: top !important; width: 50%;">修訂摘要</th>
+<th style="vertical-align: top !important; width: 20%;">核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 14%;">V1.0</td>
+<td style="vertical-align: top !important; width: 16%;">2026-07-01</td>
+<td style="vertical-align: top !important; width: 50%;">重寫為與管理系統程序書一致之操作型程序，整合管理意圖、範圍、角色、流程圖、程序步驟、管制點、KPI、風險升級、跨系統整合與稽核準備要求。</td>
+<td style="vertical-align: top !important; width: 20%;">Pending approval</td>
+</tr>
+</tbody>
+</table>
+
+<p class="footer">Prepared for 【公司名稱】 / 【Company Legal Name】. Replace bracketed placeholders before controlled release.</p>
+</main>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+<script src="../assets/document-dates.js"></script></body>
+</html>
