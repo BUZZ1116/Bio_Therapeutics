@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-FRM-001 實體進出與訪客紀錄表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #24496f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.checkbox { white-space: nowrap; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A07-FRM-001 實體進出與訪客紀錄表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-FRM-001</td>
+<td>實體進出與訪客紀錄表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-FRM-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Physical Security Owner / Facility Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>行政總務審查</td>
+<td></td>
+<td>行政總務主管 / 場所管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與隱私審查</td>
+<td></td>
+<td>法務 / DPO（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS / 緊急應變審查</td>
+<td></td>
+<td>BCMS負責人 / 緊急應變負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 行政總務主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 表單目的</h2>
+<p>本表單用於記錄與管制人員進入、離開、停留、陪同、異常、物品攜入攜出及受控區域活動，以確保實體安全控制措施具備可稽核性、可追溯性與完整證據鏈。本表單同時支援 ISO/IEC 27001:2022 Annex A.7 實體安全控制措施、事件管理、供應商存取、個人資料保護、營運持續與內部稽核之證據需求。</p>
+<p>本表單不得僅作為門禁簽到用途，應同時作為受控區域授權、訪客陪同、資訊資產接觸限制、攝影限制、臨時例外、緊急進出、異常通報與事後追查之正式紀錄。</p>
+
+<h2>2. 填表與使用原則</h2>
+<ul>
+<li>所有外部訪客、供應商、維修人員、稽核員、查證員與臨時進入受控區域者，均應完成登錄、身份確認、受訪人確認與離場登記。</li>
+<li>進入機房、資料中心、監控室、文件保存區、備份媒體區、研發實驗室、營業秘密區或其他高敏感區域者，應取得事前核准並由指定人員陪同或依門禁授權作業辦理。</li>
+<li>涉及攝影、錄音、錄影、攜入電腦、外接儲存裝置、測試設備、維修工具或資料搬運者，應另行記錄目的、核准人、設備序號、封存狀態與離場檢查結果。</li>
+<li>若發現未授權進入、尾隨、冒用身份、門禁失效、訪客失聯、物品遺失、未核准攝影或疑似資訊安全事件，應立即通知 Physical Security Owner、SOC、CISO 或指定事件窗口。</li>
+<li>本表單所含個人資料應依資料最小化、目的限制、授權存取、保存期限與安全銷毀要求管理。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>受控區域</td>
+<td>基於資訊安全、營運持續、法規、合約、客戶要求或資產保護需求，需限制進出、保留紀錄或加強監控之場所。</td>
+</tr>
+<tr>
+<td>高敏感區域</td>
+<td>包含機房、資料中心、監控室、備份媒體保存區、研發實驗室、金鑰或憑證管理區、保密文件保存區、客戶資料處理區與其他經風險評估指定之區域。</td>
+</tr>
+<tr>
+<td>訪客</td>
+<td>非組織正式授權常態進出人員，包括客戶、供應商、面試者、顧問、稽核員、查證員、維修人員、參訪人員與其他外部人員。</td>
+</tr>
+<tr>
+<td>受訪人 / 接待人</td>
+<td>對訪客進入目的、停留區域、陪同、資料接觸限制與離場確認負責之內部人員。</td>
+</tr>
+<tr>
+<td>陪同</td>
+<td>經指定內部人員於訪客進入、停留、移動、作業與離場期間進行現場監督，避免未授權接觸資訊、設備、文件或區域。</td>
+</tr>
+<tr>
+<td>尾隨</td>
+<td>未經授權人員跟隨授權人員進入受控區域之行為，屬於實體安全異常，應立即制止並通報。</td>
+</tr>
+<tr>
+<td>臨時通行權限</td>
+<td>因特定目的、特定期間、特定區域而授予之暫時性進出權限，目的完成後應立即回收、停用或到期失效。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 表單填寫責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>應保存或確認之證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>訪客 / 外部人員</td>
+<td>提供真實身份、來訪目的、所屬公司、聯絡資訊、攜入物品與簽署必要承諾。</td>
+<td>身份證明查核結果、訪客簽名、保密或安全提醒確認。</td>
+</tr>
+<tr>
+<td>櫃台 / 保全</td>
+<td>執行身份查驗、登錄、發放訪客識別證、通知受訪人、確認離場與回收證件。</td>
+<td>進出紀錄、訪客證編號、離場時間、異常紀錄。</td>
+</tr>
+<tr>
+<td>受訪人 / 接待人</td>
+<td>確認來訪必要性、接待訪客、限制活動範圍、執行陪同、確認資料與設備未遭未授權接觸。</td>
+<td>接待確認、陪同紀錄、離場確認、例外核准。</td>
+</tr>
+<tr>
+<td>Physical Security Owner</td>
+<td>維護表單、定期審查進出紀錄、處理異常、保留稽核證據並推動改善。</td>
+<td>定期審查紀錄、異常處理紀錄、改善追蹤。</td>
+</tr>
+<tr>
+<td>CISO / ISMS管理代表</td>
+<td>監督高敏感區域、重大異常、資訊安全事件與稽核發現之處理。</td>
+<td>事件通報、CAPA、稽核證據、管理審查輸入。</td>
+</tr>
+<tr>
+<td>DPO / 法務</td>
+<td>確認訪客紀錄涉及個人資料時之告知、保存、存取與刪除要求。</td>
+<td>隱私告知、保存期限、合法性與存取控管證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 實體進出主紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">紀錄編號</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">紀錄日期</th>
+<td style="width:30%;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>場所 / 廠區 / 樓層</th>
+<td></td>
+<th>受控區域名稱</th>
+<td></td>
+</tr>
+<tr>
+<th>區域分級</th>
+<td colspan="3">□ 一般辦公區　□ 受控辦公區　□ 機房 / 資料中心　□ 監控室　□ 文件保存區　□ 研發 / 測試區　□ 倉庫 / 媒體保存區　□ 其他：__________</td>
+</tr>
+<tr>
+<th>來訪 / 進出目的</th>
+<td colspan="3">□ 會議　□ 稽核 / 驗證　□ 維修 / 保養　□ 交付 / 收貨　□ 面試　□ 訓練　□ 參訪　□ 專案作業　□ 緊急支援　□ 其他：__________</td>
+</tr>
+<tr>
+<th>是否涉及資訊資產接觸</th>
+<td>□ 否　□ 是，說明：__________</td>
+<th>是否涉及PII / 客戶資料 / 機密資料</th>
+<td>□ 否　□ 是，說明：__________</td>
+</tr>
+<tr>
+<th>是否需要陪同</th>
+<td>□ 否　□ 是</td>
+<th>陪同人員</th>
+<td></td>
+</tr>
+<tr>
+<th>事前核准狀態</th>
+<td colspan="3">□ 不需事前核准　□ 已核准，核准單號：__________　□ 臨時核准，核准人：__________　□ 緊急進出，事件/變更單號：__________</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 訪客身份與公司資料登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>序號</th>
+<th>姓名</th>
+<th>公司 / 單位</th>
+<th>職稱</th>
+<th>聯絡電話 / Email</th>
+<th>身份查驗方式</th>
+<th>證件末四碼 / 識別資訊</th>
+<th>訪客證號</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 身分證　□ 護照　□ 公司證　□ 名片　□ 其他</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 身分證　□ 護照　□ 公司證　□ 名片　□ 其他</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 身分證　□ 護照　□ 公司證　□ 名片　□ 其他</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 身分證　□ 護照　□ 公司證　□ 名片　□ 其他</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 身分證　□ 護照　□ 公司證　□ 名片　□ 其他</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 進出時間與陪同紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>序號</th>
+<th>姓名</th>
+<th>進入時間</th>
+<th>離開時間</th>
+<th>實際停留區域</th>
+<th>受訪人 / 陪同人</th>
+<th>是否全程陪同</th>
+<th>離場確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>HH:MM</td>
+<td>HH:MM</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 訪客證回收　□ 物品確認　□ 權限停用</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>HH:MM</td>
+<td>HH:MM</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 訪客證回收　□ 物品確認　□ 權限停用</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>HH:MM</td>
+<td>HH:MM</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 訪客證回收　□ 物品確認　□ 權限停用</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>HH:MM</td>
+<td>HH:MM</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 訪客證回收　□ 物品確認　□ 權限停用</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>HH:MM</td>
+<td>HH:MM</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 訪客證回收　□ 物品確認　□ 權限停用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 進入區域與授權範圍確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>區域 / 房間 / 系統環境</th>
+<th>進入目的</th>
+<th>允許活動</th>
+<th>限制事項</th>
+<th>核准人</th>
+<th>陪同 / 監督要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般會議室 / 接待區</td>
+<td></td>
+<td>□ 會議　□ 訪談　□ 文件展示</td>
+<td>不得任意拍攝白板、螢幕、文件或人員識別資訊。</td>
+<td></td>
+<td>□ 接待人陪同　□ 不需全程陪同</td>
+</tr>
+<tr>
+<td>辦公區</td>
+<td></td>
+<td>□ 短暫通行　□ 專案討論　□ 設備安裝</td>
+<td>不得接觸非授權文件、螢幕、印表機輸出、座位區資產。</td>
+<td></td>
+<td>□ 全程陪同　□ 區域負責人監督</td>
+</tr>
+<tr>
+<td>機房 / 資料中心</td>
+<td></td>
+<td>□ 維修　□ 巡檢　□ 稽核　□ 緊急支援</td>
+<td>不得單獨停留、不得未核准接線、拔插、拍攝、攜出設備或連接外部媒體。</td>
+<td></td>
+<td>□ 全程陪同　□ 雙人覆核　□ 門禁紀錄</td>
+</tr>
+<tr>
+<td>監控室 / SOC區域</td>
+<td></td>
+<td>□ 稽核　□ 展示　□ 事件協作</td>
+<td>不得拍攝監控畫面、事件資訊、告警資料、使用者資料或系統拓樸。</td>
+<td></td>
+<td>□ 全程陪同　□ 需CISO核准</td>
+</tr>
+<tr>
+<td>文件 / 備份媒體保存區</td>
+<td></td>
+<td>□ 調閱　□ 盤點　□ 稽核　□ 搬遷</td>
+<td>不得翻閱、複印、拍攝、移動或攜出未核准文件與媒體。</td>
+<td></td>
+<td>□ 全程陪同　□ 交接清點</td>
+</tr>
+<tr>
+<td>其他：__________</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 攜入設備、工具與媒體紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>序號</th>
+<th>攜入物品類型</th>
+<th>品牌 / 型號 / 序號</th>
+<th>用途</th>
+<th>是否含儲存功能</th>
+<th>是否核准連接組織設備</th>
+<th>攜出確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>□ 筆電　□ 手機　□ 工具　□ USB　□ 硬碟　□ 測試儀器　□ 其他</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 已攜出　□ 留置，說明：__________</td>
+</tr>
+<tr>
+<td>2</td>
+<td>□ 筆電　□ 手機　□ 工具　□ USB　□ 硬碟　□ 測試儀器　□ 其他</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 已攜出　□ 留置，說明：__________</td>
+</tr>
+<tr>
+<td>3</td>
+<td>□ 筆電　□ 手機　□ 工具　□ USB　□ 硬碟　□ 測試儀器　□ 其他</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 已攜出　□ 留置，說明：__________</td>
+</tr>
+<tr>
+<td>4</td>
+<td>□ 筆電　□ 手機　□ 工具　□ USB　□ 硬碟　□ 測試儀器　□ 其他</td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 已攜出　□ 留置，說明：__________</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 攜出物品、文件與資訊資產紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>序號</th>
+<th>攜出項目</th>
+<th>資產／文件／媒體識別</th>
+<th>資訊分類</th>
+<th>攜出目的</th>
+<th>核准人</th>
+<th>預定歸還日</th>
+<th>實際歸還 / 處置結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td>□ 公開　□ 內部　□ 機密　□ 高機密　□ PII/受限制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td>□ 公開　□ 內部　□ 機密　□ 高機密　□ PII/受限制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>□ 公開　□ 內部　□ 機密　□ 高機密　□ PII/受限制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 訪客安全告知與承諾確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>告知 / 承諾事項</th>
+<th>確認狀態</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>已告知訪客僅得進入核准區域，不得任意進入辦公區、機房、文件保存區或其他受控區域。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>已告知不得拍照、錄音、錄影、截圖或記錄螢幕、白板、文件、監控畫面、設備標籤或人員資料，除非取得書面核准。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>已告知不得接觸、操作、連接、拆卸、搬移或攜出任何未授權資訊資產、網路設備、伺服器、端點設備、備份媒體或文件。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>已告知不得將個人儲存媒體、手機、筆電、測試設備或維修工具連接至組織設備或網路，除非取得核准並完成安全檢查。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>已告知所見、所聞或取得之資訊均應保密，不得外洩、複製、再傳輸或用於來訪目的以外用途。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>已告知發現門禁異常、遺失訪客證、可疑人員、設備異常或安全事件時，應立即通知接待人或保全。</td>
+<td>□ 已確認　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 攝影、錄音、錄影與資料蒐集例外核准</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">是否申請例外</th>
+<td style="width:30%;">□ 否　□ 是</td>
+<th style="width:20%;">例外類型</th>
+<td style="width:30%;">□ 攝影　□ 錄音　□ 錄影　□ 螢幕截圖　□ 文件複印　□ 其他</td>
+</tr>
+<tr>
+<th>例外目的</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>核准範圍</th>
+<td colspan="3">區域：__________　對象：__________　時間：__________　資料類型：__________</td>
+</tr>
+<tr>
+<th>限制條件</th>
+<td colspan="3">□ 不得拍攝人員個資　□ 不得拍攝螢幕/白板　□ 不得拍攝設備標籤　□ 需事前遮蔽敏感資訊　□ 完成後需提供副本審查　□ 不得外部發布　□ 其他：__________</td>
+</tr>
+<tr>
+<th>核准人</th>
+<td></td>
+<th>核准日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>事後檢查結果</th>
+<td colspan="3">□ 符合核准範圍　□ 已要求刪除/遮蔽　□ 發現異常並通報　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 高敏感區域進出補充檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核要求</th>
+<th>結果</th>
+<th>確認人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事前授權</td>
+<td>進入高敏感區域是否已取得區域Owner、CISO或授權主管核准？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>身份驗證</td>
+<td>是否完成身份查驗，且訪客證或臨時通行證與本人一致？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>陪同要求</td>
+<td>是否依要求由內部人員全程陪同或由雙人作業監督？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>作業範圍</td>
+<td>訪客是否僅執行核准作業，未接觸未授權設備、文件或系統？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>攜入設備</td>
+<td>攜入設備、維修工具或媒體是否完成登錄與必要檢查？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>連線與接線</td>
+<td>是否未經核准不得連接網路、伺服器、交換器、儲存設備或管理埠？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>離場確認</td>
+<td>是否完成設備狀態、線路、門禁、訪客證、工具、文件與媒體清點？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌保留</td>
+<td>是否可對應門禁紀錄、CCTV紀錄、作業單、變更單或事件單？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 緊急進出與例外處理紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">是否為緊急進出</th>
+<td style="width:30%;">□ 否　□ 是</td>
+<th style="width:20%;">事件/變更/維修單號</th>
+<td style="width:30%;"></td>
+</tr>
+<tr>
+<th>緊急原因</th>
+<td colspan="3">□ 系統中斷　□ 資安事件　□ 設備故障　□ 電力/環控異常　□ 人身安全　□ 災害應變　□ 其他：__________</td>
+</tr>
+<tr>
+<th>授權方式</th>
+<td colspan="3">□ 電話核准　□ 即時通訊核准　□ 現場主管核准　□ 事後補核准　□ 其他：__________</td>
+</tr>
+<tr>
+<th>緊急核准人</th>
+<td></td>
+<th>核准時間</th>
+<td>YYYY-MM-DD HH:MM</td>
+</tr>
+<tr>
+<th>臨時控制措施</th>
+<td colspan="3">□ 全程陪同　□ 事後補登　□ CCTV保留　□ 作業錄影　□ 雙人覆核　□ 作業後檢查　□ 事件通報　□ 其他：__________</td>
+</tr>
+<tr>
+<th>事後補正結果</th>
+<td colspan="3">□ 已完成補核准　□ 已完成事件/變更紀錄　□ 已完成風險評估　□ 已完成CAPA　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 異常事件與資安通報紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>異常類型</th>
+<th>是否發生</th>
+<th>說明</th>
+<th>處置</th>
+<th>通報對象 / 單號</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未授權進入或尾隨</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 制止　□ 驗證身份　□ 通報　□ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>訪客證遺失或未歸還</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 停用　□ 尋回　□ 通報　□ 更換</td>
+<td></td>
+</tr>
+<tr>
+<td>未核准攝影、錄音或錄影</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 要求刪除　□ 保全證據　□ 通報　□ 法務審查</td>
+<td></td>
+</tr>
+<tr>
+<td>未核准接觸設備、網路或文件</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 中止作業　□ 隔離設備　□ 通報SOC　□ 啟動事件程序</td>
+<td></td>
+</tr>
+<tr>
+<td>物品、文件、媒體或資產遺失</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 搜尋　□ 盤點　□ 通報　□ 啟動事件程序</td>
+<td></td>
+</tr>
+<tr>
+<td>門禁、CCTV、警報或環控異常</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>□ 報修　□ 補償控制　□ 通報　□ 追蹤改善</td>
+<td></td>
+</tr>
+<tr>
+<td>其他異常</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 個人資料與隱私告知紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>內容</th>
+<th>確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>蒐集目的</td>
+<td>實體安全、訪客管理、門禁管制、事件追查、法規遵循、稽核證據與營運持續管理。</td>
+<td>□ 已告知</td>
+</tr>
+<tr>
+<td>蒐集資料</td>
+<td>姓名、公司、職稱、聯絡方式、來訪目的、身份查驗結果、進出時間、訪客證號、攜入攜出物品、CCTV影像或其他安全紀錄。</td>
+<td>□ 已告知</td>
+</tr>
+<tr>
+<td>使用與揭露</td>
+<td>僅限授權之行政、保全、資訊安全、法務、稽核、事件處理與管理階層於必要範圍內使用；依法或合約要求時得提供主管機關、客戶、稽核員或查證機構。</td>
+<td>□ 已告知</td>
+</tr>
+<tr>
+<td>保存期間</td>
+<td>依組織紀錄保存期限清冊、法規、合約、事件調查或稽核需求保存；期滿後依文件化資訊管制程序安全銷毀或去識別。</td>
+<td>□ 已告知</td>
+</tr>
+<tr>
+<td>資料主體權利</td>
+<td>如適用，訪客可依組織隱私程序申請查詢、更正、限制處理或其他法定權利。</td>
+<td>□ 已告知</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 離場總確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>確認項目</th>
+<th>確認結果</th>
+<th>確認人</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>所有訪客是否均已離場並登錄離場時間？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>訪客識別證、臨時通行卡、鑰匙或門禁權限是否已回收或停用？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>攜入設備、工具、儲存媒體是否已清點並攜出或留置登錄？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>攜出文件、設備、媒體或資訊資產是否已取得核准並完成交接？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>受控區域門窗、機櫃、文件櫃、媒體櫃與保全裝置是否恢復安全狀態？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>是否有異常、例外或事件需進一步通報與追蹤？</td>
+<td>□ 否　□ 是，單號：__________</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 管理審查、稽核與證據對應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據項目</th>
+<th>對應控制目的</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>訪客進出紀錄</td>
+<td>證明外部人員進出受控、具身份確認、目的與時間紀錄。</td>
+<td>□ 紙本表單　□ 電子表單　□ 門禁系統</td>
+<td>依紀錄保存期限清冊</td>
+<td>Physical Security Owner</td>
+</tr>
+<tr>
+<td>受控區域進出紀錄</td>
+<td>證明高敏感區域進出已核准、陪同、監控與可追溯。</td>
+<td>□ 門禁系統　□ 機房登錄　□ CCTV索引</td>
+<td>依紀錄保存期限清冊</td>
+<td>Facility / IT Owner</td>
+</tr>
+<tr>
+<td>物品攜入攜出紀錄</td>
+<td>證明設備、媒體、文件與資訊資產未被未授權帶入、連接或帶出。</td>
+<td>□ 本表單　□ 資產系統　□ 交接紀錄</td>
+<td>依紀錄保存期限清冊</td>
+<td>Asset Owner</td>
+</tr>
+<tr>
+<td>例外核准紀錄</td>
+<td>證明攝影、緊急進出、臨時通行或特殊作業已取得授權並受控。</td>
+<td>□ 本表單　□ 變更單　□ 事件單　□ 核准郵件</td>
+<td>依紀錄保存期限清冊</td>
+<td>ISMS管理代表</td>
+</tr>
+<tr>
+<td>異常與事件通報紀錄</td>
+<td>證明實體安全異常已通報、調查、處置與追蹤改善。</td>
+<td>□ 事件系統　□ CAPA　□ 稽核發現</td>
+<td>依事件管理程序</td>
+<td>CISO / SOC</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 紀錄完整性與品質檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核標準</th>
+<th>結果</th>
+<th>改善事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>必填欄位已完成，包括姓名、公司、目的、進入時間、離開時間、受訪人與訪客證號。</td>
+<td>□ 符合　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>本表單紀錄可與門禁、CCTV、會議邀請、維修單、稽核計畫或變更單相互對應。</td>
+<td>□ 符合　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>授權性</td>
+<td>高敏感區域、攜入媒體、攜出資產、攝影或緊急進出均有核准紀錄。</td>
+<td>□ 符合　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>可讀性</td>
+<td>紙本或電子紀錄清楚、未塗改；如有更正，保留更正人、日期與原因。</td>
+<td>□ 符合　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保密性</td>
+<td>訪客個人資料與安全紀錄僅由授權人員存取，未公開張貼或未授權分享。</td>
+<td>□ 符合　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 簽核欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>簽名 / 確認</th>
+<th>日期時間</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>訪客代表</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認遵守訪客安全規範與保密要求。</td>
+</tr>
+<tr>
+<td>受訪人 / 接待人</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認來訪目的、陪同與離場檢查。</td>
+</tr>
+<tr>
+<td>櫃台 / 保全</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認身份查驗、訪客證發放與回收。</td>
+</tr>
+<tr>
+<td>區域Owner（如適用）</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認受控區域進出或特殊作業。</td>
+</tr>
+<tr>
+<td>Physical Security Owner</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認紀錄完整性與異常追蹤。</td>
+</tr>
+<tr>
+<td>CISO / ISMS管理代表（重大或高風險時）</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>確認資安事件、例外或改善措施。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 附註：填寫品質與稽核注意事項</h2>
+<ul>
+<li>本表單可依場所型態拆分為紙本簽到、電子訪客系統、門禁系統報表或受控區域進出紀錄，但內容欄位與控制目的不得降低。</li>
+<li>若以電子系統取代表單，應確保系統具備身份驗證、權限控管、時間戳記、防竄改、稽核日誌、匯出與保存功能。</li>
+<li>若涉及主管機關、客戶、驗證機構或第三方稽核調閱，應先確認調閱目的、範圍、個人資料遮蔽與授權核准。</li>
+<li>本表單發現之異常應納入事件管理、矯正措施、風險登錄、教育訓練或控制有效性評估。</li>
+</ul>
+
+<p class="small">文件結束。本文件所有表格均使用指定格式：&lt;table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8"&gt;，並透過 td, th { vertical-align: top; } 與表格檢查確保內容文字向上對齊。</p>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

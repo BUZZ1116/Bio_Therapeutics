@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-FRM-004 環境威脅風險評估表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border: 1px solid #999; padding: 12px; background: #fafafa; margin: 14px 0; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-FRM-004 環境威脅風險評估表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-FRM-004</td>
+<td>環境威脅風險評估表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-FRM-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Facility Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>行政總務主管 / 設施管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與ICT備妥性審查</td>
+<td></td>
+<td>IT營運主管 / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>營運持續審查</td>
+<td></td>
+<td>BCMS / DRP負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 表單目的</h2>
+<p>本表單用於識別、分析、評估與處理組織場所、實體安全區域、ICT設施、資料中心、倉儲與關鍵作業環境可能面臨之環境威脅與實體條件風險，確保資訊資產、ICT服務、關鍵業務流程、文件紀錄、備份媒體、設備與人員安全能在可接受風險範圍內受到保護。</p>
+<p>本表單同時支援 ISO/IEC 27001:2022 Annex A 實體安全控制措施、營運持續與ICT備妥性要求、風險處理、內部稽核、管理審查、驗證稽核與改善追蹤之證據鏈。</p>
+
+<h2>2. 評估使用說明</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>填寫要求</th>
+<th>最低證據要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>評估時機</td>
+<td>新場地啟用、場地異動、實體安全區域變更、重大裝修、資料中心或機房變更、重大事件後、年度定期審查、供應商或託管場域重大變更、氣候或環境威脅顯著變化時執行。</td>
+<td>評估計畫、變更申請、事件紀錄、年度審查紀錄。</td>
+</tr>
+<tr>
+<td>評估方法</td>
+<td>採用現場查核、文件審查、訪談、設備檢測、歷史事件分析、地理與氣候風險分析、供應商安全文件審查、BCP/DRP演練結果及弱點改善紀錄綜合判定。</td>
+<td>現場照片、設備檢測紀錄、訪談紀錄、維護合約、演練報告。</td>
+</tr>
+<tr>
+<td>評估輸出</td>
+<td>形成威脅清單、風險等級、現有控制、控制缺口、風險處理計畫、責任人、完成期限、剩餘風險與管理階層接受紀錄。</td>
+<td>本表單、風險登錄、風險處理計畫、CAPA紀錄。</td>
+</tr>
+<tr>
+<td>升級條件</td>
+<td>若風險可能導致關鍵服務中斷、資料毀損、重大人身安全事件、法規違反、重大客戶影響、驗證範圍失控或重大聲譽損害，應立即升級至CISO、BCMS負責人與最高管理階層授權代表。</td>
+<td>升級紀錄、會議紀錄、風險接受或改善核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>3. 評估基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">評估編號</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">評估日期</th>
+<td style="width:30%;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>評估場域名稱</th>
+<td></td>
+<th>場域類型</th>
+<td>□ 辦公室 □ 機房 □ 資料中心 □ 備援場地 □ 倉儲 □ 通訊間 □ 供應商場域 □ 其他：</td>
+</tr>
+<tr>
+<th>場域地址/位置</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>所屬實體安全區域</th>
+<td></td>
+<th>區域分級</th>
+<td>□ 公共區 □ 內部區 □ 受控區 □ 高安全區 □ 限制區</td>
+</tr>
+<tr>
+<th>場域Owner</th>
+<td></td>
+<th>評估負責人</th>
+<td></td>
+</tr>
+<tr>
+<th>支援業務流程</th>
+<td colspan="3">□ 核心營運 □ 客戶服務 □ IT服務 □ 開發測試 □ 財務/法務 □ 人資 □ GHG/ESG資料處理 □ AI/資料分析 □ 其他：</td>
+</tr>
+<tr>
+<th>關鍵資訊資產/ICT資產</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>是否涉及PII/客戶資料</th>
+<td>□ 是 □ 否</td>
+<th>是否納入ISMS驗證範圍</th>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<th>是否支援關鍵服務RTO/RPO</th>
+<td>□ 是 □ 否</td>
+<th>RTO/RPO要求</th>
+<td>RTO：____；RPO：____</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 場域與周邊環境背景識別</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>背景項目</th>
+<th>識別內容</th>
+<th>風險提示</th>
+<th>現況/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>地理位置</td>
+<td>城市、行政區、樓層、鄰近設施、地勢、交通與救援可達性。</td>
+<td>淹水、地震、火災、交通中斷、救援延遲、社會事件。</td>
+<td></td>
+</tr>
+<tr>
+<td>建築結構</td>
+<td>建物年限、耐震、防火區劃、樓板承重、管線配置、天花板與地板結構。</td>
+<td>結構失效、震災、火災延燒、水管破裂、設備墜落。</td>
+<td></td>
+</tr>
+<tr>
+<td>周邊環境</td>
+<td>鄰近河川、海岸、工廠、加油站、餐飲、施工區、群眾聚集區或高犯罪區域。</td>
+<td>洪水、污染、爆炸、煙霧、抗議、竊盜、第三方施工事故。</td>
+<td></td>
+</tr>
+<tr>
+<td>公用事業依賴</td>
+<td>市電、備援電力、供水、排水、空調、網路、電信、消防與保全服務。</td>
+<td>電力中斷、網路中斷、冷卻失效、消防失效、供應商中斷。</td>
+<td></td>
+</tr>
+<tr>
+<td>環境監控能力</td>
+<td>溫濕度、水浸、煙霧、門禁、CCTV、UPS、發電機、空調、漏水與告警整合。</td>
+<td>告警不足、無人處理、設備故障未察覺、事件擴大。</td>
+<td></td>
+</tr>
+<tr>
+<td>關鍵設備集中度</td>
+<td>伺服器、網路設備、備份媒體、文件庫、機密資料櫃、端點設備集中程度。</td>
+<td>單點失效、集中毀損、災害後復原困難。</td>
+<td></td>
+</tr>
+<tr>
+<td>外部人員活動</td>
+<td>訪客、清潔、維修、物業、承包商、施工人員與供應商接觸範圍。</td>
+<td>尾隨、未授權進入、設備破壞、資訊窺視、惡意植入。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 風險評分準則</h2>
+<h3>5.1 衝擊等級</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分數</th>
+<th>等級</th>
+<th>資訊安全衝擊</th>
+<th>營運與合規衝擊</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>低</td>
+<td>僅造成局部不便，未影響機密性、完整性、可用性或可追溯性。</td>
+<td>不影響關鍵流程，無外部通報或客戶影響。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>中低</td>
+<td>少量內部資料、單一設備或非關鍵服務短暫受影響。</td>
+<td>可於日常維護內復原，需部門主管追蹤。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>中</td>
+<td>機密資料、重要設備或多個使用者受影響，可能影響服務水準。</td>
+<td>需啟動事件或變更流程，可能需通知客戶窗口或管理階層。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>高</td>
+<td>高機密、PII、關鍵系統、核心網路或重要證據可能受損或不可用。</td>
+<td>可能違反合約、法規或SLA，需啟動BCP/DRP或正式事件管理。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>重大</td>
+<td>造成重大資料毀損、長時間服務中斷、重大外洩、不可逆證據破壞或安全區失控。</td>
+<td>重大營運中斷、主管機關/客戶通報、重大財務或聲譽損害。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>5.2 可能性等級</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分數</th>
+<th>等級</th>
+<th>判定說明</th>
+<th>常見證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>罕見</td>
+<td>過去無事件，外部環境穩定，已有成熟控制且定期驗證。</td>
+<td>多年維護紀錄、測試紀錄、環境穩定資料。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>不太可能</td>
+<td>可能發生但機率低，已有控制且偶有小缺失。</td>
+<td>檢查紀錄、少量改善項、供應商服務紀錄。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>可能</td>
+<td>歷史上曾發生類似事件，控制尚可但存在缺口或依賴單一設施。</td>
+<td>事件紀錄、稽核發現、設備老化、缺少備援。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>很可能</td>
+<td>近期發生、環境威脅升高、控制不足或頻繁告警。</td>
+<td>告警趨勢、維修頻繁、氣候警戒、演練失敗。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>幾乎確定</td>
+<td>威脅已存在或即將發生，控制失效且無即時替代措施。</td>
+<td>重大缺失、設備故障未修復、災害警報、供應中斷通知。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>5.3 風險等級矩陣</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險分數</th>
+<th>風險等級</th>
+<th>處置要求</th>
+<th>核准要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td>低</td>
+<td>維持現有控制，納入例行監測。</td>
+<td>場域Owner確認。</td>
+</tr>
+<tr>
+<td>5–9</td>
+<td>中</td>
+<td>建立改善措施或補強控制，於合理期限內完成。</td>
+<td>部門主管 / Facility Security Owner核准。</td>
+</tr>
+<tr>
+<td>10–16</td>
+<td>高</td>
+<td>建立正式風險處理計畫，追蹤至關閉，必要時納入BCP/DRP。</td>
+<td>CISO / BCMS負責人核准。</td>
+</tr>
+<tr>
+<td>17–25</td>
+<td>重大</td>
+<td>立即升級，採取臨時控制、停用、搬遷、隔離或高階風險接受，不得僅以觀察結案。</td>
+<td>最高管理階層授權代表核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 環境威脅識別與初步評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>威脅類別</th>
+<th>威脅情境</th>
+<th>可能受影響資產/流程</th>
+<th>現有控制</th>
+<th>衝擊</th>
+<th>可能性</th>
+<th>風險分數</th>
+<th>風險等級</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>火災與煙害</td>
+<td>建築、機房、電力設備、鄰近場所或施工引發火災、濃煙、熱損害。</td>
+<td>伺服器、網路設備、文件、備份媒體、辦公區、關鍵人員。</td>
+<td>消防偵測、滅火器、消防區劃、定期檢查、演練。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>水災與漏水</td>
+<td>颱風、豪雨、淹水、排水不良、水管破裂、空調冷凝水或樓上漏水。</td>
+<td>機房、通訊間、文件櫃、端點設備、電力設備。</td>
+<td>水浸偵測、架高、防水門檻、排水維護、告警。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>地震與結構震動</td>
+<td>地震、施工震動、設備架倒塌、樓板或天花板損壞。</td>
+<td>機櫃、儲存設備、網路設備、UPS、文件櫃。</td>
+<td>機櫃固定、防震設計、設備保固、災後檢查。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>電力中斷</td>
+<td>市電異常、配電盤故障、UPS故障、發電機不可用、電力容量不足。</td>
+<td>ICT服務、門禁、CCTV、網路、空調、工作站。</td>
+<td>UPS、發電機、雙路電源、電力監控、維護合約。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>空調與溫濕度失控</td>
+<td>空調故障、溫度過高、濕度過高、凝結水、通風不足。</td>
+<td>伺服器、網路設備、儲存設備、紙本文件、備份媒體。</td>
+<td>溫濕度感測、雙空調、維護、告警、巡檢。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>灰塵、污染與腐蝕</td>
+<td>施工粉塵、化學污染、海風鹽害、煙霧、蟲害、黴菌。</td>
+<td>設備風扇、電路、儲存媒體、文件、辦公環境。</td>
+<td>清潔、過濾、環境監測、施工隔離、定期維護。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>未授權實體進入</td>
+<td>尾隨、門禁失效、訪客未陪同、承包商越權、遺失識別證。</td>
+<td>機密資料、辦公設備、機房、通訊間、文件保存區。</td>
+<td>門禁、CCTV、訪客紀錄、陪同、識別證管理。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>竊盜與破壞</td>
+<td>設備、筆電、備份媒體、文件或網路設備遭竊、破壞或移動。</td>
+<td>端點、伺服器、備份媒體、文件、網路設備。</td>
+<td>資產標籤、鎖具、CCTV、盤點、出入控制。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>通訊與網路中斷</td>
+<td>ISP中斷、線路受損、弱電管道施工、網路設備供電或冷卻失效。</td>
+<td>對外服務、遠端工作、雲端存取、監控告警。</td>
+<td>雙線路、備援路由、監控、ISP SLA、變更管制。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>氣候變遷與極端天氣</td>
+<td>極端高溫、強降雨、颱風、長期乾旱、熱浪、交通與供應鏈中斷。</td>
+<td>資料中心冷卻、電力供應、人員到場、備援設備、供應商服務。</td>
+<td>氣象監控、BCP、遠端作業、供應商備援、能源管理。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>公共安全與社會事件</td>
+<td>抗議、封鎖、暴力事件、恐嚇、鄰近事故、公共衛生事件。</td>
+<td>人員安全、場域可達性、服務支援、供應商到場。</td>
+<td>通報機制、保全、遠端工作、替代場地、BCP。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商與物業失效</td>
+<td>保全、清潔、機電、空調、消防、物業或資料中心供應商服務失效。</td>
+<td>門禁、環境維護、消防、UPS、空調、資料中心服務。</td>
+<td>SLA、合約、稽核、維護紀錄、替代供應商。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 控制措施有效性檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>檢核問題</th>
+<th>符合狀態</th>
+<th>證據</th>
+<th>缺口/改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全邊界</td>
+<td>是否已定義場所安全邊界、受控區域、高安全區與限制區，且與清冊一致？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>門禁控制</td>
+<td>進出是否使用識別、授權、紀錄與定期審查機制？離職或異動人員是否即時移除權限？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>訪客管理</td>
+<td>訪客、供應商、維修與承包商是否完成登記、識別、陪同、區域限制與離場確認？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CCTV與監控</td>
+<td>關鍵出入口、機房、倉儲與高安全區是否有適當監控、保存期限與授權調閱機制？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>消防控制</td>
+<td>消防偵測、滅火器材、逃生路線、消防檢查與演練是否有效且有紀錄？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>水浸防護</td>
+<td>機房、通訊間與文件保存區是否避免位於高漏水風險位置，並具水浸偵測或防護？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>電力備援</td>
+<td>UPS、發電機、雙電源、配電與電力告警是否能支援關鍵服務RTO/RPO？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>空調與環境監控</td>
+<td>溫濕度、空調、通風、灰塵與環境告警是否受控，且告警有人員負責處理？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>設備保護</td>
+<td>設備是否有防震、固定、電源保護、線路保護、清潔維護與資產盤點？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>文件與媒體保存</td>
+<td>紙本文件、備份媒體、證據、合約與紀錄是否防火、防水、防盜、防未授權存取？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商控制</td>
+<td>物業、保全、維護、資料中心與雲端託管供應商是否具合約、SLA、事件通報與稽核證據？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BCP/DRP整合</td>
+<td>環境威脅是否納入BIA、BCP、DRP、ICT備妥性評估與演練情境？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 詳細風險登錄與處理計畫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險ID</th>
+<th>風險情境</th>
+<th>受影響資產/流程</th>
+<th>現有控制</th>
+<th>控制缺口</th>
+<th>衝擊</th>
+<th>可能性</th>
+<th>固有/目前風險等級</th>
+<th>處理選項</th>
+<th>新增/強化控制措施</th>
+<th>責任人</th>
+<th>期限</th>
+<th>剩餘風險</th>
+<th>核准/接受</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ENV-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低 □ 避免 □ 移轉 □ 接受</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低 □ 避免 □ 移轉 □ 接受</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低 □ 避免 □ 移轉 □ 接受</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低 □ 避免 □ 移轉 □ 接受</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-005</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低 □ 避免 □ 移轉 □ 接受</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 重大環境威脅處理與升級紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>升級日期</th>
+<th>風險ID</th>
+<th>升級原因</th>
+<th>立即處置</th>
+<th>通知對象</th>
+<th>決策結果</th>
+<th>後續追蹤</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>□ 重大風險 □ 控制失效 □ 事件後改善 □ 法規/客戶要求 □ BCP/DRP需求 □ 其他</td>
+<td></td>
+<td>□ CISO □ BCMS □ IT □ 行政總務 □ 法務 □ 最高管理階層 □ 其他</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>□ 重大風險 □ 控制失效 □ 事件後改善 □ 法規/客戶要求 □ BCP/DRP需求 □ 其他</td>
+<td></td>
+<td>□ CISO □ BCMS □ IT □ 行政總務 □ 法務 □ 最高管理階層 □ 其他</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 與BCP/DRP及ICT備妥性對應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>關鍵服務/流程</th>
+<th>環境威脅</th>
+<th>最大可容忍中斷</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>現有備援/替代方案</th>
+<th>缺口</th>
+<th>是否需更新BCP/DRP</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 供應商、物業與外部依賴評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>外部依賴項目</th>
+<th>供應商/單位</th>
+<th>服務內容</th>
+<th>SLA/合約要求</th>
+<th>環境威脅影響</th>
+<th>替代方案</th>
+<th>審查結果</th>
+<th>改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>物業管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>保全服務</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>消防維護</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>空調/機電維護</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>電力/UPS/發電機</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>網路/電信</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受</td>
+<td></td>
+</tr>
+<tr>
+<td>資料中心/託管服務</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 可接受 □ 需改善 □ 不可接受 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 改善措施追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>改善編號</th>
+<th>來源風險ID/檢核項目</th>
+<th>改善措施</th>
+<th>責任單位</th>
+<th>責任人</th>
+<th>目標完成日</th>
+<th>實際完成日</th>
+<th>狀態</th>
+<th>有效性驗證</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ACT-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 延期 □ 取消</td>
+<td></td>
+</tr>
+<tr>
+<td>ACT-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 延期 □ 取消</td>
+<td></td>
+</tr>
+<tr>
+<td>ACT-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 延期 □ 取消</td>
+<td></td>
+</tr>
+<tr>
+<td>ACT-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 延期 □ 取消</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 評估結論與風險接受</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:25%;">整體風險評估結論</th>
+<td>□ 可接受 □ 有條件接受 □ 需改善後接受 □ 不可接受，需立即處理</td>
+</tr>
+<tr>
+<th>主要高風險/重大風險摘要</th>
+<td></td>
+</tr>
+<tr>
+<th>必要改善措施摘要</th>
+<td></td>
+</tr>
+<tr>
+<th>是否需更新風險登錄</th>
+<td>□ 是 □ 否；對應風險登錄編號：</td>
+</tr>
+<tr>
+<th>是否需更新SoA或控制措施證據</th>
+<td>□ 是 □ 否；說明：</td>
+</tr>
+<tr>
+<th>是否需更新BCP/DRP或ICT備妥性計畫</th>
+<td>□ 是 □ 否；說明：</td>
+</tr>
+<tr>
+<th>剩餘風險接受說明</th>
+<td></td>
+</tr>
+<tr>
+<th>下次複評日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 簽核欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>簽核角色</th>
+<th>姓名</th>
+<th>職稱/單位</th>
+<th>簽核意見</th>
+<th>簽核日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>評估人員</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>場域Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>Facility Security Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT / Infrastructure Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS / DRP負責人</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CISO / ISMS管理代表</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>最高管理階層授權代表（重大風險適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 附件與證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>附件編號</th>
+<th>附件/證據名稱</th>
+<th>內容說明</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>負責人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ATT-001</td>
+<td>場域平面圖/安全區域圖</td>
+<td>標示安全邊界、出入口、機房、監控、消防與關鍵設備位置。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-002</td>
+<td>環境監控與告警紀錄</td>
+<td>溫濕度、水浸、煙霧、UPS、空調、門禁與CCTV相關紀錄。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-003</td>
+<td>維護與檢測紀錄</td>
+<td>消防、UPS、發電機、空調、電力、網路與保全系統維護證據。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-004</td>
+<td>現場照片與改善前後證據</td>
+<td>缺失、改善措施、設備固定、標示、門禁或防水防火改善證據。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-005</td>
+<td>供應商合約/SLA/稽核證據</td>
+<td>物業、保全、資料中心、機電、消防或電信供應商之相關證據。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-006</td>
+<td>BCP/DRP演練與檢討紀錄</td>
+<td>與環境威脅、場域中斷、ICT備妥性相關之演練與改善紀錄。</td>
+<td></td>
+<td>依紀錄保存期限清冊</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

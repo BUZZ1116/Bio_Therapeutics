@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-005 AI系統安全開發與使用作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-005 AI系統安全開發與使用作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-005</td>
+<td>AI系統安全開發與使用作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>Application Security / DevSecOps Owner</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-005</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>Application Security / DevSecOps Owner / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>AI Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner / AI治理委員會代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資安架構師</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>研發與MLOps審查</td>
+<td></td>
+<td>研發主管 / MLOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理審查</td>
+<td></td>
+<td>Data Governance Owner / Data Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與採購審查</td>
+<td></td>
+<td>供應商管理 / 採購（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / AI治理委員會 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範組織AI系統、生成式AI工具、AI模型、Prompt、RAG、MLOps平台、AI API、AI Agent及外部AI服務之安全開發、導入、使用、監控、維護與退場要求，確保AI相關活動符合資訊安全、隱私、合規、智慧財產權、供應鏈安全、AI治理與營運風險管理要求。</p>
+<p>本文件將AI安全控制整合於ISMS與技術控制措施之中，要求在AI系統生命週期中落實資產登錄、角色界定、資料治理、風險評估、模型與Prompt版本控管、供應商審查、安全測試、監控、事件通報、人工監督、輸出覆核、例外管理與持續改善，以支援驗證、稽核與企業級治理需求。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>AI系統不得以實驗、便利或效率名義繞過資訊安全、隱私、法規、合約、資料分類、供應商及變更管理要求。</li>
+<li>任何AI工具、外部AI服務、AI API、模型或Prompt應用導入前，均應完成核准、登錄、風險評估與資料使用限制確認。</li>
+<li>不得將高機密資料、未公開客戶資料、PII、金鑰、Token、原始碼、事件證據、未核准GHG/CO2查證資料或受合約限制資料輸入未核准AI服務。</li>
+<li>AI輸出不得在未經人工覆核與來源確認前作為正式決策、對外承諾、法規申報、客戶通知、醫療/金融/法律判斷或資安處置結論。</li>
+<li>AI安全應涵蓋模型、資料、Prompt、RAG資料源、Agent工具、API、外部供應商、雲端基礎架構、監控日誌、使用者行為與輸出治理。</li>
+<li>所有AI安全控制、測試、審查、例外與事件紀錄應形成文件化資訊，並可供內部稽核、管理審查、客戶審查與驗證稽核查核。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI系統</td>
+<td>以機器學習、統計、規則、生成式模型、推論、最佳化或其他AI技術產生預測、建議、內容、分類、決策輔助或自動化行為之系統。</td>
+</tr>
+<tr>
+<td>生成式AI</td>
+<td>可依輸入Prompt產生文字、程式碼、圖像、音訊、影片、摘要、分析、推論或其他內容之AI技術或服務。</td>
+</tr>
+<tr>
+<td>AI模型</td>
+<td>經訓練、微調、配置或部署後，用於推論、分類、預測、生成、檢索、排序或決策支援之模型。</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td>提供給AI模型之指令、上下文、問題、範例、系統訊息、工具調用說明或輸入資料。</td>
+</tr>
+<tr>
+<td>Prompt模板</td>
+<td>可重複使用、版本化、受控之Prompt結構，可能包含系統指令、角色設定、格式限制、工具調用與安全限制。</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>Retrieval-Augmented Generation，透過外部資料源、文件庫、向量資料庫或搜尋結果補充模型回應之架構。</td>
+</tr>
+<tr>
+<td>AI Agent</td>
+<td>可依目標自主規劃、呼叫工具、查詢資料、執行任務或與外部系統互動之AI應用模式。</td>
+</tr>
+<tr>
+<td>MLOps</td>
+<td>支援模型訓練、驗證、部署、監控、版本、回滾、資料管線與模型生命週期管理之流程與平台。</td>
+</tr>
+<tr>
+<td>模型漂移</td>
+<td>模型輸入資料、業務情境、資料分布或環境改變導致模型表現、風險或控制有效性下降之現象。</td>
+</tr>
+<tr>
+<td>Prompt Injection</td>
+<td>攻擊者透過直接或間接輸入操控模型忽略原始指令、揭露資訊、越權執行或產生不當輸出之攻擊。</td>
+</tr>
+<tr>
+<td>模型供應鏈</td>
+<td>AI模型、資料集、套件、框架、插件、外部API、模型權重、Prompt模板與MLOps工具之來源、版本、授權與維護鏈。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大AI風險接受、AI治理資源、高風險AI用途與跨部門治理決策。</td>
+<td>管理審查決議、風險接受、資源核准。</td>
+</tr>
+<tr>
+<td>AI治理委員會</td>
+<td>審議AI政策、AI用途、重大AI風險、倫理與合規議題、供應商策略與持續改善。</td>
+<td>會議紀錄、AI治理決議。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定AI安全要求，核准高風險AI安全控制、例外、事件升級與剩餘風險。</td>
+<td>AI安全要求、例外核准、事件決策。</td>
+</tr>
+<tr>
+<td>AI Governance Owner</td>
+<td>維護AI治理流程、角色、風險分類、用途核准、文件化資訊與治理指標。</td>
+<td>AI使用核准、AI風險登錄、KPI/KRI。</td>
+</tr>
+<tr>
+<td>AI Security Owner</td>
+<td>設計AI安全控制、Prompt安全、模型安全測試、RAG安全、Agent控制與監控要求。</td>
+<td>AI安全測試報告、控制設計。</td>
+</tr>
+<tr>
+<td>MLOps Owner</td>
+<td>管理模型部署、版本、資料管線、模型監控、回滾、模型註冊表與MLOps平台安全。</td>
+<td>模型版本紀錄、部署紀錄、監控報告。</td>
+</tr>
+<tr>
+<td>Data Owner / Data Governance Owner</td>
+<td>核准AI使用資料來源、分類、授權、最小化、保存、刪除、訓練/微調用途與資料品質。</td>
+<td>資料核准、資料追蹤清冊、資料品質紀錄。</td>
+</tr>
+<tr>
+<td>Prompt Owner</td>
+<td>維護Prompt模板、版本、測試、風險標籤、允許輸入資料類型與使用限制。</td>
+<td>Prompt資產清冊、Prompt測試紀錄。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>確保AI功能整合、API、身分權限、日誌、監控、變更與營運控制符合要求。</td>
+<td>架構文件、上線檢核、監控紀錄。</td>
+</tr>
+<tr>
+<td>DPO / 法務 / 法遵</td>
+<td>審查PII、跨境、資料主體權利、智慧財產權、合約、輸出責任與監管要求。</td>
+<td>DPIA、法遵審查、合約審查。</td>
+</tr>
+<tr>
+<td>SOC / Incident Response Team</td>
+<td>監控AI濫用、資料外洩、Prompt攻擊、異常API使用與AI安全事件。</td>
+<td>告警紀錄、事件通報、調查紀錄。</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>依核准用途使用AI，不輸入禁止資料，覆核輸出，通報異常與違規。</td>
+<td>使用紀錄、通報紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. AI系統生命週期安全流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>生命週期階段</th>
+<th>安全活動</th>
+<th>必要輸出</th>
+<th>放行條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>構想與需求</td>
+<td>定義AI用途、業務目的、使用者、資料類型、輸出用途、法規合約與風險分類。</td>
+<td>AI用途申請、資料分類、初步風險分級。</td>
+<td>用途合理且未違反禁止情境。</td>
+</tr>
+<tr>
+<td>設計與風險評估</td>
+<td>完成架構設計、資料流、模型來源、Prompt/RAG設計、威脅建模、隱私與資安風險評估。</td>
+<td>AI風險評估、資料流圖、威脅模型。</td>
+<td>高風險議題已有控制或處理計畫。</td>
+</tr>
+<tr>
+<td>資料準備</td>
+<td>確認資料來源、授權、PII、分類、品質、偏差、保留、遮罩與去識別。</td>
+<td>資料核准、資料追蹤、DPIA。</td>
+<td>資料用途與授權符合要求。</td>
+</tr>
+<tr>
+<td>模型與Prompt開發</td>
+<td>建立模型、Prompt模板、RAG索引、Guardrail、測試案例、版本與安全限制。</td>
+<td>模型/Prompt資產紀錄、測試結果。</td>
+<td>通過安全與品質測試。</td>
+</tr>
+<tr>
+<td>驗證與安全測試</td>
+<td>測試Prompt Injection、越權檢索、敏感資料輸出、模型濫用、API安全、偏差與魯棒性。</td>
+<td>AI安全測試報告、修復紀錄。</td>
+<td>Critical/High風險已處理或核准例外。</td>
+</tr>
+<tr>
+<td>上線與部署</td>
+<td>完成變更核准、監控接入、存取控制、日誌、告警、回滾、使用者指引與人工監督。</td>
+<td>上線檢核、部署紀錄、監控設定。</td>
+<td>符合上線安全檢核。</td>
+</tr>
+<tr>
+<td>營運與監控</td>
+<td>監控模型表現、濫用、輸入輸出、RAG權限、資料漂移、異常API與事件。</td>
+<td>監控報告、告警紀錄、模型績效報告。</td>
+<td>持續符合KPI/KRI與風險準則。</td>
+</tr>
+<tr>
+<td>變更與退場</td>
+<td>模型版本、資料、Prompt、供應商或用途變更需重評；退場時處理資料、權限、模型與日誌。</td>
+<td>變更評估、退場紀錄、刪除證明。</td>
+<td>完成Owner與治理核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. AI用途分級與核准要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>AI用途等級</th>
+<th>判定條件</th>
+<th>最低核准要求</th>
+<th>最低控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>低風險</td>
+<td>不處理內部以上資訊、不影響客戶或員工權益、僅作一般學習、公開資料摘要或低敏感輔助。</td>
+<td>主管或工具Owner核准；列入工具清單。</td>
+<td>使用核准工具、不得輸入禁止資料、輸出需基本覆核。</td>
+</tr>
+<tr>
+<td>中風險</td>
+<td>處理內部資料、支援內部流程、產出草稿、分析或建議，但不作自動化重大決策。</td>
+<td>AI Governance Owner / Data Owner核准。</td>
+<td>資料分類、使用紀錄、Prompt限制、人工覆核、日誌監控。</td>
+</tr>
+<tr>
+<td>高風險</td>
+<td>處理PII、客戶資料、機密資料、法規或合約資料，或影響客戶、員工、財務、資安、合規或營運決策。</td>
+<td>AI治理委員會、CISO、DPO/法務及Business Owner核准。</td>
+<td>AI風險評估、DPIA、威脅建模、安全測試、人工監督、監控告警、例外管理。</td>
+</tr>
+<tr>
+<td>禁止或暫停使用</td>
+<td>涉及未核准高機密資料、違法用途、未核准跨境、未授權訓練、無法提供必要安全保證或違反合約之AI用途。</td>
+<td>不得使用；如需例外須最高管理階層及CISO核准。</td>
+<td>停止使用、封鎖、資料移除、事件或違規處理。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. AI資料治理與資料使用控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料來源核准</td>
+<td>AI訓練、微調、RAG、Prompt上下文、測試與推論資料應確認來源、Owner、授權、分類與使用目的。</td>
+<td>資料來源核准、資料追蹤清冊。</td>
+</tr>
+<tr>
+<td>PII與敏感資料</td>
+<td>涉及PII、敏感PII、客戶資料或員工資料者，應完成DPIA或隱私風險評估，並採最小化、遮罩、去識別或匿名化。</td>
+<td>DPIA、資料處理紀錄。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>僅得使用達成AI用途所必要之資料欄位、期間、樣本與上下文，不得為提升模型效果而任意擴大資料範圍。</td>
+<td>資料需求文件、欄位清單。</td>
+</tr>
+<tr>
+<td>資料品質與偏差</td>
+<td>應檢查資料完整性、正確性、代表性、時效性、偏差、標籤品質與資料污染風險。</td>
+<td>資料品質報告、偏差評估。</td>
+</tr>
+<tr>
+<td>訓練與微調限制</td>
+<td>使用組織資料訓練或微調模型前，應確認合約、授權、PII、保密與跨境限制。</td>
+<td>訓練資料核准、模型版本紀錄。</td>
+</tr>
+<tr>
+<td>RAG資料源控制</td>
+<td>RAG索引資料應繼承原始資料分類與權限，不得因向量化、索引或摘要而繞過存取控制。</td>
+<td>RAG權限測試、索引清冊。</td>
+</tr>
+<tr>
+<td>資料保留與刪除</td>
+<td>AI資料集、Prompt紀錄、推論紀錄、模型輸出與測試資料應定義保存期限、刪除方式與稽核證據。</td>
+<td>保存期限清冊、刪除證明。</td>
+</tr>
+<tr>
+<td>跨境與第三方處理</td>
+<td>資料傳送至外部AI服務或跨境處理前，應完成法務、DPO、供應商與資料流向審查。</td>
+<td>跨境評估、DPA、供應商審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. AI模型、Prompt與RAG資產登錄要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>登錄對象</th>
+<th>必要登錄欄位</th>
+<th>維護責任</th>
+<th>更新觸發</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI模型</td>
+<td>模型名稱、版本、來源、用途、Owner、輸入輸出、資料分類、部署環境、供應商、授權、風險等級。</td>
+<td>MLOps Owner / AI Model Owner</td>
+<td>模型新增、版本變更、用途變更、供應商變更。</td>
+</tr>
+<tr>
+<td>Prompt模板</td>
+<td>Prompt名稱、版本、用途、Owner、允許輸入資料、禁止資料、系統指令、工具調用、測試結果、風險標籤。</td>
+<td>Prompt Owner / AI Security Owner</td>
+<td>模板新增、指令變更、模型變更、風險事件後。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>資料源名稱、Owner、分類、權限模型、索引頻率、資料保留、跨境、資料同步與刪除方式。</td>
+<td>Data Owner / RAG Owner</td>
+<td>資料源新增、權限變更、索引變更。</td>
+</tr>
+<tr>
+<td>AI Agent工具</td>
+<td>工具名稱、可執行動作、授權範圍、資料存取、外部連線、審批條件、日誌與限制。</td>
+<td>Agent Owner / System Owner</td>
+<td>工具新增、權限變更、任務範圍變更。</td>
+</tr>
+<tr>
+<td>外部AI服務</td>
+<td>服務名稱、供應商、資料保留、訓練使用、人工審查、地區、子處理者、合約、DPA與安全證明。</td>
+<td>Supplier Management / AI Governance Owner</td>
+<td>新服務導入、條款變更、資料類型變更。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. AI安全設計要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設計領域</th>
+<th>最低要求</th>
+<th>適用情境</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分驗證與授權</td>
+<td>AI服務、模型API、RAG、Agent工具與管理介面應使用SSO/MFA、服務帳號、最小權限與細粒度授權。</td>
+<td>所有正式AI系統。</td>
+</tr>
+<tr>
+<td>輸入控制</td>
+<td>限制Prompt長度、格式、資料類型、檔案類型、工具指令與可引用資料來源；偵測PII、Secrets與禁止資料。</td>
+<td>生成式AI、Prompt應用、RAG。</td>
+</tr>
+<tr>
+<td>Prompt Injection防護</td>
+<td>對直接與間接Prompt Injection採取系統指令隔離、內容過濾、資料來源信任分級、工具調用確認與輸出檢查。</td>
+<td>RAG、Agent、外部內容處理。</td>
+</tr>
+<tr>
+<td>RAG權限繼承</td>
+<td>檢索結果應依使用者權限與資料分類過濾，不得向未授權使用者揭露索引內容或摘要。</td>
+<td>企業知識庫、文件問答。</td>
+</tr>
+<tr>
+<td>工具調用限制</td>
+<td>AI Agent可執行工具應白名單化、最小權限、需要審批之高風險動作應人工確認。</td>
+<td>Agent、自動化流程。</td>
+</tr>
+<tr>
+<td>輸出控制</td>
+<td>對敏感資料、惡意內容、不當建議、未覆核結論、程式碼風險與對外內容進行檢查、標示與人工覆核。</td>
+<td>對外輸出、高風險決策。</td>
+</tr>
+<tr>
+<td>模型隔離</td>
+<td>開發、測試、正式模型與資料集應隔離，避免測試資料污染正式模型或正式資料進入未核准環境。</td>
+<td>MLOps、模型訓練。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>記錄模型呼叫、Prompt風險標籤、RAG檢索、工具調用、管理操作、錯誤與安全告警。</td>
+<td>正式AI服務、高風險用途。</td>
+</tr>
+<tr>
+<td>回滾與停用</td>
+<td>模型、Prompt、RAG索引、Agent工具與外部AI連線應具停用、回滾、撤銷Token與緊急封鎖機制。</td>
+<td>所有正式AI系統。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. Prompt安全作業要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Prompt建立</td>
+<td>Prompt模板應有明確目的、Owner、版本、允許資料、禁止資料、輸出格式、安全限制與測試案例。</td>
+<td>Prompt資產清冊、模板審查。</td>
+</tr>
+<tr>
+<td>系統指令保護</td>
+<td>系統Prompt、工具指令、內部規則與安全政策不得對一般使用者揭露，並應避免被輸出或覆寫。</td>
+<td>Prompt安全測試。</td>
+</tr>
+<tr>
+<td>Prompt版本控管</td>
+<td>正式Prompt模板變更應保留版本、變更原因、測試結果、核准與回滾方式。</td>
+<td>版本紀錄、變更紀錄。</td>
+</tr>
+<tr>
+<td>輸入資料限制</td>
+<td>Prompt不得包含未核准PII、高機密、Secrets、客戶限制資料、未公開財務、事件證據或合約禁止資料。</td>
+<td>輸入檢查、DLP告警。</td>
+</tr>
+<tr>
+<td>Prompt測試</td>
+<td>重要Prompt應測試越權、資料外洩、指令繞過、偏差、錯誤輸出、格式失效與不當內容。</td>
+<td>Prompt測試報告。</td>
+</tr>
+<tr>
+<td>Prompt重用</td>
+<td>經核准Prompt模板應優先重用，避免個人自行建立未受控高風險Prompt。</td>
+<td>模板清冊、使用紀錄。</td>
+</tr>
+<tr>
+<td>Prompt退場</td>
+<td>過期、不安全、用途消失或發生事件之Prompt應停用、封存並通知使用者。</td>
+<td>停用紀錄、通知紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. RAG與向量資料庫安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料源核准</td>
+<td>納入RAG索引之文件、資料庫、網頁或知識庫應經Data Owner核准並標示分類。</td>
+<td>RAG資料源核准紀錄。</td>
+</tr>
+<tr>
+<td>權限繼承</td>
+<td>檢索層應套用原始資料權限，查詢者不得因向量檢索取得未授權資料。</td>
+<td>權限測試、拒絕紀錄。</td>
+</tr>
+<tr>
+<td>索引安全</td>
+<td>向量資料庫應具身份驗證、加密、網路隔離、備份、版本、刪除與存取日誌。</td>
+<td>向量DB設定、日誌。</td>
+</tr>
+<tr>
+<td>資料更新與刪除</td>
+<td>原始資料刪除、權限變更或分類變更時，應同步更新或移除索引內容。</td>
+<td>同步紀錄、刪除證明。</td>
+</tr>
+<tr>
+<td>資料污染防護</td>
+<td>外部內容進入索引前應檢查來源可信度、惡意指令、Prompt Injection與不當內容。</td>
+<td>內容審查、掃描紀錄。</td>
+</tr>
+<tr>
+<td>檢索結果限制</td>
+<td>模型僅可引用授權資料片段，並應避免輸出完整高敏感文件或超出必要範圍內容。</td>
+<td>輸出檢查、引用紀錄。</td>
+</tr>
+<tr>
+<td>RAG監控</td>
+<td>監控異常查詢、大量檢索、敏感資料檢索、拒絕事件與越權嘗試。</td>
+<td>RAG日誌、SIEM告警。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. AI模型開發、驗證與部署要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>模型選型</td>
+<td>確認模型來源、授權、維護狀態、資料使用條款、安全公告、限制用途與供應商責任。</td>
+<td>模型來源審查、授權紀錄。</td>
+</tr>
+<tr>
+<td>訓練 / 微調</td>
+<td>確認資料授權、PII處理、資料品質、偏差、資料污染、版本追蹤與可重現性。</td>
+<td>訓練資料追蹤、模型訓練紀錄。</td>
+</tr>
+<tr>
+<td>模型評估</td>
+<td>評估準確性、魯棒性、偏差、幻覺、敏感資料輸出、Prompt攻擊、濫用風險與安全邊界。</td>
+<td>模型評估報告、AI安全測試。</td>
+</tr>
+<tr>
+<td>部署前審查</td>
+<td>完成風險評估、DPIA、威脅模型、監控設計、回滾計畫、變更核准與人工監督設計。</td>
+<td>上線檢核、變更紀錄。</td>
+</tr>
+<tr>
+<td>正式部署</td>
+<td>使用受控CI/CD、模型Registry、簽章、版本標籤、權限控管與環境隔離。</td>
+<td>部署紀錄、模型Registry。</td>
+</tr>
+<tr>
+<td>營運監控</td>
+<td>監控模型效能、漂移、異常輸入、輸出風險、濫用、錯誤率、資源使用與安全告警。</td>
+<td>模型監控報告、告警紀錄。</td>
+</tr>
+<tr>
+<td>回滾 / 停用</td>
+<td>發生重大錯誤、資料外洩、性能劣化或安全事件時，應可回滾模型、停用Prompt或封鎖端點。</td>
+<td>回滾紀錄、事件紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. AI使用者作業規範</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>使用情境</th>
+<th>允許作業</th>
+<th>限制與禁止</th>
+<th>使用者責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般文字草稿</td>
+<td>可使用核准AI工具協助改寫、摘要、翻譯、格式整理或構思。</td>
+<td>不得輸入高機密、PII、客戶限制資料或未公開敏感資訊。</td>
+<td>確認內容正確性並標示需覆核。</td>
+</tr>
+<tr>
+<td>程式碼輔助</td>
+<td>可使用核准AI輔助產生樣板、測試案例、註解或低風險程式碼片段。</td>
+<td>不得輸入Secrets、完整專有源碼或客戶限制程式碼至未核准工具。</td>
+<td>執行Code Review、SAST與授權檢查。</td>
+</tr>
+<tr>
+<td>資料分析</td>
+<td>可使用核准環境分析去識別或低敏感資料。</td>
+<td>不得將完整PII、客戶機密或受限資料上傳外部AI服務。</td>
+<td>確認資料使用核准與分析結果限制。</td>
+</tr>
+<tr>
+<td>客戶或對外內容</td>
+<td>AI輸出可作初稿，但對外前須人工審查、事實查核、法務或業務核准。</td>
+<td>不得直接將未覆核AI輸出作為正式承諾或聲明。</td>
+<td>保存覆核與核准紀錄。</td>
+</tr>
+<tr>
+<td>資安分析</td>
+<td>可使用核准AI協助事件摘要、日誌查詢、規則建議或弱點說明。</td>
+<td>不得輸入未遮罩事件證據、Token、客戶資料或未公開攻擊細節至未核准AI。</td>
+<td>確認輸出不得取代專業判斷。</td>
+</tr>
+<tr>
+<td>高風險決策</td>
+<td>AI可提供參考建議，但須有人類負責決策與覆核。</td>
+<td>不得完全自動化重大人事、金融、合約、法規、資安處置或客戶權益決策。</td>
+<td>保存人工覆核與決策依據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. AI安全測試與驗證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試類型</th>
+<th>測試內容</th>
+<th>適用情境</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Prompt Injection測試</td>
+<td>測試直接注入、間接注入、文件內惡意指令、工具調用繞過與系統Prompt洩漏。</td>
+<td>生成式AI、RAG、Agent。</td>
+<td>測試案例、修復紀錄。</td>
+</tr>
+<tr>
+<td>資料外洩測試</td>
+<td>測試模型是否輸出PII、Secrets、高機密資料、RAG未授權資料或訓練資料片段。</td>
+<td>處理敏感資料之AI系統。</td>
+<td>DLP結果、測試報告。</td>
+</tr>
+<tr>
+<td>越權檢索測試</td>
+<td>不同角色查詢RAG資料源，確認僅能取得授權資料。</td>
+<td>企業知識庫、RAG應用。</td>
+<td>權限測試結果。</td>
+</tr>
+<tr>
+<td>模型濫用測試</td>
+<td>測試惡意內容、社交工程、資安攻擊指令、政策繞過與不當建議。</td>
+<td>對外AI服務、高風險用途。</td>
+<td>紅隊測試紀錄。</td>
+</tr>
+<tr>
+<td>API安全測試</td>
+<td>測試AI API身份驗證、授權、Rate Limit、Token保護、錯誤處理與注入風險。</td>
+<td>AI API、模型服務。</td>
+<td>API安全測試報告。</td>
+</tr>
+<tr>
+<td>模型表現與漂移測試</td>
+<td>測試準確性、錯誤率、資料分布變化、偏差、效能、穩定性與異常輸出。</td>
+<td>正式模型服務。</td>
+<td>模型監控報告。</td>
+</tr>
+<tr>
+<td>供應鏈安全測試</td>
+<td>檢查模型權重、套件、容器、MLOps工具、插件與外部API弱點與授權。</td>
+<td>開源模型、外部套件、MLOps。</td>
+<td>SCA/SBOM、授權審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. AI監控、日誌與事件偵測</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控領域</th>
+<th>監控內容</th>
+<th>告警條件</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI服務存取</td>
+<td>使用者、來源IP、API Key、Token、模型端點、呼叫頻率、失敗率。</td>
+<td>異常高頻、未授權呼叫、地區異常、Token濫用。</td>
+<td>SOC / MLOps Owner。</td>
+</tr>
+<tr>
+<td>Prompt輸入</td>
+<td>Prompt風險標籤、禁止資料、PII、Secrets、惡意指令、上傳檔案。</td>
+<td>偵測到禁止資料、注入嘗試或高風險輸入。</td>
+<td>AI Security Owner / SOC。</td>
+</tr>
+<tr>
+<td>RAG檢索</td>
+<td>資料源、查詢者、檢索分類、拒絕事件、敏感資料命中。</td>
+<td>越權檢索、大量查詢、敏感資料異常。</td>
+<td>RAG Owner / Data Owner。</td>
+</tr>
+<tr>
+<td>工具調用</td>
+<td>Agent工具、執行動作、授權結果、人工確認、外部連線。</td>
+<td>高風險工具未經確認、異常自動化行為。</td>
+<td>Agent Owner / SOC。</td>
+</tr>
+<tr>
+<td>模型輸出</td>
+<td>敏感資料、不當內容、錯誤率、政策違規、需覆核標籤。</td>
+<td>敏感資料輸出、重大錯誤輸出、政策違規。</td>
+<td>AI Governance Owner / Business Owner。</td>
+</tr>
+<tr>
+<td>MLOps操作</td>
+<td>模型部署、版本切換、資料集存取、訓練任務、模型刪除、權限變更。</td>
+<td>未授權部署、模型竄改、資料集異常存取。</td>
+<td>MLOps Owner / SOC。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. AI事件與違規處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件類型</th>
+<th>判定範例</th>
+<th>最低處置要求</th>
+<th>通報對象</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI資料外洩</td>
+<td>AI輸出PII、高機密、客戶資料、Secrets或未授權RAG資料。</td>
+<td>立即限制服務、保存日誌、通報事件管理、評估法規與客戶通報。</td>
+<td>CISO、DPO、Data Owner、Incident Manager。</td>
+</tr>
+<tr>
+<td>Prompt Injection成功</td>
+<td>模型忽略安全指令、揭露系統Prompt、越權執行工具或輸出受限資料。</td>
+<td>封存Prompt與上下文、停用受影響功能、修正Prompt與Guardrail。</td>
+<td>AI Security Owner、SOC、System Owner。</td>
+</tr>
+<tr>
+<td>模型或資料污染</td>
+<td>訓練資料、RAG資料源、模型權重或Prompt模板遭未授權修改。</td>
+<td>隔離版本、回滾、鑑識、權限檢查、重新訓練或重建索引。</td>
+<td>MLOps Owner、Data Owner、CISO。</td>
+</tr>
+<tr>
+<td>外部AI服務風險</td>
+<td>供應商事件、條款變更、跨境變更、資料保留異常或子處理者變更。</td>
+<td>重新評估供應商、暫停資料傳輸、通知相關Owner。</td>
+<td>Supplier Management、法務、DPO、AI Governance Owner。</td>
+</tr>
+<tr>
+<td>AI輸出造成業務衝擊</td>
+<td>未覆核AI輸出被用於對外承諾、錯誤決策、錯誤申報或重大客訴。</td>
+<td>啟動事件檢討、修正流程、通知受影響關注方。</td>
+<td>Business Owner、法務、AI治理委員會。</td>
+</tr>
+<tr>
+<td>未核准AI使用</td>
+<td>使用個人AI帳號、未核准工具或輸入禁止資料。</td>
+<td>停止使用、保存證據、資安違規處理、教育訓練或懲戒。</td>
+<td>主管、HR、CISO、DPO（如適用）。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. AI供應商與外部AI服務管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商安全審查</td>
+<td>導入外部AI服務前，應審查安全文件、ISO/SOC報告、資料保護、子處理者、地區、事件通報與刪除能力。</td>
+<td>供應商風險評估、雲端服務風險評估。</td>
+</tr>
+<tr>
+<td>資料使用條款</td>
+<td>確認輸入資料、Prompt、輸出、日誌是否被供應商保留、訓練、人工審查、轉移或共享。</td>
+<td>合約、DPA、服務條款審查。</td>
+</tr>
+<tr>
+<td>模型與服務變更</td>
+<td>供應商模型版本、API、地區、資料處理、價格或安全控制變更時應重新評估。</td>
+<td>變更通知、重評紀錄。</td>
+</tr>
+<tr>
+<td>合約要求</td>
+<td>合約應包含保密、資料保護、事件通報、刪除、稽核權、SLA、子處理者、跨境與退場要求。</td>
+<td>合約條款、法務審查。</td>
+</tr>
+<tr>
+<td>服務監督</td>
+<td>定期檢查供應商安全公告、可用性、事件、弱點、合規證明與使用量異常。</td>
+<td>供應商監督紀錄。</td>
+</tr>
+<tr>
+<td>退場與資料刪除</td>
+<td>停用外部AI服務時，應撤銷帳號/API Key，確認資料刪除、模型訓練排除與證據保存。</td>
+<td>退場紀錄、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. AI變更與版本管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>變更類型</th>
+<th>需重評項目</th>
+<th>核准要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>模型版本變更</td>
+<td>性能、安全、偏差、輸出風險、資料相容性、監控與回滾。</td>
+<td>MLOps Owner、AI Governance Owner；高風險需CISO。</td>
+<td>模型版本紀錄、測試報告。</td>
+</tr>
+<tr>
+<td>Prompt模板變更</td>
+<td>指令安全、輸入限制、輸出格式、工具調用、越權與資料外洩測試。</td>
+<td>Prompt Owner、AI Security Owner。</td>
+<td>Prompt版本紀錄、測試紀錄。</td>
+</tr>
+<tr>
+<td>RAG資料源變更</td>
+<td>資料分類、權限、索引、刪除、資料品質、污染與跨境。</td>
+<td>Data Owner、RAG Owner、DPO（如適用）。</td>
+<td>資料源清冊、權限測試。</td>
+</tr>
+<tr>
+<td>AI用途變更</td>
+<td>業務目的、使用者、輸出對象、決策影響、法規合約與風險等級。</td>
+<td>AI Governance Owner；高風險需AI治理委員會。</td>
+<td>用途重評、風險評估。</td>
+</tr>
+<tr>
+<td>供應商或地區變更</td>
+<td>資料處理條款、子處理者、跨境、資料保留、事件通報與合規。</td>
+<td>法務、DPO、供應商管理、CISO。</td>
+<td>供應商重評、合約審查。</td>
+</tr>
+<tr>
+<td>Agent工具權限變更</td>
+<td>工具可執行動作、資料存取、外部連線、人工審批與回滾。</td>
+<td>System Owner、AI Security Owner、CISO（高風險）。</td>
+<td>工具權限審查、測試紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. AI系統上線前安全檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>用途核准</td>
+<td>AI用途、風險等級、使用者與輸出用途是否已核准？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資產登錄</td>
+<td>AI模型、Prompt、RAG資料源、Agent工具與外部AI服務是否已登錄？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料核准</td>
+<td>訓練、微調、RAG、Prompt與推論資料是否完成Owner、分類、授權與隱私確認？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>風險評估</td>
+<td>是否完成AI資訊安全風險評估、DPIA、威脅模型或其他必要評估？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Prompt安全</td>
+<td>Prompt模板是否完成版本控管、安全測試與禁止資料限制？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>RAG權限</td>
+<td>RAG是否完成權限繼承、越權檢索、資料刪除與索引安全測試？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>模型安全測試</td>
+<td>是否完成Prompt Injection、資料外洩、濫用、偏差、漂移與API安全測試？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商審查</td>
+<td>外部AI服務是否完成合約、DPA、資料保留、訓練使用、地區與子處理者審查？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>是否完成AI服務日誌、Prompt/RAG監控、模型監控、告警與事件通報設定？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>人工監督</td>
+<td>高風險輸出是否定義Human Review、責任歸屬與覆核紀錄？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>未處理風險是否完成補償控制、例外核准與剩餘風險接受？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. AI使用紀錄與證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI用途核准紀錄</td>
+<td>用途、Owner、風險等級、使用者、資料類型、核准人與限制條件。</td>
+<td>AI Governance Owner</td>
+<td>用途有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>AI資產清冊</td>
+<td>模型、Prompt、RAG資料源、Agent工具、外部AI服務、版本、Owner與風險等級。</td>
+<td>AI Governance Owner / MLOps Owner</td>
+<td>文件有效期間及歷史版本至少3年。</td>
+</tr>
+<tr>
+<td>資料與模型追蹤紀錄</td>
+<td>資料來源、訓練/微調資料、模型版本、部署版本、測試結果與回滾紀錄。</td>
+<td>MLOps Owner / Data Owner</td>
+<td>至少3年或依合約/法規要求。</td>
+</tr>
+<tr>
+<td>AI安全測試報告</td>
+<td>Prompt Injection、資料外洩、RAG權限、模型濫用、API安全、偏差與漂移測試結果。</td>
+<td>AI Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>Prompt版本與審查紀錄</td>
+<td>Prompt模板、系統指令、變更紀錄、測試案例、核准與退場紀錄。</td>
+<td>Prompt Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>AI監控與事件紀錄</td>
+<td>AI服務日誌、告警、異常、事件通報、調查、證據保存與檢討報告。</td>
+<td>SOC / Incident Manager</td>
+<td>至少3至7年或依事件要求。</td>
+</tr>
+<tr>
+<td>外部AI供應商紀錄</td>
+<td>供應商審查、合約、DPA、SOC/ISO證據、服務條款、子處理者與退場證明。</td>
+<td>供應商管理 / 法務</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI資產登錄覆蓋率</td>
+<td>已登錄AI模型、Prompt、RAG與外部AI服務 / 應登錄AI資產。</td>
+<td>正式AI資產目標100%。</td>
+<td>AI治理完整性。</td>
+</tr>
+<tr>
+<td>高風險AI評估完成率</td>
+<td>高風險AI用途完成風險評估、DPIA與安全測試比例。</td>
+<td>目標100%。</td>
+<td>上線風險控制。</td>
+</tr>
+<tr>
+<td>未核准AI使用事件數</td>
+<td>使用未核准AI工具或違反資料輸入限制之事件數。</td>
+<td>目標0；任何事件需檢討。</td>
+<td>使用者治理與訓練。</td>
+</tr>
+<tr>
+<td>AI安全測試缺陷逾期率</td>
+<td>AI安全測試發現缺陷逾期未關閉比例。</td>
+<td>Critical目標0。</td>
+<td>修復與資源管理。</td>
+</tr>
+<tr>
+<td>AI資料外洩或敏感輸出告警數</td>
+<td>AI輸入輸出中偵測到敏感資料、Secrets或未授權資料之告警數。</td>
+<td>持續下降；重大告警立即升級。</td>
+<td>資料保護與監控有效性。</td>
+</tr>
+<tr>
+<td>Prompt與模型版本重評率</td>
+<td>重大Prompt、模型、RAG資料源或供應商變更完成重評比例。</td>
+<td>高風險變更目標100%。</td>
+<td>變更治理。</td>
+</tr>
+<tr>
+<td>AI事件檢討完成率</td>
+<td>AI安全事件完成根因分析、CAPA與治理改善比例。</td>
+<td>重大事件100%。</td>
+<td>持續改善與管理審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI治理與範圍</td>
+<td>AI用途、AI資產、外部AI服務是否已識別、分級、核准與登錄。</td>
+<td>AI用途核准、AI資產清冊。</td>
+</tr>
+<tr>
+<td>資料使用合規</td>
+<td>AI資料來源、PII、授權、跨境、保留、刪除與資料最小化是否受控。</td>
+<td>資料追蹤清冊、DPIA、DPA。</td>
+</tr>
+<tr>
+<td>AI安全設計</td>
+<td>是否設計Prompt安全、RAG權限、工具調用限制、輸出控制、日誌監控與回滾。</td>
+<td>架構文件、威脅模型、控制設計。</td>
+</tr>
+<tr>
+<td>模型與Prompt版本</td>
+<td>模型、Prompt、RAG索引與Agent工具變更是否具版本、測試、核准與回滾。</td>
+<td>版本紀錄、變更紀錄。</td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>是否測試Prompt Injection、資料外洩、越權檢索、模型濫用、API安全與供應鏈風險。</td>
+<td>AI安全測試報告、缺陷追蹤。</td>
+</tr>
+<tr>
+<td>外部AI供應商</td>
+<td>供應商安全、資料使用、訓練使用、子處理者、跨境、事件通報與退場是否受控。</td>
+<td>供應商審查、合約、DPA。</td>
+</tr>
+<tr>
+<td>使用者管制</td>
+<td>使用者是否了解禁止輸入資料、輸出覆核、未核准AI工具禁止使用與事件通報要求。</td>
+<td>訓練紀錄、政策宣導、違規紀錄。</td>
+</tr>
+<tr>
+<td>監控與事件</td>
+<td>AI服務日誌、告警、事件通報、證據保存與事件檢討是否有效。</td>
+<td>SIEM告警、事件紀錄、檢討報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄A：AI用途申請與核准範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI用途名稱</td>
+<td>AI應用、模型、工具或流程名稱。</td>
+<td>例如：客服回覆草稿產生器。</td>
+</tr>
+<tr>
+<td>業務目的</td>
+<td>說明使用AI達成之目的、流程與預期效益。</td>
+<td>應具合法、明確、必要目的。</td>
+</tr>
+<tr>
+<td>使用者與Owner</td>
+<td>列出使用部門、使用者類型、系統Owner、Data Owner與AI Owner。</td>
+<td>需明確責任歸屬。</td>
+</tr>
+<tr>
+<td>資料類型與分類</td>
+<td>列出輸入資料、RAG資料源、訓練資料、輸出資料之分類與是否含PII。</td>
+<td>不得以概括描述替代。</td>
+</tr>
+<tr>
+<td>AI服務來源</td>
+<td>內建模型、外部AI API、SaaS、開源模型、私有模型或混合架構。</td>
+<td>需連結供應商審查。</td>
+</tr>
+<tr>
+<td>輸出用途</td>
+<td>內部參考、草稿、客戶互動、自動化決策、法規申報或資安處置。</td>
+<td>輸出用途決定風險等級。</td>
+</tr>
+<tr>
+<td>風險等級</td>
+<td>低、中、高、禁止或暫停使用。</td>
+<td>依第6章分級。</td>
+</tr>
+<tr>
+<td>必要控制</td>
+<td>人工覆核、監控、DPIA、Prompt安全、RAG權限、供應商DPA、事件通報等。</td>
+<td>應列為放行條件。</td>
+</tr>
+<tr>
+<td>核准紀錄</td>
+<td>Business Owner、Data Owner、AI Governance Owner、CISO、DPO/法務簽核。</td>
+<td>依風險等級決定核准層級。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

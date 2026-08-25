@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-002 弱點與修補管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-002 弱點與修補管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-002</td>
+<td>弱點與修補管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-002</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Vulnerability Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / System Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與平台審查</td>
+<td></td>
+<td>Cloud Security Owner / Platform Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>應用安全審查</td>
+<td></td>
+<td>Application Security Owner / DevSecOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與合規審查</td>
+<td></td>
+<td>DPO / 法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織對資訊資產、雲端服務、應用系統、網路設備、端點設備、資料庫、第三方元件、容器映像、開源套件、AI模型服務與MLOps平台進行弱點識別、風險分析、修補排程、變更控管、驗證關閉、例外接受、持續監測及管理審查之方法。</p>
+<p>本文件目的在於確保弱點管理活動可被計畫、執行、追蹤、量測與稽核，並能支援資訊安全風險處理、事件預防、合規要求、供應鏈管理、營運持續、隱私保護與AI治理要求。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有弱點均應以資產重要性、暴露程度、威脅情資、CVSS、EPSS、是否已遭利用、資料敏感度、業務衝擊及補救可行性進行優先排序。</li>
+<li>高風險、已遭利用、網際網路暴露、涉及PII/客戶資料/高機密資料或關鍵服務之弱點，應以加速流程處理。</li>
+<li>修補活動不得僅以安裝更新為完成條件，必須包含影響評估、備份或回復準備、變更核准、部署紀錄、驗證測試及證據保存。</li>
+<li>無法於期限內完成修補者，必須提出補償控制、例外申請、剩餘風險接受及重新審查期限。</li>
+<li>弱點管理應與資產清冊、變更管理、事件管理、供應商管理、雲端安全、DevSecOps、AI治理、風險登錄與管理審查連動。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>弱點（Vulnerability）</td>
+<td>資訊資產、系統、流程、組態、軟體、硬體、模型、資料處理或控制措施中可被威脅利用而造成資訊安全事件、資料外洩、服務中斷、未授權存取或合規失效之缺陷。</td>
+</tr>
+<tr>
+<td>修補（Patch）</td>
+<td>針對作業系統、應用程式、韌體、套件、容器映像、雲端元件、AI平台或安全工具套用安全更新、設定調整、版本升級或補救措施。</td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>當弱點暫時無法修補時，採取額外安全控制降低被利用可能性或衝擊，例如網路隔離、WAF規則、EDR規則、關閉服務、存取限制、監控告警或虛擬修補。</td>
+</tr>
+<tr>
+<td>CVSS</td>
+<td>Common Vulnerability Scoring System，用於衡量弱點技術嚴重度之通用評分方法。</td>
+</tr>
+<tr>
+<td>EPSS</td>
+<td>Exploit Prediction Scoring System，用於估計弱點於一定期間內被利用可能性之參考指標。</td>
+</tr>
+<tr>
+<td>KEV</td>
+<td>Known Exploited Vulnerabilities，已知遭利用弱點清單，可作為加速修補與緊急處理之依據。</td>
+</tr>
+<tr>
+<td>SBOM</td>
+<td>Software Bill of Materials，軟體組成清單，用於識別應用程式、套件、函式庫與第三方元件之版本與弱點曝險。</td>
+</tr>
+<tr>
+<td>弱點Owner</td>
+<td>對弱點分析、修補規劃、修補執行、例外申請、驗證關閉及證據保存負責之角色。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大風險接受、重大修補資源、長期例外及跨部門處理優先順序。</td>
+<td>風險接受紀錄、資源核准、管理審查決議。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>建立弱點管理要求，核准重大弱點處理策略、緊急修補、例外與剩餘風險。</td>
+<td>弱點治理紀錄、例外核准、KPI/KRI報告。</td>
+</tr>
+<tr>
+<td>Vulnerability Management Owner</td>
+<td>維護弱點管理流程、工具、排程、分類準則、追蹤清單與改善方案。</td>
+<td>弱點清單、掃描計畫、修補追蹤、改善報告。</td>
+</tr>
+<tr>
+<td>SOC / Security Operations</td>
+<td>監控威脅情資、弱點利用跡象、EDR/SIEM/WAF告警及事件關聯。</td>
+<td>告警紀錄、事件關聯分析、緊急通報。</td>
+</tr>
+<tr>
+<td>IT Operations Owner</td>
+<td>負責伺服器、端點、網路、資料庫、中介軟體、備份與基礎架構修補。</td>
+<td>修補紀錄、變更紀錄、驗證證據。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>確認系統弱點業務衝擊、排程、測試、回復與使用者溝通。</td>
+<td>影響評估、UAT結果、修補完成證據。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>管理雲端組態弱點、CSPM發現、雲端原生服務修補與雲端供應商通報。</td>
+<td>CSPM報告、雲端修補紀錄、供應商公告。</td>
+</tr>
+<tr>
+<td>DevSecOps / AppSec Owner</td>
+<td>管理SAST、DAST、SCA、IaC掃描、容器映像、CI/CD與開源套件弱點。</td>
+<td>掃描報告、缺陷單、SBOM、合併審查紀錄。</td>
+</tr>
+<tr>
+<td>AI / MLOps Owner</td>
+<td>管理AI模型服務、模型依賴套件、推論API、Prompt應用、RAG元件與MLOps平台弱點。</td>
+<td>AI弱點評估、模型版本追蹤、MLOps修補紀錄。</td>
+</tr>
+<tr>
+<td>供應商管理 / 法務</td>
+<td>追蹤供應商弱點通報、SLA、修補承諾、第三方驗證與合約義務。</td>
+<td>供應商修補證據、合約條款、服務通知。</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>確認弱點管理紀錄納入文件化資訊、稽核證據、績效監測與管理審查。</td>
+<td>稽核證據包、KPI/KRI、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 弱點管理流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>流程階段</th>
+<th>作業內容</th>
+<th>責任角色</th>
+<th>輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 資產範圍確認</td>
+<td>從資產清冊、雲端服務清冊、AI模型與Prompt資產清冊、供應商清冊、CMDB與系統架構圖確認掃描與修補範圍。</td>
+<td>資產Owner / Vulnerability Management Owner</td>
+<td>弱點管理範圍清單。</td>
+</tr>
+<tr>
+<td>2. 弱點識別</td>
+<td>透過掃描工具、威脅情資、供應商公告、滲透測試、程式碼掃描、雲端組態掃描、事件調查與稽核發現識別弱點。</td>
+<td>SOC / AppSec / IT / Cloud Security</td>
+<td>弱點掃描報告、發現清單。</td>
+</tr>
+<tr>
+<td>3. 分析與分級</td>
+<td>依CVSS、EPSS、KEV、暴露面、資產重要性、資料敏感度、可被利用性、補償控制與業務衝擊進行分級。</td>
+<td>Vulnerability Management Owner / System Owner</td>
+<td>弱點分級與處理優先順序。</td>
+</tr>
+<tr>
+<td>4. 處理規劃</td>
+<td>決定修補、升級、設定調整、停用、隔離、補償控制、接受、轉移或風險處理計畫。</td>
+<td>弱點Owner / CISO</td>
+<td>修補計畫、風險處理計畫。</td>
+</tr>
+<tr>
+<td>5. 變更與部署</td>
+<td>依變更管理流程完成影響評估、測試、備份、核准、部署與回復準備。</td>
+<td>IT / DevSecOps / Change Owner</td>
+<td>變更單、部署紀錄、回復計畫。</td>
+</tr>
+<tr>
+<td>6. 驗證與關閉</td>
+<td>以重新掃描、版本確認、設定檢查、滲透測試複測、日誌確認或控制證據確認弱點已處理。</td>
+<td>Vulnerability Management Owner / SOC</td>
+<td>複測報告、關閉紀錄。</td>
+</tr>
+<tr>
+<td>7. 監測與改善</td>
+<td>追蹤逾期弱點、重複弱點、例外、趨勢、KPI/KRI、事件關聯與改善行動。</td>
+<td>ISMS管理代表 / CISO</td>
+<td>KPI/KRI報告、CAPA、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 弱點來源與識別要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>弱點來源</th>
+<th>識別方法</th>
+<th>頻率 / 觸發條件</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>基礎架構弱點</td>
+<td>Authenticated vulnerability scan、網路掃描、設定基準檢查、弱密碼與服務暴露檢查。</td>
+<td>至少每月；重大變更後；重大威脅公告後。</td>
+<td>掃描報告、例外清單、修補追蹤。</td>
+</tr>
+<tr>
+<td>端點與伺服器弱點</td>
+<td>EDR/MDM/patch management工具盤點作業系統、應用程式、瀏覽器、代理程式與安全更新狀態。</td>
+<td>至少每週彙整；高風險弱點即時追蹤。</td>
+<td>修補合規報表、端點弱點報告。</td>
+</tr>
+<tr>
+<td>網路與安全設備弱點</td>
+<td>檢查防火牆、VPN、WAF、IDS/IPS、交換器、路由器、無線控制器與韌體版本。</td>
+<td>至少每季；供應商安全公告後。</td>
+<td>設備版本清單、韌體修補紀錄。</td>
+</tr>
+<tr>
+<td>應用程式弱點</td>
+<td>SAST、DAST、IAST、手動程式碼審查、滲透測試、API測試與安全需求測試。</td>
+<td>CI/CD階段；正式上線前；重大版本變更；至少每年。</td>
+<td>掃描報告、缺陷單、修復證據。</td>
+</tr>
+<tr>
+<td>開源與第三方元件弱點</td>
+<td>SCA、SBOM、套件版本比對、授權與弱點資料庫查詢。</td>
+<td>每次建置；套件升級；重大CVE公告後。</td>
+<td>SBOM、SCA報告、依賴更新紀錄。</td>
+</tr>
+<tr>
+<td>容器與IaC弱點</td>
+<td>容器映像掃描、Kubernetes設定檢查、IaC安全掃描、Registry政策檢查。</td>
+<td>每次映像建置；部署前；基準變更後。</td>
+<td>映像掃描報告、IaC掃描結果。</td>
+</tr>
+<tr>
+<td>雲端設定弱點</td>
+<td>CSPM、Cloud Security Posture Review、IAM權限分析、公開儲存桶、金鑰、日誌與網路暴露檢查。</td>
+<td>持續監控；至少每月審查；雲端架構變更後。</td>
+<td>CSPM報告、雲端風險處理紀錄。</td>
+</tr>
+<tr>
+<td>AI與MLOps弱點</td>
+<td>模型服務API、MLOps平台、RAG資料源、Prompt應用、模型依賴套件、推論端點、資料管線與權限檢查。</td>
+<td>模型上線前；模型版本變更；依賴套件更新；重大AI安全公告後。</td>
+<td>AI弱點檢查紀錄、模型版本追蹤清冊。</td>
+</tr>
+<tr>
+<td>供應商弱點公告</td>
+<td>訂閱供應商安全公告、CVE通知、SLA通報、雲端服務健康公告與第三方驗證報告。</td>
+<td>持續訂閱；重大公告24小時內評估。</td>
+<td>供應商通知、影響評估、修補證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 弱點嚴重度與優先排序準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>判定條件</th>
+<th>處理時限</th>
+<th>升級要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>緊急（Critical Emergency）</td>
+<td>已遭利用或列入KEV；網際網路暴露；可遠端未授權執行；影響關鍵服務、PII、客戶資料、高機密資料、特權帳號、雲端控制平面或AI生產模型服務。</td>
+<td>24至72小時內完成修補或補償控制；必要時立即隔離。</td>
+<td>即時通報CISO、IT主管、System Owner；必要時啟動事件管理或緊急變更。</td>
+</tr>
+<tr>
+<td>高（High）</td>
+<td>CVSS高分、EPSS高、可被利用性高、公開PoC、影響重要資產或可造成橫向移動、權限提升、資料外洩或服務中斷。</td>
+<td>7至14日內完成處理；有外部暴露者優先。</td>
+<td>每週追蹤至關閉，逾期需提出例外與補償控制。</td>
+</tr>
+<tr>
+<td>中（Medium）</td>
+<td>需特定條件利用、影響範圍有限、已有部分控制，但仍可能造成未授權存取、資訊揭露或可用性下降。</td>
+<td>30至60日內處理或納入版本修補計畫。</td>
+<td>納入月度追蹤與風險登錄。</td>
+</tr>
+<tr>
+<td>低（Low）</td>
+<td>利用難度高、衝擊有限、無敏感資料或已具足夠補償控制。</td>
+<td>90至180日內依例行維護處理。</td>
+<td>納入基準改善與版本更新計畫。</td>
+</tr>
+<tr>
+<td>資訊性（Informational）</td>
+<td>不構成立即弱點，但顯示設定改善、版本老舊、最佳實務差距或後續檢查需求。</td>
+<td>依改善計畫或下次審查處理。</td>
+<td>必要時轉為設定基準改善項目。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 修補時限與服務等級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類別</th>
+<th>緊急弱點</th>
+<th>高風險弱點</th>
+<th>中風險弱點</th>
+<th>低風險弱點</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網際網路暴露服務</td>
+<td>24至48小時</td>
+<td>7日</td>
+<td>30日</td>
+<td>90日</td>
+<td>包含VPN、Web、API、郵件、DNS、遠端存取、雲端公開端點。</td>
+</tr>
+<tr>
+<td>關鍵業務系統</td>
+<td>72小時</td>
+<td>14日</td>
+<td>45日</td>
+<td>120日</td>
+<td>須兼顧RTO/RPO、維護窗口與回復能力。</td>
+</tr>
+<tr>
+<td>一般內部系統</td>
+<td>7日</td>
+<td>30日</td>
+<td>60日</td>
+<td>180日</td>
+<td>逾期需說明原因與補償控制。</td>
+</tr>
+<tr>
+<td>端點設備</td>
+<td>72小時</td>
+<td>14日</td>
+<td>45日</td>
+<td>90日</td>
+<td>遠端工作端點、特權使用者端點優先處理。</td>
+</tr>
+<tr>
+<td>雲端控制平面與IAM</td>
+<td>24至72小時</td>
+<td>7日</td>
+<td>30日</td>
+<td>90日</td>
+<td>涉及特權、公開存取、金鑰外洩或日誌缺失需加速。</td>
+</tr>
+<tr>
+<td>應用程式與開源元件</td>
+<td>72小時至7日</td>
+<td>14至30日</td>
+<td>60日</td>
+<td>180日</td>
+<td>依發布週期、補丁可用性、回歸測試及替代控制決定。</td>
+</tr>
+<tr>
+<td>AI/MLOps平台</td>
+<td>72小時</td>
+<td>14日</td>
+<td>45日</td>
+<td>120日</td>
+<td>涉及模型服務外部端點、資料管線、RAG資料源與API金鑰者優先。</td>
+</tr>
+<tr>
+<td>供應商代管服務</td>
+<td>依合約SLA或風險要求立即追蹤</td>
+<td>依合約SLA追蹤</td>
+<td>依合約SLA追蹤</td>
+<td>依合約SLA追蹤</td>
+<td>供應商無法提供證據時，需提升風險評估與採取補償控制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 修補前影響評估與變更要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>評估內容</th>
+<th>責任角色</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>業務影響</td>
+<td>確認修補是否影響關鍵流程、服務時間、SLA、客戶承諾、法規申報、AI服務可用性或資料處理時程。</td>
+<td>System Owner / Business Owner</td>
+<td>影響評估紀錄。</td>
+</tr>
+<tr>
+<td>技術相容性</td>
+<td>確認修補對作業系統、應用程式、資料庫、中介軟體、代理程式、相依套件、API、模型服務或容器映像之相容性。</td>
+<td>IT / DevSecOps / MLOps</td>
+<td>測試紀錄、相容性確認。</td>
+</tr>
+<tr>
+<td>備份與回復</td>
+<td>關鍵系統修補前應確認備份可用、快照完整、回復程序與回復責任人。</td>
+<td>IT Operations / BCMS Owner</td>
+<td>備份確認、回復計畫。</td>
+</tr>
+<tr>
+<td>維護窗口</td>
+<td>確認修補時間、停機需求、使用者通知、供應商支援與回復時限。</td>
+<td>Change Owner</td>
+<td>變更單、通知紀錄。</td>
+</tr>
+<tr>
+<td>安全風險</td>
+<td>若延後修補，應評估暴露期間風險與補償控制有效性。</td>
+<td>CISO / Vulnerability Owner</td>
+<td>風險評估、補償控制紀錄。</td>
+</tr>
+<tr>
+<td>合規與客戶要求</td>
+<td>確認客戶合約、法規、隱私、供應鏈、雲端服務條款或驗證要求是否規定修補時限。</td>
+<td>法務 / DPO / Supplier Management</td>
+<td>合規確認紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 修補部署作業要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業步驟</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>取得修補來源</td>
+<td>僅得自原廠、授權供應商、可信任套件來源、受控Repository、受控映像Registry或核准更新平台取得修補檔。</td>
+<td>IT / DevSecOps</td>
+<td>修補來源紀錄。</td>
+</tr>
+<tr>
+<td>完整性確認</td>
+<td>必要時驗證雜湊、簽章、套件來源、發行者、版本與Release Note。</td>
+<td>IT / Security</td>
+<td>完整性驗證紀錄。</td>
+</tr>
+<tr>
+<td>測試環境驗證</td>
+<td>對關鍵系統、核心中介軟體、資料庫、AI服務、API與客戶影響系統，應先於測試或預備環境驗證。</td>
+<td>System Owner / QA</td>
+<td>測試結果、UAT紀錄。</td>
+</tr>
+<tr>
+<td>部署執行</td>
+<td>依核准變更單、腳本、工具、部署窗口與責任分工執行，避免未授權人工變更。</td>
+<td>Change Owner / IT</td>
+<td>部署紀錄、工具日誌。</td>
+</tr>
+<tr>
+<td>異常回復</td>
+<td>修補失敗或服務異常時，依回復計畫回滾、重啟、隔離或啟動事件管理。</td>
+<td>IT / Incident Manager</td>
+<td>異常處理紀錄。</td>
+</tr>
+<tr>
+<td>部署確認</td>
+<td>確認版本、服務健康狀態、監控指標、業務功能、日誌與安全控制恢復正常。</td>
+<td>System Owner / SOC</td>
+<td>驗證截圖、健康檢查報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 驗證關閉與證據保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>驗證方法</th>
+<th>適用情境</th>
+<th>合格條件</th>
+<th>保存證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>重新掃描</td>
+<td>基礎架構、端點、雲端、容器、Web與API弱點。</td>
+<td>原弱點不再出現，或掃描結果顯示已修復。</td>
+<td>複測報告、掃描時間、工具版本。</td>
+</tr>
+<tr>
+<td>版本確認</td>
+<td>作業系統、套件、韌體、容器映像、AI平台元件。</td>
+<td>版本已升級至安全版本或原廠建議版本。</td>
+<td>版本截圖、套件清單、部署紀錄。</td>
+</tr>
+<tr>
+<td>設定檢查</td>
+<td>雲端組態、IAM、網路設定、加密、日誌、公開存取與安全基準。</td>
+<td>設定符合基準與風險處理要求。</td>
+<td>CSPM報告、設定截圖、基準比對。</td>
+</tr>
+<tr>
+<td>功能與回歸測試</td>
+<td>應用系統、API、資料庫、AI服務與業務流程。</td>
+<td>修補後主要功能、控制點與業務流程無重大異常。</td>
+<td>測試紀錄、UAT簽核。</td>
+</tr>
+<tr>
+<td>滲透測試複測</td>
+<td>高風險弱點、外部暴露系統、客戶要求或重大事件後。</td>
+<td>原攻擊路徑已阻斷，無同等風險替代路徑。</td>
+<td>複測報告、修復確認。</td>
+</tr>
+<tr>
+<td>補償控制驗證</td>
+<td>無法立即修補或尚無修補程式之弱點。</td>
+<td>補償控制可有效降低利用可能性或衝擊至可接受範圍。</td>
+<td>控制測試、監控規則、例外核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 例外管理與剩餘風險接受</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>重新審查</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無可用修補程式</td>
+<td>記錄原廠公告、影響評估、替代版本、補償控制與監控措施。</td>
+<td>CISO / System Owner</td>
+<td>至少每30日或原廠更新時。</td>
+</tr>
+<tr>
+<td>修補導致業務中斷</td>
+<td>提出測試結果、業務衝擊、維護窗口計畫、暫行控制與預計完成日。</td>
+<td>IT主管 / Business Owner / CISO</td>
+<td>依風險等級每7至30日。</td>
+</tr>
+<tr>
+<td>舊版或無法升級系統</td>
+<td>隔離網段、限制存取、強化監控、禁止外部暴露、建立淘汰計畫。</td>
+<td>最高管理階層授權代表 / CISO</td>
+<td>至少每季。</td>
+</tr>
+<tr>
+<td>供應商代管限制</td>
+<td>取得供應商風險說明、修補計畫、SLA承諾、補償控制與客戶影響評估。</td>
+<td>供應商管理 / CISO / 法務</td>
+<td>依合約與風險等級追蹤。</td>
+</tr>
+<tr>
+<td>AI模型或平台相依性限制</td>
+<td>評估模型性能、資料管線、套件相容、推論服務可用性與替代控制。</td>
+<td>AI Governance Owner / CISO</td>
+<td>模型版本變更或至少每30日。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 雲端、容器與DevSecOps弱點管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>領域</th>
+<th>控制要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端CSPM</td>
+<td>持續監測公開儲存、過度權限、未加密、日誌未啟用、網路暴露、金鑰風險與安全群組錯誤設定。</td>
+<td>CSPM告警、修復紀錄。</td>
+</tr>
+<tr>
+<td>雲端供應商弱點</td>
+<td>追蹤雲端服務安全公告、服務健康狀態、受影響區域、客戶責任與供應商修復進度。</td>
+<td>供應商公告、影響評估。</td>
+</tr>
+<tr>
+<td>容器映像</td>
+<td>映像建置前後均應掃描弱點，禁止部署未核准Critical/High弱點映像至正式環境，必要時使用例外流程。</td>
+<td>映像掃描報告、Registry政策。</td>
+</tr>
+<tr>
+<td>Kubernetes平台</td>
+<td>檢查API Server、RBAC、Admission Control、Secrets、Network Policy、節點版本與Runtime弱點。</td>
+<td>K8s安全掃描、組態檢查。</td>
+</tr>
+<tr>
+<td>CI/CD管線</td>
+<td>於程式碼提交、合併、建置、部署前導入SAST、SCA、IaC、Secrets掃描與品質門檻。</td>
+<td>Pipeline報告、阻擋紀錄。</td>
+</tr>
+<tr>
+<td>SBOM管理</td>
+<td>重要應用系統應建立並維護SBOM，支援CVE快速影響分析與第三方元件追蹤。</td>
+<td>SBOM檔案、版本紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. AI、模型服務與Prompt應用弱點管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>AI弱點類型</th>
+<th>管理要求</th>
+<th>處理證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>模型服務API弱點</td>
+<td>推論API、Embedding API、RAG查詢端點與管理API應進行身分驗證、授權、速率限制、輸入驗證與弱點掃描。</td>
+<td>API掃描報告、修補紀錄。</td>
+</tr>
+<tr>
+<td>模型依賴套件弱點</td>
+<td>追蹤Python套件、ML框架、容器映像、GPU驅動、Notebook、向量資料庫與MLOps工具版本弱點。</td>
+<td>SCA/SBOM、模型版本清冊。</td>
+</tr>
+<tr>
+<td>Prompt與RAG風險</td>
+<td>評估Prompt Injection、資料外洩、越權檢索、敏感資料輸出、未授權工具調用與外部資料來源污染風險。</td>
+<td>AI安全測試紀錄、控制驗證。</td>
+</tr>
+<tr>
+<td>模型供應商公告</td>
+<td>追蹤外部AI服務、API、模型版本、資料保留、訓練使用、區域處理與安全事件公告。</td>
+<td>供應商公告、影響評估。</td>
+</tr>
+<tr>
+<td>模型版本弱點追蹤</td>
+<td>模型版本、訓練資料、微調資料、Prompt模板與安全控制變更應與弱點修補狀態連動。</td>
+<td>AI模型版本與訓練資料追蹤清冊。</td>
+</tr>
+<tr>
+<td>AI輸出與決策風險</td>
+<td>若弱點可能造成不正確輸出、偏差、未授權資料揭露或業務決策錯誤，應納入AI治理與事件管理。</td>
+<td>AI風險評估、事件通報。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 供應商與第三方弱點管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合約要求</td>
+<td>供應商合約應規範安全更新、弱點通報、修補SLA、事件通報、滲透測試或驗證報告提供要求。</td>
+<td>合約條款、SLA。</td>
+</tr>
+<tr>
+<td>弱點通報</td>
+<td>供應商發現影響本組織資料、系統或服務之弱點時，應於合約要求時間內通知並提供影響範圍。</td>
+<td>供應商通知、通報紀錄。</td>
+</tr>
+<tr>
+<td>修補追蹤</td>
+<td>供應商代管系統、SaaS、雲端服務、外包維運與第三方平台需定期追蹤修補狀態。</td>
+<td>修補報告、服務公告。</td>
+</tr>
+<tr>
+<td>證據取得</td>
+<td>必要時要求供應商提供版本證明、修補完成證據、第三方驗證報告、SOC報告或弱點處理聲明。</td>
+<td>供應商證據包。</td>
+</tr>
+<tr>
+<td>未修補風險</td>
+<td>供應商未能於期限內處理高風險弱點時，應評估替代方案、補償控制、暫停連線或退場計畫。</td>
+<td>供應商風險評估、退場計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 弱點管理KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical弱點逾期率</td>
+<td>逾期未關閉Critical弱點數 / Critical弱點總數。</td>
+<td>目標0%；任何逾期需升級。</td>
+<td>管理審查、風險升級。</td>
+</tr>
+<tr>
+<td>High弱點逾期率</td>
+<td>逾期未關閉High弱點數 / High弱點總數。</td>
+<td>依組織目標設定，例如低於5%。</td>
+<td>修補效率監測。</td>
+</tr>
+<tr>
+<td>平均修補時間（MTTR）</td>
+<td>自弱點確認至驗證關閉之平均天數。</td>
+<td>依資產類別與風險等級設定。</td>
+<td>流程成熟度分析。</td>
+</tr>
+<tr>
+<td>重複弱點率</td>
+<td>已修復後再次出現之弱點比例。</td>
+<td>持續下降。</td>
+<td>根因分析與基準改善。</td>
+</tr>
+<tr>
+<td>掃描覆蓋率</td>
+<td>已納入弱點掃描之資產數 / 應掃描資產數。</td>
+<td>關鍵資產100%。</td>
+<td>範圍完整性確認。</td>
+</tr>
+<tr>
+<td>例外弱點數</td>
+<td>已核准但尚未修補之例外弱點數與風險等級。</td>
+<td>高風險例外需逐案審查。</td>
+<td>剩餘風險管理。</td>
+</tr>
+<tr>
+<td>外部暴露高風險弱點數</td>
+<td>可由網際網路存取資產上未關閉Critical/High弱點數。</td>
+<td>目標0或立即處理。</td>
+<td>攻擊面風險監控。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 紀錄保存與稽核證據</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>弱點掃描報告</td>
+<td>掃描時間、範圍、工具版本、結果、排除範圍與風險分級。</td>
+<td>Vulnerability Management Owner</td>
+<td>至少3年或依法規/合約要求。</td>
+</tr>
+<tr>
+<td>修補計畫與追蹤紀錄</td>
+<td>弱點ID、資產、Owner、處理方式、期限、狀態、逾期原因與關閉證據。</td>
+<td>IT / System Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>變更與部署紀錄</td>
+<td>變更單、測試、備份、部署、回復、通知與核准紀錄。</td>
+<td>Change Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、剩餘風險、核准、期限與重評紀錄。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年；高風險依管理審查要求保存。</td>
+</tr>
+<tr>
+<td>供應商弱點證據</td>
+<td>供應商公告、修補承諾、SLA、驗證報告與服務通知。</td>
+<td>供應商管理</td>
+<td>至少3年或合約期間加保存期限。</td>
+</tr>
+<tr>
+<td>KPI/KRI與管理審查輸入</td>
+<td>趨勢、逾期、重大弱點、例外、資源需求與改善行動。</td>
+<td>ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>弱點管理範圍</td>
+<td>是否涵蓋ISMS範圍內資產、雲端、供應商、應用、AI/MLOps與端點。</td>
+<td>資產清冊、掃描範圍、排除核准。</td>
+</tr>
+<tr>
+<td>弱點分級</td>
+<td>是否使用一致且風險導向之分級準則，並考量可被利用性與資產重要性。</td>
+<td>分級準則、弱點分析紀錄。</td>
+</tr>
+<tr>
+<td>修補時限</td>
+<td>是否符合內部SLA，逾期是否有升級、例外與補償控制。</td>
+<td>追蹤報表、例外核准。</td>
+</tr>
+<tr>
+<td>變更控制</td>
+<td>修補是否經測試、核准、備份、部署與回復準備。</td>
+<td>變更單、部署紀錄。</td>
+</tr>
+<tr>
+<td>驗證關閉</td>
+<td>是否有重新掃描、版本確認、設定檢查或其他有效證據證明已修復。</td>
+<td>複測報告、版本截圖。</td>
+</tr>
+<tr>
+<td>持續改善</td>
+<td>是否分析重複弱點、趨勢、根因、工具覆蓋率與流程瓶頸。</td>
+<td>KPI/KRI、CAPA、管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 附錄A：弱點處理紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>範例 / 說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>弱點ID</td>
+<td>掃描工具ID、CVE、內部追蹤單號或缺陷單號。</td>
+<td>CVE-YYYY-NNNN / VM-YYYY-0001。</td>
+</tr>
+<tr>
+<td>資產名稱 / ID</td>
+<td>受影響資產、系統、服務、容器映像、模型服務或雲端資源。</td>
+<td>Web-PRD-01 / API Gateway / Model Serving Endpoint。</td>
+</tr>
+<tr>
+<td>弱點描述</td>
+<td>弱點名稱、影響元件、攻擊方式與可能後果。</td>
+<td>遠端程式碼執行、權限提升、資料揭露。</td>
+</tr>
+<tr>
+<td>風險等級</td>
+<td>Critical / High / Medium / Low / Informational。</td>
+<td>依第7章準則。</td>
+</tr>
+<tr>
+<td>暴露狀態</td>
+<td>Internet-facing、內部、限制網段、供應商代管、隔離環境。</td>
+<td>Internet-facing需優先。</td>
+</tr>
+<tr>
+<td>處理方式</td>
+<td>修補、升級、設定變更、停用、隔離、補償控制、接受或轉移。</td>
+<td>套用安全更新、關閉弱服務、WAF規則。</td>
+</tr>
+<tr>
+<td>負責人與期限</td>
+<td>弱點Owner、處理團隊、預定完成日與驗證人。</td>
+<td>System Owner / IT Operations。</td>
+</tr>
+<tr>
+<td>驗證結果</td>
+<td>複測方式、結果、證據位置與關閉日期。</td>
+<td>重新掃描已無發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 附錄B：修補前檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>修補來源</td>
+<td>修補檔或更新是否來自可信任來源？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>影響評估</td>
+<td>是否完成業務、技術、相容性、隱私、AI與供應商影響評估？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>測試驗證</td>
+<td>是否已於測試或預備環境完成必要測試？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份確認</td>
+<td>關鍵系統是否已確認備份或快照可用？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>回復計畫</td>
+<td>是否已定義失敗時之回滾、隔離或事件處理方式？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>變更核准</td>
+<td>是否取得必要變更核准或緊急變更授權？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>通知溝通</td>
+<td>是否通知相關使用者、客戶、供應商、SOC或值班人員？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>驗證方法</td>
+<td>是否已定義修補後驗證與關閉證據？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

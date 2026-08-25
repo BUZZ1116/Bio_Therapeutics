@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-SOP-006 纜線安全作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-SOP-006 纜線安全作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-SOP-006</td>
+<td>纜線安全作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-SOP-006</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Facility Owner / Network Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>Physical Security Owner / Facility Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路與基礎架構審查</td>
+<td></td>
+<td>Network Security Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>支援設施與BCMS審查</td>
+<td></td>
+<td>Facility / ICT Readiness Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與工程審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / Facility主管 / Network主管 / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織纜線安全之規劃、佈放、標示、保護、分離、巡檢、變更、維護、臨時線路、供應商施工、弱電間與機櫃配線管理、線路退場、事件處理、證據保存、例外管理與稽核要求，避免因纜線裸露、未授權接入、誤接、剪斷、竊聽、干擾、環境損害、施工失誤、標示不清、圖資不一致或退場不完整而造成資訊外洩、服務中斷、安全控制失效或營運持續風險。</p>
+<p>纜線是實體安全、網路安全、支援設施、門禁監控、消防、環境監控與營運持續的重要基礎。本文件要求纜線安全作業與資產管理、變更管理、供應商管理、實體進出、支援設施檢查、網路安全、ICT備妥性及資訊安全事件管理流程整合，形成可追溯、可驗證、可稽核的企業級控制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有資訊傳輸纜線、電力纜線、門禁/CCTV/警報線路與支援設施線路，應依用途、敏感度、區域風險與服務重要性採取適當保護。</li>
+<li>關鍵線路與機密路由不得任意公開，線路圖、配線表、Port Mapping與機櫃圖應依文件分級管制。</li>
+<li>資料纜線與電力纜線應適當分離，避免電磁干擾、熱風險、誤觸、火災、維修風險與服務中斷。</li>
+<li>所有新增、改接、搬遷、拆除、臨時接線或供應商施工，均應事前核准並保留變更與驗收紀錄。</li>
+<li>機櫃、配線架、弱電間、線槽、橋架與管道應受實體存取控制，避免未授權接入、竄改、旁路或竊聽。</li>
+<li>臨時纜線應具Owner、用途、核准單號、設置日期、到期日與移除計畫，不得長期存在而未納管。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>纜線安全</td>
+<td>透過規劃、保護、標示、巡檢、監控與變更管制，防止纜線遭破壞、竊聽、誤接、未授權接入、干擾或造成營運中斷之控制活動。</td>
+</tr>
+<tr>
+<td>資料纜線</td>
+<td>承載資料通訊之纜線，例如乙太網路線、光纖、電話線、專線、控制訊號線或其他資訊傳輸線路。</td>
+</tr>
+<tr>
+<td>電力纜線</td>
+<td>提供設備電力、UPS、PDU、配電盤、接地或發電機連接之電源線路。</td>
+</tr>
+<tr>
+<td>弱電間 / 電信室</td>
+<td>放置配線架、網路設備、光纖終端、Patch Panel、弱電控制箱或通訊設備之受控區域。</td>
+</tr>
+<tr>
+<td>Patch Panel / 配線架</td>
+<td>集中終端與管理網路線、光纖或其他通訊線路之設備。</td>
+</tr>
+<tr>
+<td>跳線</td>
+<td>連接設備、配線架、Switch、Patch Panel或機櫃內端口之短距離纜線。</td>
+</tr>
+<tr>
+<td>臨時纜線</td>
+<td>為短期施工、測試、應急、活動或維修目的而設置之非永久性纜線。</td>
+</tr>
+<tr>
+<td>未授權連線</td>
+<td>未經核准接入組織網路、電力、門禁、CCTV、控制或支援設施之纜線或設備。</td>
+</tr>
+<tr>
+<td>線路圖資</td>
+<td>包含線路路由、起點、終點、機櫃、Port、配線架、弱電間、備援路徑與標籤之文件化資訊。</td>
+</tr>
+<tr>
+<td>關鍵線路</td>
+<td>若中斷或遭竄改將影響Critical/High服務、門禁、監控、消防、網路骨幹、備援或營運持續之線路。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Facility Owner</td>
+<td>管理建築管道、線槽、橋架、弱電間、機房、電力與支援設施施工安全。</td>
+<td>施工申請、巡檢紀錄、設施圖資。</td>
+</tr>
+<tr>
+<td>Network Security / Network Owner</td>
+<td>規劃與維護資料線、光纖、網路骨幹、機櫃跳線、Port Mapping與網路線路圖。</td>
+<td>網路線路圖、Port表、測試報告。</td>
+</tr>
+<tr>
+<td>Physical Security Owner</td>
+<td>管理門禁、CCTV、警報、監控與實體安全相關線路保護與巡檢。</td>
+<td>安防線路檢查紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations / Infrastructure</td>
+<td>執行佈線、跳線、標示、線路測試、異常處理、退線與設備接續。</td>
+<td>工單、測試結果、驗收紀錄。</td>
+</tr>
+<tr>
+<td>CISO / Security Owner</td>
+<td>審查高敏感線路、未授權接入事件、例外與重大風險接受。</td>
+<td>安全審查、風險接受。</td>
+</tr>
+<tr>
+<td>Change Manager</td>
+<td>確保纜線新增、改接、拆除、臨時線路與高風險施工依變更程序核准。</td>
+<td>變更單、核准紀錄。</td>
+</tr>
+<tr>
+<td>Supplier / Contractor</td>
+<td>依核准設計施工、標示、測試、清潔、交付圖資與驗收文件。</td>
+<td>施工紀錄、測試報告、竣工圖。</td>
+</tr>
+<tr>
+<td>Supplier Management / Procurement</td>
+<td>管理佈線、弱電、安防與維護供應商合約、NDA、安全要求與證據。</td>
+<td>合約、NDA、供應商評估。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查纜線安全控制、標示、圖資、巡檢、變更、供應商施工與異常處理。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 纜線分類與最低安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>纜線類型</th>
+<th>安全要求</th>
+<th>禁止或限制事項</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路資料線</td>
+<td>應使用受控線槽、配線架、機櫃鎖定、端口標示與Port Mapping。</td>
+<td>禁止私接Switch、AP、Hub或未核准網路設備。</td>
+<td>配線表、巡檢紀錄。</td>
+</tr>
+<tr>
+<td>光纖骨幹</td>
+<td>需保護路由、彎曲半徑、接頭、ODF、備援路徑與標示。</td>
+<td>禁止任意重接、裸露或未記錄跨區跳接。</td>
+<td>光功率測試、路由圖。</td>
+</tr>
+<tr>
+<td>電力纜線</td>
+<td>需符合電氣安全、負載、接地、UPS/PDU容量與消防要求。</td>
+<td>禁止過載、串接不合格延長線或與資料線不當混放。</td>
+<td>電力巡檢、負載紀錄。</td>
+</tr>
+<tr>
+<td>門禁線路</td>
+<td>控制器、讀卡機、門磁、電鎖與線路需避免外露、旁路或未授權接入。</td>
+<td>禁止未核准調整門禁控制箱或短接電鎖。</td>
+<td>門禁巡檢紀錄。</td>
+</tr>
+<tr>
+<td>CCTV線路</td>
+<td>攝影機供電、訊號、PoE、NVR連線與線槽需保護。</td>
+<td>禁止未核准拔除、遮蔽、改接或外接錄影。</td>
+<td>CCTV檢查紀錄。</td>
+</tr>
+<tr>
+<td>警報/消防線路</td>
+<td>需維持完整、測試與法規合規，不得與非核准線路混接。</td>
+<td>禁止未核准停用、旁路或遮蔽警報功能。</td>
+<td>消防/警報測試紀錄。</td>
+</tr>
+<tr>
+<td>環境監控線路</td>
+<td>溫濕度、漏水、煙霧、電力與UPS監控線路需受保護。</td>
+<td>禁止將監控線路視為非關鍵線路而任意拆除。</td>
+<td>環境監控紀錄。</td>
+</tr>
+<tr>
+<td>供應商/客戶專線</td>
+<td>需合約、路由、設備、責任界面、標示與隔離。</td>
+<td>禁止供應商自行新增或改接專線。</td>
+<td>專線清冊、合約證據。</td>
+</tr>
+<tr>
+<td>臨時纜線</td>
+<td>需申請、標示、固定、期限、Owner與移除計畫。</td>
+<td>禁止未標示、跨走道、無期限或長期使用。</td>
+<td>臨時線清冊。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 纜線佈放、變更與退場流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>提出新增、搬遷、改接、替換、維修、退場、臨時接線或供應商專線需求。</td>
+<td>Requestor / System Owner</td>
+<td>施工/變更申請。</td>
+</tr>
+<tr>
+<td>2. 風險評估</td>
+<td>評估區域敏感度、服務重要性、資料分類、電力負載、消防、環境、干擾、停機與實體安全風險。</td>
+<td>Facility / Network / Security</td>
+<td>風險評估紀錄。</td>
+</tr>
+<tr>
+<td>3. 路由設計</td>
+<td>確認路由、管槽、機櫃、配線架、Port、線材規格、備援路徑、標示與測試方法。</td>
+<td>Network / Facility</td>
+<td>設計圖、施工方案。</td>
+</tr>
+<tr>
+<td>4. 核准與排程</td>
+<td>取得Facility、Network、Security、Change、Service Owner與必要供應商核准。</td>
+<td>Change Manager</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>5. 施工管制</td>
+<td>施工人員需登記、陪同、工具管制、區域隔離、停機控制、現場安全與拍照限制。</td>
+<td>Facility / Supplier</td>
+<td>施工紀錄。</td>
+</tr>
+<tr>
+<td>6. 佈線與標示</td>
+<td>依核准路由佈放，兩端標示唯一編號、起訖點、用途、Owner或Port。</td>
+<td>Supplier / IT</td>
+<td>標示照片。</td>
+</tr>
+<tr>
+<td>7. 測試驗收</td>
+<td>完成連通、頻寬、線序、光功率、PoE、接地、負載、門禁/CCTV功能與告警測試。</td>
+<td>Network / Facility / Owner</td>
+<td>測試報告。</td>
+</tr>
+<tr>
+<td>8. 文件更新</td>
+<td>更新線路圖、機櫃圖、Port Mapping、弱電間圖、資產清冊與維護紀錄。</td>
+<td>Document Owner</td>
+<td>更新紀錄。</td>
+</tr>
+<tr>
+<td>9. 退場清理</td>
+<td>移除廢線、臨時線、未使用Port、舊標籤與施工廢棄物。</td>
+<td>IT / Facility / Supplier</td>
+<td>退場紀錄。</td>
+</tr>
+<tr>
+<td>10. 結案與審查</td>
+<td>確認無遺留風險、文件完整、缺失改善完成，保存證據。</td>
+<td>ISMS代表 / Owner</td>
+<td>結案紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 纜線標示、圖資與文件管制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>作業要求</th>
+<th>管制要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雙端標示</td>
+<td>所有Critical/High與受管纜線應於兩端標示唯一識別碼。</td>
+<td>標籤應耐久、清楚、不暴露過多敏感資訊。</td>
+<td>標籤照片。</td>
+</tr>
+<tr>
+<td>Port Mapping</td>
+<td>Switch Port、Patch Panel、機櫃、資訊插座、設備端口應可追溯。</td>
+<td>限制存取完整Port對應表。</td>
+<td>Port表。</td>
+</tr>
+<tr>
+<td>線路路由圖</td>
+<td>關鍵線路需保存路由、弱電間、跨樓層、備援路徑與責任界面。</td>
+<td>依文件分級管制，不公開張貼完整拓樸。</td>
+<td>路由圖。</td>
+</tr>
+<tr>
+<td>機櫃配線圖</td>
+<td>機櫃內設備、跳線、PDU、Patch Panel與備援連線需維持更新。</td>
+<td>機櫃圖需隨變更更新。</td>
+<td>機櫃圖與照片。</td>
+</tr>
+<tr>
+<td>臨時線清冊</td>
+<td>臨時線需登錄Owner、用途、核准單號、開始日、到期日與移除日。</td>
+<td>逾期需升級追蹤。</td>
+<td>臨時線清冊。</td>
+</tr>
+<tr>
+<td>供應商竣工圖</td>
+<td>施工完成後供應商需交付竣工圖、測試報告、標籤清冊與材料清單。</td>
+<td>未交付不得結案。</td>
+<td>竣工文件。</td>
+</tr>
+<tr>
+<td>版本控管</td>
+<td>線路圖、Port表與機櫃圖需版本控管並保留修訂紀錄。</td>
+<td>避免使用舊版圖資施工。</td>
+<td>版本紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 實體保護與環境安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低要求</th>
+<th>檢查重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>線槽與橋架</td>
+<td>資料線、控制線與關鍵線路應使用線槽、管道、橋架或其他保護方式。</td>
+<td>是否破損、開放、過度擁擠或未固定。</td>
+</tr>
+<tr>
+<td>弱電間與配線室</td>
+<td>應限制存取、保持上鎖、清潔、無雜物，並具進出紀錄。</td>
+<td>是否有未授權人員、未知設備或未標示線路。</td>
+</tr>
+<tr>
+<td>機櫃與配線架</td>
+<td>機櫃需上鎖，跳線整齊，不阻礙散熱、維護或門鎖。</td>
+<td>是否有私接、裸露、未標示或封條破損。</td>
+</tr>
+<tr>
+<td>電力與資料分離</td>
+<td>電力線與資料線應依規範分離，必要時使用隔離管槽或屏蔽。</td>
+<td>是否混放、交纏、受熱或干擾。</td>
+</tr>
+<tr>
+<td>火災與散熱</td>
+<td>纜線不得阻塞通風、消防設施、逃生路線或造成熱點。</td>
+<td>是否有易燃雜物或過載。</td>
+</tr>
+<tr>
+<td>水源與環境</td>
+<td>纜線應遠離水源、排水、空調滴水點與潮濕區域。</td>
+<td>是否有漏水、冷凝或腐蝕。</td>
+</tr>
+<tr>
+<td>人員安全</td>
+<td>纜線不得造成絆倒、跌落、割傷或維修安全風險。</td>
+<td>臨時線是否固定與標示。</td>
+</tr>
+<tr>
+<td>防竊聽與竄改</td>
+<td>高敏感線路應避免外露並納入巡檢或監控。</td>
+<td>是否有剪斷、分接、未知設備或非法Tap。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 臨時線路與緊急接線管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>到期與移除要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請核准</td>
+<td>臨時線路需有申請人、Owner、用途、範圍、起訖點、風險與期限。</td>
+<td>未核准不得施工。</td>
+</tr>
+<tr>
+<td>標示</td>
+<td>臨時線兩端及可見位置需標示核准單號、Owner、用途、開始日、到期日。</td>
+<td>標示不清需立即補正。</td>
+</tr>
+<tr>
+<td>固定與安全</td>
+<td>跨走道、門口、維修區或人員通道之臨時線需固定、防絆倒並避免壓傷。</td>
+<td>不符合者需立即整改。</td>
+</tr>
+<tr>
+<td>網路隔離</td>
+<td>臨時網路線不得接入正式網段，除非經Network與Security核准。</td>
+<td>應限制VLAN、ACL與存取期限。</td>
+</tr>
+<tr>
+<td>緊急接線</td>
+<td>緊急接線可事後補核，但需記錄原因、時間、範圍、影響與核准人。</td>
+<td>24至48小時內補件。</td>
+</tr>
+<tr>
+<td>期限管理</td>
+<td>臨時線需設定到期日，逾期需移除或重新核准。</td>
+<td>逾期線路列為不符合。</td>
+</tr>
+<tr>
+<td>移除驗收</td>
+<td>移除後確認Port關閉、標籤清除、圖資更新與現場恢復。</td>
+<td>保存移除紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 供應商與施工安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商資格</td>
+<td>佈線、弱電、電力、安防、消防與網路施工供應商需經評估與核准。</td>
+<td>供應商評估、合約。</td>
+</tr>
+<tr>
+<td>NDA與安全條款</td>
+<td>供應商需簽署保密與安全要求，禁止未授權拍照、複製圖資、外傳路由資訊。</td>
+<td>NDA、合約條款。</td>
+</tr>
+<tr>
+<td>施工前會議</td>
+<td>施工前確認範圍、時間、停機、風險、陪同、工具、消防與驗收標準。</td>
+<td>會議紀錄。</td>
+</tr>
+<tr>
+<td>人員進出</td>
+<td>施工人員需登記、配戴識別、受陪同或監督，禁止進入未核准區域。</td>
+<td>訪客紀錄。</td>
+</tr>
+<tr>
+<td>工具與材料</td>
+<td>工具、測試設備、線材、標籤與材料需符合規格，不得使用來路不明設備。</td>
+<td>材料清單。</td>
+</tr>
+<tr>
+<td>施工期間保護</td>
+<td>施工不得破壞既有線路、消防、門禁、CCTV、環境監控或機櫃鎖定。</td>
+<td>施工巡檢紀錄。</td>
+</tr>
+<tr>
+<td>竣工驗收</td>
+<td>完成測試、標示、照片、清潔、圖資、材料、缺失改善與簽收。</td>
+<td>測試報告、竣工圖。</td>
+</tr>
+<tr>
+<td>供應商退場</td>
+<td>確認工具、材料、臨時線、廢料與圖資已妥善處理，權限已撤銷。</td>
+<td>退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 纜線巡檢檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查內容</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未授權連線</td>
+<td>是否存在未知跳線、未知設備、私接Switch/AP/Hub、未知Patch或未核准Port？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>纜線標示</td>
+<td>纜線兩端標示是否清楚、正確、可追溯且未脫落？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>圖資一致性</td>
+<td>現場配線、Port、機櫃、弱電間與線路圖是否一致？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>線槽保護</td>
+<td>線槽、橋架、管道、弱電間、配線架與機櫃是否關閉或受控？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>實體破損</td>
+<td>是否有破皮、壓傷、過度彎折、鬆脫、裸露、接頭異常或封條破損？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>電力安全</td>
+<td>是否有過載、非核准延長線、PDU異常、資料線與電力線不當混放？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>機櫃整理</td>
+<td>跳線是否整齊、固定、未阻礙散熱、維護、門鎖、消防或氣流？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>臨時線路</td>
+<td>臨時線路是否有核准、標示、固定、期限且未逾期？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>環境風險</td>
+<td>纜線是否遠離水源、熱源、尖銳物、消防風險、人員通道與施工風險？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安防線路</td>
+<td>門禁、CCTV、警報線路是否無鬆脫、剪斷、旁路、遮蔽或未知接入？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商專線</td>
+<td>客戶/供應商專線是否標示、隔離、合約有效且無未知變更？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 符合</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 高風險情境與處置要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>可能風險</th>
+<th>立即處置</th>
+<th>後續要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>發現未知纜線或未知設備</td>
+<td>未授權網路接入、竊聽、旁路、防火牆繞過或惡意設備植入。</td>
+<td>隔離Port、拍照、保全現場、通知SOC與Network Owner。</td>
+<td>調查來源，必要時啟動資訊安全事件。</td>
+</tr>
+<tr>
+<td>關鍵線路中斷</td>
+<td>Critical服務、門禁、監控、消防、環境監控或網路骨幹中斷。</td>
+<td>啟動備援路徑、緊急維修與事件通報。</td>
+<td>RCA、CAPA與管理審查。</td>
+</tr>
+<tr>
+<td>線槽、機櫃或弱電間遭破壞</td>
+<td>竄改、截取、破壞、植入設備或服務中斷風險。</td>
+<td>限制進出、保存CCTV與門禁紀錄。</td>
+<td>事件調查與修復。</td>
+</tr>
+<tr>
+<td>臨時線逾期未拆</td>
+<td>長期未納管、絆倒、未授權存取或維運混亂。</td>
+<td>立即移除或補辦核准。</td>
+<td>追蹤Owner與改善臨時線管理。</td>
+</tr>
+<tr>
+<td>施工未依核准路由</td>
+<td>干擾、消防、資料外洩、服務中斷或法規風險。</td>
+<td>停止施工、隔離區域並重新審查。</td>
+<td>供應商缺失改善與驗收。</td>
+</tr>
+<tr>
+<td>電力線過載或發熱</td>
+<td>火災、設備損壞、UPS失效或人員安全風險。</td>
+<td>立即通報Facility並降低負載或停用。</td>
+<td>電力檢查與整改。</td>
+</tr>
+<tr>
+<td>安防線路異常</td>
+<td>門禁、CCTV、警報失效或被繞過。</td>
+<td>立即通知Physical Security，採人工保全補償。</td>
+<td>修復、測試與事件檢討。</td>
+</tr>
+<tr>
+<td>纜線圖資外洩</td>
+<td>攻擊者可掌握機房、骨幹、安防與備援路由。</td>
+<td>限制文件存取、調查外洩範圍。</td>
+<td>依資料外洩程序處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 纜線安全紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄編號</th>
+<th>日期</th>
+<th>區域 / 機櫃</th>
+<th>纜線 / Port編號</th>
+<th>作業類型</th>
+<th>Owner</th>
+<th>檢查 / 測試結果</th>
+<th>改善措施</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CAB-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 新增 □ 變更 □ 巡檢 □ 維修 □ 退場 □ 臨時線 □ 異常</td>
+<td></td>
+<td>□ 正常 □ 異常 □ 待確認</td>
+<td></td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+<tr>
+<td>CAB-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 新增 □ 變更 □ 巡檢 □ 維修 □ 退場 □ 臨時線 □ 異常</td>
+<td></td>
+<td>□ 正常 □ 異常 □ 待確認</td>
+<td></td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+<tr>
+<td>CAB-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 新增 □ 變更 □ 巡檢 □ 維修 □ 退場 □ 臨時線 □ 異常</td>
+<td></td>
+<td>□ 正常 □ 異常 □ 待確認</td>
+<td></td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+<tr>
+<td>CAB-004</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 新增 □ 變更 □ 巡檢 □ 維修 □ 退場 □ 臨時線 □ 異常</td>
+<td></td>
+<td>□ 正常 □ 異常 □ 待確認</td>
+<td></td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 纜線變更申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>CAB-CHG-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>作業類型</td>
+<td>□ 新增 □ 移設 □ 改接 □ 替換 □ 維修 □ 拆除 □ 臨時線 □ 供應商專線 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>作業區域</td>
+<td>機房、弱電間、樓層、機櫃、辦公區或外部接入點</td>
+<td></td>
+</tr>
+<tr>
+<td>起點 / 終點</td>
+<td>起始設備/Port/位置至目標設備/Port/位置</td>
+<td></td>
+</tr>
+<tr>
+<td>涉及服務</td>
+<td>網路、門禁、CCTV、消防、UPS、環境監控、客戶專線等</td>
+<td></td>
+</tr>
+<tr>
+<td>影響等級</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需停機</td>
+<td>□ 否 □ 是，停機窗口：______</td>
+<td></td>
+</tr>
+<tr>
+<td>是否涉及供應商</td>
+<td>□ 否 □ 是，供應商名稱：______</td>
+<td></td>
+</tr>
+<tr>
+<td>風險與補償控制</td>
+<td>說明施工、停機、資料傳輸、實體存取、消防與安全風險</td>
+<td></td>
+</tr>
+<tr>
+<td>測試與驗收方式</td>
+<td>連通、頻寬、光功率、PoE、接地、CCTV/門禁功能測試等</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Facility / Network / Security / Change / Service Owner / Supplier Owner</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>臨時纜線需延長</td>
+<td>需說明必要性、風險、固定方式、Owner、到期日與移除計畫。</td>
+<td>Facility / Network / Security</td>
+<td>最長30日重評。</td>
+</tr>
+<tr>
+<td>線槽或管道無法完全封閉</td>
+<td>需補強巡檢、攝影、封條、門禁、警示或替代物理保護。</td>
+<td>Physical Security / CISO</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>線路圖不完整</td>
+<td>需建立補圖計畫，優先完成Critical/High線路圖資。</td>
+<td>Facility / Network Owner</td>
+<td>最長60日。</td>
+</tr>
+<tr>
+<td>無法分離電力與資料線</td>
+<td>需評估干擾、火災、維護風險並採隔離、屏蔽或替代路由。</td>
+<td>Facility / CISO</td>
+<td>下次改造前重評。</td>
+</tr>
+<tr>
+<td>供應商專線無法移除</td>
+<td>需合約確認、網路隔離、監控、到期計畫與風險接受。</td>
+<td>Supplier Owner / CISO</td>
+<td>續約前重評。</td>
+</tr>
+<tr>
+<td>未能立即移除未知線路</td>
+<td>需隔離Port、限制連線、標示、監控並追蹤來源。</td>
+<td>Network Owner / CISO</td>
+<td>最長7日。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>纜線變更紀錄</td>
+<td>申請、核准、路由、施工、測試、驗收、退場與圖資更新。</td>
+<td>Facility / Network Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>線路圖與Port Mapping</td>
+<td>機櫃、Patch Panel、Port、資訊插座、光纖、專線、安防線路與備援路徑。</td>
+<td>Network / Facility</td>
+<td>有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>巡檢紀錄</td>
+<td>纜線安全巡檢、缺失、照片、改善措施與驗證結果。</td>
+<td>Facility / Physical Security</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商施工文件</td>
+<td>施工計畫、NDA、進出紀錄、材料清單、測試報告、竣工圖與退場確認。</td>
+<td>Supplier Management / Facility</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>臨時線清冊</td>
+<td>臨時線Owner、用途、核准、開始日、到期日、移除與驗收紀錄。</td>
+<td>Facility / Network</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>事件與異常紀錄</td>
+<td>未知線路、破壞、竊聽、服務中斷、安防線路失效與RCA/CAPA。</td>
+<td>Incident Manager / ISMS代表</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical線路標示完整率</td>
+<td>完成雙端標示之Critical線路 / 應標示Critical線路。</td>
+<td>目標100%。</td>
+<td>可追溯性。</td>
+</tr>
+<tr>
+<td>Port Mapping正確率</td>
+<td>現場抽查與Port表一致之比例。</td>
+<td>目標95%至100%，Critical目標100%。</td>
+<td>文件準確性。</td>
+</tr>
+<tr>
+<td>未知線路發現數</td>
+<td>巡檢發現未知纜線、未知跳線或未知設備數。</td>
+<td>目標0。</td>
+<td>未授權接入風險。</td>
+</tr>
+<tr>
+<td>臨時線逾期數</td>
+<td>超過核准期限未拆除或未重新核准之臨時線數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>線路圖更新及時率</td>
+<td>變更完成後於規定期限內更新圖資比例。</td>
+<td>目標100%。</td>
+<td>文件化資訊控制。</td>
+</tr>
+<tr>
+<td>纜線相關中斷事件數</td>
+<td>因纜線、配線、施工、電力線或弱電線造成服務中斷事件數。</td>
+<td>持續下降，Critical事件需管理審查。</td>
+<td>營運持續。</td>
+</tr>
+<tr>
+<td>供應商施工缺失數</td>
+<td>施工驗收或巡檢發現供應商施工缺失數。</td>
+<td>重大缺失目標0。</td>
+<td>供應商治理。</td>
+</tr>
+<tr>
+<td>安防線路異常數</td>
+<td>門禁、CCTV、警報線路異常或旁路事件數。</td>
+<td>Critical區域目標0。</td>
+<td>實體安全。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>纜線治理</td>
+<td>是否有纜線安全Owner、流程、清冊、圖資、巡檢與變更管制。</td>
+<td>本文件、清冊、巡檢紀錄。</td>
+</tr>
+<tr>
+<td>標示與圖資</td>
+<td>纜線標示、Port Mapping、機櫃圖與現場是否一致。</td>
+<td>抽查紀錄、照片、圖資版本。</td>
+</tr>
+<tr>
+<td>實體保護</td>
+<td>線槽、橋架、弱電間、配線架與機櫃是否受控與上鎖。</td>
+<td>巡檢紀錄、門禁紀錄。</td>
+</tr>
+<tr>
+<td>臨時線管理</td>
+<td>臨時線是否核准、標示、期限、固定且如期移除。</td>
+<td>臨時線清冊。</td>
+</tr>
+<tr>
+<td>供應商施工</td>
+<td>供應商是否有核准、NDA、進出紀錄、施工管制、測試與竣工圖。</td>
+<td>供應商文件。</td>
+</tr>
+<tr>
+<td>關鍵線路</td>
+<td>Critical/High線路是否有備援、標示、保護、測試與事件處理計畫。</td>
+<td>路由圖、測試報告。</td>
+</tr>
+<tr>
+<td>安防線路</td>
+<td>門禁、CCTV、警報、消防與環境監控線路是否完整且受保護。</td>
+<td>支援設施檢查紀錄。</td>
+</tr>
+<tr>
+<td>變更管理</td>
+<td>新增、改接、拆除或退場是否依變更流程與文件更新。</td>
+<td>變更單、驗收紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否有核准、補償控制、期限、重評與關閉證據。</td>
+<td>例外紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大事件、逾期臨時線、供應商缺失與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 附錄A：纜線巡檢紀錄範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>巡檢編號</th>
+<th>巡檢日期</th>
+<th>巡檢區域</th>
+<th>巡檢人員</th>
+<th>異常數</th>
+<th>重大風險</th>
+<th>改善期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CAB-AUD-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td>□ 無 □ 有</td>
+<td>YYYY-MM-DD</td>
+<td>□ 未結案 □ 已結案 □ 逾期</td>
+</tr>
+<tr>
+<td>CAB-AUD-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td>□ 無 □ 有</td>
+<td>YYYY-MM-DD</td>
+<td>□ 未結案 □ 已結案 □ 逾期</td>
+</tr>
+<tr>
+<td>CAB-AUD-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td>□ 無 □ 有</td>
+<td>YYYY-MM-DD</td>
+<td>□ 未結案 □ 已結案 □ 逾期</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

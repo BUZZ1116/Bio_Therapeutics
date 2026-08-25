@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-006 密碼與秘密資訊管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-006 密碼與秘密資訊管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-006</td>
+<td>密碼與秘密資訊管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-006</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>IAM Owner / Secrets Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architect / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端安全審查</td>
+<td></td>
+<td>Cloud Security Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps審查</td>
+<td></td>
+<td>DevSecOps Owner / Application Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與供應商審查</td>
+<td></td>
+<td>Legal / Supplier Management（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織密碼與秘密資訊之建立、核發、保存、使用、傳輸、存取、輪替、撤銷、監控、掃描、事件處理、備援、退場與稽核要求，確保任何可用於認證、授權、加密、簽章或系統整合之秘密資訊均受適當保護，降低帳號盜用、憑證外洩、API濫用、供應鏈攻擊、資料外洩、服務中斷及未授權存取風險。</p>
+<p>本文件同時將一般使用者密碼、特權密碼、服務帳號、API Key、雲端Access Key、加密金鑰、TLS憑證、CI/CD Secrets、AI服務Token、RAG資料源憑證及供應商維運Secrets納入統一生命週期管理，支援存取控制、弱點管理、日誌監控、安全開發、AI治理、事件應變、供應商管理及內部稽核。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有密碼與秘密資訊應依最小權限、最小揭露、職務分離、可追溯、加密保存、定期輪替與事件即時撤銷原則管理。</li>
+<li>秘密資訊不得以明文儲存於原始碼、文件、聊天紀錄、Email、工單、Wiki、截圖、測試資料、AI Prompt、日誌、映像檔、容器環境變數或未核准儲存位置。</li>
+<li>所有高風險Secrets應使用核准之Secrets Manager、PAM、KMS、HSM、Vault或等效受控工具保存及發放。</li>
+<li>人員不得共用個人密碼；特權或共享類Secrets應以PAM、Just-in-Time、Break-glass、Session Recording或具名授權方式控管。</li>
+<li>密碼與秘密資訊之建立、輪替、撤銷、例外與事件應留下足以稽核之紀錄；實際密碼或秘密值不得出現在稽核紀錄中。</li>
+<li>發現秘密資訊外洩、疑似外洩、誤提交、誤輸入AI工具、出現在公開Repo、日誌、工單、截圖或外部平台時，應立即視為資安事件或重大違規處理。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>密碼</td>
+<td>用於驗證使用者、系統、服務或設備身分之秘密字串、片語或憑證資訊。</td>
+</tr>
+<tr>
+<td>秘密資訊 / Secret</td>
+<td>任何可用於認證、授權、加密、簽章、資料解密、服務呼叫、系統整合或安全控制之敏感資訊，包括API Key、Token、私鑰、憑證、密碼、Webhook Secret等。</td>
+</tr>
+<tr>
+<td>特權密碼</td>
+<td>可用於管理系統、網路、資料庫、雲端、SaaS、安全設備、PAM、KMS、CI/CD或其他高權限功能之密碼或Secret。</td>
+</tr>
+<tr>
+<td>服務帳號</td>
+<td>供系統、應用、批次作業、整合、API、MLOps、RAG、容器或自動化流程使用之非個人帳號。</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>用於存取API、AI服務、雲端服務、Webhook、資料平台或第三方服務之認證資訊。</td>
+</tr>
+<tr>
+<td>加密金鑰</td>
+<td>用於資料加密、解密、簽章、驗章或金鑰包裝之金鑰，包括KMS、HSM、資料庫、備份及應用層金鑰。</td>
+</tr>
+<tr>
+<td>私鑰</td>
+<td>公私鑰架構中需嚴格保護之私密金鑰，例如SSH私鑰、TLS私鑰、簽章私鑰。</td>
+</tr>
+<tr>
+<td>Secrets Manager</td>
+<td>集中保存、加密、授權、輪替、審計及發放Secrets之工具或平台。</td>
+</tr>
+<tr>
+<td>PAM</td>
+<td>Privileged Access Management，用於管理特權帳號、特權密碼、Session、核准、錄影及存取稽核之系統。</td>
+</tr>
+<tr>
+<td>Break-glass帳號</td>
+<td>緊急情況下使用之高權限帳號，應嚴格保管、啟用警示、事後審查並定期測試。</td>
+</tr>
+<tr>
+<td>Secrets掃描</td>
+<td>透過工具或流程檢查原始碼、Repo、CI/CD、容器映像、日誌、文件或雲端儲存是否含有Secrets。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大Secrets管理資源、重大例外、重大剩餘風險與重大Secrets外洩事件處置。</td>
+<td>管理審查決議、資源核准、風險接受。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定Secrets管理策略、核准重大例外、監督高風險Secrets與外洩事件。</td>
+<td>政策核准、例外紀錄、事件決策。</td>
+</tr>
+<tr>
+<td>IAM Owner</td>
+<td>管理使用者、服務帳號、MFA、SSO、憑證、密碼政策與帳號生命週期。</td>
+<td>IAM設定、權限審查、帳號紀錄。</td>
+</tr>
+<tr>
+<td>Secrets Management Owner</td>
+<td>維護Secrets Manager/Vault、Secret分類、存取授權、輪替規則、掃描與監控要求。</td>
+<td>Secrets清冊、輪替紀錄、掃描報告。</td>
+</tr>
+<tr>
+<td>PAM Owner</td>
+<td>管理特權帳號、特權密碼、JIT/JEA、Session Recording、Break-glass與特權審查。</td>
+<td>PAM紀錄、特權審查、緊急存取紀錄。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>管理雲端Access Key、IAM Role、KMS、雲端Secrets、Service Principal、工作負載身分與雲端金鑰。</td>
+<td>雲端金鑰清冊、KMS紀錄、CSPM報告。</td>
+</tr>
+<tr>
+<td>DevSecOps / AppSec Owner</td>
+<td>確保應用程式、Repo、CI/CD、容器、SBOM與安全開發流程中Secrets不外洩並完成掃描與修復。</td>
+<td>Secrets掃描報告、PR紀錄、CI/CD設定。</td>
+</tr>
+<tr>
+<td>MLOps / AI Governance Owner</td>
+<td>管理AI API Key、模型服務Token、RAG資料源憑證、MLOps Secrets與AI工具輸入禁止資料。</td>
+<td>AI Secrets紀錄、AI工具風險評估。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>對其系統、應用、服務帳號、API Key與資料庫密碼之需求、授權、輪替、撤銷與退場負責。</td>
+<td>系統Secrets紀錄、變更紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控Secrets外洩、異常登入、API濫用、雲端Key濫用、DLP與Repo外洩告警。</td>
+<td>SIEM告警、事件工單、監控報告。</td>
+</tr>
+<tr>
+<td>Data Owner / DPO</td>
+<td>確認Secrets外洩是否可能影響PII、客戶資料、加密資料或隱私風險。</td>
+<td>影響評估、DPIA/事件通報意見。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商Secrets、遠端維運憑證、API Key與資料處理憑證受合約、撤權與退場要求控管。</td>
+<td>供應商存取紀錄、撤權證據。</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>依規定建立及保護密碼，不共用密碼，不將Secrets輸入未核准工具或AI服務，發現外洩立即通報。</td>
+<td>教育訓練、事件通報。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 密碼與秘密資訊分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>類別</th>
+<th>範圍</th>
+<th>保護等級</th>
+<th>主要控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般使用者密碼</td>
+<td>員工、外包人員、一般業務系統與SaaS登入密碼。</td>
+<td>機密</td>
+<td>SSO/MFA、密碼雜湊、禁止共用、密碼管理器。</td>
+</tr>
+<tr>
+<td>特權密碼</td>
+<td>管理員、root、domain admin、DBA、防火牆、雲端管理、PAM與安全設備密碼。</td>
+<td>高機密</td>
+<td>PAM、MFA、JIT/JEA、Session Recording、定期審查與輪替。</td>
+</tr>
+<tr>
+<td>服務帳號密碼</td>
+<td>系統整合、批次、排程、應用、資料庫、API、自動化流程之非人員帳號密碼。</td>
+<td>機密或高機密</td>
+<td>Secrets Manager、最小權限、無互動登入、輪替、Owner指定。</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>內外部API、雲端、AI服務、Webhook、SaaS、資料平台Token。</td>
+<td>機密或高機密</td>
+<td>Key Vault、範圍限制、到期、輪替、使用量監控。</td>
+</tr>
+<tr>
+<td>雲端Access Key</td>
+<td>Cloud Access Key、Service Principal、IAM Access Key、Workload Identity。</td>
+<td>高機密</td>
+<td>優先使用Role/短期憑證、Key輪替、CSPM監控、最小權限。</td>
+</tr>
+<tr>
+<td>加密金鑰</td>
+<td>資料加密、備份、資料庫、KMS、HSM、簽章與金鑰包裝。</td>
+<td>高機密</td>
+<td>KMS/HSM、分權管理、輪替、存取日誌、Key生命周期。</td>
+</tr>
+<tr>
+<td>私鑰與憑證</td>
+<td>SSH私鑰、TLS私鑰、Code Signing Key、憑證私鑰。</td>
+<td>高機密</td>
+<td>加密保存、Passphrase、到期管理、吊銷、憑證透明度監控。</td>
+</tr>
+<tr>
+<td>CI/CD與DevOps Secrets</td>
+<td>Pipeline Secret、Registry憑證、Deployment Token、Repo Deploy Key。</td>
+<td>高機密</td>
+<td>Secret Masking、Protected Variables、分環境隔離、掃描、輪替。</td>
+</tr>
+<tr>
+<td>AI與MLOps Secrets</td>
+<td>AI API Key、模型供應商Token、Embedding Key、RAG資料源憑證、MLOps平台Token。</td>
+<td>機密或高機密</td>
+<td>AI服務清冊、資料不訓練條款、Secrets Manager、使用量監控。</td>
+</tr>
+<tr>
+<td>Break-glass Secrets</td>
+<td>緊急帳號密碼、災難復原解密金鑰、緊急管理憑證。</td>
+<td>高機密</td>
+<td>封存、雙人控管、啟用告警、定期測試、使用後輪替。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 密碼政策要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>適用範圍</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>密碼長度</td>
+<td>一般使用者密碼或Passphrase應符合組織密碼政策之最低長度；高權限帳號應採更高強度或改採無密碼/MFA/PAM。</td>
+<td>使用者帳號、特權帳號。</td>
+<td>IAM密碼政策設定。</td>
+</tr>
+<tr>
+<td>密碼複雜度</td>
+<td>應避免可預測、常見、洩漏、重複或與個人資訊相關之密碼；系統應阻擋已知洩漏密碼。</td>
+<td>所有密碼型認證。</td>
+<td>密碼政策、洩漏密碼檢查設定。</td>
+</tr>
+<tr>
+<td>MFA</td>
+<td>所有遠端存取、管理介面、雲端、SaaS、AI服務、特權與高風險系統應啟用MFA或等效強驗證。</td>
+<td>高風險與外部存取。</td>
+<td>MFA覆蓋率報表。</td>
+</tr>
+<tr>
+<td>密碼重用限制</td>
+<td>不得跨系統重用企業密碼；系統應禁止或降低密碼重用風險。</td>
+<td>使用者與管理員。</td>
+<td>政策宣導、技術設定。</td>
+</tr>
+<tr>
+<td>臨時密碼</td>
+<td>臨時密碼應一次性、短效、首次登入強制變更，不得透過不安全通道傳送。</td>
+<td>新帳號、重設密碼。</td>
+<td>重設紀錄、首次登入紀錄。</td>
+</tr>
+<tr>
+<td>密碼儲存</td>
+<td>系統不得以明文或可逆方式保存密碼；應使用核准雜湊演算法、Salt及適當參數。</td>
+<td>應用系統、資料庫。</td>
+<td>安全設計、程式碼審查、測試報告。</td>
+</tr>
+<tr>
+<td>密碼傳輸</td>
+<td>密碼不得透過明文通道傳輸；登入及密碼重設流程應使用TLS及防暴力破解控制。</td>
+<td>所有登入服務。</td>
+<td>TLS設定、WAF/API Gateway設定。</td>
+</tr>
+<tr>
+<td>密碼管理器</td>
+<td>使用者應使用核准密碼管理器保存非SSO密碼，不得以紙本、明文檔、聊天或Email保存。</td>
+<td>使用者與團隊。</td>
+<td>工具核准、教育訓練。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. Secrets生命週期管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>提出Secret用途、系統、Owner、資料分類、權限範圍、到期日、輪替頻率與風險等級。</td>
+<td>System Owner / Developer / Cloud Owner</td>
+<td>Secret申請紀錄。</td>
+</tr>
+<tr>
+<td>2. 風險與分類</td>
+<td>依Secret用途、權限、資料影響、外部存取、雲端/AI/供應商情境判定保護等級。</td>
+<td>Secrets Owner / CISO</td>
+<td>Secret分類紀錄。</td>
+</tr>
+<tr>
+<td>3. 建立與核發</td>
+<td>使用核准工具生成或核發Secret，避免人工可見，必要時雙人覆核。</td>
+<td>IAM / PAM / Secrets Owner</td>
+<td>建立紀錄、核發紀錄。</td>
+</tr>
+<tr>
+<td>4. 安全保存</td>
+<td>Secret應保存於Secrets Manager、PAM、KMS、HSM或核准等效平台，不得明文保存。</td>
+<td>Secrets Owner / System Owner</td>
+<td>保存位置與權限紀錄。</td>
+</tr>
+<tr>
+<td>5. 使用與存取</td>
+<td>應透過安全API、短期憑證、Role、OIDC、Workload Identity或受控注入方式使用。</td>
+<td>Application Owner / DevOps</td>
+<td>存取日誌、系統設定。</td>
+</tr>
+<tr>
+<td>6. 監控與掃描</td>
+<td>監控Secret使用、異常、過期、外洩、Repo提交、日誌暴露與API濫用。</td>
+<td>SOC / DevSecOps / Cloud Security</td>
+<td>SIEM、掃描報告。</td>
+</tr>
+<tr>
+<td>7. 輪替與更新</td>
+<td>依風險、期限、事件、角色變更、供應商變更或系統變更執行輪替。</td>
+<td>Secrets Owner / System Owner</td>
+<td>輪替紀錄、驗證紀錄。</td>
+</tr>
+<tr>
+<td>8. 撤銷與退場</td>
+<td>Secret不再使用、系統退場、人員離職、供應商終止或事件後應立即撤銷。</td>
+<td>IAM / Cloud / System Owner</td>
+<td>撤銷紀錄、退場證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. Secrets儲存與使用位置限制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>位置 / 情境</th>
+<th>是否允許</th>
+<th>控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准Secrets Manager / Vault</td>
+<td>允許</td>
+<td>應啟用加密、RBAC、MFA、審計日誌、輪替、備份與高可用性。</td>
+</tr>
+<tr>
+<td>PAM系統</td>
+<td>允許</td>
+<td>適用特權密碼、Break-glass與共享管理帳號；需Session Recording與審查。</td>
+</tr>
+<tr>
+<td>KMS / HSM</td>
+<td>允許</td>
+<td>適用加密金鑰、簽章金鑰、敏感私鑰；需分權、輪替與審計。</td>
+</tr>
+<tr>
+<td>CI/CD Protected Secret Variables</td>
+<td>有條件允許</td>
+<td>需遮罩、環境隔離、保護分支、最小權限、禁止輸出至Log。</td>
+</tr>
+<tr>
+<td>容器環境變數</td>
+<td>有條件允許</td>
+<td>不得保存高機密Secrets；應優先使用Secrets掛載或Workload Identity，避免出現在Dump或Log。</td>
+</tr>
+<tr>
+<td>原始碼Repo</td>
+<td>禁止</td>
+<td>不得硬編碼Secret；發現即撤銷、輪替並進行歷史清理。</td>
+</tr>
+<tr>
+<td>文件、Wiki、工單、聊天、Email</td>
+<td>禁止</td>
+<td>不得保存明文Secrets；如需交接應使用核准秘密分享工具。</td>
+</tr>
+<tr>
+<td>日誌、監控、錯誤訊息</td>
+<td>禁止</td>
+<td>應遮罩或過濾Secrets，避免輸出Token、密碼、Authorization Header。</td>
+</tr>
+<tr>
+<td>本機明文檔案</td>
+<td>禁止</td>
+<td>不得以txt、xlsx、csv、截圖或未加密檔案保存Secrets。</td>
+</tr>
+<tr>
+<td>AI工具或外部AI服務Prompt</td>
+<td>禁止</td>
+<td>不得將Secrets輸入任何生成式AI工具；誤輸入即通報事件。</td>
+</tr>
+<tr>
+<td>供應商平台</td>
+<td>有條件允許</td>
+<td>需合約、DPA、存取控制、加密、日誌、刪除與退場要求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 服務帳號與非人員帳號管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Owner指定</td>
+<td>每個服務帳號應指定Business/System Owner與Technical Owner，不得無Owner。</td>
+<td>服務帳號清冊。</td>
+</tr>
+<tr>
+<td>用途描述</td>
+<td>服務帳號應明確記錄用途、系統、資料範圍、權限、使用位置與依賴關係。</td>
+<td>帳號登錄紀錄。</td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>服務帳號權限應限於必要API、資料、資源與時間，不得使用高權限通用帳號。</td>
+<td>權限矩陣、IAM Role。</td>
+</tr>
+<tr>
+<td>禁止互動登入</td>
+<td>除經核准外，服務帳號不得允許互動式登入、VPN登入或人員直接登入。</td>
+<td>IAM設定、登入紀錄。</td>
+</tr>
+<tr>
+<td>認證方式</td>
+<td>優先使用短期憑證、Role、Managed Identity、Workload Identity、OAuth Client Credentials或mTLS。</td>
+<td>技術設定。</td>
+</tr>
+<tr>
+<td>輪替頻率</td>
+<td>長效Secret應依風險定期輪替；外洩、權限變更或系統變更時立即輪替。</td>
+<td>輪替紀錄。</td>
+</tr>
+<tr>
+<td>監控</td>
+<td>服務帳號應納入異常使用、來源IP、API頻率、時間、地區、權限擴張與失敗登入監控。</td>
+<td>SIEM告警、API報表。</td>
+</tr>
+<tr>
+<td>退場</td>
+<td>系統停用、整合取消或供應商終止時，應撤銷服務帳號及相關Secrets。</td>
+<td>撤銷紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. API Key、Token與Webhook Secret管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險加強措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Key核發</td>
+<td>API Key應由核准系統或Secrets Manager核發，禁止個人私下建立共用Key。</td>
+<td>CISO或Service Owner核准，設定有效期限。</td>
+</tr>
+<tr>
+<td>範圍限制</td>
+<td>Key應限制API Scope、資源、租戶、IP、來源、環境、速率與用途。</td>
+<td>採用分環境、分服務、分客戶Key。</td>
+</tr>
+<tr>
+<td>到期與輪替</td>
+<td>Key應設定到期日或輪替週期，長效Key需例外核准。</td>
+<td>使用短期Token或OIDC Federation取代長效Key。</td>
+</tr>
+<tr>
+<td>儲存</td>
+<td>Key不得硬編碼於前端、Repo、Mobile App、容器映像或文件。</td>
+<td>使用Vault、Secret Injection或KMS。</td>
+</tr>
+<tr>
+<td>傳輸</td>
+<td>Webhook Secret與Token不得出現在URL Query String；應使用Header或簽章驗證。</td>
+<td>採mTLS、Request Signing、Replay Protection。</td>
+</tr>
+<tr>
+<td>監控</td>
+<td>監控Key使用量、異常來源、異常時間、失敗率、API濫用與地理異常。</td>
+<td>SIEM、API Gateway、Rate Limit與自動停用。</td>
+</tr>
+<tr>
+<td>撤銷</td>
+<td>Key疑似外洩、離職、供應商終止或服務退場時立即撤銷。</td>
+<td>建立緊急撤銷Runbook。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 加密金鑰與憑證管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>金鑰分類</td>
+<td>加密金鑰應依用途、資料分類、系統重要性與法規要求分類管理。</td>
+<td>金鑰清冊、分類紀錄。</td>
+</tr>
+<tr>
+<td>金鑰建立</td>
+<td>高敏感金鑰應由KMS/HSM或核准安全工具產生，不得使用不明來源或弱演算法。</td>
+<td>KMS/HSM建立紀錄。</td>
+</tr>
+<tr>
+<td>金鑰保存</td>
+<td>私鑰、KMS主金鑰、備份解密金鑰應加密保存，限制存取並納入審計。</td>
+<td>KMS存取日誌、權限紀錄。</td>
+</tr>
+<tr>
+<td>金鑰使用</td>
+<td>金鑰用途應受限制，不得同一金鑰跨用途、跨環境或跨客戶濫用。</td>
+<td>Key Policy、用途標籤。</td>
+</tr>
+<tr>
+<td>金鑰輪替</td>
+<td>依風險、演算法壽命、法規、事件或供應商要求定期輪替。</td>
+<td>輪替紀錄、變更單。</td>
+</tr>
+<tr>
+<td>金鑰撤銷</td>
+<td>金鑰外洩、疑似外洩、用途終止或系統退場時應撤銷、停用或銷毀。</td>
+<td>撤銷/銷毀紀錄。</td>
+</tr>
+<tr>
+<td>憑證到期</td>
+<td>TLS/SSL、Code Signing、Client Certificate應監控到期，避免服務中斷。</td>
+<td>憑證清冊、到期告警。</td>
+</tr>
+<tr>
+<td>演算法管理</td>
+<td>不得使用已禁用或弱密碼學演算法；演算法淘汰應納入風險處理。</td>
+<td>密碼學標準、掃描報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. DevSecOps與原始碼Secrets防護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Pre-commit掃描</td>
+<td>開發端應使用Secrets掃描工具或Hook避免Secrets提交。</td>
+<td>工具設定、掃描紀錄。</td>
+</tr>
+<tr>
+<td>Repo掃描</td>
+<td>所有內部、外部、歷史Repo應定期掃描Secrets，特別是公開Repo與開源專案。</td>
+<td>掃描報告、修復紀錄。</td>
+</tr>
+<tr>
+<td>CI/CD掃描</td>
+<td>Pipeline應檢查Secrets、憑證、Token、私鑰及敏感環境變數外洩。</td>
+<td>Pipeline結果。</td>
+</tr>
+<tr>
+<td>Secret Masking</td>
+<td>CI/CD與Log系統應遮罩Secrets，避免在Build Log、Error Log、Artifact中顯示。</td>
+<td>CI/CD設定、抽樣驗證。</td>
+</tr>
+<tr>
+<td>分環境隔離</td>
+<td>開發、測試、預備、正式環境Secrets應分離，不得共用正式Secrets進行測試。</td>
+<td>Secrets清冊、環境設定。</td>
+</tr>
+<tr>
+<td>Artifact與映像掃描</td>
+<td>容器映像、建置產物、IaC、Helm Chart、Terraform State應掃描Secrets。</td>
+<td>掃描報告。</td>
+</tr>
+<tr>
+<td>外洩修復</td>
+<td>一旦Secret進入Repo，即使刪除檔案也視為外洩，需撤銷輪替並清理歷史。</td>
+<td>事件紀錄、輪替證據。</td>
+</tr>
+<tr>
+<td>第三方整合</td>
+<td>GitHub/GitLab/Cloud/Package Registry等應啟用Secret Protection或等效掃描。</td>
+<td>平台設定截圖或報表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 雲端Secrets與工作負載身分管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>避免長效Access Key</td>
+<td>雲端工作負載應優先使用IAM Role、Managed Identity、Workload Identity或短期憑證。</td>
+<td>雲端IAM報表。</td>
+</tr>
+<tr>
+<td>Key使用監控</td>
+<td>雲端Access Key應監控最後使用時間、來源、權限、異常地區與未使用Key。</td>
+<td>CSPM/IAM報表。</td>
+</tr>
+<tr>
+<td>Root/主帳號保護</td>
+<td>雲端Root或最高權限帳號不得日常使用，需MFA、Break-glass、告警與存取審查。</td>
+<td>Root帳號檢查紀錄。</td>
+</tr>
+<tr>
+<td>KMS管理</td>
+<td>雲端KMS應定義Key Owner、用途、輪替、Key Policy、刪除保護與審計。</td>
+<td>KMS設定、CloudTrail/Audit Log。</td>
+</tr>
+<tr>
+<td>Secret注入</td>
+<td>容器、Serverless、VM、Pipeline應透過安全方式取得Secrets，不得寫入映像或User Data明文。</td>
+<td>部署設定。</td>
+</tr>
+<tr>
+<td>雲端組態掃描</td>
+<td>CSPM應檢查明文Secrets、公開儲存桶、過寬IAM、未輪替Key與不安全憑證。</td>
+<td>CSPM報告、修復追蹤。</td>
+</tr>
+<tr>
+<td>跨帳戶與第三方</td>
+<td>跨帳戶Role、供應商Access、SaaS整合Key應有到期、最小權限與撤銷流程。</td>
+<td>第三方存取清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. AI與MLOps Secrets管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI API Key管理</td>
+<td>AI API Key應登錄Owner、用途、服務、環境、限制、到期、輪替與費用/用量監控。</td>
+<td>AI服務清冊、API Key清冊。</td>
+</tr>
+<tr>
+<td>禁止輸入Secrets至AI</td>
+<td>不得將密碼、Token、API Key、私鑰、連線字串、憑證或內部安全規則輸入AI工具。</td>
+<td>AI政策宣導、DLP告警。</td>
+</tr>
+<tr>
+<td>Prompt與日誌遮罩</td>
+<td>AI Prompt、輸入輸出、錯誤訊息、RAG日誌及MLOps日誌不得保留Secrets明文。</td>
+<td>日誌遮罩規則、抽樣檢查。</td>
+</tr>
+<tr>
+<td>RAG資料源憑證</td>
+<td>RAG連接資料庫、文件庫、向量庫與知識庫之憑證應最小權限且可撤銷。</td>
+<td>RAG設定、權限測試。</td>
+</tr>
+<tr>
+<td>模型供應商Token</td>
+<td>外部模型供應商Token應保存於Secrets Manager，不得嵌入前端或Notebook。</td>
+<td>Vault紀錄、Notebook掃描。</td>
+</tr>
+<tr>
+<td>MLOps平台Secrets</td>
+<td>訓練任務、Notebook、Pipeline、Feature Store、Model Registry之Secrets應分環境管理。</td>
+<td>MLOps設定、Secrets掃描。</td>
+</tr>
+<tr>
+<td>AI用量濫用監控</td>
+<td>監控AI Key高頻請求、Token暴增、異常地區、未知模型調用與成本異常。</td>
+<td>API報表、SIEM告警。</td>
+</tr>
+<tr>
+<td>AI供應商退場</td>
+<td>AI服務停用時應撤銷API Key、刪除資料、停用Token並取得必要刪除證明。</td>
+<td>退場紀錄、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 密碼與Secrets輪替要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Secret類型</th>
+<th>一般輪替週期</th>
+<th>立即輪替觸發條件</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>使用者密碼</td>
+<td>依密碼政策與風險；若啟用MFA與洩漏密碼防護，可依風險調整。</td>
+<td>疑似外洩、離職交接、違規共用、系統入侵。</td>
+<td>不得要求使用者定期改成弱密碼；應阻擋洩漏密碼。</td>
+</tr>
+<tr>
+<td>特權密碼</td>
+<td>至少每90日或依PAM政策；高風險可更短。</td>
+<td>人員離職、權限異動、疑似外洩、緊急使用後。</td>
+<td>優先PAM自動輪替。</td>
+</tr>
+<tr>
+<td>服務帳號密碼</td>
+<td>至少每90至180日，或依系統風險設定。</td>
+<td>系統變更、供應商終止、外洩、Owner變更。</td>
+<td>需驗證輪替不影響服務。</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>至少每90至180日；高風險或外部Key更短。</td>
+<td>疑似外洩、濫用、供應商事件、Repo曝光。</td>
+<td>優先使用短期Token。</td>
+</tr>
+<tr>
+<td>雲端Access Key</td>
+<td>至少每90日；未使用Key應停用。</td>
+<td>外洩、權限過大、異常使用、Role替代完成。</td>
+<td>優先改用Role/Workload Identity。</td>
+</tr>
+<tr>
+<td>TLS/SSL憑證</td>
+<td>依有效期，到期前完成更新；建議自動化更新。</td>
+<td>私鑰外洩、CA事件、域名或服務變更。</td>
+<td>需監控到期。</td>
+</tr>
+<tr>
+<td>加密金鑰</td>
+<td>依KMS政策、資料分類與法規；高風險定期輪替。</td>
+<td>金鑰外洩、演算法淘汰、管理員異動、事件後。</td>
+<td>須評估資料重加密影響。</td>
+</tr>
+<tr>
+<td>Break-glass密碼</td>
+<td>每次使用後立即輪替；定期驗證可用性。</td>
+<td>任何啟用、疑似接觸、保管鏈異常。</td>
+<td>需雙人控管與告警。</td>
+</tr>
+<tr>
+<td>AI API Key</td>
+<td>至少每90日；依供應商與風險調整。</td>
+<td>用量異常、Prompt誤輸入、供應商事件、Notebook/Repo曝光。</td>
+<td>需監控成本與Token使用量。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. Secrets外洩偵測與監控</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>偵測來源</th>
+<th>偵測內容</th>
+<th>告警條件</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Repo與CI/CD</td>
+<td>硬編碼密碼、API Key、Token、私鑰、憑證、連線字串。</td>
+<td>任何疑似Secret命中。</td>
+<td>立即撤銷輪替，建立事件或修復工單。</td>
+</tr>
+<tr>
+<td>日誌與SIEM</td>
+<td>Authorization Header、Token、密碼、私鑰片段、連線字串、Secrets錯誤輸出。</td>
+<td>出現明文Secret或高風險模式。</td>
+<td>遮罩、刪除或限制日誌，撤銷Secret。</td>
+</tr>
+<tr>
+<td>DLP/CASB/Proxy</td>
+<td>Secrets外寄、上傳未核准雲端、輸入AI工具、貼到聊天平台。</td>
+<td>命中Secrets規則或大量外傳。</td>
+<td>阻擋或隔離，通報CISO。</td>
+</tr>
+<tr>
+<td>雲端監控</td>
+<td>Access Key異常地區、異常API、權限擴張、未使用Key、Root使用。</td>
+<td>異常使用或高權限Key活動。</td>
+<td>停用Key、調查來源、輪替。</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>API Key暴增、Rate Limit觸發、未知來源、錯誤率增加。</td>
+<td>疑似濫用、爬蟲或外洩。</td>
+<td>限流、撤銷Key、事件處理。</td>
+</tr>
+<tr>
+<td>Dark Web / Public Leak</td>
+<td>組織Domain密碼、Token、憑證或Repo外洩。</td>
+<td>確認或疑似外洩。</td>
+<td>強制重設、撤銷、通報事件。</td>
+</tr>
+<tr>
+<td>Endpoint/EDR</td>
+<td>憑證Dump、Key檔案被讀取、Secret工具異常操作。</td>
+<td>可疑程序或特權存取。</td>
+<td>隔離端點、調查、輪替Secrets。</td>
+</tr>
+<tr>
+<td>AI工具監控</td>
+<td>Prompt含Key、Token、密碼、連線字串或Secrets片段。</td>
+<td>任何命中禁止資料。</td>
+<td>通報AI違規或資安事件，撤銷Secret。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. Secrets外洩事件處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處理階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 通報與分級</td>
+<td>任何疑似Secrets外洩應立即通報，依Secret權限、資料影響、暴露範圍與濫用跡象分級。</td>
+<td>發現者 / SOC / Incident Manager</td>
+<td>事件通報、初步分級。</td>
+</tr>
+<tr>
+<td>2. 遏止</td>
+<td>立即停用、撤銷、輪替受影響Secrets，必要時停用相關帳號、API、服務或供應商存取。</td>
+<td>IAM / Cloud / System Owner</td>
+<td>撤銷與輪替紀錄。</td>
+</tr>
+<tr>
+<td>3. 影響分析</td>
+<td>確認Secret暴露位置、時間、存取紀錄、濫用痕跡、受影響資料、供應商與客戶影響。</td>
+<td>Incident Manager / SOC / Data Owner</td>
+<td>調查紀錄、日誌。</td>
+</tr>
+<tr>
+<td>4. 根因分析</td>
+<td>判定是否因硬編碼、權限過大、日誌洩漏、AI誤輸入、CI/CD設定或人員違規造成。</td>
+<td>CISO / DevSecOps / Owner</td>
+<td>根因分析報告。</td>
+</tr>
+<tr>
+<td>5. 清理與修復</td>
+<td>清除Repo歷史、日誌、文件、工單、AI輸入紀錄或外部平台殘留；修正流程與控制。</td>
+<td>System Owner / DevSecOps</td>
+<td>修復紀錄、PR/變更單。</td>
+</tr>
+<tr>
+<td>6. 通知與合規</td>
+<td>若影響PII、客戶資料、合約或法規，依事件程序通知DPO、法務、客戶或主管機關。</td>
+<td>CISO / DPO / Legal</td>
+<td>通知紀錄。</td>
+</tr>
+<tr>
+<td>7. 事後檢討</td>
+<td>檢討控制缺口、改善Secrets掃描、輪替、教育訓練與技術控制。</td>
+<td>Incident Manager / ISMS管理代表</td>
+<td>事件檢討、CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法使用Secrets Manager</td>
+<td>說明技術限制、替代保護措施、加密保存、權限限制、輪替與導入改善計畫。</td>
+<td>CISO / Secrets Owner / System Owner</td>
+<td>最長90日，期滿重評。</td>
+</tr>
+<tr>
+<td>長效API Key</td>
+<td>說明必要性、Scope限制、IP限制、Rate Limit、監控、到期與輪替計畫。</td>
+<td>CISO / Service Owner</td>
+<td>依風險設定，最長180日。</td>
+</tr>
+<tr>
+<td>共享帳號或共享Secret</td>
+<td>說明不可使用具名帳號原因，採PAM、Session Recording、使用者核准與使用後輪替。</td>
+<td>CISO / PAM Owner</td>
+<td>最長90日或每次使用後檢討。</td>
+</tr>
+<tr>
+<td>無法定期輪替</td>
+<td>說明系統限制、影響評估、補償控制、替代架構與改善時程。</td>
+<td>CISO / System Owner</td>
+<td>高風險每30日追蹤。</td>
+</tr>
+<tr>
+<td>Secret需人工交接</td>
+<td>使用核准一次性秘密分享工具，限制時效、接收人、下載次數與紀錄。</td>
+<td>Secrets Owner / Manager</td>
+<td>單次有效，不得長期例外。</td>
+</tr>
+<tr>
+<td>供應商Secrets限制</td>
+<td>合約或服務不支援輪替、Scope限制、日誌或撤銷時，需風險接受與替代控制。</td>
+<td>Supplier Management / CISO / Legal</td>
+<td>續約或供應商變更時重評。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 密碼與Secrets管理檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Secret清冊</td>
+<td>高風險Secrets、服務帳號、API Key、雲端Key、AI Key是否已登錄Owner與用途？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>安全保存</td>
+<td>Secrets是否保存於核准Vault、PAM、KMS、HSM或等效平台？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>明文外洩防護</td>
+<td>Secrets是否避免出現在Repo、文件、日誌、CI/CD、容器映像、AI Prompt或聊天工具？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>Secrets權限是否限制範圍、環境、資源、IP、API Scope與到期？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>MFA與PAM</td>
+<td>特權密碼與管理介面是否啟用MFA/PAM或等效控制？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>輪替管理</td>
+<td>Secrets是否依風險設定輪替週期，外洩或人員異動時立即輪替？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>掃描與監控</td>
+<td>是否對Repo、CI/CD、日誌、雲端、DLP、AI工具與外部平台進行Secrets偵測？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>Secrets外洩是否有通報、撤銷、輪替、清理、根因與CAPA流程？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商Secrets、遠端存取、API Key與退場撤權是否受控？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>教育訓練</td>
+<td>使用者與開發人員是否接受密碼與Secrets保護訓練？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Secrets清冊</td>
+<td>Secret類型、Owner、用途、系統、權限範圍、儲存位置、到期與輪替頻率；不得保存實際Secret值。</td>
+<td>Secrets Management Owner</td>
+<td>Secret有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>密碼與Secret申請紀錄</td>
+<td>申請原因、核准、用途、分類、權限、到期、Owner與證據。</td>
+<td>IAM / Secrets Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>輪替與撤銷紀錄</td>
+<td>輪替日期、原因、影響系統、驗證結果、撤銷證據。</td>
+<td>System Owner / IAM / Cloud Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>PAM與特權存取紀錄</td>
+<td>存取申請、核准、Session、錄影、命令紀錄、Break-glass使用。</td>
+<td>PAM Owner</td>
+<td>至少3年或依事件要求。</td>
+</tr>
+<tr>
+<td>Secrets掃描報告</td>
+<td>Repo、CI/CD、日誌、雲端、容器、AI工具與DLP掃描結果。</td>
+<td>DevSecOps / SOC</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>事件與外洩紀錄</td>
+<td>Secrets外洩、疑似外洩、撤銷、輪替、根因、影響評估與CAPA。</td>
+<td>Incident Manager / CISO</td>
+<td>至少3至7年，依事件等級。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>教育訓練紀錄</td>
+<td>密碼、Secrets、AI禁止資料、開發安全及外洩通報訓練紀錄。</td>
+<td>HR / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高風險Secrets登錄完整率</td>
+<td>已登錄高風險Secrets / 應登錄高風險Secrets。</td>
+<td>目標100%。</td>
+<td>Secrets治理完整性。</td>
+</tr>
+<tr>
+<td>Secrets Manager覆蓋率</td>
+<td>保存於核准Secrets Manager/PAM/KMS之高風險Secrets比例。</td>
+<td>高風險目標100%。</td>
+<td>技術控制有效性。</td>
+</tr>
+<tr>
+<td>逾期輪替Secrets數</td>
+<td>超過輪替週期或到期未更新之Secrets數。</td>
+<td>Critical/High目標0。</td>
+<td>輪替管理。</td>
+</tr>
+<tr>
+<td>Secrets掃描命中數</td>
+<td>Repo、CI/CD、日誌、雲端或AI工具中偵測到Secrets之數量。</td>
+<td>重大命中立即處理，趨勢應下降。</td>
+<td>外洩防護與教育改善。</td>
+</tr>
+<tr>
+<td>Secret外洩事件數</td>
+<td>確認或疑似Secrets外洩事件數。</td>
+<td>目標0；任何重大事件需管理審查。</td>
+<td>事件趨勢。</td>
+</tr>
+<tr>
+<td>雲端長效Key數</td>
+<td>有效且未使用Role/短期憑證替代之長效雲端Key數。</td>
+<td>持續下降；高權限長效Key目標0。</td>
+<td>雲端風險降低。</td>
+</tr>
+<tr>
+<td>PAM特權帳號覆蓋率</td>
+<td>納入PAM管理之特權帳號 / 應納入特權帳號。</td>
+<td>目標100%。</td>
+<td>特權控制。</td>
+</tr>
+<tr>
+<td>AI Key異常使用告警數</td>
+<td>AI API Key用量暴增、未知來源、異常模型調用或成本異常告警數。</td>
+<td>重大告警立即調查。</td>
+<td>AI服務濫用監控。</td>
+</tr>
+<tr>
+<td>Secrets外洩平均遏止時間</td>
+<td>從發現至撤銷/輪替完成之平均時間。</td>
+<td>依事件等級設定，Critical需立即。</td>
+<td>事件處理效率。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>政策與責任</td>
+<td>是否明確定義密碼與Secrets管理責任、Owner、工具與核准流程。</td>
+<td>本SOP、RACI、任命紀錄。</td>
+</tr>
+<tr>
+<td>Secret清冊</td>
+<td>高風險Secrets、服務帳號、API Key、雲端Key、AI Key是否有清冊且不含明文。</td>
+<td>Secrets清冊、資產清冊。</td>
+</tr>
+<tr>
+<td>安全保存</td>
+<td>Secrets是否保存於核准Vault/PAM/KMS/HSM，且權限與日誌受控。</td>
+<td>Vault設定、PAM/KMS日誌。</td>
+</tr>
+<tr>
+<td>硬編碼與外洩防護</td>
+<td>是否對Repo、CI/CD、日誌、容器、雲端、文件與AI工具進行Secrets掃描。</td>
+<td>掃描報告、修復紀錄。</td>
+</tr>
+<tr>
+<td>輪替與撤銷</td>
+<td>Secrets是否依風險定期輪替，外洩、離職、供應商終止或退場時撤銷。</td>
+<td>輪替紀錄、撤權紀錄。</td>
+</tr>
+<tr>
+<td>特權與Break-glass</td>
+<td>特權Secrets是否納入PAM，Break-glass是否雙人控管、告警與使用後審查。</td>
+<td>PAM紀錄、Break-glass測試。</td>
+</tr>
+<tr>
+<td>雲端與AI Secrets</td>
+<td>雲端Access Key與AI API Key是否最小權限、監控、避免長效與明文保存。</td>
+<td>CSPM報告、AI Key清冊。</td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>Secrets外洩事件是否即時撤銷、輪替、清理、調查、通報與改善。</td>
+<td>事件紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否有補償控制、期限、核准、重評與風險接受。</td>
+<td>例外紀錄、風險接受。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄A：Secrets登錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Secret編號</td>
+<td>SEC-SECRET-YYYY-0001</td>
+<td>唯一追蹤編號，不得填入Secret值。</td>
+</tr>
+<tr>
+<td>Secret名稱</td>
+<td>例如 Production Payment API Key</td>
+<td>不得使用可暴露實際值的名稱。</td>
+</tr>
+<tr>
+<td>Secret類型</td>
+<td>□ 密碼 □ API Key □ Token □ 私鑰 □ 憑證 □ KMS Key □ Webhook Secret □ AI Key □ 其他</td>
+<td>依第5章分類。</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>System Owner / Business Owner / Technical Owner</td>
+<td>需有主要與代理Owner。</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>說明使用系統、整合目的、資料範圍。</td>
+<td>需具體。</td>
+</tr>
+<tr>
+<td>環境</td>
+<td>□ 開發 □ 測試 □ 預備 □ 正式 □ 災備</td>
+<td>不同環境不得共用。</td>
+</tr>
+<tr>
+<td>儲存位置</td>
+<td>Vault/PAM/KMS/Secrets Manager名稱與路徑代碼。</td>
+<td>不得填實際Secret。</td>
+</tr>
+<tr>
+<td>權限範圍</td>
+<td>API Scope、IAM Role、資料庫權限、IP限制。</td>
+<td>需符合最小權限。</td>
+</tr>
+<tr>
+<td>到期日</td>
+<td>YYYY-MM-DD</td>
+<td>無到期需例外核准。</td>
+</tr>
+<tr>
+<td>輪替頻率</td>
+<td>每30/60/90/180日或事件觸發。</td>
+<td>依風險設定。</td>
+</tr>
+<tr>
+<td>監控方式</td>
+<td>SIEM、API Gateway、CloudTrail、DLP、Repo Scan等。</td>
+<td>說明告警條件。</td>
+</tr>
+<tr>
+<td>最近輪替日</td>
+<td>YYYY-MM-DD</td>
+<td>保存輪替證據。</td>
+</tr>
+<tr>
+<td>狀態</td>
+<td>□ 使用中 □ 暫停 □ 退場中 □ 已撤銷</td>
+<td>需與系統狀態一致。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 附錄B：Secret外洩快速處置清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>處置事項</th>
+<th>完成確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>確認外洩Secret類型、權限、來源、暴露位置、時間與是否仍有效。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>2</td>
+<td>立即撤銷或停用受影響Secret，必要時停用相關帳號或服務。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>3</td>
+<td>建立新Secret並以安全方式部署，確認服務恢復。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>4</td>
+<td>搜尋Repo歷史、日誌、文件、工單、聊天、AI輸入紀錄及外部平台是否仍殘留。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>5</td>
+<td>檢查是否有濫用跡象，包括登入、API呼叫、資料下載、權限變更與異常地區。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>6</td>
+<td>評估受影響資料、系統、客戶、PII、供應商與合約通報需求。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>7</td>
+<td>清理外洩位置，若為Repo需進行歷史清理並通知已Clone人員同步處理。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>8</td>
+<td>完成根因分析與CAPA，例如新增掃描、遮罩、教育訓練或工具限制。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>9</td>
+<td>更新Secrets清冊、事件紀錄、風險登錄與管理審查輸入。</td>
+<td>□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

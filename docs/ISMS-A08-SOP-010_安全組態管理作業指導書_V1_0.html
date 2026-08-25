@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-010 安全組態管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-010 安全組態管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-010</td>
+<td>安全組態管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-010</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Configuration Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端安全審查</td>
+<td></td>
+<td>Cloud Security Owner / Cloud Operations Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路安全審查</td>
+<td></td>
+<td>Network Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps審查</td>
+<td></td>
+<td>DevSecOps Owner / Application Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與法遵審查</td>
+<td></td>
+<td>Supplier Management / Legal / Compliance（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範安全組態基準之建立、核准、部署、維護、監控、變更、偏差處理、例外核准、持續改善與稽核要求，確保系統、雲端、網路、應用、端點、資料庫、容器、AI服務及資安控制元件均以安全、可追溯、可驗證且符合風險要求之組態運作。</p>
+<p>本文件旨在降低因預設設定、過寬權限、未加密、未啟用日誌、公開暴露、弱協定、錯誤防火牆規則、未關閉不必要服務、錯誤雲端設定、容器特權、CI/CD誤設定、AI服務資料保存不當或供應商組態變更造成之資安風險。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有重要技術資產應建立並套用核准安全組態基準，且基準應依風險、資料分類、服務重要性、法規、合約與威脅情勢定期審查。</li>
+<li>安全組態應採最小功能、最小權限、預設拒絕、安全預設、加密優先、日誌可追溯、可監控、可回復及變更受控原則。</li>
+<li>新系統、新雲端資源、新端點、新應用、新AI服務或重大變更上線前，應完成安全組態檢查，不得以未經核准之預設組態進入正式環境。</li>
+<li>安全組態偏差應被識別、分級、修正或經正式例外核准；高風險偏差不得長期存在而無風險處理。</li>
+<li>安全組態應盡可能以自動化、政策即程式碼、基礎設施即程式碼、合規掃描、CSPM/CNAPP、EDR/MDM、CI/CD檢查與組態漂移偵測實施。</li>
+<li>任何安全組態調整不得削弱資訊安全控制，例如不得為效能、成本或便利性任意關閉加密、日誌、EDR、DLP、MFA、備份、弱點掃描、監控或存取控制。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全組態</td>
+<td>為降低資訊安全風險而設定於系統、設備、服務、應用、雲端或平台之安全相關設定，例如權限、加密、日誌、網路、服務、通訊協定、密碼政策、備份與告警。</td>
+</tr>
+<tr>
+<td>安全基準</td>
+<td>經組織核准之標準安全組態要求，通常參考CIS Benchmark、DISA STIG、供應商最佳實務、法規、合約與組織風險準則。</td>
+</tr>
+<tr>
+<td>組態項目 CI</td>
+<td>Configuration Item，可被管理、審查、變更與追蹤之組態單元，例如伺服器、雲端資源、防火牆規則、Kubernetes設定、應用設定或AI服務設定。</td>
+</tr>
+<tr>
+<td>組態漂移</td>
+<td>實際組態與核准安全基準、IaC、標準映像或期望狀態不一致之情形。</td>
+</tr>
+<tr>
+<td>基準偏差</td>
+<td>因業務、技術或相容性原因，未能符合安全基準之設定差異。</td>
+</tr>
+<tr>
+<td>IaC</td>
+<td>Infrastructure as Code，以程式化方式管理與部署基礎設施與雲端資源組態。</td>
+</tr>
+<tr>
+<td>Policy as Code</td>
+<td>以可自動化驗證之規則定義安全、合規與組態要求。</td>
+</tr>
+<tr>
+<td>CSPM / CNAPP</td>
+<td>Cloud Security Posture Management / Cloud Native Application Protection Platform，用於偵測雲端與雲原生資源錯誤組態、風險與合規狀態之工具。</td>
+</tr>
+<tr>
+<td>Hardening</td>
+<td>依安全基準關閉不必要功能、限制權限、啟用保護、修補弱點與降低攻擊面之強化作業。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准安全組態管理要求、高風險例外、重大偏差與管理審查輸入。</td>
+<td>核准紀錄、風險接受、管理審查資料。</td>
+</tr>
+<tr>
+<td>Security Architecture Owner</td>
+<td>制定安全基準、標準架構、技術控制要求與高風險組態審查。</td>
+<td>安全基準、架構審查紀錄。</td>
+</tr>
+<tr>
+<td>Configuration Management Owner</td>
+<td>維護組態管理流程、基準清單、偏差追蹤、例外管理與合規報告。</td>
+<td>組態基準清冊、偏差追蹤。</td>
+</tr>
+<tr>
+<td>IT Operations Owner</td>
+<td>執行伺服器、作業系統、資料庫、備份、中介軟體與基礎設施組態管理。</td>
+<td>組態紀錄、修正紀錄。</td>
+</tr>
+<tr>
+<td>Cloud Security / Cloud Operations Owner</td>
+<td>管理雲端帳號、IAM、網路、KMS、儲存、日誌、CSPM、雲端基準與雲原生組態。</td>
+<td>CSPM報告、雲端組態紀錄。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>管理網路設備、防火牆、VPN、WAF、DNS、負載平衡與網路安全組態。</td>
+<td>規則審查、網路組態備份。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>管理端點、MDM/UEM、EDR、防火牆、USB、瀏覽器與端點安全基準。</td>
+<td>端點合規報告。</td>
+</tr>
+<tr>
+<td>DevSecOps / AppSec Owner</td>
+<td>管理應用、CI/CD、Repo、IaC、容器、Kubernetes、API與安全開發組態。</td>
+<td>Pipeline檢查、IaC掃描、應用組態報告。</td>
+</tr>
+<tr>
+<td>MLOps / AI Governance Owner</td>
+<td>管理AI服務、模型平台、RAG、向量資料庫、AI API、Prompt與模型安全組態。</td>
+<td>AI服務組態、AI安全測試紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控組態變更、錯誤組態告警、資安控制被停用、規則漂移與可疑活動。</td>
+<td>SIEM告警、監控紀錄。</td>
+</tr>
+<tr>
+<td>System / Service Owner</td>
+<td>對其系統或服務之安全組態符合性、偏差處理與變更核准負責。</td>
+<td>服務組態、例外紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查安全基準、組態檢查、偏差處理、變更紀錄與控制有效性。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 安全組態管理範圍與基準來源</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產 / 平台類型</th>
+<th>組態管理範圍</th>
+<th>基準來源</th>
+<th>主要Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>作業系統與伺服器</td>
+<td>帳號、服務、連接埠、日誌、加密、修補、防火牆、時間同步、管理介面。</td>
+<td>CIS Benchmark、供應商指南、組織基準。</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>資料庫</td>
+<td>認證、權限、加密、日誌、備份、網路限制、審計、預設帳號、弱設定。</td>
+<td>CIS Benchmark、DB供應商最佳實務。</td>
+<td>Database Owner</td>
+</tr>
+<tr>
+<td>網路設備</td>
+<td>管理介面、SNMP、AAA、ACL、防火牆規則、VPN、弱協定、日誌、備份。</td>
+<td>CIS Controls、供應商指南、網路安全基準。</td>
+<td>Network Security</td>
+</tr>
+<tr>
+<td>雲端平台</td>
+<td>IAM、儲存公開、KMS、網路、Security Group、日誌、備份、CSPM、區域、服務設定。</td>
+<td>CSA CCM、CIS Cloud Benchmark、雲端供應商最佳實務。</td>
+<td>Cloud Security</td>
+</tr>
+<tr>
+<td>端點裝置</td>
+<td>EDR、MDM、加密、防火牆、修補、瀏覽器、USB、本機管理員、螢幕鎖。</td>
+<td>CIS Benchmark、端點SOP、MDM基準。</td>
+<td>Endpoint Security</td>
+</tr>
+<tr>
+<td>應用系統與API</td>
+<td>安全Header、認證、Session、CORS、TLS、錯誤訊息、上傳、API Rate Limit、日誌。</td>
+<td>OWASP ASVS、OWASP API Security、組織開發基準。</td>
+<td>AppSec / System Owner</td>
+</tr>
+<tr>
+<td>容器與Kubernetes</td>
+<td>映像安全、特權容器、Network Policy、RBAC、Secrets、Admission Control、Pod Security。</td>
+<td>CIS Kubernetes、NSA/CISA指南、供應商最佳實務。</td>
+<td>DevSecOps / Platform Owner</td>
+</tr>
+<tr>
+<td>CI/CD與Repo</td>
+<td>Branch Protection、Secret Masking、Runner權限、Artifact保護、審批、簽章、SCA/SAST。</td>
+<td>NIST SSDF、SLSA、OWASP SAMM。</td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>SaaS與協作平台</td>
+<td>SSO/MFA、外部分享、DLP、Audit Log、Guest Access、資料保留、管理員權限。</td>
+<td>供應商最佳實務、CSA CCM、組織SaaS基準。</td>
+<td>SaaS Owner / Cloud Security</td>
+</tr>
+<tr>
+<td>AI與MLOps服務</td>
+<td>資料不訓練、Prompt保存、API Key、模型版本、RAG權限、輸出保護、AI Agent工具白名單。</td>
+<td>ISO/IEC 42001、ISO/IEC 23894、OWASP LLM Top 10、MITRE ATLAS。</td>
+<td>AI Governance / MLOps</td>
+</tr>
+<tr>
+<td>資安工具</td>
+<td>SIEM、EDR、DLP、WAF、PAM、Secrets Manager、KMS、弱點掃描、備份不可變設定。</td>
+<td>供應商最佳實務、組織安全基準。</td>
+<td>Security Operations</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 安全組態生命週期流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 基準建立</td>
+<td>依標準、供應商指南、風險評估、法規與控制目標建立安全基準。</td>
+<td>Security Architecture / Configuration Owner</td>
+<td>安全基準文件。</td>
+</tr>
+<tr>
+<td>2. 基準審查與核准</td>
+<td>由CISO、平台Owner、營運與相關角色審查可行性、風險與例外條件。</td>
+<td>CISO / Platform Owner</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>3. 部署與套用</td>
+<td>透過標準映像、IaC、MDM、GPO、CSPM、CI/CD或自動化工具套用基準。</td>
+<td>IT / Cloud / DevSecOps</td>
+<td>部署紀錄。</td>
+</tr>
+<tr>
+<td>4. 上線前驗證</td>
+<td>新系統或重大變更上線前完成組態檢查，未符合項目需修正或例外核准。</td>
+<td>System Owner / Security Reviewer</td>
+<td>上線前檢查紀錄。</td>
+</tr>
+<tr>
+<td>5. 持續監控</td>
+<td>定期掃描組態、偵測漂移、錯誤設定、控制停用與風險暴露。</td>
+<td>SOC / Configuration Owner</td>
+<td>合規掃描與告警。</td>
+</tr>
+<tr>
+<td>6. 偏差處理</td>
+<td>依風險分級建立修正計畫、期限、Owner與補償控制。</td>
+<td>Platform Owner / Risk Owner</td>
+<td>偏差追蹤紀錄。</td>
+</tr>
+<tr>
+<td>7. 例外與風險接受</td>
+<td>無法符合基準者需提出例外，說明原因、補償控制、期限與核准。</td>
+<td>CISO / Risk Owner</td>
+<td>例外核准、風險接受。</td>
+</tr>
+<tr>
+<td>8. 基準更新</td>
+<td>依威脅、弱點、事件、稽核、技術更新、法規或管理審查結果更新基準。</td>
+<td>Configuration Owner / CISO</td>
+<td>基準版本紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 安全組態基準文件最低內容</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>基準欄位</th>
+<th>內容要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>基準名稱與版本</td>
+<td>明確標示平台、版本、適用範圍與基準版本。</td>
+<td>例如 Windows Server 2022 Baseline v1.0。</td>
+</tr>
+<tr>
+<td>適用資產範圍</td>
+<td>說明適用環境、系統類型、風險等級與例外條件。</td>
+<td>正式、測試、雲端、容器等。</td>
+</tr>
+<tr>
+<td>控制目標</td>
+<td>說明該組態要達成之安全目的。</td>
+<td>例如降低暴力破解、資料外洩或未授權存取。</td>
+</tr>
+<tr>
+<td>設定項目</td>
+<td>列出必要設定、建議值、禁止值與允許範圍。</td>
+<td>應可被驗證。</td>
+</tr>
+<tr>
+<td>風險說明</td>
+<td>說明若未符合該設定可能造成之風險。</td>
+<td>便於偏差判定。</td>
+</tr>
+<tr>
+<td>驗證方式</td>
+<td>定義檢查工具、命令、CSPM規則、MDM報表、CI/CD檢查或人工驗證方式。</td>
+<td>需可追溯。</td>
+</tr>
+<tr>
+<td>修正方式</td>
+<td>提供修正步驟、自動化腳本、IaC修正或變更要求。</td>
+<td>避免人工任意修正。</td>
+</tr>
+<tr>
+<td>例外條件</td>
+<td>定義可接受例外情境、核准層級與補償控制。</td>
+<td>不得默許長期例外。</td>
+</tr>
+<tr>
+<td>Owner與審查頻率</td>
+<td>指定基準Owner與定期審查週期。</td>
+<td>高風險基準至少每年審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 核心安全組態要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低組態要求</th>
+<th>高風險加強要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分與存取</td>
+<td>啟用SSO/MFA、最小權限、禁用預設帳號、強制帳號生命週期管理。</td>
+<td>PAM/JIT、條件式存取、特權Session Recording。</td>
+</tr>
+<tr>
+<td>管理介面</td>
+<td>限制管理介面來源、使用安全協定、MFA、日誌與跳板或VPN/ZTNA。</td>
+<td>管理介面不得公開網際網路，需PAM或PAW。</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>啟用傳輸加密、儲存加密、金鑰管理與弱協定禁用。</td>
+<td>使用KMS/HSM、BYOK/HYOK、金鑰分權與輪替。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>啟用登入、管理操作、權限變更、資料存取、安全事件與錯誤日誌。</td>
+<td>接入SIEM、建立告警規則、保護日誌完整性。</td>
+</tr>
+<tr>
+<td>網路暴露</td>
+<td>預設拒絕，限制連接埠、來源、目的、Protocol，關閉不必要服務。</td>
+<td>微分段、WAF、Private Endpoint、零信任存取。</td>
+</tr>
+<tr>
+<td>惡意軟體防護</td>
+<td>端點與伺服器啟用EDR、防惡意程式與防竄改。</td>
+<td>高風險伺服器採行為偵測與威脅獵捕。</td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td>啟用自動更新或集中修補，移除EOL元件。</td>
+<td>Critical弱點緊急修補或隔離。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>依資料分類設定DLP、遮罩、備份、刪除與存取限制。</td>
+<td>高機密資料需加密、不可變備份、嚴格審計。</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>啟用必要備份、版本保留、不可變備份與復原測試。</td>
+<td>關鍵系統需跨區、離線或不可變備份。</td>
+</tr>
+<tr>
+<td>Secrets管理</td>
+<td>不得明文保存Secrets，使用Secrets Manager、PAM、KMS與輪替。</td>
+<td>高權限Secrets需短期化與自動輪替。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 雲端安全組態要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>雲端組態項目</th>
+<th>最低要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Root / 管理帳號</td>
+<td>Root或最高權限帳號不得日常使用，必須啟用MFA、告警與Break-glass控管。</td>
+<td>雲端IAM檢查、CSPM規則。</td>
+</tr>
+<tr>
+<td>IAM權限</td>
+<td>採最小權限、Role Based Access、禁止長效高權限Access Key。</td>
+<td>IAM Access Analyzer、權限審查。</td>
+</tr>
+<tr>
+<td>儲存公開設定</td>
+<td>物件儲存、檔案共享、資料湖預設不得公開。</td>
+<td>CSPM、Storage Policy檢查。</td>
+</tr>
+<tr>
+<td>KMS與加密</td>
+<td>儲存、資料庫、備份與高敏感資料應啟用加密與Key管理。</td>
+<td>KMS報表、資源設定。</td>
+</tr>
+<tr>
+<td>網路安全</td>
+<td>Security Group、NSG、防火牆規則應最小開放，避免0.0.0.0/0暴露管理服務。</td>
+<td>CSPM、網路掃描。</td>
+</tr>
+<tr>
+<td>日誌啟用</td>
+<td>Cloud Audit Log、管理操作、網路流量、儲存存取與安全事件日誌需啟用。</td>
+<td>Log設定、SIEM接入。</td>
+</tr>
+<tr>
+<td>資料庫暴露</td>
+<td>雲端資料庫不得公開網際網路，需私有網路、加密與存取限制。</td>
+<td>CSPM、連線測試。</td>
+</tr>
+<tr>
+<td>備份與刪除保護</td>
+<td>關鍵資料庫、儲存與工作負載需備份、快照、刪除保護或不可變保護。</td>
+<td>備份報表。</td>
+</tr>
+<tr>
+<td>CSPM/CNAPP</td>
+<td>雲端帳號應納入組態監控、風險分級、修正追蹤與例外管理。</td>
+<td>CSPM報告。</td>
+</tr>
+<tr>
+<td>標籤與資產Owner</td>
+<td>雲端資源應具Owner、環境、資料分類、成本中心、服務與風險標籤。</td>
+<td>標籤合規報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 容器、Kubernetes與雲原生組態要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>組態項目</th>
+<th>最低要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>映像來源</td>
+<td>僅使用核准Registry與可信映像，禁止未知來源與未掃描映像。</td>
+<td>Registry政策、映像掃描。</td>
+</tr>
+<tr>
+<td>映像弱點</td>
+<td>映像需經弱點掃描，Critical/High弱點依SLA修正。</td>
+<td>掃描報告。</td>
+</tr>
+<tr>
+<td>特權容器</td>
+<td>禁止特權容器、Host PID/Network、危險Capabilities，除非例外核准。</td>
+<td>Admission Control、Policy as Code。</td>
+</tr>
+<tr>
+<td>Pod安全</td>
+<td>套用Pod Security Standards、限制Root使用者與唯讀檔案系統。</td>
+<td>Kubernetes Policy檢查。</td>
+</tr>
+<tr>
+<td>Kubernetes RBAC</td>
+<td>最小權限，禁止過寬Cluster Admin，定期審查ServiceAccount。</td>
+<td>RBAC審查報告。</td>
+</tr>
+<tr>
+<td>Secrets管理</td>
+<td>Kubernetes Secrets需加密，避免明文環境變數，優先外部Vault整合。</td>
+<td>Cluster設定、Secrets掃描。</td>
+</tr>
+<tr>
+<td>Network Policy</td>
+<td>生產命名空間應限制Pod間通訊與外部連線。</td>
+<td>Network Policy檢查。</td>
+</tr>
+<tr>
+<td>API Server安全</td>
+<td>限制API Server暴露，啟用審計日誌、強認證與版本更新。</td>
+<td>Cluster審計報告。</td>
+</tr>
+<tr>
+<td>IaC與Helm</td>
+<td>部署檔需版本控管、審查、掃描與簽核。</td>
+<td>Repo、PR、Pipeline紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 應用系統、API與SaaS組態要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>組態項目</th>
+<th>最低要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>認證與Session</td>
+<td>應使用核准認證機制、MFA或SSO，Session Timeout、Secure Cookie與CSRF防護需正確。</td>
+<td>安全測試、組態檢查。</td>
+</tr>
+<tr>
+<td>TLS與安全Header</td>
+<td>應啟用TLS、HSTS、CSP、X-Frame-Options或等效安全Header。</td>
+<td>DAST、Header掃描。</td>
+</tr>
+<tr>
+<td>API安全</td>
+<td>API需認證授權、Rate Limit、Input Validation、CORS限制、錯誤訊息控管。</td>
+<td>API Gateway設定、安全測試。</td>
+</tr>
+<tr>
+<td>錯誤與除錯</td>
+<td>正式環境不得顯示詳細錯誤、Stack Trace、Debug Mode或敏感資訊。</td>
+<td>滲透測試、組態檢查。</td>
+</tr>
+<tr>
+<td>上傳與檔案處理</td>
+<td>限制檔案類型、大小、掃描惡意檔案、隔離儲存與授權下載。</td>
+<td>應用測試、WAF規則。</td>
+</tr>
+<tr>
+<td>SaaS外部分享</td>
+<td>預設限制外部分享、Guest Access、公開連結與下載。</td>
+<td>SaaS管理後台報表。</td>
+</tr>
+<tr>
+<td>SaaS Audit Log</td>
+<td>重要SaaS需啟用審計日誌並接入SIEM或保存。</td>
+<td>Audit Log設定。</td>
+</tr>
+<tr>
+<td>AI功能設定</td>
+<td>SaaS內建AI功能需確認資料使用、訓練、保存、外部分享與權限繼承。</td>
+<td>AI服務審查、SaaS設定。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. AI、RAG與MLOps安全組態要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>組態項目</th>
+<th>最低要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI服務資料使用</td>
+<td>外部AI服務應關閉或限制資料用於訓練，明確Prompt/輸入保存期限。</td>
+<td>供應商設定、DPA、服務條款。</td>
+</tr>
+<tr>
+<td>AI API Key</td>
+<td>AI API Key不得硬編碼，需保存於Secrets Manager並設定Scope、到期與用量監控。</td>
+<td>Vault紀錄、API報表。</td>
+</tr>
+<tr>
+<td>Prompt與輸出日誌</td>
+<td>Prompt與輸出若保存，應依資料分類管控並遮罩Secrets與PII。</td>
+<td>日誌抽查、DLP規則。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>RAG資料源需權限繼承、索引範圍控管、刪除同步與越權檢索測試。</td>
+<td>RAG安全測試、權限測試。</td>
+</tr>
+<tr>
+<td>向量資料庫</td>
+<td>限制網路存取、加密、身分驗證、備份與刪除機制。</td>
+<td>組態檢查、滲透測試。</td>
+</tr>
+<tr>
+<td>AI Agent工具</td>
+<td>工具調用需白名單、最小權限、人工確認、高風險操作禁止或審批。</td>
+<td>Agent設定、操作日誌。</td>
+</tr>
+<tr>
+<td>MLOps平台</td>
+<td>模型Registry、Feature Store、Notebook、Pipeline需RBAC、Secrets管理、日誌與環境隔離。</td>
+<td>MLOps組態報告。</td>
+</tr>
+<tr>
+<td>模型部署</td>
+<td>模型服務需版本控管、回滾、監控、存取控制與濫用偵測。</td>
+<td>部署紀錄、監控報表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 組態變更與漂移管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>變更申請</td>
+<td>安全組態變更應透過變更流程提出，記錄原因、風險、影響、測試與回復方式。</td>
+<td>變更單。</td>
+</tr>
+<tr>
+<td>風險審查</td>
+<td>涉及關閉安全控制、暴露網路、擴大權限、降低加密或停用日誌者需CISO審查。</td>
+<td>安全審查紀錄。</td>
+</tr>
+<tr>
+<td>測試驗證</td>
+<td>變更應於測試或預備環境驗證，確認不破壞安全控制或服務可用性。</td>
+<td>測試紀錄。</td>
+</tr>
+<tr>
+<td>自動化部署</td>
+<td>基礎設施與雲端組態應優先使用IaC與Pipeline部署，避免人工直接修改。</td>
+<td>IaC Repo、Pipeline紀錄。</td>
+</tr>
+<tr>
+<td>漂移偵測</td>
+<td>定期偵測實際組態與核准基準或IaC不一致情形。</td>
+<td>CSPM、Config、Drift報告。</td>
+</tr>
+<tr>
+<td>未授權變更</td>
+<td>偵測未授權組態變更應立即調查，必要時啟動事件管理。</td>
+<td>告警與事件紀錄。</td>
+</tr>
+<tr>
+<td>回復機制</td>
+<td>重要組態需備份與可回復版本，變更失敗時可回復。</td>
+<td>組態備份、回復測試。</td>
+</tr>
+<tr>
+<td>變更後確認</td>
+<td>變更完成後需確認安全掃描、日誌、告警與服務狀態正常。</td>
+<td>變更後檢查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 組態偏差分級與處理時限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>偏差等級</th>
+<th>判定條件</th>
+<th>處理時限</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>造成網際網路公開暴露、特權過寬、加密關閉、日誌關閉、資料庫公開、Secrets暴露、可被立即利用之重大錯誤組態。</td>
+<td>立即處理，原則24小時內修正或隔離。</td>
+<td>通報CISO，必要時啟動事件管理或風險接受。</td>
+</tr>
+<tr>
+<td>High</td>
+<td>可能導致未授權存取、資料外洩、橫向移動、重要服務中斷或重大合規缺口。</td>
+<td>7日內修正或提出補償控制。</td>
+<td>建立修正工單，逾期升級。</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>降低安全防護但尚無立即重大暴露，可能被結合其他弱點利用。</td>
+<td>30日內修正。</td>
+<td>追蹤改善與週期性報告。</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>最佳實務偏差、文件不一致、低風險設定未符合建議值。</td>
+<td>90日內修正或納入改善計畫。</td>
+<td>定期追蹤。</td>
+</tr>
+<tr>
+<td>Accepted Exception</td>
+<td>經核准之偏差，具補償控制、期限、Owner與重評。</td>
+<td>依核准期限。</td>
+<td>不得無期限例外，需定期重評。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 安全組態例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法套用安全基準</td>
+<td>需說明技術限制、業務必要性、風險、補償控制與改善計畫。</td>
+<td>CISO / Platform Owner</td>
+<td>最長90日，高風險每30日重評。</td>
+</tr>
+<tr>
+<td>需公開服務或管理介面</td>
+<td>需來源限制、MFA、WAF/VPN/ZTNA、日誌、弱點掃描與攻擊面監控。</td>
+<td>CISO / Network Owner</td>
+<td>短期核准，定期檢查。</td>
+</tr>
+<tr>
+<td>需停用日誌或監控</td>
+<td>原則不允許；需替代日誌、暫時性原因與恢復期限。</td>
+<td>CISO / SOC Owner</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>需降低加密或使用弱協定</td>
+<td>原則不允許；若因相容性限制，需隔離、期限與替代計畫。</td>
+<td>CISO / Legal（如涉合規）</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>需過寬權限</td>
+<td>需最小化期間、範圍、審計與使用後撤銷。</td>
+<td>CISO / IAM Owner</td>
+<td>單次或短期。</td>
+</tr>
+<tr>
+<td>供應商無法符合組態要求</td>
+<td>需供應商風險評估、合約補償、監控與退場計畫。</td>
+<td>CISO / Supplier Management / Legal</td>
+<td>續約前重評。</td>
+</tr>
+<tr>
+<td>AI服務設定受供應商限制</td>
+<td>需限制資料分類、DLP、人工覆核、資料不訓練條款與風險接受。</td>
+<td>AI Governance / CISO</td>
+<td>依AI風險設定。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 安全組態檢查清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查領域</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄</td>
+<td>目標資產是否已登錄Owner、環境、資料分類、風險等級與服務用途？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>基準套用</td>
+<td>是否已套用對應平台之核准安全基準？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>帳號、Role、ACL、API Scope與服務權限是否符合最小權限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>管理介面</td>
+<td>管理介面是否限制來源、啟用MFA、使用安全協定並納入日誌？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>加密</td>
+<td>傳輸、儲存、備份及敏感資料是否啟用加密與金鑰管理？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌</td>
+<td>登入、管理操作、權限變更、資料存取與安全事件日誌是否啟用？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>網路暴露</td>
+<td>是否避免不必要公開連接埠、公開儲存、公開資料庫或0.0.0.0/0高風險規則？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點與版本</td>
+<td>是否使用受支援版本且未存在逾期Critical/High弱點？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>是否無硬編碼Secrets、明文金鑰、長效高權限Access Key或未受控Token？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>關鍵系統是否有備份、刪除保護、不可變備份或復原測試？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監控告警</td>
+<td>高風險組態變更、控制停用、公開暴露與異常存取是否有告警？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>不符合項是否已有修正計畫、補償控制、核准與期限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 安全組態基準清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>基準編號</th>
+<th>基準名稱</th>
+<th>適用平台 / 資產</th>
+<th>版本</th>
+<th>Owner</th>
+<th>參考來源</th>
+<th>最近審查日</th>
+<th>下次審查日</th>
+<th>狀態</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CFG-BSL-0001</td>
+<td>作業系統安全基準</td>
+<td></td>
+<td>V1.0</td>
+<td></td>
+<td>□ CIS □ STIG □ 供應商 □ 組織自訂</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 草案 □ 核准 □ 修訂中 □ 停用</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-BSL-0002</td>
+<td>雲端帳號安全基準</td>
+<td></td>
+<td>V1.0</td>
+<td></td>
+<td>□ CIS □ CSA CCM □ 供應商 □ 組織自訂</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 草案 □ 核准 □ 修訂中 □ 停用</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-BSL-0003</td>
+<td>Kubernetes安全基準</td>
+<td></td>
+<td>V1.0</td>
+<td></td>
+<td>□ CIS □ NSA/CISA □ 供應商 □ 組織自訂</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 草案 □ 核准 □ 修訂中 □ 停用</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-BSL-0004</td>
+<td>SaaS安全基準</td>
+<td></td>
+<td>V1.0</td>
+<td></td>
+<td>□ CSA CCM □ 供應商 □ 組織自訂</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 草案 □ 核准 □ 修訂中 □ 停用</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-BSL-0005</td>
+<td>AI服務安全基準</td>
+<td></td>
+<td>V1.0</td>
+<td></td>
+<td>□ ISO 42001 □ OWASP LLM □ MITRE ATLAS □ 組織自訂</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 草案 □ 核准 □ 修訂中 □ 停用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 組態偏差與修正追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>偏差編號</th>
+<th>發現日期</th>
+<th>資產 / 系統</th>
+<th>偏差描述</th>
+<th>偏差等級</th>
+<th>Owner</th>
+<th>修正措施</th>
+<th>期限</th>
+<th>狀態</th>
+<th>驗證結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CFG-DEV-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-DEV-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-DEV-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>CFG-DEV-004</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 安全組態驗證與工具要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>工具 / 方法</th>
+<th>適用範圍</th>
+<th>最低要求</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSPM / CNAPP</td>
+<td>雲端帳號、雲原生資源、容器、Kubernetes。</td>
+<td>持續掃描、風險分級、修正追蹤、例外管理。</td>
+<td>CSPM報告、工單。</td>
+</tr>
+<tr>
+<td>MDM / UEM</td>
+<td>端點、行動裝置、瀏覽器、軟體。</td>
+<td>合規政策、基準套用、加密、EDR、修補狀態。</td>
+<td>端點合規報告。</td>
+</tr>
+<tr>
+<td>弱點掃描</td>
+<td>伺服器、端點、網路、應用、容器。</td>
+<td>定期掃描並與組態偏差關聯。</td>
+<td>弱點掃描報告。</td>
+</tr>
+<tr>
+<td>IaC掃描</td>
+<td>Terraform、CloudFormation、Kubernetes YAML、Helm、Ansible。</td>
+<td>Pipeline中檢查高風險錯誤組態。</td>
+<td>PR或Pipeline報告。</td>
+</tr>
+<tr>
+<td>Policy as Code</td>
+<td>雲端、容器、CI/CD、Kubernetes、應用部署。</td>
+<td>禁止高風險設定進入正式環境。</td>
+<td>Policy執行結果。</td>
+</tr>
+<tr>
+<td>SIEM / SOAR</td>
+<td>組態變更、控制停用、未授權操作、公開暴露。</td>
+<td>接收告警、關聯分析與事件升級。</td>
+<td>SIEM告警紀錄。</td>
+</tr>
+<tr>
+<td>手動審查</td>
+<td>特殊系統、供應商平台、例外項目。</td>
+<td>使用核准檢查表，留下審查證據。</td>
+<td>檢查表、截圖或報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全組態基準</td>
+<td>基準版本、設定項目、參考來源、核准、審查與修訂紀錄。</td>
+<td>Configuration Management Owner</td>
+<td>基準有效期間及停用後至少3年。</td>
+</tr>
+<tr>
+<td>組態掃描報告</td>
+<td>CSPM、MDM、弱點掃描、IaC掃描、Policy as Code、手動檢查結果。</td>
+<td>Platform Owner / Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>組態偏差紀錄</td>
+<td>偏差描述、風險等級、Owner、修正期限、補償控制、驗證與關閉。</td>
+<td>Configuration Management Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>組態變更紀錄</td>
+<td>變更申請、測試、核准、部署、回復、變更後驗證。</td>
+<td>Change Owner / Platform Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>安全組態事件紀錄</td>
+<td>未授權變更、錯誤組態事件、公開暴露、控制停用與事件處置。</td>
+<td>Incident Manager / SOC</td>
+<td>至少3至7年，依事件等級。</td>
+</tr>
+<tr>
+<td>稽核證據</td>
+<td>抽查底稿、管理審查輸入、KPI/KRI、改善追蹤與稽核發現。</td>
+<td>ISMS管理代表 / Internal Auditor</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全基準覆蓋率</td>
+<td>已有核准安全基準之資產類型 / 應建立基準之資產類型。</td>
+<td>目標100%。</td>
+<td>基準治理完整性。</td>
+</tr>
+<tr>
+<td>組態合規率</td>
+<td>符合安全基準之資產 / 應符合資產。</td>
+<td>依資產類型設定，高風險資產目標100%。</td>
+<td>控制有效性。</td>
+</tr>
+<tr>
+<td>Critical偏差數</td>
+<td>未關閉Critical組態偏差數。</td>
+<td>目標0。</td>
+<td>重大風險管理。</td>
+</tr>
+<tr>
+<td>High偏差逾期率</td>
+<td>超過期限未處理之High偏差比例。</td>
+<td>目標0或持續下降。</td>
+<td>修正效率。</td>
+</tr>
+<tr>
+<td>未授權組態變更數</td>
+<td>偵測到未經變更流程之組態變更數。</td>
+<td>重大變更立即調查。</td>
+<td>變更管制有效性。</td>
+</tr>
+<tr>
+<td>雲端高風險錯誤組態數</td>
+<td>CSPM偵測之高風險雲端錯誤設定數。</td>
+<td>Critical目標0。</td>
+<td>雲端風險監控。</td>
+</tr>
+<tr>
+<td>公開暴露資產數</td>
+<td>不應公開但公開暴露之儲存、資料庫、管理介面或服務數。</td>
+<td>目標0。</td>
+<td>攻擊面管理。</td>
+</tr>
+<tr>
+<td>例外逾期數</td>
+<td>超過核准期限未重評或未關閉之組態例外數。</td>
+<td>目標0。</td>
+<td>例外風險控制。</td>
+</tr>
+<tr>
+<td>IaC掃描阻擋數</td>
+<td>Pipeline阻擋之高風險組態部署次數。</td>
+<td>趨勢分析與開發改善。</td>
+<td>預防性控制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>基準建立</td>
+<td>重要平台是否建立核准安全組態基準且版本受控。</td>
+<td>基準文件、核准紀錄。</td>
+</tr>
+<tr>
+<td>基準套用</td>
+<td>新系統與正式環境是否套用安全基準並於上線前完成檢查。</td>
+<td>上線檢查、掃描報告。</td>
+</tr>
+<tr>
+<td>雲端與SaaS組態</td>
+<td>雲端、SaaS、AI服務是否啟用IAM、日誌、加密、資料限制與公開暴露控制。</td>
+<td>CSPM、SaaS設定、AI服務審查。</td>
+</tr>
+<tr>
+<td>組態漂移</td>
+<td>是否定期偵測漂移與未授權變更，並追蹤修正。</td>
+<td>漂移報告、變更單。</td>
+</tr>
+<tr>
+<td>偏差處理</td>
+<td>組態偏差是否分級、指定Owner、期限、補償控制與驗證關閉。</td>
+<td>偏差追蹤表、修正證據。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否具風險評估、CISO核准、期限、重評與風險接受。</td>
+<td>例外紀錄、風險接受。</td>
+</tr>
+<tr>
+<td>自動化控制</td>
+<td>IaC、Policy as Code、CSPM、MDM或CI/CD是否阻擋高風險錯誤組態。</td>
+<td>Pipeline報告、工具設定。</td>
+</tr>
+<tr>
+<td>事件連動</td>
+<td>錯誤組態造成或可能造成事件時，是否啟動事件程序與CAPA。</td>
+<td>事件紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大偏差、例外與改善是否納入管理審查。</td>
+<td>管理審查輸入、會議紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄A：安全組態上線前檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查內容</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產與Owner</td>
+<td>已登錄資產、指定Owner、確認資料分類與風險等級。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>安全基準</td>
+<td>已套用對應安全基準並完成掃描。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>IAM與權限</td>
+<td>已確認最小權限、MFA、特權控管與服務帳號。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>網路暴露</td>
+<td>已確認公開暴露、連接埠、防火牆、WAF、Private Endpoint或VPN/ZTNA。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>加密與金鑰</td>
+<td>已啟用傳輸/儲存加密、KMS與Secrets管理。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>已啟用必要日誌並接入SIEM或保存。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td>無逾期Critical/High弱點，或已有核准補償控制。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>關鍵資料與服務已設定備份、復原與刪除保護。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>DLP與資料保護</td>
+<td>已依資料分類設定資料保護、遮罩、刪除與外傳限制。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>例外核准</td>
+<td>未符合項已完成例外、風險接受或修正計畫。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

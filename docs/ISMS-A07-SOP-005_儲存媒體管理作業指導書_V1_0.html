@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-SOP-005 儲存媒體管理作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border: 1px solid #999; padding: 12px; background: #fafafa; margin: 12px 0; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-SOP-005 儲存媒體管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-SOP-005</td>
+<td>儲存媒體管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-SOP-005</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>IT Asset Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資訊安全負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT營運主管 / 端點與備份管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>實體安全負責人 / 場所管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS審查</td>
+<td></td>
+<td>BCMS / DRP負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範組織儲存媒體之申請、採購、配置、標示、使用、保管、攜出、傳輸、備份、盤點、維護、汰換、抹除、銷毀、事件通報與稽核要求，確保儲存媒體於完整生命週期中維持資訊之機密性、完整性、可用性、可追溯性與合規性。</p>
+<p>本文件同時支援 ISO/IEC 27001:2022 Annex A.7.10「Storage media」之落地執行，並與資訊分類、資產管理、存取控制、資料外洩防護、備份、事件管理、數位證據保存、供應商管理、隱私保護與營運持續管理整合，以形成可稽核、可驗證、可追蹤之企業級媒體管理控制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有儲存媒體應納入資產管理、分類標示、責任歸屬、授權使用、保存保護、盤點與處置控制。</li>
+<li>儲存機密、高機密、PII、客戶資料、AI模型資料、Prompt、金鑰、原始碼、事件證據、備份資料或合約限制資料之媒體，應採加密、存取限制、實體保護及完整紀錄。</li>
+<li>可攜式媒體原則上不得作為常態資料傳輸或保存工具；必要使用時，應事前核准、加密、標示、登錄、限定目的與期限。</li>
+<li>媒體離開受控區域、交付第三方、送修、報廢或銷毀前，應完成資料抹除、加密狀態確認或保全交接，並保留證據。</li>
+<li>媒體遺失、遭竊、未授權存取、誤用、未按規定抹除、未按規定銷毀或疑似外洩時，應依資訊安全事件管理程序立即通報。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>儲存媒體</td>
+<td>可保存或承載數位資訊之實體或邏輯媒介，包括固定式、可攜式、可移除式、虛擬化、雲端與備份媒體。</td>
+</tr>
+<tr>
+<td>可攜式媒體</td>
+<td>可由人員攜帶、移動或交接之儲存媒體，例如 USB、外接硬碟、記憶卡、磁帶、光碟或加密行動硬碟。</td>
+</tr>
+<tr>
+<td>受控媒體</td>
+<td>已完成登錄、分類、Owner指定、存取授權、保護措施、使用目的與保存/處置要求之媒體。</td>
+</tr>
+<tr>
+<td>媒體Owner</td>
+<td>對媒體使用目的、資料分類、授權、風險、保存期限與處置決策負責之角色。</td>
+</tr>
+<tr>
+<td>媒體Custodian</td>
+<td>負責媒體實際保管、操作、盤點、搬運、交接、維護或執行處置之角色。</td>
+</tr>
+<tr>
+<td>清除（Clear）</td>
+<td>透過邏輯方式移除資料，使一般軟體工具無法復原資料，適用低風險或重複使用情境。</td>
+</tr>
+<tr>
+<td>淨化（Purge）</td>
+<td>使用密碼抹除、覆寫、消磁、加密金鑰銷毀或其他強化方法，使資料無法以實驗室方法合理復原。</td>
+</tr>
+<tr>
+<td>銷毀（Destroy）</td>
+<td>以物理破壞、粉碎、熔毀、切割、穿孔或經核准第三方處置方式，使媒體不再可用且資料不可復原。</td>
+</tr>
+<tr>
+<td>Chain of Custody</td>
+<td>媒體或證據於保存、移交、分析、送修、銷毀或交付第三方過程中之完整保管鏈紀錄。</td>
+</tr>
+<tr>
+<td>加密金鑰銷毀</td>
+<td>透過銷毀或失效加密金鑰使受加密保護之資料無法解密之處置方式。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大媒體風險接受、重大資料外洩處理、重大供應商處置與資源配置。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定媒體安全控制要求，核准高風險例外、媒體遺失處理與高機密媒體處置。</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>維護本文件，追蹤稽核、KPI/KRI、風險登錄、矯正措施與管理審查輸入。</td>
+</tr>
+<tr>
+<td>IT Asset Owner</td>
+<td>建立媒體資產清冊，管制媒體採購、發放、盤點、回收、汰換與報廢。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>判定媒體內資料分類、使用目的、授權、保存期限、抹除或銷毀要求。</td>
+</tr>
+<tr>
+<td>Media Custodian</td>
+<td>負責媒體日常保管、交接、標示、物理保護、盤點與使用紀錄維護。</td>
+</tr>
+<tr>
+<td>IT Operations / Endpoint 管理</td>
+<td>執行加密、DLP、裝置控制、惡意軟體掃描、媒體掛載限制與技術紀錄保存。</td>
+</tr>
+<tr>
+<td>Backup Owner</td>
+<td>管理備份媒體、備份磁帶、離線備份、異地保存、加密與復原測試。</td>
+</tr>
+<tr>
+<td>實體安全負責人</td>
+<td>管理媒體保存場所、保險櫃、機房、倉庫、門禁、監控、環境與訪客控制。</td>
+</tr>
+<tr>
+<td>SOC / 資安監控</td>
+<td>監控可攜式媒體使用、DLP告警、端點異常、資料外洩與違規事件。</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人</td>
+<td>審查含PII媒體之保存、傳輸、遺失、銷毀、跨境與資料主體權利影響。</td>
+</tr>
+<tr>
+<td>供應商管理 / 法務</td>
+<td>確保送修、回收、銷毀、雲端或外包媒體處理具合約、保密、證明與稽核權。</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>依授權使用媒體、妥善保護、禁止未核准媒體、不得私自複製或攜出資料，並通報異常。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 儲存媒體分類與管制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>媒體類別</th>
+<th>範例</th>
+<th>最低管制要求</th>
+<th>主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>固定式端點媒體</td>
+<td>桌機硬碟、筆電SSD、工作站儲存裝置。</td>
+<td>全碟加密、端點防護、資產登錄、帳號授權、遺失通報與退役抹除。</td>
+<td>資產清冊、加密狀態、端點管理紀錄。</td>
+</tr>
+<tr>
+<td>伺服器與資料中心媒體</td>
+<td>伺服器硬碟、SAN/NAS、RAID陣列、HCI儲存。</td>
+<td>機房受控、權限分離、加密、維護紀錄、故障硬碟留置或受控銷毀。</td>
+<td>機房紀錄、維護紀錄、銷毀證明。</td>
+</tr>
+<tr>
+<td>可攜式媒體</td>
+<td>USB、外接硬碟、記憶卡、光碟、磁帶。</td>
+<td>事前核准、加密、標示、登錄、期限、交接、DLP與使用後回收。</td>
+<td>申請紀錄、交接紀錄、回收紀錄。</td>
+</tr>
+<tr>
+<td>備份媒體</td>
+<td>備份磁帶、離線硬碟、異地備份媒體。</td>
+<td>加密、封存、異地保存、盤點、復原測試、保存期限與銷毀證明。</td>
+<td>備份紀錄、盤點紀錄、復原測試。</td>
+</tr>
+<tr>
+<td>行動與智慧裝置媒體</td>
+<td>手機、平板、相機、錄音設備、IoT設備儲存。</td>
+<td>MDM/MAM、加密、遠端清除、資料同步限制、回收抹除。</td>
+<td>MDM紀錄、抹除紀錄。</td>
+</tr>
+<tr>
+<td>虛擬與雲端媒體</td>
+<td>虛擬磁碟、快照、容器映像、雲端物件儲存。</td>
+<td>資產登錄、IAM最小權限、加密、生命週期、版本控管、刪除保護與日誌。</td>
+<td>雲端清冊、IAM紀錄、日誌。</td>
+</tr>
+<tr>
+<td>數位證據媒體</td>
+<td>鑑識映像、日誌匯出、事件證據硬碟。</td>
+<td>Chain of Custody、唯讀保護、Hash、隔離保存、限定存取。</td>
+<td>證據保存紀錄、Hash紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 媒體生命週期控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>生命週期階段</th>
+<th>控制要求</th>
+<th>責任角色</th>
+<th>紀錄 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求提出</td>
+<td>確認使用目的、資料分類、容量、保存期限、使用地點、是否可替代為受控雲端或DMS。</td>
+<td>申請人 / Data Owner</td>
+<td>媒體申請紀錄。</td>
+</tr>
+<tr>
+<td>採購與接收</td>
+<td>採購核准型號，檢查來源、序號、保固、供應商可信度與安全功能。</td>
+<td>採購 / IT Asset Owner</td>
+<td>採購紀錄、驗收紀錄。</td>
+</tr>
+<tr>
+<td>登錄與標示</td>
+<td>登錄資產編號、媒體類型、序號、Owner、Custodian、資料分類、加密狀態與保存地點。</td>
+<td>IT Asset Owner</td>
+<td>媒體資產清冊。</td>
+</tr>
+<tr>
+<td>配置與授權</td>
+<td>依最小權限配置，確認加密、密碼、金鑰、DLP、惡意程式防護與使用期限。</td>
+<td>IT Operations</td>
+<td>配置紀錄、授權紀錄。</td>
+</tr>
+<tr>
+<td>日常使用</td>
+<td>限授權目的使用，不得私自複製、外借、轉交、格式化或改變用途。</td>
+<td>使用者 / Custodian</td>
+<td>使用紀錄、DLP紀錄。</td>
+</tr>
+<tr>
+<td>盤點與審查</td>
+<td>定期核對媒體實體、清冊、保管人、位置、加密狀態、資料分類與使用必要性。</td>
+<td>IT Asset Owner / ISMS</td>
+<td>盤點紀錄、差異處理。</td>
+</tr>
+<tr>
+<td>維修與送修</td>
+<td>送修前完成資料移除、加密確認或留置硬碟；必要送外時需合約與保密控制。</td>
+<td>IT Operations / 法務</td>
+<td>送修紀錄、保密承諾。</td>
+</tr>
+<tr>
+<td>回收與退役</td>
+<td>離職、異動、目的完成或媒體汰換時回收，並依資料分類決定清除、淨化或銷毀。</td>
+<td>HR / IT Asset Owner</td>
+<td>回收紀錄、抹除紀錄。</td>
+</tr>
+<tr>
+<td>報廢與銷毀</td>
+<td>依核准方式處置，保存銷毀證明、序號清單、見證紀錄與供應商證書。</td>
+<td>IT Asset Owner / 供應商</td>
+<td>銷毀證明、報廢核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 媒體申請、核准與發放作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業步驟</th>
+<th>作業要求</th>
+<th>必要欄位 / 檢核內容</th>
+<th>輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>提出申請</td>
+<td>申請人應說明業務目的、替代方案評估、使用期間與資料分類。</td>
+<td>申請人、部門、媒體類型、容量、用途、資料分類、預計歸還日。</td>
+<td>媒體使用申請。</td>
+</tr>
+<tr>
+<td>資料Owner審查</td>
+<td>確認資料是否需儲存於媒體、是否可最小化、是否含PII或高機密資料。</td>
+<td>資料範圍、資料量、分類、保護要求、保存期限。</td>
+<td>Data Owner核准紀錄。</td>
+</tr>
+<tr>
+<td>資安審查</td>
+<td>機密以上、PII、跨境、供應商交付或例外媒體使用需資安審查。</td>
+<td>加密、DLP、通報、遺失處理、風險等級。</td>
+<td>CISO/資安核准紀錄。</td>
+</tr>
+<tr>
+<td>技術配置</td>
+<td>配置媒體加密、密碼、端點控制、標示與惡意程式掃描。</td>
+<td>加密狀態、序號、資產編號、Owner、Custodian。</td>
+<td>配置紀錄。</td>
+</tr>
+<tr>
+<td>發放交接</td>
+<td>交付時完成簽收、使用規則告知、歸還期限與違規責任確認。</td>
+<td>交付人、接收人、時間、地點、媒體狀態。</td>
+<td>媒體交接紀錄。</td>
+</tr>
+<tr>
+<td>到期追蹤</td>
+<td>媒體到期前提醒歸還或申請展延；逾期應升級通知主管。</td>
+<td>到期日、展延理由、再核准。</td>
+<td>追蹤紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 標示、保管與實體保護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>注意事項</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體標示</td>
+<td>媒體外部應標示資產編號、分類代碼、Owner或保管單位；不得標示可暴露敏感內容之細節。</td>
+<td>高機密媒體可使用代碼化標示，避免顯示客戶名稱或案件名稱。</td>
+<td>資產標籤、清冊。</td>
+</tr>
+<tr>
+<td>安全保存</td>
+<td>未使用媒體應存放於上鎖櫃、保險箱、機房、受控倉庫或其他經核准場所。</td>
+<td>機密以上媒體不得留置於桌面、車輛、公共場所或未受控區域。</td>
+<td>場所檢查紀錄。</td>
+</tr>
+<tr>
+<td>環境保護</td>
+<td>備份磁帶、硬碟與長期封存媒體應考量溫濕度、防火、防水、防塵、防磁與防震。</td>
+<td>必要時採異地保存或防火資料櫃。</td>
+<td>環境監測紀錄。</td>
+</tr>
+<tr>
+<td>存取限制</td>
+<td>媒體保存區應限制授權人員進入，保存進出紀錄或監控紀錄。</td>
+<td>訪客或供應商接觸媒體需陪同與登錄。</td>
+<td>門禁紀錄、訪客紀錄。</td>
+</tr>
+<tr>
+<td>攜出保護</td>
+<td>媒體攜出受控區域需核准、加密、封裝、簽收與目的地確認。</td>
+<td>不得以無人看管方式寄放或交付。</td>
+<td>攜出申請、交接紀錄。</td>
+</tr>
+<tr>
+<td>長期封存</td>
+<td>封存媒體應標示保存期限、解封條件、Owner、版本與銷毀到期日。</td>
+<td>應定期檢查可讀性與保存條件。</td>
+<td>封存清冊、檢查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 加密、金鑰與存取控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低要求</th>
+<th>適用情境</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>全碟加密</td>
+<td>筆電、可攜式硬碟、USB及含機密以上資料之媒體應啟用全碟或等效加密。</td>
+<td>端點、可攜式媒體、外接媒體。</td>
+<td>加密狀態報告。</td>
+</tr>
+<tr>
+<td>檔案/容器加密</td>
+<td>需跨系統或外部交付時，可使用受控加密容器、PGP或壓縮檔加密，密碼分離傳送。</td>
+<td>外部交付、供應商傳輸。</td>
+<td>傳輸與密碼交付紀錄。</td>
+</tr>
+<tr>
+<td>金鑰管理</td>
+<td>加密金鑰應由核准工具管理，避免與媒體同置；金鑰應有Owner、備援與撤銷機制。</td>
+<td>備份媒體、伺服器、雲端儲存。</td>
+<td>KMS/Vault紀錄。</td>
+</tr>
+<tr>
+<td>端點裝置控制</td>
+<td>未核准USB與外接媒體應由端點控管阻擋或唯讀；例外需核准。</td>
+<td>員工端點與伺服器。</td>
+<td>EDR/DLP/MDM政策。</td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>媒體存取應限授權人員、必要期間與必要資料；不得共用帳號或密碼。</td>
+<td>機密媒體、備份媒體、證據媒體。</td>
+<td>授權紀錄。</td>
+</tr>
+<tr>
+<td>金鑰銷毀</td>
+<td>採加密刪除時，應確認金鑰不可復原，並保存銷毀授權與執行紀錄。</td>
+<td>雲端媒體、虛擬磁碟、大量加密媒體。</td>
+<td>金鑰銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 可攜式媒體使用限制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>允許條件</th>
+<th>禁止事項</th>
+<th>核准要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般內部文件暫存</td>
+<td>僅限核准媒體、內部資料、短期使用、完成後刪除。</td>
+<td>不得長期保存、轉借或使用個人媒體。</td>
+<td>部門主管或Owner核准。</td>
+</tr>
+<tr>
+<td>機密資料搬移</td>
+<td>需加密、登錄、簽收、資料最小化、使用期限與回收確認。</td>
+<td>不得未加密、不得交由未授權人員攜帶。</td>
+<td>Data Owner與資安核准。</td>
+</tr>
+<tr>
+<td>高機密/PII資料</td>
+<td>原則上避免使用；必要時需使用公司核准加密媒體並採雙人覆核。</td>
+<td>不得使用一般USB、個人硬碟或未受控媒體。</td>
+<td>CISO / DPO核准。</td>
+</tr>
+<tr>
+<td>供應商資料交換</td>
+<td>需合約、保密、交接、完整性檢查與回收/銷毀證明。</td>
+<td>不得未簽收、未加密或未確認收件方。</td>
+<td>供應商管理與法務核准。</td>
+</tr>
+<tr>
+<td>緊急營運持續用途</td>
+<td>需BCMS/DRP授權，使用後補登錄、補審查與補強控制。</td>
+<td>不得以緊急為由規避通報與事後追蹤。</td>
+<td>BCMS/IT主管核准。</td>
+</tr>
+<tr>
+<td>數位證據保存</td>
+<td>需使用唯讀、封存、Hash與Chain of Custody控制。</td>
+<td>不得在證據媒體上直接分析或修改原始內容。</td>
+<td>事件指揮官/資安核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 媒體傳輸、交接與攜出作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>攜出申請</td>
+<td>載明媒體編號、資料分類、目的、目的地、攜出人、接收人、期間與回收日期。</td>
+<td>申請人 / Owner</td>
+<td>攜出申請紀錄。</td>
+</tr>
+<tr>
+<td>封裝與標示</td>
+<td>使用防拆封裝、封條、外部代碼化標示與收件資訊；避免暴露敏感內容。</td>
+<td>Custodian</td>
+<td>封裝照片或交接紀錄。</td>
+</tr>
+<tr>
+<td>交接簽收</td>
+<td>交付、接收、轉交、退回均需記錄人員、時間、地點、媒體狀態與封條狀態。</td>
+<td>交付人 / 接收人</td>
+<td>交接簽收紀錄。</td>
+</tr>
+<tr>
+<td>運送方式</td>
+<td>依分類選擇專人、掛號、受信任快遞、保全運送或雙人交接。</td>
+<td>Owner / 實體安全</td>
+<td>運送追蹤紀錄。</td>
+</tr>
+<tr>
+<td>完整性確認</td>
+<td>接收後確認封條、序號、Hash、檔案數、磁帶標籤或備份校驗結果。</td>
+<td>接收人 / IT</td>
+<td>接收確認紀錄。</td>
+</tr>
+<tr>
+<td>回收關閉</td>
+<td>目的完成後回收媒體，確認資料處置、清冊更新與使用案件關閉。</td>
+<td>IT Asset Owner</td>
+<td>回收與關閉紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 備份媒體管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>頻率 / 時機</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份媒體登錄</td>
+<td>記錄媒體編號、系統、資料分類、備份日期、保存期限、地點、Owner與加密狀態。</td>
+<td>每次備份產生或媒體更換時。</td>
+<td>備份媒體清冊。</td>
+</tr>
+<tr>
+<td>加密與保護</td>
+<td>備份媒體應加密，金鑰與媒體分離保存，並限制復原權限。</td>
+<td>持續。</td>
+<td>備份設定、KMS紀錄。</td>
+</tr>
+<tr>
+<td>異地保存</td>
+<td>關鍵系統備份媒體應依BCMS要求異地保存，並考量RTO/RPO與災害風險。</td>
+<td>依備份策略。</td>
+<td>異地交接紀錄。</td>
+</tr>
+<tr>
+<td>復原測試</td>
+<td>定期驗證備份媒體可讀性、完整性與復原程序有效性。</td>
+<td>至少每年或依系統關鍵性。</td>
+<td>復原測試報告。</td>
+</tr>
+<tr>
+<td>保留與到期</td>
+<td>依法規、合約、業務與資料分類設定保存期限，到期後安全銷毀。</td>
+<td>定期審查。</td>
+<td>保存期限清冊、銷毀紀錄。</td>
+</tr>
+<tr>
+<td>磁帶輪替</td>
+<td>磁帶應依週期輪替，淘汰老化或錯誤率異常媒體。</td>
+<td>依備份政策。</td>
+<td>磁帶輪替紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 雲端、虛擬媒體與快照管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>媒體型態</th>
+<th>控制要求</th>
+<th>風險考量</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端物件儲存</td>
+<td>啟用加密、IAM最小權限、公開存取阻擋、版本控管、生命週期與存取日誌。</td>
+<td>公開暴露、跨區複製、誤刪、未授權下載。</td>
+<td>雲端設定截圖、日誌。</td>
+</tr>
+<tr>
+<td>虛擬磁碟</td>
+<td>登錄系統與Owner，限制掛載、快照、複製、匯出與刪除權限。</td>
+<td>快照殘留資料、複製失控、權限過大。</td>
+<td>雲端資產清冊、IAM紀錄。</td>
+</tr>
+<tr>
+<td>資料庫快照</td>
+<td>記錄來源、時間、資料分類、用途與保存期限；含PII需遮罩或限制存取。</td>
+<td>生產資料外洩、測試環境濫用。</td>
+<td>快照清冊、核准紀錄。</td>
+</tr>
+<tr>
+<td>容器與映像</td>
+<td>不得將Secrets、憑證、PII或敏感設定寫入映像；映像需掃描與簽章。</td>
+<td>秘密資訊外洩、供應鏈污染。</td>
+<td>映像掃描報告。</td>
+</tr>
+<tr>
+<td>AI資料與模型媒體</td>
+<td>模型、訓練資料、向量資料庫、Prompt資料應納入清冊、版本與存取控制。</td>
+<td>模型外洩、資料重識別、Prompt洩漏。</td>
+<td>AI資產清冊、版本紀錄。</td>
+</tr>
+<tr>
+<td>雲端刪除</td>
+<td>確認刪除保護、保留政策、金鑰銷毀、備份與跨區副本處理。</td>
+<td>殘留副本、法規保存衝突。</td>
+<td>刪除與金鑰銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 送修、退貨與供應商處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>處理要求</th>
+<th>禁止事項</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>端點送修</td>
+<td>送修前移除資料、完成備份、抹除或確認全碟加密；高風險案件採硬碟留置。</td>
+<td>不得將未加密含敏感資料媒體直接送外。</td>
+<td>送修檢核、加密證據。</td>
+</tr>
+<tr>
+<td>伺服器硬碟故障</td>
+<td>若硬碟含機密以上資料，應優先留置並內部銷毀；供應商需支援保留故障硬碟條款。</td>
+<td>不得未審查即退回原廠。</td>
+<td>硬碟留置紀錄。</td>
+</tr>
+<tr>
+<td>供應商資料處理</td>
+<td>要求NDA、DPA、資料處理限制、事件通報、再委外揭露與銷毀證明。</td>
+<td>不得交付未簽約或未評估供應商。</td>
+<td>合約、供應商評估。</td>
+</tr>
+<tr>
+<td>第三方銷毀</td>
+<td>需核准銷毀方法、見證方式、序號清單、銷毀證明與抽樣驗證。</td>
+<td>不得只以一般廢棄物處理。</td>
+<td>銷毀證明、見證紀錄。</td>
+</tr>
+<tr>
+<td>租賃設備返還</td>
+<td>返還前完成資料清除/淨化、帳號移除、金鑰撤銷與設定重置。</td>
+<td>不得返還仍可存取組織環境之設備。</td>
+<td>返還檢核表。</td>
+</tr>
+<tr>
+<td>跨境送修</td>
+<td>涉及跨境或PII時需法務/DPO審查，必要時禁止或改採硬碟留置。</td>
+<td>不得未確認法規與合約要求即跨境送修。</td>
+<td>法務/DPO審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 媒體清除、淨化與銷毀標準</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料分類 / 情境</th>
+<th>最低處置方式</th>
+<th>適用媒體</th>
+<th>核准與證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開資料媒體重用</td>
+<td>清除、格式化或重新部署前標準初始化。</td>
+<td>低風險端點、測試媒體。</td>
+<td>IT作業紀錄。</td>
+</tr>
+<tr>
+<td>內部資料媒體重用</td>
+<td>受控清除或加密重置，確認無業務資料殘留。</td>
+<td>端點、外接硬碟、虛擬磁碟。</td>
+<td>抹除工具報告。</td>
+</tr>
+<tr>
+<td>機密資料媒體重用</td>
+<td>淨化或加密金鑰銷毀，必要時覆寫驗證。</td>
+<td>硬碟、SSD、備份媒體。</td>
+<td>淨化報告、Owner確認。</td>
+</tr>
+<tr>
+<td>高機密 / PII / 合約限制</td>
+<td>原則採淨化後銷毀或直接物理銷毀；需保留序號與見證紀錄。</td>
+<td>可攜式媒體、伺服器硬碟、磁帶。</td>
+<td>CISO/DPO核准、銷毀證明。</td>
+</tr>
+<tr>
+<td>SSD與快閃媒體</td>
+<td>優先使用廠商安全抹除、加密金鑰銷毀或物理銷毀。</td>
+<td>SSD、USB、記憶卡。</td>
+<td>工具報告、銷毀證明。</td>
+</tr>
+<tr>
+<td>磁帶與光碟</td>
+<td>依分類採消磁、粉碎、切割或物理銷毀。</td>
+<td>磁帶、光碟。</td>
+<td>銷毀批號、照片或證書。</td>
+</tr>
+<tr>
+<td>雲端媒體</td>
+<td>刪除資源、刪除快照、處理備份、撤銷金鑰，確認保留政策與法規保存。</td>
+<td>雲端儲存、虛擬磁碟、快照。</td>
+<td>刪除紀錄、KMS紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 媒體盤點與差異處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>盤點項目</th>
+<th>盤點要求</th>
+<th>頻率</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產存在性</td>
+<td>確認媒體實體存在、序號一致、保管人與位置正確。</td>
+<td>至少每年；高機密與備份媒體至少每半年。</td>
+<td>立即查明，疑似遺失依事件通報。</td>
+</tr>
+<tr>
+<td>分類與標示</td>
+<td>確認標籤、分類、Owner、保存期限與用途仍正確。</td>
+<td>每年或用途變更時。</td>
+<td>更新清冊並補正標示。</td>
+</tr>
+<tr>
+<td>加密狀態</td>
+<td>確認加密啟用、金鑰有效、密碼未共用或失控。</td>
+<td>每半年或例外審查時。</td>
+<td>立即補強或停止使用。</td>
+</tr>
+<tr>
+<td>使用必要性</td>
+<td>確認媒體仍有業務必要，過期或無必要者回收處置。</td>
+<td>每年或專案結束時。</td>
+<td>回收、清除、銷毀或展延核准。</td>
+</tr>
+<tr>
+<td>供應商持有媒體</td>
+<td>確認第三方媒體清冊、保存地、用途、銷毀或返還狀態。</td>
+<td>依合約或至少每年。</td>
+<td>啟動供應商矯正要求。</td>
+</tr>
+<tr>
+<td>備份媒體</td>
+<td>確認備份媒體可讀性、輪替、保存期限、異地狀態與復原測試。</td>
+<td>依BCMS與備份政策。</td>
+<td>更換媒體或更新復原策略。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 媒體遺失、竊盜與異常事件處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件情境</th>
+<th>立即處置</th>
+<th>後續處置</th>
+<th>必要通報 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體遺失或遭竊</td>
+<td>立即通報SOC、主管、Data Owner與CISO，確認媒體內容、加密狀態與最後位置。</td>
+<td>啟動事件分級、風險評估、法規通報判定與矯正措施。</td>
+<td>事件通報紀錄、調查報告。</td>
+</tr>
+<tr>
+<td>未授權媒體接入</td>
+<td>隔離端點、收集日誌、掃描惡意程式、保留媒體。</td>
+<td>分析資料是否外流，檢討端點裝置控制。</td>
+<td>EDR/DLP紀錄。</td>
+</tr>
+<tr>
+<td>媒體未加密</td>
+<td>停止使用並補加密或回收，確認是否已存放敏感資料。</td>
+<td>評估外洩風險與使用者訓練需求。</td>
+<td>補救紀錄、教育紀錄。</td>
+</tr>
+<tr>
+<td>送修或銷毀失控</td>
+<td>暫停供應商作業，要求說明、追蹤媒體位置與保全證據。</td>
+<td>供應商事件審查、合約追責與矯正措施。</td>
+<td>供應商事件紀錄。</td>
+</tr>
+<tr>
+<td>資料疑似殘留</td>
+<td>停止媒體重用或交付，重新淨化或銷毀。</td>
+<td>檢討抹除流程、工具與抽樣驗證。</td>
+<td>重新處置紀錄。</td>
+</tr>
+<tr>
+<td>備份媒體讀取失敗</td>
+<td>標記異常，確認是否影響RTO/RPO與復原能力。</td>
+<td>更換媒體、重建備份、更新BCP/DRP風險。</td>
+<td>復原測試與改善紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 媒體管理紀錄要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄名稱</th>
+<th>最低內容</th>
+<th>保存責任</th>
+<th>建議保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體資產清冊</td>
+<td>資產編號、序號、類型、Owner、Custodian、分類、位置、加密、狀態。</td>
+<td>IT Asset Owner</td>
+<td>媒體存續期間加三年。</td>
+</tr>
+<tr>
+<td>媒體使用申請與核准</td>
+<td>目的、資料分類、申請人、期間、核准人、風險與保護措施。</td>
+<td>媒體Owner / ISMS</td>
+<td>至少三年。</td>
+</tr>
+<tr>
+<td>媒體交接與攜出紀錄</td>
+<td>交付人、接收人、時間、地點、媒體狀態、封條、目的與歸還。</td>
+<td>Custodian</td>
+<td>至少三年；高機密五年以上。</td>
+</tr>
+<tr>
+<td>媒體盤點紀錄</td>
+<td>盤點日期、範圍、結果、差異、原因、處理與簽核。</td>
+<td>IT Asset Owner</td>
+<td>至少三年。</td>
+</tr>
+<tr>
+<td>抹除 / 淨化紀錄</td>
+<td>媒體編號、方法、工具、日期、執行人、驗證結果、核准。</td>
+<td>IT Operations</td>
+<td>至少五年或依合約。</td>
+</tr>
+<tr>
+<td>銷毀證明</td>
+<td>媒體清單、序號、方法、供應商、日期、見證、照片或證書。</td>
+<td>IT Asset Owner / 法務</td>
+<td>至少五年或依法規。</td>
+</tr>
+<tr>
+<td>事件紀錄</td>
+<td>遺失、誤用、未授權存取、外洩疑慮、調查、通報與CAPA。</td>
+<td>SOC / ISMS</td>
+<td>依事件管理程序。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 稽核與控制有效性檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查領域</th>
+<th>稽核問題</th>
+<th>抽樣證據</th>
+<th>判定</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體清冊完整性</td>
+<td>所有固定式、可攜式、備份、雲端與虛擬媒體是否納入清冊？</td>
+<td>資產清冊、雲端清冊、備份清冊。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>加密與保護</td>
+<td>含機密以上資料之媒體是否已加密並保留證據？</td>
+<td>MDM/EDR/KMS報告。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>可攜式媒體控制</td>
+<td>是否禁止個人媒體與未核准USB，例外是否有核准與期限？</td>
+<td>DLP政策、例外清單。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>交接與攜出</td>
+<td>媒體攜出是否具申請、核准、加密、封裝與簽收？</td>
+<td>攜出申請、交接紀錄。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>送修與報廢</td>
+<td>媒體送修或報廢前是否完成資料處置與供應商控制？</td>
+<td>送修檢核、銷毀證明。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>備份媒體</td>
+<td>備份媒體是否有加密、異地保存、盤點、保存期限與復原測試？</td>
+<td>備份紀錄、復原測試報告。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+<tr>
+<td>事件與改善</td>
+<td>媒體異常是否依事件流程處理並完成CAPA？</td>
+<td>事件紀錄、矯正措施。</td>
+<td>□ 符合 □ 部分符合 □ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. KPI / KRI 與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標類型</th>
+<th>指標名稱</th>
+<th>計算方式 / 觀察重點</th>
+<th>建議目標</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>KPI</td>
+<td>媒體清冊完整率</td>
+<td>已登錄媒體數 / 應登錄媒體數。</td>
+<td>≥ 98%</td>
+</tr>
+<tr>
+<td>KPI</td>
+<td>機密媒體加密率</td>
+<td>已加密機密媒體數 / 機密媒體總數。</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>KPI</td>
+<td>媒體盤點完成率</td>
+<td>完成盤點項目 / 計畫盤點項目。</td>
+<td>≥ 95%</td>
+</tr>
+<tr>
+<td>KRI</td>
+<td>未核准媒體接入次數</td>
+<td>端點、DLP或EDR偵測之未授權媒體事件。</td>
+<td>逐季下降；重大事件零容忍。</td>
+</tr>
+<tr>
+<td>KRI</td>
+<td>媒體遺失或逾期未歸還件數</td>
+<td>遺失、逾期、位置不明或清冊差異案件。</td>
+<td>零重大遺失。</td>
+</tr>
+<tr>
+<td>KRI</td>
+<td>銷毀證明缺漏率</td>
+<td>缺少完整銷毀證明案件 / 銷毀案件總數。</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>KPI</td>
+<td>備份媒體復原測試成功率</td>
+<td>成功復原測試次數 / 執行測試次數。</td>
+<td>依BCMS目標；關鍵系統 ≥ 95%</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低核准層級</th>
+<th>補償控制</th>
+<th>到期與複審</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>臨時使用未列入標準型號之媒體</td>
+<td>IT主管 / 資安負責人</td>
+<td>加密、掃描、限定資料、限定期限、完成後回收。</td>
+<td>最長30日，逾期重新核准。</td>
+</tr>
+<tr>
+<td>無法啟用全碟加密</td>
+<td>CISO</td>
+<td>禁止儲存機密以上資料、實體保護、存取限制、縮短使用期限。</td>
+<td>最長90日並需改善計畫。</td>
+</tr>
+<tr>
+<td>高機密資料需以可攜式媒體交付</td>
+<td>CISO / Data Owner / 法務或DPO</td>
+<td>強加密、雙人覆核、專人運送、簽收、完整性驗證、使用後銷毀。</td>
+<td>單次有效。</td>
+</tr>
+<tr>
+<td>故障硬碟需退回原廠</td>
+<td>CISO / 法務</td>
+<td>確認加密、供應商保密條款、追蹤序號、回收或銷毀證明。</td>
+<td>逐案核准。</td>
+</tr>
+<tr>
+<td>備份媒體保存期限延長</td>
+<td>Data Owner / 法務 / BCMS</td>
+<td>確認保存目的、加密、可讀性、保存環境與到期處置。</td>
+<td>至少每年複審。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 表單與紀錄模板</h2>
+<h3>22.1 儲存媒體申請與發放紀錄</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">申請單號</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">申請日期</th>
+<td style="width:30%;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>申請人 / 部門</th>
+<td></td>
+<th>媒體類型 / 容量</th>
+<td></td>
+</tr>
+<tr>
+<th>使用目的</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>資料分類</th>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII/受限制</td>
+<th>預計歸還日</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>保護措施</th>
+<td colspan="3">□ 加密 □ DLP □ 防拆封裝 □ 簽收 □ Hash □ 其他：</td>
+</tr>
+<tr>
+<th>Data Owner核准</th>
+<td></td>
+<th>資安核准</th>
+<td></td>
+</tr>
+<tr>
+<th>媒體資產編號 / 序號</th>
+<td></td>
+<th>發放人 / 接收人</th>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h3>22.2 儲存媒體交接紀錄</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>日期時間</th>
+<th>媒體編號</th>
+<th>交付人</th>
+<th>接收人</th>
+<th>地點</th>
+<th>封條/Hash/狀態</th>
+<th>簽名</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h3>22.3 媒體抹除 / 銷毀紀錄</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>媒體編號</th>
+<th>序號</th>
+<th>資料分類</th>
+<th>處置方式</th>
+<th>工具/供應商</th>
+<th>執行人</th>
+<th>驗證結果</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 清除 □ 淨化 □ 銷毀 □ 金鑰銷毀</td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 不通過</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 清除 □ 淨化 □ 銷毀 □ 金鑰銷毀</td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 不通過</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 清除 □ 淨化 □ 銷毀 □ 金鑰銷毀</td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 不通過</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄：最低合規檢核清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核內容</th>
+<th>結果</th>
+<th>備註 / 改善事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體是否登錄</td>
+<td>媒體是否納入資訊資產或媒體清冊，並指定Owner與Custodian？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>分類是否確認</td>
+<td>媒體內資料分類、PII與合約限制是否已判定？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>加密是否啟用</td>
+<td>機密以上或可攜式媒體是否完成加密並保存證據？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>使用是否核准</td>
+<td>媒體使用、攜出、交付供應商或例外情境是否已核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>交接是否留痕</td>
+<td>媒體交付、接收、轉交、退回是否具完整紀錄？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保存是否安全</td>
+<td>媒體是否存放於受控場所並具門禁、上鎖或環境保護？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>處置是否可驗證</td>
+<td>抹除、淨化、銷毀或金鑰銷毀是否具工具報告或證明？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>事件是否通報</td>
+<td>媒體遺失、未授權接入、未加密或送修失控是否依事件流程處理？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

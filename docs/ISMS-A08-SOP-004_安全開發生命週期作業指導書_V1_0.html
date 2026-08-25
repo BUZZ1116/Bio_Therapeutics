@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-004 安全開發生命週期作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-004 安全開發生命週期作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-004</td>
+<td>安全開發生命週期作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>Application Security / DevSecOps Owner</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>Application Security / DevSecOps Owner / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Application Security Owner / DevSecOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資安架構師</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>研發審查</td>
+<td></td>
+<td>研發主管 / 架構負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與平台審查</td>
+<td></td>
+<td>IT Operations Owner / Platform Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端安全審查</td>
+<td></td>
+<td>Cloud Security Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與法遵審查</td>
+<td></td>
+<td>DPO / 法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 研發主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織於軟體、API、雲端原生服務、資料平台、AI系統、MLOps、Prompt應用與RAG應用之需求、設計、開發、測試、部署、維運、變更與退場階段，導入安全與隱私保護要求，確保系統於整個生命週期中維持機密性、完整性、可用性、可追溯性、合法合規性與韌性。</p>
+<p>本文件目的在於將安全開發從單點測試提升為生命週期管理，透過安全需求、威脅建模、安全架構審查、安全程式撰寫、程式碼掃描、開源與供應鏈管理、API安全、雲端與容器安全、AI安全、測試與上線閘門、變更管理與持續監控，建立可驗證、可稽核、可持續改善的企業級安全開發機制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有開發活動應採取Secure by Design、Privacy by Design、Secure by Default與Defense in Depth原則。</li>
+<li>安全需求應在需求階段納入，不得僅於上線前以弱點掃描取代安全設計。</li>
+<li>高風險系統、對外服務、處理PII/客戶資料/高機密資料、支援關鍵業務流程或使用AI決策之系統，應完成威脅建模與安全架構審查。</li>
+<li>所有原始碼、套件、容器映像、IaC、CI/CD、API、Secrets、模型服務與Prompt應用均應納入安全檢查與版本追蹤。</li>
+<li>不符合安全閘門之版本不得上線，除非完成例外核准、補償控制、剩餘風險接受與期限追蹤。</li>
+<li>安全開發證據應完整保存，支援ISMS稽核、內部稽核、客戶審查、供應鏈安全、事件調查與管理審查。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全開發生命週期（SSDLC）</td>
+<td>於軟體與系統生命週期各階段納入安全需求、風險分析、設計審查、程式碼安全、測試、部署、監控與改善之管理方法。</td>
+</tr>
+<tr>
+<td>安全需求</td>
+<td>基於法規、合約、風險、資料分類、威脅情境、架構與控制要求所定義之安全功能、非功能需求與限制條件。</td>
+</tr>
+<tr>
+<td>威脅建模</td>
+<td>識別系統資產、信任邊界、資料流、攻擊者、威脅、濫用案例、控制措施與剩餘風險之方法。</td>
+</tr>
+<tr>
+<td>安全架構審查</td>
+<td>對系統架構、資料流、信任邊界、身分驗證、授權、加密、日誌、網路、雲端、第三方與營運韌性之審查。</td>
+</tr>
+<tr>
+<td>SAST</td>
+<td>Static Application Security Testing，靜態應用程式安全測試，用於分析原始碼或編譯前程式碼安全缺陷。</td>
+</tr>
+<tr>
+<td>DAST</td>
+<td>Dynamic Application Security Testing，動態應用程式安全測試，用於分析執行中應用程式之外部可利用弱點。</td>
+</tr>
+<tr>
+<td>SCA</td>
+<td>Software Composition Analysis，軟體組成分析，用於識別開源套件、第三方元件、授權與已知弱點。</td>
+</tr>
+<tr>
+<td>IaC掃描</td>
+<td>Infrastructure as Code安全掃描，用於檢查Terraform、CloudFormation、Kubernetes YAML、Helm、Ansible等基礎架構設定風險。</td>
+</tr>
+<tr>
+<td>SBOM</td>
+<td>Software Bill of Materials，軟體組成清單，用於記錄軟體元件、版本、供應商、授權與弱點曝險。</td>
+</tr>
+<tr>
+<td>安全閘門（Security Gate）</td>
+<td>於合併、建置、測試、部署、上線或版本發布前設定之安全檢查條件，未符合者應阻擋或進入例外流程。</td>
+</tr>
+<tr>
+<td>Prompt應用</td>
+<td>使用Prompt模板、系統指令、工具調用、RAG、Agent或AI API完成業務功能之AI應用。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准安全開發資源、重大風險接受、重大上線例外及跨部門安全改善方案。</td>
+<td>資源核准、風險接受、管理審查決議。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定安全開發要求，核准高風險系統上線、例外與剩餘風險接受。</td>
+<td>安全要求、例外核准、KPI/KRI。</td>
+</tr>
+<tr>
+<td>Application Security Owner</td>
+<td>維護SSDLC方法、威脅建模、安全測試、程式碼安全與開發安全標準。</td>
+<td>安全審查紀錄、掃描報告、改善追蹤。</td>
+</tr>
+<tr>
+<td>DevSecOps Owner</td>
+<td>維護CI/CD安全閘門、Secrets掃描、SAST/SCA/IaC/容器掃描、自動化部署控制。</td>
+<td>Pipeline設定、閘門紀錄、部署證據。</td>
+</tr>
+<tr>
+<td>Product Owner / Business Owner</td>
+<td>定義業務需求、資料敏感度、法規與客戶要求，接受業務層面剩餘風險。</td>
+<td>需求文件、風險決策、UAT簽核。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>確保系統設計、開發、測試、上線、維護與退場符合本文件要求。</td>
+<td>系統文件、測試紀錄、上線核准。</td>
+</tr>
+<tr>
+<td>架構師 / Technical Lead</td>
+<td>設計安全架構、資料流、信任邊界、身分驗證、授權、加密、日誌與韌性控制。</td>
+<td>架構圖、資料流圖、威脅模型。</td>
+</tr>
+<tr>
+<td>開發人員</td>
+<td>依安全編碼標準撰寫程式，修復安全缺陷，避免提交Secrets與未核准元件。</td>
+<td>程式碼審查、修復紀錄。</td>
+</tr>
+<tr>
+<td>測試 / QA</td>
+<td>執行安全測試案例、濫用案例、回歸測試與修補驗證。</td>
+<td>測試報告、缺陷單、UAT證據。</td>
+</tr>
+<tr>
+<td>Cloud / Platform Owner</td>
+<td>確保雲端、容器、Kubernetes、API Gateway、WAF、KMS與平台基準符合安全要求。</td>
+<td>雲端設定、IaC掃描、CSPM證據。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>確保AI模型、Prompt、RAG、訓練資料、模型部署與AI輸出控制符合AI安全與治理要求。</td>
+<td>AI風險評估、模型版本紀錄、Prompt測試。</td>
+</tr>
+<tr>
+<td>DPO / 法務 / 法遵</td>
+<td>審查PII、跨境、資料保留、第三方條款、授權、智慧財產權與法規要求。</td>
+<td>DPIA、合約審查、法遵確認。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. SSDLC流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>生命週期階段</th>
+<th>安全活動</th>
+<th>必要輸出</th>
+<th>放行條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求階段</td>
+<td>識別資料分類、法規、合約、隱私、AI治理、可用性與安全需求。</td>
+<td>安全需求清單、資料分類、關注方要求。</td>
+<td>安全需求納入需求規格或產品Backlog。</td>
+</tr>
+<tr>
+<td>設計階段</td>
+<td>完成架構審查、資料流圖、信任邊界、威脅建模、控制設計與風險評估。</td>
+<td>架構圖、資料流圖、威脅模型、風險處理。</td>
+<td>高風險設計缺口已有處理方案。</td>
+</tr>
+<tr>
+<td>開發階段</td>
+<td>安全編碼、程式碼審查、Secrets掃描、套件審查、分支保護與安全基準。</td>
+<td>Code Review、SAST/SCA結果、缺陷單。</td>
+<td>Critical/High缺陷已修復或取得例外核准。</td>
+</tr>
+<tr>
+<td>建置階段</td>
+<td>CI/CD安全閘門、SBOM、容器映像掃描、IaC掃描、簽章與Artifact保護。</td>
+<td>Pipeline報告、SBOM、映像掃描。</td>
+<td>建置物來源可信且未含未核准高風險缺陷。</td>
+</tr>
+<tr>
+<td>測試階段</td>
+<td>DAST、API安全測試、濫用案例測試、權限測試、隱私測試與回歸測試。</td>
+<td>安全測試報告、修復證據。</td>
+<td>測試缺陷已關閉或納入核准例外。</td>
+</tr>
+<tr>
+<td>部署階段</td>
+<td>變更核准、部署核准、權限設定、加密、日誌、監控、備份與回復準備。</td>
+<td>變更單、部署紀錄、監控確認。</td>
+<td>符合上線檢核表。</td>
+</tr>
+<tr>
+<td>維運階段</td>
+<td>弱點管理、日誌監控、事件偵測、定期權限審查、供應商與套件更新。</td>
+<td>監控報告、弱點追蹤、事件紀錄。</td>
+<td>持續符合KPI/KRI與風險準則。</td>
+</tr>
+<tr>
+<td>退場階段</td>
+<td>資料封存/刪除、金鑰撤銷、帳號停用、日誌保存、供應商退場與證據保存。</td>
+<td>退場檢核、資料處置證明。</td>
+<td>完成Owner確認與文件歸檔。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 安全需求管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求類別</th>
+<th>最低要求</th>
+<th>適用情境</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分驗證</td>
+<td>支援組織核准之SSO、MFA、密碼政策、服務帳號管制與Session管理。</td>
+<td>內部系統、外部服務、API、管理介面。</td>
+<td>需求規格、設計文件。</td>
+</tr>
+<tr>
+<td>授權與最小權限</td>
+<td>依角色、職務、資料分類與業務必要性設計權限，避免水平/垂直越權。</td>
+<td>所有具使用者、管理員或API存取之系統。</td>
+<td>權限矩陣、測試案例。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>定義資料分類、加密、遮罩、去識別、資料最小化、保存期限、刪除與匯出控制。</td>
+<td>PII、客戶資料、高機密、模型訓練資料。</td>
+<td>資料流圖、DPIA、加密設計。</td>
+</tr>
+<tr>
+<td>輸入輸出驗證</td>
+<td>所有外部輸入、API參數、檔案上傳、Prompt輸入與資料匯入需驗證、清理與限制。</td>
+<td>Web、API、資料管線、AI服務。</td>
+<td>安全需求、測試結果。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>記錄登入、授權失敗、管理操作、資料存取、API呼叫、錯誤、安全事件與AI高風險輸出。</td>
+<td>關鍵系統、對外系統、AI/MLOps。</td>
+<td>日誌需求矩陣、SIEM接入。</td>
+</tr>
+<tr>
+<td>可用性與韌性</td>
+<td>定義容量、備援、備份、RTO/RPO、錯誤處理、降級模式與復原測試要求。</td>
+<td>關鍵業務系統、外部服務、SaaS平台。</td>
+<td>BCP/DR需求、復原測試。</td>
+</tr>
+<tr>
+<td>合規與隱私</td>
+<td>識別法規、合約、跨境、資料主體權利、資料保留、第三方處理與稽核要求。</td>
+<td>PII、跨境、供應商、客戶資料。</td>
+<td>法遵需求、DPO審查。</td>
+</tr>
+<tr>
+<td>AI安全需求</td>
+<td>定義Prompt限制、RAG權限、模型輸出覆核、資料保留、人工監督、Guardrail與模型供應商要求。</td>
+<td>AI系統、AI API、Prompt應用、RAG。</td>
+<td>AI風險評估、AI需求文件。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 威脅建模與安全架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>審查內容</th>
+<th>必要產出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產與資料流</td>
+<td>識別重要資產、資料來源、資料分類、資料流向、跨境、第三方與AI資料管線。</td>
+<td>資料流圖、信任邊界圖。</td>
+</tr>
+<tr>
+<td>攻擊面</td>
+<td>識別公開端點、管理介面、API、Webhook、檔案上傳、身份流程、第三方整合與AI工具調用。</td>
+<td>攻擊面清單。</td>
+</tr>
+<tr>
+<td>威脅情境</td>
+<td>依STRIDE、OWASP、MITRE ATT&amp;CK、OWASP API Top 10、OWASP LLM Top 10等方法識別威脅。</td>
+<td>威脅模型、濫用案例。</td>
+</tr>
+<tr>
+<td>安全控制</td>
+<td>確認身份驗證、授權、加密、輸入驗證、錯誤處理、日誌監控、備份與限流控制。</td>
+<td>控制設計與缺口清單。</td>
+</tr>
+<tr>
+<td>隱私與AI風險</td>
+<td>評估PII處理、資料最小化、模型輸入輸出、RAG越權、Prompt Injection、資料保留與人工覆核。</td>
+<td>DPIA / AI風險評估。</td>
+</tr>
+<tr>
+<td>剩餘風險</td>
+<td>對未處理或暫緩處理之安全缺口提出補償控制、Owner、期限與風險接受。</td>
+<td>風險登錄、風險處理計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 安全編碼要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>作業要求</th>
+<th>禁止事項 / 注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>輸入驗證</td>
+<td>所有外部輸入、檔案、Header、Cookie、API參數、Prompt、Webhook與批次資料應進行白名單、型別、長度、格式與語意檢查。</td>
+<td>不得信任前端檢查或第三方傳入資料。</td>
+</tr>
+<tr>
+<td>輸出編碼</td>
+<td>依HTML、JavaScript、SQL、LDAP、Shell、URL、JSON、XML等情境採適當編碼或安全函式。</td>
+<td>不得直接拼接未處理資料至輸出或命令。</td>
+</tr>
+<tr>
+<td>身份驗證</td>
+<td>使用組織核准身份服務與標準協定，避免自製脆弱驗證。</td>
+<td>不得自行儲存明文密碼或弱雜湊。</td>
+</tr>
+<tr>
+<td>授權檢查</td>
+<td>每個敏感功能、API、資料物件與管理操作應於伺服器端驗證權限。</td>
+<td>不得僅依前端隱藏按鈕或路由控制權限。</td>
+</tr>
+<tr>
+<td>Secrets管理</td>
+<td>Secrets、API Key、Token、憑證與私鑰應使用Secret Manager、Vault、KMS或受控環境變數。</td>
+<td>不得提交至原始碼、映像、Issue、聊天或文件。</td>
+</tr>
+<tr>
+<td>錯誤處理</td>
+<td>錯誤訊息應提供必要資訊，不揭露堆疊、SQL、路徑、Token、內部IP或敏感資料。</td>
+<td>不得將詳細錯誤直接回傳外部使用者。</td>
+</tr>
+<tr>
+<td>加密使用</td>
+<td>使用核准加密演算法、TLS、KMS、憑證管理與金鑰輪替，不得自製加密演算法。</td>
+<td>不得硬編碼金鑰或使用已淘汰演算法。</td>
+</tr>
+<tr>
+<td>檔案處理</td>
+<td>檔案上傳應限制類型、大小、內容掃描、儲存位置、執行權限與下載授權。</td>
+<td>不得允許上傳檔案於可執行路徑直接執行。</td>
+</tr>
+<tr>
+<td>AI Prompt安全</td>
+<td>Prompt模板應避免暴露系統指令、Secrets、內部規則與高機密上下文，並對工具調用與RAG檢索做權限控制。</td>
+<td>不得將PII或高機密資料送入未核准AI服務。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 原始碼管理與分支保護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>控制要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Repository授權</td>
+<td>原始碼儲存庫應依最小權限授權，外部協作者需核准並定期審查。</td>
+<td>Repo權限清單、審查紀錄。</td>
+</tr>
+<tr>
+<td>分支保護</td>
+<td>主要分支應啟用保護規則，要求Pull Request、Code Review、安全掃描通過與禁止直接推送。</td>
+<td>分支保護設定。</td>
+</tr>
+<tr>
+<td>Code Review</td>
+<td>所有正式合併應經具能力人員審查，審查安全、品質、授權、Secrets、資料保護與架構影響。</td>
+<td>PR審查紀錄。</td>
+</tr>
+<tr>
+<td>Commit簽章</td>
+<td>重要系統宜啟用Commit簽章或等效來源驗證，降低供應鏈竄改風險。</td>
+<td>簽章設定、提交紀錄。</td>
+</tr>
+<tr>
+<td>Secrets掃描</td>
+<td>Repository、PR、歷史提交與CI/CD應啟用Secrets掃描，發現後立即撤換與調查。</td>
+<td>Secrets掃描報告、撤換紀錄。</td>
+</tr>
+<tr>
+<td>外部套件引入</td>
+<td>新增框架、套件、SDK、AI模型、模型權重或第三方程式碼需審查來源、授權、弱點與維護狀態。</td>
+<td>套件審查、SCA報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. DevSecOps與CI/CD安全閘門</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>閘門位置</th>
+<th>安全檢查</th>
+<th>阻擋條件</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>程式碼提交</td>
+<td>Secrets掃描、基本語法與安全Lint、禁止提交大型敏感檔案。</td>
+<td>發現Secrets、高風險憑證、明顯惡意程式碼。</td>
+<td>掃描結果、阻擋紀錄。</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>SAST、SCA、Code Review、授權檢查、測試覆蓋率與安全標準檢查。</td>
+<td>未修復Critical/High缺陷或未完成審查。</td>
+<td>PR紀錄、掃描報告。</td>
+</tr>
+<tr>
+<td>建置階段</td>
+<td>SBOM產生、套件鎖定、Artifact簽章、容器映像掃描、建置環境隔離。</td>
+<td>不可信來源、未核准套件、Critical映像弱點。</td>
+<td>SBOM、Build Log、簽章紀錄。</td>
+</tr>
+<tr>
+<td>部署前</td>
+<td>DAST、API測試、IaC掃描、CSPM預檢、Kubernetes政策檢查。</td>
+<td>公開暴露、過度權限、未加密、High以上未處理。</td>
+<td>部署前安全檢查表。</td>
+</tr>
+<tr>
+<td>正式上線</td>
+<td>變更核准、風險接受、回復計畫、監控接入、日誌確認與Owner簽核。</td>
+<td>缺少核准、監控缺失、未處理重大風險。</td>
+<td>上線核准、變更紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 安全測試要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試類型</th>
+<th>測試內容</th>
+<th>觸發條件</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SAST</td>
+<td>檢查注入、XSS、弱加密、敏感資訊、錯誤處理、認證授權缺陷與安全反模式。</td>
+<td>PR、版本建置、重大變更。</td>
+<td>SAST報告、缺陷修復。</td>
+</tr>
+<tr>
+<td>DAST</td>
+<td>對執行中應用進行Web/API攻擊測試、Session、安全Header、錯誤訊息與弱設定檢查。</td>
+<td>上線前、重大版本、定期測試。</td>
+<td>DAST報告。</td>
+</tr>
+<tr>
+<td>SCA</td>
+<td>識別開源元件、授權、CVE、版本老舊與傳遞相依風險。</td>
+<td>每次建置、重大CVE公告。</td>
+<td>SCA報告、SBOM。</td>
+</tr>
+<tr>
+<td>API安全測試</td>
+<td>檢查身份驗證、授權、速率限制、輸入驗證、物件層級授權與錯誤處理。</td>
+<td>API新增/變更、上線前。</td>
+<td>API測試報告。</td>
+</tr>
+<tr>
+<td>IaC與雲端安全測試</td>
+<td>檢查公開資源、加密、日誌、IAM、網路、KMS、安全群組與基準偏差。</td>
+<td>IaC提交、部署前、雲端架構變更。</td>
+<td>IaC掃描、CSPM報告。</td>
+</tr>
+<tr>
+<td>容器與Kubernetes測試</td>
+<td>檢查映像弱點、Root權限、特權容器、Secrets、Network Policy、Admission Control。</td>
+<td>映像建置、部署前。</td>
+<td>容器掃描、K8s檢查。</td>
+</tr>
+<tr>
+<td>滲透測試</td>
+<td>模擬攻擊者對高風險系統、外部服務、重大版本或客戶要求系統進行測試。</td>
+<td>至少依風險定期；重大變更；客戶要求。</td>
+<td>滲透測試報告、複測報告。</td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>測試Prompt Injection、RAG越權、敏感資料輸出、模型濫用、越權工具調用與Guardrail有效性。</td>
+<td>AI功能上線前、模型版本變更。</td>
+<td>AI安全測試紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. API與微服務安全設計</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>API資產盤點</td>
+<td>所有API應納入API清冊，包含Owner、資料分類、認證方式、外部/內部、版本與風險等級。</td>
+<td>API清冊、架構文件。</td>
+</tr>
+<tr>
+<td>認證與授權</td>
+<td>使用OAuth2/OIDC、mTLS、JWT驗證、Scope、Role或等效機制，避免匿名敏感API。</td>
+<td>API Gateway設定、測試紀錄。</td>
+</tr>
+<tr>
+<td>物件層級授權</td>
+<td>每次存取資料物件均需檢查使用者是否有權存取該物件。</td>
+<td>授權測試案例。</td>
+</tr>
+<tr>
+<td>輸入限制與Schema驗證</td>
+<td>API應驗證Schema、大小、型別、格式、速率、重放與簽章。</td>
+<td>API測試報告。</td>
+</tr>
+<tr>
+<td>速率限制與濫用防護</td>
+<td>外部API與高風險API應具Rate Limit、Quota、Bot防護、異常行為告警。</td>
+<td>API Gateway政策。</td>
+</tr>
+<tr>
+<td>版本與退場</td>
+<td>API版本變更應評估相容性與安全影響，舊版API應設定退場期限。</td>
+<td>版本策略、退場紀錄。</td>
+</tr>
+<tr>
+<td>日誌與追蹤</td>
+<td>API應記錄Request ID、使用者、端點、狀態碼、資料量、失敗原因與安全事件。</td>
+<td>API Log、SIEM接入。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 資料、隱私與加密安全設計</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>作業要求</th>
+<th>適用情境</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>需求與設計階段應識別資料分類、PII、客戶資料、高機密、模型資料與法規限制。</td>
+<td>所有涉及資料處理之系統。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>僅蒐集、處理、儲存與傳輸業務必要資料，避免測試環境使用未遮罩正式資料。</td>
+<td>PII、測試資料、AI訓練資料。</td>
+</tr>
+<tr>
+<td>加密傳輸</td>
+<td>外部與內部敏感資料傳輸應使用TLS 1.2以上或組織核准安全通道。</td>
+<td>Web、API、DB、MFT、AI API。</td>
+</tr>
+<tr>
+<td>加密儲存</td>
+<td>敏感資料、備份、物件儲存、資料庫、Secrets與模型權重應依風險加密保存。</td>
+<td>PII、高機密、客戶資料、模型權重。</td>
+</tr>
+<tr>
+<td>金鑰管理</td>
+<td>金鑰應由KMS/HSM/Vault等受控機制管理，具Owner、用途、輪替、撤銷與存取紀錄。</td>
+<td>所有加密應用。</td>
+</tr>
+<tr>
+<td>資料主體權利</td>
+<td>涉及PII者應支援查詢、更正、刪除、限制處理、可攜出與紀錄保存要求。</td>
+<td>隱私相關系統。</td>
+</tr>
+<tr>
+<td>保留與刪除</td>
+<td>系統應設計資料保存期限、刪除、封存、匿名化與退場處理機制。</td>
+<td>資料平台、SaaS、AI資料集。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 雲端原生、容器與IaC安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>領域</th>
+<th>安全要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>IaC管制</td>
+<td>所有正式雲端基礎架構應盡量以IaC管理，提交前執行安全掃描與審查。</td>
+<td>IaC Repository、掃描報告。</td>
+</tr>
+<tr>
+<td>雲端身份權限</td>
+<td>使用最小權限、角色分離、短期憑證、工作負載身份與權限審查。</td>
+<td>IAM政策、權限審查。</td>
+</tr>
+<tr>
+<td>網路隔離</td>
+<td>依信任邊界設計VPC/VNet、Subnet、Security Group、Network Policy與Private Endpoint。</td>
+<td>網路架構圖、規則清單。</td>
+</tr>
+<tr>
+<td>容器映像</td>
+<td>使用可信Base Image、最小化映像、非Root執行、映像掃描與簽章。</td>
+<td>映像掃描、Registry政策。</td>
+</tr>
+<tr>
+<td>Kubernetes安全</td>
+<td>啟用RBAC、Admission Control、Pod Security、Secrets管理、Network Policy與稽核日誌。</td>
+<td>K8s設定、稽核日誌。</td>
+</tr>
+<tr>
+<td>CSPM / CNAPP</td>
+<td>正式雲端環境應納入CSPM/CNAPP或等效監控，追蹤設定偏差與風險。</td>
+<td>CSPM報告、修復紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. AI系統、Prompt應用與MLOps安全開發要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>領域</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI資產登錄</td>
+<td>AI模型、Prompt模板、RAG資料源、Agent工具、模型API與MLOps平台應納入清冊並指定Owner。</td>
+<td>AI模型與Prompt資產清冊。</td>
+</tr>
+<tr>
+<td>資料治理</td>
+<td>訓練、微調、評估、RAG與推論資料應確認來源、授權、PII、分類、保留與使用限制。</td>
+<td>資料追蹤清冊、DPIA。</td>
+</tr>
+<tr>
+<td>Prompt安全</td>
+<td>系統Prompt與工具指令應受版本控管，避免暴露Secrets、內部政策與高機密資訊。</td>
+<td>Prompt版本紀錄、審查紀錄。</td>
+</tr>
+<tr>
+<td>RAG權限</td>
+<td>RAG檢索應依使用者權限與資料分類控管，不得因索引而繞過原始資料權限。</td>
+<td>RAG權限測試、檢索日誌。</td>
+</tr>
+<tr>
+<td>模型輸出控制</td>
+<td>高風險輸出應具安全過濾、內容政策、敏感資料偵測、人工覆核與標示機制。</td>
+<td>輸出覆核紀錄、DLP告警。</td>
+</tr>
+<tr>
+<td>模型供應鏈</td>
+<td>外部模型、開源模型、模型權重、插件、工具與SDK應審查來源、授權、弱點與資料使用條款。</td>
+<td>供應商審查、授權紀錄。</td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>上線前測試Prompt Injection、越權檢索、資料外洩、濫用、偏差與模型服務拒絕服務風險。</td>
+<td>AI安全測試報告。</td>
+</tr>
+<tr>
+<td>人類監督</td>
+<td>涉及重大決策、客戶影響、法規或高風險場景者，應明確設計Human Review與責任歸屬。</td>
+<td>作業流程、審核紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 外包開發與第三方元件管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>外包安全要求</td>
+<td>合約應規範安全開發、保密、智慧財產權、開源使用、弱點修復、事件通報與稽核權。</td>
+<td>合約、NDA、SOW。</td>
+</tr>
+<tr>
+<td>供應商能力</td>
+<td>重要開發供應商應評估安全能力、開發流程、測試方法、資安人員能力與交付證據。</td>
+<td>供應商評估表。</td>
+</tr>
+<tr>
+<td>交付物審查</td>
+<td>外包交付原始碼、套件、SBOM、測試報告、部署文件與安全缺陷修復證據。</td>
+<td>交付驗收紀錄。</td>
+</tr>
+<tr>
+<td>第三方元件</td>
+<td>第三方SDK、Library、AI模型、插件與API需審查授權、弱點、維護狀態與資料處理條款。</td>
+<td>SCA、授權審查。</td>
+</tr>
+<tr>
+<td>供應鏈完整性</td>
+<td>重要Artifact、映像、套件與模型權重應確認來源、簽章、雜湊或可信Repository。</td>
+<td>簽章驗證、雜湊紀錄。</td>
+</tr>
+<tr>
+<td>退場與移交</td>
+<td>合作終止時應收回帳號、撤銷Token、刪除資料、移交文件與確認智慧財產權。</td>
+<td>退場紀錄、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 上線前安全檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全需求</td>
+<td>安全、隱私、合規與AI治理需求是否已納入並完成驗收？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>威脅建模</td>
+<td>高風險系統是否完成威脅建模與安全架構審查？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>程式碼審查</td>
+<td>是否完成Code Review，且未有未處理Critical/High安全缺陷？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>SAST / SCA</td>
+<td>是否完成SAST與SCA，並產出SBOM或等效元件清單？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>DAST / API測試</td>
+<td>是否完成DAST、API安全測試或等效驗證？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端與IaC</td>
+<td>雲端、容器、Kubernetes與IaC是否完成安全掃描與設定審查？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>是否確認無Secrets存在於原始碼、映像、設定檔、日誌與文件？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>是否完成必要日誌、告警、監控與事件通報設定？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與回復</td>
+<td>是否完成備份、回復、回滾或營運持續要求？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>未修復項目是否完成補償控制、例外核准與剩餘風險接受？</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 變更、維運與持續監控</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>版本變更</td>
+<td>重大版本、架構變更、資料流變更、權限變更、AI模型變更與供應商變更應進行安全影響評估。</td>
+<td>變更單、安全影響評估。</td>
+</tr>
+<tr>
+<td>弱點修補</td>
+<td>維運期間發現之弱點應依弱點與修補管理作業指導書處理。</td>
+<td>弱點追蹤、修補紀錄。</td>
+</tr>
+<tr>
+<td>監控與事件偵測</td>
+<td>正式系統應納入日誌與監控，重大安全告警應進入事件管理流程。</td>
+<td>SIEM接入、告警紀錄。</td>
+</tr>
+<tr>
+<td>定期安全審查</td>
+<td>重要系統應依風險定期進行安全測試、權限審查、套件更新與架構檢討。</td>
+<td>審查紀錄、改善計畫。</td>
+</tr>
+<tr>
+<td>技術債管理</td>
+<td>安全技術債應記錄Owner、風險、期限、補償控制與改善優先序。</td>
+<td>技術債清單、風險登錄。</td>
+</tr>
+<tr>
+<td>退場處理</td>
+<td>系統退場應完成資料處置、帳號撤銷、Secrets撤換、DNS/API停用、日誌保存與文件歸檔。</td>
+<td>退場檢核表、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 安全開發KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全閘門通過率</td>
+<td>符合CI/CD安全閘門之建置或部署比例。</td>
+<td>持續提升；重大系統需達成內部目標。</td>
+<td>DevSecOps成熟度。</td>
+</tr>
+<tr>
+<td>Critical/High缺陷逾期率</td>
+<td>超過修復期限仍未關閉之Critical/High安全缺陷比例。</td>
+<td>Critical目標0。</td>
+<td>風險升級與資源分配。</td>
+</tr>
+<tr>
+<td>SCA高風險元件數</td>
+<td>尚未修補或未核准例外之高風險第三方元件數。</td>
+<td>持續下降。</td>
+<td>供應鏈安全管理。</td>
+</tr>
+<tr>
+<td>Secrets洩漏事件數</td>
+<td>Repository、CI/CD、日誌或文件中偵測到Secrets之事件數。</td>
+<td>目標0；發現需立即撤換。</td>
+<td>開發安全文化與管制。</td>
+</tr>
+<tr>
+<td>威脅建模覆蓋率</td>
+<td>符合條件之高風險專案完成威脅建模比例。</td>
+<td>高風險專案目標100%。</td>
+<td>設計階段安全成熟度。</td>
+</tr>
+<tr>
+<td>安全測試修復率</td>
+<td>安全測試發現缺陷於期限內修復比例。</td>
+<td>依風險等級設定。</td>
+<td>修復效率。</td>
+</tr>
+<tr>
+<td>AI安全測試覆蓋率</td>
+<td>AI應用完成Prompt、RAG、模型服務與資料安全測試比例。</td>
+<td>高風險AI應用目標100%。</td>
+<td>AI治理與安全控制有效性。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 紀錄保存與稽核證據</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全需求與設計文件</td>
+<td>安全需求、資料分類、資料流圖、架構圖、威脅模型與控制設計。</td>
+<td>System Owner / AppSec Owner</td>
+<td>系統生命週期期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>安全測試報告</td>
+<td>SAST、DAST、SCA、API、IaC、容器、滲透測試、AI安全測試與複測結果。</td>
+<td>Application Security Owner</td>
+<td>至少3年或依法規/合約要求。</td>
+</tr>
+<tr>
+<td>Code Review與CI/CD紀錄</td>
+<td>PR、Review、Pipeline、掃描、阻擋、簽章、部署與Artifact紀錄。</td>
+<td>DevSecOps Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>SBOM與第三方元件紀錄</td>
+<td>SBOM、套件清單、授權審查、供應商證據、元件弱點與版本紀錄。</td>
+<td>System Owner / DevSecOps</td>
+<td>至少3年或產品支援期間。</td>
+</tr>
+<tr>
+<td>上線核准與例外紀錄</td>
+<td>上線檢核、風險接受、補償控制、剩餘風險與管理階層核准。</td>
+<td>ISMS管理代表 / CISO</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>AI安全與模型紀錄</td>
+<td>AI風險評估、Prompt版本、模型版本、訓練資料追蹤、安全測試與人工覆核紀錄。</td>
+<td>AI Governance Owner / MLOps Owner</td>
+<td>依AI治理要求，至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SSDLC落實</td>
+<td>是否於需求、設計、開發、測試、部署、維運與退場各階段納入安全活動。</td>
+<td>流程文件、專案紀錄、上線檢核。</td>
+</tr>
+<tr>
+<td>安全需求</td>
+<td>安全、隱私、法規、合約與AI治理需求是否被識別、追蹤與驗收。</td>
+<td>需求文件、驗收紀錄。</td>
+</tr>
+<tr>
+<td>威脅建模</td>
+<td>高風險系統是否完成威脅模型、控制設計與風險處理。</td>
+<td>威脅模型、風險登錄。</td>
+</tr>
+<tr>
+<td>安全測試</td>
+<td>是否依風險執行SAST、DAST、SCA、API、IaC、容器、滲透與AI安全測試。</td>
+<td>測試報告、缺陷追蹤。</td>
+</tr>
+<tr>
+<td>安全閘門</td>
+<td>CI/CD是否能阻擋未核准高風險缺陷、Secrets、未授權元件或不安全部署。</td>
+<td>Pipeline設定、阻擋紀錄。</td>
+</tr>
+<tr>
+<td>供應鏈安全</td>
+<td>第三方元件、外包開發、SBOM、授權與供應商安全證據是否受控。</td>
+<td>SBOM、供應商審查。</td>
+</tr>
+<tr>
+<td>上線與例外</td>
+<td>上線前是否完成核准，例外是否具補償控制與剩餘風險接受。</td>
+<td>上線核准、例外紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 附錄A：安全開發交付證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>交付證據</th>
+<th>適用階段</th>
+<th>必要性</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全需求清單</td>
+<td>需求</td>
+<td>必要</td>
+<td>記錄安全、隱私、合規、AI治理與營運韌性需求。</td>
+</tr>
+<tr>
+<td>資料流圖 / 架構圖</td>
+<td>設計</td>
+<td>必要</td>
+<td>標示資料分類、信任邊界、外部介接與第三方。</td>
+</tr>
+<tr>
+<td>威脅模型</td>
+<td>設計</td>
+<td>高風險必要</td>
+<td>記錄威脅、濫用案例、控制措施與剩餘風險。</td>
+</tr>
+<tr>
+<td>SAST報告</td>
+<td>開發 / 測試</td>
+<td>依風險必要</td>
+<td>記錄程式碼安全缺陷與修復狀態。</td>
+</tr>
+<tr>
+<td>SCA / SBOM</td>
+<td>建置</td>
+<td>必要</td>
+<td>記錄第三方元件、授權與弱點狀態。</td>
+</tr>
+<tr>
+<td>DAST / API測試報告</td>
+<td>測試</td>
+<td>對外系統必要</td>
+<td>記錄執行中系統與API安全測試。</td>
+</tr>
+<tr>
+<td>IaC / 容器掃描</td>
+<td>部署</td>
+<td>雲端原生必要</td>
+<td>記錄雲端、容器與Kubernetes設定風險。</td>
+</tr>
+<tr>
+<td>AI安全測試紀錄</td>
+<td>測試</td>
+<td>AI系統必要</td>
+<td>記錄Prompt、RAG、模型與AI輸出安全測試。</td>
+</tr>
+<tr>
+<td>上線安全檢核表</td>
+<td>部署</td>
+<td>必要</td>
+<td>作為正式上線前之安全放行證據。</td>
+</tr>
+<tr>
+<td>例外與風險接受紀錄</td>
+<td>各階段</td>
+<td>有例外時必要</td>
+<td>記錄補償控制、期限、核准與重新審查。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

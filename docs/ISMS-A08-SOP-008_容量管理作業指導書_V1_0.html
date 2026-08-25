@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-008 容量管理作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-008 容量管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-008</td>
+<td>容量管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-008</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Capacity Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與FinOps審查</td>
+<td></td>
+<td>Cloud Platform Owner / FinOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料庫與儲存審查</td>
+<td></td>
+<td>Database Owner / Storage Owner / Backup Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps與SRE審查</td>
+<td></td>
+<td>DevSecOps Owner / SRE Owner / Application Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps與能源效率審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner / Sustainability Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS與ICT備妥性審查</td>
+<td></td>
+<td>BCMS Owner / ICT Readiness Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / Cloud Platform主管 / Business Service Owner / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織容量管理之需求識別、容量基準建立、監控、告警、趨勢分析、預測、擴充、調校、雲端配額、成本治理、效能管理、供應商容量、AI/GPU資源管理、能源效率、營運持續、事件處理、例外管理、稽核與持續改善要求，確保資訊系統與相關ICT服務具備足夠、適切且可持續之資源，以支援服務可用性、資訊安全、業務成長、客戶承諾、RTO/RPO、SLA/SLO及法規/合約要求。</p>
+<p>容量不足或資源耗盡可能導致服務中斷、交易失敗、日誌遺失、監控失效、備份失敗、安全工具停擺、資料損毀、AI模型服務延遲、成本暴增或事件回應能力下降。因此，本文件要求容量管理必須與資產管理、變更管理、備援管理、備份還原、效能監控、弱點修補、供應商管理、雲端FinOps、AI/MLOps治理及營運持續流程整合。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>容量管理應以業務需求、服務重要性、使用趨勢、SLA/SLO、RTO/RPO、資料成長率、風險評估與成本效益為基礎。</li>
+<li>容量監控應涵蓋運算、記憶體、儲存、資料庫、網路、連線、Queue、API、日誌、備份、授權、雲端配額、GPU、AI推論與供應商服務限制。</li>
+<li>容量告警與擴充計畫應具備提前量，避免在資源耗盡或服務中斷後才採取行動。</li>
+<li>容量擴充、縮減、配額調整、架構改變或成本優化不得降低安全控制、備援能力、日誌保存、資料保護或合規要求。</li>
+<li>雲端容量應同時考量可用性、配額、保留容量、成本、碳排、區域限制、供應商SLA與資料主權。</li>
+<li>AI/MLOps容量應同時考量GPU/加速器可用性、推論延遲、Token/Rate Limit、資料管線、向量庫、模型版本、能源效率與濫用風險。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>容量管理</td>
+<td>規劃、監控、分析、預測與調整資訊系統資源，以確保服務容量符合業務、可用性、安全與成本要求之管理活動。</td>
+</tr>
+<tr>
+<td>容量基準</td>
+<td>系統在正常、尖峰與異常情境下之資源使用基準，例如CPU、記憶體、儲存、吞吐量、連線數、延遲、IOPS、GPU使用率等。</td>
+</tr>
+<tr>
+<td>容量門檻</td>
+<td>用於觸發告警、調查、擴充、調校或風險接受之資源使用率、延遲、錯誤率或配額門檻。</td>
+</tr>
+<tr>
+<td>容量預測</td>
+<td>依歷史趨勢、業務計畫、專案需求、季節性、事件、行銷活動或模型負載預估未來容量需求。</td>
+</tr>
+<tr>
+<td>容量瓶頸</td>
+<td>限制服務效能、可用性或擴展能力之資源、架構、程式、資料庫、網路、配額、授權或供應商限制。</td>
+</tr>
+<tr>
+<td>SLA/SLO</td>
+<td>服務水準協議與服務水準目標，常含可用性、延遲、吞吐量、支援時效與容量承諾。</td>
+</tr>
+<tr>
+<td>Autoscaling</td>
+<td>依負載自動擴充或縮減資源之機制。</td>
+</tr>
+<tr>
+<td>Quota / 配額</td>
+<td>雲端、SaaS、API、GPU、儲存、帳號、授權或服務可使用資源之限制。</td>
+</tr>
+<tr>
+<td>FinOps</td>
+<td>雲端財務營運治理，透過可視化、最佳化與責任分攤管理雲端成本與資源效率。</td>
+</tr>
+<tr>
+<td>Overprovisioning</td>
+<td>配置超過實際需求之資源，可能造成成本、能源與管理負擔。</td>
+</tr>
+<tr>
+<td>Underprovisioning</td>
+<td>資源低於實際需求，可能造成服務中斷、效能下降或安全控制失效。</td>
+</tr>
+<tr>
+<td>AI容量</td>
+<td>支援AI訓練、微調、推論、RAG、向量檢索、Token處理、GPU/加速器、模型Serving與MLOps流程所需資源。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>確認容量管理不影響資訊安全控制、日誌、事件偵測、備份、備援與合規；核准高風險例外。</td>
+<td>安全審查、風險接受。</td>
+</tr>
+<tr>
+<td>Capacity Management Owner</td>
+<td>維護容量管理流程、門檻、清冊、報告、預測、改善計畫與管理審查輸入。</td>
+<td>容量清冊、容量報告。</td>
+</tr>
+<tr>
+<td>Service / Business Owner</td>
+<td>定義業務成長、SLA/SLO、尖峰負載、可接受風險、容量需求與業務驗收。</td>
+<td>業務容量需求。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>監控應用容量、交易量、延遲、錯誤率、API限制、排程與應用瓶頸。</td>
+<td>應用容量報告。</td>
+</tr>
+<tr>
+<td>Infrastructure Owner</td>
+<td>管理伺服器、虛擬化、CPU、Memory、Storage、Network與備援資源容量。</td>
+<td>基礎架構容量報告。</td>
+</tr>
+<tr>
+<td>Cloud Platform / FinOps Owner</td>
+<td>管理雲端資源、配額、成本、保留容量、自動擴展、區域限制與雲端容量預測。</td>
+<td>雲端容量與成本報告。</td>
+</tr>
+<tr>
+<td>Database / Data Platform Owner</td>
+<td>管理資料庫容量、連線、查詢效能、儲存、Index、資料成長與資料平台資源。</td>
+<td>資料庫容量報告。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>監控網路頻寬、連線、VPN、WAF、Proxy、Load Balancer、DNS與API Gateway容量。</td>
+<td>網路容量報告。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控容量告警、資源耗盡、日誌攝取、SIEM授權、EDR事件量與容量相關安全事件。</td>
+<td>監控告警與事件紀錄。</td>
+</tr>
+<tr>
+<td>Backup / Storage Owner</td>
+<td>管理備份容量、備份窗口、不可變備份、快照、保留期限與還原容量。</td>
+<td>備份容量報告。</td>
+</tr>
+<tr>
+<td>DevSecOps / SRE Owner</td>
+<td>建立效能測試、壓力測試、容量測試、自動化擴展、SLO與錯誤預算。</td>
+<td>測試與SLO報告。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>管理AI訓練、推論、GPU、Token、向量庫、RAG、模型Serving與AI容量風險。</td>
+<td>AI/MLOps容量報告。</td>
+</tr>
+<tr>
+<td>Supplier / SaaS Owner</td>
+<td>取得供應商容量、SLA、Rate Limit、擴充能力、事件通報與容量證據。</td>
+<td>供應商容量證據。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查容量管理紀錄、告警、預測、擴充、例外、供應商與管理審查證據。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 容量管理範圍與資源類型</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資源類型</th>
+<th>監控項目</th>
+<th>安全與營運風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>運算資源</td>
+<td>CPU、vCPU、核心數、負載、Thread、Process、Container Limit。</td>
+<td>資源耗盡造成服務中斷、告警延遲或安全工具失效。</td>
+</tr>
+<tr>
+<td>記憶體</td>
+<td>Memory使用率、Swap、OOM、Heap、Cache、Container Memory Limit。</td>
+<td>記憶體不足造成程序崩潰、資料損毀或服務降級。</td>
+</tr>
+<tr>
+<td>儲存</td>
+<td>Disk、Volume、Object Storage、Snapshot、檔案數、Inode、成長率。</td>
+<td>磁碟滿載導致日誌遺失、資料庫停機、備份失敗。</td>
+</tr>
+<tr>
+<td>資料庫</td>
+<td>連線數、QPS、TPS、Lock、Index、Replication Lag、Temp Space、Tablespace。</td>
+<td>交易延遲、鎖死、資料不一致或RPO失效。</td>
+</tr>
+<tr>
+<td>網路</td>
+<td>頻寬、連線數、NAT Port、VPN Session、LB連線、Packet Drop、Latency。</td>
+<td>服務不可用、DDoS影響、遠端工作中斷。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>Log Ingestion、EPS、Storage、Retention、SIEM License、Alert Queue。</td>
+<td>日誌遺失、事件偵測失效、稽核證據不足。</td>
+</tr>
+<tr>
+<td>備份與還原</td>
+<td>備份容量、窗口、傳輸量、成功率、還原容量、不可變保護。</td>
+<td>備份失敗、RPO/RTO不達標、勒索復原能力不足。</td>
+</tr>
+<tr>
+<td>雲端配額</td>
+<td>Instance、IP、GPU、Storage、Snapshot、API Rate、VPC、LB、KMS、IAM。</td>
+<td>配額不足造成擴充失敗或DR切換失敗。</td>
+</tr>
+<tr>
+<td>授權與SaaS限制</td>
+<td>使用者數、API配額、儲存量、交易量、日誌保留、Rate Limit。</td>
+<td>合法使用、可用性與成本風險。</td>
+</tr>
+<tr>
+<td>AI/GPU資源</td>
+<td>GPU利用率、VRAM、Token Throughput、模型延遲、Queue、向量索引、Notebook資源。</td>
+<td>推論延遲、訓練失敗、成本暴增、能源效率下降。</td>
+</tr>
+<tr>
+<td>能源與碳資料</td>
+<td>電力、PUE、GPU耗能、雲端碳足跡估算、資源閒置率。</td>
+<td>成本、永續目標與ESG資料完整性風險。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 容量管理作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 容量需求識別</td>
+<td>依業務計畫、服務等級、專案、上線、季節性、法規、備援、AI需求與歷史趨勢識別容量需求。</td>
+<td>Service Owner / Capacity Owner</td>
+<td>容量需求紀錄。</td>
+</tr>
+<tr>
+<td>2. 資產與服務盤點</td>
+<td>識別服務依賴之運算、儲存、資料庫、網路、雲端、SaaS、AI與供應商資源。</td>
+<td>System Owner / Asset Owner</td>
+<td>容量清冊。</td>
+</tr>
+<tr>
+<td>3. 容量基準建立</td>
+<td>建立正常、尖峰、異常與災難復原情境下之容量基準。</td>
+<td>Capacity Owner / SRE</td>
+<td>容量基準報告。</td>
+</tr>
+<tr>
+<td>4. 門檻與告警設定</td>
+<td>設定警示、警戒、重大與緊急門檻，並與SOC/ITSM整合。</td>
+<td>Monitoring Owner / SOC</td>
+<td>監控與告警設定。</td>
+</tr>
+<tr>
+<td>5. 趨勢分析與預測</td>
+<td>依使用率、成長率、業務事件、成本、配額與容量風險進行預測。</td>
+<td>Capacity Owner / FinOps</td>
+<td>容量預測報告。</td>
+</tr>
+<tr>
+<td>6. 擴充或調校計畫</td>
+<td>提出擴容、縮容、架構調整、查詢調校、快取、配額提升或供應商升級方案。</td>
+<td>Technical Owner / Service Owner</td>
+<td>容量改善計畫。</td>
+</tr>
+<tr>
+<td>7. 變更與核准</td>
+<td>容量調整需依變更流程、風險評估、測試、回復與安全審查執行。</td>
+<td>Change Owner / CISO視風險</td>
+<td>變更紀錄。</td>
+</tr>
+<tr>
+<td>8. 實施與驗證</td>
+<td>執行容量調整後，驗證效能、可用性、安全控制、成本與監控。</td>
+<td>IT / SRE / Security</td>
+<td>驗證紀錄。</td>
+</tr>
+<tr>
+<td>9. 事件處理</td>
+<td>容量告警、耗盡、配額不足或效能瓶頸造成風險時，依事件或問題管理處理。</td>
+<td>SOC / Incident Owner</td>
+<td>事件與問題紀錄。</td>
+</tr>
+<tr>
+<td>10. 管理審查</td>
+<td>定期提交KPI/KRI、重大風險、例外、預算、改善與資源需求。</td>
+<td>ISMS代表 / Capacity Owner</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 容量分級與監控要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>適用情境</th>
+<th>監控要求</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>關鍵業務系統、身份服務、SIEM/SOC、備份、資料庫、支付、客戶服務、AI正式推論。</td>
+<td>即時監控、24x7告警、容量預測、DR容量驗證。</td>
+<td>門檻超標即升級，需有擴充或降載Runbook。</td>
+</tr>
+<tr>
+<td>High</td>
+<td>重要內部服務、正式API、核心資料平台、重要SaaS、雲端網路與安全平台。</td>
+<td>持續監控、日/週趨勢分析、告警整合ITSM。</td>
+<td>超標需於SLA內處理並追蹤改善。</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>一般內部服務、UAT、一般開發平台、部門系統。</td>
+<td>定期監控與月度趨勢。</td>
+<td>依風險與需求調整。</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>短期測試、低影響實驗或可重建環境。</td>
+<td>基本監控或成本/配額監控。</td>
+<td>可接受較長處理時間。</td>
+</tr>
+<tr>
+<td>AI High Capacity</td>
+<td>GPU叢集、模型服務、RAG/向量庫、Notebook平台、批次訓練平台。</td>
+<td>GPU/VRAM、Queue、延遲、Token、Rate Limit、能耗與成本監控。</td>
+<td>需管理調度、配額、優先序與濫用偵測。</td>
+</tr>
+<tr>
+<td>Supplier Critical</td>
+<td>供應商或SaaS支援Critical/High服務。</td>
+<td>取得SLA、用量、配額、限制、事件與容量證據。</td>
+<td>容量限制需納入風險與退場/替代方案。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 容量門檻與告警設定建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資源項目</th>
+<th>警示門檻</th>
+<th>重大門檻</th>
+<th>緊急門檻</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CPU / vCPU</td>
+<td>持續超過70%</td>
+<td>持續超過85%</td>
+<td>持續超過95%或服務錯誤上升</td>
+<td>分析程序、擴容、調校或自動擴展。</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>持續超過75%</td>
+<td>持續超過90%</td>
+<td>OOM、Swap過高或服務崩潰</td>
+<td>調整Memory、檢查Leak、重啟需變更核准。</td>
+</tr>
+<tr>
+<td>Disk / Volume</td>
+<td>使用率超過70%</td>
+<td>使用率超過85%</td>
+<td>使用率超過95%或寫入失敗</td>
+<td>清理、擴容、調整保留期限、避免刪除證據。</td>
+</tr>
+<tr>
+<td>Database Connection</td>
+<td>超過70%</td>
+<td>超過85%</td>
+<td>連線耗盡或交易失敗</td>
+<td>調整Pool、查詢、DB資源或應用邏輯。</td>
+</tr>
+<tr>
+<td>Replication Lag</td>
+<td>接近RPO 50%</td>
+<td>接近RPO 80%</td>
+<td>超過RPO</td>
+<td>暫停大量作業、擴容、修復複寫。</td>
+</tr>
+<tr>
+<td>Log Ingestion</td>
+<td>接近授權/吞吐70%</td>
+<td>超過85%</td>
+<td>丟失日誌或Queue堆積</td>
+<td>擴充授權、過濾低價值日誌、保護高風險日誌。</td>
+</tr>
+<tr>
+<td>Backup Capacity</td>
+<td>使用率超過70%</td>
+<td>超過85%</td>
+<td>備份失敗或不可變空間不足</td>
+<td>擴容、調整保留、驗證RPO/RTO。</td>
+</tr>
+<tr>
+<td>Network Bandwidth</td>
+<td>尖峰超過70%</td>
+<td>超過85%</td>
+<td>封包丟失、延遲或服務中斷</td>
+<td>擴頻、QoS、流量調整或DDoS檢查。</td>
+</tr>
+<tr>
+<td>Cloud Quota</td>
+<td>使用率超過70%</td>
+<td>超過85%</td>
+<td>擴充/DR失敗</td>
+<td>提前申請配額、保留容量或架構調整。</td>
+</tr>
+<tr>
+<td>GPU / VRAM</td>
+<td>持續超過70%</td>
+<td>超過85%</td>
+<td>Queue爆量、推論超時或訓練失敗</td>
+<td>調度、擴容、模型最佳化或降級策略。</td>
+</tr>
+<tr>
+<td>API Rate Limit</td>
+<td>使用率超過70%</td>
+<td>超過85%</td>
+<td>限流、請求失敗或SLA受影響</td>
+<td>申請提高、節流、快取或替代路徑。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 容量預測與規劃要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>規劃項目</th>
+<th>要求</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>歷史趨勢分析</td>
+<td>至少分析3至12個月資源使用趨勢，Critical服務依資料可得性提高頻率。</td>
+<td>容量趨勢圖與成長率。</td>
+</tr>
+<tr>
+<td>業務事件預測</td>
+<td>納入行銷活動、客戶上線、季節高峰、合規申報、薪資結算、招生/報名等事件。</td>
+<td>業務容量預測。</td>
+</tr>
+<tr>
+<td>資料成長預測</td>
+<td>估算資料庫、檔案、日誌、備份、物件儲存、向量資料庫與模型資料成長。</td>
+<td>資料成長報告。</td>
+</tr>
+<tr>
+<td>專案與變更需求</td>
+<td>新系統、版本上線、架構調整、資料移轉、AI模型部署需提出容量評估。</td>
+<td>容量影響評估。</td>
+</tr>
+<tr>
+<td>DR與備援容量</td>
+<td>確認備援站點、跨區域、不可變備份與災難復原所需容量。</td>
+<td>DR容量驗證。</td>
+</tr>
+<tr>
+<td>雲端配額規劃</td>
+<td>提前申請或保留雲端配額、GPU、IP、LB、KMS、Storage與API限制。</td>
+<td>配額計畫。</td>
+</tr>
+<tr>
+<td>成本與預算</td>
+<td>容量規劃需與FinOps、預算、成本中心與成本異常偵測整合。</td>
+<td>容量成本預算。</td>
+</tr>
+<tr>
+<td>能源與碳影響</td>
+<td>高耗能系統與AI/GPU資源需評估能源效率、利用率與碳資料。</td>
+<td>能源效率評估。</td>
+</tr>
+<tr>
+<td>風險與例外</td>
+<td>無法如期擴容、成本限制、供應商限制或技術瓶頸需登錄風險。</td>
+<td>風險登錄與改善計畫。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 容量擴充、縮減與調校要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業類型</th>
+<th>作業要求</th>
+<th>安全注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>垂直擴充</td>
+<td>增加CPU、Memory、Storage或GPU等單機資源。</td>
+<td>需確認停機窗口、回復方案與授權影響。</td>
+</tr>
+<tr>
+<td>水平擴充</td>
+<td>增加節點、Pod、Instance、Replica或工作程序。</td>
+<td>需確認Load Balancer、Session、日誌、權限與網路規則。</td>
+</tr>
+<tr>
+<td>自動擴展</td>
+<td>設定Autoscaling、HPA/VPA、Auto Scaling Group或Serverless concurrency。</td>
+<td>需設定上限、成本保護、安全基準與事件告警。</td>
+</tr>
+<tr>
+<td>資料庫調校</td>
+<td>Index、查詢、連線池、Partition、Vacuum、Archive、Cache與Read Replica。</td>
+<td>不得以關閉日誌、弱化權限或刪除稽核資料換取效能。</td>
+</tr>
+<tr>
+<td>儲存擴充</td>
+<td>Volume、Object Storage、Snapshot、Backup Repository與Archive擴充。</td>
+<td>需維持加密、版本控制、不可變保護與存取控制。</td>
+</tr>
+<tr>
+<td>網路擴充</td>
+<td>頻寬、Load Balancer、VPN、NAT Gateway、Proxy、WAF與DNS容量調整。</td>
+<td>需維持安全檢查、監控與網路區隔。</td>
+</tr>
+<tr>
+<td>雲端配額提升</td>
+<td>申請Instance、GPU、Storage、IP、KMS、API與服務限制提升。</td>
+<td>需避免過度授權與成本失控。</td>
+</tr>
+<tr>
+<td>容量縮減</td>
+<td>關閉閒置資源、降規、壓縮保存、降低副本數。</td>
+<td>不得影響RTO/RPO、安全日誌、備援與合規保存。</td>
+</tr>
+<tr>
+<td>AI模型最佳化</td>
+<td>模型量化、批次、快取、蒸餾、動態路由、Rate Limit與推論佇列管理。</td>
+<td>需驗證模型品質、資料安全與濫用防護。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 雲端與FinOps容量管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端配額監控</td>
+<td>監控所有關鍵帳號、區域、服務之配額使用率。</td>
+<td>Cloud Quota Report。</td>
+</tr>
+<tr>
+<td>成本異常偵測</td>
+<td>設定雲端成本、GPU成本、資料傳輸、儲存與日誌成本異常告警。</td>
+<td>FinOps報告。</td>
+</tr>
+<tr>
+<td>保留容量</td>
+<td>對穩定Critical/High負載評估保留Instance、Savings Plan或承諾使用。</td>
+<td>保留容量評估。</td>
+</tr>
+<tr>
+<td>閒置資源治理</td>
+<td>定期識別未使用Volume、Snapshot、IP、Load Balancer、Instance與測試資源。</td>
+<td>閒置資源清理紀錄。</td>
+</tr>
+<tr>
+<td>標籤與成本中心</td>
+<td>雲端資源應具Owner、服務、環境、資料分類、成本中心與生命週期標籤。</td>
+<td>雲端標籤合規報告。</td>
+</tr>
+<tr>
+<td>跨區域容量</td>
+<td>DR或多區域服務需確認目標區域容量、配額、網路與KMS可用性。</td>
+<td>DR容量檢查。</td>
+</tr>
+<tr>
+<td>自動擴展成本上限</td>
+<td>Autoscaling需設定上限、Budget、告警與濫用偵測。</td>
+<td>Auto Scaling與Budget設定。</td>
+</tr>
+<tr>
+<td>日誌成本平衡</td>
+<td>調整日誌攝取與保存不得犧牲必要安全監控與稽核證據。</td>
+<td>日誌保留審查。</td>
+</tr>
+<tr>
+<td>碳與能源資料</td>
+<td>高耗能雲端工作負載與AI/GPU需追蹤利用率與碳足跡資料來源。</td>
+<td>碳足跡報告或供應商資料。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 資料庫、儲存、日誌與備份容量要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>領域</th>
+<th>容量要求</th>
+<th>風險控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料庫</td>
+<td>監控資料成長、Tablespace、Temp、Index、連線、慢查詢、Replication Lag。</td>
+<td>避免因磁碟滿或Lock造成資料損毀與服務中斷。</td>
+</tr>
+<tr>
+<td>資料倉儲/資料湖</td>
+<td>監控儲存量、查詢成本、Partition、資料保留、資料品質與資料生命週期。</td>
+<td>防止成本失控、資料保留過久與未分類資料膨脹。</td>
+</tr>
+<tr>
+<td>檔案與物件儲存</td>
+<td>監控物件數、版本、Bucket大小、Lifecycle、共享區與暫存區。</td>
+<td>避免版本失控、公開分享與保存期限違反。</td>
+</tr>
+<tr>
+<td>日誌平台</td>
+<td>監控EPS、GB/day、Queue、Indexer、Search Head、授權、保留與冷熱儲存。</td>
+<td>確保資安事件期間不遺失關鍵日誌。</td>
+</tr>
+<tr>
+<td>SIEM/SOAR</td>
+<td>容量需支援尖峰事件量、攻擊期間告警量、保留期限與查詢效能。</td>
+<td>避免告警丟失、延遲與事件關聯失效。</td>
+</tr>
+<tr>
+<td>備份平台</td>
+<td>監控備份容量、窗口、失敗率、去重率、不可變空間、還原容量。</td>
+<td>維持RPO/RTO與勒索復原能力。</td>
+</tr>
+<tr>
+<td>快照與Replica</td>
+<td>控制Snapshot數量、版本、跨區副本、保留策略與成本。</td>
+<td>避免快照過度成長與舊資料殘留。</td>
+</tr>
+<tr>
+<td>Archive</td>
+<td>Archive資料需明確保存期限、檢索需求、成本、加密與刪除策略。</td>
+<td>避免不可控長期保存與法規風險。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. AI、MLOps、GPU與模型服務容量要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>容量管理要求</th>
+<th>安全與治理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>模型訓練</td>
+<td>監控GPU/TPU、VRAM、Storage、Dataset I/O、Network、Checkpoint與Job Queue。</td>
+<td>限制未核准資料、避免資源濫用與成本失控。</td>
+</tr>
+<tr>
+<td>模型推論</td>
+<td>監控延遲、吞吐、Token/s、並發數、Queue、錯誤率、Rate Limit與GPU利用率。</td>
+<td>建立限流、降級、熔斷與安全輸出監控。</td>
+</tr>
+<tr>
+<td>RAG / 向量資料庫</td>
+<td>監控索引大小、查詢延遲、Embedding Queue、Namespace、Replica與儲存成長。</td>
+<td>確保權限繼承、資料刪除與敏感資料保護。</td>
+</tr>
+<tr>
+<td>Notebook平台</td>
+<td>監控CPU/GPU、Memory、閒置Session、資料下載、套件安裝與外連。</td>
+<td>設定配額、閒置回收、DLP與Secrets防護。</td>
+</tr>
+<tr>
+<td>AI API供應商</td>
+<td>監控Token用量、Rate Limit、成本、區域、SLA與故障替代方案。</td>
+<td>確認資料不訓練、Prompt保存與供應商事件通報。</td>
+</tr>
+<tr>
+<td>模型版本與Artifact</td>
+<td>監控模型檔大小、版本數、Registry容量、保留策略與簽章狀態。</td>
+<td>避免舊模型殘留、未授權模型與供應鏈風險。</td>
+</tr>
+<tr>
+<td>GPU資源調度</td>
+<td>建立優先序、配額、預約、閒置回收與成本分攤。</td>
+<td>高敏感訓練工作負載應隔離與監控。</td>
+</tr>
+<tr>
+<td>AI能源效率</td>
+<td>追蹤GPU使用率、訓練時間、能耗、碳資料與模型效益。</td>
+<td>與AI模型能源效率與碳資料安全文件一致。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 供應商與SaaS容量管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SLA/SLO容量承諾</td>
+<td>供應商應提供可用性、性能、儲存、使用者數、API Rate、支援與擴充能力。</td>
+<td>合約/SLA/SOW。</td>
+</tr>
+<tr>
+<td>配額與限制</td>
+<td>SaaS/API應記錄使用者數、儲存、API、Rate Limit、日誌保留與交易量限制。</td>
+<td>SaaS容量清冊。</td>
+</tr>
+<tr>
+<td>容量通報</td>
+<td>供應商容量不足、服務降級、限流或維護需具通報機制。</td>
+<td>通報紀錄。</td>
+</tr>
+<tr>
+<td>擴充流程</td>
+<td>關鍵SaaS需定義擴充申請、費用、前置時間與責任窗口。</td>
+<td>擴充Runbook。</td>
+</tr>
+<tr>
+<td>DR與尖峰能力</td>
+<td>關鍵供應商需提供災難復原、尖峰負載、區域容量與事件證據。</td>
+<td>供應商DR/容量證據。</td>
+</tr>
+<tr>
+<td>資料匯出容量</td>
+<td>需確認退場或大量匯出時之API、頻寬、時間與成本限制。</td>
+<td>退場測試紀錄。</td>
+</tr>
+<tr>
+<td>AI供應商容量</td>
+<td>外部AI模型服務需追蹤Token、Rate Limit、併發、成本與替代供應商。</td>
+<td>AI供應商容量報告。</td>
+</tr>
+<tr>
+<td>合約續約審查</td>
+<td>續約前審查用量趨勢、容量瓶頸、事件、成本與替代方案。</td>
+<td>供應商審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 容量事件與問題管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件情境</th>
+<th>判定條件</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>容量耗盡</td>
+<td>Disk滿載、DB連線耗盡、Queue爆量、Memory OOM、CPU飽和或配額達上限。</td>
+<td>依事件等級隔離影響、擴容、降載、清理並保存證據。</td>
+</tr>
+<tr>
+<td>日誌丟失風險</td>
+<td>SIEM/Log平台攝取失敗、授權達上限、Queue堆積或Storage滿載。</td>
+<td>優先保護安全關鍵日誌，升級SOC與CISO。</td>
+</tr>
+<tr>
+<td>備份容量不足</td>
+<td>備份失敗、不可變備份空間不足或備份窗口超時。</td>
+<td>啟動備份風險處理與RPO/RTO影響評估。</td>
+</tr>
+<tr>
+<td>雲端配額不足</td>
+<td>自動擴展、DR切換或新服務部署因配額不足失敗。</td>
+<td>申請配額、調整區域、降載或啟用替代方案。</td>
+</tr>
+<tr>
+<td>API/Token限流</td>
+<td>SaaS或AI服務因Rate Limit造成交易失敗或推論延遲。</td>
+<td>節流、快取、批次、申請提升或切換替代供應商。</td>
+</tr>
+<tr>
+<td>AI/GPU資源耗盡</td>
+<td>GPU Queue爆量、推論逾時、訓練失敗或成本暴增。</td>
+<td>啟動配額、優先序、降級、模型最佳化與成本告警。</td>
+</tr>
+<tr>
+<td>容量異常暴增</td>
+<td>可能由攻擊、資料外洩、爬蟲、惡意程式、錯誤程式或濫用造成。</td>
+<td>SOC調查，必要時啟動資安事件。</td>
+</tr>
+<tr>
+<td>擴容造成安全缺口</td>
+<td>新資源未部署EDR、未加密、未納入日誌或錯誤開放網路。</td>
+<td>立即修正或隔離，依變更/事件處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 容量清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>清冊編號</th>
+<th>服務 / 系統</th>
+<th>Owner</th>
+<th>環境</th>
+<th>重要性</th>
+<th>資源類型</th>
+<th>目前容量</th>
+<th>使用率</th>
+<th>門檻</th>
+<th>成長率</th>
+<th>下次審查日</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CAP-001</td>
+<td></td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Prod □ DR □ Cloud □ AI/MLOps</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ CPU □ Memory □ Storage □ DB □ Network □ Log □ Backup □ GPU □ API □ SaaS</td>
+<td></td>
+<td></td>
+<td>警示/重大/緊急</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 警示 □ 待擴充 □ 例外</td>
+</tr>
+<tr>
+<td>CAP-002</td>
+<td></td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Prod □ DR □ Cloud □ AI/MLOps</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ CPU □ Memory □ Storage □ DB □ Network □ Log □ Backup □ GPU □ API □ SaaS</td>
+<td></td>
+<td></td>
+<td>警示/重大/緊急</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 警示 □ 待擴充 □ 例外</td>
+</tr>
+<tr>
+<td>CAP-003</td>
+<td></td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Prod □ DR □ Cloud □ AI/MLOps</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ CPU □ Memory □ Storage □ DB □ Network □ Log □ Backup □ GPU □ API □ SaaS</td>
+<td></td>
+<td></td>
+<td>警示/重大/緊急</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 警示 □ 待擴充 □ 例外</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 容量評估申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>CAP-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務 / 系統名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>申請原因</td>
+<td>□ 新系統 □ 版本上線 □ 業務成長 □ 尖峰活動 □ 效能瓶頸 □ DR需求 □ AI需求 □ 成本優化 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>預估負載</td>
+<td>使用者數、交易量、API請求、資料量、推論量、日誌量等</td>
+<td></td>
+</tr>
+<tr>
+<td>目標SLA/SLO</td>
+<td>可用性、延遲、吞吐、錯誤率、RTO/RPO等</td>
+<td></td>
+</tr>
+<tr>
+<td>資源需求</td>
+<td>CPU、Memory、Storage、DB、Network、GPU、API、License、Quota等</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>預估成本</td>
+<td></td>
+<td>含雲端、授權、硬體、供應商與維運成本。</td>
+</tr>
+<tr>
+<td>安全影響</td>
+<td>是否需調整日誌、EDR、WAF、IAM、加密、DLP、備份或監控</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Service Owner / Capacity Owner / CISO / FinOps / IT / AI Governance</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>18. 容量管理檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>範圍完整性</td>
+<td>是否識別所有Critical/High服務之運算、儲存、DB、網路、日誌、備份、雲端配額、AI與供應商容量？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>容量基準</td>
+<td>是否已建立正常、尖峰、異常與DR情境之容量基準？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>門檻告警</td>
+<td>是否設定警示、重大、緊急門檻並整合監控與ITSM/SOC？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>趨勢預測</td>
+<td>是否定期分析容量趨勢與未來3至12個月需求？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>配額管理</td>
+<td>雲端、SaaS、API、GPU、授權與日誌配額是否受監控？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安全控制</td>
+<td>擴容或縮容是否未降低EDR、日誌、加密、備份、DLP與存取控制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備援容量</td>
+<td>備援、DR、不可變備份與復原容量是否足以支援RTO/RPO？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI容量</td>
+<td>GPU、模型服務、RAG、向量庫、Token、Rate Limit與能源效率是否納入管理？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>成本治理</td>
+<td>容量決策是否考量FinOps、預算、閒置資源與成本異常？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商容量</td>
+<td>關鍵SaaS/供應商是否提供容量、SLA、配額與擴充證據？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>容量耗盡、配額不足或日誌丟失風險是否可依事件/問題流程處理？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法達成容量門檻</td>
+<td>需提出原因、業務影響、補償控制、擴充計畫與風險接受。</td>
+<td>Service Owner / CISO / Capacity Owner</td>
+<td>最長90日重評。</td>
+</tr>
+<tr>
+<td>Critical服務無容量監控</td>
+<td>需臨時人工檢查、替代監控、改善計畫與升級時程。</td>
+<td>CISO / IT主管</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>雲端配額不足但無法即時提升</td>
+<td>需降載、替代區域、保留容量或業務風險接受。</td>
+<td>Cloud Owner / Business Owner / CISO</td>
+<td>依事件期限。</td>
+</tr>
+<tr>
+<td>日誌容量不足需縮減日誌</td>
+<td>不得刪除必要安全日誌；需風險評估、優先序、替代保存與CISO核准。</td>
+<td>SOC Owner / CISO</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>備份容量不足</td>
+<td>需評估RPO/RTO影響、不可變備份、保留期限與擴充計畫。</td>
+<td>Backup Owner / CISO / BCMS Owner</td>
+<td>最長30至60日。</td>
+</tr>
+<tr>
+<td>AI/GPU資源不足</td>
+<td>需設定優先序、配額、排程、降級、成本控制與AI Governance審查。</td>
+<td>AI Governance / Business Owner</td>
+<td>依專案重評。</td>
+</tr>
+<tr>
+<td>成本限制無法擴容</td>
+<td>需Business Owner接受服務降級、延遲、風險或提出替代架構。</td>
+<td>Business Owner / 管理階層</td>
+<td>年度或重大變更重評。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>容量清冊</td>
+<td>服務、Owner、資源類型、目前容量、使用率、門檻、成長率、審查日與狀態。</td>
+<td>Capacity Management Owner</td>
+<td>至少3年或服務有效期間。</td>
+</tr>
+<tr>
+<td>容量基準與預測報告</td>
+<td>正常/尖峰/異常使用率、趨勢、預測、瓶頸、擴充建議與風險。</td>
+<td>Capacity Owner / SRE</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>監控與告警紀錄</td>
+<td>容量告警、資源耗盡、配額不足、日誌容量、備份容量與AI容量告警。</td>
+<td>SOC / Monitoring Owner</td>
+<td>至少1至3年。</td>
+</tr>
+<tr>
+<td>容量變更紀錄</td>
+<td>擴容、縮容、調校、配額提升、架構調整、成本優化與驗證結果。</td>
+<td>Change Owner / IT</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>容量測試紀錄</td>
+<td>壓力測試、效能測試、尖峰測試、DR容量測試、AI推論測試與結果。</td>
+<td>SRE / QA / MLOps</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商容量證據</td>
+<td>SLA、配額、用量、容量限制、擴充流程、DR容量與事件通報。</td>
+<td>Supplier Management / SaaS Owner</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>FinOps與成本紀錄</td>
+<td>雲端成本、保留容量、閒置資源、成本異常、預算與優化決策。</td>
+<td>FinOps Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>AI容量與能源紀錄</td>
+<td>GPU利用率、Token用量、模型延遲、推論成本、能源與碳資料。</td>
+<td>MLOps / Sustainability Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical服務容量監控覆蓋率</td>
+<td>已納入容量監控之Critical服務 / 應納入Critical服務。</td>
+<td>目標100%。</td>
+<td>控制覆蓋。</td>
+</tr>
+<tr>
+<td>容量告警逾期處理數</td>
+<td>超過SLA未完成處理之容量告警數。</td>
+<td>目標0。</td>
+<td>維運效率。</td>
+</tr>
+<tr>
+<td>容量耗盡事件數</td>
+<td>因容量不足造成服務中斷、效能嚴重下降或安全控制失效之事件數。</td>
+<td>目標0。</td>
+<td>重大風險。</td>
+</tr>
+<tr>
+<td>預測準確率</td>
+<td>容量預測與實際用量差異。</td>
+<td>持續改善，重大差異需分析。</td>
+<td>規劃品質。</td>
+</tr>
+<tr>
+<td>雲端配額風險數</td>
+<td>使用率超過重大門檻且未有提升或替代計畫之配額數。</td>
+<td>Critical目標0。</td>
+<td>雲端韌性。</td>
+</tr>
+<tr>
+<td>日誌容量缺口數</td>
+<td>因容量造成日誌丟失、延遲或保留不足之缺口數。</td>
+<td>目標0。</td>
+<td>偵測與稽核能力。</td>
+</tr>
+<tr>
+<td>備份容量缺口數</td>
+<td>備份空間、窗口或不可變保護不足之缺口數。</td>
+<td>Critical/High目標0。</td>
+<td>復原能力。</td>
+</tr>
+<tr>
+<td>閒置資源成本比率</td>
+<td>閒置或低利用資源成本 / 總資源成本。</td>
+<td>持續下降。</td>
+<td>FinOps效率。</td>
+</tr>
+<tr>
+<td>AI/GPU利用率</td>
+<td>GPU/加速器有效使用時間與總配置時間比例。</td>
+<td>依工作負載目標設定。</td>
+<td>AI資源效率。</td>
+</tr>
+<tr>
+<td>AI推論SLO達成率</td>
+<td>推論服務延遲、錯誤率、吞吐或Token SLO達成比例。</td>
+<td>Critical AI服務需達成SLO。</td>
+<td>AI服務品質。</td>
+</tr>
+<tr>
+<td>容量例外逾期數</td>
+<td>超過期限未重評或未關閉之容量例外數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>容量治理</td>
+<td>是否有容量管理Owner、流程、清冊、門檻、報告與管理審查。</td>
+<td>容量管理文件與報告。</td>
+</tr>
+<tr>
+<td>範圍完整性</td>
+<td>Critical/High服務是否涵蓋運算、儲存、DB、網路、日誌、備份、雲端、SaaS與AI容量。</td>
+<td>容量清冊。</td>
+</tr>
+<tr>
+<td>監控告警</td>
+<td>容量門檻是否設定並與監控、ITSM、SOC或值班流程整合。</td>
+<td>監控設定與告警紀錄。</td>
+</tr>
+<tr>
+<td>趨勢預測</td>
+<td>是否定期產出趨勢、預測、瓶頸與擴充計畫。</td>
+<td>容量預測報告。</td>
+</tr>
+<tr>
+<td>容量變更</td>
+<td>擴容、縮容、配額、架構與調校是否經變更管理與驗證。</td>
+<td>變更紀錄。</td>
+</tr>
+<tr>
+<td>安全影響</td>
+<td>容量調整是否未降低日誌、EDR、加密、備份、DLP、存取控制與監控。</td>
+<td>安全審查紀錄。</td>
+</tr>
+<tr>
+<td>日誌與備份容量</td>
+<td>是否確保日誌與備份容量足以支援事件偵測、RPO/RTO與稽核保存。</td>
+<td>日誌/備份容量報告。</td>
+</tr>
+<tr>
+<td>雲端與FinOps</td>
+<td>雲端配額、成本、標籤、閒置資源、保留容量是否管理。</td>
+<td>FinOps報告。</td>
+</tr>
+<tr>
+<td>AI/MLOps容量</td>
+<td>GPU、Token、Rate Limit、模型延遲、RAG與向量庫容量是否管理。</td>
+<td>AI容量報告。</td>
+</tr>
+<tr>
+<td>供應商容量</td>
+<td>關鍵SaaS與供應商是否具SLA、配額、擴充與容量證據。</td>
+<td>供應商審查紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>容量例外是否有核准、補償控制、期限、重評與風險接受。</td>
+<td>例外紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 附錄A：容量事件初步處理Runbook</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>處理內容</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 告警確認</td>
+<td>確認告警來源、資源類型、使用率、影響服務、時間與門檻。</td>
+<td>SOC / Monitoring</td>
+<td>告警紀錄。</td>
+</tr>
+<tr>
+<td>2. 影響評估</td>
+<td>評估服務可用性、SLA/SLO、安全控制、資料完整性、備份與客戶影響。</td>
+<td>Service Owner / IT</td>
+<td>影響評估。</td>
+</tr>
+<tr>
+<td>3. 初步控制</td>
+<td>清理非必要暫存、啟動自動擴展、降載、節流、切換或增加配額。</td>
+<td>IT / SRE / Cloud Owner</td>
+<td>處置紀錄。</td>
+</tr>
+<tr>
+<td>4. 安全確認</td>
+<td>確認處置未刪除證據、未降低日誌、未停用防護、未開放過度權限。</td>
+<td>Security Owner</td>
+<td>安全檢查。</td>
+</tr>
+<tr>
+<td>5. 根因分析</td>
+<td>分析容量暴增原因，例如業務尖峰、程式錯誤、攻擊、資料膨脹或供應商限制。</td>
+<td>Problem Owner / SOC</td>
+<td>RCA。</td>
+</tr>
+<tr>
+<td>6. 永久改善</td>
+<td>提出擴容、調校、架構改善、配額提升、預測修正或成本治理。</td>
+<td>Capacity Owner</td>
+<td>CAPA。</td>
+</tr>
+<tr>
+<td>7. 結案回報</td>
+<td>完成驗證、更新容量清冊、風險登錄、KPI/KRI與管理審查輸入。</td>
+<td>ISMS代表</td>
+<td>結案紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 附錄B：容量改善追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>改善編號</th>
+<th>來源</th>
+<th>缺口描述</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>Owner</th>
+<th>期限</th>
+<th>狀態</th>
+<th>驗證結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CAP-CAPA-001</td>
+<td>□ 告警 □ 事件 □ 趨勢 □ 稽核 □ 專案 □ 供應商 □ AI容量</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>CAP-CAPA-002</td>
+<td>□ 告警 □ 事件 □ 趨勢 □ 稽核 □ 專案 □ 供應商 □ AI容量</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>CAP-CAPA-003</td>
+<td>□ 告警 □ 事件 □ 趨勢 □ 稽核 □ 專案 □ 供應商 □ AI容量</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-FRM-006 身分生命週期管理表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-FRM-006 身分生命週期管理表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-FRM-006</td>
+<td>身分生命週期管理表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R10 / 10 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-FRM-006</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 表單審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>表單建立</td>
+<td></td>
+<td>IAM Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>人資流程審查</td>
+<td></td>
+<td>HR Owner / People Operations</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Helpdesk Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料保護審查</td>
+<td></td>
+<td>DPO / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商身分審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / HR主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 填寫說明與管理原則</h2>
+<div class="notice">
+<p>本表單用於完整記錄身分從申請、建立、啟用、異動、停用、撤權、歸檔到刪除之生命週期。填寫時應確認身分來源、聘僱或合約狀態、業務角色、系統Owner、資料分類、權限基準、MFA/PAM要求、到期日與撤權責任。任何未具有效Owner、未經核准、無業務必要性、無期限、未納管或無法追溯之身分，均不得建立或持續保留。</p>
+</div>
+<ul>
+<li>人員身分應以HR或授權人員主資料為來源；供應商身分應以合約、工單、採購或供應商Owner確認為來源。</li>
+<li>帳號與權限應依最小權限、Need-to-know、職務分離、資料分類與系統風險設定。</li>
+<li>臨時帳號、供應商帳號、特權帳號、Break-glass帳號、服務帳號與API Token必須設定Owner、用途、期限、監控與撤銷條件。</li>
+<li>離職、異動、合約終止、專案結束或供應商退場時，應即時撤銷不再需要之帳號、Token、憑證、群組、角色、裝置與實體存取。</li>
+<li>所有建立、異動、撤權、刪除與例外均應留下工單、核准、系統紀錄或其他可稽核證據。</li>
+</ul>
+<h2>2. 身分生命週期基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>紀錄編號</td>
+<td>ID-LC-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請 / 觸發日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>生命週期事件</td>
+<td>□ 新進建立 □ 職務異動 □ 部門異動 □ 權限調整 □ 臨時存取 □ 特權啟用 □ 服務帳號建立 □ 供應商進場 □ 專案加入 □ 留停 □ 復職 □ 離職撤權 □ 合約終止 □ 帳號刪除 □ 事件後處置 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>身分類型</td>
+<td>□ 員工 □ 約聘 □ 承包商 □ 顧問 □ 供應商 □ 客戶帳號 □ 服務帳號 □ API/Token □ 機器身分 □ RPA □ AI Agent □ Break-glass □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>姓名 / 身分名稱</td>
+<td></td>
+<td>服務帳號或Token填名稱。</td>
+</tr>
+<tr>
+<td>員工編號 / 供應商人員ID / 帳號ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>所屬單位 / 公司</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>職稱 / 業務角色</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Line Manager / Sponsor</td>
+<td></td>
+<td>人員或供應商身分必填。</td>
+</tr>
+<tr>
+<td>System Owner</td>
+<td></td>
+<td>涉及特定系統必填。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td></td>
+<td>涉及資料存取必填。</td>
+</tr>
+<tr>
+<td>IAM / Helpdesk處理人</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>生效日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>到期日期</td>
+<td>YYYY-MM-DD / 不適用</td>
+<td>臨時、供應商、專案、服務帳號建議必填。</td>
+</tr>
+<tr>
+<td>整體狀態</td>
+<td>□ 申請中 □ 已核准 □ 已建立 □ 已啟用 □ 已異動 □ 已停用 □ 已撤權 □ 已刪除 □ 例外中 □ 已結案</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>3. 身分來源、資格與核准檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核內容</th>
+<th>結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>來源可信</td>
+<td>人員身分是否來自HR系統、正式合約、採購、工單或授權Sponsor？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>聘僱/合約有效</td>
+<td>員工任用、承包商合約或供應商合約是否有效且未過期？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保密承諾</td>
+<td>是否已簽署保密與資訊安全承諾或合約保密條款？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>人員篩選</td>
+<td>需要人員篩選之角色是否已完成背景或資格檢查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>訓練完成</td>
+<td>是否已完成必要資安、隱私、系統使用或特權操作訓練？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>業務必要性</td>
+<td>申請身分與權限是否有明確業務目的與Owner確認？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類確認</td>
+<td>是否確認將接觸之資料分類與資料Owner要求？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>職務分離檢查</td>
+<td>是否確認未違反SoD或已建立補償控制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>核准完整性</td>
+<td>是否取得Line Manager、System Owner、Data Owner、CISO或Supplier Owner必要核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>4. Joiner：新進 / 新增身分建立紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>填寫內容</th>
+<th>確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分主檔建立</td>
+<td>HR/供應商/身分主檔已建立並完成必要欄位。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>帳號命名規則</td>
+<td>帳號ID符合命名規則，可唯一識別且避免混淆。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>基本帳號建立</td>
+<td>AD/LDAP/Entra ID/Google Workspace或主要身份平台帳號已建立。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>MFA註冊</td>
+<td>已完成MFA註冊或替代強驗證。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>預設群組/角色</td>
+<td>依職務基準配置基本群組與角色。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>端點/裝置綁定</td>
+<td>必要裝置、MDM、EDR、VPN、憑證或裝置信任已完成。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>系統權限建立</td>
+<td>經核准之系統、資料、應用程式、資料夾或雲端權限已建立。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>特權/PAM納管</td>
+<td>需特權者已納入PAM、Session紀錄或等效控制。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>初始密碼處理</td>
+<td>初始密碼已安全交付，首次登入強制變更或使用無密碼流程。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>使用者通知</td>
+<td>使用者已收到帳號、使用規範、保密責任與通報管道。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Mover：異動 / 權限調整紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>異動前</th>
+<th>異動後</th>
+<th>檢核結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>部門 / 單位</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>職稱 / 角色</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Line Manager / Sponsor</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>基本群組 / 角色</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>應用系統權限</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料存取範圍</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>特權帳號 / 管理權限</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端IAM / SaaS角色</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>VPN / 遠端存取</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>實體門禁 / 設備存取</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>職務分離影響</td>
+<td></td>
+<td></td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>舊權限撤銷</td>
+<td></td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>6. Leaver：離職 / 退場 / 終止撤權紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>撤權項目</th>
+<th>撤權要求</th>
+<th>完成時間</th>
+<th>處理人</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>主身份平台帳號</td>
+<td>停用或撤銷AD/LDAP/Entra ID/Google Workspace等主帳號。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>應用系統帳號</td>
+<td>停用或刪除ERP、CRM、HR、財務、Git、工單、SaaS等帳號。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>特權帳號</td>
+<td>撤銷Admin、Root、DBA、Cloud Owner、PAM、Break-glass授權。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>群組與角色</td>
+<td>移除所有群組、角色、資料夾、Distribution List與共享資源權限。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>VPN / 遠端存取</td>
+<td>撤銷VPN、Zero Trust Access、VDI、遠端桌面與跳板機權限。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>MFA / Token</td>
+<td>撤銷MFA裝置、硬體Token、憑證、智慧卡與生物辨識註冊。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>撤銷或輪替個人持有之API Key、PAT、SSH Key、憑證與Secrets。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>雲端IAM</td>
+<td>撤銷雲端帳號、Role、Access Key、Service Principal與跨帳戶權限。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>實體存取</td>
+<td>撤銷門禁卡、鑰匙、機櫃權限、停車或安全區域權限。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>設備與資料回收</td>
+<td>回收筆電、手機、媒體、文件、資料與公司資產。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>郵件/資料保留</td>
+<td>依HR、Legal、業務與資料保護要求處理Email、檔案、代理與保存。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>離職後抽查</td>
+<td>確認無殘留有效帳號、Token、共享權限或自動轉寄。</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 服務帳號、機器身分與Token生命週期紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>填寫內容</th>
+<th>確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分名稱 / ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>身分類型</td>
+<td>□ Service Account □ API Key □ Token □ Certificate □ SSH Key □ OAuth App □ Service Principal □ RPA □ AI Agent □ Machine Identity □ Other</td>
+<td></td>
+</tr>
+<tr>
+<td>用途與系統</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Owner / Custodian</td>
+<td></td>
+<td>不可空白。</td>
+</tr>
+<tr>
+<td>權限範圍</td>
+<td></td>
+<td>需最小權限。</td>
+</tr>
+<tr>
+<td>建立核准者</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>建立日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>到期日 / 輪替日</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>秘密資訊儲存位置</td>
+<td>□ Secrets Manager □ HSM/KMS □ PAM Vault □ CI/CD Secret Store □ 其他核准位置</td>
+<td></td>
+</tr>
+<tr>
+<td>活動監控</td>
+<td>□ 有日誌 □ 有告警 □ 有定期審查 □ 無，需改善</td>
+<td></td>
+</tr>
+<tr>
+<td>停用 / 刪除條件</td>
+<td>系統下線、服務停用、Owner異動、Token到期、風險事件等</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 已確認。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 臨時帳號與緊急身分紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>臨時帳號編號</td>
+<td>TEMP-ID-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請原因</td>
+<td>□ 緊急維修 □ 事件應變 □ 專案短期需求 □ 供應商支援 □ 稽核測試 □ BCP/DR □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / Sponsor</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>核准者</td>
+<td></td>
+<td>CISO、System Owner、IAM/PAM Owner視風險。</td>
+</tr>
+<tr>
+<td>帳號 / 角色 / 權限</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>開始時間</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+</tr>
+<tr>
+<td>結束時間</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>□ MFA □ PAM □ Session錄影 □ 命令紀錄 □ 雙人控制 □ SOC監控 □ 限制來源IP □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>撤銷確認</td>
+<td>□ 未撤銷 □ 已撤銷 □ 延長核准</td>
+<td></td>
+</tr>
+<tr>
+<td>事後審查</td>
+<td>□ 不需要 □ 需要，審查人：______</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>9. 身分生命週期檢核項目</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>唯一識別</td>
+<td>每一身分是否可唯一識別且可追溯至人員、服務或Owner？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>來源有效</td>
+<td>身分建立是否來自可信來源且具有效聘僱、合約或業務依據？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>核准完整</td>
+<td>建立、異動、特權、臨時與供應商身分是否取得必要核准？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>初始權限與異動後權限是否符合職務與最小權限？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>職務分離</td>
+<td>是否未造成未核准SoD衝突或已具補償控制？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>MFA與強驗證</td>
+<td>需MFA之帳號是否完成註冊與有效性確認？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>特權納管</td>
+<td>特權帳號是否納入PAM、Session紀錄、到期審查與MFA？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>期限管理</td>
+<td>臨時、供應商、服務帳號與Token是否有到期日或輪替日？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>離職撤權</td>
+<td>離職、異動、退場與合約終止是否於規定時間完成撤權？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>孤兒帳號</td>
+<td>是否無Owner不明、久未使用、來源不明或殘留帳號？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌監控</td>
+<td>帳號建立、異動、登入、特權活動與撤權是否有日誌或稽核軌跡？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 符合</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 生命週期處理紀錄總表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>序號</th>
+<th>身分 / 帳號ID</th>
+<th>身分類型</th>
+<th>事件類型</th>
+<th>申請人 / Owner</th>
+<th>核准者</th>
+<th>生效日</th>
+<th>到期日</th>
+<th>處理結果</th>
+<th>結案狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>□ 人員 □ 供應商 □ 服務帳號 □ Token □ 機器身分 □ 臨時帳號 □ 其他</td>
+<td>□ 建立 □ 異動 □ 停用 □ 撤權 □ 刪除 □ 復職 □ 延長</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 完成 □ 未完成 □ 例外 □ 升級事件</td>
+<td>□ 未結案 □ 已結案 □ 追蹤中</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>□ 人員 □ 供應商 □ 服務帳號 □ Token □ 機器身分 □ 臨時帳號 □ 其他</td>
+<td>□ 建立 □ 異動 □ 停用 □ 撤權 □ 刪除 □ 復職 □ 延長</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 完成 □ 未完成 □ 例外 □ 升級事件</td>
+<td>□ 未結案 □ 已結案 □ 追蹤中</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>□ 人員 □ 供應商 □ 服務帳號 □ Token □ 機器身分 □ 臨時帳號 □ 其他</td>
+<td>□ 建立 □ 異動 □ 停用 □ 撤權 □ 刪除 □ 復職 □ 延長</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 完成 □ 未完成 □ 例外 □ 升級事件</td>
+<td>□ 未結案 □ 已結案 □ 追蹤中</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>□ 人員 □ 供應商 □ 服務帳號 □ Token □ 機器身分 □ 臨時帳號 □ 其他</td>
+<td>□ 建立 □ 異動 □ 停用 □ 撤權 □ 刪除 □ 復職 □ 延長</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 完成 □ 未完成 □ 例外 □ 升級事件</td>
+<td>□ 未結案 □ 已結案 □ 追蹤中</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 不符合與改善追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>缺失編號</th>
+<th>身分 / 帳號 / 系統</th>
+<th>不符合描述</th>
+<th>風險等級</th>
+<th>立即處置</th>
+<th>改善措施</th>
+<th>Owner</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>IDLC-CAPA-001</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>IDLC-CAPA-002</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>IDLC-CAPA-003</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>IDLC-CAPA-004</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 重大異常升級判定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>異常情境</th>
+<th>是否發現</th>
+<th>立即處置</th>
+<th>升級對象</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>離職或退場人員仍有有效帳號、Token或實體存取</td>
+<td>□ 否 □ 是</td>
+<td>立即停用/撤銷，保存登入與存取紀錄。</td>
+<td>CISO / IAM Owner / Incident Manager</td>
+</tr>
+<tr>
+<td>未核准建立帳號或特權</td>
+<td>□ 否 □ 是</td>
+<td>暫停帳號，確認建立來源、核准紀錄與活動。</td>
+<td>CISO / System Owner</td>
+</tr>
+<tr>
+<td>共享帳號或通用帳號無法追溯使用者</td>
+<td>□ 否 □ 是</td>
+<td>停用或限縮，改用具名帳號或PAM。</td>
+<td>IAM Owner / CISO</td>
+</tr>
+<tr>
+<td>服務帳號無Owner、無用途或權限過大</td>
+<td>□ 否 □ 是</td>
+<td>指定Owner、降權、輪替或停用。</td>
+<td>System Owner / Secrets Owner</td>
+</tr>
+<tr>
+<td>臨時帳號逾期未撤銷</td>
+<td>□ 否 □ 是</td>
+<td>立即撤銷或取得重新核准。</td>
+<td>IAM Owner / Line Manager</td>
+</tr>
+<tr>
+<td>API Key、Token或憑證外洩或未輪替</td>
+<td>□ 否 □ 是</td>
+<td>撤銷、輪替、搜尋暴露範圍並保存證據。</td>
+<td>SOC / Secrets Owner</td>
+</tr>
+<tr>
+<td>職務異動後舊權限未移除</td>
+<td>□ 否 □ 是</td>
+<td>移除舊權限並審查異動期間活動。</td>
+<td>IAM Owner / System Owner</td>
+</tr>
+<tr>
+<td>高風險帳號無MFA或PAM保護</td>
+<td>□ 否 □ 是</td>
+<td>立即補強或限縮存取。</td>
+<td>CISO / PAM Owner</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 例外與風險接受紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外編號</th>
+<th>例外事項</th>
+<th>風險說明</th>
+<th>補償控制</th>
+<th>核准者</th>
+<th>有效期限</th>
+<th>重評要求</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>IDLC-EXC-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 有效 □ 待重評 □ 已關閉 □ 逾期</td>
+</tr>
+<tr>
+<td>IDLC-EXC-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 有效 □ 待重評 □ 已關閉 □ 逾期</td>
+</tr>
+<tr>
+<td>IDLC-EXC-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 有效 □ 待重評 □ 已關閉 □ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 簽核欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>單位 / 職稱</th>
+<th>簽核意見</th>
+<th>簽名 / 日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請人 / Sponsor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Line Manager</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HR / People Operations（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>System Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Data Owner（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IAM Owner / Helpdesk</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PAM Owner（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Information Security / CISO代表</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Supplier Owner（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>核准主管</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 證據清單與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據類型</th>
+<th>證據內容</th>
+<th>保存位置</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分生命週期表</td>
+<td>本表單、申請、核准、建立、異動、停用、撤權、刪除與簽核紀錄。</td>
+<td></td>
+<td>IAM Owner / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>HR / 合約來源證據</td>
+<td>到職、異動、離職、供應商合約、工單、Sponsor確認與退場證明。</td>
+<td></td>
+<td>HR / Supplier Owner</td>
+<td>至少3年或依人資/合約要求。</td>
+</tr>
+<tr>
+<td>帳號建立與撤權證據</td>
+<td>帳號建立截圖、系統Log、工單、IAM匯出、撤權確認與刪除紀錄。</td>
+<td></td>
+<td>IAM / Helpdesk / System Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>特權與PAM證據</td>
+<td>PAM納管、MFA、Session紀錄、Break-glass封存、特權活動與審查紀錄。</td>
+<td></td>
+<td>PAM Owner / SOC</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>服務帳號與Secrets證據</td>
+<td>Owner、用途、權限、輪替、Secrets儲存、憑證到期與撤銷紀錄。</td>
+<td></td>
+<td>System Owner / Secrets Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、有效期限、重評與關閉證據。</td>
+<td></td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>事件與調查紀錄</td>
+<td>未授權帳號、離職未撤權、特權濫用、Token外洩與RCA/CAPA。</td>
+<td></td>
+<td>Incident Manager</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+<tr>
+<td>定期審查證據</td>
+<td>權限審查、帳號盤點、孤兒帳號檢查與改善追蹤。</td>
+<td></td>
+<td>IAM Owner / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. KPI/KRI與稽核重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>定義 / 檢查重點</th>
+<th>目標 / 可接受證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>帳號建立準確率</td>
+<td>帳號與權限依核准角色建立且無過度授權之比例。</td>
+<td>目標100%。</td>
+<td>IAM / System Owner</td>
+</tr>
+<tr>
+<td>離職撤權及時率</td>
+<td>離職或退場後於規定時限內完成撤權之比例。</td>
+<td>Critical權限目標100%。</td>
+<td>HR / IAM / Supplier Owner</td>
+</tr>
+<tr>
+<td>異動舊權限移除率</td>
+<td>職務異動後不再需要之舊權限完成移除比例。</td>
+<td>目標100%。</td>
+<td>Line Manager / IAM</td>
+</tr>
+<tr>
+<td>臨時帳號逾期數</td>
+<td>超過到期日未撤銷或未重新核准之臨時帳號數。</td>
+<td>目標0。</td>
+<td>IAM Owner</td>
+</tr>
+<tr>
+<td>孤兒帳號數</td>
+<td>無Owner、無有效來源或久未使用仍啟用之帳號數。</td>
+<td>目標0。</td>
+<td>System Owner</td>
+</tr>
+<tr>
+<td>服務帳號Owner完整率</td>
+<td>服務帳號、API、Token具有效Owner與用途之比例。</td>
+<td>目標100%。</td>
+<td>System Owner</td>
+</tr>
+<tr>
+<td>高風險帳號MFA/PAM覆蓋率</td>
+<td>特權與高風險帳號納入MFA/PAM或等效控制之比例。</td>
+<td>Critical目標100%。</td>
+<td>PAM / IAM Owner</td>
+</tr>
+<tr>
+<td>稽核抽查重點</td>
+<td>抽查JML流程、核准、權限基準、撤權證據、例外、服務帳號與離職異動。</td>
+<td>本表單與系統紀錄一致。</td>
+<td>Internal Auditor</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 表單填寫品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>基本資料完整性</td>
+<td>身分類型、事件類型、Owner、Sponsor、System/Data Owner、日期與狀態是否完整？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>核准充分性</td>
+<td>建立、異動、特權、臨時、服務帳號與供應商身分是否取得必要核准？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>證據可追溯性</td>
+<td>是否保存HR來源、工單、系統Log、建立/撤權/刪除紀錄與簽核？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>權限合理性</td>
+<td>權限是否符合最小權限、職務角色、SoD與資料分類要求？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>撤權完整性</td>
+<td>離職、異動、退場或到期後是否完成所有系統、Token、MFA、實體與資料權限撤銷？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 通過</td>
+<td>已於CSS設定。</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

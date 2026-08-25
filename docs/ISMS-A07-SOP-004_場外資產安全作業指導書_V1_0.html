@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-SOP-004 場外資產安全作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-SOP-004 場外資產安全作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-SOP-004</td>
+<td>場外資產安全作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-SOP-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Asset Management Owner / Endpoint Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Helpdesk Owner / Endpoint Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>人資與承諾書審查</td>
+<td></td>
+<td>HR Owner / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>Physical Security Owner / Facility Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料保護審查</td>
+<td></td>
+<td>DPO / Data Owner代表（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與採購審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 人資主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範資訊及相關資產於公司受控場所之外使用、攜出、運送、暫存、出差、遠端工作、居家辦公、客戶現場、供應商場址、展覽展示、教育訓練、測試驗證、維修、租借、借用或臨時保管時之安全控制，確保資產、資料、系統存取、使用者身分、機密資訊及公司權益不因場外環境之實體風險、網路風險、人員風險、遺失、竊盜、未授權存取、拍攝、旁觀、跨境、供應商保管或不可控環境而受損。</p>
+<p>場外資產安全是實體安全、端點安全、遠端工作、資產管理、供應商安全與資訊安全事件管理之交會控制。本文件要求場外資產於整個生命週期中維持可識別、可授權、可保護、可監控、可回收、可追蹤與可稽核狀態。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>公司資產離開受控場所前，應依資產類型、資料分類、使用目的、場外環境、使用者角色與風險等級取得必要授權。</li>
+<li>場外使用資產應啟用加密、端點防護、MDM/EDR、螢幕鎖定、遠端鎖定/抹除、MFA、VPN或條件式存取等必要控制。</li>
+<li>不得將未經授權之機密資料、客戶資料、個人資料、Secrets、金鑰、原始碼或高敏感紙本文件攜出或存放於未受控場所。</li>
+<li>資產於場外使用期間，使用者應負保管與即時通報責任，避免遺失、竊盜、未授權使用、旁觀、偷拍、公共網路攻擊或資料外洩。</li>
+<li>場外資產使用期限屆滿、任務結束、專案結束、離職、異動、供應商退場或設備更換時，應依規定回收、清點、檢查、清除或重新登錄。</li>
+<li>涉及跨境攜帶、客戶現場、供應商保管或高風險國家/地區之場外資產，應進行額外風險評估與核准。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>場外資產</td>
+<td>任何離開公司受控場所、機房、辦公區或指定保管區域之資訊及相關資產。</td>
+</tr>
+<tr>
+<td>受控場所</td>
+<td>由公司或授權供應商管理，具備門禁、訪客管理、實體安全與環境控制之場所。</td>
+</tr>
+<tr>
+<td>攜出</td>
+<td>將資產自公司受控場所帶出、運送、郵寄、交付或移至場外之行為。</td>
+</tr>
+<tr>
+<td>遠端工作資產</td>
+<td>員工或承包商於居家、共享辦公、客戶現場或其他非公司受控場所工作時使用之公司資訊資產。</td>
+</tr>
+<tr>
+<td>高敏感資產</td>
+<td>保存或可存取高機密資料、PII、客戶資料、原始碼、金鑰、Secrets、財務資料、管理權限或關鍵系統之資產。</td>
+</tr>
+<tr>
+<td>借用資產</td>
+<td>臨時提供給員工、承包商、供應商、專案、教育訓練或活動使用之公司資產。</td>
+</tr>
+<tr>
+<td>資產保管人</td>
+<td>實際持有、使用或管理場外資產之人員，對資產安全與通報負直接責任。</td>
+</tr>
+<tr>
+<td>遠端抹除</td>
+<td>透過MDM、EDR、端點管理或雲端服務對遺失或高風險資產執行資料刪除或鎖定之控制。</td>
+</tr>
+<tr>
+<td>場外環境</td>
+<td>居家、旅館、交通工具、共享辦公室、客戶場址、供應商場址、展場、訓練教室、公共場所或其他非公司受控區域。</td>
+</tr>
+<tr>
+<td>跨境攜帶</td>
+<td>資產被帶離原營運國家/司法管轄區，可能涉及資料保護、出口管制、海關、加密或客戶合約要求。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Asset Owner</td>
+<td>核准資產場外使用目的、期限、保管人、資料範圍與回收要求。</td>
+<td>攜出/借用核准。</td>
+</tr>
+<tr>
+<td>Asset Manager</td>
+<td>維護場外資產清冊、序號、保管人、位置、狀態、期限、回收與盤點紀錄。</td>
+<td>場外資產清冊。</td>
+</tr>
+<tr>
+<td>Asset Custodian / 使用者</td>
+<td>妥善保管場外資產，遵守安全要求，避免未授權使用並即時通報遺失、竊盜或異常。</td>
+<td>承諾、領用、歸還紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations / Helpdesk</td>
+<td>執行設備交付、加密、EDR/MDM、遠端抹除、技術支援、回收檢查與重新部署。</td>
+<td>端點管理紀錄。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>確認場外端點安全狀態、合規設定、遠端鎖定/抹除、告警與不合規處置。</td>
+<td>EDR/MDM報告。</td>
+</tr>
+<tr>
+<td>CISO / Security Owner</td>
+<td>核准高風險場外使用、例外、跨境、高敏感資產、遺失事件與風險接受。</td>
+<td>安全核准、風險接受。</td>
+</tr>
+<tr>
+<td>Physical Security / Facility</td>
+<td>協助資產出場、交接、物流、暫存、保管與實體安全事件調查。</td>
+<td>出場與交接紀錄。</td>
+</tr>
+<tr>
+<td>HR / Line Manager</td>
+<td>確認人員資格、離職異動回收、違規處理與教育訓練。</td>
+<td>人員異動與回收紀錄。</td>
+</tr>
+<tr>
+<td>DPO / Legal</td>
+<td>審查涉及個資、客戶資料、跨境、合約、Legal Hold或法規要求之場外使用。</td>
+<td>隱私/法務審查。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>管理供應商借用、代管、場外維護與退場回收。</td>
+<td>供應商清冊與證明。</td>
+</tr>
+<tr>
+<td>Incident Response Team</td>
+<td>處理場外資產遺失、竊盜、疑似外洩、未授權存取與證據保存。</td>
+<td>事件紀錄、RCA/CAPA。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查場外資產授權、清冊、技術控制、盤點、回收、事件與例外。</td>
+<td>稽核底稿。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 場外資產分類與最低控制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類型</th>
+<th>場外使用最低要求</th>
+<th>禁止或限制事項</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>筆記型電腦</td>
+<td>全碟加密、EDR/MDM、螢幕鎖、MFA、VPN/條件式存取、資產標籤、遠端抹除。</td>
+<td>禁止停用安全軟體、借予他人或無保護放置於公共場所。</td>
+<td>領用紀錄、MDM/EDR狀態。</td>
+</tr>
+<tr>
+<td>行動電話 / 平板</td>
+<td>MDM、裝置加密、螢幕鎖、生物辨識或PIN、遠端鎖定/抹除、應用程式管控。</td>
+<td>禁止Root/Jailbreak、安裝未核准高風險App或共享解鎖碼。</td>
+<td>MDM紀錄。</td>
+</tr>
+<tr>
+<td>外接媒體</td>
+<td>核准、加密、標示、用途期限、最小資料、歸還與清除。</td>
+<td>原則禁止未加密USB或私人物媒體儲存公司資料。</td>
+<td>媒體借用與清除紀錄。</td>
+</tr>
+<tr>
+<td>紙本機密文件</td>
+<td>核准攜出、封袋、最小份數、不得無人看管、使用後回收或碎毀。</td>
+<td>禁止於公共場所展示、拍攝或任意丟棄。</td>
+<td>文件攜出/回收紀錄。</td>
+</tr>
+<tr>
+<td>備份媒體</td>
+<td>高等級核准、加密、封條、雙人交接、可追蹤物流與安全暫存。</td>
+<td>禁止一般郵寄、無加密或無交接紀錄。</td>
+<td>交接與保管紀錄。</td>
+</tr>
+<tr>
+<td>展示 / 訓練設備</td>
+<td>資料清除或使用展示資料、限制網路、活動後回收與檢查。</td>
+<td>禁止使用真實客戶資料作Demo。</td>
+<td>活動借用紀錄。</td>
+</tr>
+<tr>
+<td>網路 / 測試設備</td>
+<td>核准用途、設定清除、管理帳號重設、連線限制與回收驗收。</td>
+<td>禁止接入未授權網路或客戶環境。</td>
+<td>設備借用與設定紀錄。</td>
+</tr>
+<tr>
+<td>門禁卡 / Token / 智慧卡</td>
+<td>具名發放、期限、遺失即時停用、MFA或PIN保護。</td>
+<td>禁止轉借、共享或與密碼一同保存。</td>
+<td>領用與停用紀錄。</td>
+</tr>
+<tr>
+<td>供應商代管資產</td>
+<td>合約/NDA、清冊、位置、保管責任、保護要求、盤點與退場證明。</td>
+<td>禁止供應商未核准轉移、再委外或保留資料。</td>
+<td>供應商證明。</td>
+</tr>
+<tr>
+<td>雲端/虛擬場外資產</td>
+<td>標籤、Owner、IAM、加密、監控、位置/區域、生命週期與退場。</td>
+<td>禁止建立未納管Shadow IT資源。</td>
+<td>雲端資產清冊。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 場外資產申請、核准與交付流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>說明資產類型、用途、使用期間、場外地點、資料分類、使用者、是否跨境與是否供應商使用。</td>
+<td>申請人 / Line Manager</td>
+<td>場外資產申請單。</td>
+</tr>
+<tr>
+<td>2. 風險分級</td>
+<td>依資產敏感度、資料分類、場外環境、使用期限、跨境、供應商與業務重要性判定風險。</td>
+<td>Asset Owner / Security</td>
+<td>風險分級紀錄。</td>
+</tr>
+<tr>
+<td>3. 核准</td>
+<td>依風險取得主管、Asset Owner、CISO、DPO、Legal或Supplier Owner核准。</td>
+<td>核准角色</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>4. 技術準備</td>
+<td>安裝安全基準、EDR/MDM、加密、VPN、MFA、DLP、遠端抹除與必要應用程式。</td>
+<td>IT / Endpoint Security</td>
+<td>設備準備紀錄。</td>
+</tr>
+<tr>
+<td>5. 資產交付</td>
+<td>記錄資產編號、序號、配件、使用者、期限、責任聲明與歸還日期。</td>
+<td>Asset Manager / 使用者</td>
+<td>領用紀錄。</td>
+</tr>
+<tr>
+<td>6. 使用期間監控</td>
+<td>監控設備合規、登入異常、遺失通報、EDR/MDM狀態、DLP與地理異常。</td>
+<td>Endpoint Security / SOC</td>
+<td>監控紀錄。</td>
+</tr>
+<tr>
+<td>7. 到期提醒</td>
+<td>使用期限屆滿前通知保管人歸還、延長核准或重新評估。</td>
+<td>Asset Manager</td>
+<td>提醒紀錄。</td>
+</tr>
+<tr>
+<td>8. 歸還與檢查</td>
+<td>清點資產、配件、資料、設定、損壞、告警、異常與是否需資料清除。</td>
+<td>IT / Asset Manager</td>
+<td>歸還檢查紀錄。</td>
+</tr>
+<tr>
+<td>9. 清除/再部署</td>
+<td>依設備狀態執行資料清除、重建、維修、再使用或汰除。</td>
+<td>IT Operations</td>
+<td>清除或再部署紀錄。</td>
+</tr>
+<tr>
+<td>10. 清冊更新</td>
+<td>更新資產位置、狀態、使用者、期限、回收結果與證據位置。</td>
+<td>Asset Manager</td>
+<td>資產清冊。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 場外使用安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低要求</th>
+<th>使用者注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>實體保管</td>
+<td>設備不得無人看管；於交通工具、旅館、會議場地、客戶場址應置於可控範圍。</td>
+<td>不得將設備留在車內可見處或無保護區域。</td>
+</tr>
+<tr>
+<td>螢幕與旁觀防護</td>
+<td>公共場所使用時應避免旁觀，可使用防窺片並調整座位。</td>
+<td>不得顯示機密或客戶資料於可被旁觀位置。</td>
+</tr>
+<tr>
+<td>網路連線</td>
+<td>使用核准VPN、MFA與條件式存取；避免不可信公共Wi-Fi。</td>
+<td>不得關閉VPN或安全代理以繞過限制。</td>
+</tr>
+<tr>
+<td>資料儲存</td>
+<td>場外設備僅保存最小必要資料，敏感資料應加密或存於核准平台。</td>
+<td>不得將資料存至個人雲端或未核准媒體。</td>
+</tr>
+<tr>
+<td>列印與紙本</td>
+<td>場外列印需核准並妥善保管或銷毀紙本。</td>
+<td>不得將機密文件遺留於共享印表機或公共場所。</td>
+</tr>
+<tr>
+<td>會議與展示</td>
+<td>展示資料應去識別或使用測試資料；投影前檢查桌面、通知與資料夾。</td>
+<td>不得展示未核准客戶資料、內部架構或Secrets。</td>
+</tr>
+<tr>
+<td>外部設備接入</td>
+<td>不得連接未知USB、外部硬碟、公共充電資料線或未核准周邊。</td>
+<td>需充電時優先使用公司充電器或資料阻隔器。</td>
+</tr>
+<tr>
+<td>共享設備限制</td>
+<td>公司設備不得借予家人、朋友、供應商或未授權人員使用。</td>
+<td>使用者對設備與資料安全負責。</td>
+</tr>
+<tr>
+<td>拍照與錄音</td>
+<td>不得拍攝、錄音或分享含機密資訊之螢幕、文件、會議或設備。</td>
+<td>客戶現場需遵守對方規定。</td>
+</tr>
+<tr>
+<td>跨境使用</td>
+<td>跨境攜帶設備或資料前需確認合約、法規、加密、海關與資料主權要求。</td>
+<td>高敏感資料跨境需額外核准。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 居家辦公與遠端工作資產要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>控制要求</th>
+<th>證據 / 驗證</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>工作環境</td>
+<td>居家或遠端工作位置應可避免未授權旁觀、竊聽、拍攝或接觸設備。</td>
+<td>遠端工作承諾或自評。</td>
+</tr>
+<tr>
+<td>設備使用</td>
+<td>優先使用公司核准設備，不得以個人設備處理高敏感資料，除非BYOD已納管。</td>
+<td>MDM/EDR或BYOD合規狀態。</td>
+</tr>
+<tr>
+<td>家庭網路</td>
+<td>應使用安全Wi-Fi設定、強密碼、WPA2/WPA3與更新路由器韌體。</td>
+<td>自評或安全指引確認。</td>
+</tr>
+<tr>
+<td>資料保管</td>
+<td>紙本、外接媒體與設備應妥善存放，避免家人或訪客接觸。</td>
+<td>使用者承諾。</td>
+</tr>
+<tr>
+<td>遠端連線</td>
+<td>使用MFA、VPN、條件式存取與公司核准協作工具。</td>
+<td>登入與存取紀錄。</td>
+</tr>
+<tr>
+<td>通話會議</td>
+<td>遠端會議應確認參與者、避免機密內容被第三方聽見或錄製。</td>
+<td>會議平台設定。</td>
+</tr>
+<tr>
+<td>設備回收</td>
+<td>遠端工作結束、離職或異動時，設備應依規定寄回、交回或安全清除。</td>
+<td>回收紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 出差、客戶現場與跨境攜帶控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>控制要求</th>
+<th>額外注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>國內出差</td>
+<td>攜出資產需最小化、加密、貼標、隨身保管並避免公共場所暴露。</td>
+<td>旅館內可使用保險箱，但高敏感設備仍應隨身或受控。</td>
+</tr>
+<tr>
+<td>國外出差</td>
+<td>跨境前確認資料分類、當地法規、客戶合約、加密限制與風險國家要求。</td>
+<td>必要時使用乾淨設備或臨時設備。</td>
+</tr>
+<tr>
+<td>客戶現場</td>
+<td>遵守客戶場域安全規定；不得擅自接入客戶網路或複製客戶資料。</td>
+<td>任何資料交換需有正式授權。</td>
+</tr>
+<tr>
+<td>展覽 / Demo</td>
+<td>使用展示資料、測試帳號與受限網路；避免真實資料與管理權限。</td>
+<td>活動後需檢查設備與清除展示資料。</td>
+</tr>
+<tr>
+<td>教育訓練</td>
+<td>訓練設備需使用訓練資料，活動後清除學員資料與暫存檔。</td>
+<td>不得將正式資料作為教材展示。</td>
+</tr>
+<tr>
+<td>高風險地區</td>
+<td>需CISO核准，使用最小資料、臨時帳號、限制同步與返國後重建設備。</td>
+<td>可能需禁止攜帶高敏感資料。</td>
+</tr>
+<tr>
+<td>海關/執法檢查</td>
+<td>如被要求解鎖或交出設備，應依法律要求並立即通報公司窗口。</td>
+<td>返還後需安全檢查與憑證輪替。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 供應商、承包商與第三方場外資產管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>借用核准</td>
+<td>供應商借用或保管公司資產需合約、NDA、使用目的、期限、保管責任與退場要求。</td>
+<td>借用申請、合約/NDA。</td>
+</tr>
+<tr>
+<td>資產清冊</td>
+<td>供應商持有之公司資產需列入清冊，含序號、位置、保管人、用途與期限。</td>
+<td>供應商資產清冊。</td>
+</tr>
+<tr>
+<td>安全基準</td>
+<td>供應商使用公司設備時不得停用EDR、MDM、加密或安全設定。</td>
+<td>端點合規報告。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>供應商不得將公司資料複製至未核准設備、個人雲端或其他第三方。</td>
+<td>合約條款、檢查紀錄。</td>
+</tr>
+<tr>
+<td>轉包限制</td>
+<td>供應商不得未經核准將公司資產交予次承包商或轉移場址。</td>
+<td>供應商承諾。</td>
+</tr>
+<tr>
+<td>定期盤點</td>
+<td>長期代管或專案設備需定期盤點並回報狀態。</td>
+<td>盤點紀錄。</td>
+</tr>
+<tr>
+<td>退場回收</td>
+<td>合約終止、專案結束或人員異動時，資產需回收、清除、銷毀或提供證明。</td>
+<td>退場紀錄。</td>
+</tr>
+<tr>
+<td>事件通報</td>
+<td>資產遺失、竊盜、未授權存取、資料外洩或設備感染需立即通報。</td>
+<td>事件通報紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 場外資產盤點與回收要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>頻率 / 觸發</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>場外資產清冊</td>
+<td>維護資產編號、序號、保管人、位置、用途、期限、狀態與技術控制狀態。</td>
+<td>持續維護。</td>
+</tr>
+<tr>
+<td>定期盤點</td>
+<td>依風險對場外資產進行抽查或全量盤點。</td>
+<td>至少每半年或每年；高風險每季。</td>
+</tr>
+<tr>
+<td>到期回收</td>
+<td>使用期限屆滿、專案結束、活動結束、離職異動時回收資產。</td>
+<td>事件觸發。</td>
+</tr>
+<tr>
+<td>離職異動</td>
+<td>HR離職異動流程應觸發場外資產回收與權限撤銷。</td>
+<td>每次離職/異動。</td>
+</tr>
+<tr>
+<td>供應商退場</td>
+<td>供應商退場前需清點所有公司資產、資料與憑證。</td>
+<td>合約/專案結束。</td>
+</tr>
+<tr>
+<td>不合規處理</td>
+<td>設備離線、EDR/MDM失效、加密關閉或長期未回報需追蹤。</td>
+<td>監控觸發。</td>
+</tr>
+<tr>
+<td>回收檢查</td>
+<td>歸還後檢查損壞、資料殘留、未授權軟體、惡意軟體、配件與帳號。</td>
+<td>每次回收。</td>
+</tr>
+<tr>
+<td>清除與再使用</td>
+<td>回收後依資訊刪除與設備再使用要求清除、重建或汰除。</td>
+<td>每次回收。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 場外資產申請與領用表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>OFFASSET-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資產保管人</td>
+<td></td>
+<td>實際持有人。</td>
+</tr>
+<tr>
+<td>資產類型</td>
+<td>□ 筆電 □ 手機 □ 平板 □ 外接媒體 □ 紙本 □ Token □ 網路設備 □ 測試設備 □ 展示設備 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>資產編號 / 序號</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>使用目的</td>
+<td>□ 遠端工作 □ 出差 □ 客戶現場 □ 展示 □ 教育訓練 □ 維修 □ 專案 □ 供應商代管 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>場外地點</td>
+<td>居家、客戶地址、供應商地址、活動地點或城市/國家</td>
+<td>避免填入不必要精確個資，依文件分級保護。</td>
+</tr>
+<tr>
+<td>使用期間</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 無資料 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ Secrets □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>是否跨境</td>
+<td>□ 否 □ 是，國家/地區：______</td>
+<td></td>
+</tr>
+<tr>
+<td>技術控制</td>
+<td>□ 加密 □ EDR □ MDM □ MFA □ VPN □ DLP □ 遠端抹除 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Line Manager / Asset Owner / IT / CISO / DPO / Legal / Supplier Owner</td>
+<td></td>
+</tr>
+<tr>
+<td>保管人聲明</td>
+<td>本人承諾依公司規定保管、使用、通報與歸還資產。</td>
+<td>簽名 / 日期</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 場外資產歸還與檢查表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>歸還單號</td>
+<td>OFFASSET-RET-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>歸還日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>資產編號 / 序號</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>保管人</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>歸還原因</td>
+<td>□ 到期 □ 專案結束 □ 離職 □ 異動 □ 維修 □ 更換 □ 汰除 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>外觀與配件</td>
+<td>□ 完整 □ 損壞 □ 缺件，說明：______</td>
+<td></td>
+</tr>
+<tr>
+<td>安全狀態</td>
+<td>□ EDR正常 □ MDM正常 □ 加密正常 □ 離線異常 □ 需調查</td>
+<td></td>
+</tr>
+<tr>
+<td>資料處理</td>
+<td>□ 無需清除 □ 已備份 □ 已清除 □ 待清除 □ 涉及事件保全</td>
+<td></td>
+</tr>
+<tr>
+<td>異常紀錄</td>
+<td>遺失、損壞、未授權軟體、資料殘留、惡意軟體、帳號異常等</td>
+<td></td>
+</tr>
+<tr>
+<td>後續處理</td>
+<td>□ 再使用 □ 維修 □ 重建 □ 汰除 □ 事件處理 □ 供應商處理</td>
+<td></td>
+</tr>
+<tr>
+<td>驗收人</td>
+<td>IT / Asset Manager / Security</td>
+<td>簽名 / 日期</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 場外資產安全檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>授權</td>
+<td>場外使用是否取得必要主管、Asset Owner、IT與Security核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>清冊</td>
+<td>資產編號、序號、保管人、位置、用途、期限與狀態是否登錄？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>技術控制</td>
+<td>設備是否啟用加密、EDR/MDM、MFA、VPN、遠端抹除與安全基準？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>場外設備是否僅保存最小必要資料？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>紙本管制</td>
+<td>紙本與機密文件是否核准、保管、回收或銷毀？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>外接媒體</td>
+<td>外接媒體是否核准、加密、標示、登錄與到期回收？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>跨境審查</td>
+<td>跨境攜帶是否完成法務、資料保護與安全審查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商持有資產是否有合約、NDA、清冊、保管與退場要求？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>遺失通報</td>
+<td>使用者是否知悉遺失、竊盜或異常需立即通報？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>到期回收</td>
+<td>到期、離職、異動或專案結束是否完成回收與檢查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 是</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 遺失、竊盜與異常事件處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>立即處置</th>
+<th>升級對象</th>
+<th>後續要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>設備遺失或遭竊</td>
+<td>立即通報Helpdesk/SOC/主管；執行遠端鎖定、抹除、帳號停用與Token撤銷。</td>
+<td>SOC / CISO / DPO視資料分類</td>
+<td>評估資料外洩、保險、報案與事件檢討。</td>
+</tr>
+<tr>
+<td>外接媒體遺失</td>
+<td>確認媒體是否加密、資料內容、最近使用與可能影響範圍。</td>
+<td>CISO / Data Owner / DPO</td>
+<td>必要時啟動資料外洩通報評估。</td>
+</tr>
+<tr>
+<td>紙本機密文件遺失</td>
+<td>通報主管與Security，確認文件內容、份數、地點與可能接觸者。</td>
+<td>CISO / Legal / DPO</td>
+<td>採取補救、通知與改善措施。</td>
+</tr>
+<tr>
+<td>設備遭未授權使用</td>
+<td>隔離設備、重設密碼、檢查日誌、EDR掃描與保存證據。</td>
+<td>SOC / Incident Response</td>
+<td>依事件管理程序處理。</td>
+</tr>
+<tr>
+<td>公共網路或釣魚疑似入侵</td>
+<td>停用連線、保存告警、執行EDR掃描與憑證輪替。</td>
+<td>SOC</td>
+<td>完成RCA與使用者教育。</td>
+</tr>
+<tr>
+<td>跨境被檢查或設備被扣留</td>
+<td>立即通知Legal、CISO與主管；記錄事件細節。</td>
+<td>Legal / CISO / Management</td>
+<td>返還後進行取證、重建與憑證輪替。</td>
+</tr>
+<tr>
+<td>供應商未歸還資產</td>
+<td>依合約升級，停用帳號、遠端鎖定、追蹤物流與法律處理。</td>
+<td>Supplier Owner / Legal / CISO</td>
+<td>更新供應商風險評估。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>設備無法啟用MDM/EDR</td>
+<td>需說明技術限制、替代控制、使用期限、限制資料與監控方式。</td>
+<td>CISO / Endpoint Security Owner</td>
+<td>最長30日或專案期限。</td>
+</tr>
+<tr>
+<td>高敏感資料需場外使用</td>
+<td>需Data Owner、DPO、CISO核准，採加密、最小化、存取限制與到期清除。</td>
+<td>Data Owner / DPO / CISO</td>
+<td>單次核准。</td>
+</tr>
+<tr>
+<td>未加密媒體需攜出</td>
+<td>原則禁止；如不可避免需CISO核准並採雙人交接、封條與最短期限。</td>
+<td>CISO / Data Owner</td>
+<td>單次核准。</td>
+</tr>
+<tr>
+<td>跨境攜帶限制</td>
+<td>需Legal/DPO/CISO審查當地法規、合約與資料主權。</td>
+<td>Legal / DPO / CISO</td>
+<td>每次跨境核准。</td>
+</tr>
+<tr>
+<td>供應商長期保管資產</td>
+<td>需合約、NDA、定期盤點、技術控制、退場計畫與風險評估。</td>
+<td>Supplier Owner / CISO</td>
+<td>至少每季或每半年重評。</td>
+</tr>
+<tr>
+<td>到期未能歸還</td>
+<td>需提出原因、延長期限、風險評估與主管核准。</td>
+<td>Asset Owner / Line Manager</td>
+<td>最長30日重評。</td>
+</tr>
+<tr>
+<td>個人設備處理公司資料</td>
+<td>需BYOD核准、MDM/容器化、資料限制、DLP與退出清除。</td>
+<td>CISO / HR / DPO</td>
+<td>依BYOD政策重評。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>場外資產申請與核准</td>
+<td>申請人、資產、用途、期限、場外地點、資料分類、核准與風險評估。</td>
+<td>Asset Manager / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>領用與歸還紀錄</td>
+<td>資產編號、序號、配件、保管人、領用日期、歸還日期與驗收結果。</td>
+<td>Asset Manager</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>端點安全證據</td>
+<td>加密、EDR/MDM、遠端抹除、合規狀態、DLP與登入紀錄。</td>
+<td>Endpoint Security Owner</td>
+<td>至少1至3年。</td>
+</tr>
+<tr>
+<td>供應商場外資產紀錄</td>
+<td>供應商清冊、合約、NDA、盤點、保管、退場與刪除/歸還證明。</td>
+<td>Supplier Management</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>跨境與高風險核准</td>
+<td>跨境、客戶現場、高敏感資料、例外與風險接受紀錄。</td>
+<td>CISO / Legal / DPO</td>
+<td>至少3年或依法規。</td>
+</tr>
+<tr>
+<td>事件紀錄</td>
+<td>遺失、竊盜、未授權使用、資料外洩、報案、遠端抹除、RCA與CAPA。</td>
+<td>Incident Manager</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+<tr>
+<td>盤點紀錄</td>
+<td>定期盤點、逾期資產、不合規設備、缺失與改善追蹤。</td>
+<td>Asset Manager</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>教育與承諾紀錄</td>
+<td>保密與資訊安全承諾、遠端工作承諾、場外資產使用教育。</td>
+<td>HR / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>場外資產清冊完整率</td>
+<td>已登錄完整Owner、位置、期限與狀態之場外資產比例。</td>
+<td>目標100%。</td>
+<td>資產可追溯性。</td>
+</tr>
+<tr>
+<td>場外設備安全合規率</td>
+<td>場外端點符合加密、EDR/MDM、MFA與安全基準之比例。</td>
+<td>Critical/High目標100%。</td>
+<td>技術控制有效性。</td>
+</tr>
+<tr>
+<td>逾期未歸還資產數</td>
+<td>超過核准期限未歸還或未展延之資產數。</td>
+<td>目標0。</td>
+<td>回收管理。</td>
+</tr>
+<tr>
+<td>遺失或竊盜事件數</td>
+<td>場外資產遺失、竊盜或不可追蹤事件數。</td>
+<td>目標0；發生需管理審查。</td>
+<td>重大風險。</td>
+</tr>
+<tr>
+<td>遠端抹除成功率</td>
+<td>遺失或高風險設備可成功遠端鎖定/抹除比例。</td>
+<td>目標依技術能力持續改善。</td>
+<td>事件控制。</td>
+</tr>
+<tr>
+<td>供應商場外資產盤點完成率</td>
+<td>供應商持有公司資產完成盤點比例。</td>
+<td>目標100%。</td>
+<td>供應商治理。</td>
+</tr>
+<tr>
+<td>高風險例外逾期數</td>
+<td>場外資產安全例外超過期限未重評或未關閉數量。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>離職資產回收及時率</td>
+<td>離職/異動人員場外資產於期限內回收比例。</td>
+<td>目標100%。</td>
+<td>人員退場控制。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>授權流程</td>
+<td>場外資產使用是否具申請、風險分級、核准、期限與保管人。</td>
+<td>申請單、核准紀錄。</td>
+</tr>
+<tr>
+<td>清冊完整性</td>
+<td>場外資產是否完整登錄資產編號、序號、Owner、位置、期限與狀態。</td>
+<td>場外資產清冊。</td>
+</tr>
+<tr>
+<td>技術控制</td>
+<td>場外端點是否啟用加密、EDR/MDM、MFA、VPN、DLP與遠端抹除。</td>
+<td>MDM/EDR報告。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>高敏感資料、外接媒體、紙本與跨境使用是否符合核准與最小化。</td>
+<td>資料分類與核准證據。</td>
+</tr>
+<tr>
+<td>遠端工作</td>
+<td>居家與遠端工作資產是否符合安全承諾與控制要求。</td>
+<td>遠端工作承諾、端點報告。</td>
+</tr>
+<tr>
+<td>供應商資產</td>
+<td>供應商保管或借用資產是否有合約、清冊、盤點與退場證明。</td>
+<td>供應商紀錄。</td>
+</tr>
+<tr>
+<td>回收與離職</td>
+<td>到期、專案結束、離職異動是否完成回收、撤權與清除。</td>
+<td>歸還表、離職檢核表。</td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>遺失、竊盜、未授權使用或外洩是否依事件程序處理。</td>
+<td>事件紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否有核准、補償控制、期限、重評與風險接受。</td>
+<td>例外紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大事件、逾期資產、供應商缺口與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 附錄A：場外資產盤點清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>清冊編號</th>
+<th>資產編號</th>
+<th>資產名稱</th>
+<th>序號</th>
+<th>保管人</th>
+<th>場外地點</th>
+<th>使用目的</th>
+<th>資料分類</th>
+<th>到期日</th>
+<th>安全狀態</th>
+<th>盤點結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>OFF-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 無資料 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>YYYY-MM-DD</td>
+<td>□ 合規 □ 不合規 □ 離線 □ 待確認</td>
+<td>□ 正常 □ 逾期 □ 待回收 □ 遺失 □ 例外</td>
+</tr>
+<tr>
+<td>OFF-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 無資料 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>YYYY-MM-DD</td>
+<td>□ 合規 □ 不合規 □ 離線 □ 待確認</td>
+<td>□ 正常 □ 逾期 □ 待回收 □ 遺失 □ 例外</td>
+</tr>
+<tr>
+<td>OFF-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 無資料 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>YYYY-MM-DD</td>
+<td>□ 合規 □ 不合規 □ 離線 □ 待確認</td>
+<td>□ 正常 □ 逾期 □ 待回收 □ 遺失 □ 例外</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 附錄B：場外資產使用者承諾範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>承諾項目</th>
+<th>承諾內容</th>
+<th>使用者確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>保管責任</td>
+<td>本人同意妥善保管公司資產，不轉借、不出售、不典當、不交予未授權人員。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>本人同意不將公司資料存放於未核准設備、個人雲端、未加密媒體或非授權平台。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>安全控制</td>
+<td>本人同意不停用加密、EDR、MDM、VPN、DLP、螢幕鎖定或其他安全控制。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>場外使用</td>
+<td>本人同意於公共場所、交通工具、旅館、客戶現場或共享空間採取防旁觀與防遺失措施。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>遺失通報</td>
+<td>本人同意於資產遺失、竊盜、損壞、異常或疑似外洩時立即通報。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>到期歸還</td>
+<td>本人同意於期限屆滿、專案結束、離職或異動時立即歸還資產。</td>
+<td>□ 同意</td>
+</tr>
+<tr>
+<td>簽名</td>
+<td>使用者姓名 / 簽名 / 日期：</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

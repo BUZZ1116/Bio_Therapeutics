@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-SOP-007 設備汰除與再使用作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-SOP-007 設備汰除與再使用作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-SOP-007</td>
+<td>設備汰除與再使用作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-SOP-007</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Asset Management Owner / IT Operations Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>Physical Security Owner / Facility Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料保護審查</td>
+<td></td>
+<td>DPO / Data Owner代表（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合約審查</td>
+<td></td>
+<td>Legal / Procurement / Supplier Management（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>基礎架構與端點審查</td>
+<td></td>
+<td>Infrastructure Owner / Endpoint Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>環境與永續審查</td>
+<td></td>
+<td>Facility / EHS / Sustainability Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / Facility主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範資訊處理設備於汰除、報廢、退租、轉售、捐贈、再使用、移轉、維修、更換、返修、盤點調整或雲端資源退場時之資訊安全、資料清除、實體保護、資產管理、供應商管理、證據保存與稽核要求，確保設備中保存之資料、系統設定、帳號、金鑰、憑證、Token、日誌、授權、網路組態及其他敏感資訊不會因設備生命週期結束或轉換而遭未授權存取、外洩、竄改、遺失或濫用。</p>
+<p>本文件旨在將設備汰除與再使用流程與資產清冊、資料分類、資訊刪除、儲存媒體管理、備份還原、事件管理、供應商安全、實體安全、環境法規與營運持續要求整合，建立可追溯、可驗證、可稽核且可持續改善之企業級設備退場與再部署控制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>任何設備於離開受控區域、交付供應商、轉售、捐贈、報廢、退租或再使用前，均應完成資產盤點、資料分類、保存限制檢查、資料清除、設定重置與驗證。</li>
+<li>含儲存媒體、快取、設定檔、憑證、網路組態、通訊錄、列印紀錄、掃描目的地、金鑰或Token之設備，不得未經清除或重置即移交他人。</li>
+<li>設備汰除應同時考量資訊安全、個人資料保護、客戶合約、軟體授權、環境保護、保固/租賃條款、出口管制與供應商合規。</li>
+<li>高機密資料、客戶資料、PII、金鑰或Secrets相關設備，應採更嚴格之安全清除、加密抹除、實體銷毀、雙人見證或CISO核准。</li>
+<li>設備再使用應重新建立可信狀態，包括核准映像、修補、加密、EDR/MDM、最小權限、安全組態、資產標籤與監控。</li>
+<li>所有清除、銷毀、移轉、供應商交接、退租與再使用紀錄應保存完整證據，並可與資產清冊及工單相互追溯。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>設備汰除</td>
+<td>設備因年限、故障、租約到期、技術淘汰、專案結束、風險不可接受或業務需求消失而退出使用之活動。</td>
+</tr>
+<tr>
+<td>設備再使用</td>
+<td>已使用設備經資料清除、重置、檢查、重新組態與安全驗收後，重新分配給其他使用者、環境、系統或用途。</td>
+</tr>
+<tr>
+<td>報廢</td>
+<td>設備不再具使用價值或不適合再使用，經核准後進行資產除帳、資料清除與環保銷毀之過程。</td>
+</tr>
+<tr>
+<td>退租</td>
+<td>租賃或代管設備依合約返還供應商前之清點、資料清除、設定重置、證明取得與交接活動。</td>
+</tr>
+<tr>
+<td>資料清除</td>
+<td>使資料無法以合理方式復原、讀取或重建之技術或管理措施。</td>
+</tr>
+<tr>
+<td>加密抹除</td>
+<td>透過銷毀或撤銷加密金鑰，使加密資料在合理條件下不可解密之清除方式。</td>
+</tr>
+<tr>
+<td>實體銷毀</td>
+<td>透過粉碎、穿孔、熔毀、消磁或其他核准方式破壞媒體或設備，使資料不可復原。</td>
+</tr>
+<tr>
+<td>資產除帳</td>
+<td>將設備於資產、財務、維運、授權、保固、租賃與清冊中更新為退役、報廢、轉移或移除狀態。</td>
+</tr>
+<tr>
+<td>可信再部署</td>
+<td>設備經核准映像、修補、安全基準、EDR/MDM、加密、帳號與監控設定後重新投入使用。</td>
+</tr>
+<tr>
+<td>銷毀證明</td>
+<td>證明設備、媒體或資料已依核准方法完成清除或銷毀之文件化證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Asset Owner</td>
+<td>提出設備汰除、移轉、退租、再使用或報廢需求，確認設備用途、業務影響、資料Owner與核准。</td>
+<td>申請單、業務核准。</td>
+</tr>
+<tr>
+<td>Asset Manager</td>
+<td>維護資產清冊、序號、標籤、位置、Owner、狀態、保固、租約、除帳與證據索引。</td>
+<td>資產清冊與除帳紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations</td>
+<td>執行設備備份、資料清除、設定重置、重新安裝、再部署、測試與技術驗證。</td>
+<td>清除報告、部署紀錄。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>確認端點EDR/MDM、加密、遠端抹除、政策移除或重新註冊狀態。</td>
+<td>EDR/MDM紀錄。</td>
+</tr>
+<tr>
+<td>Infrastructure / Network Owner</td>
+<td>處理伺服器、儲存、網路設備、雲端資源、組態、憑證、密鑰與管理介面。</td>
+<td>設備退場紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>確認設備中資料分類、保存需求、備份/移轉需求與清除驗收標準。</td>
+<td>資料確認與驗收紀錄。</td>
+</tr>
+<tr>
+<td>DPO / Privacy Owner</td>
+<td>審查涉及PII、資料主體請求、供應商清除、跨境或個資保存之要求。</td>
+<td>隱私審查紀錄。</td>
+</tr>
+<tr>
+<td>Legal / Compliance</td>
+<td>確認Legal Hold、訴訟、合約、稽核、租賃、環保或其他法規保存與處分限制。</td>
+<td>法務確認。</td>
+</tr>
+<tr>
+<td>CISO / Security Owner</td>
+<td>核准高敏感設備處分、例外、風險接受、供應商銷毀與重大資料清除。</td>
+<td>安全核准與風險接受。</td>
+</tr>
+<tr>
+<td>Physical Security / Facility</td>
+<td>控管設備暫存、搬運、出場、倉儲、銷毀現場與供應商進出。</td>
+<td>出入與交接紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>管理維修、回收、銷毀、物流、租賃與退場供應商合約與證明。</td>
+<td>供應商合約與證明。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查汰除、清除、再使用、供應商證明、清冊更新與例外管理。</td>
+<td>稽核底稿與發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 設備類型與處理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設備 / 資產類型</th>
+<th>汰除或移交前要求</th>
+<th>再使用前要求</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>筆記型電腦 / 桌機</td>
+<td>備份必要資料、解除使用者帳號、撤銷Token、保留EDR/MDM至清除完成、安全清除磁碟。</td>
+<td>安裝核准映像、修補、磁碟加密、EDR/MDM、最小權限與資產標籤。</td>
+<td>MDM抹除紀錄、部署驗收。</td>
+</tr>
+<tr>
+<td>伺服器 / 虛擬化主機</td>
+<td>確認VM、Volume、RAID、BMC/iLO、管理帳號、憑證、快取、日誌與備份狀態。</td>
+<td>重裝或重新組態、韌體更新、基準設定、監控與弱點掃描。</td>
+<td>磁碟清除/銷毀證明、基準驗收。</td>
+</tr>
+<tr>
+<td>儲存設備 / NAS / SAN</td>
+<td>盤點磁碟、Volume、Snapshot、Replica、Cache、管理帳號與加密金鑰。</td>
+<td>重新初始化儲存池、重設權限與加密、納入監控。</td>
+<td>磁碟序號清冊、銷毀證明。</td>
+</tr>
+<tr>
+<td>網路設備</td>
+<td>清除Running/Startup Config、VPN Key、SNMP、憑證、帳號、Log、ACL與管理IP。</td>
+<td>載入核准組態、更新韌體、變更預設密碼、接入監控。</td>
+<td>設定清除紀錄、組態審查。</td>
+</tr>
+<tr>
+<td>印表機 / MFP</td>
+<td>清除硬碟、暫存、通訊錄、掃描目的地、列印紀錄、Fax紀錄與帳密。</td>
+<td>重設安全組態、關閉不必要服務、更新韌體。</td>
+<td>MFP清除報告。</td>
+</tr>
+<tr>
+<td>行動裝置 / 平板</td>
+<td>執行企業資料抹除或全機抹除，撤銷SIM/eSIM、憑證、Token、同步帳號。</td>
+<td>重新註冊MDM、加密、遠端抹除與條件式存取。</td>
+<td>MDM抹除/註冊紀錄。</td>
+</tr>
+<tr>
+<td>外接媒體 / USB / 磁帶</td>
+<td>依資料分類安全清除、加密抹除或實體銷毀。</td>
+<td>重新使用前需登錄、加密、標籤與授權。</td>
+<td>媒體清除/銷毀證明。</td>
+</tr>
+<tr>
+<td>IoT / OT / CCTV / 門禁設備</td>
+<td>清除設定、帳號、錄影/事件資料、網路設定、憑證與供應商遠端存取。</td>
+<td>預設帳密變更、網段隔離、韌體更新與監控。</td>
+<td>重置與驗收紀錄。</td>
+</tr>
+<tr>
+<td>雲端磁碟 / Snapshot / Image</td>
+<td>刪除Volume、Snapshot、Image、Replica、Public IP、Security Group、IAM與KMS關聯。</td>
+<td>以IaC或核准映像重新部署，套用標籤、加密、監控與基準。</td>
+<td>Cloud Audit Log。</td>
+</tr>
+<tr>
+<td>測試 / 備品設備</td>
+<td>確認是否含正式資料、測試資料、帳號、憑證與舊設定。</td>
+<td>重新初始化、登錄Owner、用途、期限與安全基準。</td>
+<td>備品清冊與驗收。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 設備汰除與再使用作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>提出汰除、報廢、退租、移轉、再使用、維修、轉售或捐贈需求，說明原因與影響。</td>
+<td>Asset Owner / Requester</td>
+<td>申請單。</td>
+</tr>
+<tr>
+<td>2. 資產盤點</td>
+<td>確認資產編號、序號、Owner、位置、使用者、附件、儲存媒體、授權、租約與保固。</td>
+<td>Asset Manager / IT</td>
+<td>資產盤點紀錄。</td>
+</tr>
+<tr>
+<td>3. 資料與保存確認</td>
+<td>確認資料分類、Data Owner、備份需求、Legal Hold、事件保全、合約與法規保存限制。</td>
+<td>Data Owner / DPO / Legal</td>
+<td>保存確認紀錄。</td>
+</tr>
+<tr>
+<td>4. 風險分級</td>
+<td>依資料敏感度、設備類型、外部移交、供應商、可復原性與業務重要性判定風險等級。</td>
+<td>Security Owner / Asset Owner</td>
+<td>風險評估。</td>
+</tr>
+<tr>
+<td>5. 備份或資料移轉</td>
+<td>必要資料依核准方式備份、移轉或封存，並驗證可用性。</td>
+<td>System Owner / IT</td>
+<td>備份/移轉紀錄。</td>
+</tr>
+<tr>
+<td>6. 存取撤銷</td>
+<td>撤銷帳號、Token、憑證、MDM綁定、VPN、API Key、遠端管理與供應商存取。</td>
+<td>IT / IAM Owner</td>
+<td>撤權紀錄。</td>
+</tr>
+<tr>
+<td>7. 資料清除或銷毀</td>
+<td>依媒體與資料分類執行安全清除、加密抹除、設定重置或實體銷毀。</td>
+<td>IT / Supplier</td>
+<td>清除/銷毀證明。</td>
+</tr>
+<tr>
+<td>8. 實體交接</td>
+<td>暫存、搬運、出場、物流、退租或銷毀需清點、簽收、雙人或可追蹤控制。</td>
+<td>Facility / Asset Manager</td>
+<td>交接紀錄。</td>
+</tr>
+<tr>
+<td>9. 再使用重建</td>
+<td>再使用設備需以核准映像或標準程序重建，套用安全基準、修補與監控。</td>
+<td>IT Operations</td>
+<td>再部署紀錄。</td>
+</tr>
+<tr>
+<td>10. 驗證與驗收</td>
+<td>確認資料不可復原、設定已清除、設備狀態正確、再使用環境安全。</td>
+<td>Security / Asset Owner</td>
+<td>驗證與驗收紀錄。</td>
+</tr>
+<tr>
+<td>11. 清冊與財務更新</td>
+<td>更新資產、財務、授權、保固、租約、Owner、位置與文件證據索引。</td>
+<td>Asset Manager / Finance</td>
+<td>清冊更新紀錄。</td>
+</tr>
+<tr>
+<td>12. 結案與改善</td>
+<td>保存證據，關閉工單，追蹤例外、缺失、供應商補件與改善措施。</td>
+<td>ISMS代表 / CAPA Owner</td>
+<td>結案紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 資料清除、媒體處理與驗證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>媒體 / 儲存型態</th>
+<th>核准處理方式</th>
+<th>驗證要求</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>HDD磁性硬碟</td>
+<td>安全覆寫、消磁或實體銷毀。</td>
+<td>工具報告、抽樣檢查、序號比對、銷毀證明。</td>
+<td>高機密資料或故障硬碟建議實體銷毀。</td>
+</tr>
+<tr>
+<td>SSD / Flash / NVMe</td>
+<td>Secure Erase、加密抹除、廠商Sanitize指令或實體銷毀。</td>
+<td>清除結果、設備序號、抽樣驗證。</td>
+<td>傳統覆寫可能不足。</td>
+</tr>
+<tr>
+<td>加密磁碟</td>
+<td>銷毀或撤銷金鑰，必要時搭配Secure Erase或實體銷毀。</td>
+<td>KMS/MDM紀錄、金鑰銷毀紀錄。</td>
+<td>確認無金鑰副本或明文副本。</td>
+</tr>
+<tr>
+<td>磁帶 / 備份媒體</td>
+<td>依保留期限銷毀、消磁或加密抹除。</td>
+<td>媒體序號、銷毀證明。</td>
+<td>確認無Legal Hold。</td>
+</tr>
+<tr>
+<td>印表機/MFP硬碟</td>
+<td>使用原廠清除功能、安全覆寫或拆除銷毀。</td>
+<td>清除報告、維護紀錄。</td>
+<td>常保存掃描、列印、通訊錄資料。</td>
+</tr>
+<tr>
+<td>網路設備NVRAM/Flash</td>
+<td>Factory Reset、覆寫設定、清除憑證、Key與日誌。</td>
+<td>重新登入檢查、設定比對。</td>
+<td>需清除SNMP、VPN、ACL、管理帳號。</td>
+</tr>
+<tr>
+<td>雲端Volume/Snapshot/Image</td>
+<td>刪除資源、取消共享、刪除Replica與KMS關聯，必要時加密抹除。</td>
+<td>Cloud Audit Log、資源清冊比對。</td>
+<td>確認跨區副本與Lifecycle。</td>
+</tr>
+<tr>
+<td>行動裝置</td>
+<td>MDM企業抹除或全機抹除，撤銷Token與同步資料。</td>
+<td>MDM報告、設備回收紀錄。</td>
+<td>BYOD僅清除企業資料。</td>
+</tr>
+<tr>
+<td>紙本/標籤/文件</td>
+<td>碎紙、粉碎、焚化或委外銷毀。</td>
+<td>銷毀紀錄。</td>
+<td>設備標籤若含敏感資訊需移除。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 設備再使用安全基準</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>再使用前最低要求</th>
+<th>驗證證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可信映像</td>
+<td>使用核准黃金映像、標準安裝程序或受控IaC重新部署。</td>
+<td>部署紀錄。</td>
+</tr>
+<tr>
+<td>修補與韌體</td>
+<td>完成OS、韌體、驅動、套件與安全更新。</td>
+<td>修補報告。</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>端點、行動裝置、伺服器與可攜設備依要求啟用全碟或資料加密。</td>
+<td>加密狀態截圖。</td>
+</tr>
+<tr>
+<td>EDR/AV/MDM</td>
+<td>重新註冊EDR、AV、MDM、資產管理與監控平台。</td>
+<td>管理平台狀態。</td>
+</tr>
+<tr>
+<td>帳號與權限</td>
+<td>移除舊帳號、重設本機Admin、套用最小權限與MFA/條件式存取。</td>
+<td>帳號檢查紀錄。</td>
+</tr>
+<tr>
+<td>安全組態</td>
+<td>套用安全基準、防火牆、服務關閉、稽核日誌、Screen Lock與USB政策。</td>
+<td>基準檢查報告。</td>
+</tr>
+<tr>
+<td>資產標籤</td>
+<td>更新資產標籤、Owner、位置、用途、使用者與保固/租約。</td>
+<td>資產清冊。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>確認日誌、事件、健康狀態與告警接入正常。</td>
+<td>監控截圖。</td>
+</tr>
+<tr>
+<td>資料殘留檢查</td>
+<td>抽樣確認無前使用者資料、正式資料、憑證、Secrets或舊設定。</td>
+<td>驗收紀錄。</td>
+</tr>
+<tr>
+<td>使用者交付</td>
+<td>交付前完成使用者確認、資安提示與設備領用紀錄。</td>
+<td>領用單。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 供應商、物流、暫存與出場控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准供應商</td>
+<td>維修、回收、退租、物流、銷毀供應商需經風險評估、合約、NDA與安全要求約束。</td>
+<td>供應商評估與合約。</td>
+</tr>
+<tr>
+<td>暫存區</td>
+<td>待清除、待退租、待銷毀設備應置於受控區域，標示狀態並限制存取。</td>
+<td>暫存清冊與進出紀錄。</td>
+</tr>
+<tr>
+<td>設備交接</td>
+<td>搬運、寄送、退租或銷毀需逐項清點資產編號、序號、數量、狀態與封箱。</td>
+<td>交接單。</td>
+</tr>
+<tr>
+<td>高敏感設備</td>
+<td>高敏感設備移送或銷毀應雙人見證、封條或可追蹤物流。</td>
+<td>見證紀錄。</td>
+</tr>
+<tr>
+<td>供應商作業現場</td>
+<td>供應商清除或銷毀現場應受監督，或提供照片、影片、批次報告與簽章證明。</td>
+<td>銷毀證明。</td>
+</tr>
+<tr>
+<td>證明內容</td>
+<td>證明需含設備/媒體序號、方法、日期、地點、操作者、供應商、見證人與結果。</td>
+<td>清除/銷毀證明。</td>
+</tr>
+<tr>
+<td>維修返廠</td>
+<td>設備返廠前應移除儲存媒體或完成清除；不可移除者需風險核准。</td>
+<td>返修紀錄。</td>
+</tr>
+<tr>
+<td>退租設備</td>
+<td>退租前需完成清除、設定重置、配件清點、租約條款確認與供應商收訖。</td>
+<td>退租確認。</td>
+</tr>
+<tr>
+<td>環保與法規</td>
+<td>報廢與電子廢棄物處理需符合環保、危險廢棄物與資產處分要求。</td>
+<td>環保處理證明。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 汰除與再使用檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請核准</td>
+<td>是否已取得汰除、退租、報廢、移轉或再使用核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資產識別</td>
+<td>是否確認資產編號、序號、Owner、位置、使用者、附件與保固/租約？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>是否確認設備內資料分類、Data Owner與敏感度？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保存限制</td>
+<td>是否確認無Legal Hold、事件證據、合約保存、稽核或法規限制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份移轉</td>
+<td>必要資料是否已完成備份、移轉、封存與驗證？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>帳號撤銷</td>
+<td>使用者、供應商、Token、憑證、API Key、遠端管理與同步帳號是否撤銷？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料清除</td>
+<td>是否依資料分類與媒體類型完成清除、加密抹除或實體銷毀？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>設定重置</td>
+<td>網路設定、VPN、SNMP、憑證、管理帳號、Log與通訊錄是否清除？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>清除證明</td>
+<td>是否取得完整清除、銷毀、退租或供應商處理證明？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>出場管制</td>
+<td>設備搬運、暫存、物流、出場與交接是否可追溯？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>再使用重建</td>
+<td>再使用前是否完成核准映像、修補、加密、EDR/MDM與安全基準？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資產更新</td>
+<td>資產清冊、財務、授權、保固、Owner、位置與文件證據是否更新？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 是</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 汰除 / 再使用紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄編號</th>
+<th>申請日期</th>
+<th>資產編號</th>
+<th>設備名稱</th>
+<th>序號</th>
+<th>設備類型</th>
+<th>處理類型</th>
+<th>資料清除方式</th>
+<th>執行日期</th>
+<th>驗證結果</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>RET-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 端點 □ 伺服器 □ 儲存 □ 網路 □ 行動 □ MFP □ 媒體 □ 雲端 □ 其他</td>
+<td>□ 汰除 □ 再使用 □ 轉移 □ 退租 □ 維修 □ 報廢 □ 捐贈 □ 轉售</td>
+<td>□ 覆寫 □ Secure Erase □ 加密抹除 □ 實體銷毀 □ Factory Reset □ Cloud Delete</td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過 □ 待驗證</td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+<tr>
+<td>RET-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 端點 □ 伺服器 □ 儲存 □ 網路 □ 行動 □ MFP □ 媒體 □ 雲端 □ 其他</td>
+<td>□ 汰除 □ 再使用 □ 轉移 □ 退租 □ 維修 □ 報廢 □ 捐贈 □ 轉售</td>
+<td>□ 覆寫 □ Secure Erase □ 加密抹除 □ 實體銷毀 □ Factory Reset □ Cloud Delete</td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過 □ 待驗證</td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+<tr>
+<td>RET-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 端點 □ 伺服器 □ 儲存 □ 網路 □ 行動 □ MFP □ 媒體 □ 雲端 □ 其他</td>
+<td>□ 汰除 □ 再使用 □ 轉移 □ 退租 □ 維修 □ 報廢 □ 捐贈 □ 轉售</td>
+<td>□ 覆寫 □ Secure Erase □ 加密抹除 □ 實體銷毀 □ Factory Reset □ Cloud Delete</td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過 □ 待驗證</td>
+<td>□ 未結案 □ 已結案 □ 例外</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>媒體故障無法清除</td>
+<td>需實體銷毀或提出替代控制，保留序號與見證紀錄。</td>
+<td>CISO / Asset Owner</td>
+<td>單次處理。</td>
+</tr>
+<tr>
+<td>設備返修無法移除媒體</td>
+<td>需Data Owner與CISO核准，使用加密、封條、供應商合約與追蹤。</td>
+<td>CISO / Legal / Supplier Owner</td>
+<td>維修完成即重評。</td>
+</tr>
+<tr>
+<td>供應商未提供完整證明</td>
+<td>不得結案，需補證明、替代證據或正式風險接受。</td>
+<td>Supplier Owner / CISO</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>Legal Hold暫停汰除</td>
+<td>設備需封存於受控區域並限制存取。</td>
+<td>Legal / Compliance</td>
+<td>依案件狀態重評。</td>
+</tr>
+<tr>
+<td>租約限制無法銷毀媒體</td>
+<td>需依合約協商、加密抹除、供應商證明或風險接受。</td>
+<td>Legal / Procurement / CISO</td>
+<td>退租前完成。</td>
+</tr>
+<tr>
+<td>再使用前無法完成完整重建</td>
+<td>需隔離、限制用途、補償控制與改善計畫。</td>
+<td>IT Owner / CISO</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>雲端Snapshot無法即時刪除</td>
+<td>需記錄限制、保留期限、加密狀態與到期刪除計畫。</td>
+<td>Cloud Owner / DPO / CISO</td>
+<td>每季重評。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 高風險事件與通報</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>立即處置</th>
+<th>升級對象</th>
+<th>後續要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>設備遺失或未授權出場</td>
+<td>立即通知SOC、Physical Security與Asset Owner，保全紀錄並遠端鎖定/抹除。</td>
+<td>CISO / Incident Manager / DPO視資料分類</td>
+<td>啟動事件調查與資料外洩評估。</td>
+</tr>
+<tr>
+<td>再使用後發現殘留資料</td>
+<td>立即隔離設備、保存證據、停止使用、重新清除。</td>
+<td>CISO / Data Owner / DPO</td>
+<td>評估資料外洩並完成RCA/CAPA。</td>
+</tr>
+<tr>
+<td>供應商遺失設備或媒體</td>
+<td>要求供應商立即通報、保全、調查與提供事件報告。</td>
+<td>Supplier Owner / Legal / CISO</td>
+<td>依合約追究並評估通報義務。</td>
+</tr>
+<tr>
+<td>清除證明造假或不可信</td>
+<td>暫停供應商、重新驗證或重新銷毀設備。</td>
+<td>CISO / Procurement / Legal</td>
+<td>供應商風險重評。</td>
+</tr>
+<tr>
+<td>高機密設備未清除即移轉</td>
+<td>立即追回或隔離設備並啟動重大事件處理。</td>
+<td>CISO / Management</td>
+<td>完成事件檢討與管理審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>汰除/再使用申請</td>
+<td>申請原因、資產資料、處理類型、核准、資料分類與風險評估。</td>
+<td>Asset Manager / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>清除與銷毀證明</td>
+<td>設備/媒體序號、方法、日期、操作者、供應商、見證人與結果。</td>
+<td>IT Operations / Supplier Management</td>
+<td>至少3至7年，依資料分類。</td>
+</tr>
+<tr>
+<td>再使用驗收紀錄</td>
+<td>映像、修補、加密、EDR/MDM、基準、權限、監控與交付確認。</td>
+<td>IT Operations</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商交接紀錄</td>
+<td>物流、簽收、封條、照片、供應商證明與合約文件。</td>
+<td>Supplier Management / Facility</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>資產清冊更新</td>
+<td>Owner、位置、狀態、使用者、除帳、租約、保固與文件索引。</td>
+<td>Asset Manager</td>
+<td>資產有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>事件與改善紀錄</td>
+<td>遺失、殘留、未清除、供應商異常、RCA與CAPA。</td>
+<td>Incident Manager / ISMS代表</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>清除證明完整率</td>
+<td>具完整清除或銷毀證明之汰除設備 / 應具證明設備。</td>
+<td>目標100%。</td>
+<td>證據完整性。</td>
+</tr>
+<tr>
+<td>逾期待處理設備數</td>
+<td>超過核准期限仍待清除、待退租、待銷毀或待再使用之設備數。</td>
+<td>目標0。</td>
+<td>實體與資料風險。</td>
+</tr>
+<tr>
+<td>再使用安全驗收率</td>
+<td>再使用設備完成安全基準驗收比例。</td>
+<td>目標100%。</td>
+<td>再部署安全。</td>
+</tr>
+<tr>
+<td>供應商證明逾期數</td>
+<td>供應商未如期提供清除/銷毀/退租證明件數。</td>
+<td>目標0。</td>
+<td>供應商風險。</td>
+</tr>
+<tr>
+<td>設備殘留資料事件數</td>
+<td>設備再使用、退租或報廢後發現資料殘留事件數。</td>
+<td>目標0。</td>
+<td>重大資料保護風險。</td>
+</tr>
+<tr>
+<td>資產清冊更新及時率</td>
+<td>處理完成後於規定期限內更新資產清冊比例。</td>
+<td>目標100%。</td>
+<td>資產管理有效性。</td>
+</tr>
+<tr>
+<td>例外逾期數</td>
+<td>設備處分例外超過期限未重評或未關閉數量。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>流程完整性</td>
+<td>設備處分是否具申請、盤點、保存檢查、清除、驗證、核准與結案。</td>
+<td>申請單、工單、簽核紀錄。</td>
+</tr>
+<tr>
+<td>資產清冊一致性</td>
+<td>資產編號、序號、Owner、位置、狀態與處分紀錄是否一致。</td>
+<td>資產清冊、交接紀錄。</td>
+</tr>
+<tr>
+<td>資料清除充分性</td>
+<td>清除方法是否符合資料分類、媒體類型與風險。</td>
+<td>清除報告、銷毀證明。</td>
+</tr>
+<tr>
+<td>再使用安全</td>
+<td>再使用設備是否完成重建、修補、加密、EDR/MDM與安全基準。</td>
+<td>部署與驗收紀錄。</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>回收、銷毀、退租或維修供應商是否有合約、安全要求與證明。</td>
+<td>供應商合約、證明。</td>
+</tr>
+<tr>
+<td>高敏感設備</td>
+<td>高機密、PII、客戶資料或Secrets相關設備是否具加強核准與處理證據。</td>
+<td>CISO/DPO核准。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否有風險評估、補償控制、期限與重評。</td>
+<td>例外紀錄。</td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>設備遺失、資料殘留、未授權出場是否依事件程序處理。</td>
+<td>事件紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、供應商缺口、重大事件與逾期改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 附錄A：供應商清除 / 銷毀證明必要欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>證明編號</td>
+<td>CERT-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>處理日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>處理地點</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>客戶 / 專案名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資產編號 / 媒體序號</td>
+<td>逐項列示，不得僅填總數</td>
+<td></td>
+</tr>
+<tr>
+<td>設備 / 媒體類型</td>
+<td>HDD、SSD、磁帶、伺服器、筆電、網路設備等</td>
+<td></td>
+</tr>
+<tr>
+<td>處理方法</td>
+<td>安全覆寫、Secure Erase、加密抹除、消磁、粉碎、熔毀等</td>
+<td></td>
+</tr>
+<tr>
+<td>處理結果</td>
+<td>成功、失敗、需例外、重新處理</td>
+<td></td>
+</tr>
+<tr>
+<td>見證人</td>
+<td>公司或第三方見證人（如適用）</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商授權簽章</td>
+<td>姓名、職稱、簽章、聯絡方式</td>
+<td></td>
+</tr>
+<tr>
+<td>附件</td>
+<td>照片、影片、工具報告、批次清單、秤重單、環保處理證明</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>18. 附錄B：設備再使用交付確認表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>交付編號</td>
+<td>REUSE-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>資產編號</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>設備名稱 / 型號</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>序號</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>新使用者 / Owner</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>新位置 / 部門</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>核准映像版本</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>修補狀態</td>
+<td>□ 已完成 □ 待補 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>加密狀態</td>
+<td>□ 已啟用 □ 未啟用 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>EDR/MDM狀態</td>
+<td>□ 已註冊 □ 未註冊 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安全基準檢查</td>
+<td>□ 通過 □ 不通過 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>資料殘留抽查</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>使用者簽收</td>
+<td>姓名、簽名、日期</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

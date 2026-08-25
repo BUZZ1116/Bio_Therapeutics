@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A07-SOP-002 安全區域作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A07-SOP-002 安全區域作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A07-SOP-002</td>
+<td>安全區域作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.7 / 實體區域、設備、媒體與環境安全</td>
+<td>實體安全與設施Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.7 / ISMS-A07-SOP-002</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>實體安全與設施Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>ISMS管理代表 / Physical Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>實體安全審查</td>
+<td></td>
+<td>Facility Owner / Physical Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與機房審查</td>
+<td></td>
+<td>IT Operations Owner / Data Center Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>人員與訪客管理審查</td>
+<td></td>
+<td>HR / Administrative Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商管理審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>營運持續審查</td>
+<td></td>
+<td>BCMS Owner / ICT Readiness Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / Facility主管 / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範安全區域之分級、識別、設計、門禁控制、訪客管理、陪同、CCTV監控、警報、保全巡檢、環境控制、設備與文件保護、供應商進出、施工管制、清潔與維護、事件處理、例外管理、稽核與持續改善要求，確保組織資訊資產、資訊處理設施、文件化資訊、個人資料、客戶資料、系統運作與營運持續能力受到適當之實體安全保護。</p>
+<p>安全區域控制應以風險為基礎，依區域處理之資料分類、資產重要性、業務關鍵性、可接觸人員、外部威脅、環境威脅與合規要求建立不同等級之防護措施，並與人員安全、資產管理、存取控制、訪客管理、桌面與螢幕淨空、支援設施、事件管理及營運持續流程整合。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>安全區域應依風險分級，採取與資訊價值、業務影響、資料敏感度與威脅程度相稱之實體安全控制。</li>
+<li>所有安全區域應有明確Owner、用途、邊界、進出規則、授權角色、監控要求、巡檢頻率與文件化紀錄。</li>
+<li>進入Restricted或Critical安全區域應採授權、識別、門禁、陪同、紀錄與必要監控，不得任意尾隨、代刷、借用門禁卡或共享存取權限。</li>
+<li>訪客、供應商、清潔人員、施工人員與臨時人員不得未經授權進入安全區域；必要時應全程陪同或採補償控制。</li>
+<li>安全區域平面圖、門禁權限、CCTV涵蓋、警報設定、機房位置與保全路線屬敏感資訊，應依文件分級控管。</li>
+<li>安全區域缺失、異常進出、門禁失效、CCTV失效、未授權人員、設備遺失、可疑物品或環境威脅應立即通報並依事件或設施程序處理。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全區域</td>
+<td>依資訊安全、實體安全、營運或合規需求設置邊界、進出控制與防護措施之實體場所。</td>
+</tr>
+<tr>
+<td>公開區域</td>
+<td>訪客或一般人員可接觸之區域，例如接待區、公共走道或公開展示區。</td>
+</tr>
+<tr>
+<td>內部區域</td>
+<td>僅限員工或授權人員進入之一般辦公區域。</td>
+</tr>
+<tr>
+<td>受限區域</td>
+<td>保存或處理較敏感資訊、重要設備或業務流程，需門禁或授權控制之區域。</td>
+</tr>
+<tr>
+<td>關鍵區域</td>
+<td>若遭未授權接觸、破壞或中斷將造成重大資訊安全、營運、法規或客戶影響之區域，例如機房、資料中心、網路設備間、SOC或備份媒體庫。</td>
+</tr>
+<tr>
+<td>區域Owner</td>
+<td>負責安全區域用途、風險、進出授權、日常管理、巡檢、缺失改善與審查之角色。</td>
+</tr>
+<tr>
+<td>尾隨</td>
+<td>未經授權人員跟隨授權人員通過門禁或進入安全區域之行為。</td>
+</tr>
+<tr>
+<td>雙人控制</td>
+<td>特定高風險區域或作業須由兩名授權人員共同進入、執行或見證之控制。</td>
+</tr>
+<tr>
+<td>訪客陪同</td>
+<td>訪客或非區域授權人員進入安全區域時，由授權人員全程陪伴與監督之控制。</td>
+</tr>
+<tr>
+<td>實體安全邊界</td>
+<td>牆面、門、鎖、圍欄、隔間、機櫃、門禁、警報、CCTV、保全或其他界定與保護安全區域之措施。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / Security Owner</td>
+<td>核准安全區域控制要求、重大例外、高風險進出與重大事件處理。</td>
+<td>安全核准、風險接受。</td>
+</tr>
+<tr>
+<td>Physical Security Owner</td>
+<td>規劃安全區域分級、門禁、CCTV、警報、保全巡檢與異常通報。</td>
+<td>區域控制設計、巡檢紀錄。</td>
+</tr>
+<tr>
+<td>Facility Owner</td>
+<td>維護安全邊界、門、鎖、隔間、消防、照明、環境與支援設施。</td>
+<td>維護紀錄、設施檢查。</td>
+</tr>
+<tr>
+<td>Area Owner / 區域Owner</td>
+<td>管理區域用途、授權人員、訪客、資產、資料保護、日常檢查與缺失改善。</td>
+<td>區域清冊、授權名單。</td>
+</tr>
+<tr>
+<td>IT Operations / Data Center Owner</td>
+<td>管理機房、弱電間、網路設備間、伺服器與資訊處理設施進出與維護。</td>
+<td>機房進出紀錄、設備紀錄。</td>
+</tr>
+<tr>
+<td>HR / Line Manager</td>
+<td>確認人員職務、離職異動撤權、教育訓練與違規處理。</td>
+<td>人員授權與撤權紀錄。</td>
+</tr>
+<tr>
+<td>Reception / Administrative Owner</td>
+<td>執行訪客登記、識別、證件、訪客證、陪同通知與離場確認。</td>
+<td>訪客紀錄。</td>
+</tr>
+<tr>
+<td>Security Guard / 保全</td>
+<td>執行巡邏、門禁異常處理、訪客管制、CCTV初步監看與緊急通報。</td>
+<td>巡邏紀錄、異常紀錄。</td>
+</tr>
+<tr>
+<td>Supplier / Contractor</td>
+<td>遵守進出、陪同、拍照限制、工具管制與資料保護要求。</td>
+<td>NDA、進出與作業紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查安全區域清冊、門禁授權、進出紀錄、CCTV、巡檢、例外與改善。</td>
+<td>稽核底稿。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 安全區域分級與最低控制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>區域等級</th>
+<th>典型區域</th>
+<th>最低控制要求</th>
+<th>禁止或限制事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Level 0 公開區域</td>
+<td>接待區、公共走道、公開展示區。</td>
+<td>訪客活動範圍清楚，避免可接觸內部文件、螢幕、設備或未遮蔽資訊。</td>
+<td>禁止放置未遮蔽內部文件、客戶資料或可進入內部區域之未受控通道。</td>
+</tr>
+<tr>
+<td>Level 1 內部區域</td>
+<td>一般辦公區、員工座位區、一般會議室。</td>
+<td>員工或授權人員進入，訪客需登記或陪同；落實桌面與螢幕淨空。</td>
+<td>禁止未授權訪客自由進入或拍攝。</td>
+</tr>
+<tr>
+<td>Level 2 受限區域</td>
+<td>客服、HR、財務、法務、研發、列印區、文件保存室、供應商駐點區。</td>
+<td>門禁或授權進入，進出可追溯；資料分類、螢幕防旁觀、文件保管與訪客陪同。</td>
+<td>禁止未授權人員單獨停留、翻閱文件或使用設備。</td>
+</tr>
+<tr>
+<td>Level 3 高安全區域</td>
+<td>機房、弱電間、網路設備間、備份媒體庫、SOC、監控室。</td>
+<td>具名授權、門禁紀錄、CCTV或等效監控、必要陪同、定期審查權限與巡檢。</td>
+<td>禁止尾隨、代刷、借卡、未核准工具/媒體與未登記維護。</td>
+</tr>
+<tr>
+<td>Level 4 關鍵安全區域</td>
+<td>資料中心、核心機房、金鑰/密碼保管區、高敏感研發區、災備核心區。</td>
+<td>最小授權、雙因素或雙人控制、CCTV保存、警報、訪客全程陪同、變更/維護核准、事件即時升級。</td>
+<td>禁止未核准拍照、未核准遠端/實體作業、單人高風險維護或未記錄進出。</td>
+</tr>
+<tr>
+<td>臨時安全區域</td>
+<td>施工區、專案隔離區、活動設備區、臨時儲存區。</td>
+<td>明確邊界、Owner、期限、告示、進出控制、資產清冊與退場計畫。</td>
+<td>禁止逾期、無標示、無Owner或未清場。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 安全區域建立、變更與撤除流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>提出新增、變更、升級、降級、擴張、縮減或撤除安全區域需求。</td>
+<td>Area Owner / Facility / IT</td>
+<td>申請單。</td>
+</tr>
+<tr>
+<td>2. 風險評估</td>
+<td>評估資料分類、資產重要性、威脅、訪客接觸、環境、營運持續與法規要求。</td>
+<td>Security / Facility / Area Owner</td>
+<td>風險評估。</td>
+</tr>
+<tr>
+<td>3. 分級決定</td>
+<td>依安全區域分級標準決定Level與最低控制要求。</td>
+<td>CISO / Physical Security</td>
+<td>分級紀錄。</td>
+</tr>
+<tr>
+<td>4. 控制設計</td>
+<td>設計門禁、鎖具、CCTV、警報、隔間、標示、訪客動線、儲存與巡檢要求。</td>
+<td>Facility / Physical Security</td>
+<td>控制設計。</td>
+</tr>
+<tr>
+<td>5. 權限設定</td>
+<td>建立授權角色、授權名單、進出時間、例外流程與撤權規則。</td>
+<td>IAM / Physical Security / HR</td>
+<td>權限設定紀錄。</td>
+</tr>
+<tr>
+<td>6. 文件更新</td>
+<td>更新安全區域清冊、平面圖、門禁點、CCTV點位、巡檢表與作業程序。</td>
+<td>Document Owner</td>
+<td>文件更新紀錄。</td>
+</tr>
+<tr>
+<td>7. 啟用驗收</td>
+<td>測試門禁、CCTV、警報、照明、消防、環境與進出流程。</td>
+<td>Facility / Security / Area Owner</td>
+<td>驗收紀錄。</td>
+</tr>
+<tr>
+<td>8. 定期審查</td>
+<td>定期審查區域用途、授權名單、事件、巡檢缺失與風險等級。</td>
+<td>Area Owner / Security</td>
+<td>審查紀錄。</td>
+</tr>
+<tr>
+<td>9. 撤除或降級</td>
+<td>撤除前需清場、回收權限、移除資料與設備、更新清冊與圖資。</td>
+<td>Facility / Area Owner</td>
+<td>撤除紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 門禁與進出管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>驗證 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>具名授權</td>
+<td>受限以上區域應以具名人員或具名角色授權，不得以共享身份長期授權。</td>
+<td>授權名單。</td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>進出權限應依職務需要、區域等級與期限授予。</td>
+<td>權限審查紀錄。</td>
+</tr>
+<tr>
+<td>定期審查</td>
+<td>Level 2以上區域至少定期審查授權；Level 3/4建議每季或半年審查。</td>
+<td>門禁權限審查。</td>
+</tr>
+<tr>
+<td>離職異動撤權</td>
+<td>離職、調職、專案結束或供應商退場應立即撤銷不再需要之進出權限。</td>
+<td>撤權紀錄。</td>
+</tr>
+<tr>
+<td>門禁紀錄</td>
+<td>Level 2以上區域應保存進出紀錄；Level 3/4需可支援事件調查。</td>
+<td>門禁Log。</td>
+</tr>
+<tr>
+<td>尾隨防制</td>
+<td>人員進出應避免尾隨，發現尾隨需制止並通報。</td>
+<td>教育與巡檢紀錄。</td>
+</tr>
+<tr>
+<td>訪客陪同</td>
+<td>訪客進入Level 2以上區域原則上需授權人員陪同。</td>
+<td>訪客紀錄。</td>
+</tr>
+<tr>
+<td>臨時權限</td>
+<td>臨時權限需有Owner、目的、開始/結束時間與核准。</td>
+<td>臨時權限紀錄。</td>
+</tr>
+<tr>
+<td>緊急權限</td>
+<td>緊急進入需事後補記、說明原因、處置內容與核准人。</td>
+<td>緊急進入紀錄。</td>
+</tr>
+<tr>
+<td>門禁失效</td>
+<td>門禁故障需採人工保全、臨時名單、巡檢與修復追蹤。</td>
+<td>事件/維修紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 訪客、供應商與第三方進入要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>對象 / 情境</th>
+<th>進入要求</th>
+<th>限制事項</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般訪客</td>
+<td>需登記、識別、配戴訪客證，依核准區域活動。</td>
+<td>不得進入Level 2以上區域，除非經核准與陪同。</td>
+<td>訪客紀錄。</td>
+</tr>
+<tr>
+<td>客戶訪問</td>
+<td>需限定會議區或核准動線，避免接觸內部文件、螢幕或設備。</td>
+<td>不得拍攝或自行走動。</td>
+<td>接待紀錄。</td>
+</tr>
+<tr>
+<td>供應商維護</td>
+<td>需核准工單、身分確認、工具管制、陪同、作業範圍限制與離場確認。</td>
+<td>不得接入未核准設備、拍攝敏感區域或帶走資料。</td>
+<td>維護與訪客紀錄。</td>
+</tr>
+<tr>
+<td>清潔人員</td>
+<td>應限定區域、時間、作業範圍並簽署保密要求。</td>
+<td>不得翻閱、移動、丟棄敏感文件或接觸設備。</td>
+<td>合約/NDA、巡檢。</td>
+</tr>
+<tr>
+<td>施工人員</td>
+<td>需施工計畫、風險評估、陪同或監督、拍照限制、工具與材料管制。</td>
+<td>不得進入未核准區域或破壞安全邊界。</td>
+<td>施工紀錄。</td>
+</tr>
+<tr>
+<td>稽核員 / 外部審查</td>
+<td>需經授權、陪同、限制取證內容與文件帶離。</td>
+<td>不得拍攝機房細節或導出未核准資料。</td>
+<td>審查紀錄。</td>
+</tr>
+<tr>
+<td>緊急維修</td>
+<td>可依緊急程序進入，但需記錄、陪同、事後審查。</td>
+<td>不得省略事後補件與安全檢查。</td>
+<td>緊急進入紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. CCTV、警報與保全巡檢要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>保存 / 驗證</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CCTV涵蓋</td>
+<td>Level 3/4及高風險入口、機房、弱電間、監控室、媒體保管區應有CCTV或等效控制。</td>
+<td>CCTV點位與測試紀錄。</td>
+</tr>
+<tr>
+<td>錄影保存</td>
+<td>CCTV保存期限應依風險、法規、合約與事件調查需求設定。</td>
+<td>錄影保存設定。</td>
+</tr>
+<tr>
+<td>時間同步</td>
+<td>CCTV、門禁、警報、事件紀錄應與標準時間同步。</td>
+<td>時間同步紀錄。</td>
+</tr>
+<tr>
+<td>畫面保護</td>
+<td>監控畫面不得公開展示於訪客或未授權人員可見位置。</td>
+<td>巡檢紀錄。</td>
+</tr>
+<tr>
+<td>警報設定</td>
+<td>高安全區域應視風險配置門磁、入侵警報、環境告警或門禁異常告警。</td>
+<td>警報設定與測試。</td>
+</tr>
+<tr>
+<td>巡檢頻率</td>
+<td>保全或授權人員應依區域等級執行定期巡檢。</td>
+<td>巡檢紀錄。</td>
+</tr>
+<tr>
+<td>異常處理</td>
+<td>門禁強開、尾隨、CCTV遮蔽、可疑人員、設備異常應立即通報。</td>
+<td>異常紀錄。</td>
+</tr>
+<tr>
+<td>維護測試</td>
+<td>CCTV、門禁、警報、鎖具與通報機制應定期測試與維護。</td>
+<td>維護報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 安全區域日常管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>最低要求</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>區域標示</td>
+<td>依必要性標示受限區、禁止拍照、訪客需陪同、禁止飲食、消防與緊急聯絡資訊。</td>
+<td>Facility / Area Owner</td>
+</tr>
+<tr>
+<td>文件與桌面淨空</td>
+<td>區域內文件、白板、螢幕與列印品需符合桌面與螢幕淨空要求。</td>
+<td>All Users / Area Owner</td>
+</tr>
+<tr>
+<td>設備保護</td>
+<td>設備應依重要性置於上鎖機櫃、受控區域或具監控位置。</td>
+<td>IT / Facility</td>
+</tr>
+<tr>
+<td>媒體保管</td>
+<td>備份媒體、外接媒體、金鑰載具與紙本高敏感資料應加強保管。</td>
+<td>Data Owner / Asset Owner</td>
+</tr>
+<tr>
+<td>環境控制</td>
+<td>溫濕度、漏水、消防、電力、空調、清潔與害蟲風險需受控。</td>
+<td>Facility</td>
+</tr>
+<tr>
+<td>禁止拍照</td>
+<td>Level 2以上區域拍照、錄音、錄影或直播需經授權。</td>
+<td>Area Owner / Security</td>
+</tr>
+<tr>
+<td>禁止未授權設備</td>
+<td>不得將未核准USB、AP、Switch、錄音設備、攝影設備或儲存媒體帶入。</td>
+<td>All Users / Security</td>
+</tr>
+<tr>
+<td>清潔與垃圾</td>
+<td>敏感文件不得丟入一般垃圾；清潔人員不得處理未授權文件。</td>
+<td>Facility / All Users</td>
+</tr>
+<tr>
+<td>鑰匙與卡片</td>
+<td>鑰匙、門禁卡與備用卡需登錄、上鎖保管、定期盤點與遺失通報。</td>
+<td>Physical Security</td>
+</tr>
+<tr>
+<td>緊急聯絡</td>
+<td>區域Owner、Facility、保全、SOC與緊急維修聯絡方式需有效。</td>
+<td>Area Owner</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 安全區域檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>區域清冊</td>
+<td>安全區域是否已登錄Owner、等級、用途、位置、控制措施與審查日期？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>邊界完整</td>
+<td>牆面、門、隔間、鎖具、機櫃或線槽等實體邊界是否完整？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>門禁有效</td>
+<td>門禁、鎖具、訪客管理或人工管制是否有效？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>權限正確</td>
+<td>授權名單是否符合職務需要，無離職、異動或逾期權限？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>進出紀錄</td>
+<td>進出紀錄是否可查詢、保存且時間正確？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>訪客陪同</td>
+<td>訪客、供應商或清潔人員進入受限區是否有登記與陪同？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>CCTV/警報</td>
+<td>CCTV、警報或等效監控是否正常且涵蓋必要區域？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>桌面淨空</td>
+<td>區域內是否無敏感文件、白板、列印品、媒體或螢幕外露？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>設備保護</td>
+<td>重要設備是否上鎖、固定、標示且避免未授權接觸？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>環境安全</td>
+<td>消防、電力、空調、溫濕度、漏水、清潔與逃生通道是否正常？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>禁止拍照</td>
+<td>是否已管制拍照、錄影、錄音或直播行為？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 符合</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 安全區域清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>區域編號</th>
+<th>區域名稱</th>
+<th>位置</th>
+<th>等級</th>
+<th>Owner</th>
+<th>主要資產 / 資訊</th>
+<th>進出控制</th>
+<th>監控要求</th>
+<th>審查日期</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ZONE-001</td>
+<td></td>
+<td></td>
+<td>□ L0 □ L1 □ L2 □ L3 □ L4 □ 臨時</td>
+<td></td>
+<td></td>
+<td>□ 開放 □ 員工 □ 門禁 □ 陪同 □ 雙人控制</td>
+<td>□ 無 □ CCTV □ 警報 □ 巡檢 □ 環境監控</td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 待改善 □ 例外</td>
+</tr>
+<tr>
+<td>ZONE-002</td>
+<td></td>
+<td></td>
+<td>□ L0 □ L1 □ L2 □ L3 □ L4 □ 臨時</td>
+<td></td>
+<td></td>
+<td>□ 開放 □ 員工 □ 門禁 □ 陪同 □ 雙人控制</td>
+<td>□ 無 □ CCTV □ 警報 □ 巡檢 □ 環境監控</td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 待改善 □ 例外</td>
+</tr>
+<tr>
+<td>ZONE-003</td>
+<td></td>
+<td></td>
+<td>□ L0 □ L1 □ L2 □ L3 □ L4 □ 臨時</td>
+<td></td>
+<td></td>
+<td>□ 開放 □ 員工 □ 門禁 □ 陪同 □ 雙人控制</td>
+<td>□ 無 □ CCTV □ 警報 □ 巡檢 □ 環境監控</td>
+<td>YYYY-MM-DD</td>
+<td>□ 正常 □ 待改善 □ 例外</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 高風險情境與處置要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>可能風險</th>
+<th>立即處置</th>
+<th>後續要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未授權人員進入安全區域</td>
+<td>資料外洩、設備破壞、惡意植入、竊盜。</td>
+<td>制止、陪離、確認身份、保存門禁與CCTV紀錄。</td>
+<td>通報Security/SOC，必要時啟動事件。</td>
+</tr>
+<tr>
+<td>尾隨或代刷門禁</td>
+<td>進出紀錄失真、未授權進入。</td>
+<td>立即提醒並記錄，必要時通報主管。</td>
+<td>再教育或違規處理。</td>
+</tr>
+<tr>
+<td>門禁故障或門未關閉</td>
+<td>未授權接觸、安全邊界失效。</td>
+<td>採人工保全、限制進入、立即維修。</td>
+<td>故障與補償控制紀錄。</td>
+</tr>
+<tr>
+<td>CCTV或警報失效</td>
+<td>事件偵測與調查能力下降。</td>
+<td>啟用人工巡檢或臨時監控。</td>
+<td>維修並評估風險接受。</td>
+</tr>
+<tr>
+<td>安全區域內發現未知設備</td>
+<td>惡意裝置、未授權網路、竊聽或資料外洩。</td>
+<td>隔離設備、拍照、保全現場。</td>
+<td>啟動事件初判與取證。</td>
+</tr>
+<tr>
+<td>機密文件或媒體遺留</td>
+<td>未授權揭露或資料遺失。</td>
+<td>收回保管，確認Owner與接觸範圍。</td>
+<td>依資料分類決定是否事件通報。</td>
+</tr>
+<tr>
+<td>訪客或供應商未陪同</td>
+<td>資料外洩、設備接觸或拍攝風險。</td>
+<td>立即陪離並確認活動範圍。</td>
+<td>檢討接待與供應商流程。</td>
+</tr>
+<tr>
+<td>環境威脅影響安全區域</td>
+<td>火災、漏水、電力、空調、結構損壞或營運中斷。</td>
+<td>通知Facility，必要時啟動BCP。</td>
+<td>RCA、CAPA與風險重評。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>臨時無法使用門禁</td>
+<td>需採人工保全、臨時名單、訪客登記與巡檢。</td>
+<td>Physical Security / CISO視風險</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>CCTV維修期間失效</td>
+<td>需增加巡檢、限制進入、臨時攝影或人工監控。</td>
+<td>Physical Security / Area Owner</td>
+<td>修復前每日重評。</td>
+</tr>
+<tr>
+<td>供應商需單獨作業</td>
+<td>原則禁止；若必要需錄影、時間限制、作業範圍限制與事後檢查。</td>
+<td>CISO / Facility / Supplier Owner</td>
+<td>單次核准。</td>
+</tr>
+<tr>
+<td>區域等級與現況不符</td>
+<td>需建立改善計畫、補償控制與期限。</td>
+<td>CISO / Area Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>臨時安全區域需延期</td>
+<td>需重新核准Owner、期限、進出控制、資產清冊與退場計畫。</td>
+<td>Area Owner / Security</td>
+<td>最長30日重評。</td>
+</tr>
+<tr>
+<td>門禁權限定期審查逾期</td>
+<td>需補審查並限制高風險權限新增。</td>
+<td>Area Owner / HR / Security</td>
+<td>10個工作日內。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全區域清冊</td>
+<td>區域編號、名稱、等級、Owner、用途、控制措施、監控、審查日與狀態。</td>
+<td>Physical Security / ISMS代表</td>
+<td>有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>進出紀錄</td>
+<td>門禁、訪客、供應商、緊急進入與人工登記紀錄。</td>
+<td>Physical Security / Reception</td>
+<td>至少1至3年，依區域等級。</td>
+</tr>
+<tr>
+<td>CCTV與警報紀錄</td>
+<td>錄影、警報、測試、故障、維修與事件保存紀錄。</td>
+<td>Physical Security / Facility</td>
+<td>依法規與風險，至少保存設定期限。</td>
+</tr>
+<tr>
+<td>權限審查紀錄</td>
+<td>授權名單、審查結果、撤權、臨時權限與例外。</td>
+<td>Area Owner / HR / Security</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>巡檢紀錄</td>
+<td>保全巡邏、場所安全檢查、缺失、照片、改善與驗證。</td>
+<td>Facility / Physical Security</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商與施工紀錄</td>
+<td>進出、陪同、工具、施工、維護、退場與NDA/合約證據。</td>
+<td>Supplier Management / Facility</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>事件與改善紀錄</td>
+<td>未授權進入、尾隨、門禁/CCTV失效、文件外露、設備異常、RCA/CAPA。</td>
+<td>Incident Manager / ISMS代表</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全區域清冊完整率</td>
+<td>已登錄Owner、等級、控制與審查日之安全區域比例。</td>
+<td>目標100%。</td>
+<td>區域治理。</td>
+</tr>
+<tr>
+<td>門禁權限審查完成率</td>
+<td>已完成定期權限審查之Level 2以上區域比例。</td>
+<td>目標100%。</td>
+<td>最小權限與撤權。</td>
+</tr>
+<tr>
+<td>未授權進入事件數</td>
+<td>未授權進入、尾隨、代刷或訪客未陪同事件數。</td>
+<td>目標0；重大事件需管理審查。</td>
+<td>實體安全風險。</td>
+</tr>
+<tr>
+<td>CCTV/警報可用率</td>
+<td>必要監控設備於檢查期間正常可用比例。</td>
+<td>Critical區域目標100%。</td>
+<td>偵測能力。</td>
+</tr>
+<tr>
+<td>門禁故障平均修復時間</td>
+<td>門禁故障自發現至修復時間。</td>
+<td>依SLA；Critical需立即補償控制。</td>
+<td>復原能力。</td>
+</tr>
+<tr>
+<td>巡檢完成率</td>
+<td>保全/Facility完成計畫巡檢比例。</td>
+<td>目標100%。</td>
+<td>日常控制。</td>
+</tr>
+<tr>
+<td>逾期改善數</td>
+<td>安全區域缺失超過期限未完成改善數。</td>
+<td>目標0。</td>
+<td>改善追蹤。</td>
+</tr>
+<tr>
+<td>高風險例外逾期數</td>
+<td>安全區域例外超過期限未重評或未關閉數量。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>區域分級</td>
+<td>安全區域是否依資料分類、資產重要性與風險分級。</td>
+<td>安全區域清冊、風險評估。</td>
+</tr>
+<tr>
+<td>邊界與標示</td>
+<td>安全區域是否有適當邊界、標示、門禁、鎖具或隔離。</td>
+<td>現場檢查、照片。</td>
+</tr>
+<tr>
+<td>授權與撤權</td>
+<td>進出權限是否最小化、定期審查並即時撤權。</td>
+<td>授權名單、撤權紀錄。</td>
+</tr>
+<tr>
+<td>訪客管理</td>
+<td>訪客、供應商、清潔、施工人員是否登記、識別、陪同與退場。</td>
+<td>訪客/供應商紀錄。</td>
+</tr>
+<tr>
+<td>CCTV與警報</td>
+<td>監控、錄影保存、時間同步、告警與維護是否有效。</td>
+<td>CCTV/警報紀錄。</td>
+</tr>
+<tr>
+<td>巡檢與維護</td>
+<td>保全巡檢、設施維護與缺失改善是否依計畫執行。</td>
+<td>巡檢表、維護紀錄。</td>
+</tr>
+<tr>
+<td>桌面與設備保護</td>
+<td>安全區域內文件、螢幕、設備與媒體是否妥善保護。</td>
+<td>清桌檢查、資產紀錄。</td>
+</tr>
+<tr>
+<td>臨時區域</td>
+<td>施工區、專案區或臨時安全區域是否有Owner、期限、控制與退場。</td>
+<td>臨時區域紀錄。</td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>未授權進入、門禁故障、CCTV失效、未知設備是否依事件程序處理。</td>
+<td>事件紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大事件、逾期改善與高風險例外是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 附錄A：安全區域建立申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>ZONE-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>區域名稱與位置</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>申請類型</td>
+<td>□ 新增 □ 升級 □ 降級 □ 變更 □ 臨時區域 □ 撤除</td>
+<td></td>
+</tr>
+<tr>
+<td>區域用途</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>處理資訊 / 資產</td>
+<td>資料分類、主要設備、業務服務或文件類型</td>
+<td></td>
+</tr>
+<tr>
+<td>建議等級</td>
+<td>□ L0 □ L1 □ L2 □ L3 □ L4 □ 臨時</td>
+<td></td>
+</tr>
+<tr>
+<td>主要風險</td>
+<td>未授權進入、資料外露、設備破壞、環境威脅、訪客接觸等</td>
+<td></td>
+</tr>
+<tr>
+<td>擬採控制</td>
+<td>門禁、CCTV、警報、陪同、雙人控制、巡檢、上鎖櫃、標示等</td>
+<td></td>
+</tr>
+<tr>
+<td>有效期間</td>
+<td>永久或YYYY-MM-DD至YYYY-MM-DD</td>
+<td>臨時區域必填。</td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Area Owner / Facility / Physical Security / CISO / IT / BCMS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 附錄B：安全區域巡檢紀錄範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>巡檢編號</th>
+<th>巡檢日期</th>
+<th>巡檢區域</th>
+<th>巡檢人員</th>
+<th>檢查結果</th>
+<th>缺失數</th>
+<th>立即處置</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ZONE-PATROL-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 正常 □ 異常 □ 需改善</td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td></td>
+<td>□ 未結案 □ 已結案</td>
+</tr>
+<tr>
+<td>ZONE-PATROL-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 正常 □ 異常 □ 需改善</td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td></td>
+<td>□ 未結案 □ 已結案</td>
+</tr>
+<tr>
+<td>ZONE-PATROL-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 正常 □ 異常 □ 需改善</td>
+<td>Critical：__；High：__；Medium：__；Low：__</td>
+<td></td>
+<td>□ 未結案 □ 已結案</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

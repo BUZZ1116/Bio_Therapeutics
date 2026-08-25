@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-001 存取控制與身分管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-001 存取控制與身分管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-001</td>
+<td>存取控制與身分管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">姓名</th>
+<th style="vertical-align: top;">職稱</th>
+<th style="vertical-align: top;">簽核/確認</th>
+<th style="vertical-align: top;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">文件建立</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Identity &amp; Access Management Owner / ISMS管理代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資訊安全審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / SOC負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT營運審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">IT Operations Owner / Infrastructure Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端安全審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Cloud Security Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Data Governance Owner / Data Owner代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">隱私審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">DPO / PIMS負責人（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">AI Governance Owner（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法務與合規審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Legal / Compliance Owner（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">核准</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / 最高管理階層授權代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書旨在建立組織存取控制與身分管理之完整作業要求，確保使用者、系統、服務、API、雲端資源、AI服務、資料平台及第三方連線之存取權限，皆依業務必要、最小權限、職務區隔、可追溯、可審查及及時撤銷原則進行管理。</p>
+<p>本文件支援 ISO/IEC 27001:2022 Annex A.5.15「Access control」、A.5.16「Identity management」、A.5.17「Authentication information」、A.5.18「Access rights」以及 A.8.2「Privileged access rights」、A.8.3「Information access restriction」、A.8.4「Access to source code」、A.8.5「Secure authentication」等控制措施落地，並提供驗證、內部稽核、供應商管理、雲端安全、AI治理、隱私保護與事件調查所需之證據鏈。</p>
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有存取權限應基於明確業務目的、經授權角色、最小權限、必要期間及可追溯性。</li>
+<li>所有身份應具唯一性，禁止多人共用一般使用者帳號；例外共用帳號需核准、補償控制與完整日誌。</li>
+<li>特權帳號、雲端管理者、資料庫管理者、程式碼庫管理者、AI模型管理者及安全工具管理者應採更高強度控管。</li>
+<li>新進、異動、離職、外包啟用、供應商退場、專案結束及重大系統變更時，應同步更新或撤銷權限。</li>
+<li>存取控制應整合人員、流程、技術與監控，包括HR事件、ITSM流程、IAM/SSO/MFA、PAM、SIEM、CASB、EDR、DLP與雲端日誌。</li>
+<li>任何未授權存取、越權、權限未撤銷、帳號共用、憑證外洩或異常登入，均應依事件管理程序通報與處理。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">名詞</th>
+<th style="vertical-align: top;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">身份（Identity）</td>
+<td style="vertical-align: top;">代表自然人、系統、服務、裝置、應用程式、API、機器人、AI代理或第三方實體之可識別主體。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">存取控制</td>
+<td style="vertical-align: top;">依政策、角色、屬性、風險、地點、裝置狀態、資料分類或其他條件，限制主體對資訊資產之讀取、建立、修改、刪除、執行、管理、匯出或分享。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">最小權限</td>
+<td style="vertical-align: top;">僅授予完成授權業務目的所需之最低權限、最小資料範圍與最短有效期間。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">職務區隔（SoD）</td>
+<td style="vertical-align: top;">透過角色與權限設計避免單一人員可完成不相容或高風險交易、部署、核准與審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權帳號</td>
+<td style="vertical-align: top;">具系統管理、資料庫管理、雲端管理、網路管理、安全工具管理、IAM管理、PAM管理、程式碼庫管理或高敏感資料存取能力之帳號。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號</td>
+<td style="vertical-align: top;">供系統、應用程式、批次作業、API、CI/CD、監控工具、RPA或AI代理執行自動化作業之非人員帳號。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">驗證資訊</td>
+<td style="vertical-align: top;">密碼、Passphrase、MFA因素、Token、API Key、SSH Key、憑證、私鑰、生物特徵模板、恢復碼或其他用於身份驗證之資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PAM</td>
+<td style="vertical-align: top;">Privileged Access Management，特權存取管理機制，用於特權帳號保管、核准、取用、輪替、Session Recording與命令稽核。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">JML流程</td>
+<td style="vertical-align: top;">Joiner-Mover-Leaver流程，指人員到職、職務異動與離職時之帳號與權限生命週期管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">零信任存取</td>
+<td style="vertical-align: top;">以身份、裝置、風險、地點、行為與資源敏感度進行持續驗證與動態授權之存取方式。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">最高管理階層</td>
+<td style="vertical-align: top;">核准高風險存取策略、重大例外、剩餘風險接受、資源配置與治理方向。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top;">制定存取控制要求，核准高風險權限、例外存取、特權存取政策與監控要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ISMS管理代表</td>
+<td style="vertical-align: top;">維護本SOP，整合風險、SoA、內部稽核、KPI/KRI、CAPA與管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IAM Owner</td>
+<td style="vertical-align: top;">管理身份生命週期、SSO、MFA、帳號申請流程、權限模型、定期審查與身份治理工具。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">System Owner</td>
+<td style="vertical-align: top;">定義系統角色、權限、資料存取範圍、授權準則、日誌與定期權限審查要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Data Owner</td>
+<td style="vertical-align: top;">核准資料存取目的、資料分類、敏感資料權限、匯出限制與資料使用條件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">HR / 人資單位</td>
+<td style="vertical-align: top;">提供到職、異動、離職、停職、外包結束及組織異動資訊，觸發JML流程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT Operations</td>
+<td style="vertical-align: top;">執行帳號建立、變更、停用、刪除、MFA設定、端點與基礎設施存取控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Cloud Security Owner</td>
+<td style="vertical-align: top;">管理雲端IAM、租戶管理者、角色、Policy、Service Principal、Key、跨帳戶存取及雲端日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SOC</td>
+<td style="vertical-align: top;">監控登入、異常存取、特權操作、資料匯出、暴力破解、可疑地點、Impossible Travel與權限濫用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PAM Administrator</td>
+<td style="vertical-align: top;">維護特權帳號保管、授權工作流、Session Recording、密碼輪替及Break-glass控管。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DPO / PIMS負責人</td>
+<td style="vertical-align: top;">審查PII存取權限、資料主體要求、跨境存取與隱私高風險存取。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI Governance Owner</td>
+<td style="vertical-align: top;">審查AI服務、模型、Prompt、資料集、RAG知識庫與AI代理之存取權限與監控要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">使用者 / 管理者</td>
+<td style="vertical-align: top;">依授權使用資源，保護驗證資訊，不共用帳號，定期確認權限必要性並通報異常。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 身分類型與帳號分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">身份/帳號類型</th>
+<th style="vertical-align: top;">適用範圍</th>
+<th style="vertical-align: top;">最低控制要求</th>
+<th style="vertical-align: top;">審查頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般使用者帳號</td>
+<td style="vertical-align: top;">員工、主管、約聘、派遣、實習生、顧問等自然人帳號。</td>
+<td style="vertical-align: top;">唯一身份、SSO優先、MFA、到職授權、異動調整、離職停用、日誌保留。</td>
+<td style="vertical-align: top;">至少每半年或依風險每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權帳號</td>
+<td style="vertical-align: top;">系統、雲端、資料庫、網路、安全工具、IAM/PAM、備份與程式碼庫管理帳號。</td>
+<td style="vertical-align: top;">PAM保管、MFA、Just-in-Time、核准取用、Session Recording、命令稽核、定期輪替。</td>
+<td style="vertical-align: top;">至少每季，高風險每月。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號</td>
+<td style="vertical-align: top;">應用程式、批次、API、CI/CD、監控、RPA、AI代理或資料同步帳號。</td>
+<td style="vertical-align: top;">Owner、用途、最小權限、禁止互動登入、Secret保護、輪替、日誌、到期或年度重認證。</td>
+<td style="vertical-align: top;">至少每半年，高風險每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">第三方帳號</td>
+<td style="vertical-align: top;">供應商、外包、客戶、稽核員、維護商、遠端支援人員。</td>
+<td style="vertical-align: top;">合約/NDA、到期日、限定範圍、MFA、遠端支援申請、活動監控與退場撤銷。</td>
+<td style="vertical-align: top;">至少每季或專案結束。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">緊急帳號 / Break-glass</td>
+<td style="vertical-align: top;">緊急災難復原、IAM故障、資安事件或重大營運中斷時使用。</td>
+<td style="vertical-align: top;">高階核准、離線保管、雙人取用、完整記錄、使用後立即審查與輪替。</td>
+<td style="vertical-align: top;">每次使用後及至少每季測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端身份 / Service Principal</td>
+<td style="vertical-align: top;">雲端租戶、訂閱、專案、資源群組、Kubernetes、Serverless、API服務。</td>
+<td style="vertical-align: top;">最小IAM Role、條件式存取、Key Vault/KMS、Policy as Code、CloudTrail/Activity Log監控。</td>
+<td style="vertical-align: top;">至少每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI與資料平台帳號</td>
+<td style="vertical-align: top;">AI模型、Prompt資產、RAG知識庫、向量資料庫、資料集、MLOps、Feature Store。</td>
+<td style="vertical-align: top;">資料分類、模型角色、輸入輸出控制、API Key保護、Prompt與資料集存取審查、AI使用日誌。</td>
+<td style="vertical-align: top;">至少每季，高風險每月。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 存取權限生命週期作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">階段</th>
+<th style="vertical-align: top;">作業要求</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">申請</td>
+<td style="vertical-align: top;">申請人應提供系統名稱、帳號類型、角色、資料分類、存取目的、期間、主管、Data Owner與System Owner。</td>
+<td style="vertical-align: top;">申請人 / 主管</td>
+<td style="vertical-align: top;">存取權限申請紀錄、ITSM單號。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">審查</td>
+<td style="vertical-align: top;">審查業務必要性、最小權限、職務區隔、資料分類、風險等級、合規要求與是否需例外核准。</td>
+<td style="vertical-align: top;">主管 / System Owner / Data Owner / CISO</td>
+<td style="vertical-align: top;">審查與核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">建立</td>
+<td style="vertical-align: top;">依核准內容建立帳號、角色、群組、MFA、到期日、日誌監控與初始權限。</td>
+<td style="vertical-align: top;">IT / IAM Owner / System Admin</td>
+<td style="vertical-align: top;">帳號建立紀錄、權限設定截圖或系統日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">啟用</td>
+<td style="vertical-align: top;">使用者完成身份驗證、MFA註冊、資安承諾與必要訓練後始得啟用。</td>
+<td style="vertical-align: top;">IAM Owner / 使用者 / HR</td>
+<td style="vertical-align: top;">MFA註冊紀錄、訓練紀錄、承諾書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">異動</td>
+<td style="vertical-align: top;">職務、部門、專案、地點、雇用型態或供應商狀態變更時，權限需重評與調整。</td>
+<td style="vertical-align: top;">HR / 主管 / IAM Owner</td>
+<td style="vertical-align: top;">異動通知、權限異動紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">暫停</td>
+<td style="vertical-align: top;">停職、留職停薪、長期休假、調查中、合約暫停或異常風險時，應限制或暫停權限。</td>
+<td style="vertical-align: top;">HR / 主管 / CISO</td>
+<td style="vertical-align: top;">暫停核准與執行紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">離職/退場</td>
+<td style="vertical-align: top;">離職、合約結束、專案結束或供應商退場時，於規定時限內停用或刪除帳號並回收設備與資料。</td>
+<td style="vertical-align: top;">HR / IT / 主管 / 供應商管理</td>
+<td style="vertical-align: top;">離職與異動資安檢核表、帳號停用紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">定期重認證</td>
+<td style="vertical-align: top;">依帳號風險等級定期由Owner確認權限仍必要、正確且符合職務區隔。</td>
+<td style="vertical-align: top;">System Owner / Data Owner / IAM Owner</td>
+<td style="vertical-align: top;">權限審查紀錄、例外處理紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 權限申請與核准矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">存取類型</th>
+<th style="vertical-align: top;">核准角色</th>
+<th style="vertical-align: top;">附加審查</th>
+<th style="vertical-align: top;">有效期限</th>
+<th style="vertical-align: top;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般業務系統使用者權限</td>
+<td style="vertical-align: top;">直屬主管 / System Owner</td>
+<td style="vertical-align: top;">必要時Data Owner</td>
+<td style="vertical-align: top;">依職務或不超過一年重認證</td>
+<td style="vertical-align: top;">不得授予超出職務需求之管理權限。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">機密資料讀取權限</td>
+<td style="vertical-align: top;">直屬主管 / Data Owner</td>
+<td style="vertical-align: top;">資訊安全審查</td>
+<td style="vertical-align: top;">依目的設定，最長不超過一年</td>
+<td style="vertical-align: top;">需保留存取目的與資料範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">高機密或大量資料匯出權限</td>
+<td style="vertical-align: top;">Data Owner / CISO</td>
+<td style="vertical-align: top;">DPO/法務/合規（如適用）</td>
+<td style="vertical-align: top;">依任務期間，原則短期</td>
+<td style="vertical-align: top;">需啟用DLP、日誌與匯出紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">系統管理權限</td>
+<td style="vertical-align: top;">System Owner / IT主管</td>
+<td style="vertical-align: top;">CISO或授權資安負責人</td>
+<td style="vertical-align: top;">最長不超過一年，建議JIT</td>
+<td style="vertical-align: top;">需PAM/MFA與操作日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端租戶或訂閱管理權限</td>
+<td style="vertical-align: top;">Cloud Security Owner / CISO</td>
+<td style="vertical-align: top;">架構或變更審查</td>
+<td style="vertical-align: top;">依專案期間，定期重認證</td>
+<td style="vertical-align: top;">避免使用Owner等過大角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料庫管理權限</td>
+<td style="vertical-align: top;">DB Owner / IT主管</td>
+<td style="vertical-align: top;">CISO / Data Owner</td>
+<td style="vertical-align: top;">依任務期間，最長不超過一年</td>
+<td style="vertical-align: top;">高敏感資料庫需Session Recording。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">程式碼庫管理權限</td>
+<td style="vertical-align: top;">DevSecOps Owner / Repo Owner</td>
+<td style="vertical-align: top;">CISO（高風險Repo）</td>
+<td style="vertical-align: top;">依專案或職務</td>
+<td style="vertical-align: top;">需保護分支、Code Review與Commit追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">第三方遠端支援權限</td>
+<td style="vertical-align: top;">業務Owner / IT主管</td>
+<td style="vertical-align: top;">CISO / 供應商管理</td>
+<td style="vertical-align: top;">限時、限IP、限系統</td>
+<td style="vertical-align: top;">支援期間應監控或錄影。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI模型、Prompt或RAG資料權限</td>
+<td style="vertical-align: top;">AI Governance Owner / Data Owner</td>
+<td style="vertical-align: top;">CISO / DPO（如涉及PII）</td>
+<td style="vertical-align: top;">依專案期間</td>
+<td style="vertical-align: top;">需保留輸入輸出與模型存取紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">緊急Break-glass權限</td>
+<td style="vertical-align: top;">CISO / 最高管理階層授權代表</td>
+<td style="vertical-align: top;">事後管理審查</td>
+<td style="vertical-align: top;">限事件處理期間</td>
+<td style="vertical-align: top;">使用後立即輪替與檢討。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 身份驗證與MFA要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">控制項目</th>
+<th style="vertical-align: top;">最低要求</th>
+<th style="vertical-align: top;">高風險/特權要求</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">密碼政策</td>
+<td style="vertical-align: top;">長度、複雜度、黑名單、歷史紀錄、嘗試次數限制與安全重設流程。</td>
+<td style="vertical-align: top;">特權帳號不得共用密碼，應由PAM保管與輪替。</td>
+<td style="vertical-align: top;">IAM設定、密碼政策截圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MFA</td>
+<td style="vertical-align: top;">遠端存取、雲端、管理者、外部存取與高敏感系統需啟用MFA。</td>
+<td style="vertical-align: top;">特權帳號需使用強MFA或硬體金鑰；禁止僅依SMS作為唯一高風險因素。</td>
+<td style="vertical-align: top;">MFA註冊與政策紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SSO</td>
+<td style="vertical-align: top;">優先整合企業SSO，以集中身份、條件式存取與帳號撤銷。</td>
+<td style="vertical-align: top;">關鍵系統應避免孤島帳號，若無法整合需補償控制。</td>
+<td style="vertical-align: top;">SSO整合清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">條件式存取</td>
+<td style="vertical-align: top;">依地點、裝置、風險、登入行為、IP信譽、資料敏感度及使用者狀態限制存取。</td>
+<td style="vertical-align: top;">高風險登入需阻擋、Step-up MFA或管理者確認。</td>
+<td style="vertical-align: top;">條件式存取政策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">帳號鎖定</td>
+<td style="vertical-align: top;">偵測暴力破解、密碼噴灑、異常登入與Impossible Travel。</td>
+<td style="vertical-align: top;">特權帳號異常需即時告警SOC。</td>
+<td style="vertical-align: top;">SIEM/IAM告警紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">憑證與金鑰</td>
+<td style="vertical-align: top;">SSH Key、憑證、API Key、Token應有Owner、用途、到期與輪替。</td>
+<td style="vertical-align: top;">Secret需存放於Vault/KMS，禁止硬編碼或明文傳輸。</td>
+<td style="vertical-align: top;">Secret管理紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">密碼重設</td>
+<td style="vertical-align: top;">需確認身份，重設後強制變更，避免透過未受控通道傳送。</td>
+<td style="vertical-align: top;">特權帳號重設需雙人覆核或PAM流程。</td>
+<td style="vertical-align: top;">重設紀錄與核准紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 特權存取管理作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">作業項目</th>
+<th style="vertical-align: top;">作業要求</th>
+<th style="vertical-align: top;">控制證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">特權帳號識別</td>
+<td style="vertical-align: top;">維護所有作業系統、資料庫、網路、雲端、SaaS、安全工具、備份、IAM、PAM、CI/CD與程式碼庫特權帳號清單。</td>
+<td style="vertical-align: top;">特權帳號清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PAM納管</td>
+<td style="vertical-align: top;">高風險特權帳號應納入PAM或等效控管，使用時經核准、取用、記錄與事後審查。</td>
+<td style="vertical-align: top;">PAM政策、取用紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Just-in-Time權限</td>
+<td style="vertical-align: top;">可行時採短期提升權限，任務完成後自動撤銷。</td>
+<td style="vertical-align: top;">JIT授權紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Session Recording</td>
+<td style="vertical-align: top;">高風險管理操作、第三方支援、資料庫管理與關鍵基礎設施操作應錄影或完整命令稽核。</td>
+<td style="vertical-align: top;">Session Recording、命令日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">密碼輪替</td>
+<td style="vertical-align: top;">特權帳號密碼與Key應定期及事件後輪替；第三方支援結束後立即輪替。</td>
+<td style="vertical-align: top;">輪替紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">職務區隔</td>
+<td style="vertical-align: top;">特權授權、使用、監控與審查應盡量分離；同一人不得同時具備高風險開發、核准與上線權限。</td>
+<td style="vertical-align: top;">SoD矩陣與審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Break-glass</td>
+<td style="vertical-align: top;">緊急帳號需封存、雙人取用、使用後通報、審查、輪替並保存事件理由。</td>
+<td style="vertical-align: top;">緊急取用紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權異常告警</td>
+<td style="vertical-align: top;">偵測新增管理員、權限升級、關鍵設定變更、大量資料匯出、關閉日誌或安全工具繞過。</td>
+<td style="vertical-align: top;">SIEM/SOC告警。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 服務帳號、API Key與Secrets管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">控制領域</th>
+<th style="vertical-align: top;">作業要求</th>
+<th style="vertical-align: top;">禁止事項</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">服務帳號建立</td>
+<td style="vertical-align: top;">需申請Owner、用途、系統、資料範圍、權限、到期或重認證週期。</td>
+<td style="vertical-align: top;">不得以個人帳號作為永久服務帳號。</td>
+<td style="vertical-align: top;">服務帳號申請紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">互動登入限制</td>
+<td style="vertical-align: top;">服務帳號原則禁止互動登入、郵件收發與一般使用者登入。</td>
+<td style="vertical-align: top;">不得將服務帳號供人員日常登入。</td>
+<td style="vertical-align: top;">帳號設定紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Secret保存</td>
+<td style="vertical-align: top;">API Key、Token、私鑰、憑證應存放於Vault、KMS、Secret Manager或等效工具。</td>
+<td style="vertical-align: top;">不得硬編碼於程式碼、文件、Chat、Email或工單。</td>
+<td style="vertical-align: top;">Secret Manager紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">權限最小化</td>
+<td style="vertical-align: top;">服務帳號僅授予必要API、資料表、Topic、Bucket、Queue或模型端點權限。</td>
+<td style="vertical-align: top;">不得授予Wildcard或Owner權限，除非核准例外。</td>
+<td style="vertical-align: top;">IAM Policy / ACL。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">輪替與撤銷</td>
+<td style="vertical-align: top;">Secret應定期輪替，外洩、離職、供應商退場或事件後立即撤銷與重新簽發。</td>
+<td style="vertical-align: top;">不得使用無到期、無Owner或未知用途Key。</td>
+<td style="vertical-align: top;">輪替紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌監控</td>
+<td style="vertical-align: top;">記錄呼叫來源、時間、端點、資料量、錯誤、異常頻率與高風險操作。</td>
+<td style="vertical-align: top;">不得關閉或繞過API日誌。</td>
+<td style="vertical-align: top;">API Gateway / SIEM日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">年度重認證</td>
+<td style="vertical-align: top;">所有服務帳號與Key至少年度重認證，高風險至少每季審查。</td>
+<td style="vertical-align: top;">不得保留閒置或未知用途帳號。</td>
+<td style="vertical-align: top;">重認證紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 資料、應用、雲端與AI存取控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">領域</th>
+<th style="vertical-align: top;">控制要求</th>
+<th style="vertical-align: top;">監控與證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">資料存取</td>
+<td style="vertical-align: top;">依資料分類、Data Owner核准、最小資料欄位、遮罩、去識別、匯出限制與DLP控制管理。</td>
+<td style="vertical-align: top;">資料權限清冊、DLP紀錄、資料庫稽核日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">應用系統</td>
+<td style="vertical-align: top;">採角色式權限、功能分離、敏感功能二次確認、Session逾時與管理操作日誌。</td>
+<td style="vertical-align: top;">角色矩陣、應用日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">作業系統</td>
+<td style="vertical-align: top;">管理者權限需PAM，禁止不必要Local Admin，端點與伺服器需集中管理。</td>
+<td style="vertical-align: top;">端點管理報表、PAM紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料庫</td>
+<td style="vertical-align: top;">高敏感資料庫需DBA與查詢權限分離，啟用審計、加密、遮罩與高風險查詢監控。</td>
+<td style="vertical-align: top;">DB Audit、權限審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">網路設備</td>
+<td style="vertical-align: top;">管理介面限制來源IP、MFA或金鑰、跳板機、配置備份與命令日誌。</td>
+<td style="vertical-align: top;">網路設備AAA與Syslog。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端IAM</td>
+<td style="vertical-align: top;">使用角色與Policy最小化、禁止長期Root/Owner使用、啟用MFA、Cloud Logging與Policy Guardrail。</td>
+<td style="vertical-align: top;">雲端IAM審查、CSPM報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SaaS平台</td>
+<td style="vertical-align: top;">整合SSO/MFA、限制外部分享、管理員審查、資料匯出控制與租戶安全設定。</td>
+<td style="vertical-align: top;">SaaS管理報表、CASB紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">程式碼庫</td>
+<td style="vertical-align: top;">Repo權限依專案與角色，保護分支、強制Code Review、限制Secrets、記錄Commit與Pull Request。</td>
+<td style="vertical-align: top;">Repo權限清單、Code Review紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI模型與Prompt資產</td>
+<td style="vertical-align: top;">模型、Prompt、資料集、RAG知識庫與向量資料庫存取需依資料分類、AI風險與用途核准。</td>
+<td style="vertical-align: top;">AI資產清冊、模型存取日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份與復原資料</td>
+<td style="vertical-align: top;">備份庫與復原權限需高度限制、不可任意下載，復原需核准與完整性驗證。</td>
+<td style="vertical-align: top;">備份系統權限、復原紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 權限審查與重認證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">審查類型</th>
+<th style="vertical-align: top;">審查範圍</th>
+<th style="vertical-align: top;">頻率</th>
+<th style="vertical-align: top;">處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般帳號審查</td>
+<td style="vertical-align: top;">使用者帳號、群組、角色、部門權限、外部使用者。</td>
+<td style="vertical-align: top;">至少每半年。</td>
+<td style="vertical-align: top;">移除不必要權限，更新Owner，保存審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權帳號審查</td>
+<td style="vertical-align: top;">Admin、Root、DBA、Cloud Owner、PAM Admin、Security Admin。</td>
+<td style="vertical-align: top;">至少每季，高風險每月。</td>
+<td style="vertical-align: top;">移除閒置、過大、未知或未核准特權。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">第三方帳號審查</td>
+<td style="vertical-align: top;">供應商、外包、遠端支援、稽核員、臨時專案帳號。</td>
+<td style="vertical-align: top;">至少每季或合約/專案結束。</td>
+<td style="vertical-align: top;">到期停用、退場撤銷、確認合約仍有效。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號審查</td>
+<td style="vertical-align: top;">服務帳號、API Key、Token、Service Principal、CI/CD Key。</td>
+<td style="vertical-align: top;">至少每半年，高風險每季。</td>
+<td style="vertical-align: top;">確認Owner、用途、權限、最後使用、Secret輪替。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料權限審查</td>
+<td style="vertical-align: top;">機密、高機密、PII、客戶資料、財務資料、GHG/CO2與AI資料集。</td>
+<td style="vertical-align: top;">至少每季或依法規/合約。</td>
+<td style="vertical-align: top;">不必要存取立即撤銷，重大異常通報事件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">職務區隔審查</td>
+<td style="vertical-align: top;">不相容角色、開發/上線、核准/執行、付款/審核、資料建立/覆核。</td>
+<td style="vertical-align: top;">至少每半年及重大組織變更時。</td>
+<td style="vertical-align: top;">衝突需移除、補償控制或高階核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">閒置帳號審查</td>
+<td style="vertical-align: top;">超過規定期間未登入、無Owner或無業務用途帳號。</td>
+<td style="vertical-align: top;">至少每月。</td>
+<td style="vertical-align: top;">停用、刪除或重新確認。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 存取日誌、監控與告警</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">監控情境</th>
+<th style="vertical-align: top;">最低日誌欄位</th>
+<th style="vertical-align: top;">告警條件</th>
+<th style="vertical-align: top;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般登入</td>
+<td style="vertical-align: top;">使用者、時間、來源IP、裝置、地點、成功/失敗、MFA結果。</td>
+<td style="vertical-align: top;">失敗登入暴增、Impossible Travel、新地點登入。</td>
+<td style="vertical-align: top;">SOC / IAM Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權操作</td>
+<td style="vertical-align: top;">帳號、核准單、命令、資源、開始/結束時間、Session ID、操作結果。</td>
+<td style="vertical-align: top;">新增管理員、關閉日誌、變更安全設定、大量刪除。</td>
+<td style="vertical-align: top;">SOC / PAM Admin。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料存取</td>
+<td style="vertical-align: top;">使用者、資料庫/檔案/資料集、查詢、下載、匯出、資料量。</td>
+<td style="vertical-align: top;">大量匯出、非上班時間存取、高敏感資料異常讀取。</td>
+<td style="vertical-align: top;">SOC / Data Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端IAM</td>
+<td style="vertical-align: top;">角色指派、Policy變更、Key建立、租戶設定、跨帳戶授權。</td>
+<td style="vertical-align: top;">Owner權限新增、公開Bucket、長期Key外洩疑慮。</td>
+<td style="vertical-align: top;">Cloud Security Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SaaS與協作平台</td>
+<td style="vertical-align: top;">外部分享、下載、權限變更、管理設定、公開連結。</td>
+<td style="vertical-align: top;">高機密資料公開分享、大量下載、外部Domain異常。</td>
+<td style="vertical-align: top;">SOC / SaaS Admin。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">API與服務帳號</td>
+<td style="vertical-align: top;">呼叫端、Token、API、資料量、錯誤率、頻率、來源。</td>
+<td style="vertical-align: top;">呼叫量異常、錯誤率異常、未知來源、敏感API濫用。</td>
+<td style="vertical-align: top;">System Owner / SOC。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI服務存取</td>
+<td style="vertical-align: top;">使用者、模型、Prompt類型、資料集、輸出、API呼叫、Token量、外部連線。</td>
+<td style="vertical-align: top;">輸入高敏感資料、未核准模型、異常大量推論。</td>
+<td style="vertical-align: top;">AI Governance Owner / SOC。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 離職、異動與緊急撤權作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">情境</th>
+<th style="vertical-align: top;">處置時限</th>
+<th style="vertical-align: top;">作業要求</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般離職</td>
+<td style="vertical-align: top;">依HR通知或最後工作日前完成；高風險角色應即時撤權。</td>
+<td style="vertical-align: top;">停用SSO、Email、VPN、SaaS、系統、雲端、資料庫、程式碼庫、PAM與實體門禁。</td>
+<td style="vertical-align: top;">離職與異動資安檢核表、帳號停用紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">非自願離職或高風險離職</td>
+<td style="vertical-align: top;">HR/CISO通知後立即執行。</td>
+<td style="vertical-align: top;">同步撤銷遠端存取、MFA、特權、資料匯出能力與設備存取。</td>
+<td style="vertical-align: top;">緊急撤權紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">職務異動</td>
+<td style="vertical-align: top;">異動生效日前後依流程完成。</td>
+<td style="vertical-align: top;">新增新職務必要權限，移除舊職務不再必要權限。</td>
+<td style="vertical-align: top;">異動申請與權限審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">專案結束</td>
+<td style="vertical-align: top;">專案結束或目的消失後即時撤銷。</td>
+<td style="vertical-align: top;">移除專案群組、Repo、雲端資源、資料集、AI資產與外部分享權限。</td>
+<td style="vertical-align: top;">專案退場紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商退場</td>
+<td style="vertical-align: top;">合約終止、支援結束或合作暫停時。</td>
+<td style="vertical-align: top;">停用第三方帳號、VPN、SaaS、API Key、遠端工具與共享資料。</td>
+<td style="vertical-align: top;">供應商退場與刪除證明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">事件處理撤權</td>
+<td style="vertical-align: top;">偵測帳號外洩、越權、惡意行為或異常存取時立即執行。</td>
+<td style="vertical-align: top;">暫停帳號、撤銷Token、輪替Secret、保全證據並啟動事件管理程序。</td>
+<td style="vertical-align: top;">事件紀錄、撤權紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 存取控制例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">例外類型</th>
+<th style="vertical-align: top;">核准要求</th>
+<th style="vertical-align: top;">補償控制</th>
+<th style="vertical-align: top;">有效期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">無法整合SSO/MFA</td>
+<td style="vertical-align: top;">System Owner與CISO核准。</td>
+<td style="vertical-align: top;">強密碼、IP限制、日誌監控、定期審查、縮短密碼輪替週期。</td>
+<td style="vertical-align: top;">最長三個月或至改善完成。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">需長期特權權限</td>
+<td style="vertical-align: top;">CISO / IT主管核准。</td>
+<td style="vertical-align: top;">PAM、Session Recording、日誌告警、權限重認證。</td>
+<td style="vertical-align: top;">最長六個月，需重評。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">臨時大量資料匯出</td>
+<td style="vertical-align: top;">Data Owner / CISO / DPO（如適用）核准。</td>
+<td style="vertical-align: top;">DLP、加密、用途限制、期限、傳輸紀錄、刪除證明。</td>
+<td style="vertical-align: top;">限任務期間。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號需較高權限</td>
+<td style="vertical-align: top;">System Owner與CISO核准。</td>
+<td style="vertical-align: top;">分離環境、限定來源、Secret保護、監控與定期審查。</td>
+<td style="vertical-align: top;">最長六個月，需重認證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">第三方臨時支援</td>
+<td style="vertical-align: top;">業務Owner / CISO / 供應商管理核准。</td>
+<td style="vertical-align: top;">限IP、限時、MFA、跳板機、Session Recording、支援結束撤權。</td>
+<td style="vertical-align: top;">限支援期間。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Break-glass使用</td>
+<td style="vertical-align: top;">CISO或最高管理階層授權代表核准；緊急時事後補核。</td>
+<td style="vertical-align: top;">雙人控制、完整紀錄、使用後輪替與檢討。</td>
+<td style="vertical-align: top;">限事件期間。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 稽核證據與紀錄保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">紀錄名稱</th>
+<th style="vertical-align: top;">內容</th>
+<th style="vertical-align: top;">保存責任</th>
+<th style="vertical-align: top;">建議保存期間</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">帳號與權限申請紀錄</td>
+<td style="vertical-align: top;">申請人、目的、系統、角色、資料分類、核准者、有效期間。</td>
+<td style="vertical-align: top;">IAM Owner / ITSM Owner</td>
+<td style="vertical-align: top;">至少三年或依法規/合約。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">權限異動與停用紀錄</td>
+<td style="vertical-align: top;">新增、變更、撤銷、停用、刪除與執行人。</td>
+<td style="vertical-align: top;">IAM Owner / System Owner</td>
+<td style="vertical-align: top;">至少三年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">定期權限審查紀錄</td>
+<td style="vertical-align: top;">審查範圍、審查人、發現、處置、未完成事項。</td>
+<td style="vertical-align: top;">System Owner / Data Owner</td>
+<td style="vertical-align: top;">至少三年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權存取紀錄</td>
+<td style="vertical-align: top;">PAM取用、Session Recording、命令、核准與事後審查。</td>
+<td style="vertical-align: top;">PAM Admin / SOC</td>
+<td style="vertical-align: top;">至少一年至三年，依風險與法規。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MFA與條件式存取紀錄</td>
+<td style="vertical-align: top;">MFA註冊、政策、登入風險與阻擋紀錄。</td>
+<td style="vertical-align: top;">IAM Owner</td>
+<td style="vertical-align: top;">至少一年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號與Secret管理紀錄</td>
+<td style="vertical-align: top;">Owner、用途、權限、輪替、最後使用、審查結果。</td>
+<td style="vertical-align: top;">System Owner / DevSecOps</td>
+<td style="vertical-align: top;">至少三年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">異常存取與事件紀錄</td>
+<td style="vertical-align: top;">告警、調查、處置、根因、改善措施。</td>
+<td style="vertical-align: top;">SOC / CISO</td>
+<td style="vertical-align: top;">依事件管理及法規要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">例外核准紀錄</td>
+<td style="vertical-align: top;">例外理由、風險、補償控制、期限、核准者與改善計畫。</td>
+<td style="vertical-align: top;">ISMS管理代表 / CISO</td>
+<td style="vertical-align: top;">至少三年。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. KPI / KRI 與有效性評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">指標類型</th>
+<th style="vertical-align: top;">指標名稱</th>
+<th style="vertical-align: top;">計算方式/判定方式</th>
+<th style="vertical-align: top;">目標或門檻</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">權限申請按時完成率</td>
+<td style="vertical-align: top;">期限內完成之申請件數 / 總申請件數。</td>
+<td style="vertical-align: top;">≥ 95%。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">離職帳號準時停用率</td>
+<td style="vertical-align: top;">準時停用帳號數 / 應停用帳號數。</td>
+<td style="vertical-align: top;">100%，高風險離職需即時。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">定期權限審查完成率</td>
+<td style="vertical-align: top;">完成審查項目 / 計畫審查項目。</td>
+<td style="vertical-align: top;">≥ 95%。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">特權帳號PAM納管率</td>
+<td style="vertical-align: top;">已納管特權帳號 / 已識別特權帳號。</td>
+<td style="vertical-align: top;">≥ 95%，關鍵系統100%。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">逾期未審查高權限數</td>
+<td style="vertical-align: top;">超過審查期限仍未重認證之高權限帳號數。</td>
+<td style="vertical-align: top;">0或管理階層核准例外。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">閒置帳號數</td>
+<td style="vertical-align: top;">超過規定期間未登入且未停用帳號數。</td>
+<td style="vertical-align: top;">持續下降，重大系統為0。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">MFA未啟用高風險帳號數</td>
+<td style="vertical-align: top;">應啟用MFA但未完成帳號數。</td>
+<td style="vertical-align: top;">0。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">異常登入事件數</td>
+<td style="vertical-align: top;">經SOC判定之高風險異常登入件數。</td>
+<td style="vertical-align: top;">趨勢監控，超門檻啟動改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">服務帳號無Owner數</td>
+<td style="vertical-align: top;">未識別Owner或用途不明服務帳號數。</td>
+<td style="vertical-align: top;">0。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 內部稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">稽核主題</th>
+<th style="vertical-align: top;">稽核問題</th>
+<th style="vertical-align: top;">客觀證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">身份生命週期</td>
+<td style="vertical-align: top;">是否能證明到職、異動、離職均觸發帳號權限管理？</td>
+<td style="vertical-align: top;">HR通知、ITSM工單、帳號建立/停用日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">最小權限</td>
+<td style="vertical-align: top;">抽樣帳號權限是否與職務、專案與資料分類一致？</td>
+<td style="vertical-align: top;">角色矩陣、權限清冊、主管確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權管理</td>
+<td style="vertical-align: top;">特權帳號是否納入PAM、MFA、Session Recording與定期審查？</td>
+<td style="vertical-align: top;">PAM報表、Session紀錄、審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號</td>
+<td style="vertical-align: top;">服務帳號是否具Owner、用途、最小權限與Secret輪替？</td>
+<td style="vertical-align: top;">服務帳號清冊、Vault紀錄、輪替紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">第三方存取</td>
+<td style="vertical-align: top;">第三方權限是否有合約、到期、核准、監控與退場撤銷？</td>
+<td style="vertical-align: top;">供應商帳號、遠端支援紀錄、退場證明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MFA與驗證資訊</td>
+<td style="vertical-align: top;">高風險存取是否啟用MFA並保護驗證資訊？</td>
+<td style="vertical-align: top;">MFA政策、註冊紀錄、登入風險報表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌監控</td>
+<td style="vertical-align: top;">異常登入、權限升級、資料匯出與特權操作是否被監控？</td>
+<td style="vertical-align: top;">SIEM規則、告警紀錄、調查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">例外管理</td>
+<td style="vertical-align: top;">存取控制例外是否具風險評估、期限、補償控制與改善計畫？</td>
+<td style="vertical-align: top;">例外申請、CISO核准、改善追蹤。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 附錄A：存取權限申請欄位範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">欄位</th>
+<th style="vertical-align: top;">填寫說明</th>
+<th style="vertical-align: top;">必填</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">申請日期</td>
+<td style="vertical-align: top;">YYYY-MM-DD。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">申請人/使用者</td>
+<td style="vertical-align: top;">姓名、員編、部門、職稱、雇用型態。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">系統/資源名稱</td>
+<td style="vertical-align: top;">應用系統、雲端資源、資料庫、SaaS、Repo、AI服務或資料集名稱。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">申請權限/角色</td>
+<td style="vertical-align: top;">角色名稱、群組、資料範圍、操作類型。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">業務目的</td>
+<td style="vertical-align: top;">說明為何需要存取、對應職務或專案。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料分類</td>
+<td style="vertical-align: top;">公開、內部、機密、高機密、PII、客戶資料、AI資料集等。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">有效期限</td>
+<td style="vertical-align: top;">開始日、結束日；永久權限需理由與重認證週期。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">主管核准</td>
+<td style="vertical-align: top;">確認業務必要性與職務相符。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">System Owner / Data Owner核准</td>
+<td style="vertical-align: top;">確認權限、資料範圍與風險可接受。</td>
+<td style="vertical-align: top;">依情境</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CISO / DPO / 法務審查</td>
+<td style="vertical-align: top;">高風險、PII、跨境、特權、第三方或例外存取時。</td>
+<td style="vertical-align: top;">依情境</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">執行紀錄</td>
+<td style="vertical-align: top;">執行人、時間、設定內容、驗證結果。</td>
+<td style="vertical-align: top;">是</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關閉或撤銷紀錄</td>
+<td style="vertical-align: top;">期限屆滿、專案結束或離職退場時填寫。</td>
+<td style="vertical-align: top;">依情境</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 附錄B：權限審查紀錄範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">審查項目</th>
+<th style="vertical-align: top;">審查內容</th>
+<th style="vertical-align: top;">結果</th>
+<th style="vertical-align: top;">改善/處置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">帳號仍屬有效人員或有效服務</td>
+<td style="vertical-align: top;">確認人員在職、供應商合約有效、服務帳號仍有Owner。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">權限符合職務與業務目的</td>
+<td style="vertical-align: top;">確認角色、群組、資料範圍與職務一致。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">無過大權限</td>
+<td style="vertical-align: top;">確認未持有不必要Admin、Owner、DBA、匯出或高敏感資料權限。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">職務區隔無衝突</td>
+<td style="vertical-align: top;">確認未同時具備不相容職責。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MFA與登入控制有效</td>
+<td style="vertical-align: top;">確認高風險帳號啟用MFA與條件式存取。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">最近使用合理</td>
+<td style="vertical-align: top;">確認最後登入、使用頻率與任務一致。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號Secret已輪替</td>
+<td style="vertical-align: top;">確認Key/Token/憑證仍有效且未逾輪替期限。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">不必要權限已撤銷</td>
+<td style="vertical-align: top;">對審查發現不必要權限完成撤銷或改善計畫。</td>
+<td style="vertical-align: top;">□ 符合　□ 不符合　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>21. 附錄C：常見違規與處置參考</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">違規或異常情境</th>
+<th style="vertical-align: top;">風險說明</th>
+<th style="vertical-align: top;">立即處置</th>
+<th style="vertical-align: top;">後續改善</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">帳號共用</td>
+<td style="vertical-align: top;">無法追溯責任，可能造成未授權存取。</td>
+<td style="vertical-align: top;">停用共用方式或納入例外控管。</td>
+<td style="vertical-align: top;">建立個人帳號或PAM流程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">離職帳號未停用</td>
+<td style="vertical-align: top;">可能遭前員工或攻擊者濫用。</td>
+<td style="vertical-align: top;">立即停用並檢查近期活動。</td>
+<td style="vertical-align: top;">檢討HR-IT串接與撤權SLA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特權帳號未納管</td>
+<td style="vertical-align: top;">高權限操作缺乏控制與稽核。</td>
+<td style="vertical-align: top;">限制權限並納入PAM。</td>
+<td style="vertical-align: top;">完成特權盤點與重認證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MFA未啟用</td>
+<td style="vertical-align: top;">帳密外洩後易被登入。</td>
+<td style="vertical-align: top;">立即要求註冊MFA或暫停遠端存取。</td>
+<td style="vertical-align: top;">強制條件式存取政策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">API Key外洩</td>
+<td style="vertical-align: top;">可造成資料存取、服務濫用或供應鏈攻擊。</td>
+<td style="vertical-align: top;">立即撤銷Key、輪替Secret並查核日誌。</td>
+<td style="vertical-align: top;">導入Secret掃描與Vault。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務帳號無Owner</td>
+<td style="vertical-align: top;">無法確認用途與權限必要性。</td>
+<td style="vertical-align: top;">暫停或限制權限直到確認Owner。</td>
+<td style="vertical-align: top;">建立服務帳號重認證機制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">權限過大</td>
+<td style="vertical-align: top;">可能造成越權、資料外洩或破壞。</td>
+<td style="vertical-align: top;">移除不必要權限。</td>
+<td style="vertical-align: top;">優化角色模型與最小權限。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">未核准第三方遠端支援</td>
+<td style="vertical-align: top;">可能造成供應商越權或未監控操作。</td>
+<td style="vertical-align: top;">中止連線並保全證據。</td>
+<td style="vertical-align: top;">納入供應商存取流程與Session Recording。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

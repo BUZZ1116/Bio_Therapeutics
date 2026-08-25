@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-009 惡意軟體防護作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-009 惡意軟體防護作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-009</td>
+<td>惡意軟體防護作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-009</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Malware Protection Owner / Endpoint Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SOC與事件管理審查</td>
+<td></td>
+<td>SOC Owner / Incident Response Owner / Digital Forensics Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>端點與伺服器審查</td>
+<td></td>
+<td>Endpoint Security Owner / IT Operations Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路與雲端審查</td>
+<td></td>
+<td>Network Security Owner / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps與工作負載審查</td>
+<td></td>
+<td>DevSecOps Owner / Application Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與委外審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / SOC主管 / Endpoint Security主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織惡意軟體防護之防禦架構、端點與伺服器保護、Email與Web防護、雲端工作負載防護、行動裝置防護、容器與CI/CD防護、AI/MLOps防護、偵測規則、掃描、隔離、通報、事件處理、惡意樣本管理、威脅情報、例外管理、供應商管理、教育訓練、稽核與持續改善要求，降低病毒、蠕蟲、木馬、勒索軟體、間諜軟體、後門、Rootkit、惡意Script、惡意巨集、檔案型/無檔案攻擊、供應鏈惡意套件、惡意容器、惡意瀏覽器外掛、惡意AI模型或其他惡意程式造成之資訊安全風險。</p>
+<p>本文件旨在建立可預防、可偵測、可隔離、可回復、可追溯之企業級惡意軟體防護能力，並與端點安全、弱點修補、軟體白名單、網頁過濾、Email安全、備份還原、日誌監控、事件回應、數位證據保存、供應鏈安全與AI治理流程整合。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>惡意軟體防護應採多層防禦，包括使用者教育、端點防護、EDR/XDR、Email/Web過濾、DLP、網路偵測、應用程式控制、弱點修補、備份與事件回應。</li>
+<li>所有受管理端點、伺服器與雲端工作負載應部署核准之防惡意軟體或等效EDR/XDR控制，並維持啟用、更新、監控與不可被一般使用者停用。</li>
+<li>惡意軟體偵測、隔離、清除與復原作業應以證據保存、業務影響、資料保護、復原可信度與再感染防止為核心。</li>
+<li>惡意樣本、IOC、分析報告與事件證據屬高敏感資訊，應採限制存取、加密保存與安全傳輸。</li>
+<li>勒索軟體、資料竊取、供應鏈惡意套件、無檔案攻擊、特權帳號異常、EDR停用或多端點感染應視為高風險事件並立即升級。</li>
+<li>任何防護停用、掃描排除、白名單、隔離解除或誤判例外均應具備核准、期限、補償控制與定期重評。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意軟體</td>
+<td>任何未經授權且意圖破壞、竊取、加密、監控、控制、滲透或濫用系統與資料之程式碼、Script、巨集、檔案、套件、容器、模型或工具。</td>
+</tr>
+<tr>
+<td>EDR</td>
+<td>Endpoint Detection and Response，端點偵測與回應，提供端點行為監控、威脅偵測、隔離、調查與回應能力。</td>
+</tr>
+<tr>
+<td>XDR</td>
+<td>Extended Detection and Response，整合端點、網路、Email、雲端、身份與應用日誌之擴展偵測回應能力。</td>
+</tr>
+<tr>
+<td>IOC</td>
+<td>Indicator of Compromise，入侵指標，例如Hash、IP、Domain、URL、檔名、Registry Key、Mutex、行為特徵或憑證痕跡。</td>
+</tr>
+<tr>
+<td>IOA</td>
+<td>Indicator of Attack，攻擊行為指標，例如權限提升、橫向移動、持久化、憑證傾倒或資料外傳行為。</td>
+</tr>
+<tr>
+<td>勒索軟體</td>
+<td>透過加密、竊取、破壞或威脅公開資料以勒索金錢或利益之惡意軟體或攻擊活動。</td>
+</tr>
+<tr>
+<td>無檔案攻擊</td>
+<td>不依賴傳統惡意檔案，透過記憶體、合法工具、PowerShell、WMI、Script或系統功能執行之攻擊。</td>
+</tr>
+<tr>
+<td>惡意樣本</td>
+<td>疑似或確認惡意之檔案、Script、Macro、記憶體Dump、封包、URL、容器映像、套件或模型檔案。</td>
+</tr>
+<tr>
+<td>隔離</td>
+<td>將受感染或疑似受感染之端點、伺服器、檔案、帳號、網路連線或工作負載限制於安全狀態，以防止擴散。</td>
+</tr>
+<tr>
+<td>清除</td>
+<td>移除惡意軟體、持久化機制、惡意帳號、排程、Registry、服務、後門、IOC與相關殘留之活動。</td>
+</tr>
+<tr>
+<td>重新佈署 / 重建</td>
+<td>對高風險或無法保證清除之系統，以可信映像、備份或IaC重建，取代單純清除。</td>
+</tr>
+<tr>
+<td>威脅情報</td>
+<td>來自內部事件、供應商、社群、政府、ISAC或商業來源之惡意活動、IOC、TTP與防護建議。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准防惡意軟體策略、重大事件升級、例外、風險接受與資源配置。</td>
+<td>核准紀錄、風險接受、管理審查。</td>
+</tr>
+<tr>
+<td>Malware Protection Owner</td>
+<td>維護惡意軟體防護標準、工具策略、掃描、隔離、例外、有效性測試與改善。</td>
+<td>防護政策、例外清冊、測試報告。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>管理端點EDR/AV部署、健康狀態、規則、隔離、排除、封鎖與修復。</td>
+<td>EDR報告、端點清冊。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控惡意軟體告警、分級、調查、關聯、升級與威脅情報導入。</td>
+<td>SIEM/XDR告警、調查紀錄。</td>
+</tr>
+<tr>
+<td>Incident Response Owner</td>
+<td>指揮惡意軟體事件回應、隔離、取證、清除、復原、通報與事後檢討。</td>
+<td>事件紀錄、RCA、CAPA。</td>
+</tr>
+<tr>
+<td>Digital Forensics Owner</td>
+<td>保存與分析惡意樣本、記憶體、磁碟、日誌、封包與時間線證據。</td>
+<td>取證報告、保管鏈。</td>
+</tr>
+<tr>
+<td>IT Operations Owner</td>
+<td>協助端點、伺服器、帳號、備份、重建、修補與工具部署。</td>
+<td>維運工單、修復紀錄。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>管理雲端工作負載、雲端EDR/CWPP、Container、Serverless、Storage Malware Scan與雲端隔離。</td>
+<td>雲端安全報告。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>管理網路封鎖、DNS Sinkhole、Proxy封鎖、NDR、IDS/IPS與外連控制。</td>
+<td>網路封鎖與NDR紀錄。</td>
+</tr>
+<tr>
+<td>Email / Collaboration Owner</td>
+<td>管理Email防護、附件沙箱、URL重寫、釣魚防護、協作平台惡意檔案掃描。</td>
+<td>Email安全報告。</td>
+</tr>
+<tr>
+<td>DevSecOps / Application Security</td>
+<td>管理惡意套件、惡意容器、CI/CD Runner感染、Repo Secrets、供應鏈惡意元件。</td>
+<td>SCA/Container掃描報告。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>管理惡意模型、惡意Notebook、AI工具外掛、模型供應鏈與AI Agent濫用風險。</td>
+<td>AI安全審查紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商端點、遠端維運工具、SaaS與委外服務具備惡意軟體防護與事件通報。</td>
+<td>供應商證據、合約條款。</td>
+</tr>
+<tr>
+<td>All Users</td>
+<td>遵守安全使用規範，不開啟可疑附件、連結、巨集、外掛或未核准軟體，及時通報異常。</td>
+<td>教育訓練與通報紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查防護覆蓋、更新、告警、例外、事件、復原與控制有效性。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 惡意軟體防護控制架構</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>防護層級</th>
+<th>控制要求</th>
+<th>主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>使用者層</td>
+<td>釣魚、附件、巨集、外部媒體、AI工具、未核准軟體與可疑事件通報教育。</td>
+<td>訓練紀錄、模擬演練結果。</td>
+</tr>
+<tr>
+<td>端點層</td>
+<td>部署EDR/AV、行為偵測、裝置控制、應用程式控制、USB限制、惡意Script控制。</td>
+<td>EDR健康報告、政策設定。</td>
+</tr>
+<tr>
+<td>伺服器層</td>
+<td>伺服器EDR、防護策略、弱點修補、最小服務、特權控制、完整性監控。</td>
+<td>伺服器防護清冊。</td>
+</tr>
+<tr>
+<td>Email層</td>
+<td>防惡意附件、沙箱、URL重寫、DMARC/SPF/DKIM、釣魚偵測與隔離。</td>
+<td>Email安全報告。</td>
+</tr>
+<tr>
+<td>Web層</td>
+<td>SWG/Proxy、DNS安全、惡意URL封鎖、下載檔案掃描、分類控制。</td>
+<td>Proxy/DNS報告。</td>
+</tr>
+<tr>
+<td>網路層</td>
+<td>NDR、IDS/IPS、惡意C2連線偵測、DNS Sinkhole、Egress控制。</td>
+<td>NDR/SIEM告警。</td>
+</tr>
+<tr>
+<td>雲端工作負載層</td>
+<td>CWPP、CSPM、Cloud Storage Malware Scan、Container Scan、Serverless防護。</td>
+<td>雲端防護報告。</td>
+</tr>
+<tr>
+<td>開發與供應鏈層</td>
+<td>SCA、Container Image掃描、Artifact簽章、套件來源控管、CI/CD Runner隔離。</td>
+<td>掃描與簽章紀錄。</td>
+</tr>
+<tr>
+<td>資料與備份層</td>
+<td>不可變備份、勒索軟體偵測、資料外洩偵測、還原驗證。</td>
+<td>備份與DLP紀錄。</td>
+</tr>
+<tr>
+<td>AI/MLOps層</td>
+<td>模型檔案掃描、Notebook與套件控制、RAG資料保護、AI Agent工具限制。</td>
+<td>AI安全審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 防護部署與覆蓋要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類型</th>
+<th>最低防護要求</th>
+<th>例外條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>使用者端點</td>
+<td>必須部署EDR/AV、即時防護、行為偵測、惡意URL/檔案防護與集中管理。</td>
+<td>僅因相容性例外，需CISO核准與補償控制。</td>
+</tr>
+<tr>
+<td>伺服器</td>
+<td>必須部署伺服器防護或等效工作負載防護，啟用掃描、行為監控與告警。</td>
+<td>高效能或專用系統需風險評估。</td>
+</tr>
+<tr>
+<td>雲端主機</td>
+<td>需納入雲端EDR/CWPP、弱點管理、日誌與隔離能力。</td>
+<td>短期主機需以映像基準與雲端控制補償。</td>
+</tr>
+<tr>
+<td>容器映像</td>
+<td>需於Registry與CI/CD進行惡意軟體、弱點與Secrets掃描。</td>
+<td>禁止未掃描高風險映像進入正式環境。</td>
+</tr>
+<tr>
+<td>行動裝置</td>
+<td>受管理行動裝置需MDM/MTD或等效惡意應用與惡意URL防護。</td>
+<td>BYOD需隔離企業資料與條件式存取。</td>
+</tr>
+<tr>
+<td>檔案伺服器</td>
+<td>需啟用即時掃描、定期掃描、勒索行為偵測與異常大量修改告警。</td>
+<td>需避免掃描造成服務中斷並設測試窗口。</td>
+</tr>
+<tr>
+<td>Email與協作平台</td>
+<td>需附件掃描、沙箱、URL防護、惡意檔案隔離與釣魚回報機制。</td>
+<td>不得停用高風險附件檢查。</td>
+</tr>
+<tr>
+<td>SaaS與雲端儲存</td>
+<td>需CASB/雲端DLP/惡意檔案掃描與外部分享監控。</td>
+<td>例外需SaaS Owner與CISO核准。</td>
+</tr>
+<tr>
+<td>AI/MLOps環境</td>
+<td>Notebook、模型檔、資料集、套件、容器與外部模型來源需掃描與來源驗證。</td>
+<td>研究隔離環境需限制外連與資料存取。</td>
+</tr>
+<tr>
+<td>供應商維運設備</td>
+<td>供應商遠端維運設備需具惡意軟體防護與事件通報證明。</td>
+<td>不可證明者不得直接連入高風險環境。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 惡意軟體防護作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 資產識別</td>
+<td>識別需納入防護之端點、伺服器、雲端、SaaS、容器、AI/MLOps與供應商設備。</td>
+<td>Endpoint Security / Asset Owner</td>
+<td>防護覆蓋清冊。</td>
+</tr>
+<tr>
+<td>2. 風險分級</td>
+<td>依資料分類、暴露面、系統重要性、使用者角色、威脅情境與業務影響分級。</td>
+<td>CISO / Risk Owner</td>
+<td>風險分級紀錄。</td>
+</tr>
+<tr>
+<td>3. 防護策略設定</td>
+<td>設定EDR/AV、掃描、行為偵測、隔離、封鎖、排除、更新與告警策略。</td>
+<td>Malware Protection Owner</td>
+<td>防護政策設定。</td>
+</tr>
+<tr>
+<td>4. 部署與啟用</td>
+<td>透過MDM、GPO、EDR平台、雲端Agent或映像基準部署防護。</td>
+<td>IT Operations / Endpoint Security</td>
+<td>部署紀錄。</td>
+</tr>
+<tr>
+<td>5. 健康監控</td>
+<td>監控Agent離線、功能停用、特徵碼過期、隔離失敗與政策不符。</td>
+<td>SOC / Endpoint Security</td>
+<td>健康報告。</td>
+</tr>
+<tr>
+<td>6. 掃描與偵測</td>
+<td>執行即時掃描、定期掃描、行為偵測、IOC搜尋與威脅獵捕。</td>
+<td>SOC / EDR Owner</td>
+<td>掃描與偵測紀錄。</td>
+</tr>
+<tr>
+<td>7. 告警分級</td>
+<td>依感染範圍、資料影響、惡意類型、端點重要性與攻擊階段分級。</td>
+<td>SOC</td>
+<td>告警分級紀錄。</td>
+</tr>
+<tr>
+<td>8. 隔離與處置</td>
+<td>隔離端點、檔案、帳號或網路連線，清除惡意程式與持久化機制。</td>
+<td>Incident Response / IT</td>
+<td>隔離與處置紀錄。</td>
+</tr>
+<tr>
+<td>9. 復原與驗證</td>
+<td>確認系統乾淨、修補弱點、重設憑證、復原資料與加強監控。</td>
+<td>IT / Security / Data Owner</td>
+<td>復原驗證紀錄。</td>
+</tr>
+<tr>
+<td>10. 檢討改善</td>
+<td>分析根因、更新規則、教育、修補、白名單、網路封鎖與風險登錄。</td>
+<td>IR Owner / ISMS代表</td>
+<td>事件檢討與CAPA。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 掃描與偵測要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>掃描 / 偵測類型</th>
+<th>最低要求</th>
+<th>頻率 / 觸發</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>即時防護</td>
+<td>檔案建立、執行、下載、Email附件、外接媒體與Script執行時即時檢查。</td>
+<td>持續啟用。</td>
+</tr>
+<tr>
+<td>定期全機掃描</td>
+<td>端點與伺服器定期執行完整掃描或等效風險掃描。</td>
+<td>至少每月或依風險。</td>
+</tr>
+<tr>
+<td>快速掃描</td>
+<td>針對高風險區域、啟動項、記憶體、系統目錄與使用者下載資料夾掃描。</td>
+<td>至少每週或依平台能力。</td>
+</tr>
+<tr>
+<td>外接媒體掃描</td>
+<td>USB、外接硬碟、光碟、記憶卡接入時掃描。</td>
+<td>每次接入。</td>
+</tr>
+<tr>
+<td>Email附件沙箱</td>
+<td>高風險附件、壓縮檔、Office文件、可執行檔與未知檔案需沙箱分析。</td>
+<td>每次接收或政策觸發。</td>
+</tr>
+<tr>
+<td>Web下載掃描</td>
+<td>瀏覽器下載、Proxy下載與雲端檔案下載需檢查。</td>
+<td>每次下載或政策觸發。</td>
+</tr>
+<tr>
+<td>IOC搜尋</td>
+<td>針對威脅情報、事件或供應商通報之IOC進行企業範圍搜尋。</td>
+<td>威脅情報更新或事件觸發。</td>
+</tr>
+<tr>
+<td>行為偵測</td>
+<td>偵測勒索加密、大量檔案修改、憑證傾倒、橫向移動、持久化與EDR停用。</td>
+<td>持續啟用。</td>
+</tr>
+<tr>
+<td>雲端儲存掃描</td>
+<td>對上傳至Bucket、檔案共享、Artifact或資料交換區之檔案掃描。</td>
+<td>上傳時或定期。</td>
+</tr>
+<tr>
+<td>Container/Image掃描</td>
+<td>掃描映像、Layer、套件、惡意檔案、Secrets與弱點。</td>
+<td>Build、Push、Deploy前。</td>
+</tr>
+<tr>
+<td>AI/MLOps掃描</td>
+<td>掃描模型檔、Notebook、資料集、外部套件、容器與工具。</td>
+<td>匯入、訓練、部署前。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 告警分級與處置SLA</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>判定條件</th>
+<th>初步處置</th>
+<th>處理時限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>勒索軟體、資料竊取、特權帳號感染、EDR大範圍停用、多端點感染、C2連線、橫向移動、Domain Controller/關鍵伺服器感染。</td>
+<td>立即隔離、啟動事件回應、通知CISO與管理層，保存證據。</td>
+<td>立即至4小時內初判與控制。</td>
+</tr>
+<tr>
+<td>High</td>
+<td>確認惡意軟體感染、惡意PowerShell/Script、木馬、後門、惡意套件、伺服器感染或高敏感端點感染。</td>
+<td>隔離設備或檔案，執行取證與清除。</td>
+<td>1個工作日內初判。</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>可疑檔案、PUA/PUP、單一端點低影響感染、未知檔案或使用者誤點但未執行。</td>
+<td>隔離檔案，通知使用者與IT處理。</td>
+<td>3個工作日內初判。</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>已阻擋之低風險威脅、廣告軟體、可解釋測試活動或誤判疑似。</td>
+<td>記錄、調校規則或教育提醒。</td>
+<td>依SOC流程處理。</td>
+</tr>
+<tr>
+<td>False Positive</td>
+<td>經確認為合法軟體、測試工具或業務行為。</td>
+<td>依例外流程調整規則或白名單。</td>
+<td>納入定期調校。</td>
+</tr>
+<tr>
+<td>Policy Violation</td>
+<td>使用者安裝未核准工具、破解軟體、惡意外掛或規避防護。</td>
+<td>依違規程序與事件風險處理。</td>
+<td>依嚴重性處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 隔離、清除與復原要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處置項目</th>
+<th>作業要求</th>
+<th>驗證要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>端點隔離</td>
+<td>EDR或網路層隔離受感染端點，保留管理連線與取證能力。</td>
+<td>確認無C2、外連與橫向移動。</td>
+</tr>
+<tr>
+<td>檔案隔離</td>
+<td>隔離惡意或可疑檔案，避免刪除前破壞證據。</td>
+<td>保存Hash、路徑、時間與偵測名稱。</td>
+</tr>
+<tr>
+<td>帳號控制</td>
+<td>停用或重設受影響帳號、Token、API Key、Session與憑證。</td>
+<td>確認無異常登入與持久化。</td>
+</tr>
+<tr>
+<td>網路封鎖</td>
+<td>封鎖惡意Domain、IP、URL、Hash、DNS與C2流量。</td>
+<td>確認封鎖命中與無繞過。</td>
+</tr>
+<tr>
+<td>清除惡意程式</td>
+<td>移除檔案、服務、排程、Registry、啟動項、後門與持久化。</td>
+<td>EDR重新掃描與人工確認。</td>
+</tr>
+<tr>
+<td>系統修補</td>
+<td>修補被利用弱點，移除不必要服務與高風險設定。</td>
+<td>弱點掃描與組態檢查通過。</td>
+</tr>
+<tr>
+<td>資料復原</td>
+<td>由乾淨且驗證之備份復原必要資料，避免復原惡意檔案。</td>
+<td>備份掃描與還原驗證。</td>
+</tr>
+<tr>
+<td>重建系統</td>
+<td>高風險感染或Rootkit/勒索感染應優先重建。</td>
+<td>使用可信映像、IaC或黃金映像。</td>
+</tr>
+<tr>
+<td>解除隔離</td>
+<td>需確認清除、修補、憑證輪替、監控正常與Owner驗收。</td>
+<td>解除隔離核准與紀錄。</td>
+</tr>
+<tr>
+<td>強化監控</td>
+<td>復原後進入強化監控期，觀察再感染或異常外連。</td>
+<td>監控期紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 勒索軟體專項防護與應變要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>預防要求</th>
+<th>事件中要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>不可變備份</td>
+<td>關鍵資料需具不可變、離線或邏輯隔離備份，並定期還原測試。</td>
+<td>禁止立即覆蓋備份；確認最後乾淨備份點。</td>
+</tr>
+<tr>
+<td>權限最小化</td>
+<td>限制共享資料夾寫入權、管理員權限、服務帳號與橫向移動。</td>
+<td>暫停可疑帳號與高風險共享權限。</td>
+</tr>
+<tr>
+<td>行為偵測</td>
+<td>偵測大量加密、快速改名、影子複製刪除、備份刪除與安全服務停用。</td>
+<td>立即隔離相關端點、伺服器與帳號。</td>
+</tr>
+<tr>
+<td>網路區隔</td>
+<td>關鍵系統、備份網路、管理網路與使用者網路應分離。</td>
+<td>依情況封鎖東西向流量與高風險連線。</td>
+</tr>
+<tr>
+<td>憑證保護</td>
+<td>強化MFA、PAM、LSASS保護、Credential Guard或等效控制。</td>
+<td>輪替受影響帳號與Secrets。</td>
+</tr>
+<tr>
+<td>資料外洩評估</td>
+<td>勒索事件需評估是否有資料竊取與DLP/外連證據。</td>
+<td>通知DPO、Legal與管理層。</td>
+</tr>
+<tr>
+<td>復原決策</td>
+<td>復原前需確認攻擊入口、持久化與乾淨復原點。</td>
+<td>不得在未清除攻擊者存取前貿然復原。</td>
+</tr>
+<tr>
+<td>通報與溝通</td>
+<td>依法規、合約、保險、客戶與管理要求通報。</td>
+<td>由Incident Manager統一對外溝通。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 惡意樣本與證據管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>管理要求</th>
+<th>保存要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意樣本收集</td>
+<td>僅由授權SOC/Forensics人員收集，使用隔離工具與安全容器。</td>
+<td>記錄來源、時間、Hash、操作者與保管鏈。</td>
+</tr>
+<tr>
+<td>樣本保存</td>
+<td>惡意樣本需加密、加密壓縮或置於隔離分析平台。</td>
+<td>限制存取，標示高機密。</td>
+</tr>
+<tr>
+<td>樣本傳輸</td>
+<td>傳輸樣本至供應商或沙箱前需核准並移除不必要敏感資料。</td>
+<td>保存傳輸與提交紀錄。</td>
+</tr>
+<tr>
+<td>Hash與IOC</td>
+<td>所有惡意樣本需計算Hash並提取IOC/IOA。</td>
+<td>納入威脅情報與封鎖規則。</td>
+</tr>
+<tr>
+<td>記憶體/磁碟證據</td>
+<td>重大事件需視情況保存記憶體、磁碟映像、日誌與封包。</td>
+<td>依數位證據保存作業指導書處理。</td>
+</tr>
+<tr>
+<td>使用者資料</td>
+<td>樣本或證據若含PII、客戶資料或Secrets，需限制展示與DPO審查。</td>
+<td>採最小必要原則。</td>
+</tr>
+<tr>
+<td>分析環境</td>
+<td>惡意樣本分析需於隔離沙箱或專用環境執行。</td>
+<td>不得於一般辦公端點執行。</td>
+</tr>
+<tr>
+<td>銷毀與退場</td>
+<td>樣本保存期限屆滿或目的消失時，依資料清除程序銷毀。</td>
+<td>保留銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 威脅情報與偵測規則管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>威脅情報來源</td>
+<td>應定義可信來源，包括EDR供應商、ISAC、政府通報、商業情報、社群與內部事件。</td>
+<td>威脅情報來源清冊。</td>
+</tr>
+<tr>
+<td>IOC導入</td>
+<td>導入前評估可信度、影響範圍、誤判風險與有效期間。</td>
+<td>IOC導入紀錄。</td>
+</tr>
+<tr>
+<td>偵測規則</td>
+<td>Sigma、YARA、EDR規則、SIEM規則與NDR規則需版本控管與測試。</td>
+<td>規則清冊與測試紀錄。</td>
+</tr>
+<tr>
+<td>封鎖規則</td>
+<td>高信心惡意Hash、Domain、IP、URL可快速封鎖並事後補核。</td>
+<td>封鎖紀錄。</td>
+</tr>
+<tr>
+<td>Threat Hunting</td>
+<td>針對高風險TTP、勒索活動、供應鏈事件或外部通報執行威脅獵捕。</td>
+<td>Hunting紀錄。</td>
+</tr>
+<tr>
+<td>誤判調校</td>
+<td>誤判需分析原因、調整條件、設定例外與保存核准。</td>
+<td>調校紀錄。</td>
+</tr>
+<tr>
+<td>情報回饋</td>
+<td>內部事件產生之IOC/IOA應回饋至EDR、SIEM、Email、DNS與Proxy。</td>
+<td>跨工具封鎖紀錄。</td>
+</tr>
+<tr>
+<td>有效期審查</td>
+<td>IOC與封鎖規則需定期審查是否仍有效。</td>
+<td>規則審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. Email、Web與外接媒體防護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>通道</th>
+<th>防護要求</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Email附件</td>
+<td>對Office、PDF、壓縮檔、可執行檔、Script與未知檔案進行掃描與沙箱分析。</td>
+<td>惡意附件隔離並通知SOC。</td>
+</tr>
+<tr>
+<td>Email URL</td>
+<td>URL重寫、點擊時掃描、惡意網站封鎖與釣魚偵測。</td>
+<td>惡意URL阻擋並追蹤點擊者。</td>
+</tr>
+<tr>
+<td>巨集與Script</td>
+<td>未簽章或來自Internet之巨集與Script原則禁止或限制。</td>
+<td>需例外核准與監控。</td>
+</tr>
+<tr>
+<td>Web下載</td>
+<td>下載檔案需由Proxy/SWG/EDR掃描，未知高風險檔案沙箱。</td>
+<td>惡意下載阻擋。</td>
+</tr>
+<tr>
+<td>雲端檔案分享</td>
+<td>SaaS與協作平台上傳/下載需掃描惡意檔案。</td>
+<td>隔離惡意檔案並通知Owner。</td>
+</tr>
+<tr>
+<td>USB與外接媒體</td>
+<td>限制未核准外接媒體，接入時掃描並禁止自動執行。</td>
+<td>感染時隔離媒體與端點。</td>
+</tr>
+<tr>
+<td>壓縮與加密檔</td>
+<td>高風險加密壓縮檔需沙箱或人工審查。</td>
+<td>不可掃描者依風險隔離或拒收。</td>
+</tr>
+<tr>
+<td>瀏覽器外掛</td>
+<td>未核准外掛可能含惡意行為，需白名單與權限審查。</td>
+<td>移除高風險外掛。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 雲端、容器、DevSecOps與供應鏈防護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>防護要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端工作負載</td>
+<td>啟用CWPP/EDR、惡意行為偵測、基準檢查、弱點修補與隔離能力。</td>
+<td>Cloud Workload報告。</td>
+</tr>
+<tr>
+<td>雲端儲存</td>
+<td>對Bucket、Object、資料交換區與上傳檔案進行惡意檔案掃描。</td>
+<td>Cloud Storage Scan紀錄。</td>
+</tr>
+<tr>
+<td>Container Image</td>
+<td>Build/Push/Deploy前掃描惡意檔案、弱點、Secrets與高風險套件。</td>
+<td>Image掃描報告。</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td>節點、Pod、Runtime、Admission Controller與Registry需惡意行為偵測。</td>
+<td>K8s安全事件紀錄。</td>
+</tr>
+<tr>
+<td>CI/CD Runner</td>
+<td>Runner需隔離、最小權限、EDR或等效監控，防止供應鏈植入。</td>
+<td>Runner安全檢查。</td>
+</tr>
+<tr>
+<td>套件管理</td>
+<td>使用核准Registry與套件來源，防止Typosquatting、Dependency Confusion與惡意套件。</td>
+<td>SCA與套件審查。</td>
+</tr>
+<tr>
+<td>Artifact Repository</td>
+<td>Artifact需簽章、掃描與來源驗證。</td>
+<td>Artifact簽章與掃描紀錄。</td>
+</tr>
+<tr>
+<td>第三方軟體</td>
+<td>供應商軟體、更新檔與工具需來源驗證、簽章與惡意掃描。</td>
+<td>供應商軟體審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. AI、MLOps與模型檔案惡意風險防護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險場景</th>
+<th>防護要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>外部模型檔案</td>
+<td>下載模型、權重、Tokenizer、Adapter前需驗證來源、授權、Hash與惡意檔案風險。</td>
+<td>模型來源審查紀錄。</td>
+</tr>
+<tr>
+<td>Pickle/可執行模型格式</td>
+<td>高風險序列化格式需隔離載入或轉換，避免任意程式碼執行。</td>
+<td>模型安全測試。</td>
+</tr>
+<tr>
+<td>Notebook與實驗環境</td>
+<td>Notebook不得執行未知來源程式碼，需掃描套件、Secrets與惡意Script。</td>
+<td>Notebook掃描紀錄。</td>
+</tr>
+<tr>
+<td>資料集與壓縮檔</td>
+<td>AI資料集可能含惡意檔案、Script或資料投毒，需掃描與來源驗證。</td>
+<td>資料集審查。</td>
+</tr>
+<tr>
+<td>AI Agent工具</td>
+<td>Agent不得任意下載、執行、安裝或外連未核准工具。</td>
+<td>Agent工具白名單與日誌。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>文件匯入前需惡意檔案掃描，避免含惡意Macro、Script或連結。</td>
+<td>RAG匯入掃描。</td>
+</tr>
+<tr>
+<td>MLOps Pipeline</td>
+<td>模型訓練、評估與部署Pipeline需使用受信任映像與套件。</td>
+<td>Pipeline安全紀錄。</td>
+</tr>
+<tr>
+<td>外部AI供應商</td>
+<td>確認供應商平台具備惡意檔案掃描、資料隔離、事件通報與刪除能力。</td>
+<td>供應商評估。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EDR/AV無法部署</td>
+<td>需說明技術限制、補償控制、網路隔離、掃描替代、監控與改善計畫。</td>
+<td>CISO / Endpoint Security Owner</td>
+<td>Critical/High最長30至60日。</td>
+</tr>
+<tr>
+<td>即時防護需暫停</td>
+<td>需變更單、時間窗口、替代監控、回復時間與事後掃描。</td>
+<td>CISO / IT Operations</td>
+<td>單次或最短期限。</td>
+</tr>
+<tr>
+<td>掃描排除</td>
+<td>需指定路徑、程序、Hash、業務理由、風險評估與期限。</td>
+<td>Malware Protection Owner / CISO視風險</td>
+<td>至少每季重評。</td>
+</tr>
+<tr>
+<td>隔離解除</td>
+<td>需確認誤判或清除完成，保留證據與核准。</td>
+<td>SOC / Endpoint Security</td>
+<td>單次核准。</td>
+</tr>
+<tr>
+<td>惡意樣本分析例外</td>
+<td>需使用隔離環境、授權人員、保管鏈與安全傳輸。</td>
+<td>SOC / Forensics Owner</td>
+<td>案件期限。</td>
+</tr>
+<tr>
+<td>高風險工具被偵測</td>
+<td>需依特殊工具程式管理流程核准、白名單與監控。</td>
+<td>CISO / Tool Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>AI模型或資料集無法掃描</td>
+<td>需來源驗證、隔離測試、限制部署與風險接受。</td>
+<td>AI Governance / CISO</td>
+<td>重大模型上線前重評。</td>
+</tr>
+<tr>
+<td>供應商防護不足</td>
+<td>需合約改善、限制連線、替代控制或風險接受。</td>
+<td>Supplier Owner / CISO</td>
+<td>續約前重評。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 惡意軟體告警處理紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件編號</th>
+<th>發現時間</th>
+<th>資產 / 使用者</th>
+<th>偵測來源</th>
+<th>惡意類型</th>
+<th>處置動作</th>
+<th>事件等級</th>
+<th>調查結論</th>
+<th>復原狀態</th>
+<th>結案狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MAL-INC-001</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ EDR □ AV □ Email □ Proxy □ NDR □ SIEM □ Cloud □ User Report</td>
+<td>□ Malware □ Ransomware □ Trojan □ PUA □ Script □ C2 □ Supply Chain □ AI/MLOps</td>
+<td>□ 阻擋 □ 隔離 □ 清除 □ 重建 □ 封鎖 □ 誤判</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td>□ 未復原 □ 已清除 □ 已重建 □ 監控中</td>
+<td>□ 未結案 □ 已結案 □ 升級事件</td>
+</tr>
+<tr>
+<td>MAL-INC-002</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ EDR □ AV □ Email □ Proxy □ NDR □ SIEM □ Cloud □ User Report</td>
+<td>□ Malware □ Ransomware □ Trojan □ PUA □ Script □ C2 □ Supply Chain □ AI/MLOps</td>
+<td>□ 阻擋 □ 隔離 □ 清除 □ 重建 □ 封鎖 □ 誤判</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td>□ 未復原 □ 已清除 □ 已重建 □ 監控中</td>
+<td>□ 未結案 □ 已結案 □ 升級事件</td>
+</tr>
+<tr>
+<td>MAL-INC-003</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ EDR □ AV □ Email □ Proxy □ NDR □ SIEM □ Cloud □ User Report</td>
+<td>□ Malware □ Ransomware □ Trojan □ PUA □ Script □ C2 □ Supply Chain □ AI/MLOps</td>
+<td>□ 阻擋 □ 隔離 □ 清除 □ 重建 □ 封鎖 □ 誤判</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td>□ 未復原 □ 已清除 □ 已重建 □ 監控中</td>
+<td>□ 未結案 □ 已結案 □ 升級事件</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 惡意軟體防護檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>覆蓋率</td>
+<td>所有受管理端點、伺服器、雲端工作負載是否部署EDR/AV或等效控制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>健康狀態</td>
+<td>Agent是否在線、即時防護啟用、特徵/模型更新且政策合規？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>掃描策略</td>
+<td>是否設定即時掃描、定期掃描、外接媒體與下載掃描？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Email防護</td>
+<td>附件沙箱、URL防護、惡意附件隔離與釣魚回報是否有效？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Web防護</td>
+<td>惡意URL、下載檔案、C2、Proxy與DNS安全是否啟用？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>勒索防護</td>
+<td>是否具勒索行為偵測、不可變備份、隔離與復原流程？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應鏈防護</td>
+<td>套件、容器、Artifact、第三方軟體是否掃描與來源驗證？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI/MLOps防護</td>
+<td>模型、Notebook、RAG資料、AI Agent工具是否納入惡意風險檢查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>告警處理</td>
+<td>惡意軟體告警是否分級、調查、隔離、清除與結案？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>排除、白名單、防護停用是否具核准、期限與重評？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>復原驗證</td>
+<td>清除後是否修補根因、輪替憑證、重新掃描並強化監控？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>20. 教育訓練與使用者通報</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>對象</th>
+<th>教育重點</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般使用者</td>
+<td>釣魚、附件、連結、巨集、外接媒體、未核准軟體、可疑行為通報。</td>
+<td>到職與每年。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>高風險職務</td>
+<td>財務、人資、客服、IT、管理階層與特權使用者之針對性攻擊防護。</td>
+<td>每年或角色變更。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>IT與Helpdesk</td>
+<td>惡意軟體初步處理、端點隔離、工單升級、使用者溝通與證據保存。</td>
+<td>每年或流程變更。</td>
+<td>演練紀錄。</td>
+</tr>
+<tr>
+<td>SOC與IR</td>
+<td>EDR/XDR調查、威脅獵捕、勒索應變、樣本管理、取證與復原驗證。</td>
+<td>每年或工具變更。</td>
+<td>演練紀錄。</td>
+</tr>
+<tr>
+<td>開發與DevSecOps</td>
+<td>惡意套件、Dependency Confusion、容器掃描、Secrets與CI/CD感染風險。</td>
+<td>每年或專案啟動。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>AI/MLOps人員</td>
+<td>惡意模型、Notebook安全、資料集掃描、AI Agent工具限制與外部模型風險。</td>
+<td>每年或平台導入。</td>
+<td>AI安全訓練紀錄。</td>
+</tr>
+<tr>
+<td>供應商與承包商</td>
+<td>遠端維運設備防護、惡意軟體通報、工具限制與資料保護要求。</td>
+<td>專案開始前。</td>
+<td>簽署與教育紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>防護覆蓋清冊</td>
+<td>端點、伺服器、雲端、容器、SaaS與AI/MLOps防護狀態。</td>
+<td>Endpoint Security / Malware Owner</td>
+<td>至少3年或資產有效期間。</td>
+</tr>
+<tr>
+<td>EDR/AV健康報告</td>
+<td>Agent狀態、版本、政策、特徵碼、停用、例外與不合規資產。</td>
+<td>Endpoint Security Owner</td>
+<td>至少1至3年。</td>
+</tr>
+<tr>
+<td>惡意軟體告警紀錄</td>
+<td>偵測來源、資產、惡意類型、IOC、處置、分級、結案與證據。</td>
+<td>SOC</td>
+<td>至少3年，重大事件依事件保存期限。</td>
+</tr>
+<tr>
+<td>事件與取證紀錄</td>
+<td>隔離、取證、樣本、時間線、根因、復原、通報與CAPA。</td>
+<td>Incident Response / Forensics</td>
+<td>至少3至7年依事件等級。</td>
+</tr>
+<tr>
+<td>掃描與威脅獵捕紀錄</td>
+<td>定期掃描、IOC搜尋、威脅獵捕、誤判調校與結果。</td>
+<td>SOC / Malware Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與排除紀錄</td>
+<td>防護停用、掃描排除、白名單、隔離解除與風險接受。</td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>樣本與IOC紀錄</td>
+<td>惡意樣本Hash、來源、保管鏈、分析、提交與銷毀紀錄。</td>
+<td>Forensics / SOC</td>
+<td>依事件等級與資料分類。</td>
+</tr>
+<tr>
+<td>供應商防護證據</td>
+<td>供應商端點防護、SaaS安全、惡意軟體事件通報與刪除證明。</td>
+<td>Supplier Management</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>教育訓練紀錄</td>
+<td>使用者、IT、SOC、開發、AI與供應商教育訓練證據。</td>
+<td>HR / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EDR/AV覆蓋率</td>
+<td>已部署防護之受管資產 / 應部署資產。</td>
+<td>Critical/High目標100%。</td>
+<td>控制覆蓋。</td>
+</tr>
+<tr>
+<td>Agent健康合規率</td>
+<td>Agent在線且政策、版本、即時防護合規之比例。</td>
+<td>目標95%至100%，高風險資產100%。</td>
+<td>防護有效性。</td>
+</tr>
+<tr>
+<td>Critical/High惡意事件數</td>
+<td>重大或高風險惡意軟體事件數。</td>
+<td>目標0或需管理審查。</td>
+<td>重大風險。</td>
+</tr>
+<tr>
+<td>平均隔離時間</td>
+<td>從告警到隔離受影響資產之平均時間。</td>
+<td>依SLA持續改善。</td>
+<td>回應效率。</td>
+</tr>
+<tr>
+<td>平均清除/復原時間</td>
+<td>從確認感染到完成清除、重建或復原之平均時間。</td>
+<td>依SLA持續改善。</td>
+<td>復原能力。</td>
+</tr>
+<tr>
+<td>勒索行為偵測事件數</td>
+<td>勒索相關告警、阻擋或確認事件數。</td>
+<td>任何有效事件需管理審查。</td>
+<td>勒索風險。</td>
+</tr>
+<tr>
+<td>掃描排除逾期數</td>
+<td>超過期限未重評之排除或白名單數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>惡意Email點擊率</td>
+<td>釣魚模擬或真實惡意郵件點擊比例。</td>
+<td>持續下降。</td>
+<td>教育成效。</td>
+</tr>
+<tr>
+<td>供應鏈惡意元件事件數</td>
+<td>惡意套件、容器、模型或第三方工具命中事件數。</td>
+<td>目標0，有效事件需CAPA。</td>
+<td>供應鏈風險。</td>
+</tr>
+<tr>
+<td>AI/MLOps惡意風險事件數</td>
+<td>惡意模型、Notebook、資料集或Agent工具濫用事件數。</td>
+<td>目標0。</td>
+<td>AI治理。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>防護覆蓋</td>
+<td>端點、伺服器、雲端、容器、SaaS與AI/MLOps是否納入防護。</td>
+<td>防護覆蓋清冊、EDR報告。</td>
+</tr>
+<tr>
+<td>健康監控</td>
+<td>Agent離線、停用、過期、不合規是否被監控與追蹤修復。</td>
+<td>健康報告與工單。</td>
+</tr>
+<tr>
+<td>偵測與掃描</td>
+<td>即時掃描、定期掃描、外接媒體、Email/Web與雲端掃描是否有效。</td>
+<td>掃描紀錄。</td>
+</tr>
+<tr>
+<td>告警處理</td>
+<td>惡意軟體告警是否分級、調查、隔離、清除、復原與結案。</td>
+<td>告警與事件紀錄。</td>
+</tr>
+<tr>
+<td>勒索防護</td>
+<td>是否具勒索行為偵測、不可變備份、隔離、復原與演練。</td>
+<td>備份測試與演練紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>防護停用、掃描排除、白名單是否具核准、期限與重評。</td>
+<td>例外清冊。</td>
+</tr>
+<tr>
+<td>樣本管理</td>
+<td>惡意樣本、IOC、取證證據是否安全保存並具保管鏈。</td>
+<td>樣本紀錄、取證報告。</td>
+</tr>
+<tr>
+<td>供應鏈防護</td>
+<td>第三方軟體、套件、容器、Artifact與模型是否掃描與來源驗證。</td>
+<td>SCA/Container/AI掃描報告。</td>
+</tr>
+<tr>
+<td>供應商防護</td>
+<td>供應商是否具惡意軟體防護、事件通報與遠端維運控制。</td>
+<td>供應商評估與合約。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大事件、例外、趨勢與CAPA是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 附錄A：惡意軟體事件初步處理Runbook</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>處理內容</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 接收告警</td>
+<td>確認告警來源、資產、使用者、時間、偵測名稱、Hash與處置狀態。</td>
+<td>SOC</td>
+<td>告警截圖與日誌。</td>
+</tr>
+<tr>
+<td>2. 初步分級</td>
+<td>依惡意類型、資產重要性、感染範圍、資料影響與攻擊階段分級。</td>
+<td>SOC / IR</td>
+<td>分級紀錄。</td>
+</tr>
+<tr>
+<td>3. 隔離控制</td>
+<td>對確認或高信心感染資產執行端點或網路隔離。</td>
+<td>IR / Endpoint Security</td>
+<td>隔離紀錄。</td>
+</tr>
+<tr>
+<td>4. 證據保存</td>
+<td>保存檔案Hash、路徑、程序、網路連線、使用者、記憶體或磁碟證據。</td>
+<td>Forensics</td>
+<td>保管鏈。</td>
+</tr>
+<tr>
+<td>5. 範圍分析</td>
+<td>搜尋IOC、相同Hash、相同使用者、相同郵件、C2或橫向移動跡象。</td>
+<td>SOC</td>
+<td>IOC搜尋紀錄。</td>
+</tr>
+<tr>
+<td>6. 清除或重建</td>
+<td>移除惡意程式、修補入口、輪替憑證，必要時重建系統。</td>
+<td>IT / Security</td>
+<td>修復紀錄。</td>
+</tr>
+<tr>
+<td>7. 復原驗證</td>
+<td>重新掃描、確認無C2、無持久化、無弱點與業務功能正常。</td>
+<td>IT / SOC</td>
+<td>驗證報告。</td>
+</tr>
+<tr>
+<td>8. 通報與檢討</td>
+<td>依事件等級通報並完成根因分析與CAPA。</td>
+<td>IR / CISO</td>
+<td>事件檢討報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>25. 附錄B：惡意軟體防護例外申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>例外單號</td>
+<td>MAL-EXC-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資產 / 系統 / 軟體</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>例外類型</td>
+<td>□ 防護停用 □ 掃描排除 □ 白名單 □ 隔離解除 □ 未部署防護 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>業務理由</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>風險等級</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>□ 網路隔離 □ 手動掃描 □ 日誌監控 □ 應用程式控制 □ 弱點修補 □ 限制權限 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>例外範圍</td>
+<td>使用者、設備、路徑、Hash、程序、時間窗口或系統範圍</td>
+<td></td>
+</tr>
+<tr>
+<td>例外期間</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>回復計畫</td>
+<td>例外到期後如何恢復標準防護</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>System Owner / Endpoint Security / SOC / CISO / Risk Owner</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

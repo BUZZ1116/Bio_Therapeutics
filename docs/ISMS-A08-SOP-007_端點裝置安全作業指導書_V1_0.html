@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-007 端點裝置安全作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-007 端點裝置安全作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-007</td>
+<td>端點裝置安全作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-007</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Endpoint Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Helpdesk Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC負責人 / Security Architect</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與資料保護審查</td>
+<td></td>
+<td>DPO / Data Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>遠端工作審查</td>
+<td></td>
+<td>HR / Remote Work Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與SaaS審查</td>
+<td></td>
+<td>Cloud Security Owner / SaaS Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商存取審查</td>
+<td></td>
+<td>Supplier Management（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範端點裝置於取得、登錄、配置、交付、使用、遠端工作、維護、監控、修補、資料保護、事件處理、遺失通報、退還、抹除與報廢之安全要求，確保端點裝置能有效保護組織資訊資產、客戶資料、PII、機密資料、AI服務憑證、雲端存取權限與業務系統存取，降低惡意軟體、未授權存取、資料外洩、端點淪陷、橫向移動、憑證竊取與供應鏈風險。</p>
+<p>本文件同時支援遠端工作、安全開發、AI工具使用、MLOps、供應商維運與事件應變需求，要求所有端點裝置具備可識別、可控管、可監控、可修補、可加密、可撤銷及可稽核之安全管理能力。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有連接組織網路、系統、雲端、SaaS或資料之端點裝置，應於使用前完成資產登錄、安全組態、使用者指派與管理工具納管。</li>
+<li>端點裝置應依用途、資料分類、使用者角色、遠端工作情境與風險等級設定適當控制，不得以便利性取代必要安全控制。</li>
+<li>正式端點應啟用全碟加密、EDR/防惡意程式、修補管理、防火牆、螢幕鎖定、強驗證、遠端抹除或等效控制。</li>
+<li>未納管、不合規、疑似淪陷、遺失、遭竊或超過修補期限之端點，應限制或阻斷其存取組織資源。</li>
+<li>端點不得保存不必要之PII、客戶資料、高機密資料、Secrets、AI API Key、模型權重或GHG/ESG底稿；必要保存時應加密、最小化、備份與限制存取。</li>
+<li>BYOD、供應商端點或外部裝置不得直接存取高風險系統或機密資料，除非完成核准、風險評估與技術隔離控制。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>端點裝置</td>
+<td>使用者或系統用於存取組織資源之裝置，包括筆電、桌機、工作站、行動裝置、平板、VDI、Thin Client、共享設備與供應商維運端點。</td>
+</tr>
+<tr>
+<td>受管端點</td>
+<td>已納入組織MDM/UEM/EDR/資產管理/修補管理或等效工具，並符合基準組態與監控要求之端點。</td>
+</tr>
+<tr>
+<td>未受管端點</td>
+<td>未納入組織管理工具，或無法確認安全狀態、Owner、組態、修補、加密與監控狀態之端點。</td>
+</tr>
+<tr>
+<td>EDR</td>
+<td>Endpoint Detection and Response，用於偵測、阻擋、調查與回應端點威脅之安全工具。</td>
+</tr>
+<tr>
+<td>MDM/UEM</td>
+<td>Mobile Device Management / Unified Endpoint Management，用於管理端點設定、合規、加密、App、憑證、遠端鎖定與抹除之工具。</td>
+</tr>
+<tr>
+<td>全碟加密</td>
+<td>對端點儲存媒體進行完整加密，避免裝置遺失或遭竊時資料外洩。</td>
+</tr>
+<tr>
+<td>裝置合規性</td>
+<td>端點符合組織設定之安全基準，包括加密、EDR、修補、螢幕鎖、OS版本、防火牆、未Root/Jailbreak等條件。</td>
+</tr>
+<tr>
+<td>BYOD</td>
+<td>Bring Your Own Device，個人自有裝置用於存取組織資源之情境。</td>
+</tr>
+<tr>
+<td>CYOD</td>
+<td>Choose Your Own Device，使用者在組織核准清單內選擇之企業裝置或受控裝置。</td>
+</tr>
+<tr>
+<td>遠端抹除</td>
+<td>端點遺失、遭竊、退場或離職時，由管理平台移除企業資料或清除整機資料之措施。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准端點安全策略、重大例外、端點事件處置與高風險端點存取限制。</td>
+<td>政策核准、例外核准、事件決策。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>維護端點安全基準、EDR/MDM/UEM控制、合規規則、偵測規則與端點風險監控。</td>
+<td>端點安全基準、合規報告、EDR報告。</td>
+</tr>
+<tr>
+<td>IT Operations / Helpdesk</td>
+<td>執行端點採購、配置、交付、支援、修補、故障處理、退還、抹除與資產更新。</td>
+<td>資產紀錄、交付紀錄、抹除紀錄。</td>
+</tr>
+<tr>
+<td>Asset Management Owner</td>
+<td>維護端點資產清冊、Owner、使用者、狀態、位置、序號、生命週期與退場紀錄。</td>
+<td>資訊及相關資產清冊、盤點報告。</td>
+</tr>
+<tr>
+<td>IAM Owner</td>
+<td>管理端點登入、SSO、MFA、裝置憑證、條件式存取、特權帳號與離職撤權。</td>
+<td>IAM設定、條件式存取紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控端點告警、惡意軟體、資料外洩、異常登入、憑證竊取與橫向移動跡象。</td>
+<td>SIEM告警、事件工單。</td>
+</tr>
+<tr>
+<td>Application / System Owner</td>
+<td>確認其系統對端點合規性、瀏覽器、憑證、VPN、設備信任與資料保護要求。</td>
+<td>存取條件、應用端控制。</td>
+</tr>
+<tr>
+<td>Data Owner / DPO</td>
+<td>確認端點可處理之資料分類、PII、客戶資料、保存期限、加密與外洩通報要求。</td>
+<td>資料分類、隱私審查。</td>
+</tr>
+<tr>
+<td>HR / 主管</td>
+<td>支援人員到職、異動、離職、遠端工作、裝置歸還、違規處理與教育訓練。</td>
+<td>人員異動通知、歸還確認。</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>依規定使用與保護端點，不私自停用安全控制、安裝未核准軟體、共享裝置或延誤通報遺失/異常。</td>
+<td>使用承諾、事件通報。</td>
+</tr>
+<tr>
+<td>供應商 / 外包人員</td>
+<td>依合約與存取規則使用受控端點或受控連線，不保存未授權資料並配合撤權與稽核。</td>
+<td>供應商存取紀錄、NDA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 端點裝置分類與最低控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>端點類型</th>
+<th>範圍</th>
+<th>最低控制要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般企業筆電 / 桌機</td>
+<td>一般員工、辦公、行政、教育訓練與一般業務使用。</td>
+<td>資產登錄、MDM/UEM、EDR、防火牆、全碟加密、自動修補、螢幕鎖、MFA、資料備份或雲端同步。</td>
+<td>不得停用安全代理程式。</td>
+</tr>
+<tr>
+<td>高權限管理端點</td>
+<td>系統管理、雲端管理、網路管理、PAM、SOC、資料庫管理、特權作業使用。</td>
+<td>一般控制加上PAM/JIT、管理網段限制、USB限制、強化稽核、禁止日常瀏覽與Email、獨立管理帳號。</td>
+<td>建議使用PAW或隔離管理工作站。</td>
+</tr>
+<tr>
+<td>開發與工程端點</td>
+<td>開發、DevSecOps、MLOps、AI工程、CI/CD、原始碼與模型開發使用。</td>
+<td>一般控制加上Secrets掃描、原始碼保護、容器/套件安全、SCA/SAST工具、Repo權限與本機資料加密。</td>
+<td>不得保存未核准Secrets或客戶資料。</td>
+</tr>
+<tr>
+<td>行動裝置</td>
+<td>公司或核准個人手機、平板，用於Email、MFA、SaaS或業務App。</td>
+<td>MDM/MAM、螢幕鎖、生物辨識或PIN、加密、遠端抹除、Jailbreak/Root偵測、App控制。</td>
+<td>BYOD應限制資料與App範圍。</td>
+</tr>
+<tr>
+<td>遠端工作端點</td>
+<td>於家庭、旅途中或非公司場域使用之端點。</td>
+<td>VPN/ZTNA、MFA、端點合規性檢查、螢幕防窺、Wi-Fi安全、禁止家人共用。</td>
+<td>應遵守遠端工作SOP。</td>
+</tr>
+<tr>
+<td>共享端點 / 會議室設備</td>
+<td>會議室、教育訓練、借用或多人共用設備。</td>
+<td>自動清除使用者資料、限制本機登入、鎖定設定、定期重置、禁存機密資料。</td>
+<td>不得保存個人或客戶資料。</td>
+</tr>
+<tr>
+<td>供應商維運端點</td>
+<td>供應商用於遠端維運、支援、開發或監控之端點。</td>
+<td>需合約要求、NDA、端點安全證明、VPN/ZTNA、MFA、Session Recording、存取時間限制。</td>
+<td>高風險作業優先使用組織提供之受管端點或跳板。</td>
+</tr>
+<tr>
+<td>BYOD裝置</td>
+<td>個人自有裝置存取組織資源。</td>
+<td>限低風險用途；需MAM/容器化、MFA、裝置合規、遠端移除企業資料。</td>
+<td>不得存取高機密、特權系統或大量PII。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 端點生命週期管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求與核准</td>
+<td>確認端點用途、使用者、資料分類、風險等級、特殊軟體與遠端工作需求。</td>
+<td>主管 / IT / Data Owner</td>
+<td>端點申請或核准紀錄。</td>
+</tr>
+<tr>
+<td>2. 採購與入庫</td>
+<td>採購核准型號，記錄序號、資產編號、供應商、保固、位置與Owner。</td>
+<td>IT / Asset Management</td>
+<td>端點資產清冊。</td>
+</tr>
+<tr>
+<td>3. 安全基準配置</td>
+<td>安裝標準映像、MDM/UEM、EDR、防火牆、加密、修補、瀏覽器安全與安全設定。</td>
+<td>Endpoint Security / IT</td>
+<td>基準設定紀錄。</td>
+</tr>
+<tr>
+<td>4. 使用者交付</td>
+<td>交付前確認合規、資產標籤、使用者承諾、密碼/MFA、資料同步與使用指引。</td>
+<td>Helpdesk / HR</td>
+<td>交付簽收紀錄。</td>
+</tr>
+<tr>
+<td>5. 日常使用與監控</td>
+<td>持續監控端點合規、EDR告警、修補狀態、DLP、USB、軟體與異常行為。</td>
+<td>SOC / Endpoint Owner</td>
+<td>合規報告、告警紀錄。</td>
+</tr>
+<tr>
+<td>6. 維護與修補</td>
+<td>依修補SLA更新OS、應用、瀏覽器、驅動、韌體與安全代理。</td>
+<td>IT / Endpoint Owner</td>
+<td>修補報告。</td>
+</tr>
+<tr>
+<td>7. 異動與借用</td>
+<td>人員異動、端點借用、角色變更、地點變更或用途變更時重新確認權限與控制。</td>
+<td>IT / HR / 主管</td>
+<td>異動紀錄。</td>
+</tr>
+<tr>
+<td>8. 遺失、遭竊或事件</td>
+<td>立即通報、遠端鎖定/抹除、撤銷憑證、調查日誌與評估資料外洩。</td>
+<td>使用者 / SOC / IT</td>
+<td>事件紀錄。</td>
+</tr>
+<tr>
+<td>9. 退還與抹除</td>
+<td>離職、汰換或退場時回收端點、備份必要資料、抹除、撤銷權限並更新清冊。</td>
+<td>IT / HR / Asset Owner</td>
+<td>抹除與退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 端點安全基準要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險端點加強要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄</td>
+<td>端點須有資產編號、序號、Owner、使用者、位置、狀態與風險分類。</td>
+<td>每月核對高權限端點與管理端點。</td>
+<td>資產清冊。</td>
+</tr>
+<tr>
+<td>MDM/UEM納管</td>
+<td>端點需納入管理平台，推送安全基準、設定與遠端處置。</td>
+<td>禁止未納管端點存取高風險系統。</td>
+<td>MDM/UEM報表。</td>
+</tr>
+<tr>
+<td>EDR/防惡意程式</td>
+<td>端點應安裝、啟用並定期更新EDR或防惡意程式。</td>
+<td>EDR Tamper Protection、隔離與即時回應能力。</td>
+<td>EDR覆蓋率報表。</td>
+</tr>
+<tr>
+<td>全碟加密</td>
+<td>筆電、行動裝置與保存資料之端點應啟用全碟加密。</td>
+<td>高機密端點需加強金鑰託管與復原金鑰保護。</td>
+<td>加密合規報告。</td>
+</tr>
+<tr>
+<td>防火牆</td>
+<td>端點本機防火牆應啟用，限制不必要入站連線。</td>
+<td>管理端點採更嚴格白名單規則。</td>
+<td>組態報表。</td>
+</tr>
+<tr>
+<td>螢幕鎖定</td>
+<td>端點應設定自動螢幕鎖定與重新認證。</td>
+<td>高風險端點縮短閒置鎖定時間。</td>
+<td>MDM設定。</td>
+</tr>
+<tr>
+<td>OS與應用修補</td>
+<td>依修補SLA更新作業系統、應用、瀏覽器、Office、VPN與安全代理。</td>
+<td>Critical弱點需緊急修補或隔離。</td>
+<td>修補報表。</td>
+</tr>
+<tr>
+<td>本機管理員限制</td>
+<td>一般使用者不得具本機管理員權限；需臨時授權時應核准與記錄。</td>
+<td>採用EPM、JIT Local Admin或PAM。</td>
+<td>權限審查紀錄。</td>
+</tr>
+<tr>
+<td>裝置合規檢查</td>
+<td>不符合加密、EDR、修補、OS版本或安全設定者應限制存取。</td>
+<td>條件式存取阻擋高風險資源。</td>
+<td>合規政策與報表。</td>
+</tr>
+<tr>
+<td>安全代理保護</td>
+<td>不得停用、移除或繞過EDR、DLP、MDM、VPN、憑證、Proxy或監控代理。</td>
+<td>Tamper Protection與異常告警。</td>
+<td>告警紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 端點資料保護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料類型</th>
+<th>端點保存規則</th>
+<th>保護要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開資料</td>
+<td>可依工作需要保存。</td>
+<td>維持正確性與版本管理。</td>
+<td>避免混入未公開草稿。</td>
+</tr>
+<tr>
+<td>內部使用資料</td>
+<td>可短期保存於受管端點。</td>
+<td>端點加密、使用者帳號保護、雲端同步或備份。</td>
+<td>離職或退場時清除。</td>
+</tr>
+<tr>
+<td>機密資料</td>
+<td>原則應保存於受控系統或雲端平台，端點僅限必要暫存。</td>
+<td>全碟加密、最小保存、DLP、禁止未核准外傳。</td>
+<td>必要時設定自動清理。</td>
+</tr>
+<tr>
+<td>高機密資料</td>
+<td>原則不得長期保存於端點；必要時需Data Owner與CISO核准。</td>
+<td>加密容器、嚴格存取、禁止USB、DLP、存取日誌。</td>
+<td>高風險端點才可處理。</td>
+</tr>
+<tr>
+<td>PII / 客戶資料</td>
+<td>僅依合法目的與最小資料保存，避免本機大量保存。</td>
+<td>加密、DLP、遮罩、保存期限、遺失通報。</td>
+<td>需遵守PIMS與合約要求。</td>
+</tr>
+<tr>
+<td>Secrets / Token / 私鑰</td>
+<td>不得明文保存於端點檔案、桌面、下載資料夾、聊天或瀏覽器記錄。</td>
+<td>使用Secrets Manager、密碼管理器、硬體金鑰或安全金鑰庫。</td>
+<td>外洩即事件處理。</td>
+</tr>
+<tr>
+<td>AI資料 / Prompt / 模型權重</td>
+<td>需依AI工具與資料使用政策管理，不得保存未核准模型資料或Prompt。</td>
+<td>權限控管、加密、版本管理、資料刪除。</td>
+<td>MLOps端點加強控管。</td>
+</tr>
+<tr>
+<td>事件證據</td>
+<td>僅由授權事件人員保存與處理。</td>
+<td>保管鏈、加密、不可竄改、限制複製。</td>
+<td>不得放置一般端點。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 軟體、應用程式與瀏覽器安全</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准軟體清單</td>
+<td>端點應使用核准軟體來源與版本，禁止安裝盜版、未授權或高風險工具。</td>
+<td>軟體清冊、MDM報表。</td>
+</tr>
+<tr>
+<td>應用程式控制</td>
+<td>高風險端點應採Allowlist、阻擋未知執行檔、限制腳本與巨集。</td>
+<td>應用控制設定。</td>
+</tr>
+<tr>
+<td>瀏覽器安全</td>
+<td>瀏覽器應受管理，限制高風險外掛、阻擋惡意網站、啟用安全更新與下載防護。</td>
+<td>瀏覽器政策。</td>
+</tr>
+<tr>
+<td>AI外掛與工具</td>
+<td>未核准AI瀏覽器外掛、桌面AI工具或資料讀取外掛不得安裝或啟用。</td>
+<td>端點軟體掃描、CASB/DLP報告。</td>
+</tr>
+<tr>
+<td>巨集與腳本</td>
+<td>預設停用不可信巨集，PowerShell、Shell Script與自動化工具應受控與記錄。</td>
+<td>組態設定、EDR告警。</td>
+</tr>
+<tr>
+<td>套件與開發工具</td>
+<td>開發端點之套件管理器、IDE外掛、容器與SDK應依安全開發要求控管。</td>
+<td>SCA報告、端點基準。</td>
+</tr>
+<tr>
+<td>移除不必要軟體</td>
+<td>停用或移除不必要服務、舊版軟體、試用工具與高風險遠端控制工具。</td>
+<td>盤點與移除紀錄。</td>
+</tr>
+<tr>
+<td>授權合規</td>
+<td>端點軟體應符合授權條款，避免侵權、盜版與不合規使用。</td>
+<td>授權紀錄、稽核報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 網路連線與遠端存取要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>連線情境</th>
+<th>最低要求</th>
+<th>禁止或限制事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公司網路連線</td>
+<td>端點需通過裝置合規檢查、EDR健康狀態與身份驗證。</td>
+<td>未納管或不合規端點不得接入內部網路。</td>
+</tr>
+<tr>
+<td>遠端工作</td>
+<td>使用核准VPN/ZTNA、MFA、端點合規檢查與受控DNS/Proxy。</td>
+<td>不得使用公共電腦或家庭共用帳號存取組織資料。</td>
+</tr>
+<tr>
+<td>公共Wi-Fi</td>
+<td>應使用VPN/ZTNA及端點防火牆，避免敏感作業。</td>
+<td>不得在無保護公共網路處理高機密資料。</td>
+</tr>
+<tr>
+<td>管理介面存取</td>
+<td>需由受控端點、特權帳號、PAM/JIT及指定網段或跳板存取。</td>
+<td>不得由一般端點直接登入雲端Root、PAM、網路設備或資料庫管理介面。</td>
+</tr>
+<tr>
+<td>供應商遠端支援</td>
+<td>需事前核准、MFA、Session Recording、時間限制與活動紀錄。</td>
+<td>不得開放永久遠端控制或共享固定帳密。</td>
+</tr>
+<tr>
+<td>個人熱點與行動網路</td>
+<td>可依遠端工作要求使用，需符合端點合規與加密連線。</td>
+<td>不得繞過公司Proxy/DLP或監控要求。</td>
+</tr>
+<tr>
+<td>藍牙、NFC、近端連線</td>
+<td>僅限業務必要，應停用不必要配對與自動連線。</td>
+<td>不得連接未知設備或未核准周邊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. USB、外接裝置與周邊管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>裝置類型</th>
+<th>管理要求</th>
+<th>例外核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>USB儲存裝置</td>
+<td>預設限制或唯讀；若需使用應加密、登錄、掃描惡意程式並限制資料分類。</td>
+<td>Data Owner、IT、CISO依資料等級核准。</td>
+</tr>
+<tr>
+<td>外接硬碟 / 隨身碟</td>
+<td>機密以上資料不得存於未加密可攜媒體。</td>
+<td>依儲存媒體管理SOP。</td>
+</tr>
+<tr>
+<td>手機連接端點</td>
+<td>不得未核准傳輸公司資料至個人手機；充電或資料傳輸應受控。</td>
+<td>主管與IT核准。</td>
+</tr>
+<tr>
+<td>印表機與掃描器</td>
+<td>列印或掃描機密資料需遵守資料分類與實體安全要求。</td>
+<td>Data Owner核准。</td>
+</tr>
+<tr>
+<td>外接螢幕與投影</td>
+<td>公開場域使用時應防止旁觀、誤投影或敏感資訊曝光。</td>
+<td>使用者自主管理，高風險會議需主管提醒。</td>
+</tr>
+<tr>
+<td>硬體安全金鑰</td>
+<td>應由IT登錄、發放、回收與撤銷，遺失需立即通報。</td>
+<td>IAM Owner核准。</td>
+</tr>
+<tr>
+<td>未知周邊</td>
+<td>禁止連接來源不明或未核准周邊設備。</td>
+<td>IT安全檢查後方可使用。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 行動裝置與BYOD管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>公司裝置要求</th>
+<th>BYOD要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>納管</td>
+<td>必須納入MDM/UEM並套用完整裝置政策。</td>
+<td>至少納入MAM或受控容器；高風險資料需MDM。</td>
+</tr>
+<tr>
+<td>螢幕鎖</td>
+<td>強制PIN、生物辨識或密碼，設定自動鎖定。</td>
+<td>同公司最低要求。</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>裝置儲存加密必須啟用。</td>
+<td>需啟用或由平台確認。</td>
+</tr>
+<tr>
+<td>Jailbreak/Root偵測</td>
+<td>偵測到Root/Jailbreak即限制存取。</td>
+<td>同公司裝置。</td>
+</tr>
+<tr>
+<td>App管理</td>
+<td>僅允許核准業務App與受控資料分享。</td>
+<td>企業資料應限制於受控App或容器。</td>
+</tr>
+<tr>
+<td>遠端抹除</td>
+<td>離職、遺失或事件時可遠端抹除企業資料；公司裝置可整機抹除。</td>
+<td>僅抹除企業資料，除非使用者另行同意或合約約定。</td>
+</tr>
+<tr>
+<td>資料外洩防護</td>
+<td>限制複製貼上、螢幕截圖、個人雲端備份與未核准分享。</td>
+<td>依MAM能力限制。</td>
+</tr>
+<tr>
+<td>高風險存取</td>
+<td>特權系統、高機密資料與大量PII不應由BYOD存取。</td>
+<td>原則禁止。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. EDR、惡意軟體與端點偵測回應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EDR覆蓋</td>
+<td>所有正式端點應安裝EDR並保持上線、更新與健康狀態。</td>
+<td>未上線超過門檻應調查或限制存取。</td>
+</tr>
+<tr>
+<td>Tamper Protection</td>
+<td>EDR、防毒、DLP與安全代理應啟用防竄改保護。</td>
+<td>遭停用或移除即產生高優先告警。</td>
+</tr>
+<tr>
+<td>惡意軟體防護</td>
+<td>即時掃描、行為分析、隔離與雲端威脅情報應啟用。</td>
+<td>偵測惡意程式應隔離端點並調查。</td>
+</tr>
+<tr>
+<td>威脅獵捕</td>
+<td>SOC應定期針對憑證竊取、橫向移動、惡意腳本、未知工具進行查詢。</td>
+<td>建立獵捕紀錄與改善建議。</td>
+</tr>
+<tr>
+<td>隔離能力</td>
+<td>EDR應支援網路隔離、程序終止、檔案隔離、IOC搜尋或遠端回應。</td>
+<td>事件時由SOC或授權人員執行。</td>
+</tr>
+<tr>
+<td>告警分級</td>
+<td>EDR告警應依嚴重度、受影響資料與端點角色分級處理。</td>
+<td>Critical/High告警依事件程序升級。</td>
+</tr>
+<tr>
+<td>例外排除</td>
+<td>EDR排除規則需核准、最小化、到期並定期審查。</td>
+<td>不得以效能為由永久排除高風險路徑。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 修補、弱點與組態管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>OS修補</td>
+<td>端點OS應依弱點與修補管理SOP於SLA內更新。</td>
+<td>修補合規報告。</td>
+</tr>
+<tr>
+<td>第三方軟體修補</td>
+<td>瀏覽器、Office、PDF、VPN、遠端工具、開發工具等需納入修補範圍。</td>
+<td>軟體版本報表。</td>
+</tr>
+<tr>
+<td>韌體與驅動</td>
+<td>高風險端點應評估BIOS/UEFI、韌體與驅動更新。</td>
+<td>韌體更新紀錄。</td>
+</tr>
+<tr>
+<td>弱點掃描</td>
+<td>端點應定期掃描弱點與不安全設定。</td>
+<td>弱點掃描報告。</td>
+</tr>
+<tr>
+<td>安全基準</td>
+<td>端點應比對CIS Benchmark或組織基準，差異需追蹤改善。</td>
+<td>基準合規報告。</td>
+</tr>
+<tr>
+<td>逾期處理</td>
+<td>逾期未修補端點應限制存取、隔離或啟動例外管理。</td>
+<td>逾期追蹤與例外紀錄。</td>
+</tr>
+<tr>
+<td>變更管理</td>
+<td>大量修補、基準調整或安全代理升級應依變更流程執行。</td>
+<td>變更單、測試紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 遠端工作與外出使用要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>安全要求</th>
+<th>使用者責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>居家工作</td>
+<td>端點應置於可控環境，避免家人或訪客接觸螢幕與裝置。</td>
+<td>不共享帳號與裝置，離席鎖定。</td>
+</tr>
+<tr>
+<td>旅途中使用</td>
+<td>應避免於公共場所處理高機密資料，必要時使用防窺措施。</td>
+<td>注意肩窺、遺失與公共網路風險。</td>
+</tr>
+<tr>
+<td>跨境攜帶</td>
+<td>攜帶端點跨境應遵守資料所在地、出口管制、客戶合約與加密管制要求。</td>
+<td>必要時申請空白或臨時端點。</td>
+</tr>
+<tr>
+<td>飯店與公共場所</td>
+<td>不得將端點留置無人看管；使用保險箱或隨身攜帶。</td>
+<td>遺失立即通報。</td>
+</tr>
+<tr>
+<td>公共充電與外接設備</td>
+<td>避免使用未知USB充電或外接設備；使用電源轉接器或資料阻斷器。</td>
+<td>不得連接未知USB。</td>
+</tr>
+<tr>
+<td>遠端維運</td>
+<td>高權限操作應使用PAM、跳板、受控端點與Session Recording。</td>
+<td>不得在不安全環境進行高風險管理作業。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 端點遺失、遭竊與資料外洩處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處理階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 立即通報</td>
+<td>使用者發現端點遺失、遭竊、被搶、遭未授權接觸或疑似資料外洩時，應立即通報Helpdesk、主管與SOC。</td>
+<td>使用者 / 主管</td>
+<td>通報紀錄。</td>
+</tr>
+<tr>
+<td>2. 鎖定與抹除</td>
+<td>IT應立即遠端鎖定、定位、抹除企業資料或整機抹除，必要時撤銷裝置憑證與Session。</td>
+<td>IT / Endpoint Owner</td>
+<td>MDM處置紀錄。</td>
+</tr>
+<tr>
+<td>3. 權限撤銷</td>
+<td>撤銷相關SSO Session、VPN、裝置憑證、Token、API Key、MFA信任裝置與本機憑證。</td>
+<td>IAM / Cloud / System Owner</td>
+<td>撤權紀錄。</td>
+</tr>
+<tr>
+<td>4. 影響評估</td>
+<td>確認裝置加密狀態、資料分類、最近同步、DLP告警、使用者權限、是否含PII或客戶資料。</td>
+<td>Incident Manager / Data Owner / DPO</td>
+<td>影響評估。</td>
+</tr>
+<tr>
+<td>5. 事件分級</td>
+<td>依資料敏感度、加密狀態、外洩可能性、法規與合約要求判定事件等級。</td>
+<td>CISO / Incident Manager</td>
+<td>事件分級紀錄。</td>
+</tr>
+<tr>
+<td>6. 後續通知</td>
+<td>若可能涉及PII、客戶資料、合約或法規，依事件程序通知DPO、法務、客戶或主管機關。</td>
+<td>Legal / DPO / CISO</td>
+<td>通知紀錄。</td>
+</tr>
+<tr>
+<td>7. 補發與改善</td>
+<td>補發端點前確認使用者教育、控制缺口與必要改善措施。</td>
+<td>IT / 主管 / ISMS管理代表</td>
+<td>補發與CAPA紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 端點退還、抹除與報廢</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>退場情境</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>人員離職</td>
+<td>HR通知IT回收端點；撤銷帳號、Token、裝置信任與遠端存取，備份或移轉必要業務資料。</td>
+<td>離職檢核、回收紀錄。</td>
+</tr>
+<tr>
+<td>人員異動</td>
+<td>確認端點是否需重新配置、移轉Owner、刪除原資料或調整權限。</td>
+<td>異動檢核紀錄。</td>
+</tr>
+<tr>
+<td>設備汰換</td>
+<td>回收舊端點，確認資料備份、抹除、加密解除、資產狀態更新與新端點交付。</td>
+<td>汰換紀錄、抹除證明。</td>
+</tr>
+<tr>
+<td>維修送修</td>
+<td>送修前移除或加密資料，必要時更換儲存媒體或提供臨時端點。</td>
+<td>送修紀錄、資料保護確認。</td>
+</tr>
+<tr>
+<td>租賃歸還</td>
+<td>歸還前執行安全抹除、移除管理、撤銷憑證並取得證明。</td>
+<td>租賃歸還與抹除證明。</td>
+</tr>
+<tr>
+<td>報廢銷毀</td>
+<td>依媒體處置要求執行安全抹除或實體銷毀，更新資產清冊。</td>
+<td>銷毀證明、資產更新。</td>
+</tr>
+<tr>
+<td>供應商端點退場</td>
+<td>終止供應商存取時撤銷VPN、憑證、API、遠端工具與資料保存。</td>
+<td>供應商撤權紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 端點例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法安裝EDR</td>
+<td>需說明技術限制、替代監控、隔離網段、補償控制與改善計畫。</td>
+<td>CISO / Endpoint Owner</td>
+<td>最長90日，高風險每30日追蹤。</td>
+</tr>
+<tr>
+<td>無法全碟加密</td>
+<td>需限制資料保存、使用加密容器、限制外出與遠端存取。</td>
+<td>CISO / Data Owner</td>
+<td>最長90日或至設備汰換。</td>
+</tr>
+<tr>
+<td>逾期修補</td>
+<td>需說明影響、補償控制、隔離、限制存取與修補時程。</td>
+<td>CISO / IT Owner</td>
+<td>Critical逾期需立即升級。</td>
+</tr>
+<tr>
+<td>臨時本機管理員</td>
+<td>需核准、限時、記錄、使用後撤銷並檢查變更。</td>
+<td>IT Manager / Endpoint Owner</td>
+<td>單次或最長24至72小時。</td>
+</tr>
+<tr>
+<td>BYOD存取例外</td>
+<td>需資料分類、MAM/MDM、MFA、風險評估與使用者同意。</td>
+<td>CISO / HR / Data Owner</td>
+<td>依風險設定，至少每季重評。</td>
+</tr>
+<tr>
+<td>供應商未受管端點</td>
+<td>需使用跳板、VDI、Session Recording、限制資料下載與時間限制。</td>
+<td>CISO / Supplier Management</td>
+<td>每次或短期核准。</td>
+</tr>
+<tr>
+<td>特殊測試設備</td>
+<td>需隔離、限制資料、專案到期、端點標示與責任人。</td>
+<td>CISO / Project Owner</td>
+<td>專案期間，定期重評。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 端點安全檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄</td>
+<td>端點是否已登錄資產編號、Owner、使用者、序號、位置與狀態？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>MDM/UEM納管</td>
+<td>端點是否納入MDM/UEM或等效管理工具？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>EDR啟用</td>
+<td>EDR是否安裝、啟用、更新且未被停用？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>全碟加密</td>
+<td>端點儲存是否啟用全碟加密？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>修補合規</td>
+<td>OS、瀏覽器、Office、VPN與第三方軟體是否符合修補SLA？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>本機管理員</td>
+<td>一般使用者是否未持有本機管理員權限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>防火牆與安全基準</td>
+<td>本機防火牆與安全基準是否啟用？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>DLP與資料保護</td>
+<td>是否符合資料分類、DLP、USB與外部分享限制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>遠端存取</td>
+<td>VPN/ZTNA、MFA與裝置合規檢查是否啟用？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI與Secrets防護</td>
+<td>端點是否無未核准AI工具、Secrets明文、AI API Key或硬編碼憑證？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>退場準備</td>
+<td>離職、汰換或報廢時是否可遠端鎖定、抹除與撤銷權限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>端點資產清冊</td>
+<td>端點編號、序號、Owner、使用者、位置、型號、狀態、風險分類與生命週期。</td>
+<td>Asset Management Owner</td>
+<td>端點有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>端點交付與簽收紀錄</td>
+<td>端點交付、使用者承諾、安全設定、MFA與使用指引確認。</td>
+<td>IT / HR</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>端點安全組態紀錄</td>
+<td>MDM、EDR、加密、防火牆、基準、條件式存取與軟體設定。</td>
+<td>Endpoint Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>修補與弱點紀錄</td>
+<td>OS、應用、瀏覽器、韌體與弱點掃描修補證據。</td>
+<td>IT Operations</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>EDR與監控紀錄</td>
+<td>端點告警、隔離、惡意軟體、調查、Threat Hunting與回應紀錄。</td>
+<td>SOC</td>
+<td>依日誌保存要求，至少1至3年。</td>
+</tr>
+<tr>
+<td>遺失與事件紀錄</td>
+<td>端點遺失、遭竊、遠端抹除、權限撤銷、資料影響與事件處理。</td>
+<td>Incident Manager / IT</td>
+<td>至少3至7年，依事件等級。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>端點安全例外、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>退場與抹除紀錄</td>
+<td>回收、備份、資料抹除、憑證撤銷、租賃歸還、銷毀與清冊更新。</td>
+<td>IT / Asset Management</td>
+<td>至少3年或依法規/合約要求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>端點納管率</td>
+<td>已納入MDM/UEM/EDR管理之端點 / 應納管端點。</td>
+<td>目標100%。</td>
+<td>端點治理完整性。</td>
+</tr>
+<tr>
+<td>EDR健康率</td>
+<td>EDR上線且狀態健康端點 / EDR應覆蓋端點。</td>
+<td>目標98%至100%，高風險端點100%。</td>
+<td>偵測與回應能力。</td>
+</tr>
+<tr>
+<td>全碟加密合規率</td>
+<td>已啟用全碟加密端點 / 應加密端點。</td>
+<td>目標100%。</td>
+<td>資料外洩防護。</td>
+</tr>
+<tr>
+<td>Critical修補逾期端點數</td>
+<td>Critical弱點超過SLA仍未修補之端點數。</td>
+<td>目標0。</td>
+<td>弱點風險管理。</td>
+</tr>
+<tr>
+<td>未授權本機管理員數</td>
+<td>一般端點上未核准本機管理員權限數。</td>
+<td>目標0。</td>
+<td>特權最小化。</td>
+</tr>
+<tr>
+<td>不合規端點存取阻擋數</td>
+<td>因不符合安全條件而被限制存取之端點數。</td>
+<td>趨勢分析，重大異常升級。</td>
+<td>條件式存取有效性。</td>
+</tr>
+<tr>
+<td>端點遺失或遭竊事件數</td>
+<td>端點遺失、遭竊或無法找回事件數。</td>
+<td>重大事件需管理審查。</td>
+<td>資產與資料保護。</td>
+</tr>
+<tr>
+<td>Secrets或敏感資料端點外洩命中數</td>
+<td>端點DLP、Repo或EDR偵測到Secrets/敏感資料外洩數。</td>
+<td>重大命中立即處理。</td>
+<td>資料外洩防護。</td>
+</tr>
+<tr>
+<td>BYOD例外數</td>
+<td>核准或未核准BYOD高風險存取情形數。</td>
+<td>未核准目標0。</td>
+<td>BYOD風險控制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產完整性</td>
+<td>端點是否完整登錄、指定Owner、標示狀態並定期盤點。</td>
+<td>端點資產清冊、盤點紀錄。</td>
+</tr>
+<tr>
+<td>安全基準</td>
+<td>端點是否符合加密、EDR、修補、防火牆、MDM與螢幕鎖定基準。</td>
+<td>MDM/UEM/EDR合規報告。</td>
+</tr>
+<tr>
+<td>存取控制</td>
+<td>不合規端點是否被限制存取；高權限端點是否有PAM/JIT與條件式存取。</td>
+<td>IAM條件式存取、PAM紀錄。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>端點是否依資料分類限制本機保存、USB、DLP、外部分享與雲端同步。</td>
+<td>DLP政策、抽查結果。</td>
+</tr>
+<tr>
+<td>修補管理</td>
+<td>端點弱點是否依SLA修補，逾期是否隔離或例外核准。</td>
+<td>修補報告、例外紀錄。</td>
+</tr>
+<tr>
+<td>EDR與事件回應</td>
+<td>EDR是否有效偵測、隔離、調查與保存端點事件證據。</td>
+<td>EDR告警、事件工單。</td>
+</tr>
+<tr>
+<td>遠端工作與BYOD</td>
+<td>遠端工作與BYOD是否遵守裝置合規、MFA、MAM/MDM與資料限制。</td>
+<td>遠端存取報表、BYOD核准。</td>
+</tr>
+<tr>
+<td>退場與抹除</td>
+<td>端點離職、汰換、報廢、租賃歸還是否完成抹除、撤權與清冊更新。</td>
+<td>抹除證明、撤權紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>端點安全例外是否有補償控制、核准、期限與重評。</td>
+<td>例外申請、風險接受。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄A：端點交付檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>交付項目</th>
+<th>檢核內容</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄</td>
+<td>資產編號、序號、Owner、使用者、位置與設備狀態已登錄。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>標準映像</td>
+<td>已安裝核准OS、標準映像與必要業務軟體。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>MDM/UEM</td>
+<td>端點已納入管理平台並套用政策。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>EDR</td>
+<td>EDR已安裝、啟用並回報健康狀態。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>全碟加密已啟用，復原金鑰已安全託管。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>修補</td>
+<td>OS與必要應用已更新至核准版本。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>MFA與登入</td>
+<td>使用者登入、MFA與條件式存取已設定。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>使用者宣導</td>
+<td>已告知端點使用、資料保護、遺失通報、AI工具與Secrets禁止事項。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>簽收</td>
+<td>使用者已完成端點簽收與使用承諾。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 附錄B：端點退場檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>退場項目</th>
+<th>檢核內容</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>設備回收</td>
+<td>端點、電源、周邊、硬體安全金鑰或可攜媒體已回收。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>資料移轉</td>
+<td>必要業務資料已移轉至核准位置，非必要資料已刪除。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>遠端鎖定/抹除</td>
+<td>已執行安全抹除或重置，必要時保存抹除證明。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>權限撤銷</td>
+<td>裝置信任、憑證、VPN、MFA裝置、Session與端點管理關聯已撤銷。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>EDR/MDM狀態</td>
+<td>已更新端點狀態為退場、封存、報廢或重新配置。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>供應商或租賃歸還</td>
+<td>租賃或供應商設備歸還前已完成資料抹除與合約確認。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>資產清冊更新</td>
+<td>資產清冊已更新Owner、狀態、日期與處置方式。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

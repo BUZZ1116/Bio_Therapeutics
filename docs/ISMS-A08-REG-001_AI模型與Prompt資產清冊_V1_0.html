@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-REG-001 AI模型與Prompt資產清冊</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #2d4f73; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border: 1px solid #999; padding: 12px; background: #fafafa; margin: 12px 0; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-REG-001 AI模型與Prompt資產清冊</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-REG-001</td>
+<td>AI模型與Prompt資產清冊</td>
+<td>第四階：表單與紀錄 / REG / 清冊</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>AI治理Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-REG-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>AI治理Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>AI Asset Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人 / AI Governance Lead</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理審查</td>
+<td></td>
+<td>Data Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與授權審查</td>
+<td></td>
+<td>法務 / 採購 / 授權管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與平台審查</td>
+<td></td>
+<td>IT營運主管 / MLOps / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / AI治理委員會 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 清冊目的</h2>
+<p>本清冊用於建立組織AI模型、Prompt、AI Agent、RAG知識庫、Embedding與相關AI資產之完整登錄、分類、責任歸屬、風險分級、授權狀態、資料來源、部署環境、控制措施、監測要求與退場狀態，以支援資訊安全、AI治理、隱私保護、供應鏈安全、軟體開發安全、雲端服務安全、營運持續與管理審查。</p>
+<p>本文件亦作為ISO/IEC 27001:2022 Annex A資產管理、資訊分類、存取控制、供應商關係、雲端服務使用、技術弱點管理、安全開發、事件管理及AI相關技術控制之稽核證據，確保AI資產可識別、可追溯、可控管、可審查與可停用。</p>
+
+<h2>2. 登錄原則</h2>
+<ul>
+<li>所有AI模型、Prompt、AI Agent、RAG知識庫與AI服務在正式使用、試用、PoC、委外開發、內部開發、API整合或部署前，均應納入本清冊。</li>
+<li>AI資產應有明確Owner、Custodian、使用目的、資料分類、輸入資料限制、輸出使用限制、授權條件、風險等級與審查週期。</li>
+<li>涉及PII、客戶機密、營業秘密、受合約限制資料、跨境處理、第三方模型、開源模型或自動化決策者，應完成資安、隱私、法務與AI治理審查。</li>
+<li>Prompt與系統指令應視為可影響模型行為之重要資訊資產，應依敏感度與業務影響進行版本、存取、變更、審查與測試管理。</li>
+<li>清冊內容應至少每半年審查一次；重大變更、事件、供應商條款變更、模型版本變更、資料集更新或用途變更時，應即時更新。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI模型</td>
+<td>使用機器學習、深度學習、規則、統計或其他AI方法，對輸入資料產生預測、分類、生成、建議、決策支援或自動化輸出之軟體元件、服務或模型權重。</td>
+</tr>
+<tr>
+<td>基礎模型</td>
+<td>經大量資料訓練並可適用於多種下游任務之大型模型，例如大型語言模型、多模態模型、影像生成模型或語音模型。</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td>提供給AI模型之指令、上下文、範例、限制條件、角色設定、工具使用規則、輸出格式要求或安全規則。</td>
+</tr>
+<tr>
+<td>系統Prompt</td>
+<td>由系統、平台或應用程式內部設定，用於約束模型行為、權限、角色、輸出格式與安全邊界之高優先級Prompt。</td>
+</tr>
+<tr>
+<td>Prompt模板</td>
+<td>可重複使用並含變數、欄位或條件邏輯之Prompt格式，用於標準化AI輸入與輸出。</td>
+</tr>
+<tr>
+<td>RAG知識庫</td>
+<td>Retrieval-Augmented Generation使用之文件、資料庫、索引、向量資料庫或知識來源，用於提供模型回答或生成內容時之背景資料。</td>
+</tr>
+<tr>
+<td>Embedding</td>
+<td>將文字、影像、聲音、程式碼或其他資料轉換為向量表示之資料或模型輸出，可能包含敏感語意與可重識別風險。</td>
+</tr>
+<tr>
+<td>AI Agent</td>
+<td>可依目標自主或半自主規劃、調用工具、存取系統、執行任務、讀寫資料或產生行動之AI元件。</td>
+</tr>
+<tr>
+<td>模型卡 / 資料卡</td>
+<td>記錄模型目的、資料來源、限制、效能、偏差、安全性、適用情境與不適用情境之治理文件。</td>
+</tr>
+<tr>
+<td>模型Owner</td>
+<td>對AI模型之業務目的、風險、核准、使用限制、效能與退場負責之角色。</td>
+</tr>
+<tr>
+<td>Prompt Owner</td>
+<td>對Prompt內容、版本、適用場景、測試、存取與變更負責之角色。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准高風險AI應用、重大剩餘風險接受、外部揭露、跨境高風險處理與必要資源。</td>
+</tr>
+<tr>
+<td>AI治理委員會</td>
+<td>審查AI資產治理原則、風險分級、使用邊界、重大例外、倫理與合規議題。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准AI資產之資訊安全控制、事件通報、存取限制、日誌監控與高風險使用情境。</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>維護本清冊格式、整合風險登錄、SoA、稽核證據、KPI/KRI與管理審查輸入。</td>
+</tr>
+<tr>
+<td>AI模型Owner</td>
+<td>登錄AI模型，定義用途、輸入輸出限制、資料來源、風險、核准狀態、版本與退場計畫。</td>
+</tr>
+<tr>
+<td>Prompt Owner</td>
+<td>登錄Prompt、系統Prompt、Prompt模板與Prompt Chain，維護版本、測試結果、權限與安全限制。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>確認訓練、微調、RAG、Embedding、輸入與輸出資料之分類、合法性、保護要求與保存期限。</td>
+</tr>
+<tr>
+<td>MLOps / DevSecOps</td>
+<td>管理模型部署、版本控制、CI/CD、測試、安全掃描、監控、回滾與技術紀錄。</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人</td>
+<td>審查涉及PII、資料主體權利、跨境傳輸、隱私風險、DPIA與資料處理者責任。</td>
+</tr>
+<tr>
+<td>法務 / 採購 / 授權管理</td>
+<td>審查模型、資料集、Prompt、外部內容、開源授權、第三方服務條款、DPA、SLA與智慧財產權。</td>
+</tr>
+<tr>
+<td>SOC / Security Monitoring</td>
+<td>監控AI服務存取、異常輸入輸出、資料外洩、Prompt Injection、越權工具調用與事件告警。</td>
+</tr>
+<tr>
+<td>使用者 / 業務Owner</td>
+<td>依核准用途使用AI資產，不得輸入未授權資料或繞過Prompt、權限與資料保護限制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. AI資產分類與登錄範圍</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類別</th>
+<th>登錄範圍</th>
+<th>必要登錄時點</th>
+<th>最低審查要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>內部自建模型</td>
+<td>自建、訓練、微調或部署於組織環境之模型、權重、模型服務與推論端點。</td>
+<td>設計、訓練、測試、部署、版本變更與退場。</td>
+<td>資安、資料治理、MLOps、模型效能與風險評估。</td>
+</tr>
+<tr>
+<td>第三方商用模型</td>
+<td>SaaS、API、雲端AI、外部LLM、AI功能模組、插件或平台內建模型。</td>
+<td>採購、試用、PoC、正式使用、條款變更。</td>
+<td>供應商審查、雲端服務風險評估、DPA、資料保留與訓練使用限制。</td>
+</tr>
+<tr>
+<td>開源模型</td>
+<td>公開模型權重、模型程式碼、推論套件、Tokenizer、Adapter、LoRA或模型衍生物。</td>
+<td>下載、測試、修改、內部部署、再散布。</td>
+<td>授權、來源可信度、惡意模型風險、弱點、資料來源與再散布限制。</td>
+</tr>
+<tr>
+<td>Prompt與系統Prompt</td>
+<td>系統Prompt、Prompt模板、Prompt Chain、Few-shot examples、安全規則與角色設定。</td>
+<td>建立、修改、上線、外部分享、重大輸出異常。</td>
+<td>版本管制、敏感資訊檢查、Prompt Injection測試與Owner核准。</td>
+</tr>
+<tr>
+<td>RAG與知識庫</td>
+<td>文件庫、索引、向量資料庫、資料連接器、檢索規則、權限過濾與資料來源。</td>
+<td>資料匯入、索引重建、知識庫上線、資料來源變更。</td>
+<td>資料分類、權限繼承、資料最小化、過期資料清理與檢索測試。</td>
+</tr>
+<tr>
+<td>AI Agent與工具調用</td>
+<td>可調用API、資料庫、瀏覽器、自動化流程、程式執行或外部工具之AI代理。</td>
+<td>設計、授權、工具新增、權限提升、正式部署。</td>
+<td>最小權限、人工覆核、安全沙箱、日誌、速率限制與回滾機制。</td>
+</tr>
+<tr>
+<td>評估資料集與測試集</td>
+<td>用於模型測試、偏差評估、安全測試、紅隊演練、性能驗證之資料集。</td>
+<td>建立、取得、更新、外部共享、銷毀。</td>
+<td>資料合法性、敏感資料遮罩、保存期限與可追溯性。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. AI模型與Prompt資產主清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>資產名稱</th>
+<th>資產類別</th>
+<th>版本/模型ID</th>
+<th>Owner</th>
+<th>Custodian</th>
+<th>業務用途</th>
+<th>部署/使用環境</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI-ASSET-0001</td>
+<td></td>
+<td>□ 自建模型 □ 第三方模型 □ 開源模型 □ Prompt □ RAG □ AI Agent □ 評估資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 本地 □ 私有雲 □ 公有雲 □ SaaS □ API □ 端點 □ 行動裝置</td>
+<td>□ 申請 □ PoC □ 測試 □ 已核准 □ 使用中 □ 暫停 □ 退場</td>
+</tr>
+<tr>
+<td>AI-ASSET-0002</td>
+<td></td>
+<td>□ 自建模型 □ 第三方模型 □ 開源模型 □ Prompt □ RAG □ AI Agent □ 評估資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 本地 □ 私有雲 □ 公有雲 □ SaaS □ API □ 端點 □ 行動裝置</td>
+<td>□ 申請 □ PoC □ 測試 □ 已核准 □ 使用中 □ 暫停 □ 退場</td>
+</tr>
+<tr>
+<td>AI-ASSET-0003</td>
+<td></td>
+<td>□ 自建模型 □ 第三方模型 □ 開源模型 □ Prompt □ RAG □ AI Agent □ 評估資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 本地 □ 私有雲 □ 公有雲 □ SaaS □ API □ 端點 □ 行動裝置</td>
+<td>□ 申請 □ PoC □ 測試 □ 已核准 □ 使用中 □ 暫停 □ 退場</td>
+</tr>
+<tr>
+<td>AI-ASSET-0004</td>
+<td></td>
+<td>□ 自建模型 □ 第三方模型 □ 開源模型 □ Prompt □ RAG □ AI Agent □ 評估資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 本地 □ 私有雲 □ 公有雲 □ SaaS □ API □ 端點 □ 行動裝置</td>
+<td>□ 申請 □ PoC □ 測試 □ 已核准 □ 使用中 □ 暫停 □ 退場</td>
+</tr>
+<tr>
+<td>AI-ASSET-0005</td>
+<td></td>
+<td>□ 自建模型 □ 第三方模型 □ 開源模型 □ Prompt □ RAG □ AI Agent □ 評估資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 本地 □ 私有雲 □ 公有雲 □ SaaS □ API □ 端點 □ 行動裝置</td>
+<td>□ 申請 □ PoC □ 測試 □ 已核准 □ 使用中 □ 暫停 □ 退場</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 資產敏感度、資料來源與資料流登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>輸入資料類型</th>
+<th>輸出資料類型</th>
+<th>資料分類</th>
+<th>PII/敏感資料</th>
+<th>資料來源</th>
+<th>資料流向</th>
+<th>跨境/外部處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 公開資料 □ 內部文件 □ 客戶資料 □ 交易資料 □ 程式碼 □ 日誌 □ 影像/語音 □ 其他</td>
+<td>□ 建議 □ 報告 □ 分類 □ 預測 □ 生成內容 □ 程式碼 □ 自動化行動</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td>□ 無 □ 一般PII □ 敏感PII □ 客戶機密 □ 營業秘密</td>
+<td></td>
+<td>來源 → 處理 → 儲存 → 輸出 → 使用/揭露</td>
+<td>□ 否 □ 是，地區/供應商：</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 公開資料 □ 內部文件 □ 客戶資料 □ 交易資料 □ 程式碼 □ 日誌 □ 影像/語音 □ 其他</td>
+<td>□ 建議 □ 報告 □ 分類 □ 預測 □ 生成內容 □ 程式碼 □ 自動化行動</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td>□ 無 □ 一般PII □ 敏感PII □ 客戶機密 □ 營業秘密</td>
+<td></td>
+<td>來源 → 處理 → 儲存 → 輸出 → 使用/揭露</td>
+<td>□ 否 □ 是，地區/供應商：</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 公開資料 □ 內部文件 □ 客戶資料 □ 交易資料 □ 程式碼 □ 日誌 □ 影像/語音 □ 其他</td>
+<td>□ 建議 □ 報告 □ 分類 □ 預測 □ 生成內容 □ 程式碼 □ 自動化行動</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td>□ 無 □ 一般PII □ 敏感PII □ 客戶機密 □ 營業秘密</td>
+<td></td>
+<td>來源 → 處理 → 儲存 → 輸出 → 使用/揭露</td>
+<td>□ 否 □ 是，地區/供應商：</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 授權、合約與供應鏈登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>來源/供應商</th>
+<th>授權類型</th>
+<th>合約/DPA/SLA</th>
+<th>是否可商用</th>
+<th>是否可再散布</th>
+<th>是否可用於訓練</th>
+<th>第四方/子處理者</th>
+<th>審查結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>□ 自有 □ 商用 □ 開源 □ 免費試用 □ 研究用途 □ 客戶提供 □ 委外開發</td>
+<td>□ 已完成 □ 不適用 □ 待補</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 供應商保留/訓練限制：</td>
+<td></td>
+<td>□ 通過 □ 條件通過 □ 不通過 □ 待審</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>□ 自有 □ 商用 □ 開源 □ 免費試用 □ 研究用途 □ 客戶提供 □ 委外開發</td>
+<td>□ 已完成 □ 不適用 □ 待補</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 供應商保留/訓練限制：</td>
+<td></td>
+<td>□ 通過 □ 條件通過 □ 不通過 □ 待審</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>□ 自有 □ 商用 □ 開源 □ 免費試用 □ 研究用途 □ 客戶提供 □ 委外開發</td>
+<td>□ 已完成 □ 不適用 □ 待補</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 限制條件：</td>
+<td>□ 是 □ 否 □ 供應商保留/訓練限制：</td>
+<td></td>
+<td>□ 通過 □ 條件通過 □ 不通過 □ 待審</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. AI資產風險分級登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>主要風險情境</th>
+<th>機密性衝擊</th>
+<th>完整性衝擊</th>
+<th>可用性衝擊</th>
+<th>隱私衝擊</th>
+<th>法遵/合約衝擊</th>
+<th>業務衝擊</th>
+<th>整體風險等級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 資料外洩 □ Prompt Injection □ Hallucination □ 不當決策 □ 偏差歧視 □ 供應商中斷 □ 授權違規 □ 越權工具調用 □ 模型投毒 □ 其他</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 不適用 □ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 資料外洩 □ Prompt Injection □ Hallucination □ 不當決策 □ 偏差歧視 □ 供應商中斷 □ 授權違規 □ 越權工具調用 □ 模型投毒 □ 其他</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 不適用 □ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 資料外洩 □ Prompt Injection □ Hallucination □ 不當決策 □ 偏差歧視 □ 供應商中斷 □ 授權違規 □ 越權工具調用 □ 模型投毒 □ 其他</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 不適用 □ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+<td>□ 低 □ 中 □ 高 □ 極高</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. Prompt資產登錄表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Prompt編號</th>
+<th>Prompt名稱</th>
+<th>類型</th>
+<th>適用模型/系統</th>
+<th>Owner</th>
+<th>版本</th>
+<th>敏感等級</th>
+<th>用途</th>
+<th>變更狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PRM-0001</td>
+<td></td>
+<td>□ 系統Prompt □ 使用者Prompt模板 □ Few-shot範例 □ Prompt Chain □ 安全規則 □ Agent指令</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 草稿 □ 審查中 □ 已核准 □ 使用中 □ 停用</td>
+</tr>
+<tr>
+<td>PRM-0002</td>
+<td></td>
+<td>□ 系統Prompt □ 使用者Prompt模板 □ Few-shot範例 □ Prompt Chain □ 安全規則 □ Agent指令</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 草稿 □ 審查中 □ 已核准 □ 使用中 □ 停用</td>
+</tr>
+<tr>
+<td>PRM-0003</td>
+<td></td>
+<td>□ 系統Prompt □ 使用者Prompt模板 □ Few-shot範例 □ Prompt Chain □ 安全規則 □ Agent指令</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 草稿 □ 審查中 □ 已核准 □ 使用中 □ 停用</td>
+</tr>
+<tr>
+<td>PRM-0004</td>
+<td></td>
+<td>□ 系統Prompt □ 使用者Prompt模板 □ Few-shot範例 □ Prompt Chain □ 安全規則 □ Agent指令</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 草稿 □ 審查中 □ 已核准 □ 使用中 □ 停用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. Prompt安全檢核紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Prompt編號</th>
+<th>檢核項目</th>
+<th>檢核要求</th>
+<th>檢核結果</th>
+<th>改善措施</th>
+<th>確認人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>敏感資訊</td>
+<td>Prompt不得硬編碼帳號、密碼、金鑰、Token、客戶機密、完整PII或未授權資料。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>越權指令</td>
+<td>Prompt不得要求模型繞過政策、忽略安全限制、暴露系統指令或執行未授權操作。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>輸出限制</td>
+<td>Prompt應定義輸出格式、禁止內容、需人工覆核情境、信心不足時回應方式與引用要求。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Prompt Injection測試</td>
+<td>應測試惡意輸入是否可覆寫系統Prompt、取得敏感資料、繞過權限或誘導不當工具調用。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>偏差與不當內容</td>
+<td>應檢查Prompt是否可能引導歧視、偏差、不當建議、誤導性輸出或不符合政策之內容。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>版本與授權</td>
+<td>Prompt來源、變更紀錄、Owner、使用範圍與授權限制應可追溯。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. RAG、Embedding與知識庫資產登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>知識庫/Embedding編號</th>
+<th>名稱</th>
+<th>資料來源</th>
+<th>資料分類</th>
+<th>索引/向量庫位置</th>
+<th>權限繼承方式</th>
+<th>更新頻率</th>
+<th>保存期限</th>
+<th>退場/清除方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>RAG-0001</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td></td>
+<td>□ 原系統ACL □ 知識庫ACL □ 應用層過濾 □ 其他</td>
+<td>□ 即時 □ 每日 □ 每週 □ 每月 □ 手動</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RAG-0002</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td></td>
+<td>□ 原系統ACL □ 知識庫ACL □ 應用層過濾 □ 其他</td>
+<td>□ 即時 □ 每日 □ 每週 □ 每月 □ 手動</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RAG-0003</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ 受限制</td>
+<td></td>
+<td>□ 原系統ACL □ 知識庫ACL □ 應用層過濾 □ 其他</td>
+<td>□ 即時 □ 每日 □ 每週 □ 每月 □ 手動</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. AI Agent與工具調用清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Agent編號</th>
+<th>Agent名稱</th>
+<th>可調用工具/API</th>
+<th>資料存取範圍</th>
+<th>執行權限</th>
+<th>人工覆核要求</th>
+<th>安全邊界</th>
+<th>日誌與監控</th>
+<th>核准狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AGT-0001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 讀取 □ 寫入 □ 執行 □ 發送 □ 刪除 □ 外部連線</td>
+<td>□ 每次 □ 高風險時 □ 例外時 □ 不適用</td>
+<td>沙箱、白名單、速率限制、最小權限、資料遮罩</td>
+<td>□ SIEM □ 應用日誌 □ API Gateway □ Agent Trace</td>
+<td>□ 已核准 □ 條件核准 □ 待審 □ 禁止</td>
+</tr>
+<tr>
+<td>AGT-0002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 讀取 □ 寫入 □ 執行 □ 發送 □ 刪除 □ 外部連線</td>
+<td>□ 每次 □ 高風險時 □ 例外時 □ 不適用</td>
+<td>沙箱、白名單、速率限制、最小權限、資料遮罩</td>
+<td>□ SIEM □ 應用日誌 □ API Gateway □ Agent Trace</td>
+<td>□ 已核准 □ 條件核准 □ 待審 □ 禁止</td>
+</tr>
+<tr>
+<td>AGT-0003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 讀取 □ 寫入 □ 執行 □ 發送 □ 刪除 □ 外部連線</td>
+<td>□ 每次 □ 高風險時 □ 例外時 □ 不適用</td>
+<td>沙箱、白名單、速率限制、最小權限、資料遮罩</td>
+<td>□ SIEM □ 應用日誌 □ API Gateway □ Agent Trace</td>
+<td>□ 已核准 □ 條件核准 □ 待審 □ 禁止</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 控制措施與證據對照</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>控制要求</th>
+<th>適用AI資產</th>
+<th>最低證據</th>
+<th>負責角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄</td>
+<td>所有AI模型、Prompt、RAG、Embedding與Agent應有資產編號、Owner、用途、狀態與風險等級。</td>
+<td>全部</td>
+<td>本清冊、資產核准紀錄、定期審查紀錄。</td>
+<td>AI Asset Owner / ISMS管理代表</td>
+</tr>
+<tr>
+<td>存取控制</td>
+<td>依最小權限、職務區隔與必要知悉原則限制模型、Prompt、知識庫、權重、API Key與工具調用權限。</td>
+<td>全部</td>
+<td>權限清單、RBAC/ABAC設定、PAM紀錄、定期權限審查。</td>
+<td>System Owner / IT / CISO</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>輸入、訓練、微調、RAG與輸出資料應依分類、加密、遮罩、保存期限與合法目的管理。</td>
+<td>模型、RAG、Embedding、Agent</td>
+<td>資料流圖、分類標示、DLP紀錄、加密設定、保存期限清冊。</td>
+<td>Data Owner / DPO</td>
+</tr>
+<tr>
+<td>供應商安全</td>
+<td>第三方AI服務、雲端模型、API與外部工具應完成供應商風險評估、合約、DPA與SLA審查。</td>
+<td>第三方模型、SaaS、API、Agent工具</td>
+<td>供應商審查、雲端服務風險評估、合約/DPA、SLA。</td>
+<td>供應商管理 / 法務 / CISO</td>
+</tr>
+<tr>
+<td>安全開發與測試</td>
+<td>AI系統與Prompt上線前應完成安全測試、Prompt Injection測試、資料外洩測試、濫用情境測試與回滾準備。</td>
+<td>自建模型、Prompt、Agent、RAG</td>
+<td>測試報告、紅隊紀錄、弱點修補紀錄、核准紀錄。</td>
+<td>DevSecOps / MLOps / AI Owner</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>應記錄模型呼叫、使用者、時間、輸入輸出摘要、工具調用、錯誤、異常、敏感資料觸發與管理操作。</td>
+<td>模型服務、API、Agent、RAG</td>
+<td>SIEM紀錄、API Gateway日誌、Agent Trace、DLP/CASB告警。</td>
+<td>SOC / System Owner</td>
+</tr>
+<tr>
+<td>事件應變</td>
+<td>資料外洩、Prompt Injection、模型濫用、供應商事故、錯誤決策、越權工具調用或授權違規應依事件管理流程處理。</td>
+<td>全部</td>
+<td>事件通報紀錄、事件回應紀錄、數位證據保存、事件檢討報告。</td>
+<td>SOC / CISO / AI Owner</td>
+</tr>
+<tr>
+<td>退場管理</td>
+<td>AI資產停用、供應商終止、模型替換或Prompt廢止時，應移除權限、刪除資料、撤銷金鑰、保存必要紀錄並更新清冊。</td>
+<td>全部</td>
+<td>退場紀錄、刪除證明、權限撤銷、金鑰輪替、清冊更新。</td>
+<td>AI Owner / IT / 供應商管理</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 核准與例外管理紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>申請事項</th>
+<th>例外/核准原因</th>
+<th>風險說明</th>
+<th>補償控制</th>
+<th>有效期限</th>
+<th>核准者</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 新增 □ 變更 □ 例外使用 □ 高風險接受 □ 外部分享 □ 退場</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 核准 □ 條件核准 □ 拒絕 □ 待補件</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 新增 □ 變更 □ 例外使用 □ 高風險接受 □ 外部分享 □ 退場</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 核准 □ 條件核准 □ 拒絕 □ 待補件</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 新增 □ 變更 □ 例外使用 □ 高風險接受 □ 外部分享 □ 退場</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 核准 □ 條件核准 □ 拒絕 □ 待補件</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 定期審查紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查日期</th>
+<th>審查範圍</th>
+<th>審查項目</th>
+<th>發現事項</th>
+<th>改善措施</th>
+<th>責任人</th>
+<th>期限</th>
+<th>結案狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>YYYY-MM-DD</td>
+<td>□ 全部AI資產 □ 高風險資產 □ Prompt □ RAG □ Agent □ 第三方模型</td>
+<td>Owner、用途、版本、風險、權限、授權、資料、日誌、事件、退場。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已結案 □ 延期</td>
+</tr>
+<tr>
+<td>YYYY-MM-DD</td>
+<td>□ 全部AI資產 □ 高風險資產 □ Prompt □ RAG □ Agent □ 第三方模型</td>
+<td>Owner、用途、版本、風險、權限、授權、資料、日誌、事件、退場。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已結案 □ 延期</td>
+</tr>
+<tr>
+<td>YYYY-MM-DD</td>
+<td>□ 全部AI資產 □ 高風險資產 □ Prompt □ RAG □ Agent □ 第三方模型</td>
+<td>Owner、用途、版本、風險、權限、授權、資料、日誌、事件、退場。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已結案 □ 延期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 清冊維護與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>要求</th>
+<th>保存期限</th>
+<th>保存位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI資產主清冊</td>
+<td>保持最新，所有新增、變更、停用與退場均應於五個工作日內更新。</td>
+<td>資產有效期間加至少三年，或依法規/合約要求。</td>
+<td>受控DMS / GRC系統 / CMDB</td>
+<td>AI Asset Owner / ISMS管理代表</td>
+</tr>
+<tr>
+<td>Prompt版本紀錄</td>
+<td>保存Prompt版本、差異、核准、測試與上線紀錄。</td>
+<td>使用期間加至少三年。</td>
+<td>版本控制系統 / DMS</td>
+<td>Prompt Owner</td>
+</tr>
+<tr>
+<td>模型與資料審查證據</td>
+<td>保存模型卡、資料卡、風險評估、測試報告、授權審查與供應商審查。</td>
+<td>使用期間加至少五年，或依高風險要求延長。</td>
+<td>GRC / DMS / MLOps平台</td>
+<td>AI Owner / Data Owner / 法務</td>
+</tr>
+<tr>
+<td>日誌與監控紀錄</td>
+<td>保存高風險AI資產存取、推論、工具調用、管理操作與告警紀錄。</td>
+<td>至少一年；事件相關紀錄依事件保存要求。</td>
+<td>SIEM / Log平台 / 安全資料湖</td>
+<td>SOC / System Owner</td>
+</tr>
+<tr>
+<td>退場與刪除證明</td>
+<td>保存模型停用、權限撤銷、資料刪除、金鑰輪替、供應商刪除確認與清冊更新證據。</td>
+<td>至少三年，或依法規/合約要求。</td>
+<td>DMS / GRC / 供應商管理系統</td>
+<td>AI Owner / IT / 供應商管理</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核面向</th>
+<th>檢查問題</th>
+<th>預期證據</th>
+<th>稽核結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>是否所有正式使用、PoC、第三方、開源、Prompt、RAG與Agent皆已納入清冊？</td>
+<td>清冊、採購紀錄、雲端AI服務清冊、CMDB、MLOps平台清單。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>責任歸屬</td>
+<td>每項AI資產是否有Owner、Custodian、使用者範圍與核准者？</td>
+<td>清冊、RACI、任命紀錄、核准紀錄。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>風險管理</td>
+<td>AI資產是否依資料敏感度、用途、供應商、跨境與業務影響完成風險分級？</td>
+<td>風險評估表、風險登錄、AI風險矩陣、剩餘風險接受。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>資料治理</td>
+<td>資料來源、輸入限制、RAG知識庫、Embedding、保存期限與刪除要求是否明確？</td>
+<td>資料流圖、資料卡、RAG清冊、保存期限清冊、刪除紀錄。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>授權與供應鏈</td>
+<td>第三方模型與開源模型是否完成授權、合約、DPA、SLA與第四方審查？</td>
+<td>授權審查、合約、DPA、供應商評估、第四方登錄。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>安全控制</td>
+<td>Prompt、Agent、RAG與模型服務是否具存取控制、日誌、監控、測試與事件應變要求？</td>
+<td>權限設定、SIEM紀錄、Prompt測試報告、Agent Trace、事件紀錄。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+<tr>
+<td>持續審查</td>
+<td>清冊是否依週期審查，且重大變更、事件或供應商條款變更後即時更新？</td>
+<td>定期審查紀錄、變更紀錄、管理審查輸入、CAPA。</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 文件完成前檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>所有表格均使用指定格式：&lt;table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8"&gt;</td>
+<td>□ 已確認</td>
+<td>本文件所有表格均使用指定格式。</td>
+</tr>
+<tr>
+<td>所有表格內容文字均向上對齊</td>
+<td>□ 已確認</td>
+<td>已於CSS設定 td, th { vertical-align: top; }，表格內容文字均向上對齊。</td>
+</tr>
+<tr>
+<td>文件深度符合企業版與驗證稽核使用需求</td>
+<td>□ 已確認</td>
+<td>包含主清冊、Prompt、RAG、Agent、風險、授權、控制、審查與稽核證據。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

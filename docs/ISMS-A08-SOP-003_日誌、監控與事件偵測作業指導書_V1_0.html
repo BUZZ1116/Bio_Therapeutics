@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-003 日誌、監控與事件偵測作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-003 日誌、監控與事件偵測作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-003</td>
+<td>日誌、監控與事件偵測作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-003</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>SOC負責人 / SIEM Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Incident Response Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端安全審查</td>
+<td></td>
+<td>Cloud Security Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>應用與DevSecOps審查</td>
+<td></td>
+<td>Application Security Owner / DevSecOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與合規審查</td>
+<td></td>
+<td>DPO / 法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範組織之日誌管理、資安監控、事件偵測、告警分級、通報升級、監控規則維護、日誌完整性保護、保存期限、隱私與合規要求及監控有效性評估，以確保資訊安全事件能被及時發現、正確分析、有效回應並保留可稽核之證據。</p>
+<p>本文件同時支援ISO/IEC 27001:2022 Annex A.8.15「Logging」、A.8.16「Monitoring activities」、A.8.17「Clock synchronization」及事件管理、存取控制、弱點管理、雲端安全、供應鏈安全、AI治理、隱私保護與營運持續之要求。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有關鍵資訊資產、對外服務、特權存取、身分驗證、雲端控制平面、資料存取、AI模型服務及安全設備，應產生日誌並納入監控。</li>
+<li>日誌應具備完整性、可用性、可追溯性、時間一致性、存取管制與防竄改能力，並依風險、法規、合約與稽核要求保存。</li>
+<li>監控應採風險導向，優先覆蓋高價值資產、外部暴露系統、PII/客戶資料、高機密資料、關鍵流程、雲端與AI服務。</li>
+<li>告警應分級、去重、關聯、指派Owner、紀錄處置結果，並與事件通報、事件回應、數位證據保存及事後檢討連動。</li>
+<li>監控規則、偵測案例與告警門檻應定期檢討，並結合威脅情資、弱點資訊、攻擊技術、事件經驗與業務變更持續改善。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌（Log）</td>
+<td>系統、應用程式、設備、服務、使用者、管理員、API、資料庫、雲端平台或安全工具於操作、存取、錯誤、異常、事件、稽核或安全控制活動中產生之紀錄。</td>
+</tr>
+<tr>
+<td>安全監控</td>
+<td>持續或定期收集、分析、關聯與檢視日誌、流量、端點、雲端、身分、資料、應用與AI服務活動，以識別異常、攻擊、違規或控制失效。</td>
+</tr>
+<tr>
+<td>SIEM</td>
+<td>Security Information and Event Management，用於集中蒐集、關聯分析、搜尋、告警與報表之安全資訊與事件管理平台。</td>
+</tr>
+<tr>
+<td>SOAR</td>
+<td>Security Orchestration, Automation and Response，用於告警自動化、工單、應變劇本、證據蒐集與流程協調之平台。</td>
+</tr>
+<tr>
+<td>EDR / XDR</td>
+<td>Endpoint Detection and Response / Extended Detection and Response，用於端點或跨域偵測、調查與回應之安全工具。</td>
+</tr>
+<tr>
+<td>偵測案例（Detection Use Case）</td>
+<td>針對特定威脅、攻擊技術、風險情境或控制要求所設計之監控邏輯、資料來源、關聯條件、告警門檻與應變動作。</td>
+</tr>
+<tr>
+<td>誤報（False Positive）</td>
+<td>監控系統產生告警但經分析後確認非資安事件或非控制失效之情形。</td>
+</tr>
+<tr>
+<td>漏報（False Negative）</td>
+<td>實際發生異常、攻擊或控制失效，但監控規則未能偵測或未產生有效告警之情形。</td>
+</tr>
+<tr>
+<td>時間同步</td>
+<td>透過可信任時間來源（如NTP）確保所有系統、設備、日誌與監控平台時間一致，以支援事件關聯、鑑識與稽核。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准監控資源、重大監控缺口風險接受、跨部門改善方案與重大事件升級決策。</td>
+<td>資源核准、管理審查決議、風險接受紀錄。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>定義監控策略、告警升級準則、重大事件通報要求與監控有效性目標。</td>
+<td>監控策略、KPI/KRI、重大事件決策紀錄。</td>
+</tr>
+<tr>
+<td>SOC負責人</td>
+<td>管理SOC運作、告警分派、事件初判、偵測規則維護、值班排程與監控品質。</td>
+<td>SOC值班紀錄、告警處理紀錄、規則調整紀錄。</td>
+</tr>
+<tr>
+<td>SIEM / SOAR Owner</td>
+<td>維護日誌接收、解析、關聯規則、儀表板、告警流程、自動化劇本與保存設定。</td>
+<td>SIEM設定、規則清單、SOAR Playbook。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>確保系統與應用程式產生必要日誌、保留必要欄位、支援調查及修正控制缺失。</td>
+<td>日誌設定、應用稽核日誌、修正紀錄。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>確保雲端控制平面、IAM、網路、儲存、工作負載與雲端安全服務納入監控。</td>
+<td>雲端日誌、CSPM/CWPP報告、雲端告警紀錄。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>管理防火牆、IDS/IPS、WAF、VPN、DNS、Proxy、NDR與網路流量日誌。</td>
+<td>網路安全日誌、規則變更、流量告警。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>管理端點日誌、EDR/XDR告警、惡意程式偵測、裝置健康狀態與隔離動作。</td>
+<td>EDR告警、端點調查、隔離紀錄。</td>
+</tr>
+<tr>
+<td>DevSecOps / AppSec Owner</td>
+<td>管理CI/CD、程式碼、API、容器、Kubernetes、Secrets與應用安全監控。</td>
+<td>Pipeline日誌、API告警、容器監控紀錄。</td>
+</tr>
+<tr>
+<td>AI / MLOps Owner</td>
+<td>確保AI模型服務、Prompt應用、RAG資料源、推論API、模型版本與資料管線具適當日誌與偵測。</td>
+<td>AI服務日誌、模型監控、Prompt風險告警。</td>
+</tr>
+<tr>
+<td>DPO / 法務 / 法遵</td>
+<td>審查涉及PII、員工監控、跨境日誌、資料保存與揭露之合法性與最小化要求。</td>
+<td>隱私審查、法遵意見、保存要求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 日誌與監控作業流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>流程階段</th>
+<th>作業內容</th>
+<th>責任角色</th>
+<th>輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 監控範圍識別</td>
+<td>依資產清冊、風險評鑑、資料分類、雲端服務、AI服務、供應商與關鍵流程識別應納入監控之資產。</td>
+<td>SOC / ISMS管理代表 / 資產Owner</td>
+<td>監控範圍清單、日誌來源清冊。</td>
+</tr>
+<tr>
+<td>2. 日誌需求定義</td>
+<td>定義日誌類型、欄位、頻率、保存期限、敏感資料遮罩、時間同步、傳輸與存取要求。</td>
+<td>SIEM Owner / System Owner</td>
+<td>日誌需求矩陣。</td>
+</tr>
+<tr>
+<td>3. 日誌接入與解析</td>
+<td>將日誌安全傳送至SIEM、資料湖或集中日誌平台，完成解析、標準化、分類與完整性檢查。</td>
+<td>SIEM Owner / IT</td>
+<td>日誌接入紀錄、解析規則。</td>
+</tr>
+<tr>
+<td>4. 偵測規則設計</td>
+<td>依威脅情資、MITRE ATT&amp;CK、弱點、事件經驗、法規與控制要求建立偵測案例。</td>
+<td>SOC / Threat Detection Engineer</td>
+<td>偵測案例清單、關聯規則。</td>
+</tr>
+<tr>
+<td>5. 告警分級與處置</td>
+<td>依告警嚴重度、資產重要性、資料敏感度、攻擊階段與影響範圍進行初判、指派、升級與通報。</td>
+<td>SOC Analyst / Incident Manager</td>
+<td>告警工單、事件通報紀錄。</td>
+</tr>
+<tr>
+<td>6. 調查與證據保存</td>
+<td>保留相關日誌、封存證據、記錄查詢、關聯分析、鑑識線索與處置行動。</td>
+<td>SOC / Digital Evidence Custodian</td>
+<td>調查紀錄、證據保存紀錄。</td>
+</tr>
+<tr>
+<td>7. 效能與品質檢討</td>
+<td>分析告警量、誤報、漏報、MTTD、MTTA、MTTR、資料來源缺口、規則有效性與改善行動。</td>
+<td>SOC負責人 / CISO</td>
+<td>KPI/KRI、規則調整、CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 日誌來源與最低蒐集要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>日誌來源</th>
+<th>最低蒐集內容</th>
+<th>監控重點</th>
+<th>保存證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分識別與存取管理（IAM/SSO/MFA）</td>
+<td>登入成功/失敗、MFA挑戰、特權授權、帳號建立/停用、密碼重設、角色變更、異常地區與裝置。</td>
+<td>暴力破解、MFA疲勞攻擊、帳號接管、特權濫用、不可能旅行。</td>
+<td>IAM日誌、SSO報告、MFA告警。</td>
+</tr>
+<tr>
+<td>作業系統與伺服器</td>
+<td>登入、特權操作、服務啟停、系統錯誤、稽核事件、檔案權限變更、程序建立、排程任務。</td>
+<td>權限提升、惡意程序、橫向移動、持久化、未授權設定變更。</td>
+<td>OS Audit Log、EDR事件。</td>
+</tr>
+<tr>
+<td>網路設備與安全設備</td>
+<td>防火牆允許/拒絕、VPN連線、IDS/IPS告警、WAF事件、Proxy、DNS、NAT、管理登入、規則變更。</td>
+<td>掃描、C2連線、資料外傳、異常DNS、規則繞過、外部攻擊。</td>
+<td>Firewall/WAF/IDS/Proxy/DNS日誌。</td>
+</tr>
+<tr>
+<td>資料庫與資料平台</td>
+<td>登入、查詢、管理操作、權限變更、資料匯出、批次作業、異常大量存取、失敗交易。</td>
+<td>未授權查詢、大量匯出、敏感資料存取、資料竄改。</td>
+<td>DB Audit Log、資料存取報表。</td>
+</tr>
+<tr>
+<td>應用程式與API</td>
+<td>使用者操作、管理功能、API呼叫、錯誤、授權失敗、輸入驗證失敗、交易異常、金鑰使用。</td>
+<td>OWASP攻擊、API濫用、越權、異常交易、金鑰外洩。</td>
+<td>Application Log、API Gateway Log。</td>
+</tr>
+<tr>
+<td>端點與行動裝置</td>
+<td>惡意程式、隔離、程序、檔案、USB、裝置健康、磁碟加密、EDR告警、異常連線。</td>
+<td>惡意軟體、資料外洩、未授權媒體、異常程序、勒索軟體。</td>
+<td>EDR/XDR、MDM報表。</td>
+</tr>
+<tr>
+<td>雲端平台</td>
+<td>控制平面API、IAM、儲存、KMS、網路、安全群組、工作負載、容器、Serverless、管理事件。</td>
+<td>公開儲存、過度權限、金鑰濫用、雲端橫向移動、異常建立資源。</td>
+<td>CloudTrail/Activity Log/CSPM告警。</td>
+</tr>
+<tr>
+<td>CI/CD與DevSecOps</td>
+<td>程式碼提交、合併、建置、部署、Secrets掃描、映像掃描、Pipeline失敗、權限變更。</td>
+<td>供應鏈攻擊、未授權部署、Secrets外洩、惡意程式碼注入。</td>
+<td>Pipeline Log、Repository Audit Log。</td>
+</tr>
+<tr>
+<td>AI/MLOps平台</td>
+<td>模型部署、推論API、Prompt輸入類型、RAG查詢、資料集存取、模型版本、管理操作、異常輸出。</td>
+<td>Prompt Injection、越權檢索、模型服務濫用、敏感資料輸出、資料管線污染。</td>
+<td>AI服務日誌、模型監控報告。</td>
+</tr>
+<tr>
+<td>備份與復原平台</td>
+<td>備份成功/失敗、備份刪除、復原、保留政策變更、不可變備份設定、管理員操作。</td>
+<td>勒索攻擊前置行為、備份刪除、未授權復原、保留失效。</td>
+<td>備份日誌、復原測試紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 日誌欄位與品質要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>要求類別</th>
+<th>最低要求</th>
+<th>品質檢核方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>識別資訊</td>
+<td>日誌應包含事件ID、事件類型、使用者/服務帳號、來源IP、目的IP、系統名稱、資產ID、應用程式、API端點或資源名稱。</td>
+<td>抽樣檢查日誌欄位完整性。</td>
+</tr>
+<tr>
+<td>時間資訊</td>
+<td>應包含時間戳記、時區、系統時間來源，並與組織可信任時間來源同步。</td>
+<td>NTP狀態、時間偏差檢查。</td>
+</tr>
+<tr>
+<td>行為內容</td>
+<td>應記錄操作內容、成功/失敗、結果碼、錯誤訊息、資料量、物件、權限變更或安全控制結果。</td>
+<td>日誌解析與事件重建測試。</td>
+</tr>
+<tr>
+<td>關聯欄位</td>
+<td>應支援Session ID、Request ID、Trace ID、Correlation ID、Transaction ID或Cloud Request ID。</td>
+<td>跨系統關聯查詢測試。</td>
+</tr>
+<tr>
+<td>敏感資料保護</td>
+<td>日誌不得記錄明文密碼、私鑰、Token、完整信用卡號、完整PII或未經核准之高機密內容；必要欄位應遮罩或雜湊。</td>
+<td>DLP檢查、日誌內容抽查。</td>
+</tr>
+<tr>
+<td>完整性與不可否認性</td>
+<td>重要日誌應採集中保存、防刪改控制、雜湊、WORM、不可變儲存、權限控管或其他完整性保護。</td>
+<td>完整性驗證、存取權限審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 日誌傳輸、集中保存與防竄改要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>適用情境</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全傳輸</td>
+<td>日誌傳輸應使用TLS、Syslog over TLS、Agent安全通道、VPN、專線或雲端受控通道，避免明文傳輸敏感日誌。</td>
+<td>跨網段、跨雲端、供應商代管、外部SOC。</td>
+<td>傳輸設定、加密證據。</td>
+</tr>
+<tr>
+<td>集中保存</td>
+<td>關鍵日誌應傳送至SIEM、集中日誌平台、資料湖或不可變儲存，不得僅留存於本機。</td>
+<td>關鍵系統、對外系統、特權系統。</td>
+<td>日誌接入清單、平台查詢紀錄。</td>
+</tr>
+<tr>
+<td>防刪改控制</td>
+<td>限制日誌管理權限，啟用保留鎖定、不可變儲存、WORM、雜湊驗證或備份封存。</td>
+<td>事件證據、稽核日誌、法規或合約要求。</td>
+<td>保存策略、權限設定、完整性檢查。</td>
+</tr>
+<tr>
+<td>可用性保護</td>
+<td>日誌平台應具容量監控、備份、故障告警、資料接收中斷告警及復原計畫。</td>
+<td>SIEM、SOAR、集中日誌平台。</td>
+<td>容量報表、健康檢查、備份紀錄。</td>
+</tr>
+<tr>
+<td>跨境與第三方保存</td>
+<td>日誌若含PII、客戶資料或跨境資料，應完成法務、DPO與供應商審查。</td>
+<td>外部SOC、雲端SIEM、跨境代管。</td>
+<td>DPA、跨境評估、供應商審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 時間同步要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>要求</th>
+<th>檢查頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可信任時間來源</td>
+<td>所有關鍵系統、網路設備、安全設備、雲端工作負載與日誌平台應使用可信任NTP或雲端時間服務。</td>
+<td>至少每季檢查；重大事件調查前確認。</td>
+<td>NTP設定、時間同步狀態。</td>
+</tr>
+<tr>
+<td>時間偏差管理</td>
+<td>若系統時間偏差超過組織門檻，應修正並評估對日誌關聯、事件分析與稽核證據之影響。</td>
+<td>持續監控或每月抽查。</td>
+<td>時間偏差報告、修正紀錄。</td>
+</tr>
+<tr>
+<td>時區標準</td>
+<td>日誌應明確記錄時區；跨國、跨雲端與跨供應商環境應統一轉換或保留原始時區資訊。</td>
+<td>日誌接入時檢查。</td>
+<td>解析規則、欄位標準。</td>
+</tr>
+<tr>
+<td>事件鑑識要求</td>
+<td>涉及重大事件、法遵調查或數位證據時，應記錄時間來源、查詢時間與證據封存時間。</td>
+<td>每次重大事件。</td>
+<td>鑑識紀錄、證據保存紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 偵測案例設計與維護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>偵測案例類別</th>
+<th>偵測目標</th>
+<th>主要資料來源</th>
+<th>處置方向</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分與帳號攻擊</td>
+<td>暴力破解、密碼噴灑、MFA疲勞攻擊、不可能旅行、異常登入、帳號接管。</td>
+<td>IAM、SSO、MFA、VPN、EDR。</td>
+<td>封鎖帳號、強制重設、提升事件分級。</td>
+</tr>
+<tr>
+<td>特權濫用</td>
+<td>特權帳號異常登入、非工作時間操作、權限提升、PAM繞過、敏感設定變更。</td>
+<td>PAM、IAM、OS、DB、Cloud Audit。</td>
+<td>通知Owner、暫停權限、啟動調查。</td>
+</tr>
+<tr>
+<td>惡意程式與勒索攻擊</td>
+<td>EDR高風險告警、異常加密、惡意程序、C2連線、備份刪除、橫向移動。</td>
+<td>EDR/XDR、NDR、DNS、Proxy、Backup Log。</td>
+<td>隔離端點、封鎖IOC、啟動事件應變。</td>
+</tr>
+<tr>
+<td>資料外洩與大量存取</td>
+<td>大量下載、異常資料庫查詢、DLP告警、外部分享、雲端儲存公開、敏感資料匯出。</td>
+<td>DLP、DB Audit、CASB、Cloud Storage、Proxy。</td>
+<td>撤銷權限、封存證據、通知DPO。</td>
+</tr>
+<tr>
+<td>Web與API攻擊</td>
+<td>SQL Injection、XSS、RCE、Path Traversal、API濫用、Token異常、WAF高風險告警。</td>
+<td>WAF、API Gateway、Application Log、SIEM。</td>
+<td>封鎖來源、修補弱點、啟動AppSec調查。</td>
+</tr>
+<tr>
+<td>雲端控制平面攻擊</td>
+<td>異常建立資源、關閉日誌、修改安全群組、KMS金鑰異常、IAM Policy變更。</td>
+<td>Cloud Audit Log、CSPM、CNAPP。</td>
+<td>回復設定、撤銷Token、雲端事件調查。</td>
+</tr>
+<tr>
+<td>DevSecOps供應鏈攻擊</td>
+<td>未授權合併、Pipeline異常、Secrets洩漏、惡意套件、容器映像高風險弱點。</td>
+<td>Repository、CI/CD、SCA、Container Registry。</td>
+<td>阻擋部署、撤換Secrets、追蹤提交者。</td>
+</tr>
+<tr>
+<td>AI與Prompt攻擊</td>
+<td>Prompt Injection、異常高頻推論、越權RAG檢索、敏感資料輸出、模型端點濫用。</td>
+<td>AI Gateway、Model Serving、RAG Log、DLP。</td>
+<td>限制端點、調整Guardrail、通報AI治理Owner。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 告警分級、升級與通報</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>告警等級</th>
+<th>判定條件</th>
+<th>初步處置時限</th>
+<th>升級要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>P1 重大 / Critical</td>
+<td>疑似資料外洩、勒索攻擊、已確認入侵、關鍵服務受影響、特權帳號遭接管、雲端控制平面遭濫用、AI服務造成重大資料揭露。</td>
+<td>15至30分鐘內初判並通知Incident Manager。</td>
+<td>立即通報CISO、IT主管、System Owner；必要時啟動事件管理與危機溝通。</td>
+</tr>
+<tr>
+<td>P2 高 / High</td>
+<td>高可信度攻擊、外部暴露系統高風險告警、重大弱點遭嘗試利用、異常大量資料存取或高價值資產異常。</td>
+<td>1小時內初判並建立工單。</td>
+<td>通知SOC負責人、資產Owner與相關技術Owner。</td>
+</tr>
+<tr>
+<td>P3 中 / Medium</td>
+<td>需進一步確認之異常行為、政策違規、掃描、單一系統異常、可疑登入或控制失效。</td>
+<td>1個工作日內處理。</td>
+<td>依分析結果升級或關閉。</td>
+</tr>
+<tr>
+<td>P4 低 / Low</td>
+<td>資訊性告警、低風險異常、已知誤報、一般政策提醒或基準偏差。</td>
+<td>依排程檢視。</td>
+<td>納入趨勢分析與規則調整。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. SOC告警處理作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>作業內容</th>
+<th>責任角色</th>
+<th>必要紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>告警接收</td>
+<td>接收SIEM、EDR、DLP、WAF、雲端、供應商、使用者通報或外部情資告警。</td>
+<td>SOC Analyst</td>
+<td>告警ID、時間、來源、等級。</td>
+</tr>
+<tr>
+<td>初步判斷</td>
+<td>確認告警真實性、影響資產、使用者、資料敏感度、是否重複、是否已有事件工單。</td>
+<td>SOC Analyst</td>
+<td>初判紀錄、關聯查詢。</td>
+</tr>
+<tr>
+<td>資料補充</td>
+<td>查詢相關日誌、端點狀態、網路流量、雲端活動、IAM事件、弱點與資產重要性。</td>
+<td>SOC Analyst / Tier 2</td>
+<td>查詢紀錄、證據連結。</td>
+</tr>
+<tr>
+<td>分級與指派</td>
+<td>依嚴重度、影響範圍與處理手冊分派至事件、工單、問題管理或例行追蹤。</td>
+<td>SOC Lead</td>
+<td>工單、指派紀錄。</td>
+</tr>
+<tr>
+<td>遏止與通報</td>
+<td>必要時執行封鎖、隔離、停用帳號、撤銷Token、阻擋IP、調整WAF或通報Owner。</td>
+<td>SOC / IT / Incident Manager</td>
+<td>處置紀錄、通報紀錄。</td>
+</tr>
+<tr>
+<td>關閉與回饋</td>
+<td>確認處置完成、記錄根因、誤報原因、規則改善需求與後續追蹤事項。</td>
+<td>SOC Analyst / SOC Lead</td>
+<td>關閉紀錄、規則調整需求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 日誌存取控制與隱私保護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最小權限</td>
+<td>日誌平台查詢、匯出、規則修改、保存設定與刪除權限應依職務分離與最小權限原則授權。</td>
+<td>權限清單、存取審查紀錄。</td>
+</tr>
+<tr>
+<td>特權操作監控</td>
+<td>SIEM管理員、雲端日誌管理員、SOC特權帳號與供應商管理帳號應納入PAM或特權監控。</td>
+<td>PAM日誌、管理操作紀錄。</td>
+</tr>
+<tr>
+<td>日誌匯出控制</td>
+<td>匯出含PII、客戶資料、事件證據或高機密資料之日誌，需核准、加密、標示與保存紀錄。</td>
+<td>匯出申請、傳輸紀錄。</td>
+</tr>
+<tr>
+<td>隱私最小化</td>
+<td>日誌蒐集應符合目的必要、最小化與合法性，避免過度蒐集員工行為或敏感個資。</td>
+<td>DPO審查、日誌欄位設計。</td>
+</tr>
+<tr>
+<td>遮罩與去識別</td>
+<td>分析、報表、訓練或對外提供日誌時，應遮罩或去識別不必要PII與敏感資訊。</td>
+<td>遮罩規則、資料處理紀錄。</td>
+</tr>
+<tr>
+<td>第三方存取</td>
+<td>外部SOC、MSSP、雲端供應商或鑑識廠商存取日誌，應有NDA、DPA、授權、範圍、期限與稽核權。</td>
+<td>合約、存取紀錄、供應商審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 雲端、SaaS與供應商監控要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控對象</th>
+<th>最低要求</th>
+<th>告警重點</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>IaaS / PaaS控制平面</td>
+<td>啟用管理活動、IAM、網路、KMS、儲存、資料庫、容器與安全服務日誌。</td>
+<td>關閉日誌、公開資源、金鑰異常、權限提升、異常地區。</td>
+<td>雲端Audit Log、CSPM報告。</td>
+</tr>
+<tr>
+<td>SaaS平台</td>
+<td>啟用登入、管理、資料分享、外部存取、下載、權限變更、API Token與裝置存取日誌。</td>
+<td>大量下載、外部分享、OAuth濫用、管理員異常操作。</td>
+<td>SaaS Audit Log、CASB告警。</td>
+</tr>
+<tr>
+<td>供應商代管系統</td>
+<td>合約要求供應商提供安全日誌、事件通報、監控證據、稽核報告或定期安全報表。</td>
+<td>服務中斷、未授權存取、弱點利用、資料外洩疑慮。</td>
+<td>供應商報告、SLA與通報紀錄。</td>
+</tr>
+<tr>
+<td>外部SOC / MSSP</td>
+<td>明確定義監控範圍、告警分級、通報時限、證據保存、資料處理、保密與服務品質指標。</td>
+<td>未即時通報、漏報、誤報過高、證據不足。</td>
+<td>服務報告、月會紀錄、SLA報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. AI、Prompt與MLOps監控要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控領域</th>
+<th>監控內容</th>
+<th>偵測重點</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI服務存取</td>
+<td>使用者、服務帳號、API Key、Token、模型端點、來源IP、請求量與失敗狀態。</td>
+<td>金鑰濫用、異常高頻、未授權呼叫、外部濫用。</td>
+<td>AI Gateway Log、API Log。</td>
+</tr>
+<tr>
+<td>Prompt與輸入</td>
+<td>記錄Prompt類型、風險標籤、資料分類、是否包含敏感資料與安全過濾結果；避免保存不必要明文敏感內容。</td>
+<td>Prompt Injection、敏感資料輸入、越權工具調用。</td>
+<td>Prompt安全檢查紀錄。</td>
+</tr>
+<tr>
+<td>RAG與資料檢索</td>
+<td>記錄檢索資料源、文件分類、查詢者、檢索結果摘要、權限判斷與拒絕事件。</td>
+<td>越權檢索、敏感資料外洩、資料源污染。</td>
+<td>RAG查詢日誌、權限判斷紀錄。</td>
+</tr>
+<tr>
+<td>模型輸出</td>
+<td>監控高風險輸出、敏感資料輸出、政策違規、未覆核輸出外傳與異常回應。</td>
+<td>資料外洩、不當輸出、幻覺造成決策風險。</td>
+<td>AI輸出覆核紀錄、DLP告警。</td>
+</tr>
+<tr>
+<td>MLOps操作</td>
+<td>模型部署、版本切換、資料集存取、訓練任務、特徵資料、Notebook、模型權重與Pipeline操作。</td>
+<td>未授權模型變更、資料污染、模型竄改、供應鏈攻擊。</td>
+<td>MLOps Audit Log、模型版本清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 日誌保存期限與分級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>日誌類型</th>
+<th>建議線上保存</th>
+<th>建議封存保存</th>
+<th>保存考量</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>重大事件相關日誌</td>
+<td>事件處理期間全量可查詢</td>
+<td>至少3至7年或依法規/合約要求</td>
+<td>鑑識、法務、客戶通報、稽核與索賠。</td>
+</tr>
+<tr>
+<td>IAM / SSO / MFA日誌</td>
+<td>至少180天</td>
+<td>至少3年</td>
+<td>帳號接管、特權濫用、存取稽核。</td>
+</tr>
+<tr>
+<td>雲端控制平面日誌</td>
+<td>至少180天</td>
+<td>至少3年</td>
+<td>雲端管理操作、供應鏈、資料外洩調查。</td>
+</tr>
+<tr>
+<td>安全設備日誌</td>
+<td>至少90至180天</td>
+<td>至少1至3年</td>
+<td>攻擊偵測、事件關聯、趨勢分析。</td>
+</tr>
+<tr>
+<td>應用與API日誌</td>
+<td>至少90天</td>
+<td>依資料分類與合約要求保存</td>
+<td>交易追蹤、異常分析、客戶爭議。</td>
+</tr>
+<tr>
+<td>資料庫稽核日誌</td>
+<td>至少180天</td>
+<td>至少3年或依法規要求</td>
+<td>敏感資料存取、PII處理與合規稽核。</td>
+</tr>
+<tr>
+<td>AI服務與MLOps日誌</td>
+<td>至少90至180天</td>
+<td>依AI治理、合約、風險與模型生命週期要求</td>
+<td>模型版本追蹤、輸入輸出責任、AI事件調查。</td>
+</tr>
+<tr>
+<td>一般系統作業日誌</td>
+<td>至少30至90天</td>
+<td>依作業需求與風險保存</td>
+<td>故障排除與營運分析。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 監控有效性測試與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試項目</th>
+<th>作業要求</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌接入完整性檢查</td>
+<td>確認關鍵日誌來源是否持續傳送、解析正常、欄位完整且無中斷。</td>
+<td>至少每月；重大變更後。</td>
+<td>日誌來源健康報告。</td>
+</tr>
+<tr>
+<td>偵測規則測試</td>
+<td>使用測試事件、Purple Team、攻擊模擬或歷史事件重放驗證規則可產生告警。</td>
+<td>至少每季；重大規則變更後。</td>
+<td>測試紀錄、告警截圖。</td>
+</tr>
+<tr>
+<td>誤報率分析</td>
+<td>分析高量誤報規則、低品質資料來源、重複告警與調整需求。</td>
+<td>每月。</td>
+<td>誤報分析、規則調整紀錄。</td>
+</tr>
+<tr>
+<td>漏報與事件回饋</td>
+<td>事件檢討時識別漏報原因，更新資料來源、規則、門檻或Playbook。</td>
+<td>每次重大事件後。</td>
+<td>事件檢討報告、CAPA。</td>
+</tr>
+<tr>
+<td>威脅情資導入</td>
+<td>依威脅情資、重大CVE、攻擊活動、供應商公告與產業通報更新偵測內容。</td>
+<td>持續；至少每月檢討。</td>
+<td>情資導入紀錄、IOC清單。</td>
+</tr>
+<tr>
+<td>監控覆蓋率檢討</td>
+<td>比對資產清冊、風險登錄、雲端服務、AI服務與日誌來源清冊，識別監控缺口。</td>
+<td>至少每季。</td>
+<td>覆蓋率報告、改善計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>關鍵日誌接入覆蓋率</td>
+<td>已接入且正常解析之關鍵日誌來源 / 應接入關鍵日誌來源。</td>
+<td>關鍵系統目標100%。</td>
+<td>監控範圍完整性。</td>
+</tr>
+<tr>
+<td>日誌中斷事件數</td>
+<td>日誌來源中斷、延遲、解析失敗或容量不足之事件數。</td>
+<td>持續下降；重大中斷需升級。</td>
+<td>平台可用性與風險監控。</td>
+</tr>
+<tr>
+<td>MTTD</td>
+<td>Mean Time to Detect，自異常發生至被偵測之平均時間。</td>
+<td>依事件等級設定。</td>
+<td>偵測能力評估。</td>
+</tr>
+<tr>
+<td>MTTA</td>
+<td>Mean Time to Acknowledge，自告警產生至有人員確認處理之平均時間。</td>
+<td>P1/P2告警需符合SLA。</td>
+<td>SOC處理效率。</td>
+</tr>
+<tr>
+<td>誤報率</td>
+<td>確認為誤報之告警數 / 總告警數。</td>
+<td>控制於可營運範圍並持續改善。</td>
+<td>規則品質改善。</td>
+</tr>
+<tr>
+<td>重大告警逾期處理率</td>
+<td>未於SLA內處理之P1/P2告警比例。</td>
+<td>目標0或需立即改善。</td>
+<td>管理升級與資源調整。</td>
+</tr>
+<tr>
+<td>偵測案例更新數</td>
+<td>依威脅情資、事件檢討、弱點與業務變更完成新增或更新之偵測案例數。</td>
+<td>定期更新。</td>
+<td>持續改善與成熟度衡量。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 紀錄保存與稽核證據</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌來源清冊</td>
+<td>日誌來源、資產Owner、接入方式、欄位、保存期限、監控規則與健康狀態。</td>
+<td>SIEM Owner / SOC</td>
+<td>文件有效期間及歷史版本至少3年。</td>
+</tr>
+<tr>
+<td>偵測案例與規則清單</td>
+<td>規則名稱、目的、資料來源、邏輯、門檻、對應威脅、測試紀錄與變更紀錄。</td>
+<td>SOC / Detection Engineer</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>告警處理紀錄</td>
+<td>告警ID、分級、初判、查詢、處置、通報、升級、關閉原因與證據連結。</td>
+<td>SOC</td>
+<td>至少3年或依法規/合約要求。</td>
+</tr>
+<tr>
+<td>重大事件日誌證據</td>
+<td>原始日誌、查詢結果、匯出檔、完整性驗證、保存位置與保管鏈紀錄。</td>
+<td>Incident Manager / Evidence Custodian</td>
+<td>至少3至7年或依案件需求。</td>
+</tr>
+<tr>
+<td>日誌平台設定</td>
+<td>接入設定、解析規則、保存策略、權限設定、時間同步、容量與備份設定。</td>
+<td>SIEM Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>監控有效性報告</td>
+<td>KPI/KRI、誤報、漏報、覆蓋率、規則測試、改善計畫與管理審查輸入。</td>
+<td>ISMS管理代表 / SOC負責人</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌範圍完整性</td>
+<td>是否依資產重要性、風險、控制要求與資料敏感度定義日誌來源並接入集中平台。</td>
+<td>日誌來源清冊、資產清冊、SIEM接入狀態。</td>
+</tr>
+<tr>
+<td>日誌品質</td>
+<td>日誌是否具備必要欄位、時間同步、可關聯性、完整性與敏感資料保護。</td>
+<td>日誌樣本、解析規則、時間同步紀錄。</td>
+</tr>
+<tr>
+<td>監控有效性</td>
+<td>是否建立偵測案例、告警分級、規則測試、誤報分析與漏報改善。</td>
+<td>偵測案例清單、測試紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>告警處理</td>
+<td>P1/P2告警是否依SLA處理、升級、通報並保存處置紀錄。</td>
+<td>告警工單、通報紀錄、事件紀錄。</td>
+</tr>
+<tr>
+<td>權限與隱私</td>
+<td>日誌平台存取是否最小權限、匯出受控、PII與敏感資料是否妥善保護。</td>
+<td>權限審查、匯出紀錄、DPO審查。</td>
+</tr>
+<tr>
+<td>保存與防竄改</td>
+<td>日誌是否依保存期限保存，重大事件證據是否具完整性與保管鏈。</td>
+<td>保存策略、WORM設定、證據保存紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 附錄A：日誌來源清冊欄位範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>範例 / 說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌來源ID</td>
+<td>日誌來源唯一識別碼。</td>
+<td>LOG-SRC-0001。</td>
+</tr>
+<tr>
+<td>系統 / 資產名稱</td>
+<td>產生日誌之資產、系統、服務、雲端資源或AI服務。</td>
+<td>SSO、CloudTrail、EDR、Model Gateway。</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>負責日誌來源與內容品質之角色。</td>
+<td>System Owner / Cloud Owner / MLOps Owner。</td>
+</tr>
+<tr>
+<td>日誌類型</td>
+<td>登入、管理、資料存取、網路、安全、應用、AI、備份、稽核等。</td>
+<td>Audit / Security / Access / API。</td>
+</tr>
+<tr>
+<td>接入方式</td>
+<td>Agent、API、Syslog TLS、Cloud Connector、File Forwarder或手動匯入。</td>
+<td>Syslog TLS。</td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>線上保存與封存保存期限。</td>
+<td>Online 180 days / Archive 3 years。</td>
+</tr>
+<tr>
+<td>監控規則</td>
+<td>對應偵測案例、SIEM規則、儀表板或報表。</td>
+<td>UC-IAM-001 Impossible Travel。</td>
+</tr>
+<tr>
+<td>健康狀態</td>
+<td>正常、中斷、解析失敗、待接入或待改善。</td>
+<td>正常。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 附錄B：告警處理紀錄範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>範例 / 說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>告警ID</td>
+<td>SIEM/SOAR/EDR或工單系統產生之唯一編號。</td>
+<td>ALERT-YYYY-0001。</td>
+</tr>
+<tr>
+<td>告警名稱</td>
+<td>偵測規則或告警標題。</td>
+<td>Multiple Failed Login Followed by Success。</td>
+</tr>
+<tr>
+<td>告警等級</td>
+<td>P1 / P2 / P3 / P4。</td>
+<td>P2 High。</td>
+</tr>
+<tr>
+<td>發生時間</td>
+<td>事件發生時間與告警產生時間，含時區。</td>
+<td>YYYY-MM-DD HH:MM UTC+8。</td>
+</tr>
+<tr>
+<td>影響資產</td>
+<td>主機、帳號、IP、雲端資源、應用、API或AI模型服務。</td>
+<td>Account: user@example.com。</td>
+</tr>
+<tr>
+<td>初判結果</td>
+<td>真陽性、誤報、重複告警、需進一步調查或轉事件。</td>
+<td>疑似帳號接管，已升級事件。</td>
+</tr>
+<tr>
+<td>處置行動</td>
+<td>封鎖、隔離、停用帳號、通知Owner、建立事件、調整規則等。</td>
+<td>停用帳號並要求密碼重設。</td>
+</tr>
+<tr>
+<td>關閉原因</td>
+<td>事件已處理、誤報、風險接受、轉工單、規則調整或持續追蹤。</td>
+<td>已完成調查並關閉。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-FRM-005 應用系統安全需求表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-FRM-005 應用系統安全需求表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-FRM-005</td>
+<td>應用系統安全需求表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-FRM-005</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>1. 使用目的與填寫說明</h2>
+<p>本表用於應用系統需求、設計、開發、採購、委外、雲端導入、AI應用導入、重大變更及上線前階段，系統性識別、記錄、審查、核准與追蹤應用系統安全需求。本表應作為安全架構審查、安全開發、安全測試、變更管理、委外驗收、風險評估與稽核證據之一部分。</p>
+<p>填寫時應依系統資料分類、風險等級、對外暴露、身份與權限、資料處理、API、雲端、供應商、AI/RAG/Agent、日誌監控、備份復原、法規合約要求及營運持續需求，定義可驗證的安全需求、驗收標準、責任人、完成期限與證據位置。</p>
+<h2>2. 申請與系統基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求表編號</td>
+<td>ASR-YYYY-0001</td>
+<td>應用系統安全需求表唯一編號。</td>
+</tr>
+<tr>
+<td>填寫日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>系統 / 服務名稱</td>
+<td></td>
+<td>需與資訊及相關資產清冊一致。</td>
+</tr>
+<tr>
+<td>專案 / 變更名稱</td>
+<td></td>
+<td>新系統、重大變更、委外開發、雲端導入或AI應用導入。</td>
+</tr>
+<tr>
+<td>需求來源</td>
+<td>□ 新系統 □ 重大變更 □ 委外開發 □ SaaS導入 □ API整合 □ 雲端導入 □ AI/RAG/Agent □ 法規/客戶要求 □ 事件後改善 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>Business Owner</td>
+<td></td>
+<td>業務需求與風險接受責任人。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td></td>
+<td>系統生命週期與控制落實責任人。</td>
+</tr>
+<tr>
+<td>Product / Project Manager</td>
+<td></td>
+<td>專案規劃與交付追蹤責任人。</td>
+</tr>
+<tr>
+<td>Technical Owner / Architect</td>
+<td></td>
+<td>技術設計與落地責任人。</td>
+</tr>
+<tr>
+<td>Security Reviewer</td>
+<td></td>
+<td>Application Security / Security Architecture審查人。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td></td>
+<td>資料分類、使用與保護核准人。</td>
+</tr>
+<tr>
+<td>DPO / Privacy Owner</td>
+<td></td>
+<td>涉及PII、個資、跨境或隱私要求時填寫。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td></td>
+<td>涉及AI模型、RAG、Prompt、Agent或MLOps時填寫。</td>
+</tr>
+<tr>
+<td>Supplier / Vendor</td>
+<td></td>
+<td>涉及委外、SaaS、API供應商或代管服務時填寫。</td>
+</tr>
+<tr>
+<td>預計上線日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>需求審查狀態</td>
+<td>□ 草稿 □ 待審查 □ 修正中 □ 已核准 □ 有條件核准 □ 不核准 □ 已退場</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>3. 系統風險分級與適用審查強度</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分級項目</th>
+<th>判定問題</th>
+<th>選項 / 結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>系統最高處理資料分類為何？</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料 □ GHG/ESG資料</td>
+<td></td>
+</tr>
+<tr>
+<td>對外暴露</td>
+<td>系統是否對Internet、客戶、供應商、API或行動端開放？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>身份與權限</td>
+<td>是否涉及特權管理、管理後台、批次作業、服務帳號或跨租戶權限？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>業務重要性</td>
+<td>系統是否支援關鍵業務、客戶服務、法規申報或營運持續範圍？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商依賴</td>
+<td>是否由供應商開發、代管、維護或處理資料？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端/SaaS</td>
+<td>是否使用雲端IaaS/PaaS/SaaS、跨區或外部API？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>AI/RAG/Agent</td>
+<td>是否涉及AI模型、生成式AI、RAG、向量資料庫、Prompt或AI Agent？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>法規/合約</td>
+<td>是否有客戶、法規、隱私、跨境、金融、醫療、稽核或認證要求？</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>整體風險等級</td>
+<td>依上述結果評估。</td>
+<td>□ Low □ Medium □ High □ Critical □ AI High Risk</td>
+<td></td>
+</tr>
+<tr>
+<td>最低審查強度</td>
+<td>依風險等級決定安全需求審查深度。</td>
+<td>□ 輕量審查 □ 標準審查 □ 強化審查 □ 管理階層核准</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>4. 資料與隱私安全需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-DATA-001</td>
+<td>系統應明確識別所有資料類型、資料來源、資料去向、資料分類、資料Owner、保存位置與保存期限。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-002</td>
+<td>系統應依資料分類落實資料最小化，僅收集、處理、儲存與傳輸完成業務目的所必要之資料。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-003</td>
+<td>涉及PII或客戶資料時，應完成隱私影響評估、資料主體權利支援、處理目的、法源或合約依據確認。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-004</td>
+<td>敏感資料傳輸應使用核准加密協定，儲存應依資料分類啟用加密與金鑰管理。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-005</td>
+<td>測試、UAT、教育訓練、委外開發與AI評估資料應使用合成、遮罩或去識別資料。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-006</td>
+<td>系統應支援資料保存期限、刪除、封存、備份刪除、資料匯出與資料主體請求處理。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-007</td>
+<td>敏感資料不得出現在URL、錯誤訊息、前端程式、日誌、Analytics、未核准AI Prompt或外部SaaS。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-DATA-008</td>
+<td>跨境傳輸、第三方處理、子處理者與外部API資料傳輸應取得Data Owner、DPO與Legal核准。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>5. 身份驗證與存取控制需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-IAM-001</td>
+<td>系統應使用組織核准之身份來源、SSO、OAuth/OIDC、SAML或等效身份驗證機制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-002</td>
+<td>管理者、特權使用者、遠端存取、供應商存取與高風險操作應啟用MFA。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-003</td>
+<td>系統應依最小權限、職務分離、角色/屬性/租戶/資料Owner設計授權模型。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-004</td>
+<td>所有敏感API與資料操作應於伺服器端執行授權檢查，不得僅依賴前端控制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-005</td>
+<td>服務帳號、API Key、Token與機器身份應具用途、Owner、權限範圍、期限、輪替與審查。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-006</td>
+<td>特權操作應具備審批、PAM/JIT、Session Recording或等效控制，並記錄審計日誌。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-007</td>
+<td>系統應支援到職、異動、離職、角色變更與供應商退場之存取權限撤銷。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-IAM-008</td>
+<td>權限清單應可匯出或查證，並至少依風險定期審查。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>6. 應用與API安全需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-APP-001</td>
+<td>系統應依安全編碼要求防止注入、XSS、CSRF、SSRF、反序列化、檔案上傳與業務邏輯濫用。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-002</td>
+<td>所有外部輸入、API參數、Header、Cookie、Webhook、檔案與AI輸入均應視為不可信並執行白名單驗證。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-003</td>
+<td>錯誤訊息不得揭露Stack Trace、SQL、路徑、Secrets、內部架構、雲端資源或敏感資料。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-004</td>
+<td>API應具備認證、授權、Scope、Rate Limit、Schema驗證、CORS限制、版本管理與審計日誌。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-005</td>
+<td>檔案上傳應限制副檔名、MIME、大小、數量與內容，並執行惡意程式掃描與隔離儲存。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-006</td>
+<td>Session、Cookie與Token應具備Secure、HttpOnly、SameSite、Timeout、撤銷與重新驗證機制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-007</td>
+<td>系統應支援防止濫用控制，例如速率限制、重試限制、Captcha、風險偵測或交易確認。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-APP-008</td>
+<td>對外服務或高風險API應納入WAF、API Gateway、DDoS防護或等效邊界防護。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>7. 安全開發、原始碼與供應鏈需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-SDLC-001</td>
+<td>專案應納入安全需求、威脅模型、安全架構審查、安全編碼、安全測試與Release Gate。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-002</td>
+<td>正式程式碼應經Code Review，敏感功能、權限邏輯、加密、AI、資料處理與API需強化審查。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-003</td>
+<td>Repo應啟用分支保護、審查規則、Commit紀錄、存取權限控管與Secrets掃描。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-004</td>
+<td>交付前應完成SAST、SCA、Secrets掃描、必要之DAST/API/IaC/容器/AI安全測試。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-005</td>
+<td>使用開源、商業套件、SDK、模型或容器映像時，應完成元件清單、授權審查、CVE處理與SBOM。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-006</td>
+<td>Critical/High弱點應於上線前修復、重測或正式風險接受。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-007</td>
+<td>建置產物應具版本、雜湊、來源、SBOM、簽章或等效完整性保護。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SDLC-008</td>
+<td>委外開發或供應商交付物應符合組織安全開發、測試、授權、移交與退場要求。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 雲端、網路與基礎架構需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-INFRA-001</td>
+<td>系統網路應依環境、資料分類與服務角色分段，遵循預設拒絕與最小連線原則。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-002</td>
+<td>雲端帳號、訂閱、VPC/VNet、IAM、KMS、Security Group、日誌與備份應依環境區隔。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-003</td>
+<td>管理介面不得直接暴露Internet，需使用VPN/ZTNA/PAM/MFA或等效安全通道。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-004</td>
+<td>系統應依安全組態基準進行部署，並納入CSPM、Policy as Code、IaC掃描或組態漂移偵測。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-005</td>
+<td>資料庫、儲存、Queue、Cache、物件儲存與備份不得公開暴露，應啟用加密與存取控制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-006</td>
+<td>容器與Kubernetes應限制Root、特權模式、Capabilities、Host Network、Secrets與ServiceAccount權限。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-007</td>
+<td>系統應定義Egress控制、DNS安全、Webhook來源驗證與第三方API連線限制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-INFRA-008</td>
+<td>雲端與AI資源應標示Owner、環境、資料分類、成本中心、風險等級與必要碳/能源資料標籤。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>9. Secrets、加密與金鑰管理需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-SEC-001</td>
+<td>密碼、API Key、Token、私鑰、憑證與Webhook Secret不得硬編碼於程式碼、文件、容器或CI/CD設定。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-002</td>
+<td>Secrets應使用核准Secrets Manager、Vault、KMS、HSM或等效工具集中管理。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-003</td>
+<td>不同環境應使用不同Secrets、憑證、Token與金鑰，不得跨開發、測試、預備、正式混用。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-004</td>
+<td>金鑰與Secrets應具Owner、用途、權限、輪替週期、撤銷程序、存取日誌與事件通報機制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-005</td>
+<td>密碼保存應使用核准Hash、Salt與參數，不得明文或可逆加密保存密碼。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-006</td>
+<td>加密演算法、TLS版本、憑證與隨機數產生應符合組織核准標準。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SEC-007</td>
+<td>Secrets外洩時應支援快速撤銷、輪替、影響分析、日誌查詢與事件通報。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>10. 日誌、監控與事件回應需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-LOG-001</td>
+<td>系統應記錄登入、登出、登入失敗、權限變更、管理操作、敏感資料存取與高風險交易。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-002</td>
+<td>API、Webhook、AI模型API、RAG檢索、Agent工具調用與供應商存取應具可追溯日誌。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-003</td>
+<td>日誌不得保存明文密碼、Token、私鑰、完整PII、客戶敏感資料或完整Prompt敏感內容。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-004</td>
+<td>重要日誌應集中保存，具完整性保護、時間同步、存取限制與保存期限。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-005</td>
+<td>系統應定義安全告警、異常偵測、事件通報、初步處置、升級與聯絡窗口。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-006</td>
+<td>Critical/High安全事件、資料外洩、Secrets外洩、AI濫用與供應商事件應可快速定位與調查。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-LOG-007</td>
+<td>日誌與監控需求應於上線前完成測試，確認告警能觸發並進入SOC或負責團隊流程。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 備份、復原與營運持續需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-BC-001</td>
+<td>系統應定義RTO、RPO、SLA、SLO、服務等級、資料重要性與可用性要求。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-BC-002</td>
+<td>關鍵資料、設定、模型、Prompt、RAG索引、金鑰設定與部署腳本應納入備份或版本控管。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-BC-003</td>
+<td>備份應依資料分類加密、限制存取、保護完整性，必要時採不可變或離線備份。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-BC-004</td>
+<td>系統應定義還原流程、回復順序、回滾策略、故障切換、降級模式與替代流程。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-BC-005</td>
+<td>重要系統應定期執行備份還原測試、DR演練或ICT備妥性測試。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-BC-006</td>
+<td>供應商或SaaS服務應提供SLA、備份、復原、事件通報、退場與資料可攜性承諾。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>12. AI、RAG、Prompt與AI Agent安全需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-AI-001</td>
+<td>AI應用應明確定義用途、使用者、輸入、輸出、限制、禁止用途、人工覆核與決策影響。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-002</td>
+<td>模型、Embedding、外部AI API、Prompt、RAG資料源、向量資料庫與Agent工具應登錄於清冊並版本化。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-003</td>
+<td>AI輸入不得包含未核准PII、客戶資料、Secrets、高機密資料或違反資料使用限制之內容。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-004</td>
+<td>使用外部AI服務應確認資料不訓練、Prompt保存、地區、子處理者、刪除、DPA與事件通報條款。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-005</td>
+<td>RAG應具權限繼承、資料分類、索引刪除同步、Metadata控管與越權檢索測試。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-006</td>
+<td>AI Agent工具應採白名單、最小權限、高風險動作人工確認、操作日誌與回滾機制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-007</td>
+<td>AI應用應執行Prompt Injection、敏感輸出、越權、工具濫用、模型API濫用與資料外洩測試。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-AI-008</td>
+<td>AI模型與推論工作負載涉及能源或碳資料時，應定義資料來源、保護、保存、揭露與供應商可信度要求。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>13. 供應商、委外與SaaS安全需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-SUP-001</td>
+<td>供應商應完成資訊安全風險評估，並依風險等級提供安全證據、認證、測試報告或控制說明。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-002</td>
+<td>合約或SOW應納入保密、DPA、事件通報、弱點修復、SLA、稽核權、資料刪除、退場與智慧財產權條款。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-003</td>
+<td>供應商人員存取應具名、MFA、最小權限、期限、PAM或Session Recording，專案結束後撤權。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-004</td>
+<td>供應商不得使用未核准正式資料、PII、Secrets或未核准AI工具進行開發、測試或除錯。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-005</td>
+<td>委外交付物應提供原始碼、建置與部署文件、測試報告、SBOM、弱點修復、授權清單與操作文件。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-006</td>
+<td>供應商交付系統應符合組織安全測試與上線閘門要求，Critical/High缺失不得未處理上線。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-SUP-007</td>
+<td>供應商退場應完成資料刪除、帳號撤銷、Secrets輪替、知識移轉與刪除證明。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>14. 合規、法規與稽核需求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>安全需求</th>
+<th>適用性</th>
+<th>驗收標準 / 測試方式</th>
+<th>Owner</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-COMP-001</td>
+<td>系統應識別適用之法規、合約、客戶、產業、隱私、資料保護、AI治理與稽核要求。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-COMP-002</td>
+<td>系統應保留必要之操作、核准、交易、存取、安全、資料處理與AI輸出證據以支援稽核。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-COMP-003</td>
+<td>涉及個資或隱私時，應支援同意、通知、查詢、更正、刪除、限制、可攜、撤回或其他資料主體權利要求。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-COMP-004</td>
+<td>系統應支援法規、客戶或合約要求之報表、證明、日誌保存、事件通報與資料刪除證據。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-COMP-005</td>
+<td>重要控制措施應可被稽核測試，包括權限、日誌、備份、弱點、資料保護、AI控制與供應商控制。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-COMP-006</td>
+<td>風險接受、例外、補償控制、延期修復或未符合需求項目應正式記錄、核准、設定期限與重評。</td>
+<td>□ 必要 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 安全需求彙總與追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求編號</th>
+<th>需求分類</th>
+<th>安全需求摘要</th>
+<th>優先等級</th>
+<th>適用狀態</th>
+<th>實作方式</th>
+<th>Owner</th>
+<th>期限</th>
+<th>驗收證據</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-REQ-001</td>
+<td>□ Data □ IAM □ APP □ SDLC □ Infra □ AI □ Supplier □ Compliance</td>
+<td></td>
+<td>□ Must □ Should □ Could</td>
+<td>□ 適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 有條件完成 □ 風險接受</td>
+</tr>
+<tr>
+<td>ASR-REQ-002</td>
+<td>□ Data □ IAM □ APP □ SDLC □ Infra □ AI □ Supplier □ Compliance</td>
+<td></td>
+<td>□ Must □ Should □ Could</td>
+<td>□ 適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 有條件完成 □ 風險接受</td>
+</tr>
+<tr>
+<td>ASR-REQ-003</td>
+<td>□ Data □ IAM □ APP □ SDLC □ Infra □ AI □ Supplier □ Compliance</td>
+<td></td>
+<td>□ Must □ Should □ Could</td>
+<td>□ 適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 有條件完成 □ 風險接受</td>
+</tr>
+<tr>
+<td>ASR-REQ-004</td>
+<td>□ Data □ IAM □ APP □ SDLC □ Infra □ AI □ Supplier □ Compliance</td>
+<td></td>
+<td>□ Must □ Should □ Could</td>
+<td>□ 適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 有條件完成 □ 風險接受</td>
+</tr>
+<tr>
+<td>ASR-REQ-005</td>
+<td>□ Data □ IAM □ APP □ SDLC □ Infra □ AI □ Supplier □ Compliance</td>
+<td></td>
+<td>□ Must □ Should □ Could</td>
+<td>□ 適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 有條件完成 □ 風險接受</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 安全需求驗收與上線閘門</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>閘門項目</th>
+<th>最低通過條件</th>
+<th>結果</th>
+<th>證據位置</th>
+<th>核准人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全需求審查</td>
+<td>所有Must安全需求已確認適用性、Owner、期限與驗收標準。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料與隱私審查</td>
+<td>資料分類、PII、客戶資料、跨境、保存、刪除與DPIA已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全架構審查</td>
+<td>架構、資料流、信任邊界、威脅模型與控制設計已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全開發證據</td>
+<td>Code Review、SAST、SCA、Secrets、SBOM與安全編碼證據已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全測試證據</td>
+<td>DAST/API/IaC/容器/滲透/AI安全測試已依風險完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>弱點與風險處理</td>
+<td>Critical/High已修復、重測或正式風險接受。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>必要日誌、告警、SIEM接入、事件通報與Runbook已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>RTO/RPO、備份、還原測試、回滾與DR/ICT備妥性已確認。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商與合約</td>
+<td>供應商評估、合約條款、DPA、SLA、稽核權與退場要求已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI治理</td>
+<td>AI用途、資料、模型版本、Prompt、RAG、Agent與AI安全測試已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>17. 例外與風險接受紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外編號</th>
+<th>需求編號</th>
+<th>例外 / 未符合事項</th>
+<th>風險等級</th>
+<th>補償控制</th>
+<th>Owner</th>
+<th>核准人</th>
+<th>到期日</th>
+<th>重評結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASR-EXC-001</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-EXC-002</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASR-EXC-003</td>
+<td></td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>18. 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查角色</th>
+<th>審查重點</th>
+<th>姓名 / 單位</th>
+<th>結論</th>
+<th>簽核 / 日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Business Owner</td>
+<td>業務需求、風險接受、上線必要性。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不同意</td>
+<td></td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>系統需求、實作責任、維運與交付承諾。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不同意</td>
+<td></td>
+</tr>
+<tr>
+<td>Security Architecture / AppSec</td>
+<td>安全架構、應用安全、威脅模型、安全測試要求。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不同意</td>
+<td></td>
+</tr>
+<tr>
+<td>DevSecOps / Release Owner</td>
+<td>CI/CD、安全閘門、掃描、部署與回滾。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不同意</td>
+<td></td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>資料分類、資料保護、保存、刪除與資料使用。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不同意</td>
+<td></td>
+</tr>
+<tr>
+<td>DPO / Privacy Owner</td>
+<td>PII、隱私、DPIA、跨境與資料主體權利。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Cloud Security</td>
+<td>雲端、網路、IAM、KMS、CSPM與日誌。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI Governance / MLOps</td>
+<td>AI用途、模型、Prompt、RAG、Agent與AI安全測試。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Supplier Management / Legal</td>
+<td>供應商、合約、DPA、SLA、稽核權與退場。</td>
+<td></td>
+<td>□ 同意 □ 有條件同意 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>CISO / 授權代表</td>
+<td>整體安全需求、剩餘風險、例外與上線條件。</td>
+<td></td>
+<td>□ 核准 □ 有條件核准 □ 不核准</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 表單填寫品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>是否已填寫系統基本資料、Owner、資料分類、風險分級與適用範圍？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>可驗證性</td>
+<td>每項Must需求是否有明確驗收標準、測試方式或證據位置？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>責任明確</td>
+<td>每項適用需求是否指定Owner與完成期限？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>風險連動</td>
+<td>未符合需求是否已納入例外、風險接受、補償控制或風險登錄？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>上線閘門</td>
+<td>上線前安全閘門是否已完成或有條件核准？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>文件保存</td>
+<td>本表、附件與審查證據是否保存於核准位置並限制存取？</td>
+<td>□ 是 □ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>
