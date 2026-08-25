@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-041-PRO-001 組織全景與內外部議題管理程序</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.65; margin: 24px; color: #222; }
+.isms-document { max-width: 1900px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; text-align: center; color: #1f4e79; }
+h2 { margin-top: 30px; font-size: 21px; color: #1f3b5b; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+h3 { margin-top: 20px; font-size: 17px; color: #333; }
+table { margin: 12px 0 24px 0; }
+th { background: #d9eaf7; font-weight: bold; text-align: left; }
+td, th { vertical-align: top !important; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-041-PRO-001 組織全景與內外部議題管理程序</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-041-PRO-001</td>
+<td>組織全景與內外部議題管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 4 / 組織全景、關注方、範圍與流程</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Clause-4 / ISMS-041-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">文件建立</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私與PII審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / Privacy Owner</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI Governance Owner</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2與氣候審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG Data Owner / Sustainability Owner</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規合約審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">Legal / Compliance Owner</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層 / 資訊安全治理委員會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 目的</h2>
+<p>本程序旨在建立組織全景與內外部議題之識別、蒐集、分類、分析、評估、監督、審查、更新與文件化管理方法，以確保組織能依ISO/IEC 27001:2022 Clause 4.1與4.2之要求，理解可能影響資訊安全管理系統（ISMS）達成預期成果之內部與外部議題，以及利害關係人之需求與期望。</p>
+<p>本程序亦用於將內外部議題有效連結至ISMS/PIMS範圍、資訊安全風險評鑑、AI風險評估、隱私風險評估、氣候變遷資訊安全風險評估、GHG/CO2資料治理、SoA控制措施適用性、稽核方案、管理審查、CAPA與持續改善，使組織全景分析不僅是文件化輸出，而是管理系統運作、風險治理與控制措施選擇之實際輸入。</p>
+<p>本程序同時落實ISO/IEC 27001關於組織應判定氣候變遷是否為相關議題之要求，並將AI技術與監管趨勢、資料中心能耗、雲端服務、AI算力、供應鏈碳資料、產品碳足跡、碳中和聲明及查證證據之資訊安全與資料完整性納入組織全景分析。</p>
+
+<h2>2. 適用範圍</h2>
+<p>本程序適用於組織ISMS範圍內所有與資訊安全、隱私、AI、雲端、供應鏈、氣候變遷、GHG/CO2資料、實體環境、營運持續、法規合約及管理系統績效相關之活動。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">適用活動</th>
+<th style="vertical-align: top !important;">說明</th>
+<th style="vertical-align: top !important;">主要輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS建立與維護</td>
+<td style="vertical-align: top !important;">用於初次建立ISMS、年度維護、範圍界定、流程設計與管理系統整合。</td>
+<td style="vertical-align: top !important;">組織全景分析、ISMS範圍輸入、流程對應輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內外部議題管理</td>
+<td style="vertical-align: top !important;">用於內部議題、外部議題、利害關係人需求、法規合約及技術趨勢之識別與追蹤。</td>
+<td style="vertical-align: top !important;">內部議題分析表、外部議題分析表、法規合約要求清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理與AI風險</td>
+<td style="vertical-align: top !important;">用於AI系統、AI服務、模型、Prompt、RAG、AI供應商、AI使用者與AI監管趨勢之分析。</td>
+<td style="vertical-align: top !important;">AI技術與監管趨勢影響分析表、AI系統資訊安全風險評估表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS與PII治理</td>
+<td style="vertical-align: top !important;">用於PII處理活動、資料主體、委外處理、跨境傳輸、隱私法規與DPIA輸入分析。</td>
+<td style="vertical-align: top !important;">隱私風險評估表、ISMS/PIMS範圍輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2與氣候治理</td>
+<td style="vertical-align: top !important;">用於氣候變遷相關性判定、GHG/CO2資料、碳證據、AI能源效率、雲端碳資料與永續揭露資料治理。</td>
+<td style="vertical-align: top !important;">氣候變遷相關議題判定表、GHG/CO2資料與碳證據清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與控制治理</td>
+<td style="vertical-align: top !important;">用於將重大議題轉換為風險情境、控制適用性、SoA與控制措施風險矩陣。</td>
+<td style="vertical-align: top !important;">風險評鑑表、風險登錄表、SoA、控制矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核、管理審查與改善</td>
+<td style="vertical-align: top !important;">用於將議題變化、重大風險、控制缺口、法規合約變化及績效趨勢提交稽核與管理審查。</td>
+<td style="vertical-align: top !important;">稽核方案、管理審查輸入、不符合與改善紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織全景</td>
+<td style="vertical-align: top !important;">影響組織達成ISMS預期成果之內部與外部環境，包括治理、策略、流程、資產、人員、技術、供應鏈、法規、市場、氣候、AI、PII與GHG/CO2資料治理等因素。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部議題</td>
+<td style="vertical-align: top !important;">源自組織內部、可能影響ISMS之因素，例如組織架構、管理承諾、資安能力、資料治理、AI使用方式、人員能力、預算、文化、流程成熟度與技術債。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部議題</td>
+<td style="vertical-align: top !important;">源自組織外部、可能影響ISMS之因素，例如法規、客戶要求、威脅情資、雲端服務、供應鏈、地緣政治、氣候變遷、能源供應、AI監管與產業趨勢。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">利害關係人</td>
+<td style="vertical-align: top !important;">可能影響ISMS、受ISMS影響或自認受ISMS影響之個人或組織，包括客戶、主管機關、資料主體、供應商、員工、驗證機構、股東、合作夥伴、AI使用者與GHG查證機構。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">氣候變遷相關性</td>
+<td style="vertical-align: top !important;">組織依ISO/IEC 27001 Clause 4.1判定氣候變遷是否影響ISMS目標、資訊資產、資料中心、雲端服務、供應鏈、AI算力、GHG/CO2資料或利害關係人要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI多重角色</td>
+<td style="vertical-align: top !important;">組織在AI系統與服務中可能同時擔任提供者、供應商、使用者、資料提供者、系統整合者、委外管理者、處理者或治理責任持有人。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料</td>
+<td style="vertical-align: top !important;">與溫室氣體、二氧化碳、能源使用、排放活動數據、產品碳足跡、碳中和聲明、查證資料及碳揭露相關之資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PESTLE分析</td>
+<td style="vertical-align: top !important;">從政治、經濟、社會、技術、法律與環境面向分析外部議題之方法。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SWOT分析</td>
+<td style="vertical-align: top !important;">從優勢、弱點、機會與威脅面向分析組織狀態與ISMS相關議題之方法。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題擁有人</td>
+<td style="vertical-align: top !important;">負責追蹤、更新、評估與回報特定內外部議題之角色或單位。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 權責</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">核准組織全景分析結果、重大議題判定、氣候變遷相關性判定、ISMS範圍重大調整、資源需求、管理審查決議與重大改善措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">規劃與維護本程序，統籌內外部議題蒐集、分析、更新、審查、文件化、溝通、管理審查輸入及與風險管理之連結。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top !important;">提供威脅情資、資安事件趨勢、技術安全、雲端、供應鏈、資產與控制措施相關議題，並確認其對ISMS風險及控制之影響。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / 隱私管理負責人</td>
+<td style="vertical-align: top !important;">提供PII處理、資料主體、跨境傳輸、委外處理、隱私法規與PIMS需求相關議題。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">提供AI系統、AI服務、資料集、模型、Prompt、RAG、人工監督、AI供應商及AI多重角色相關議題。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理負責人</td>
+<td style="vertical-align: top !important;">提供氣候變遷、能源、碳資料、產品碳足跡、碳中和聲明、GHG查證與CO2資料完整性相關議題。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">將已識別議題轉化為風險情境、風險準則、風險登錄項目及風險處理需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法務 / 合規單位</td>
+<td style="vertical-align: top !important;">提供法規、監理、客戶合約、供應商合約、資料保護、AI、GHG與驗證要求之更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">業務流程負責人</td>
+<td style="vertical-align: top !important;">提供流程、產品、服務、客戶要求、流程變更、營運依賴及關鍵資訊需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">IT / 雲端 / 資料中心負責人</td>
+<td style="vertical-align: top !important;">提供系統架構、雲端服務、資料中心、備份、容量、能耗、可用性、技術變更與供應商依賴相關資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商管理負責人</td>
+<td style="vertical-align: top !important;">提供ICT供應鏈、雲端服務、AI供應商、外包服務、第四方依賴及供應商能力資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;">於稽核方案與稽核計畫中納入重大內外部議題、氣候議題、AI/PIMS/GHG風險及前次審查結果。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">程序階段</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">治理框架與政策方向</td>
+<td style="vertical-align: top !important;">作為組織全景分析之治理基準，確認本程序應涵蓋資訊安全、AI、隱私、GHG/CO2與氣候變遷治理要求。</td>
+<td style="vertical-align: top !important;">治理原則、分析範圍、政策符合性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內外部議題識別</td>
+<td style="vertical-align: top !important;">分別用於記錄內部議題、外部議題、氣候變遷相關性及AI技術與監管趨勢之分析結果。</td>
+<td style="vertical-align: top !important;">內部議題分析、外部議題分析、氣候判定、AI趨勢分析。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規合約與利害關係人要求</td>
+<td style="vertical-align: top !important;">若議題涉及法規、合約、客戶、安全附約、稽核權、AI監管、PII或GHG/CO2查證要求，應更新法規與合約要求清冊。</td>
+<td style="vertical-align: top !important;">法規合約要求清冊、合規義務、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">範圍與流程連結</td>
+<td style="vertical-align: top !important;">當議題影響組織、地點、流程、系統、資產、PII、AI服務、雲端或供應商邊界時，用於更新ISMS/PIMS範圍與流程控制。</td>
+<td style="vertical-align: top !important;">範圍聲明、流程矩陣、運作控制要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">權責與溝通</td>
+<td style="vertical-align: top !important;">用於指定議題擁有人、決策者、加會角色、溝通對象、頻率與通報管道。</td>
+<td style="vertical-align: top !important;">議題Owner、RACI、溝通計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與控制轉換</td>
+<td style="vertical-align: top !important;">重大議題應依其性質轉入一般資訊安全風險、AI風險、隱私風險、氣候變遷風險評估，並更新SoA與控制措施風險矩陣。</td>
+<td style="vertical-align: top !important;">風險評鑑、風險登錄、處理計畫、剩餘風險接受、SoA、控制矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資產、供應鏈、威脅與GHG資料</td>
+<td style="vertical-align: top !important;">當議題涉及資產、供應商、AI服務、碳足跡資料、威脅情資或GHG/CO2證據時，用於更新清冊與專項評估。</td>
+<td style="vertical-align: top !important;">資產清冊、供應商評估、威脅情資、AI服務與碳資料清冊、碳證據清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">實體與技術控制</td>
+<td style="vertical-align: top !important;">當議題需要新增或調整控制時，用於確認實體安全、技術控制、日誌、AI安全、備份、備援、加密與AI能源碳資料控制要求。</td>
+<td style="vertical-align: top !important;">控制措施、控制證據、技術/實體控制改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">監督、稽核、管理審查與改善</td>
+<td style="vertical-align: top !important;">重大議題、指標趨勢、稽核結果、管理審查決議、不符合與改善事項應依此階段形成閉環。</td>
+<td style="vertical-align: top !important;">KPI/KRI、稽核方案、管理審查紀錄、CAPA、持續改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件與紀錄保存</td>
+<td style="vertical-align: top !important;">本程序產生之表單、清冊、報告、審查紀錄與管理審查輸入應依文件化資訊管制及保存期限清冊管理。</td>
+<td style="vertical-align: top !important;">受控文件、版本紀錄、保存證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 管理原則</h2>
+<p>組織全景與內外部議題管理應依下列原則執行：</p>
+<ul>
+<li>組織全景分析應支援ISMS達成資訊安全預期成果，而非僅作為形式化文件。</li>
+<li>內外部議題應以風險導向、證據導向及管理決策導向方式管理。</li>
+<li>重大議題應能追溯至ISMS範圍、風險登錄表、SoA、控制措施、目標、管理審查或改善措施。</li>
+<li>氣候變遷相關性判定應明確記錄結論、理由、影響面、責任人及審查日期。</li>
+<li>AI系統與服務多重角色應納入組織全景與責任邊界分析。</li>
+<li>PIMS與PII處理活動應納入利害關係人、法規、合約、資料主體與風險管理分析。</li>
+<li>GHG/CO2資料、產品碳足跡及碳中和聲明證據應依資訊分類、完整性、可追溯性及存取控制原則管理。</li>
+<li>分析結果應作為ISMS範圍界定、風險準則、風險評鑑、控制措施規劃、稽核方案與管理審查之輸入。</li>
+</ul>
+<h2>7. 作業程序</h2>
+<h3>7.1 啟動組織全景分析</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">啟動情境</th>
+<th style="vertical-align: top !important;">作業要求</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">首次建立或重新界定ISMS</td>
+<td style="vertical-align: top !important;">ISMS管理代表應確認分析範圍、參與角色、輸入文件、時程與核准要求。</td>
+<td style="vertical-align: top !important;">組織全景分析計畫、範圍確認輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">年度ISMS規劃或管理審查前</td>
+<td style="vertical-align: top !important;">年度至少一次彙整內外部議題、法規合約、AI/PII/GHG/氣候變化與風險趨勢。</td>
+<td style="vertical-align: top !important;">年度組織全景更新、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大變更</td>
+<td style="vertical-align: top !important;">當組織策略、產品、服務、地點、流程、系統、雲端、AI服務、供應商或PII處理活動重大變更時，應即時更新。</td>
+<td style="vertical-align: top !important;">變更影響評估、議題更新、範圍或風險重評。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大事件或外部要求</td>
+<td style="vertical-align: top !important;">發生重大資安事件、隱私事件、AI事件、供應鏈事件、氣候事件、碳資料錯誤、客戶或主管機關新要求時啟動。</td>
+<td style="vertical-align: top !important;">事件後議題重評、CAPA、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.2 蒐集內部議題</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">內部議題類別</th>
+<th style="vertical-align: top !important;">蒐集重點</th>
+<th style="vertical-align: top !important;">可能輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">治理與策略</td>
+<td style="vertical-align: top !important;">組織策略、管理承諾、AI服務策略、ESG/GHG策略、客戶策略與資源配置。</td>
+<td style="vertical-align: top !important;">內部議題分析、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">組織與責任</td>
+<td style="vertical-align: top !important;">組織架構、角色權限、職務分離、ISMS/PIMS/AI/GHG責任與跨部門協作。</td>
+<td style="vertical-align: top !important;">RACI更新、角色責任調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資產與資料治理</td>
+<td style="vertical-align: top !important;">資訊資產、PII、AI模型、Prompt、RAG知識庫、GHG/CO2資料、碳證據清冊完整性。</td>
+<td style="vertical-align: top !important;">資產清冊更新、資料分類分級、碳證據補強。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術與營運</td>
+<td style="vertical-align: top !important;">系統架構、雲端服務、資料中心、網路、端點、備份、備援、日誌、監控、容量與安全組態。</td>
+<td style="vertical-align: top !important;">技術控制改善、風險登錄輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人員與能力</td>
+<td style="vertical-align: top !important;">員工能力、資安認知、AI工具使用能力、隱私意識、GHG資料治理能力與稽核能力。</td>
+<td style="vertical-align: top !important;">能力需求、訓練計畫、認知活動。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">績效與改善</td>
+<td style="vertical-align: top !important;">內部稽核、事件趨勢、不符合事項、CAPA狀態、KPI/KRI與管理審查決議。</td>
+<td style="vertical-align: top !important;">議題重評、CAPA、持續改善。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.3 蒐集外部議題</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">外部議題類別</th>
+<th style="vertical-align: top !important;">蒐集重點</th>
+<th style="vertical-align: top !important;">可能輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">法規與合約</td>
+<td style="vertical-align: top !important;">資訊安全、個資、AI、雲端、資料保護、碳揭露、GHG查證、客戶合約與SLA。</td>
+<td style="vertical-align: top !important;">法規與合約要求清冊更新、合規風險輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">威脅情資</td>
+<td style="vertical-align: top !important;">勒索軟體、供應鏈攻擊、雲端攻擊、AI模型攻擊、Prompt Injection、資料污染、資料外洩。</td>
+<td style="vertical-align: top !important;">威脅情資分析、風險情境、控制調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應鏈與雲端</td>
+<td style="vertical-align: top !important;">雲端服務商、資料中心、ICT供應商、AI服務商、外包商、第四方與區域可用性。</td>
+<td style="vertical-align: top !important;">供應商風險評估、合約條款、服務監督。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">市場與利害關係人</td>
+<td style="vertical-align: top !important;">客戶對ISO/IEC 27001、PIMS、AI治理、ESG、碳資料可信度與供應鏈資安之要求。</td>
+<td style="vertical-align: top !important;">溝通計畫、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">氣候與能源</td>
+<td style="vertical-align: top !important;">極端天氣、能源供應、資料中心用電、備援能源、碳費、碳揭露及供應鏈排放資料。</td>
+<td style="vertical-align: top !important;">氣候判定、GHG/CO2資料治理要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI技術與監管</td>
+<td style="vertical-align: top !important;">生成式AI、RAG、AI Agent、模型供應商、AI法規、AI風險分類、人工監督與透明度要求。</td>
+<td style="vertical-align: top !important;">AI趨勢影響分析、AI風險評估輸入。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.4 執行PESTLE分析</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">PESTLE面向</th>
+<th style="vertical-align: top !important;">分析重點</th>
+<th style="vertical-align: top !important;">輸出證據</th>
+<th style="vertical-align: top !important;">後續使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政治 / 政策</td>
+<td style="vertical-align: top !important;">國家資安政策、資料主權、跨境資料限制、AI監管政策、能源與碳政策、政府採購要求。</td>
+<td style="vertical-align: top !important;">外部議題分析表、法規合約要求清冊。</td>
+<td style="vertical-align: top !important;">法規合約評估、管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">經濟</td>
+<td style="vertical-align: top !important;">雲端成本、AI算力成本、能源價格、供應商財務穩定性、驗證成本、碳費或碳成本。</td>
+<td style="vertical-align: top !important;">外部議題分析表、資源需求。</td>
+<td style="vertical-align: top !important;">風險評鑑、資源配置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">社會</td>
+<td style="vertical-align: top !important;">客戶對隱私、AI倫理、透明度、資安成熟度、永續揭露與資料可信度之期待。</td>
+<td style="vertical-align: top !important;">利害關係人需求、溝通紀錄。</td>
+<td style="vertical-align: top !important;">政策修訂、管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術</td>
+<td style="vertical-align: top !important;">雲端、零信任、AI、RAG、API、資料湖、遠端工作、OT/IoT、資料中心自動化與新型攻擊。</td>
+<td style="vertical-align: top !important;">AI趨勢影響分析、技術議題清冊。</td>
+<td style="vertical-align: top !important;">技術控制與風險重評。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法律</td>
+<td style="vertical-align: top !important;">個資法、資通安全法、營業秘密、合約、AI法規、雲端稽核條款、GHG/CO2查證要求。</td>
+<td style="vertical-align: top !important;">法規合約要求清冊。</td>
+<td style="vertical-align: top !important;">合規評估、SoA調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">環境</td>
+<td style="vertical-align: top !important;">氣候變遷、極端天氣、資料中心能耗、碳揭露、供應鏈碳資料、能源中斷與備援能源。</td>
+<td style="vertical-align: top !important;">氣候變遷相關議題判定表、GHG/CO2資料與碳證據清冊。</td>
+<td style="vertical-align: top !important;">氣候風險評估、營運持續控制。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.5 執行SWOT分析</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">SWOT面向</th>
+<th style="vertical-align: top !important;">ISMS分析重點</th>
+<th style="vertical-align: top !important;">管理用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">優勢</td>
+<td style="vertical-align: top !important;">已建立ISMS治理架構、風險管理方法、資產清冊、雲端管理經驗、AI治理意識或內部稽核能力。</td>
+<td style="vertical-align: top !important;">可作為控制措施成熟度、驗證準備與資源配置依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">弱點</td>
+<td style="vertical-align: top !important;">文件化資訊不足、AI系統清冊不完整、PII流向不清、供應商監督不足、GHG/CO2資料未納入分類。</td>
+<td style="vertical-align: top !important;">需轉入風險登錄、CAPA或改善追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">機會</td>
+<td style="vertical-align: top !important;">導入ISO/IEC 27001、PIMS、AI治理、雲端安全、碳資料可信度管理與客戶信任提升。</td>
+<td style="vertical-align: top !important;">可轉化為ISMS目標與管理審查決議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">威脅</td>
+<td style="vertical-align: top !important;">勒索軟體、供應鏈攻擊、AI輸出誤用、資料外洩、法規罰款、碳資料錯誤、雲端中斷與能源風險。</td>
+<td style="vertical-align: top !important;">需納入風險評鑑及控制措施。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.6 判定氣候變遷是否為相關議題</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">判定條件</th>
+<th style="vertical-align: top !important;">說明</th>
+<th style="vertical-align: top !important;">處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">營運依賴資料中心、雲端或AI算力</td>
+<td style="vertical-align: top !important;">若資料中心、雲端區域、AI模型訓練/推論或高耗能基礎設施對營運重要，氣候與能源通常為相關議題。</td>
+<td style="vertical-align: top !important;">轉入氣候變遷資訊安全風險評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">處理GHG/CO2或碳證據</td>
+<td style="vertical-align: top !important;">若組織處理能源資料、產品碳足跡、碳中和聲明或查證證據，需判定資訊安全與資料完整性影響。</td>
+<td style="vertical-align: top !important;">更新GHG/CO2資料與碳證據清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部利害關係人要求</td>
+<td style="vertical-align: top !important;">客戶、主管機關、供應商、驗證機構或GHG查證機構要求碳資料、安全證據或資料完整性證明。</td>
+<td style="vertical-align: top !important;">納入法規合約要求與管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">極端天氣或能源中斷</td>
+<td style="vertical-align: top !important;">淹水、熱浪、停電、颱風或供應鏈中斷可能影響資訊可用性、資料中心或雲端服務。</td>
+<td style="vertical-align: top !important;">調整備份、備援、實體環境與營運持續控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI能源與雲端碳資料</td>
+<td style="vertical-align: top !important;">AI模型能耗、雲端用量、推論成本或碳資料可能影響組織策略、合約或聲譽。</td>
+<td style="vertical-align: top !important;">更新AI服務與碳足跡資料資產清冊。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.7 識別利害關係人及其需求</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">利害關係人</th>
+<th style="vertical-align: top !important;">需求與期望</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">客戶 / 委託方</td>
+<td style="vertical-align: top !important;">資訊保密、服務可用性、合約安全、稽核權、AI服務可信度、PII保護、GHG/CO2資料可信度。</td>
+<td style="vertical-align: top !important;">合約要求、客戶稽核證據、溝通紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">主管機關</td>
+<td style="vertical-align: top !important;">法規遵循、事件通報、PII保護、資通安全、碳揭露或產業監理要求。</td>
+<td style="vertical-align: top !important;">法規要求、合規評估、通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料主體</td>
+<td style="vertical-align: top !important;">合法、公平、透明處理PII，資料主體權利回應，資料外洩通知。</td>
+<td style="vertical-align: top !important;">隱私風險評估、資料主體權利紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI使用者</td>
+<td style="vertical-align: top !important;">AI輸出可靠、限制明確、人工覆核、資安與隱私保護。</td>
+<td style="vertical-align: top !important;">AI風險評估、AI輸出驗證紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商 / 雲端服務商</td>
+<td style="vertical-align: top !important;">明確安全要求、責任邊界、事件通報、資料處理條款與SLA。</td>
+<td style="vertical-align: top !important;">供應商評估、合約條款、監督紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證機構</td>
+<td style="vertical-align: top !important;">明確範圍、風險方法、SoA、內稽、管理審查、CAPA與控制證據。</td>
+<td style="vertical-align: top !important;">驗證證據鏈、稽核方案。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG查證機構 / ESG利害關係人</td>
+<td style="vertical-align: top !important;">GHG/CO2資料完整性、可追溯性、版本控制、防竄改與證據保存。</td>
+<td style="vertical-align: top !important;">碳證據清冊、查證證據、存取紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.8 識別AI多重角色相關議題</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">AI角色</th>
+<th style="vertical-align: top !important;">主要議題</th>
+<th style="vertical-align: top !important;">ISMS/PIMS文件化資訊調整</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">AI Provider / 服務提供者</td>
+<td style="vertical-align: top !important;">服務安全、模型安全、輸出品質、客戶資料、合約責任、事件通報、服務可用性。</td>
+<td style="vertical-align: top !important;">ISMS範圍、AI風險評估、AI安全開發SOP、供應商與客戶責任矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI Supplier / 供應商</td>
+<td style="vertical-align: top !important;">模型、API、雲端平台、第三方工具、第四方依賴、授權、SLA、資料處理條款。</td>
+<td style="vertical-align: top !important;">供應商風險評估、ICT供應鏈安全程序、合約安全條款。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI User / 使用者</td>
+<td style="vertical-align: top !important;">Prompt使用、輸入資料、PII外洩、輸出驗證、幻覺、人工覆核與禁止用途。</td>
+<td style="vertical-align: top !important;">AI使用政策、教育訓練、Prompt/RAG管理紀錄、AI輸出驗證紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Data Provider / 資料提供者</td>
+<td style="vertical-align: top !important;">資料來源、授權、品質、代表性、偏差、PII、GHG/CO2資料完整性。</td>
+<td style="vertical-align: top !important;">資料集清冊、資料來源與授權、PII處理輸入、GHG資料清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">System Integrator / 系統整合者</td>
+<td style="vertical-align: top !important;">API、權限、日誌、資料流、供應商責任邊界、測試與變更。</td>
+<td style="vertical-align: top !important;">系統架構圖、資料流圖、變更影響評估、存取控制紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.9 議題影響評估</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">評估面向</th>
+<th style="vertical-align: top !important;">評估說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">策略影響</td>
+<td style="vertical-align: top !important;">議題是否影響組織策略、數位轉型、AI服務、客戶承諾、市場定位或長期經營。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全影響</td>
+<td style="vertical-align: top !important;">議題是否影響機密性、完整性、可用性、真確性、可追溯性或不可否認性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私影響</td>
+<td style="vertical-align: top !important;">議題是否影響PII處理、資料主體權利、合法性、透明度、委外、跨境或隱私事件通報。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理影響</td>
+<td style="vertical-align: top !important;">議題是否影響AI系統安全、資料集、模型、Prompt、RAG、人工監督、輸出驗證或AI供應商治理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料影響</td>
+<td style="vertical-align: top !important;">議題是否影響能源資料、碳排資料、產品碳足跡、碳中和聲明、查證證據或碳揭露資料可信度。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規與合約影響</td>
+<td style="vertical-align: top !important;">議題是否造成新法規義務、客戶要求、合約SLA、稽核、驗證、查證或報告義務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">營運持續影響</td>
+<td style="vertical-align: top !important;">議題是否影響雲端、資料中心、供應鏈、關鍵系統、服務可用性、復原能力或資源配置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">財務與資源影響</td>
+<td style="vertical-align: top !important;">議題是否需新增資源、工具、訓練、稽核、外部顧問、查證成本或重大投資。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">聲譽影響</td>
+<td style="vertical-align: top !important;">議題是否可能造成客戶信任、媒體、公眾、投資人、主管機關或驗證機構信心下降。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.10 決定議題處理方式</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">處理方式</th>
+<th style="vertical-align: top !important;">適用情境</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">持續監測</td>
+<td style="vertical-align: top !important;">低影響或尚無立即風險之議題。</td>
+<td style="vertical-align: top !important;">議題追蹤清冊、KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">轉入風險評鑑</td>
+<td style="vertical-align: top !important;">高或中度議題，可能影響CIA、AI、PII、GHG/CO2、供應鏈、雲端或合規。</td>
+<td style="vertical-align: top !important;">風險評鑑、風險登錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新ISMS/PIMS範圍</td>
+<td style="vertical-align: top !important;">議題影響組織、流程、地點、系統、資產、PII、AI服務或供應商邊界。</td>
+<td style="vertical-align: top !important;">範圍聲明更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新SoA或控制矩陣</td>
+<td style="vertical-align: top !important;">議題影響控制措施適用性、實施狀態、控制證據或風險覆蓋。</td>
+<td style="vertical-align: top !important;">SoA與控制措施風險對應矩陣更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新法規合約要求</td>
+<td style="vertical-align: top !important;">議題涉及法規、監理、客戶合約、DPA、SLA、AI法規或GHG查證。</td>
+<td style="vertical-align: top !important;">法規與合約要求清冊更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">更新資產或供應商資料</td>
+<td style="vertical-align: top !important;">議題涉及資訊資產、AI服務、碳足跡資料、供應商或ICT供應鏈。</td>
+<td style="vertical-align: top !important;">資產清冊、AI服務清冊、供應商評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">提交管理審查</td>
+<td style="vertical-align: top !important;">重大議題、資源需求、政策修訂、風險接受或跨部門決策。</td>
+<td style="vertical-align: top !important;">管理審查輸入與決議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">開立CAPA或改善</td>
+<td style="vertical-align: top !important;">議題代表不符合、控制失效、重大缺口或重複性問題。</td>
+<td style="vertical-align: top !important;">CAPA、改善計畫、有效性驗證。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.11 維護議題追蹤清冊</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">欄位</th>
+<th style="vertical-align: top !important;">填寫要求</th>
+<th style="vertical-align: top !important;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">議題編號</td>
+<td style="vertical-align: top !important;">自動或人工編號，例如 ISMS-ISS-YYYY-001。</td>
+<td style="vertical-align: top !important;">確保追溯性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題來源</td>
+<td style="vertical-align: top !important;">內部、外部、利害關係人、稽核、事件、法規、供應商、AI、PIMS、GHG/CO2。</td>
+<td style="vertical-align: top !important;">分類議題來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題描述</td>
+<td style="vertical-align: top !important;">說明議題內容、背景、影響區域與相關事實。</td>
+<td style="vertical-align: top !important;">支援影響評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題類別</td>
+<td style="vertical-align: top !important;">PESTLE、SWOT、資安、隱私、AI、供應鏈、氣候、GHG/CO2、法規、營運。</td>
+<td style="vertical-align: top !important;">支援專項Owner加會。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">相關利害關係人</td>
+<td style="vertical-align: top !important;">受影響或提出要求之利害關係人。</td>
+<td style="vertical-align: top !important;">支援溝通與合規管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">影響評估</td>
+<td style="vertical-align: top !important;">對ISMS目標、CIA、PIMS、AI、GHG資料、營運及合規之影響。</td>
+<td style="vertical-align: top !important;">支援處理決策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險連結</td>
+<td style="vertical-align: top !important;">是否需建立或更新風險登錄項目。</td>
+<td style="vertical-align: top !important;">銜接風險管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">處理方式</td>
+<td style="vertical-align: top !important;">監測、轉入風險評鑑、調整控制、更新範圍、納入管理審查、開立改善。</td>
+<td style="vertical-align: top !important;">形成行動計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題擁有人</td>
+<td style="vertical-align: top !important;">負責追蹤之部門或角色。</td>
+<td style="vertical-align: top !important;">明確責任。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查週期</td>
+<td style="vertical-align: top !important;">每月、每季、半年、年度或事件觸發。</td>
+<td style="vertical-align: top !important;">確保定期更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">狀態</td>
+<td style="vertical-align: top !important;">新增、評估中、監測中、已轉風險、已提交管理審查、已關閉。</td>
+<td style="vertical-align: top !important;">追蹤議題生命週期。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.12 與ISMS範圍管理之連結</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">觸發條件</th>
+<th style="vertical-align: top !important;">範圍影響</th>
+<th style="vertical-align: top !important;">處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">新增或移除業務流程</td>
+<td style="vertical-align: top !important;">可能影響ISMS/PIMS範圍、流程界面、資產清冊與控制責任。</td>
+<td style="vertical-align: top !important;">重新確認範圍聲明與排除理由。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新增AI系統或AI服務</td>
+<td style="vertical-align: top !important;">可能影響AI治理、PII處理、雲端依賴、供應商責任與風險。</td>
+<td style="vertical-align: top !important;">更新AI角色、風險評估與範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新增PII處理活動</td>
+<td style="vertical-align: top !important;">可能影響PIMS範圍、隱私要求、資料主體權利與DPIA需求。</td>
+<td style="vertical-align: top !important;">更新PIMS範圍與隱私風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新增GHG/CO2資料流程</td>
+<td style="vertical-align: top !important;">可能影響資料分類、完整性、查證證據、碳資料保存與權限。</td>
+<td style="vertical-align: top !important;">更新GHG資料清冊與氣候風險評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">新增關鍵供應商或雲端服務</td>
+<td style="vertical-align: top !important;">可能影響ICT供應鏈、雲端責任共擔、SLA、資料所在地與服務可用性。</td>
+<td style="vertical-align: top !important;">更新供應商風險與範圍依賴。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.13 與風險管理之連結</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">強制轉入風險評鑑情境</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">可能造成重大資訊安全事件、隱私事件、AI事件或GHG/CO2資料錯誤。</td>
+<td style="vertical-align: top !important;">風險情境與風險登錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">涉及新法規、重大客戶要求、驗證要求或查證要求。</td>
+<td style="vertical-align: top !important;">合規風險與接受準則調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">影響ISMS範圍、供應鏈、雲端、資料中心、AI系統或PII處理。</td>
+<td style="vertical-align: top !important;">範圍調整與供應鏈風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">需新增或調整控制措施、SoA或資源。</td>
+<td style="vertical-align: top !important;">風險處理計畫、SoA與控制矩陣更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理階層、稽核、客戶或主管機關要求進一步評估。</td>
+<td style="vertical-align: top !important;">稽核輸入與管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.14 與管理審查之連結</h3>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">管理審查輸入</th>
+<th style="vertical-align: top !important;">內容要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">內外部議題變化</td>
+<td style="vertical-align: top !important;">重大議題、新興威脅、AI與氣候趨勢、法規合約變更及其對ISMS之影響。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與控制狀態</td>
+<td style="vertical-align: top !important;">由議題轉入之風險、風險等級、處理狀態、剩餘風險接受、SoA與控制矩陣變更。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源與能力需求</td>
+<td style="vertical-align: top !important;">因議題變化導致之人力、工具、訓練、供應商、稽核、雲端或GHG查證資源需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">不符合與改善</td>
+<td style="vertical-align: top !important;">因組織全景管理缺口、稽核發現、事件或管理審查決議所產生之CAPA與改善。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 內外部議題分類架構</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">分類</th>
+<th style="vertical-align: top !important;">可能議題</th>
+<th style="vertical-align: top !important;">管理連結</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">治理與策略</td>
+<td style="vertical-align: top !important;">組織策略、AI服務策略、雲端優先策略、ESG/碳管理策略、併購、組織重組。</td>
+<td style="vertical-align: top !important;">政策、目標、範圍、管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資安威脅</td>
+<td style="vertical-align: top !important;">勒索軟體、APT、資料外洩、供應鏈攻擊、雲端設定錯誤、API攻擊。</td>
+<td style="vertical-align: top !important;">風險評鑑、控制措施、事件管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私與PIMS</td>
+<td style="vertical-align: top !important;">PII法規、資料主體權利、委外處理、跨境傳輸、資料最小化、隱私事件。</td>
+<td style="vertical-align: top !important;">PIMS範圍、隱私風險、合規清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">模型風險、Prompt Injection、RAG資料品質、輸出驗證、人工監督、AI供應商。</td>
+<td style="vertical-align: top !important;">AI風險評估、AI安全SOP、AI使用政策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端與資料中心</td>
+<td style="vertical-align: top !important;">雲端責任共擔、資料中心中斷、能源供應、資料所在地、備份復原。</td>
+<td style="vertical-align: top !important;">供應商管理、營運持續、技術控制、風險處理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2與氣候</td>
+<td style="vertical-align: top !important;">碳資料完整性、產品碳足跡、碳中和聲明、能源資料、極端天氣、查證證據。</td>
+<td style="vertical-align: top !important;">氣候判定表、GHG資料清冊、資產分類、存取控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應鏈</td>
+<td style="vertical-align: top !important;">ICT供應商、AI服務商、第四方依賴、SLA、供應商事件、合約安全條款。</td>
+<td style="vertical-align: top !important;">供應商評估、合約管理、風險登錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規與合約</td>
+<td style="vertical-align: top !important;">資通安全、個資、AI、雲端、碳揭露、客戶稽核、驗證要求。</td>
+<td style="vertical-align: top !important;">法規清冊、合規評估、內部稽核。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人員與文化</td>
+<td style="vertical-align: top !important;">資安意識、AI工具使用、遠端工作、承包商、職務分離、人才短缺。</td>
+<td style="vertical-align: top !important;">訓練、認知、RACI、存取控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術與創新</td>
+<td style="vertical-align: top !important;">生成式AI、零信任、機密運算、雲原生、DevSecOps、資料湖、API。</td>
+<td style="vertical-align: top !important;">技術控制、安全開發、變更管理。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 程序輸入、活動與輸出</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">主要活動</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織策略、業務計畫、產品服務、AI策略、ESG/GHG要求</td>
+<td style="vertical-align: top !important;">啟動組織全景分析與範圍確認</td>
+<td style="vertical-align: top !important;">組織全景分析計畫、分析範圍</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部治理、流程、資產、能力、事件、稽核、KPI/KRI</td>
+<td style="vertical-align: top !important;">蒐集與分析內部議題</td>
+<td style="vertical-align: top !important;">內部議題分析表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規、合約、威脅情資、供應鏈、市場、技術、氣候、GHG查證要求</td>
+<td style="vertical-align: top !important;">蒐集與分析外部議題</td>
+<td style="vertical-align: top !important;">外部議題分析表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI系統、AI角色、AI供應商、Prompt/RAG、AI資料集</td>
+<td style="vertical-align: top !important;">分析AI多重角色與AI治理議題</td>
+<td style="vertical-align: top !important;">AI技術與監管趨勢影響分析表、AI風險評估輸入</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PII處理活動、資料主體、法規、委外與跨境資訊</td>
+<td style="vertical-align: top !important;">分析PIMS與隱私議題</td>
+<td style="vertical-align: top !important;">PIMS範圍輸入、隱私風險評估輸入</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料中心、雲端、能源、GHG/CO2資料、產品碳足跡、碳中和聲明</td>
+<td style="vertical-align: top !important;">判定氣候變遷與GHG/CO2相關性</td>
+<td style="vertical-align: top !important;">氣候變遷相關議題判定表、GHG/CO2資料清冊輸入</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大議題清冊</td>
+<td style="vertical-align: top !important;">決定處理方式與責任人</td>
+<td style="vertical-align: top !important;">議題追蹤清冊、風險登錄輸入、改善需求</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題追蹤結果、風險與控制調整</td>
+<td style="vertical-align: top !important;">提交管理審查</td>
+<td style="vertical-align: top !important;">管理審查輸入資料、決議與行動追蹤</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 議題重大性評估準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">評估等級</th>
+<th style="vertical-align: top !important;">判定說明</th>
+<th style="vertical-align: top !important;">處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">高</td>
+<td style="vertical-align: top !important;">可能造成重大資訊安全、隱私、AI、供應鏈、GHG/CO2資料或合規衝擊；或影響ISMS範圍與驗證。</td>
+<td style="vertical-align: top !important;">必須轉入風險評鑑，必要時提交管理審查並指定改善措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">中</td>
+<td style="vertical-align: top !important;">可能影響特定流程、部門、系統、供應商、AI使用情境或PII/GHG資料管理。</td>
+<td style="vertical-align: top !important;">納入議題追蹤清冊，依需要轉入風險評鑑或控制改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">低</td>
+<td style="vertical-align: top !important;">目前僅需觀察，對ISMS預期成果影響有限。</td>
+<td style="vertical-align: top !important;">保留紀錄並於下次定期審查重新評估。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. KPI / KRI與量測指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">指標</th>
+<th style="vertical-align: top !important;">定義</th>
+<th style="vertical-align: top !important;">目標值</th>
+<th style="vertical-align: top !important;">頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織全景審查完成率</td>
+<td style="vertical-align: top !important;">年度應審查項目完成比例。</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">年度</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大議題轉風險評鑑率</td>
+<td style="vertical-align: top !important;">需轉入風險評鑑之重大議題已建立風險項目比例。</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">每季</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規/合約變更評估時效</td>
+<td style="vertical-align: top !important;">收到重大變更後完成初步評估天數。</td>
+<td style="vertical-align: top !important;">10個工作日內</td>
+<td style="vertical-align: top !important;">事件觸發</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">氣候變遷相關性判定完成率</td>
+<td style="vertical-align: top !important;">年度是否完成氣候變遷與GHG/CO2相關性判定。</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">年度</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI/PIMS/GHG議題納入率</td>
+<td style="vertical-align: top !important;">已識別AI、PIMS、GHG重大議題納入風險、範圍或管理審查比例。</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">每季</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題追蹤逾期率</td>
+<td style="vertical-align: top !important;">逾期未完成處理之議題比例。</td>
+<td style="vertical-align: top !important;">≦5%</td>
+<td style="vertical-align: top !important;">每月 / 每季</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入完整率</td>
+<td style="vertical-align: top !important;">應提交之組織全景與議題資料完整提交比例。</td>
+<td style="vertical-align: top !important;">100%</td>
+<td style="vertical-align: top !important;">管理審查前</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 紀錄保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄名稱</th>
+<th style="vertical-align: top !important;">保存單位</th>
+<th style="vertical-align: top !important;">最低保存期間</th>
+<th style="vertical-align: top !important;">保存方式</th>
+<th style="vertical-align: top !important;">保存依據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> 內部議題分析表</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少5年；若涉及重大風險、AI、PII、GHG/CO2或氣候議題至少7年。</td>
+<td style="vertical-align: top !important;">受控電子檔 / GRC系統 / 文件管理平台</td>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序<br> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 外部議題分析表</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少5年；若涉及法規、合約或重大風險至少7年。</td>
+<td style="vertical-align: top !important;">受控電子檔 / GRC系統 / 文件管理平台</td>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序<br> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷相關議題判定表</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / GHG Data Owner</td>
+<td style="vertical-align: top !important;">至少7年；查證、合約或法規要求較長者從其要求。</td>
+<td style="vertical-align: top !important;">受控電子檔 / GHG資料平台 / 文件管理平台</td>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序<br> GHG/CO2資料與碳證據清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI技術與監管趨勢影響分析表</td>
+<td style="vertical-align: top !important;">AI Governance Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少7年；涉及AI重大決策或高影響AI時依管理審查決議延長。</td>
+<td style="vertical-align: top !important;">受控電子檔 / AI治理平台 / 文件管理平台</td>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序<br> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">議題追蹤清冊與管理審查輸入</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少7年。</td>
+<td style="vertical-align: top !important;">GRC系統 / 管理審查資料庫</td>
+<td style="vertical-align: top !important;"> 管理審查程序<br> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險轉換與改善紀錄</td>
+<td style="vertical-align: top !important;">風險管理負責人 / CAPA Owner</td>
+<td style="vertical-align: top !important;">風險關閉或CAPA結案後至少7年。</td>
+<td style="vertical-align: top !important;">GRC系統 / CAPA系統 / 文件管理平台</td>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表<br> 不符合與矯正措施管理程序<br> 持續改善管理程序</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 流程圖</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">步驟</th>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1</td>
+<td style="vertical-align: top !important;">啟動組織全景分析。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">分析計畫與參與角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2</td>
+<td style="vertical-align: top !important;">確認分析範圍與參與角色。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO</td>
+<td style="vertical-align: top !important;">範圍與資料需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">3</td>
+<td style="vertical-align: top !important;">蒐集內部議題。</td>
+<td style="vertical-align: top !important;">各部門主管 / 專項Owner</td>
+<td style="vertical-align: top !important;">內部議題分析表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4</td>
+<td style="vertical-align: top !important;">蒐集外部議題。</td>
+<td style="vertical-align: top !important;">法務 / 合規 / 供應商 / CISO</td>
+<td style="vertical-align: top !important;">外部議題分析表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5</td>
+<td style="vertical-align: top !important;">執行PESTLE與SWOT分析。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">結構化分析結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6</td>
+<td style="vertical-align: top !important;">識別利害關係人需求與期望。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / Compliance Owner</td>
+<td style="vertical-align: top !important;">法規合約要求清冊輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7</td>
+<td style="vertical-align: top !important;">判定氣候變遷與GHG/CO2是否為相關議題。</td>
+<td style="vertical-align: top !important;">GHG Data Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">氣候變遷相關議題判定表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8</td>
+<td style="vertical-align: top !important;">識別AI多重角色與PIMS/PII相關議題。</td>
+<td style="vertical-align: top !important;">AI Governance Owner / DPO</td>
+<td style="vertical-align: top !important;">AI與隱私專項分析輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9</td>
+<td style="vertical-align: top !important;">評估議題影響與重大性。</td>
+<td style="vertical-align: top !important;">議題Owner / 風險管理負責人</td>
+<td style="vertical-align: top !important;">重大性評估結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10</td>
+<td style="vertical-align: top !important;">決定議題處理方式。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO</td>
+<td style="vertical-align: top !important;">追蹤、風險評鑑、範圍調整、控制更新或CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">11</td>
+<td style="vertical-align: top !important;">更新議題追蹤清冊。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">議題生命週期紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12</td>
+<td style="vertical-align: top !important;">必要時轉入風險評鑑、範圍調整、SoA或控制措施更新。</td>
+<td style="vertical-align: top !important;">風險管理負責人 / SoA Owner</td>
+<td style="vertical-align: top !important;">風險與控制治理輸出。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">13</td>
+<td style="vertical-align: top !important;">提交管理審查。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">14</td>
+<td style="vertical-align: top !important;">追蹤管理審查決議、CAPA與持續改善。</td>
+<td style="vertical-align: top !important;">CAPA Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">改善閉環證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 標準條款對照矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">標準 / 條款</th>
+<th style="vertical-align: top !important;">要求主題</th>
+<th style="vertical-align: top !important;">本程序對應內容</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 4.1</td>
+<td style="vertical-align: top !important;">理解組織及其全景</td>
+<td style="vertical-align: top !important;">本程序第7章、第8章、第9章、第10章說明組織全景、內外部議題、氣候變遷、AI、PII與GHG/CO2議題之識別與評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 4.2</td>
+<td style="vertical-align: top !important;">理解利害關係人需求與期望</td>
+<td style="vertical-align: top !important;">本程序第7.7及第5章說明利害關係人與法規合約要求如何使用管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 4.3</td>
+<td style="vertical-align: top !important;">決定ISMS範圍</td>
+<td style="vertical-align: top !important;">本程序第7.12說明議題如何觸發ISMS/PIMS範圍調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 4.4</td>
+<td style="vertical-align: top !important;">建立、實施、維持及持續改善ISMS</td>
+<td style="vertical-align: top !important;">本程序第5、7、13章說明議題如何連結流程、風險、控制、管理審查與改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 6.1</td>
+<td style="vertical-align: top !important;">風險與機會</td>
+<td style="vertical-align: top !important;">本程序第7.13說明重大議題如何轉入風險管理程序。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 7.5</td>
+<td style="vertical-align: top !important;">文件化資訊</td>
+<td style="vertical-align: top !important;">本程序第12章說明本程序產出之文件化資訊保存與管制要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 9.1</td>
+<td style="vertical-align: top !important;">監督、量測、分析與評估</td>
+<td style="vertical-align: top !important;">本程序第11章定義組織全景與議題管理KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 9.2</td>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">重大議題、AI/PIMS/GHG議題及氣候判定結果應納入稽核方案考量。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001:2022 9.3</td>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">本程序第7.14說明組織全景分析結果與重大議題如何納入管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27002:2022 5.31</td>
+<td style="vertical-align: top !important;">法律、法規、規章及合約要求</td>
+<td style="vertical-align: top !important;">本程序透過管理相關要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 42001 / ISO/IEC 23894</td>
+<td style="vertical-align: top !important;">AI管理系統與AI風險管理</td>
+<td style="vertical-align: top !important;">本程序透過AI技術與監管趨勢分析及AI風險評估銜接AI治理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO 14064 / ISO 14067 / ISO 14068</td>
+<td style="vertical-align: top !important;">GHG量化、產品碳足跡與碳中和聲明</td>
+<td style="vertical-align: top !important;">本程序透過氣候變遷相關議題判定與GHG/CO2資料證據清冊銜接碳資料治理。</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

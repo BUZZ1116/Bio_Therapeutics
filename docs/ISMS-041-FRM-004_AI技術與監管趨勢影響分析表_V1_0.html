@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-041-FRM-004 AI技術與監管趨勢影響分析表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1320px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-041-FRM-004 AI技術與監管趨勢影響分析表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-041-FRM-004</td>
+<td>AI技術與監管趨勢影響分析表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 4 / 組織全景、關注方、範圍與流程</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-4 / ISMS-041-FRM-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>表單建立</td>
+<td></td>
+<td>AI Governance Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI技術審查</td>
+<td></td>
+<td>AI Architect / ML Owner / Data Science Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與資料保護審查</td>
+<td></td>
+<td>DPO / Privacy Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法規與合規審查</td>
+<td></td>
+<td>Legal / Compliance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應鏈與雲端審查</td>
+<td></td>
+<td>Supplier Management / Cloud Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/CO2資料影響審查</td>
+<td></td>
+<td>GHG Data Owner / Sustainability Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>AI Management Representative / CISO / 授權治理委員會</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 填寫說明與使用原則</h2>
+<div class="notice">
+<p>本表單用於將AI技術與監管趨勢轉化為可管理的組織全景、風險、控制、法規遵循及管理審查輸入。填寫時不得只記錄新聞或趨勢摘要，必須進一步判斷該趨勢是否影響組織的AI使用、資訊安全、隱私、供應鏈、雲端、資料治理、GHG/CO2資料、客戶承諾、法規遵循、訓練需求、資源需求、風險處理與控制設計。</p>
+</div>
+<ul>
+<li>凡涉及AI技術、AI服務、AI供應商、AI監管、AI安全、AI隱私、AI碳資料或AI外部揭露之重大變化，均應使用本表單進行影響分析。</li>
+<li>本表單之結果應輸入至組織全景、風險管理程序、AI風險評估表、隱私風險評估表、風險登錄表、SoA、AI資產清冊、供應商評估、教育訓練計畫及管理審查。</li>
+<li>若趨勢資訊未經正式確認，應標示可信度、來源與不確定性，不得直接作為高風險決策唯一依據。</li>
+<li>若趨勢可能造成重大法規違反、PII外洩、AI輸出事故、模型濫用、客戶合約違反、碳揭露錯誤或供應商高風險，應立即升級至CISO、DPO、Legal、AI治理代表或管理階層。</li>
+</ul>
+<h2>3. 基本分析資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>分析紀錄編號</td>
+<td>AI-TRD-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>分析日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>分析類型</td>
+<td>□ 定期趨勢盤點 □ 新AI技術評估 □ 監管變更評估 □ 供應商政策變更 □ AI事件後評估 □ 客戶要求 □ 稽核發現 □ 管理審查要求 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>趨勢標題 / 主題</td>
+<td></td>
+<td>例如：生成式AI治理、AI Agent、RAG安全、AI法規、模型資料來源、AI碳排、模型供應商資料保留政策。</td>
+</tr>
+<tr>
+<td>趨勢來源</td>
+<td>□ 主管機關 □ 法規草案/正式法規 □ 國際標準 □ 產業指引 □ 客戶要求 □ 供應商公告 □ 威脅情資 □ 學術/研究報告 □ 內部事件 □ 稽核發現 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>來源可信度</td>
+<td>□ 高 □ 中 □ 低 □ 待驗證</td>
+<td>需記錄來源、版本、日期與是否為正式要求。</td>
+</tr>
+<tr>
+<td>影響期間</td>
+<td>□ 立即 □ 3個月內 □ 6個月內 □ 1年內 □ 長期觀察 □ 不確定</td>
+<td></td>
+</tr>
+<tr>
+<td>分析負責人</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>影響Owner</td>
+<td>□ CISO □ DPO □ AI Governance Owner □ Data Owner □ System Owner □ GHG Data Owner □ Supplier Owner □ Legal □ HR □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>初步影響結論</td>
+<td>□ 無重大影響 □ 需持續監測 □ 需更新風險評估 □ 需更新政策/程序 □ 需更新控制措施 □ 需管理階層決策 □ 需暫停/限制使用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>4. AI技術趨勢識別表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>趨勢類別</th>
+<th>觀察內容</th>
+<th>組織可能使用情境</th>
+<th>初步影響</th>
+<th>是否需後續評估</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>生成式AI / LLM</td>
+<td></td>
+<td>□ 辦公輔助 □ 客服 □ 教育訓練 □ 程式開發 □ 文件生成 □ 風險分析 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>AI Agent / 自主代理</td>
+<td></td>
+<td>□ 自動化流程 □ 工單處理 □ 資安分析 □ 採購/財務輔助 □ 客戶互動 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>RAG / 知識庫增強生成</td>
+<td></td>
+<td>□ 內部知識庫 □ 客戶支援 □ 法規查詢 □ 技術文件 □ 品質/資安文件 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>多模態AI</td>
+<td></td>
+<td>□ 影像分析 □ 聲音/語音 □ 文件解析 □ 視訊監控 □ 品質檢測 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>AI輔助程式開發</td>
+<td></td>
+<td>□ 程式碼生成 □ Code Review □ 測試生成 □ 安全掃描 □ DevOps自動化 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>AI資安工具</td>
+<td></td>
+<td>□ SOC分析 □ 威脅獵捕 □ 弱點排序 □ 日誌分析 □ 釣魚偵測 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>邊緣AI / 裝置端AI</td>
+<td></td>
+<td>□ IoT □ 行動裝置 □ 工廠設備 □ 智慧監控 □ 車載系統 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>AI模型壓縮與效率技術</td>
+<td></td>
+<td>□ 模型蒸餾 □ 量化 □ 推論優化 □ 能源效率 □ 碳資料管理 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>合成資料 / 資料增強</td>
+<td></td>
+<td>□ 訓練資料補強 □ 隱私保護 □ 測試資料生成 □ 偏誤改善 □ 其他</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+</tr>
+<tr>
+<td>其他AI技術趨勢</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+</tr>
+</tbody>
+</table>
+<h2>5. AI監管與標準趨勢識別表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監管/標準趨勢類別</th>
+<th>觀察內容</th>
+<th>適用性判斷</th>
+<th>影響領域</th>
+<th>後續動作</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI法規與監管要求</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ 產品 □ 服務 □ 內部使用 □ 客戶合約 □ 供應商 □ 跨境 □ 其他</td>
+<td>□ 更新法規清冊 □ 法務審查 □ 管理審查 □ 無</td>
+</tr>
+<tr>
+<td>AI管理系統標準</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ AIMS □ ISMS □ PIMS □ QMS □ 供應鏈 □ 稽核 □ 其他</td>
+<td>□ 更新程序 □ 更新控制 □ 內訓 □ 無</td>
+</tr>
+<tr>
+<td>AI風險管理標準/指引</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ 風險評估 □ Impact Assessment □ 模型驗證 □ 監控 □ 事件管理 □ 其他</td>
+<td>□ 更新風險方法 □ 更新表單 □ 無</td>
+</tr>
+<tr>
+<td>資料保護與PII要求</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ PII輸入 □ 訓練資料 □ Prompt □ 輸出 □ 跨境 □ 委外 □ 其他</td>
+<td>□ DPIA □ 隱私風險評估 □ DPO審查</td>
+</tr>
+<tr>
+<td>著作權、智慧財產與資料授權</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ 訓練資料 □ 輸出內容 □ 程式碼 □ 第三方資料 □ 客戶資料</td>
+<td>□ Legal審查 □ 供應商合約更新</td>
+</tr>
+<tr>
+<td>AI透明度、標示與揭露</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ 客戶互動 □ 文件生成 □ 自動決策 □ 對外內容 □ 其他</td>
+<td>□ 更新通知 □ 更新介面 □ 更新政策</td>
+</tr>
+<tr>
+<td>高風險AI或敏感使用限制</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ 人資 □ 信用 □ 教育 □ 安全 □ 醫療 □ 重要權益 □ 其他</td>
+<td>□ AI Impact Assessment □ 管理階層核准</td>
+</tr>
+<tr>
+<td>GHG/能源與永續揭露要求</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td>□ AI能耗 □ 雲端碳資料 □ 供應商碳資料 □ 對外揭露 □ 其他</td>
+<td>□ GHG資料評估 □ 查證準備</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 來源與可信度評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>評估問題</th>
+<th>結果</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>來源權威性</td>
+<td>來源是否為主管機關、正式標準組織、法院/監管機構、合約要求、供應商正式公告或可信研究機構？</td>
+<td>□ 高 □ 中 □ 低 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>要求狀態</td>
+<td>該趨勢是否已成為正式法規、正式標準、正式客戶要求或仍為草案/建議/市場趨勢？</td>
+<td>□ 正式 □ 草案 □ 指引 □ 市場趨勢 □ 未知</td>
+<td></td>
+</tr>
+<tr>
+<td>適用地區</td>
+<td>該要求是否適用於組織營運地區、客戶所在地、資料處理地點、雲端區域或供應商所在地？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>適用對象</td>
+<td>該趨勢是否適用於AI提供者、部署者、使用者、資料控制者、資料處理者、雲端服務或供應鏈角色？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>時效性</td>
+<td>來源日期、版本與生效日期是否明確？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>交叉驗證</td>
+<td>是否已由第二來源、Legal、DPO、CISO、AI Governance或供應商確認？</td>
+<td>□ 已驗證 □ 部分驗證 □ 未驗證</td>
+<td></td>
+</tr>
+<tr>
+<td>不確定性</td>
+<td>是否存在解釋不明、適用性未定、技術尚未成熟、法規未生效或供應商資訊不足？</td>
+<td>□ 高 □ 中 □ 低</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>7. 影響分析總表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>影響面向</th>
+<th>分析問題</th>
+<th>影響等級</th>
+<th>是否需行動</th>
+<th>後續銜接文件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISMS組織全景</td>
+<td>該趨勢是否形成新的外部/內部議題、威脅、機會、依賴或限制？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 內外部議題識別表<br> 資訊安全、隱私與AI風險管理程序</td>
+</tr>
+<tr>
+<td>PIMS與PII</td>
+<td>該趨勢是否涉及PII輸入、模型訓練、Prompt、輸出、跨境、資料主體權利或委外處理？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 隱私風險評估表<br> 關注方需求與法規遵循清冊</td>
+</tr>
+<tr>
+<td>AI治理與AI風險</td>
+<td>該趨勢是否影響AI角色、責任、Impact Assessment、模型控制、人工監督或高風險AI判定？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> AI系統資訊安全風險評估表<br> 資訊安全風險登錄表</td>
+</tr>
+<tr>
+<td>資訊安全控制</td>
+<td>該趨勢是否新增或改變存取控制、日誌監控、Prompt安全、RAG安全、DLP、加密、供應商或事件應變控制？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 適用性聲明書 SoA<br> 控制措施與風險對應矩陣</td>
+</tr>
+<tr>
+<td>供應商與雲端</td>
+<td>該趨勢是否影響AI供應商、雲端AI服務、API資料保留、訓練使用、區域、SLA、第四方或合約要求？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 供應商與ICT供應鏈安全管理程序<br> AI/雲端供應商GHG與資訊安全評估表</td>
+</tr>
+<tr>
+<td>GHG/CO2與永續</td>
+<td>該趨勢是否影響AI能耗、雲端碳資料、模型效率、碳揭露、GHG查證或碳資料安全？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 氣候變遷議題與GHG資料影響評估表<br> GHG/CO2資料與碳證據清冊</td>
+</tr>
+<tr>
+<td>教育訓練與認知</td>
+<td>該趨勢是否需要更新AI使用教育、資安教育、隱私教育、開發人員訓練或管理階層簡報？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 監督、量測、分析與評估程序<br> 管理審查程序</td>
+</tr>
+<tr>
+<td>管理審查與資源</td>
+<td>該趨勢是否需要新增預算、工具、人力、控制、供應商、合約或管理決策？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td>□ 是 □ 否</td>
+<td> 管理審查程序<br> 持續改善管理程序</td>
+</tr>
+</tbody>
+</table>
+<h2>8. AI技術影響細部分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分析面向</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>風險/機會說明</th>
+<th>建議行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>技術成熟度</td>
+<td>該AI技術是否已成熟、可支援企業級控制、具供應商支援、可維運與可監控？</td>
+<td>□ 高 □ 中 □ 低 □ 不明</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全架構影響</td>
+<td>是否需要新的身分管理、API控制、網路隔離、模型存取控制、Secrets管理、RAG資料保護或日誌監控？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料治理影響</td>
+<td>是否涉及新的資料來源、訓練資料、測試資料、向量資料庫、PII、客戶資料、資料授權或資料品質議題？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>模型治理影響</td>
+<td>是否需要模型版本、訓練資料追蹤、模型驗證、偏誤測試、穩健性測試、退役與變更管制？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Prompt與輸出控制</td>
+<td>是否需要Prompt模板、禁止輸入資料規則、輸出審查、人工覆核、幻覺警示或敏感資訊過濾？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>營運流程影響</td>
+<td>是否改變現有流程、責任、稽核軌跡、服務SLA、事件管理或使用者操作方式？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>可用性與韌性</td>
+<td>是否依賴外部AI API、雲端區域、供應商SLA、模型容量或推論服務穩定性？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>成本與資源</td>
+<td>是否造成雲端成本、GPU成本、工具授權、人力、訓練或控制投入增加？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>能源與碳影響</td>
+<td>是否增加AI訓練/推論能耗、雲端碳足跡或碳資料揭露需求？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>9. AI監管影響細部分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監管面向</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>影響說明</th>
+<th>後續處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>角色定位</td>
+<td>組織在該AI情境中屬於AI提供者、部署者、使用者、經銷者、資料控制者、資料處理者或其他角色？</td>
+<td>□ 已確認 □ 待確認 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>風險分類</td>
+<td>該AI使用是否可能被分類為高風險、受限制、需透明度義務、需人工監督或需Impact Assessment？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>透明度義務</td>
+<td>是否需要告知使用者其正在與AI互動、標示AI生成內容或揭露自動化決策？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料治理要求</td>
+<td>是否要求資料品質、資料代表性、偏誤控制、資料來源授權、PII保護或訓練資料紀錄？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>技術文件要求</td>
+<td>是否需保留模型文件、測試紀錄、風險評估、日誌、監控、版本、供應商聲明或合規證據？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>人類監督要求</td>
+<td>是否需要人工覆核、人類可介入、停止AI決策、申訴或人工替代流程？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>事件通報要求</td>
+<td>是否需要建立AI事件、重大故障、資料外洩或輸出事故之通報流程？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商合規要求</td>
+<td>AI供應商是否需提供安全、隱私、模型、資料、日誌、保留、刪除、地區與合規證據？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>禁止或限制用途</td>
+<td>是否涉及禁止、受限制或需特別核准之AI用途？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>10. AI安全、隱私與濫用風險檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險項目</th>
+<th>檢核問題</th>
+<th>風險等級</th>
+<th>控制需求</th>
+<th>後續銜接</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Prompt Injection</td>
+<td>趨勢是否增加Prompt Injection、系統提示洩漏、工具濫用或RAG污染風險？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> AI系統資訊安全風險評估表</td>
+</tr>
+<tr>
+<td>敏感資料輸入</td>
+<td>使用者是否可能將PII、客戶資料、原始碼、合約、憑證或機密資料輸入AI工具？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> AI工具與資料使用政策</td>
+</tr>
+<tr>
+<td>輸出錯誤與幻覺</td>
+<td>AI輸出錯誤是否可能導致客戶誤導、法規違反、財務損失、資安錯誤或營運決策錯誤？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> AI系統資訊安全風險評估表</td>
+</tr>
+<tr>
+<td>偏誤與歧視</td>
+<td>AI輸出或決策是否可能對個人、群體、員工、客戶或社會造成不公平影響？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> AI系統資訊安全風險評估表</td>
+</tr>
+<tr>
+<td>PII處理與外洩</td>
+<td>AI工具是否處理、推論、產生、保留或外洩PII？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> 隱私風險評估表</td>
+</tr>
+<tr>
+<td>模型供應商風險</td>
+<td>供應商是否可能使用輸入資料訓練模型、改變模型行為、保留資料或限制稽核證據？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> 供應商與ICT供應鏈安全管理程序</td>
+</tr>
+<tr>
+<td>惡意使用</td>
+<td>AI是否可能被用於釣魚、社交工程、惡意程式、漏洞利用、詐欺或內部違規？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> 威脅情資分析紀錄</td>
+</tr>
+<tr>
+<td>日誌與可追溯性不足</td>
+<td>AI輸入、輸出、模型版本、資料來源、使用者與決策是否可能無法追溯？</td>
+<td>□ 高 □ 中 □ 低 □ 無</td>
+<td></td>
+<td> AI模型版本與訓練資料追蹤清冊</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 法規、合約與利害關係人影響分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>利害關係人/要求來源</th>
+<th>可能新增或變更要求</th>
+<th>適用性</th>
+<th>影響說明</th>
+<th>後續銜接文件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>主管機關 / 監管機構</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 關注方需求與法規遵循清冊</td>
+</tr>
+<tr>
+<td>客戶 / 合約</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 關注方需求與法規遵循清冊</td>
+</tr>
+<tr>
+<td>資料主體 / 個人</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 隱私風險評估表</td>
+</tr>
+<tr>
+<td>AI供應商 / 雲端供應商</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 供應商與ICT供應鏈安全管理程序</td>
+</tr>
+<tr>
+<td>查證機構 / 稽核機構</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 稽核方案管理程序</td>
+</tr>
+<tr>
+<td>管理階層 / 董事會</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 管理審查程序</td>
+</tr>
+<tr>
+<td>員工 / 使用者</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> AI工具與資料使用政策</td>
+</tr>
+<tr>
+<td>社會、環境與永續利害關係人</td>
+<td></td>
+<td>□ 適用 □ 可能適用 □ 不適用 □ 待確認</td>
+<td></td>
+<td> 氣候變遷議題與GHG資料影響評估表</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 組織全景與範圍影響判定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>判定項目</th>
+<th>判定問題</th>
+<th>結果</th>
+<th>需更新項目</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>內部議題</td>
+<td>該AI趨勢是否改變組織能力、資源、流程、技術架構、治理責任或文化？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> 內外部議題識別表<br> 組織全景與內外部議題管理程序</td>
+</tr>
+<tr>
+<td>外部議題</td>
+<td>該AI趨勢是否改變威脅、監管、客戶需求、供應商能力、市場或社會期望？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> 內外部議題識別表<br> 關注方需求與法規遵循清冊</td>
+</tr>
+<tr>
+<td>ISMS範圍</td>
+<td>是否需將新AI系統、AI服務、雲端AI平台、資料流或供應商納入ISMS範圍？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> ISMS、PIMS與AI治理範圍管理程序</td>
+</tr>
+<tr>
+<td>PIMS範圍</td>
+<td>是否需將新的PII處理活動、AI個資使用、跨境傳輸或委外處理納入PIMS範圍？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> ISMS、PIMS與AI治理範圍管理程序</td>
+</tr>
+<tr>
+<td>AI治理範圍</td>
+<td>是否需將新的AI使用情境、模型、Prompt、RAG、Agent或AI供應商納入AI治理範圍？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> ISMS、PIMS與AI治理範圍管理程序<br> AI模型與Prompt資產清冊</td>
+</tr>
+<tr>
+<td>GHG/CO2資料範圍</td>
+<td>是否需將AI能源、雲端碳資料、AI模型效率或碳資料處理納入GHG資料治理？</td>
+<td>□ 是 □ 否 □ 待確認</td>
+<td> 氣候變遷議題與GHG資料影響評估表<br> GHG/CO2資料與碳證據清冊</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 後續文件更新與工作分派</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>後續作業</th>
+<th>是否需要</th>
+<th>責任角色</th>
+<th>完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>更新內外部議題識別表</td>
+<td>□ 是 □ 否</td>
+<td>ISMS管理代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新關注方需求與法規遵循清冊</td>
+<td>□ 是 □ 否</td>
+<td>Compliance Owner / Legal</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新ISMS/PIMS/AI治理範圍</td>
+<td>□ 是 □ 否</td>
+<td>ISMS管理代表 / DPO / AI Governance Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>執行AI系統資訊安全風險評估</td>
+<td>□ 是 □ 否</td>
+<td>AI Governance Owner / AI System Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>執行隱私風險評估 / DPIA</td>
+<td>□ 是 □ 否</td>
+<td>DPO / Data Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新資訊安全風險登錄表</td>
+<td>□ 是 □ 否</td>
+<td>風險管理負責人</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新AI模型與Prompt資產清冊</td>
+<td>□ 是 □ 否</td>
+<td>AI Asset Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新AI模型版本與訓練資料追蹤清冊</td>
+<td>□ 是 □ 否</td>
+<td>ML Owner / Data Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新適用性聲明書SoA</td>
+<td>□ 是 □ 否</td>
+<td>ISMS管理代表 / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新控制措施與風險對應矩陣</td>
+<td>□ 是 □ 否</td>
+<td>Control Owner / ISMS管理代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>更新AI工具與資料使用政策</td>
+<td>□ 是 □ 否</td>
+<td>AI Governance Owner / CISO / DPO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>提交管理審查</td>
+<td>□ 是 □ 否</td>
+<td>ISMS管理代表 / AI Governance Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 風險與機會登錄摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>編號</th>
+<th>趨勢/議題</th>
+<th>風險或機會描述</th>
+<th>影響等級</th>
+<th>可能性</th>
+<th>優先序</th>
+<th>後續文件</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI-TRD-RISK-001</td>
+<td></td>
+<td></td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ P1 □ P2 □ P3</td>
+<td> AI系統資訊安全風險評估表<br> 資訊安全風險登錄表</td>
+<td></td>
+</tr>
+<tr>
+<td>AI-TRD-RISK-002</td>
+<td></td>
+<td></td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ P1 □ P2 □ P3</td>
+<td> 隱私風險評估表<br> 資訊安全風險登錄表</td>
+<td></td>
+</tr>
+<tr>
+<td>AI-TRD-RISK-003</td>
+<td></td>
+<td></td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ P1 □ P2 □ P3</td>
+<td> 氣候變遷議題與GHG資料影響評估表<br> GHG/CO2資料與碳證據清冊</td>
+<td></td>
+</tr>
+<tr>
+<td>AI-TRD-RISK-004</td>
+<td></td>
+<td></td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ 高 □ 中 □ 低</td>
+<td>□ P1 □ P2 □ P3</td>
+<td> 供應商與ICT供應鏈安全管理程序<br> AI/雲端供應商GHG與資訊安全評估表</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. AI趨勢影響決策紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>決策項目</th>
+<th>決策內容</th>
+<th>決策人/角色</th>
+<th>日期</th>
+<th>後續追蹤</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>是否納入組織全景</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>ISMS管理代表</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否納入風險登錄</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>風險管理負責人</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需更新AI治理範圍</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>AI Governance Owner</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需更新PIMS範圍或DPIA</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>DPO</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需更新SoA或控制矩陣</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>ISMS管理代表 / CISO</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需更新供應商合約或評估</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>Supplier Owner / Legal</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需提交管理審查</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>ISMS管理代表</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需暫停或限制AI使用</td>
+<td>□ 是 □ 否 □ 待補資料</td>
+<td>CISO / AI Governance Owner / Legal</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>16. 改善行動與追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>行動編號</th>
+<th>改善項目</th>
+<th>來源趨勢/風險</th>
+<th>責任人</th>
+<th>期限</th>
+<th>所需資源</th>
+<th>驗證方式</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI-TRD-ACT-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>AI-TRD-ACT-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>AI-TRD-ACT-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+<tr>
+<td>AI-TRD-ACT-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 未開始 □ 進行中 □ 待驗證 □ 已完成 □ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 管理審查輸入與KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>指標/輸入</th>
+<th>門檻或判定</th>
+<th>管理審查用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI趨勢盤點完成率</td>
+<td>年度/季度應盤點AI技術與監管趨勢中已完成分析之比例。</td>
+<td>目標100%。</td>
+<td>確認組織全景更新完整性。</td>
+</tr>
+<tr>
+<td>重大AI監管影響數</td>
+<td>被判定為高影響或需管理階層決策之AI監管趨勢數量。</td>
+<td>高影響需提交管理審查。</td>
+<td>決定資源與合規優先序。</td>
+</tr>
+<tr>
+<td>AI高風險評估觸發數</td>
+<td>由本表單觸發之案件數。</td>
+<td>逾期未完成需升級。</td>
+<td>確認AI風險管理執行狀態。</td>
+</tr>
+<tr>
+<td>隱私風險評估觸發數</td>
+<td>由本表單觸發之案件數。</td>
+<td>PII高風險需DPO審查。</td>
+<td>確認PIMS合規。</td>
+</tr>
+<tr>
+<td>供應商合約或控制更新數</td>
+<td>因AI趨勢導致需更新供應商評估、合約、SLA或安全附件之案件數。</td>
+<td>高風險供應商需管理審查。</td>
+<td>確認供應鏈風險。</td>
+</tr>
+<tr>
+<td>AI/GHG資料影響數</td>
+<td>涉及AI能源、碳資料、雲端碳足跡或GHG揭露之趨勢數。</td>
+<td>重大揭露風險需升級。</td>
+<td>確認永續與碳資料治理。</td>
+</tr>
+<tr>
+<td>改善行動逾期數</td>
+<td>本表單產生之改善行動逾期件數。</td>
+<td>目標0。</td>
+<td>追蹤改善執行力。</td>
+</tr>
+<tr>
+<td>佐證資料更新完整率</td>
+<td>應更新之相關文件已完成更新比例。</td>
+<td>目標100%。</td>
+<td>確認文件銜接性與稽核可追溯性。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 證據保存與文件化資訊要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄/證據</th>
+<th>保存責任</th>
+<th>保存期限</th>
+<th>保存位置</th>
+<th>保護要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI技術與監管趨勢影響分析表</td>
+<td>AI Governance Owner / ISMS管理代表</td>
+<td>至少5年；重大AI或合規影響至少7年。</td>
+<td>受控文件平台 / GRC系統</td>
+<td>內部/機密，依內容限制存取。</td>
+</tr>
+<tr>
+<td>趨勢來源文件</td>
+<td>Compliance Owner / AI Governance Owner</td>
+<td>至少5年；法規或合約要求依較長期間。</td>
+<td>法規遵循資料庫 / 受控平台</td>
+<td>需保存來源、版本、日期與連結。</td>
+</tr>
+<tr>
+<td>法務/DPO/AI治理審查紀錄</td>
+<td>Legal / DPO / AI Governance Owner</td>
+<td>至少7年。</td>
+<td>GRC / Legal / PIMS平台</td>
+<td>機密或個資。</td>
+</tr>
+<tr>
+<td>後續風險評估與登錄證據</td>
+<td>風險管理負責人</td>
+<td>至少5年；重大風險至少7年。</td>
+<td>GRC系統</td>
+<td>機密。</td>
+</tr>
+<tr>
+<td>管理審查輸入與決議</td>
+<td>ISMS管理代表</td>
+<td>至少7年。</td>
+<td>管理審查資料庫</td>
+<td>機密。</td>
+</tr>
+<tr>
+<td>供應商與合約更新證據</td>
+<td>Supplier Owner / Legal</td>
+<td>合約期間及終止後至少7年。</td>
+<td>合約管理系統 / 供應商平台</td>
+<td>機密。</td>
+</tr>
+<tr>
+<td>GHG/CO2資料與碳證據</td>
+<td>GHG Data Owner</td>
+<td>至少7年；查證報告至少10年。</td>
+<td>GHG資料平台 / 受控平台</td>
+<td>機密，需可追溯。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 表單填寫品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>基本資料完整性</td>
+<td>分析編號、日期、來源、可信度、Owner、結論與簽核是否完整？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>趨勢來源充分性</td>
+<td>是否記錄來源、版本、日期、適用性、不確定性與交叉驗證？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>技術與監管完整性</td>
+<td>是否同時評估AI技術趨勢與AI監管/標準趨勢？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>ISMS/PIMS/AI/GHG整合性</td>
+<td>是否評估資訊安全、隱私、AI治理、GHG/CO2資料與供應鏈影響？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>後續文件銜接性</td>
+<td>是否明確列出需更新或使用之後續文件，且一份文件一列？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>風險登錄完整性</td>
+<td>中、高、重大風險或需追蹤風險是否登錄至風險登錄表？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>管理審查判定</td>
+<td>重大趨勢是否判定是否需提交管理審查？</td>
+<td>□ 通過 □ 不通過</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 通過</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

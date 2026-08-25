@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-041-REC-001 ISMS組織全景分析報告</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.75; margin: 24px; color: #222; }
+.isms-document { max-width: 2200px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; text-align: center; color: #1f4e79; }
+h2 { margin-top: 30px; font-size: 21px; color: #1f3b5b; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+h3 { margin-top: 20px; font-size: 17px; color: #333; }
+table { margin: 12px 0 24px 0; }
+th { background: #d9eaf7; font-weight: bold; text-align: left; }
+td, th { vertical-align: top !important; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-041-REC-001 ISMS組織全景分析報告</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-041-REC-001</td>
+<td>ISMS組織全景分析報告</td>
+<td>第四階：表單與紀錄 / REC / 紀錄</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 4 / 組織全景、關注方、範圍與流程</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-4 / ISMS-041-REC-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>ISMS管理代表 / 法遵與風險管理負責人 / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">組織全景管理負責人 / ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人 / Risk Owner</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">法務 / 法遵負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商 / ICT供應鏈管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層授權代表 / CISO</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 文件目的</h2>
+<p>本報告用於彙整組織之內部議題、外部議題、關注方需求與期望、ISMS範圍界定、風險與機會、資訊安全目標、控制措施適用性、資源與能力需求，以及PIMS、AI治理、GHG/CO2資料治理延伸要求，形成可供最高管理階層、資訊安全治理委員會、內部稽核、管理審查及外部驗證使用之組織全景分析結論。</p>
+<p>本報告是ISO/IEC 27001:2022 Clause 4.1、4.2、4.3、4.4之核心證據，並作為Clause 6.1風險與機會、Clause 6.2資訊安全目標、Clause 9.3管理審查及Clause 10持續改善之輸入。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">報告章節 / 活動</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">4. 報告範圍與基本資料</td>
+<td style="vertical-align: top !important;">用於確認ISMS範圍、流程、地點、資產、外包、雲端、資料流及排除理由。</td>
+<td style="vertical-align: top !important;">ISMS範圍摘要、邊界、排除項目與範圍變更結論。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5. 分析方法與資料來源</td>
+<td style="vertical-align: top !important;">用於彙整內外部議題、關注方需求、法規合約要求、風險管理、績效監督及改善資料。</td>
+<td style="vertical-align: top !important;">分析方法、資料來源、輸入文件與責任角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6. 管理階層摘要</td>
+<td style="vertical-align: top !important;">用於將重大組織情境變化、治理議題、風險與資源需求彙整為管理階層決策輸入。</td>
+<td style="vertical-align: top !important;">管理階層摘要、重大影響與審查建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7. 內部議題分析彙整</td>
+<td style="vertical-align: top !important;">用於彙整策略、治理、流程、能力、資源、資訊資產、技術環境與內部控制成熟度之分析結果。</td>
+<td style="vertical-align: top !important;">重大內部議題、管理回應、責任人與優先級。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8. 外部議題分析彙整</td>
+<td style="vertical-align: top !important;">用於彙整政策、經濟、社會、技術、法規、氣候、客戶、供應鏈、AI與威脅情資等外部議題。</td>
+<td style="vertical-align: top !important;">重大外部議題、合規義務、風險與機會輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9. 關注方需求與期望彙整</td>
+<td style="vertical-align: top !important;">用於將客戶、主管機關、員工、供應商、驗證機構、投資人與社會大眾需求轉換為合規義務、溝通與控制需求。</td>
+<td style="vertical-align: top !important;">關注方需求、合規義務與ISMS回應方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10. ISMS範圍適切性與邊界分析</td>
+<td style="vertical-align: top !important;">用於檢查組織單位、地點、流程、資訊資產、雲端、外包、PIMS、AI與GHG/CO2資料是否應納入ISMS範圍。</td>
+<td style="vertical-align: top !important;">範圍調整建議與邊界分析結論。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">11. 風險與機會輸入彙整</td>
+<td style="vertical-align: top !important;">用於將內外部議題與關注方要求轉入資訊安全、隱私、AI與氣候變遷資訊安全風險管理。</td>
+<td style="vertical-align: top !important;">風險與機會輸入、風險登錄與風險處理需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12. 資訊安全目標、KPI/KRI與治理指標建議</td>
+<td style="vertical-align: top !important;">用於將組織情境變化轉換為資訊安全、隱私、AI、GHG/CO2、供應鏈及控制有效性目標與監督指標。</td>
+<td style="vertical-align: top !important;">目標與KPI/KRI調整建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">13. SoA與控制措施適用性影響分析</td>
+<td style="vertical-align: top !important;">用於判定組織情境變化是否影響Annex A控制、實體控制、技術控制、營運持續與專項治理控制之適用性。</td>
+<td style="vertical-align: top !important;">SoA更新需求、控制補強與責任Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">14. 管理審查輸入彙整</td>
+<td style="vertical-align: top !important;">用於將組織全景分析結論、重大議題、風險與機會、目標、控制、資源及改善需求納入管理審查。</td>
+<td style="vertical-align: top !important;">管理審查輸入資料與改善決議追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">15. 後續行動與持續改善追蹤</td>
+<td style="vertical-align: top !important;">用於將分析結果轉為變更評估、文件修訂、運作控制、CAPA與持續改善行動。</td>
+<td style="vertical-align: top !important;">行動追蹤表、CAPA、文件修訂與改善證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">17. 附件與證據索引</td>
+<td style="vertical-align: top !important;">用於確認所有附件、原始分析表、外部來源文件、GHG/CO2證據及保存期限可追溯。</td>
+<td style="vertical-align: top !important;">附件索引、證據位置、保存期限與責任單位。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>適用於ISMS範圍內所有部門、流程、資訊資產、系統、雲端服務、供應商、外包流程及資料治理活動。</li>
+<li>適用於PIMS相關PII處理活動、AI治理相關AI系統與模型治理、GHG/CO2資料治理與氣候相關資訊安全議題。</li>
+<li>適用於年度組織全景審查、重大變更審查、風險評估、ISMS範圍確認、管理審查、內部稽核、外部驗證與持續改善。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織全景</td>
+<td style="vertical-align: top !important;">組織為理解其內外部情境、關注方需求、管理系統範圍、風險與機會、資源能力及治理成熟度所形成之整體分析結果。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部議題</td>
+<td style="vertical-align: top !important;">組織內部可能影響ISMS預期成果之因素，例如策略、組織、流程、人員、文化、技術、資源、資料、系統及治理能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部議題</td>
+<td style="vertical-align: top !important;">組織外部可能影響ISMS預期成果之因素，例如法規、監管、客戶、供應商、ICT供應鏈、威脅情資、技術、氣候、AI、隱私及市場環境。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關注方</td>
+<td style="vertical-align: top !important;">可能影響、受影響或自認受ISMS影響之個人或組織，例如客戶、主管機關、員工、供應商、合作夥伴、驗證機構、股東及社會大眾。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍</td>
+<td style="vertical-align: top !important;">組織界定納入ISMS之邊界、地點、流程、部門、資訊資產、系統、資料、供應商、雲端服務與外包流程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與機會</td>
+<td style="vertical-align: top !important;">因內外部議題與關注方要求所衍生，可能影響ISMS預期成果之不確定性與改善可能性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入</td>
+<td style="vertical-align: top !important;">提供最高管理階層審查ISMS適切性、充分性、有效性及資源需求之資料。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 報告範圍與基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="vertical-align: top !important;width:20%;">組織名稱</th>
+<td style="vertical-align: top !important;width:30%;"></td>
+<th style="vertical-align: top !important;width:20%;">報告期間</th>
+<td style="vertical-align: top !important;width:30%;">YYYY-MM-DD 至 YYYY-MM-DD</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">ISMS範圍摘要</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">納入部門 / 流程</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">納入地點 / 場域</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">納入資訊資產 / 系統</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">納入雲端 / ICT供應鏈 / 外包流程</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">PIMS / AI / GHG延伸範圍</th>
+<td style="vertical-align: top !important;" colspan="3">□ PIMS　□ AI治理　□ GHG/CO2資料治理　□ 雲端服務　□ AI系統　□ 資料中心　□ 其他：__________</td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">排除項目與理由</th>
+<td style="vertical-align: top !important;" colspan="3"></td>
+</tr>
+<tr>
+<th style="vertical-align: top !important;">範圍變更結論</th>
+<td style="vertical-align: top !important;" colspan="3">□ 維持現行範圍　□ 需小幅調整　□ 需重大調整　□ 需另行提報管理審查</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 分析方法與資料來源</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">分析來源</th>
+<th style="vertical-align: top !important;">使用文件 / 紀錄</th>
+<th style="vertical-align: top !important;">分析方法</th>
+<th style="vertical-align: top !important;">責任角色</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">內部議題</td>
+<td style="vertical-align: top !important;"> 內部議題分析表</td>
+<td style="vertical-align: top !important;">SWOT、成熟度、KPI/KRI、稽核與CAPA趨勢分析。</td>
+<td style="vertical-align: top !important;">組織全景管理負責人 / 各流程Owner</td>
+<td style="vertical-align: top !important;">重大內部議題清單、管理回應、風險與機會輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部議題</td>
+<td style="vertical-align: top !important;"> 外部議題分析表<br> 氣候變遷相關議題判定表<br> AI技術與監管趨勢影響分析表</td>
+<td style="vertical-align: top !important;">PESTLE、法規合約分析、威脅情資、供應鏈、AI技術與監管趨勢、氣候變遷與市場趨勢分析。</td>
+<td style="vertical-align: top !important;">法務 / SOC / 供應商管理 / CISO / AI Governance / GHG Data Owner</td>
+<td style="vertical-align: top !important;">重大外部議題清單、合規義務、風險與機會輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關注方需求</td>
+<td style="vertical-align: top !important;"> 關注方識別表<br> 關注方需求與期望分析表<br> 資訊安全法規與合約要求清冊</td>
+<td style="vertical-align: top !important;">關注方分類、要求適用性、合規義務與期望落差分析。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務 / 業務 / DPO</td>
+<td style="vertical-align: top !important;">要求清冊、合規義務、溝通與控制需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍</td>
+<td style="vertical-align: top !important;"> ISMS與PIMS範圍管理程序<br> ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;">流程、地點、資產、外包、雲端、資料流與邊界分析。</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">範圍聲明、邊界與排除理由。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與控制</td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 適用性聲明書 SoA<br> 控制措施與風險對應矩陣<br> 資訊安全風險登錄表<br> 資訊安全風險處理執行作業指導書</td>
+<td style="vertical-align: top !important;">風險評估、風險處理、SoA適用性、控制有效性分析。</td>
+<td style="vertical-align: top !important;">風險管理負責人 / Control Owner</td>
+<td style="vertical-align: top !important;">重大風險、處理計畫、SoA更新需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">績效與改善</td>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序<br> 稽核方案管理程序<br> 管理審查程序<br> 不符合與矯正措施管理程序<br> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">KPI/KRI、稽核、管理審查、CAPA與改善成效分析。</td>
+<td style="vertical-align: top !important;">績效評估負責人 / 稽核主管 / CAPA負責人</td>
+<td style="vertical-align: top !important;">管理審查輸入、改善提案與行動追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊資產與資料治理</td>
+<td style="vertical-align: top !important;"> 資訊及相關資產管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表<br> AI服務與碳足跡資料資產清冊<br> GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">資產盤點、分類分級、AI服務資料、碳資料與資料流分析。</td>
+<td style="vertical-align: top !important;">Asset Owner / Data Owner / AI Governance / GHG Data Owner</td>
+<td style="vertical-align: top !important;">資產與資料治理缺口、範圍與風險輸入。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 管理階層摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">摘要項目</th>
+<th style="vertical-align: top !important;">分析結論</th>
+<th style="vertical-align: top !important;">重大影響</th>
+<th style="vertical-align: top !important;">建議處置</th>
+<th style="vertical-align: top !important;">是否需管理審查</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">整體組織情境</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍適切性</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大內部議題</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大外部議題</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大關注方要求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大風險與機會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源與能力需求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG延伸治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">外部驗證與稽核準備</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 內部議題分析彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">內部議題類別</th>
+<th style="vertical-align: top !important;">重大議題摘要</th>
+<th style="vertical-align: top !important;">影響ISMS成果</th>
+<th style="vertical-align: top !important;">優先級</th>
+<th style="vertical-align: top !important;">管理回應</th>
+<th style="vertical-align: top !important;">責任人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">策略與營運方向</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 範圍　□ 目標　□ 風險　□ 控制　□ 資源</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">組織架構與治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 角色　□ RACI　□ 稽核獨立性　□ Owner　□ 報告線</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">流程與作業成熟度</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 流程　□ 文件　□ 控制證據　□ 外包流程</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人員、能力與文化</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 能力　□ 認知　□ 訓練　□ 職責區隔　□ 遠距工作</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊資產與資料治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 資產　□ 分類　□ PII　□ AI資料　□ GHG資料</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術環境與架構</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 端點　□ 網路　□ 雲端　□ 日誌　□ 弱點　□ 備份</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與外包管理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 供應商　□ SLA　□ ICT供應鏈　□ 雲端　□ 第四方</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG治理能力</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ DPIA　□ AI風險　□ 模型卡　□ 碳證據　□ 查證準備</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核、CAPA與改善能力</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 稽核　□ 不符合　□ RCA　□ CAPA　□ 有效性驗證</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 外部議題分析彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">外部議題類別</th>
+<th style="vertical-align: top !important;">重大議題摘要</th>
+<th style="vertical-align: top !important;">影響ISMS成果</th>
+<th style="vertical-align: top !important;">優先級</th>
+<th style="vertical-align: top !important;">管理回應</th>
+<th style="vertical-align: top !important;">責任人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政治 / 政策與地緣環境</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 跨境　□ 供應鏈　□ 地區服務　□ 營運持續</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">經濟與市場環境</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 資源　□ 預算　□ 客戶要求　□ 供應商穩定性</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">社會與文化因素</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 隱私期待　□ AI倫理　□ 社交工程　□ 遠距工作</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">技術環境與威脅趨勢</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 漏洞　□ 勒索軟體　□ AI攻擊　□ 雲端風險</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法律、法規與監管</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 合規　□ 通報　□ 合約　□ 紀錄保存　□ 查核</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">環境、氣候與永續</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ BCP　□ 資料中心　□ 碳資料　□ ESG揭露</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">客戶與市場要求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 客戶稽核　□ RFP　□ 合約　□ 證明文件</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與ICT供應鏈</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 供應商風險　□ SLA　□ 第四方　□ 雲端公告</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">隱私、AI、GHG外部要求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ PII　□ AI法規　□ 模型透明性　□ GHG查證</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證、標準與產業實務</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 標準更新　□ 驗證要求　□ 稽核案例　□ 最佳實務</td>
+<td style="vertical-align: top !important;">□ 高　□ 中　□ 低</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>9. 關注方需求與期望彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">關注方</th>
+<th style="vertical-align: top !important;">主要需求 / 期望</th>
+<th style="vertical-align: top !important;">合規義務</th>
+<th style="vertical-align: top !important;">ISMS回應方式</th>
+<th style="vertical-align: top !important;">相關文件 / 證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">客戶 / 委託方</td>
+<td style="vertical-align: top !important;">資訊安全、服務可用性、事件通報、合約履約、資安問卷、稽核配合。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">納入合約審查、SoA、供應商/雲端控制、KPI/SLA與證據管理。</td>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊<br> 適用性聲明書 SoA<br> 資訊安全溝通矩陣</td>
+<td style="vertical-align: top !important;">業務 / 法務 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">主管機關 / 監管單位</td>
+<td style="vertical-align: top !important;">法規符合、通報、紀錄保存、個資、AI、GHG/ESG揭露要求。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">維護法規清冊、法遵差距分析、通報程序與管理審查。</td>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊<br> ISMS/PIMS/AI/GHG紀錄保存期限清冊<br> GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">法務 / DPO / GHG治理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">員工 / 外包人員</td>
+<td style="vertical-align: top !important;">明確責任、訓練、資源、遠距工作安全、通報管道與隱私保護。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">建立政策、教育訓練、任命書、存取控制與事件通報機制。</td>
+<td style="vertical-align: top !important;"> 能力、認知與教育訓練管理程序<br> 資訊安全認知管理程序<br> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">HR / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商 / 雲端服務商</td>
+<td style="vertical-align: top !important;">明確安全要求、合約條款、SLA、資料處理、變更通知與稽核要求。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">供應商分級、風險評估、合約安全條款與定期審查。</td>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表<br> AI/雲端供應商GHG與資訊安全評估表</td>
+<td style="vertical-align: top !important;">採購 / 供應商管理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">合作夥伴 / 第三方</td>
+<td style="vertical-align: top !important;">資料共享、系統介接、保密、存取權限與責任界定。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">資料共享評估、NDA、介接安全審查與權限管理。</td>
+<td style="vertical-align: top !important;"> 資訊分類分級表<br> 加密與金鑰管理作業指導書</td>
+<td style="vertical-align: top !important;">法務 / IT / Data Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">驗證機構 / 稽核方</td>
+<td style="vertical-align: top !important;">符合性、證據完整性、可追溯性、持續改善與管理審查。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">維護文件化資訊、稽核方案、管理審查與CAPA。</td>
+<td style="vertical-align: top !important;"> 稽核方案管理程序<br> 管理審查程序<br> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 稽核主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">社會大眾 / 投資人</td>
+<td style="vertical-align: top !important;">資訊安全可信任、隱私保護、AI負責任使用、永續與透明揭露。</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;">建立PIMS/AI/GHG治理、揭露前審查與溝通機制。</td>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策<br> AI資訊安全與治理政策<br> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">DPO / AI治理 / GHG治理</td>
+</tr>
+</tbody>
+</table>
+<h2>10. ISMS範圍適切性與邊界分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">範圍構面</th>
+<th style="vertical-align: top !important;">現行範圍</th>
+<th style="vertical-align: top !important;">情境分析發現</th>
+<th style="vertical-align: top !important;">是否需調整</th>
+<th style="vertical-align: top !important;">調整建議</th>
+<th style="vertical-align: top !important;">責任人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織單位</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">實體地點</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">流程與活動</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊資產與資料</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">應用系統與平台</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">雲端服務與外包流程</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與ICT供應鏈</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / PII處理活動</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理 / AI系統</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 風險與機會輸入彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">編號</th>
+<th style="vertical-align: top !important;">來源</th>
+<th style="vertical-align: top !important;">風險 / 機會描述</th>
+<th style="vertical-align: top !important;">影響目標 / 控制</th>
+<th style="vertical-align: top !important;">建議納入文件</th>
+<th style="vertical-align: top !important;">責任人</th>
+<th style="vertical-align: top !important;">期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">RO-YYYY-001</td>
+<td style="vertical-align: top !important;">□ 內部議題　□ 外部議題　□ 關注方要求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 風險登錄　□ 風險處理計畫　□ SoA　□ KPI/KRI　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RO-YYYY-002</td>
+<td style="vertical-align: top !important;">□ 內部議題　□ 外部議題　□ 關注方要求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 風險登錄　□ 風險處理計畫　□ SoA　□ KPI/KRI　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RO-YYYY-003</td>
+<td style="vertical-align: top !important;">□ PIMS　□ AI　□ GHG/CO2　□ 供應鏈　□ 雲端</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 隱私風險　□ AI風險　□ 氣候風險　□ 供應鏈風險</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RO-YYYY-004</td>
+<td style="vertical-align: top !important;">□ 技術威脅　□ 法規　□ 客戶　□ 稽核發現</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ CAPA　□ 文件修訂　□ 控制補強　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 資訊安全目標、KPI/KRI與治理指標建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">資訊安全目標 / 治理主題</th>
+<th style="vertical-align: top !important;">情境分析輸入</th>
+<th style="vertical-align: top !important;">建議目標或KPI/KRI調整</th>
+<th style="vertical-align: top !important;">目標Owner</th>
+<th style="vertical-align: top !important;">追蹤頻率</th>
+<th style="vertical-align: top !important;">是否納入ISMS目標</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政策與認知</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR / ISMS管理代表</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制有效性</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">Control Owner / SoA負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">弱點與事件管理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">SOC / IT</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與雲端治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">供應商管理 / Cloud Owner</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS隱私治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理與AI風險</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核與CAPA</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">稽核主管 / CAPA負責人</td>
+<td style="vertical-align: top !important;">□ 月　□ 季　□ 年</td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+</tr>
+</tbody>
+</table>
+<h2>13. SoA與控制措施適用性影響分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">控制群組</th>
+<th style="vertical-align: top !important;">情境分析發現</th>
+<th style="vertical-align: top !important;">是否影響適用性</th>
+<th style="vertical-align: top !important;">可能新增 / 調整控制</th>
+<th style="vertical-align: top !important;">責任Owner</th>
+<th style="vertical-align: top !important;">後續行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Annex A.5 組織控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Annex A.6 人員控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR主管</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Annex A.7 實體控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">設施 / 總務主管</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Annex A.8 技術控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">IT / SOC / 技術控制負責人</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">BCMS / ICT營運持續控制</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 否　□ 是</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">BCMS / Service Continuity Owner</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+</tbody>
+</table>
+<h2>14. 管理審查輸入彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">管理審查輸入主題</th>
+<th style="vertical-align: top !important;">組織全景分析結論</th>
+<th style="vertical-align: top !important;">建議審查重點</th>
+<th style="vertical-align: top !important;">責任人</th>
+<th style="vertical-align: top !important;">完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">內外部議題變化</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認是否影響ISMS範圍、資源、風險與控制。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關注方要求變化</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認是否形成新合規義務、客戶要求或供應商要求。</td>
+<td style="vertical-align: top !important;">法務 / 業務 / 供應商管理</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍適切性</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認範圍是否需新增、刪除或調整。</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與機會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認重大風險、風險接受、處理計畫與機會利用。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全目標與KPI/KRI</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認目標是否需修訂及是否配置充分資源。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制措施與SoA</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認控制適用性、實施狀態、有效性與證據缺口。</td>
+<td style="vertical-align: top !important;">SoA負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG延伸治理</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認隱私、AI、GHG資料治理要求與外部趨勢。</td>
+<td style="vertical-align: top !important;">DPO / AI治理 / GHG治理</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資源與能力需求</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認人力、預算、工具、訓練與外部支援需求。</td>
+<td style="vertical-align: top !important;">HR / CISO / 財務</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CAPA與持續改善</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">確認情境分析導出之改善行動與有效性。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 後續行動與持續改善追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">行動編號</th>
+<th style="vertical-align: top !important;">來源分析</th>
+<th style="vertical-align: top !important;">行動事項</th>
+<th style="vertical-align: top !important;">行動類型</th>
+<th style="vertical-align: top !important;">責任人</th>
+<th style="vertical-align: top !important;">協辦</th>
+<th style="vertical-align: top !important;">期限</th>
+<th style="vertical-align: top !important;">完成證據</th>
+<th style="vertical-align: top !important;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">PA-YYYY-001</td>
+<td style="vertical-align: top !important;">□ 內部議題　□ 外部議題　□ 關注方　□ 範圍　□ 風險</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 風險評估　□ 文件修訂　□ 控制補強　□ 資源申請　□ CAPA　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PA-YYYY-002</td>
+<td style="vertical-align: top !important;">□ 內部議題　□ 外部議題　□ 關注方　□ 範圍　□ 風險</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 風險評估　□ 文件修訂　□ 控制補強　□ 資源申請　□ CAPA　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PA-YYYY-003</td>
+<td style="vertical-align: top !important;">□ PIMS　□ AI　□ GHG　□ 供應鏈　□ 雲端</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 專項風險評估　□ 供應商審查　□ 目標調整　□ 管理審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PA-YYYY-004</td>
+<td style="vertical-align: top !important;">□ 稽核　□ CAPA　□ KPI/KRI　□ 事件　□ 威脅情資</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ CAPA　□ 控制補強　□ KPI/KRI調整　□ 文件修訂</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+<h2>16. ISO/IEC 27001條文對應與報告證據</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important;">本報告對應內容</th>
+<th style="vertical-align: top !important;">報告證據位置</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">4.1 理解組織與其情境</td>
+<td style="vertical-align: top !important;">整合內部與外部議題，形成組織全景分析。</td>
+<td style="vertical-align: top !important;">第5、6、7、8節</td>
+<td style="vertical-align: top !important;">組織全景管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.2 理解關注方需求與期望</td>
+<td style="vertical-align: top !important;">彙整關注方需求、期望與合規義務。</td>
+<td style="vertical-align: top !important;">第9節</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.3 決定ISMS範圍</td>
+<td style="vertical-align: top !important;">依組織全景分析確認ISMS範圍與邊界。</td>
+<td style="vertical-align: top !important;">第10節</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.4 ISMS及其流程</td>
+<td style="vertical-align: top !important;">依情境分析確認流程、輸入輸出、風險與績效監控。</td>
+<td style="vertical-align: top !important;">第4、10、12節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.1 領導與承諾</td>
+<td style="vertical-align: top !important;">提供最高管理階層掌握重大議題、資源需求與治理方向。</td>
+<td style="vertical-align: top !important;">第14、15節</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.2 政策</td>
+<td style="vertical-align: top !important;">分析結果可作為政策審查與修訂依據。</td>
+<td style="vertical-align: top !important;">第12、15節</td>
+<td style="vertical-align: top !important;">CISO / 政策Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.3 角色、責任與權限</td>
+<td style="vertical-align: top !important;">分析結果可確認角色責任、Owner與治理架構是否需調整。</td>
+<td style="vertical-align: top !important;">第7、18節</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / HR</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1 風險與機會</td>
+<td style="vertical-align: top !important;">內外部議題與關注方要求轉換為風險與機會輸入。</td>
+<td style="vertical-align: top !important;">第11節</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2 資訊安全目標</td>
+<td style="vertical-align: top !important;">分析結果回饋資訊安全目標、KPI/KRI與績效監控。</td>
+<td style="vertical-align: top !important;">第12節</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.3 變更規劃</td>
+<td style="vertical-align: top !important;">重大情境變化觸發ISMS變更規劃、影響評估與文件更新。</td>
+<td style="vertical-align: top !important;">第15節</td>
+<td style="vertical-align: top !important;">變更管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1 資源</td>
+<td style="vertical-align: top !important;">報告識別人力、工具、預算、能力及外部支援需求。</td>
+<td style="vertical-align: top !important;">第14、15節</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2 能力</td>
+<td style="vertical-align: top !important;">內外部議題可揭露能力缺口與訓練需求。</td>
+<td style="vertical-align: top !important;">第7、14節</td>
+<td style="vertical-align: top !important;">HR / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 溝通</td>
+<td style="vertical-align: top !important;">關注方要求與外部議題可導出內外部溝通需求。</td>
+<td style="vertical-align: top !important;">第9、14節</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 文件化資訊</td>
+<td style="vertical-align: top !important;">本報告及附件作為受控文件化資訊與驗證證據。</td>
+<td style="vertical-align: top !important;">第17、19節</td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.1 運作規劃與控制</td>
+<td style="vertical-align: top !important;">分析結果回饋流程、外包、供應鏈、雲端與控制設計。</td>
+<td style="vertical-align: top !important;">第10、13、15節</td>
+<td style="vertical-align: top !important;">流程Owner / Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.2 風險評估</td>
+<td style="vertical-align: top !important;">重大議題與要求納入資訊安全風險評估。</td>
+<td style="vertical-align: top !important;">第11節</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.3 風險處理</td>
+<td style="vertical-align: top !important;">重大風險與控制缺口納入風險處理計畫與SoA。</td>
+<td style="vertical-align: top !important;">第13、15節</td>
+<td style="vertical-align: top !important;">風險處理計畫負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1 監督、量測、分析與評估</td>
+<td style="vertical-align: top !important;">分析結果回饋KPI/KRI、控制有效性與治理儀表板。</td>
+<td style="vertical-align: top !important;">第12節</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3 管理審查</td>
+<td style="vertical-align: top !important;">本報告為管理審查核心輸入之一。</td>
+<td style="vertical-align: top !important;">第14節</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.1 持續改善</td>
+<td style="vertical-align: top !important;">組織全景分析導出改善計畫。</td>
+<td style="vertical-align: top !important;">第15節</td>
+<td style="vertical-align: top !important;">持續改善負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.2 不符合與矯正措施</td>
+<td style="vertical-align: top !important;">若分析發現不符合或控制失效，應啟動CAPA。</td>
+<td style="vertical-align: top !important;">第15節</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 附件與證據索引</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">附件編號</th>
+<th style="vertical-align: top !important;">附件 / 證據名稱</th>
+<th>資訊來源／主題</th>
+<th style="vertical-align: top !important;">責任單位</th>
+<th style="vertical-align: top !important;">保存位置</th>
+<th style="vertical-align: top !important;">備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ATT-01</td>
+<td style="vertical-align: top !important;">內部議題分析表</td>
+<td style="vertical-align: top !important;"> 內部議題分析表</td>
+<td style="vertical-align: top !important;">組織全景管理負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-02</td>
+<td style="vertical-align: top !important;">外部議題分析表</td>
+<td style="vertical-align: top !important;"> 外部議題分析表</td>
+<td style="vertical-align: top !important;">組織全景管理負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-03</td>
+<td style="vertical-align: top !important;">氣候變遷相關議題判定表</td>
+<td style="vertical-align: top !important;"> 氣候變遷相關議題判定表</td>
+<td style="vertical-align: top !important;">GHG Data Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">如適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-04</td>
+<td style="vertical-align: top !important;">AI技術與監管趨勢影響分析表</td>
+<td style="vertical-align: top !important;"> AI技術與監管趨勢影響分析表</td>
+<td style="vertical-align: top !important;">AI Governance Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">如適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-05</td>
+<td style="vertical-align: top !important;">關注方識別與需求分析資料</td>
+<td style="vertical-align: top !important;"> 關注方識別表<br> 關注方需求與期望分析表</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-06</td>
+<td style="vertical-align: top !important;">法規與合約要求清冊</td>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊</td>
+<td style="vertical-align: top !important;">法務 / Compliance Owner</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-07</td>
+<td style="vertical-align: top !important;">ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;"> ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-08</td>
+<td style="vertical-align: top !important;">風險登錄表與風險處理計畫</td>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表<br> 資訊安全風險處理執行作業指導書</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">GRC / ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-09</td>
+<td style="vertical-align: top !important;">SoA與控制措施對應矩陣</td>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA<br> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">SoA負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-10</td>
+<td style="vertical-align: top !important;">KPI/KRI與績效分析資料</td>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / 儀表板</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-11</td>
+<td style="vertical-align: top !important;">稽核、管理審查、CAPA與改善資料</td>
+<td style="vertical-align: top !important;"> 稽核方案管理程序<br> 管理審查程序<br> 不符合與矯正措施管理程序<br> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">稽核主管 / CAPA負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ATT-12</td>
+<td style="vertical-align: top !important;">外部來源文件、GHG/CO2資料與碳證據</td>
+<td style="vertical-align: top !important;"> 外部來源文件清冊<br> GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">Document Control Owner / GHG Data Owner</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">如適用</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 組織全景分析RACI Matrix</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">報告活動</th>
+<th style="vertical-align: top !important;">最高管理階層</th>
+<th style="vertical-align: top !important;">CISO</th>
+<th style="vertical-align: top !important;">ISMS管理代表</th>
+<th style="vertical-align: top !important;">組織全景負責人</th>
+<th style="vertical-align: top !important;">風險管理</th>
+<th style="vertical-align: top !important;">法務 / 法遵</th>
+<th style="vertical-align: top !important;">各流程Owner</th>
+<th style="vertical-align: top !important;">DPO / AI / GHG</th>
+<th style="vertical-align: top !important;">內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">啟動組織全景分析</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">彙整內外部議題</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">彙整關注方要求</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">確認ISMS範圍適切性</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">轉入風險與機會管理</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">確認資訊安全目標與KPI/KRI</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">彙整管理審查輸入</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">追蹤後續行動</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">保存報告與附件</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄項目</th>
+<th style="vertical-align: top !important;">保存責任</th>
+<th style="vertical-align: top !important;">保存位置</th>
+<th style="vertical-align: top !important;">保存期限</th>
+<th style="vertical-align: top !important;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">核准版ISMS組織全景分析報告</td>
+<td style="vertical-align: top !important;">組織全景管理負責人 / Document Control Owner</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年；涉及重大範圍變更、管理審查、外部驗證、法律或客戶要求時依R4/R5或LH。</td>
+<td style="vertical-align: top !important;">應保留簽核、版本與附件索引。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內外部議題與關注方分析附件</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年；重大法規/客戶/供應鏈事件依R4或LH。</td>
+<td style="vertical-align: top !important;">應可追溯至原始分析表與資料來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍與風險連結資料</td>
+<td style="vertical-align: top !important;">CISO / 風險管理負責人</td>
+<td style="vertical-align: top !important;">ISMS文件庫 / GRC系統</td>
+<td style="vertical-align: top !important;">R4：範圍或風險有效期間加至少7年；重大變更依LH。</td>
+<td style="vertical-align: top !important;">重大範圍變更應保留核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入資料</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS文件庫</td>
+<td style="vertical-align: top !important;">R3：至少5年；驗證或管理決策涉及長期追溯時依R4。</td>
+<td style="vertical-align: top !important;">應與管理審查會議紀錄及報告關聯。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">行動追蹤與CAPA</td>
+<td style="vertical-align: top !important;">CAPA負責人 / 行動責任人</td>
+<td style="vertical-align: top !important;">CAPA系統 / ISMS文件庫</td>
+<td style="vertical-align: top !important;">R4：結案後至少7年；重大事件或法律保全依LH。</td>
+<td style="vertical-align: top !important;">逾期事項應提報治理委員會。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">查核問題</th>
+<th style="vertical-align: top !important;">應備證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Clause 4.1 組織情境</td>
+<td style="vertical-align: top !important;">是否已整合內部與外部議題，並判斷其對ISMS預期成果之影響？</td>
+<td style="vertical-align: top !important;">本報告、內部議題分析表、外部議題分析表。</td>
+<td style="vertical-align: top !important;">組織全景管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 4.2 關注方</td>
+<td style="vertical-align: top !important;">是否已識別關注方及其資訊安全相關需求與期望？</td>
+<td style="vertical-align: top !important;">關注方分析表、合規義務清冊、客戶合約。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 法務</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 4.3 ISMS範圍</td>
+<td style="vertical-align: top !important;">ISMS範圍是否依組織情境、關注方與外包流程進行界定？</td>
+<td style="vertical-align: top !important;">ISMS範圍聲明書、範圍分析表、排除理由。</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 4.4 ISMS流程</td>
+<td style="vertical-align: top !important;">組織是否依情境分析建立、實施、維持與持續改善ISMS流程？</td>
+<td style="vertical-align: top !important;">ISMS流程架構、程序文件、KPI/KRI、改善追蹤。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 6.1 風險與機會</td>
+<td style="vertical-align: top !important;">組織全景分析是否已轉入風險與機會管理？</td>
+<td style="vertical-align: top !important;">風險與機會輸入彙整、風險登錄表。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 6.2 資訊安全目標</td>
+<td style="vertical-align: top !important;">分析結果是否回饋資訊安全目標與KPI/KRI？</td>
+<td style="vertical-align: top !important;">目標建議表、KPI/KRI追蹤表。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 9.3 管理審查</td>
+<td style="vertical-align: top !important;">本報告是否形成管理審查輸入並提出資源、風險與改善建議？</td>
+<td style="vertical-align: top !important;">管理審查輸入彙整、管理審查會議紀錄。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Clause 10 持續改善</td>
+<td style="vertical-align: top !important;">報告結論是否導出可追蹤之改善行動？</td>
+<td style="vertical-align: top !important;">後續行動追蹤表、CAPA、改善報告。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG延伸治理</td>
+<td style="vertical-align: top !important;">隱私、AI、GHG/CO2相關議題是否已轉入專項風險與控制？</td>
+<td style="vertical-align: top !important;">專項風險評估、碳證據清冊、AI服務清冊。</td>
+<td style="vertical-align: top !important;">DPO / AI Governance / GHG Data Owner</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">與本報告之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">定義管理系統整體架構與組織情境管理原則。</td>
+<td style="vertical-align: top !important;">作為本報告治理架構、ISMS定位與最高管理階層審查之依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 組織全景與內外部議題管理程序</td>
+<td style="vertical-align: top !important;">定義組織全景與內外部議題管理程序。</td>
+<td style="vertical-align: top !important;">作為本報告編製、審查、核准、更新與管理審查輸入之主要程序依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 內部議題分析表</td>
+<td style="vertical-align: top !important;">提供本報告之內部議題分析輸入。</td>
+<td style="vertical-align: top !important;">用於第7章彙整內部議題、影響ISMS成果與管理回應。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 外部議題分析表</td>
+<td style="vertical-align: top !important;">提供本報告之外部議題分析輸入。</td>
+<td style="vertical-align: top !important;">用於第8章彙整PESTLE、法規、威脅、供應鏈、氣候與AI外部趨勢。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷相關議題判定表</td>
+<td style="vertical-align: top !important;">提供氣候變遷相關議題判定。</td>
+<td style="vertical-align: top !important;">用於判定氣候變遷是否影響ISMS範圍、BCP、資料中心、GHG/CO2資料與風險管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI技術與監管趨勢影響分析表</td>
+<td style="vertical-align: top !important;">提供AI技術與監管趨勢影響分析。</td>
+<td style="vertical-align: top !important;">用於判定AI技術、AI法規、AI治理與AI風險是否影響ISMS目標、範圍與控制措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 關注方需求與法規遵循管理程序</td>
+<td style="vertical-align: top !important;">定義關注方需求與法規遵循管理流程。</td>
+<td style="vertical-align: top !important;">用於第9章將關注方需求轉換為合規義務、控制需求與溝通需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊</td>
+<td style="vertical-align: top !important;">提供法規、合約與客戶要求清冊。</td>
+<td style="vertical-align: top !important;">用於確認合規義務、客戶要求、通報要求與保存期限。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS與PIMS範圍管理程序</td>
+<td style="vertical-align: top !important;">定義ISMS與PIMS範圍管理程序。</td>
+<td style="vertical-align: top !important;">用於第10章判定ISMS範圍、邊界、排除理由與變更需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;">提供ISMS範圍正式聲明。</td>
+<td style="vertical-align: top !important;">用於承接本報告範圍分析結論並形成正式範圍證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">承接本報告輸出之風險與機會。</td>
+<td style="vertical-align: top !important;">用於將第11章之風險與機會輸入轉入風險評估、風險處理與剩餘風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">承接本報告對控制適用性之影響分析。</td>
+<td style="vertical-align: top !important;">用於判定SoA控制適用、不適用、排除理由及控制狀態更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">承接本報告對CIA、AI、PII、GHG與氣候風險之控制對應。</td>
+<td style="vertical-align: top !important;">用於確認控制措施與專項風險矩陣是否需更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">承接本報告之KPI/KRI與績效監控建議。</td>
+<td style="vertical-align: top !important;">用於建立、調整或監督資訊安全、隱私、AI、GHG與供應鏈治理指標。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">本報告作為管理審查重要輸入。</td>
+<td style="vertical-align: top !important;">用於將重大議題、風險、資源、範圍、目標與改善需求納入最高管理階層審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">若本報告發現不符合或重大缺口，應啟動CAPA。</td>
+<td style="vertical-align: top !important;">用於追蹤矯正措施、RCA、改善計畫與有效性驗證。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">檢查項目</th>
+<th style="vertical-align: top !important;">完成</th>
+<th style="vertical-align: top !important;">證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">內部議題、外部議題、關注方需求與ISMS範圍分析完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第7至10章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與機會、資訊安全目標、SoA與控制適用性影響分析完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第11至13章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS、AI治理、GHG/CO2資料治理與供應鏈延伸議題已納入</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第7至14章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入、後續行動、CAPA與持續改善追蹤完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第14至15章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISO/IEC 27001條文對應、附件索引、RACI、保存要求與稽核提示完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第16至20章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">所有表格符合指定HTML格式且每個 th / td 均向上對齊</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">已完成HTML格式檢查。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. Enterprise Certification Declaration</h2>
+<p>本文件為ISMS組織全景分析之正式企業級紀錄，可支援ISO/IEC 27001:2022 Clause 4.1、4.2、4.3、4.4、6.1、6.2、7.5、8.1、8.2、8.3、9.1、9.2、9.3及10.2之符合性證明，並可支援PIMS、AI治理、GHG/CO2資料治理、供應鏈安全、內部稽核、外部驗證、管理審查及持續改善證據鏈。實際採用時，應依組織產業、營運模式、法規合約、資訊資產、供應鏈、AI/雲端/GHG治理成熟度及驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>
