@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-019 網路安全管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-019 網路安全管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-019</td>
+<td>網路安全管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-019</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Network Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路營運審查</td>
+<td></td>
+<td>Network Operations Owner / IT Operations Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端網路審查</td>
+<td></td>
+<td>Cloud Security Owner / Cloud Network Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>應用與API審查</td>
+<td></td>
+<td>Application Owner / API Owner / DevSecOps（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps網路審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商連線審查</td>
+<td></td>
+<td>Supplier Management / Procurement / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>營運持續審查</td>
+<td></td>
+<td>BCMS / ICT Readiness Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 網路主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織網路與網路安全控制之設計、建置、分段、連線、存取、監控、變更、審查、事件處理與持續改善要求，確保網路基礎設施、雲端網路、遠端存取、供應商連線、AI/MLOps/RAG連線、API與對外服務具備適當保護，降低未授權存取、橫向移動、資料外洩、服務中斷、DDoS、惡意流量、弱協定、錯誤設定與供應鏈連線風險。</p>
+<p>本文件支援ISO/IEC 27001:2022 Annex A.8.20網路安全、A.8.21網路服務安全、A.8.22網路分隔、A.8.23網頁過濾、A.8.24密碼學使用及相關存取控制、日誌監控、弱點管理、供應商管理、雲端服務與營運持續要求。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>網路安全應採最小連線、預設拒絕、分區分段、零信任、深度防禦、可監控、可追溯、變更受控與風險導向原則。</li>
+<li>任何網路連線、開放埠、外部暴露、供應商連線、跨區連線、雲端安全群組、VPN/ZTNA或防火牆規則均應具明確Owner、業務目的、資料分類、風險評估、核准紀錄與定期審查。</li>
+<li>管理介面、特權系統、資料庫、備份平台、KMS、PAM、SIEM、MLOps、AI模型服務與關鍵系統不得直接暴露於網際網路，除非經CISO核准並具補償控制。</li>
+<li>網路架構、規則與設定應與資產清冊、資料分類、業務流程、ICT備妥性、雲端服務清冊、供應商登錄及風險登錄保持一致。</li>
+<li>網路安全控制不得因效能、成本或便利性而任意關閉；若須例外，應執行風險評估、補償控制、核准、期限與重評。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路區域</td>
+<td>依業務功能、資料分類、風險等級、信任邊界或技術用途劃分之網路範圍，例如DMZ、內部區、管理區、資料庫區、備份區、AI/MLOps區。</td>
+</tr>
+<tr>
+<td>網路分段</td>
+<td>透過VLAN、子網、防火牆、安全群組、ACL、微分段或SDN策略限制不同區域間通訊之控制。</td>
+</tr>
+<tr>
+<td>DMZ</td>
+<td>Demilitarized Zone，介於網際網路與內部網路間之隔離區域，用於放置對外服務並限制其對內部資源存取。</td>
+</tr>
+<tr>
+<td>防火牆規則</td>
+<td>定義來源、目的、埠、協定、動作、時間、應用、使用者與記錄要求之網路存取控制設定。</td>
+</tr>
+<tr>
+<td>ZTNA</td>
+<td>Zero Trust Network Access，基於身份、裝置狀態、風險與應用層授權提供遠端或內部應用存取之方式。</td>
+</tr>
+<tr>
+<td>NAC</td>
+<td>Network Access Control，用於檢查裝置身份、合規狀態與授權，並控制其網路接入之機制。</td>
+</tr>
+<tr>
+<td>IDS/IPS</td>
+<td>入侵偵測/防禦系統，用於偵測或阻擋可疑網路流量與攻擊行為。</td>
+</tr>
+<tr>
+<td>WAF</td>
+<td>Web Application Firewall，用於保護Web應用與API免受常見應用層攻擊之控制。</td>
+</tr>
+<tr>
+<td>安全群組 / NSG</td>
+<td>雲端環境中控制資源入站與出站流量之邏輯防火牆或網路安全規則。</td>
+</tr>
+<tr>
+<td>微分段</td>
+<td>以工作負載、應用、身份或標籤為單位進行細粒度網路隔離與通訊控制。</td>
+</tr>
+<tr>
+<td>網路服務</td>
+<td>由內部或外部供應商提供之網路連線、防護、DNS、VPN、DDoS、CDN、專線、SD-WAN、Proxy或網路管理服務。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准網路安全策略、高風險連線、重大例外、事件升級與風險接受。</td>
+<td>核准紀錄、風險接受、事件決策。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>制定網路安全基準、分區分段要求、防火牆規則標準與網路安全監控要求。</td>
+<td>網路安全基準、規則審查紀錄。</td>
+</tr>
+<tr>
+<td>Network Operations Owner</td>
+<td>負責網路設備、線路、VPN、DNS、DHCP、NTP、SD-WAN、防火牆與網路可用性維運。</td>
+<td>網路組態、維運紀錄、服務報告。</td>
+</tr>
+<tr>
+<td>Cloud Security / Cloud Network Owner</td>
+<td>管理雲端VPC/VNet、安全群組、路由、Private Link、跨區連線、雲端防火牆與CSPM。</td>
+<td>雲端網路設定、CSPM報告。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控網路流量、IDS/IPS、WAF、DNS、Proxy、DDoS、VPN、異常連線與威脅告警。</td>
+<td>SIEM告警、事件工單、監控報告。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>提出網路需求，確認來源、目的、埠、資料分類、業務必要性、服務依賴與測試驗證。</td>
+<td>連線申請、驗收紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>確認涉及資料之網路傳輸、加密、跨境、供應商連線與資料外洩風險。</td>
+<td>資料分類、傳輸核准。</td>
+</tr>
+<tr>
+<td>IAM Owner</td>
+<td>確保VPN/ZTNA、管理介面與網路設備存取符合身份驗證、MFA、特權管理與離職撤權。</td>
+<td>IAM設定、權限審查。</td>
+</tr>
+<tr>
+<td>Supplier Management Owner</td>
+<td>管理電信、雲端、MSSP、DDoS、CDN、專線與外包維運之網路服務供應商安全要求。</td>
+<td>供應商評估、合約SLA。</td>
+</tr>
+<tr>
+<td>BCMS / ICT Readiness Owner</td>
+<td>評估網路服務之RTO/RPO、冗餘、備援、故障切換、專線與DDoS復原能力。</td>
+<td>ICT備妥性評估、演練報告。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查網路規則、連線、組態、變更、日誌、例外、事件與供應商管理證據。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 網路區域與分段架構</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>網路區域</th>
+<th>用途</th>
+<th>最低安全要求</th>
+<th>典型限制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Internet / 外部區</td>
+<td>公共網際網路、外部使用者與未信任來源。</td>
+<td>預設不信任，所有入口需經邊界保護、WAF、DDoS或CDN等控制。</td>
+<td>不得直接連至內部關鍵系統。</td>
+</tr>
+<tr>
+<td>DMZ / 對外服務區</td>
+<td>對外網站、API Gateway、反向代理、WAF後端與公開服務。</td>
+<td>最小必要連線、強化主機、WAF/IPS、日誌監控與漏洞修補。</td>
+<td>僅允許必要流量進入內部服務。</td>
+</tr>
+<tr>
+<td>內部使用者區</td>
+<td>一般辦公端點、內部應用存取與使用者網段。</td>
+<td>NAC/端點合規、網路分段、Proxy/DNS過濾、EDR與最小通訊。</td>
+<td>不得直接存取資料庫或管理介面。</td>
+</tr>
+<tr>
+<td>伺服器區</td>
+<td>內部應用、服務、檔案、資料處理與中介服務。</td>
+<td>防火牆分段、最小連線、日誌、弱點管理與備份。</td>
+<td>僅允許核准應用流量。</td>
+</tr>
+<tr>
+<td>資料庫區</td>
+<td>資料庫、資料倉儲、資料湖、敏感資料儲存。</td>
+<td>嚴格分段、僅應用服務存取、加密、資料庫審計。</td>
+<td>禁止使用者端點直接連線，除核准管理通道。</td>
+</tr>
+<tr>
+<td>管理區</td>
+<td>網路設備、伺服器、PAM、KMS、備份、虛擬化、雲端管理入口。</td>
+<td>MFA/PAM、跳板、管理端點、Session Recording、來源限制。</td>
+<td>不得公開網際網路。</td>
+</tr>
+<tr>
+<td>安全監控區</td>
+<td>SIEM、EDR、IDS/IPS、Log Collector、DLP、SOAR。</td>
+<td>高完整性保護、限制存取、時間同步、備份。</td>
+<td>不得讓一般使用者存取。</td>
+</tr>
+<tr>
+<td>備份與復原區</td>
+<td>備份平台、備份儲存、不可變備份、DR系統。</td>
+<td>隔離網段、最小管理、不可變、離線或獨立權限域。</td>
+<td>不得由一般端點直接存取。</td>
+</tr>
+<tr>
+<td>開發測試區</td>
+<td>開發、測試、CI/CD、測試資料與測試服務。</td>
+<td>與正式環境隔離、測試資料限制、Secrets隔離。</td>
+<td>不得使用正式資料或正式Secrets，除非核准。</td>
+</tr>
+<tr>
+<td>AI/MLOps/RAG區</td>
+<td>AI模型服務、MLOps、向量資料庫、RAG資料源、推論API。</td>
+<td>資料分類、API限制、RAG權限、Secrets管理、模型與資料監控。</td>
+<td>不得未核准連接高機密資料源或外部AI服務。</td>
+</tr>
+<tr>
+<td>供應商連線區</td>
+<td>供應商VPN、專線、遠端支援、B2B整合。</td>
+<td>單獨分段、MFA、時間限制、Session Recording、最小權限。</td>
+<td>不得橫向存取其他網段。</td>
+</tr>
+<tr>
+<td>Guest / 訪客區</td>
+<td>訪客與非受管裝置上網。</td>
+<td>完全隔離內部網路，限上網，使用者告知與頻寬/時間限制。</td>
+<td>不得存取內部資源。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 網路安全管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 網路需求提出</td>
+<td>提出來源、目的、埠、協定、用途、資料分類、系統Owner、有效期限與業務必要性。</td>
+<td>Application / System Owner</td>
+<td>網路連線申請。</td>
+</tr>
+<tr>
+<td>2. 風險與架構審查</td>
+<td>評估信任邊界、資料敏感度、暴露面、供應商、AI/雲端、營運持續與合規風險。</td>
+<td>Network Security / CISO</td>
+<td>架構審查紀錄。</td>
+</tr>
+<tr>
+<td>3. 規則設計</td>
+<td>採最小連線、預設拒絕、分段、日誌、到期日、命名與Owner標籤。</td>
+<td>Network Owner / Cloud Owner</td>
+<td>規則設計紀錄。</td>
+</tr>
+<tr>
+<td>4. 變更核准</td>
+<td>依變更管理流程核准網路、防火牆、VPN、雲端安全群組與路由變更。</td>
+<td>Change Manager / CISO</td>
+<td>變更單。</td>
+</tr>
+<tr>
+<td>5. 實作與驗證</td>
+<td>部署後驗證連線、阻斷非預期流量、日誌產生與告警可用。</td>
+<td>Network Operations / SOC</td>
+<td>實作與測試紀錄。</td>
+</tr>
+<tr>
+<td>6. 持續監控</td>
+<td>監控流量、規則命中、異常、掃描、DDoS、WAF、IDS/IPS、DNS與Proxy事件。</td>
+<td>SOC / Network Owner</td>
+<td>監控報告。</td>
+</tr>
+<tr>
+<td>7. 定期審查</td>
+<td>定期審查規則必要性、Owner、有效期限、寬鬆規則、未命中規則與過期連線。</td>
+<td>Network Security Owner</td>
+<td>規則審查紀錄。</td>
+</tr>
+<tr>
+<td>8. 偏差與例外處理</td>
+<td>不符合基準之規則、公開暴露或弱協定需修正或例外核准。</td>
+<td>CISO / Risk Owner</td>
+<td>偏差或例外紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 防火牆、ACL與安全群組管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>規則命名與Owner</td>
+<td>每條規則應具用途、Owner、申請單、有效期限、環境與風險標籤。</td>
+<td>防火牆規則清單、變更單。</td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>來源、目的、埠、協定應最小化，不得使用any-any或過寬CIDR，除非例外核准。</td>
+<td>規則審查報告。</td>
+</tr>
+<tr>
+<td>預設拒絕</td>
+<td>邊界、防火牆、重要區域與雲端安全群組應預設拒絕。</td>
+<td>組態基準。</td>
+</tr>
+<tr>
+<td>臨時規則</td>
+<td>臨時規則需設定到期日，到期自動停用或審查。</td>
+<td>到期規則報告。</td>
+</tr>
+<tr>
+<td>日誌記錄</td>
+<td>對外入口、跨區、高風險、管理與拒絕流量應記錄日誌。</td>
+<td>防火牆Log、SIEM。</td>
+</tr>
+<tr>
+<td>規則審查</td>
+<td>至少每季審查高風險與對外規則，至少每年全面審查。</td>
+<td>規則審查紀錄。</td>
+</tr>
+<tr>
+<td>未命中規則</td>
+<td>長期未命中規則應停用或刪除，降低攻擊面。</td>
+<td>命中率報告。</td>
+</tr>
+<tr>
+<td>高風險服務</td>
+<td>管理服務、資料庫、RDP、SSH、SMB、Kubernetes API、雲端Metadata等需嚴格限制。</td>
+<td>掃描報告、規則檢查。</td>
+</tr>
+<tr>
+<td>雲端安全群組</td>
+<td>Security Group/NSG應受IaC與CSPM管理，避免手動漂移。</td>
+<td>CSPM/IaC報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 遠端存取、VPN與ZTNA管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險加強要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份驗證</td>
+<td>遠端存取必須使用具名帳號、MFA與核准身份來源。</td>
+<td>高權限遠端存取需PAM/JIT或管理端點。</td>
+</tr>
+<tr>
+<td>裝置合規</td>
+<td>遠端端點需符合EDR、加密、修補、MDM/UEM與風險狀態要求。</td>
+<td>不合規端點自動阻斷或限制。</td>
+</tr>
+<tr>
+<td>最小存取</td>
+<td>VPN/ZTNA應以應用或網段最小授權，避免全網段通行。</td>
+<td>高風險系統採ZTNA或跳板。</td>
+</tr>
+<tr>
+<td>Session控制</td>
+<td>高風險遠端作業應記錄Session、來源、時間、命令或操作活動。</td>
+<td>供應商與特權作業需Session Recording。</td>
+</tr>
+<tr>
+<td>地理與風險限制</td>
+<td>可依地區、IP、時間、使用者風險、裝置風險設定限制。</td>
+<td>異常地區登入需升級驗證或阻斷。</td>
+</tr>
+<tr>
+<td>供應商遠端支援</td>
+<td>供應商存取需事前核准、時段限制、最小權限、活動記錄與使用後撤權。</td>
+<td>不得使用共享固定VPN帳密。</td>
+</tr>
+<tr>
+<td>Split Tunneling</td>
+<td>如開啟Split Tunneling，應評估資料外洩與監控缺口。</td>
+<td>高風險端點或管理作業原則停用。</td>
+</tr>
+<tr>
+<td>憑證與密鑰</td>
+<td>VPN憑證、裝置憑證與金鑰需受控、輪替與撤銷。</td>
+<td>離職或事件後立即撤銷。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 無線網路與訪客網路管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>企業無線網路要求</th>
+<th>訪客網路要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份驗證</td>
+<td>使用企業身份、憑證或強驗證，不得共享靜態密碼。</td>
+<td>可使用訪客帳號、Portal或短期憑證。</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>使用核准無線加密協定，禁用弱協定與預設密碼。</td>
+<td>同樣需使用安全加密與隔離。</td>
+</tr>
+<tr>
+<td>網路隔離</td>
+<td>企業無線依使用者與裝置分類分段。</td>
+<td>完全隔離內部網路，僅允許上網。</td>
+</tr>
+<tr>
+<td>裝置合規</td>
+<td>受管裝置優先，必要時NAC檢查。</td>
+<td>不得授予內部系統存取。</td>
+</tr>
+<tr>
+<td>訪客管理</td>
+<td>訪客存取需有期限、用途、責任人或訪客政策告知。</td>
+<td>到期自動失效。</td>
+</tr>
+<tr>
+<td>日誌</td>
+<td>記錄連線時間、裝置、來源、帳號或訪客識別。</td>
+<td>依隱私與法規要求保存。</td>
+</tr>
+<tr>
+<td>異常偵測</td>
+<td>偵測Rogue AP、Evil Twin、異常連線或暴力破解。</td>
+<td>重大異常通報SOC。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. DNS、Proxy、Web過濾與外部連線管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DNS安全</td>
+<td>使用核准DNS解析器，啟用惡意網域阻擋、查詢日誌與DNS異常偵測。</td>
+<td>DNS日誌、阻擋報告。</td>
+</tr>
+<tr>
+<td>Web過濾</td>
+<td>依風險分類阻擋惡意網站、釣魚、C2、匿名代理、未核准檔案分享與高風險AI工具。</td>
+<td>Proxy/CASB報告。</td>
+</tr>
+<tr>
+<td>TLS檢查</td>
+<td>依法規、隱私與風險啟用TLS檢查或替代偵測，排除需核准。</td>
+<td>Proxy設定、例外清單。</td>
+</tr>
+<tr>
+<td>外傳控制</td>
+<td>外部上傳、雲端儲存、AI服務、檔案分享與API外連應受DLP/CASB監控。</td>
+<td>DLP/CASB告警。</td>
+</tr>
+<tr>
+<td>C2偵測</td>
+<td>監控可疑DNS、Beaconing、異常User-Agent、長連線與未知目的地。</td>
+<td>SIEM告警、SOC調查。</td>
+</tr>
+<tr>
+<td>Proxy例外</td>
+<td>Proxy繞過、直連Internet或白名單需風險評估與期限。</td>
+<td>例外核准紀錄。</td>
+</tr>
+<tr>
+<td>遠端瀏覽隔離</td>
+<td>高風險瀏覽或未知網站可採用瀏覽器隔離或沙箱。</td>
+<td>工具報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. IDS/IPS、WAF、DDoS與邊界防護</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>事件處置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>IDS/IPS</td>
+<td>重要邊界、DMZ、資料中心與雲端關鍵流量應納入入侵偵測或等效監控。</td>
+<td>Critical/High告警依事件程序處理。</td>
+</tr>
+<tr>
+<td>WAF</td>
+<td>對外Web與API服務應依風險啟用WAF，使用基準規則與自訂防護。</td>
+<td>阻擋與誤判需記錄與調整。</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>對外API需具認證、授權、Rate Limit、Schema驗證、日誌與濫用防護。</td>
+<td>異常流量與濫用需告警。</td>
+</tr>
+<tr>
+<td>DDoS防護</td>
+<td>對外關鍵服務應具DDoS偵測、緩解、CDN或流量清洗能力。</td>
+<td>DDoS事件需通知BCMS與業務Owner。</td>
+</tr>
+<tr>
+<td>邊界設備強化</td>
+<td>防火牆、WAF、VPN、Proxy、DNS與DDoS設備應依安全基準強化。</td>
+<td>弱點或設定缺失需修正。</td>
+</tr>
+<tr>
+<td>規則更新</td>
+<td>IDS/IPS/WAF規則需定期更新並進行誤判管理。</td>
+<td>規則重大變更需測試。</td>
+</tr>
+<tr>
+<td>日誌接入</td>
+<td>WAF、IDS/IPS、DDoS、API Gateway與邊界防火牆日誌應接入SIEM或集中保存。</td>
+<td>日誌中斷需告警。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 雲端與混合網路安全</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>VPC/VNet設計</td>
+<td>依環境、資料分類、服務與信任邊界設計子網與路由。</td>
+<td>雲端架構圖、IaC。</td>
+</tr>
+<tr>
+<td>Security Group/NSG</td>
+<td>採最小開放、禁止高風險公開管理服務、規則需Owner與有效期限。</td>
+<td>CSPM報告、規則清單。</td>
+</tr>
+<tr>
+<td>Private Connectivity</td>
+<td>關鍵服務優先使用Private Link、Private Endpoint、專線或私有連線。</td>
+<td>雲端設定。</td>
+</tr>
+<tr>
+<td>跨區與跨雲連線</td>
+<td>需加密、路由明確、最小存取、監控與故障切換計畫。</td>
+<td>連線設計、測試紀錄。</td>
+</tr>
+<tr>
+<td>雲端流量日誌</td>
+<td>VPC Flow Log、Firewall Log、Load Balancer Log、DNS Log應依風險啟用。</td>
+<td>日誌接入紀錄。</td>
+</tr>
+<tr>
+<td>CSPM監控</td>
+<td>雲端網路錯誤組態、公開暴露、過寬規則與未加密流量應持續偵測。</td>
+<td>CSPM報告。</td>
+</tr>
+<tr>
+<td>雲端NAT與Egress</td>
+<td>外連流量應可監控、可限制、可追蹤，避免未受控Egress。</td>
+<td>Egress Policy、Proxy設定。</td>
+</tr>
+<tr>
+<td>雲端管理介面</td>
+<td>雲端管理API與Console需MFA、條件式存取、日誌與PAM。</td>
+<td>IAM與Audit Log。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. AI、MLOps、RAG與API網路安全</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI API暴露</td>
+<td>AI模型API、Embedding API與推論服務需經API Gateway、認證、Rate Limit與日誌。</td>
+<td>API Gateway設定、日誌。</td>
+</tr>
+<tr>
+<td>RAG資料源存取</td>
+<td>RAG系統連接資料源需最小網路路徑、權限繼承與查詢監控。</td>
+<td>RAG架構與權限測試。</td>
+</tr>
+<tr>
+<td>向量資料庫</td>
+<td>向量資料庫不得公開暴露，需網路隔離、加密、認證與存取日誌。</td>
+<td>掃描報告、組態檢查。</td>
+</tr>
+<tr>
+<td>MLOps平台</td>
+<td>Notebook、Model Registry、Feature Store、Pipeline與GPU節點需分段與身份控制。</td>
+<td>MLOps網路設計。</td>
+</tr>
+<tr>
+<td>外部AI供應商連線</td>
+<td>外部AI服務API應經Proxy/CASB/DLP監控，禁止未核准AI服務直連。</td>
+<td>CASB/DLP報告。</td>
+</tr>
+<tr>
+<td>AI Agent工具連線</td>
+<td>AI Agent可呼叫之內外部工具需白名單、網路限制、審批與操作日誌。</td>
+<td>Agent工具清單、日誌。</td>
+</tr>
+<tr>
+<td>模型資料傳輸</td>
+<td>模型權重、訓練資料、Prompt、RAG資料與AI輸出跨網路傳輸需加密與核准。</td>
+<td>傳輸紀錄、Data Owner核准。</td>
+</tr>
+<tr>
+<td>AI濫用流量監控</td>
+<td>監控AI API異常用量、Token暴增、未知來源、資料外傳與Prompt攻擊跡象。</td>
+<td>SIEM/API告警。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 供應商、第三方與B2B連線管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>連線申請</td>
+<td>供應商連線需說明目的、來源、目的、資料分類、期間、技術方式與Owner。</td>
+<td>連線申請、供應商審查。</td>
+</tr>
+<tr>
+<td>合約要求</td>
+<td>合約應要求連線安全、MFA、事件通報、弱點修補、日誌、退場與資料保護。</td>
+<td>合約、SLA、DPA。</td>
+</tr>
+<tr>
+<td>分段隔離</td>
+<td>供應商連線應進入專屬網段或跳板，不得直接橫向存取內部網路。</td>
+<td>網路架構與規則。</td>
+</tr>
+<tr>
+<td>身份與MFA</td>
+<td>供應商帳號應具名、MFA、最小權限、時段限制與定期審查。</td>
+<td>IAM與VPN紀錄。</td>
+</tr>
+<tr>
+<td>Session記錄</td>
+<td>高風險維運應使用Session Recording、PAM或受控跳板。</td>
+<td>PAM紀錄。</td>
+</tr>
+<tr>
+<td>定期重評</td>
+<td>供應商連線至少每年審查，高風險或事件後即時重評。</td>
+<td>連線審查紀錄。</td>
+</tr>
+<tr>
+<td>退場撤銷</td>
+<td>合約終止、專案結束或供應商人員異動時立即撤銷連線與憑證。</td>
+<td>撤權紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 網路設備與服務安全組態</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設備 / 服務</th>
+<th>最低組態要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>路由器 / 交換器</td>
+<td>禁用預設帳號、啟用AAA、SSH、管理來源限制、日誌、NTP、組態備份。</td>
+<td>組態檢查、備份紀錄。</td>
+</tr>
+<tr>
+<td>防火牆</td>
+<td>預設拒絕、規則Owner、日誌、管理介面限制、HA、韌體更新與規則審查。</td>
+<td>防火牆報告。</td>
+</tr>
+<tr>
+<td>VPN / ZTNA</td>
+<td>MFA、裝置合規、最小授權、日誌、憑證撤銷與異常登入監控。</td>
+<td>VPN/ZTNA報表。</td>
+</tr>
+<tr>
+<td>WAF / API Gateway</td>
+<td>基準規則、API認證、Rate Limit、Bot防護、日誌與告警。</td>
+<td>WAF/API報告。</td>
+</tr>
+<tr>
+<td>DNS / DHCP / NTP</td>
+<td>冗餘、日誌、存取控制、完整性、分區管理與安全更新。</td>
+<td>服務監控報告。</td>
+</tr>
+<tr>
+<td>Proxy / Secure Web Gateway</td>
+<td>Web過濾、惡意網域阻擋、DLP/CASB整合、TLS策略與例外審查。</td>
+<td>Proxy報表。</td>
+</tr>
+<tr>
+<td>無線控制器</td>
+<td>企業認證、訪客隔離、弱協定禁用、Rogue AP偵測與日誌。</td>
+<td>無線安全報告。</td>
+</tr>
+<tr>
+<td>IDS/IPS</td>
+<td>簽章更新、調校、告警分級、日誌接入與阻擋策略。</td>
+<td>IDS/IPS報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 網路監控、日誌與偵測要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>日誌 / 監控來源</th>
+<th>最低記錄內容</th>
+<th>保存與使用要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>防火牆日誌</td>
+<td>允許/拒絕流量、來源、目的、埠、協定、規則ID、動作。</td>
+<td>接入SIEM或集中保存，用於事件調查與規則審查。</td>
+</tr>
+<tr>
+<td>VPN/ZTNA日誌</td>
+<td>使用者、裝置、來源IP、登入/登出、MFA、存取應用、失敗原因。</td>
+<td>監控異常地點、時間與失敗登入。</td>
+</tr>
+<tr>
+<td>DNS日誌</td>
+<td>查詢網域、來源、回應、阻擋原因、可疑分類。</td>
+<td>偵測C2、惡意網域與資料外洩。</td>
+</tr>
+<tr>
+<td>Proxy/CASB日誌</td>
+<td>URL、分類、上傳/下載、使用者、DLP命中、阻擋動作。</td>
+<td>支援Web過濾、AI工具監控與外傳偵測。</td>
+</tr>
+<tr>
+<td>WAF/API日誌</td>
+<td>請求、來源、攻擊類型、API路徑、狀態碼、阻擋/允許。</td>
+<td>支援應用攻擊調查。</td>
+</tr>
+<tr>
+<td>IDS/IPS日誌</td>
+<td>簽章、嚴重度、流量、攻擊指標、阻擋狀態。</td>
+<td>Critical/High需事件升級。</td>
+</tr>
+<tr>
+<td>雲端Flow Log</td>
+<td>雲端資源間流量、拒絕流量、跨區連線與外連目的。</td>
+<td>用於雲端攻擊面與橫向移動偵測。</td>
+</tr>
+<tr>
+<td>DDoS/CDN日誌</td>
+<td>流量峰值、攻擊向量、清洗狀態、受影響服務。</td>
+<td>支援營運持續與事件報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 網路變更、審查與偏差處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>變更申請</td>
+<td>網路、防火牆、VPN、路由、雲端安全群組、WAF、DNS與供應商連線變更需提出申請。</td>
+<td>變更單。</td>
+</tr>
+<tr>
+<td>風險評估</td>
+<td>對外暴露、跨區、高權限、資料庫、管理介面與高機密資料連線需資安審查。</td>
+<td>安全審查紀錄。</td>
+</tr>
+<tr>
+<td>測試驗證</td>
+<td>變更後需測試預期連線可用、非預期連線被阻擋、日誌與告警正常。</td>
+<td>測試紀錄。</td>
+</tr>
+<tr>
+<td>回復計畫</td>
+<td>重要網路變更需具回復方案與變更窗口。</td>
+<td>回復計畫。</td>
+</tr>
+<tr>
+<td>規則審查</td>
+<td>防火牆與安全群組需定期審查過寬、過期、未命中與無Owner規則。</td>
+<td>規則審查報告。</td>
+</tr>
+<tr>
+<td>偏差分級</td>
+<td>公開暴露、any-any、高風險服務暴露、弱協定與無日誌需分級處理。</td>
+<td>偏差追蹤表。</td>
+</tr>
+<tr>
+<td>逾期升級</td>
+<td>高風險偏差未於期限修正需升級CISO與風險Owner。</td>
+<td>升級紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 網路安全事件處理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件類型</th>
+<th>判定範例</th>
+<th>最低處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未授權連線</td>
+<td>未知來源連至內部、管理介面、資料庫或高風險服務。</td>
+<td>阻斷來源、保存日誌、調查帳號與端點。</td>
+</tr>
+<tr>
+<td>DDoS攻擊</td>
+<td>外部流量異常、服務不可用、CDN/DDoS告警。</td>
+<td>啟動DDoS防護、通知業務與BCMS、記錄影響。</td>
+</tr>
+<tr>
+<td>橫向移動</td>
+<td>內部端點掃描、SMB/RDP/SSH異常、憑證重複使用。</td>
+<td>隔離端點、阻斷網段、啟動事件程序。</td>
+</tr>
+<tr>
+<td>資料外傳</td>
+<td>異常大量上傳、未知目的地、DNS隧道、雲端外傳或AI工具外傳。</td>
+<td>啟動DLP/事件調查，通報Data Owner與DPO。</td>
+</tr>
+<tr>
+<td>防火牆或WAF繞過</td>
+<td>攻擊流量未被阻擋或規則誤設定。</td>
+<td>修正規則、分析根因、補強偵測。</td>
+</tr>
+<tr>
+<td>供應商連線異常</td>
+<td>供應商來源異常、非核准時段、非核准指令或大量資料存取。</td>
+<td>停用供應商連線，通知Supplier Owner。</td>
+</tr>
+<tr>
+<td>DNS或網路服務污染</td>
+<td>DNS劫持、錯誤解析、NTP異常、路由異常。</td>
+<td>切換備援、修復設定、保存證據。</td>
+</tr>
+<tr>
+<td>AI/MLOps網路異常</td>
+<td>AI API暴增、未知模型端點、RAG資料源異常查詢、Agent外連異常。</td>
+<td>限制API、撤銷Token、調查Prompt與資料存取。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 網路服務供應商與SLA管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商服務</th>
+<th>安全與服務要求</th>
+<th>監督證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISP / 專線</td>
+<td>可用性SLA、故障通報、DDoS支援、路由安全與備援。</td>
+<td>SLA報告、故障紀錄。</td>
+</tr>
+<tr>
+<td>MSSP / SOC</td>
+<td>監控範圍、告警分級、事件通報、資料保護與稽核權。</td>
+<td>服務報告、事件工單。</td>
+</tr>
+<tr>
+<td>DDoS / CDN</td>
+<td>攻擊緩解、可用性、日誌、回應時間與演練支援。</td>
+<td>攻擊報告、演練紀錄。</td>
+</tr>
+<tr>
+<td>雲端網路服務</td>
+<td>安全群組、私有連線、流量日誌、WAF、負載平衡與區域可用性。</td>
+<td>雲端報表、CSPM。</td>
+</tr>
+<tr>
+<td>DNS服務</td>
+<td>DNSSEC、可用性、日誌、變更核准、域名保護。</td>
+<td>DNS變更與查詢報告。</td>
+</tr>
+<tr>
+<td>遠端支援工具</td>
+<td>MFA、Session Recording、時間限制、命令紀錄與撤權。</td>
+<td>PAM/遠端工具報表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 網路安全例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開管理介面</td>
+<td>原則禁止；若必要需來源限制、MFA、PAM、WAF/VPN/ZTNA、日誌與短期核准。</td>
+<td>CISO / Network Owner</td>
+<td>最長30日，高風險即時重評。</td>
+</tr>
+<tr>
+<td>any-any或過寬規則</td>
+<td>需說明必要性、限制環境、日誌、監控、補償控制與移除計畫。</td>
+<td>CISO / System Owner</td>
+<td>最長30至90日。</td>
+</tr>
+<tr>
+<td>弱協定或不加密傳輸</td>
+<td>需隔離、限制來源、補償加密或替代計畫。</td>
+<td>CISO / Data Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>未啟用日誌</td>
+<td>原則不允許；需替代監控、短期原因與恢復期限。</td>
+<td>CISO / SOC Owner</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>供應商固定VPN或共享帳號</td>
+<td>原則禁止；需具名化、MFA、時間限制、Session Recording與退場計畫。</td>
+<td>CISO / Supplier Management</td>
+<td>短期核准。</td>
+</tr>
+<tr>
+<td>BYOD或未受管端點連線</td>
+<td>需限制應用、MAM/MDM、MFA、DLP與資料分類限制。</td>
+<td>CISO / Data Owner</td>
+<td>至少每季重評。</td>
+</tr>
+<tr>
+<td>AI服務直連外部API</td>
+<td>需AI治理審查、DLP/Proxy監控、資料不訓練與API Key保護。</td>
+<td>AI Governance / CISO</td>
+<td>依AI風險設定。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 網路安全檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路分段</td>
+<td>是否依資料分類、業務功能、信任邊界與風險完成分段？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>防火牆規則</td>
+<td>規則是否具Owner、用途、有效期限、最小來源目的與日誌？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>公開暴露</td>
+<td>是否無未核准公開管理介面、資料庫、儲存或高風險服務？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>遠端存取</td>
+<td>VPN/ZTNA是否啟用MFA、裝置合規與最小授權？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商連線</td>
+<td>供應商連線是否分段、具名、MFA、Session紀錄與定期審查？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端網路</td>
+<td>雲端安全群組、Flow Log、Private Endpoint與CSPM是否有效？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>Web與API防護</td>
+<td>對外Web/API是否啟用WAF、API Gateway、Rate Limit與日誌？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>DNS/Proxy防護</td>
+<td>DNS安全、Web過濾、惡意網域阻擋與外傳監控是否啟用？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌監控</td>
+<td>防火牆、VPN、DNS、WAF、IDS/IPS、Flow Log是否接入監控？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>網路服務可用性</td>
+<td>ISP、專線、DDoS、DNS、VPN與關鍵網路服務是否具SLA與備援？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>不符合項是否有風險評估、補償控制、核准與期限？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 網路連線與防火牆規則申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>NET-REQ-YYYY-0001</td>
+<td>唯一識別編號。</td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>系統 / 服務名稱</td>
+<td></td>
+<td>需與資產清冊一致。</td>
+</tr>
+<tr>
+<td>連線類型</td>
+<td>□ 內部 □ 對外 □ VPN □ 供應商 □ 雲端 □ API □ AI/MLOps □ 臨時</td>
+<td></td>
+</tr>
+<tr>
+<td>來源IP / 網段 / 身份</td>
+<td></td>
+<td>應最小化，不得使用不必要大範圍。</td>
+</tr>
+<tr>
+<td>目的IP / 網段 / 服務</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>埠與協定</td>
+<td></td>
+<td>例如 TCP 443；需說明必要性。</td>
+</tr>
+<tr>
+<td>業務目的</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td></td>
+</tr>
+<tr>
+<td>有效期限</td>
+<td>YYYY-MM-DD 或永久但需定期審查</td>
+<td>臨時規則需到期日。</td>
+</tr>
+<tr>
+<td>日誌要求</td>
+<td>□ 允許Log □ 拒絕Log □ 告警 □ 不適用</td>
+<td>高風險連線需記錄。</td>
+</tr>
+<tr>
+<td>風險評估</td>
+<td>□ Low □ Medium □ High □ Critical</td>
+<td>由Network Security或CISO確認。</td>
+</tr>
+<tr>
+<td>核准人</td>
+<td></td>
+<td>System Owner / Network Owner / CISO（如適用）。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 網路規則審查紀錄表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查日期</th>
+<th>規則ID</th>
+<th>系統 / 服務</th>
+<th>Owner</th>
+<th>審查項目</th>
+<th>審查結果</th>
+<th>處置措施</th>
+<th>完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ Owner □ 用途 □ 命中率 □ 過寬 □ 到期 □ 日誌 □ 風險</td>
+<td>□ 保留 □ 修改 □ 停用 □ 刪除 □ 例外接受</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ Owner □ 用途 □ 命中率 □ 過寬 □ 到期 □ 日誌 □ 風險</td>
+<td>□ 保留 □ 修改 □ 停用 □ 刪除 □ 例外接受</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ Owner □ 用途 □ 命中率 □ 過寬 □ 到期 □ 日誌 □ 風險</td>
+<td>□ 保留 □ 修改 □ 停用 □ 刪除 □ 例外接受</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路架構與分段文件</td>
+<td>網路圖、區域、資料流、連線、信任邊界與安全控制。</td>
+<td>Network Security Owner</td>
+<td>有效期間及停用後至少3年。</td>
+</tr>
+<tr>
+<td>防火牆與連線申請</td>
+<td>連線目的、來源、目的、埠、資料分類、核准、有效期限與測試紀錄。</td>
+<td>Network Operations Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>規則審查紀錄</td>
+<td>規則Owner、命中率、過寬、到期、修改、刪除與例外。</td>
+<td>Network Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>網路設備組態備份</td>
+<td>防火牆、路由器、交換器、VPN、WAF、DNS等組態備份與版本。</td>
+<td>Network Operations Owner</td>
+<td>依備份與組態管理要求，至少3年。</td>
+</tr>
+<tr>
+<td>網路日誌與監控紀錄</td>
+<td>防火牆、VPN、DNS、Proxy、WAF、IDS/IPS、Flow Log、DDoS日誌。</td>
+<td>SOC / Network Owner</td>
+<td>依日誌保存要求，至少1至3年。</td>
+</tr>
+<tr>
+<td>網路事件紀錄</td>
+<td>DDoS、未授權連線、資料外傳、橫向移動、DNS事件、供應商連線異常。</td>
+<td>Incident Manager / SOC</td>
+<td>至少3至7年，依事件等級。</td>
+</tr>
+<tr>
+<td>供應商網路服務紀錄</td>
+<td>SLA、服務報告、故障紀錄、DDoS報告、供應商連線與合約條款。</td>
+<td>Supplier Management / Network Owner</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外申請、風險、補償控制、核准、期限、重評與關閉。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高風險公開暴露數</td>
+<td>未核准或高風險之公開管理介面、資料庫、儲存或服務數。</td>
+<td>目標0。</td>
+<td>攻擊面管理。</td>
+</tr>
+<tr>
+<td>防火牆規則審查完成率</td>
+<td>已完成審查之規則 / 應審查規則。</td>
+<td>高風險規則目標100%。</td>
+<td>規則治理。</td>
+</tr>
+<tr>
+<td>過寬規則數</td>
+<td>any-any、0.0.0.0/0至高風險埠或無Owner規則數。</td>
+<td>持續下降，Critical目標0。</td>
+<td>最小連線控制。</td>
+</tr>
+<tr>
+<td>臨時規則逾期數</td>
+<td>超過到期日仍未停用或重評之臨時規則。</td>
+<td>目標0。</td>
+<td>例外與變更控制。</td>
+</tr>
+<tr>
+<td>VPN/ZTNA異常登入數</td>
+<td>高風險地區、失敗登入、非核准時段或不合規裝置登入事件數。</td>
+<td>重大異常立即調查。</td>
+<td>遠端存取風險。</td>
+</tr>
+<tr>
+<td>DDoS或網路中斷事件數</td>
+<td>影響可用性之DDoS、線路、DNS、路由或網路服務事件數。</td>
+<td>依趨勢與SLA管理。</td>
+<td>營運持續。</td>
+</tr>
+<tr>
+<td>網路日誌接入率</td>
+<td>應接入SIEM之網路安全日誌來源已接入比例。</td>
+<td>關鍵來源目標100%。</td>
+<td>偵測能力。</td>
+</tr>
+<tr>
+<td>供應商連線重評完成率</td>
+<td>高風險供應商連線於期限內完成重評之比例。</td>
+<td>目標100%。</td>
+<td>第三方連線風險。</td>
+</tr>
+<tr>
+<td>CSPM網路Critical發現數</td>
+<td>雲端網路高風險錯誤組態Critical數。</td>
+<td>目標0。</td>
+<td>雲端網路安全。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路架構治理</td>
+<td>是否建立網路分段、信任邊界、DMZ、管理區、供應商區與雲端網路架構。</td>
+<td>網路架構圖、分段設計。</td>
+</tr>
+<tr>
+<td>防火牆與規則管理</td>
+<td>規則是否具Owner、用途、核准、有效期限、日誌與定期審查。</td>
+<td>規則清單、變更單、審查紀錄。</td>
+</tr>
+<tr>
+<td>遠端存取</td>
+<td>VPN/ZTNA是否啟用MFA、裝置合規、最小授權與日誌監控。</td>
+<td>VPN/ZTNA設定、日誌。</td>
+</tr>
+<tr>
+<td>公開暴露控制</td>
+<td>是否無未核准公開資料庫、管理介面、儲存、Kubernetes API或AI服務端點。</td>
+<td>外部掃描、CSPM報告。</td>
+</tr>
+<tr>
+<td>雲端網路安全</td>
+<td>安全群組、Flow Log、Private Endpoint、CSPM與Egress控制是否有效。</td>
+<td>CSPM、Flow Log、IaC。</td>
+</tr>
+<tr>
+<td>Web/API防護</td>
+<td>對外Web/API是否納入WAF/API Gateway、DDoS/CDN與日誌監控。</td>
+<td>WAF/API報告、DDoS報告。</td>
+</tr>
+<tr>
+<td>供應商連線</td>
+<td>供應商連線是否合約化、分段、MFA、Session Recording、定期重評與退場撤銷。</td>
+<td>供應商連線清冊、PAM紀錄。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>防火牆、VPN、DNS、Proxy、WAF、IDS/IPS與雲端Flow Log是否保存與監控。</td>
+<td>SIEM日誌、告警紀錄。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>網路安全例外是否有風險評估、補償控制、核准、期限與重評。</td>
+<td>例外紀錄、風險接受。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>網路KPI/KRI、重大事件、DDoS、規則缺失與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 附錄A：網路安全事件快速處置清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>處置事項</th>
+<th>完成確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>確認告警來源、受影響服務、來源/目的、時間、流量型態與初步嚴重度。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>2</td>
+<td>保存防火牆、VPN、DNS、Proxy、WAF、IDS/IPS、Flow Log與端點/伺服器相關日誌。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>3</td>
+<td>依事件類型阻斷來源、停用規則、隔離網段、啟用DDoS防護或限制API。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>4</td>
+<td>確認是否涉及資料外洩、PII、客戶資料、供應商連線或AI/MLOps資料源。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>5</td>
+<td>通知CISO、System Owner、Data Owner、BCMS與必要供應商。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>6</td>
+<td>分析根因，包括錯誤規則、弱協定、暴露服務、憑證外洩、弱點或攻擊活動。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>7</td>
+<td>修正網路規則、組態、監控、弱點或供應商連線控制。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>8</td>
+<td>完成事件檢討、CAPA、風險登錄與管理審查輸入。</td>
+<td>□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-023 安全架構審查作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-023 安全架構審查作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-023</td>
+<td>安全架構審查作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-023</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Security Architecture Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>企業與技術架構審查</td>
+<td></td>
+<td>Enterprise Architect / Technical Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與雲端架構審查</td>
+<td></td>
+<td>IT Operations Owner / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>應用與DevSecOps審查</td>
+<td></td>
+<td>Application Security Owner / DevSecOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理與隱私審查</td>
+<td></td>
+<td>Data Owner / DPO（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路與營運持續審查</td>
+<td></td>
+<td>Network Security Owner / BCMS或ICT Readiness Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與法務審查</td>
+<td></td>
+<td>Supplier Management / Legal / Compliance（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 技術治理委員會 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範安全架構審查之觸發條件、分級方式、審查流程、輸入資料、審查面向、威脅模型、風險判定、缺失追蹤、例外核准、上線閘門、稽核證據與持續改善要求，確保新系統、新服務、重大變更、雲端導入、供應商整合、AI/ML應用、資料平台與網路架構於設計階段即納入資訊安全、隱私、AI治理、供應鏈、營運持續與合規要求。</p>
+<p>本文件旨在落實Security by Design、Privacy by Design、AI Risk by Design、Cloud Security by Design、Zero Trust、Least Privilege、Data Minimization、Secure Defaults、Auditability及Resilience by Design，降低上線後再補救造成之成本、風險、延誤、合規缺口與資安事件。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>安全架構審查應於需求、設計、導入、採購、外包、雲端建立、AI模型部署或重大變更之早期階段執行，不得等到上線前才進行形式化補件。</li>
+<li>安全架構應遵循安全預設、最小權限、最小暴露、資料最小化、分區分段、加密保護、日誌可追溯、失敗安全、可復原及防禦縱深原則。</li>
+<li>涉及PII、客戶資料、機密/高機密資料、特權權限、外部連線、供應商代管、AI模型、RAG、AI Agent、自動化決策、跨境處理或關鍵營運流程者，應執行強化安全架構審查。</li>
+<li>審查結論應形成明確決策：通過、有條件通過、需修正後再審、風險接受後通過或不通過；不得以口頭同意取代正式紀錄。</li>
+<li>安全架構缺失應連動風險登錄、風險處理計畫、變更管理、上線閘門、供應商要求、合約條款與管理審查。</li>
+<li>架構設計應納入可觀測性、可稽核性、可回復性與可退場性，避免形成不可監控、不可轉移、不可復原或責任邊界不明之架構。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全架構</td>
+<td>為滿足資訊安全、隱私、合規、營運持續與風險控制需求而設計之技術元件、資料流、信任邊界、控制措施、流程與責任配置。</td>
+</tr>
+<tr>
+<td>安全架構審查</td>
+<td>針對系統或服務架構進行之結構化審查，確認其安全設計、威脅模型、資料保護、存取控制、網路、日誌、復原、供應商控制及AI治理符合組織要求。</td>
+</tr>
+<tr>
+<td>威脅模型</td>
+<td>識別系統資產、信任邊界、攻擊面、威脅、濫用情境、控制缺口與緩解措施之分析方法。</td>
+</tr>
+<tr>
+<td>信任邊界</td>
+<td>不同信任等級、控制責任或資料保護要求之間的邊界，例如外部/內部、使用者/管理、應用/資料庫、組織/供應商、AI模型/資料源。</td>
+</tr>
+<tr>
+<td>資料流圖</td>
+<td>描述資料在使用者、系統、服務、資料庫、API、雲端、供應商及AI模型間流動與處理方式之圖示或文件。</td>
+</tr>
+<tr>
+<td>架構決策紀錄 ADR</td>
+<td>Architecture Decision Record，記錄重要架構選項、決策理由、替代方案、風險、限制與後續影響之文件。</td>
+</tr>
+<tr>
+<td>上線閘門</td>
+<td>系統、服務或重大變更上線前必須完成之審查、測試、核准或風險接受條件。</td>
+</tr>
+<tr>
+<td>安全控制模式</td>
+<td>可重複使用之安全設計樣式，例如SSO/MFA、API Gateway、Private Endpoint、PAM、Secrets Manager、WAF、RAG權限繼承等。</td>
+</tr>
+<tr>
+<td>架構例外</td>
+<td>因業務、技術、供應商或時間限制，無法符合安全架構要求而需正式核准之偏差。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准高風險架構、重大例外、剩餘風險接受、不通過決策與管理審查輸入。</td>
+<td>核准紀錄、風險接受、管理審查資料。</td>
+</tr>
+<tr>
+<td>Security Architecture Owner</td>
+<td>制定審查標準、主持安全架構審查、確認控制要求、追蹤缺失、維護安全模式與架構審查清冊。</td>
+<td>審查紀錄、架構審查意見、控制要求。</td>
+</tr>
+<tr>
+<td>Enterprise Architect</td>
+<td>確保安全架構與企業架構、技術藍圖、資料架構、雲端策略、供應商策略與系統生命週期一致。</td>
+<td>企業架構審查意見、ADR。</td>
+</tr>
+<tr>
+<td>Solution / System Architect</td>
+<td>提供系統架構、資料流、信任邊界、技術選型、整合方式、部署方式與設計決策。</td>
+<td>架構文件、ADR、資料流圖。</td>
+</tr>
+<tr>
+<td>Application / Service Owner</td>
+<td>提出業務需求、資料分類、服務重要性、上線時程、系統Owner與風險接受需求。</td>
+<td>需求文件、Owner確認。</td>
+</tr>
+<tr>
+<td>DevSecOps / AppSec Owner</td>
+<td>審查安全開發、CI/CD、SAST/DAST/SCA、Secrets、API、容器、IaC與應用安全控制。</td>
+<td>安全測試計畫、Pipeline證據。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>審查雲端帳號、IAM、網路、KMS、日誌、CSPM、備份、區域、雲端標籤與共享責任。</td>
+<td>雲端架構審查、CSPM要求。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>審查網路分段、防火牆、VPN/ZTNA、WAF、API Gateway、DDoS、DNS與連線規則。</td>
+<td>網路安全審查意見。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>確認資料分類、資料流、保留、刪除、加密、遮罩、備份、共享與資料使用限制。</td>
+<td>資料分類與使用核准。</td>
+</tr>
+<tr>
+<td>DPO / 隱私負責人</td>
+<td>審查PII、跨境、DPIA、資料主體權利、自動化決策與隱私風險。</td>
+<td>隱私審查、DPIA。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>審查AI模型、RAG、Prompt、訓練資料、模型版本、AI輸出、AI Agent與AI供應商風險。</td>
+<td>AI風險審查、模型治理紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Management / Legal</td>
+<td>審查供應商責任、合約條款、SLA、DPA、子處理者、稽核權、資料不訓練與退場。</td>
+<td>供應商評估、合約審查。</td>
+</tr>
+<tr>
+<td>BCMS / ICT Readiness Owner</td>
+<td>審查RTO/RPO、備援、備份、DR、容量、服務可用性與復原演練。</td>
+<td>ICT備妥性評估。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查架構審查程序、證據、缺失追蹤、風險接受與上線閘門。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 安全架構審查觸發條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發情境</th>
+<th>是否必須審查</th>
+<th>審查強度</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>新系統或新服務導入</td>
+<td>是</td>
+<td>標準或強化</td>
+<td>所有正式上線系統、平台、SaaS、雲端服務或對外服務應完成安全架構審查。</td>
+</tr>
+<tr>
+<td>重大系統變更</td>
+<td>是</td>
+<td>依影響判定</td>
+<td>涉及身份、權限、資料流、網路、供應商、雲端架構、AI模型、資料分類或控制改變。</td>
+</tr>
+<tr>
+<td>雲端服務或雲端架構導入</td>
+<td>是</td>
+<td>強化</td>
+<td>包含IaaS/PaaS/SaaS、跨區、Private Link、KMS、CSPM、雲端日誌與共享責任。</td>
+</tr>
+<tr>
+<td>對外服務、API或客戶入口</td>
+<td>是</td>
+<td>強化</td>
+<td>包含Web、Mobile、API、Webhook、B2B、對外資料交換與客戶Portal。</td>
+</tr>
+<tr>
+<td>處理PII、客戶資料、機密或高機密資料</td>
+<td>是</td>
+<td>強化</td>
+<td>需資料Owner、DPO與CISO審查。</td>
+</tr>
+<tr>
+<td>AI/ML、生成式AI、RAG或AI Agent</td>
+<td>是</td>
+<td>強化</td>
+<td>需AI治理、模型風險、Prompt/RAG、資料不訓練、AI安全測試與人類監督設計。</td>
+</tr>
+<tr>
+<td>供應商代管或外包開發/維運</td>
+<td>是</td>
+<td>標準或強化</td>
+<td>需供應商安全、合約、SLA、退場、日誌與存取控制。</td>
+</tr>
+<tr>
+<td>重大弱點或事件後架構修正</td>
+<td>是</td>
+<td>強化</td>
+<td>需納入根因、CAPA、防再發控制與復原設計。</td>
+</tr>
+<tr>
+<td>法規、客戶或合約新增要求</td>
+<td>是</td>
+<td>依影響判定</td>
+<td>需確認架構是否符合新要求並形成證據。</td>
+</tr>
+<tr>
+<td>低風險設定調整或非正式原型</td>
+<td>視情況</td>
+<td>輕量</td>
+<td>不得處理正式資料、PII、客戶資料、Secrets或高風險連線。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 安全架構審查流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 審查申請</td>
+<td>申請人提交需求、架構圖、資料流、技術清單、資料分類、供應商、風險與上線時程。</td>
+<td>Service Owner / Architect</td>
+<td>安全架構審查申請。</td>
+</tr>
+<tr>
+<td>2. 初步分級</td>
+<td>依資料分類、對外暴露、AI/雲端、供應商、服務重要性與法規要求判定審查強度。</td>
+<td>Security Architecture Owner</td>
+<td>審查分級結果。</td>
+</tr>
+<tr>
+<td>3. 文件完整性檢查</td>
+<td>確認架構圖、資料流、信任邊界、控制設計、RTO/RPO、供應商與測試計畫齊備。</td>
+<td>Security Reviewer</td>
+<td>文件檢核表。</td>
+</tr>
+<tr>
+<td>4. 威脅模型與風險分析</td>
+<td>識別攻擊面、濫用情境、控制缺口、資料外洩、權限濫用、供應鏈與AI風險。</td>
+<td>Security Architecture / AppSec / AI Owner</td>
+<td>威脅模型與風險紀錄。</td>
+</tr>
+<tr>
+<td>5. 控制審查</td>
+<td>審查身份、存取、加密、網路、日誌、備份、弱點、供應商、隱私、AI、營運持續等控制。</td>
+<td>審查小組</td>
+<td>審查意見與缺失清單。</td>
+</tr>
+<tr>
+<td>6. 修正與再審</td>
+<td>針對缺失提出修正、補償控制、風險處理或例外申請，必要時重新審查。</td>
+<td>Project / System Owner</td>
+<td>修正證據、再審紀錄。</td>
+</tr>
+<tr>
+<td>7. 結論與核准</td>
+<td>形成通過、有條件通過、需再審、風險接受或不通過結論。</td>
+<td>CISO / Security Architecture Owner</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>8. 上線閘門與追蹤</td>
+<td>將未完成項納入上線條件、風險登錄、變更管理、測試計畫與管理審查。</td>
+<td>ISMS管理代表 / Project Owner</td>
+<td>追蹤紀錄。</td>
+</tr>
+<tr>
+<td>9. 審查回饋與模式更新</td>
+<td>將重複缺失、有效控制與架構模式回饋至安全控制模式庫與訓練教材。</td>
+<td>Security Architecture Owner</td>
+<td>安全模式更新紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 審查輸入資料要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入資料</th>
+<th>最低內容</th>
+<th>是否必要</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>系統或服務說明</td>
+<td>業務目的、使用者、功能範圍、營運流程、重要性、上線時程與服務Owner。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>架構圖</td>
+<td>元件、服務、資料庫、API、網路區域、雲端資源、SaaS、供應商、外部連線與管理介面。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資料流圖</td>
+<td>資料來源、資料去向、資料分類、跨境、PII、客戶資料、加密、保存位置與刪除流程。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>信任邊界圖</td>
+<td>外部/內部、使用者/管理、服務/資料庫、組織/供應商、AI/RAG資料源邊界。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產與技術清單</td>
+<td>主機、容器、資料庫、SaaS、雲端服務、API、AI模型、開源元件、第三方服務與版本。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>身份與權限設計</td>
+<td>使用者、角色、特權、服務帳號、API Key、MFA、PAM、SSO與權限審查方式。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>網路與連線需求</td>
+<td>來源、目的、埠、協定、防火牆、WAF、VPN、ZTNA、Private Link、Egress與外部暴露。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資料分類與保護</td>
+<td>分類、加密、遮罩、DLP、保留、刪除、備份、日誌、資料主體權利與外傳限制。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>威脅模型或風險分析</td>
+<td>主要威脅、濫用案例、攻擊面、控制缺口、緩解措施與剩餘風險。</td>
+<td>強化審查必要</td>
+</tr>
+<tr>
+<td>供應商與合約資料</td>
+<td>供應商、子處理者、SLA、DPA、資料不訓練、事件通報、稽核權與退場。</td>
+<td>如涉及供應商必要</td>
+</tr>
+<tr>
+<td>AI/ML設計資料</td>
+<td>模型來源、訓練資料、Prompt、RAG、AI Agent、模型版本、輸出控制與AI安全測試。</td>
+<td>如涉及AI必要</td>
+</tr>
+<tr>
+<td>復原與持續性設計</td>
+<td>RTO/RPO、備份、DR、容量、監控、降級、替代流程與演練計畫。</td>
+<td>重要系統必要</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 審查分級準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分級</th>
+<th>判定條件</th>
+<th>最低審查要求</th>
+<th>核准層級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>輕量審查</td>
+<td>低風險、非正式資料、無PII、無外部暴露、無特權、無供應商重大依賴。</td>
+<td>基本檢查表、Owner確認、必要安全建議。</td>
+<td>Security Architecture Owner或授權審查人。</td>
+</tr>
+<tr>
+<td>標準審查</td>
+<td>正式系統或服務，處理內部或機密資料，具一般身份、API、雲端或供應商依賴。</td>
+<td>完整審查流程、資料流、架構圖、控制檢查與缺失追蹤。</td>
+<td>Security Architecture Owner與Service Owner。</td>
+</tr>
+<tr>
+<td>強化審查</td>
+<td>處理PII、客戶資料、高機密、對外服務、關鍵流程、特權、AI/ML、雲端核心平台或供應商代管。</td>
+<td>威脅模型、隱私/AI/雲端/供應商/BCP專項審查，上線閘門。</td>
+<td>CISO及相關Owner。</td>
+</tr>
+<tr>
+<td>重大風險審查</td>
+<td>影響關鍵營運、重大客戶、法規申報、大量PII、自動化重大決策、跨境高風險或重大事件後重構。</td>
+<td>技術治理委員會或管理階層審查，風險接受需正式核准。</td>
+<td>CISO、管理階層授權代表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 安全架構審查主檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查領域</th>
+<th>審查問題</th>
+<th>結果</th>
+<th>風險 / 缺口</th>
+<th>必要改善</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>業務與範圍</td>
+<td>是否明確定義系統目的、使用者、服務邊界、Owner、上線範圍與責任？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資產與資料流</td>
+<td>是否完整識別資產、資料來源、資料去向、資料分類、跨境與保存位置？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>信任邊界</td>
+<td>是否清楚定義外部/內部、管理/使用者、供應商、AI模型與資料源之信任邊界？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>身份與存取</td>
+<td>是否採SSO/MFA、最小權限、RBAC/ABAC、PAM、服務帳號管理與權限審查？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>是否依資料分類設計加密、遮罩、DLP、保留、刪除、備份、資料外傳防護？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>網路安全</td>
+<td>是否採分段、預設拒絕、Private Link、WAF/API Gateway、VPN/ZTNA與防火牆規則控管？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>應用與API安全</td>
+<td>是否納入安全開發、輸入驗證、Session、CORS、Rate Limit、錯誤處理與API授權？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>雲端安全</td>
+<td>雲端IAM、KMS、日誌、CSPM、資源標籤、備份、區域與共享責任是否明確？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>是否設計必要日誌、SIEM接入、告警、稽核、資料完整性與事件調查能力？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>是否符合RTO/RPO、備份加密、不可變備份、還原測試與災難復原要求？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td>是否納入SAST/DAST/SCA、IaC掃描、容器掃描、弱點修補SLA與上線前測試？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商與第三方</td>
+<td>供應商責任、SLA、DPA、事件通報、稽核權、子處理者與退場是否明確？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>營運持續</td>
+<td>是否設計容量、可用性、冗餘、故障切換、降級模式與ICT備妥性？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>合規與稽核</td>
+<td>是否滿足法規、合約、標準、客戶要求、證據保存與稽核追蹤？</td>
+<td>□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 威脅模型與攻擊面審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>審查要求</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產識別</td>
+<td>識別高價值資產、敏感資料、特權介面、金鑰、AI模型、資料庫與關鍵服務。</td>
+<td>威脅模型資產清單。</td>
+</tr>
+<tr>
+<td>攻擊面識別</td>
+<td>識別對外入口、API、Webhook、管理介面、雲端服務、供應商連線、AI工具與使用者端點。</td>
+<td>攻擊面清單。</td>
+</tr>
+<tr>
+<td>威脅分類</td>
+<td>評估身份冒用、越權、資料外洩、竄改、拒絕服務、供應鏈、AI濫用與內部威脅。</td>
+<td>威脅分析紀錄。</td>
+</tr>
+<tr>
+<td>濫用案例</td>
+<td>列出攻擊者或濫用者可能如何操作系統、API、AI模型、資料流或供應商連線。</td>
+<td>Abuse Case清單。</td>
+</tr>
+<tr>
+<td>控制對映</td>
+<td>將威脅對映至現有或規劃控制，例如MFA、WAF、Rate Limit、加密、日誌、DLP、RAG權限。</td>
+<td>控制對映表。</td>
+</tr>
+<tr>
+<td>剩餘風險</td>
+<td>識別未完全緩解之風險，納入風險登錄或風險接受。</td>
+<td>風險登錄或接受紀錄。</td>
+</tr>
+<tr>
+<td>測試計畫</td>
+<td>依威脅模型規劃安全測試、滲透測試、紅隊、AI測試或復原測試。</td>
+<td>安全測試計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 雲端與基礎設施安全架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>帳號與租戶設計</td>
+<td>雲端帳號、訂閱、專案或租戶應依環境、業務與風險隔離。</td>
+<td>雲端帳號架構圖。</td>
+</tr>
+<tr>
+<td>IAM與權限</td>
+<td>採最小權限、Role、MFA、條件式存取、PAM與定期審查。</td>
+<td>IAM設計、權限矩陣。</td>
+</tr>
+<tr>
+<td>網路與區域</td>
+<td>VPC/VNet、子網、Security Group、路由、Private Link、跨區與Egress應受控。</td>
+<td>雲端網路圖、CSPM報告。</td>
+</tr>
+<tr>
+<td>KMS與加密</td>
+<td>儲存、資料庫、備份、Queue、Log與敏感資料應啟用加密與Key管理。</td>
+<td>KMS設計、Key Policy。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>Cloud Audit Log、Flow Log、WAF、API、KMS、資料存取日誌應啟用並接入監控。</td>
+<td>日誌接入設計。</td>
+</tr>
+<tr>
+<td>CSPM與政策</td>
+<td>雲端資源應納入CSPM/CNAPP、IaC掃描、Policy as Code與組態漂移偵測。</td>
+<td>工具設定與規則清單。</td>
+</tr>
+<tr>
+<td>備份與DR</td>
+<td>關鍵雲端資源應具備快照、跨區、不可變備份、復原測試與刪除保護。</td>
+<td>備份與DR設計。</td>
+</tr>
+<tr>
+<td>標籤與成本/碳資料</td>
+<td>雲端資源應標示Owner、環境、資料分類、風險、成本中心與必要碳資料標籤。</td>
+<td>標籤標準與報表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 應用、API與安全開發架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>應用分層</td>
+<td>前端、API、服務、資料庫、管理介面與批次作業應清楚分層與隔離。</td>
+<td>應用架構圖。</td>
+</tr>
+<tr>
+<td>認證與授權</td>
+<td>使用核准身份來源、SSO、MFA、OAuth/OIDC、RBAC/ABAC與權限檢查。</td>
+<td>身份設計文件。</td>
+</tr>
+<tr>
+<td>API安全</td>
+<td>API Gateway、Rate Limit、Schema Validation、CORS限制、mTLS或簽章、版本管理與濫用防護。</td>
+<td>API設計與測試紀錄。</td>
+</tr>
+<tr>
+<td>輸入輸出控制</td>
+<td>輸入驗證、輸出編碼、檔案上傳掃描、錯誤訊息控管與敏感資料遮罩。</td>
+<td>ASVS檢核、測試報告。</td>
+</tr>
+<tr>
+<td>Session與Cookie</td>
+<td>Secure、HttpOnly、SameSite、Timeout、重新驗證與Session撤銷。</td>
+<td>組態檢查。</td>
+</tr>
+<tr>
+<td>Secrets與設定</td>
+<td>不得硬編碼Secrets，應使用Secrets Manager、環境隔離與輪替。</td>
+<td>Secrets設計與掃描紀錄。</td>
+</tr>
+<tr>
+<td>安全測試</td>
+<td>SAST、DAST、SCA、IaC、容器掃描、滲透測試與上線前缺失處理。</td>
+<td>安全測試報告。</td>
+</tr>
+<tr>
+<td>安全發布</td>
+<td>CI/CD需具審批、分支保護、Artifact完整性、Rollback與變更紀錄。</td>
+<td>Pipeline設定與發布紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 資料、隱私與合規架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>識別公開、內部、機密、高機密、PII、客戶資料、受限資料與AI資料。</td>
+<td>資料分類分級表。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>系統僅收集、處理、保存完成目的所必要之最少資料。</td>
+<td>資料需求與欄位清單。</td>
+</tr>
+<tr>
+<td>資料保留與刪除</td>
+<td>定義保存期限、刪除、封存、備份刪除、資料主體請求與退場處理。</td>
+<td>保存與刪除設計。</td>
+</tr>
+<tr>
+<td>加密與金鑰</td>
+<td>資料傳輸、儲存、備份及敏感欄位應採核准加密與金鑰管理。</td>
+<td>加密設計、KMS設定。</td>
+</tr>
+<tr>
+<td>遮罩與去識別</td>
+<td>測試、分析、AI訓練或非生產環境應使用遮罩、去識別或合成資料。</td>
+<td>資料處理設計。</td>
+</tr>
+<tr>
+<td>跨境與第三方</td>
+<td>識別跨境傳輸、供應商、子處理者、DPA與客戶合約限制。</td>
+<td>DPIA/DPA、合約審查。</td>
+</tr>
+<tr>
+<td>隱私權利</td>
+<td>若處理PII，需支援查詢、更正、刪除、限制、可攜、撤回或其他權利。</td>
+<td>隱私設計與流程。</td>
+</tr>
+<tr>
+<td>揭露與稽核</td>
+<td>法規、客戶、查證或稽核所需紀錄與證據應可追溯。</td>
+<td>紀錄保存與稽核證據設計。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. AI、RAG、MLOps與AI Agent架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI用途與風險</td>
+<td>明確AI用途、使用者、輸入、輸出、決策影響、限制與禁止用途。</td>
+<td>AI用途說明、風險分級。</td>
+</tr>
+<tr>
+<td>模型來源與版本</td>
+<td>識別模型供應商、模型版本、授權、限制、更新通知、回滾與模型變更管理。</td>
+<td>模型清冊、版本紀錄。</td>
+</tr>
+<tr>
+<td>資料與訓練</td>
+<td>確認訓練/微調/推論資料來源、授權、PII、資料品質、保留與刪除要求。</td>
+<td>資料來源與授權證據。</td>
+</tr>
+<tr>
+<td>Prompt與輸出控制</td>
+<td>System Prompt、Prompt模板、輸出過濾、人工覆核、敏感資訊防護與Prompt版本管理。</td>
+<td>Prompt資產清冊。</td>
+</tr>
+<tr>
+<td>RAG權限與資料源</td>
+<td>RAG資料源應權限繼承、索引刪除同步、Metadata控管、越權檢索測試。</td>
+<td>RAG安全設計與測試。</td>
+</tr>
+<tr>
+<td>AI Agent工具調用</td>
+<td>工具白名單、最小權限、人工確認、高風險動作阻斷、操作日誌與回滾。</td>
+<td>Agent工具清單與權限矩陣。</td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>測試Prompt Injection、資料外洩、越權、模型濫用、敏感輸出、供應鏈與API濫用。</td>
+<td>AI安全測試報告。</td>
+</tr>
+<tr>
+<td>監控與事件</td>
+<td>監控AI API用量、異常Prompt、資料外傳、模型錯誤、幻覺風險與AI事件通報。</td>
+<td>監控規則與事件Runbook。</td>
+</tr>
+<tr>
+<td>碳與能源資料</td>
+<td>若涉及AI工作負載碳資料，需記錄模型運算、雲端區域、能源/碳資料來源與資料保護。</td>
+<td>AI服務與碳足跡資料清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 供應商、SaaS與外部整合架構審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商責任邊界</td>
+<td>明確組織與供應商在安全、備份、日誌、事件、資料保護與退場之責任。</td>
+<td>共享責任矩陣。</td>
+</tr>
+<tr>
+<td>供應商風險評估</td>
+<td>依服務重要性、資料分類、存取權限與供應鏈依賴完成評估。</td>
+<td>供應商風險評估表。</td>
+</tr>
+<tr>
+<td>合約與SLA</td>
+<td>合約應納入保密、DPA、事件通報、SLA、稽核權、資料刪除與退場條款。</td>
+<td>合約審查紀錄。</td>
+</tr>
+<tr>
+<td>身份與整合</td>
+<td>SaaS與外部整合應使用SSO/MFA、SCIM、API Scope、Webhook簽章與最小權限。</td>
+<td>SaaS設定、API設計。</td>
+</tr>
+<tr>
+<td>資料所在地與跨境</td>
+<td>確認資料存放地、跨境、子處理者、備份地區與客戶/法規限制。</td>
+<td>DPA、子處理者清單。</td>
+</tr>
+<tr>
+<td>日誌與可觀測性</td>
+<td>供應商應提供必要Audit Log、管理操作、資料存取與事件通報。</td>
+<td>供應商日誌能力證據。</td>
+</tr>
+<tr>
+<td>退場與可攜性</td>
+<td>確認資料匯出、格式、刪除、知識移轉、帳號撤銷與替代方案。</td>
+<td>退場計畫。</td>
+</tr>
+<tr>
+<td>供應商AI與雲端GHG資料</td>
+<td>若供應商提供AI或雲端碳資料，需確認方法、邊界、可信度、資訊安全與揭露限制。</td>
+<td>、碳資料清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 營運持續、復原與可用性審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>審查項目</th>
+<th>最低要求</th>
+<th>審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>服務等級</td>
+<td>定義SLA、SLO、RTO、RPO、容量、效能與降級模式。</td>
+<td>服務等級設計。</td>
+</tr>
+<tr>
+<td>高可用性</td>
+<td>關鍵服務應具冗餘、負載平衡、故障切換、區域容錯或替代流程。</td>
+<td>HA/DR架構圖。</td>
+</tr>
+<tr>
+<td>備份與還原</td>
+<td>依資料分類與Tier設定備份頻率、保留、加密、不可變、還原測試。</td>
+<td>備份策略與測試計畫。</td>
+</tr>
+<tr>
+<td>災難復原</td>
+<td>重大系統需設計DR情境、切換程序、回復程序與演練計畫。</td>
+<td>DR Runbook。</td>
+</tr>
+<tr>
+<td>容量與監控</td>
+<td>設計容量警戒、效能監控、成本/碳用量監控與自動擴充限制。</td>
+<td>監控儀表板設計。</td>
+</tr>
+<tr>
+<td>單點失效</td>
+<td>識別身份、KMS、網路、資料庫、供應商、API、AI模型與日誌平台單點失效。</td>
+<td>SPOF分析。</td>
+</tr>
+<tr>
+<td>手動或替代流程</td>
+<td>必要時設計手動作業、替代系統、降級服務或資料匯出方案。</td>
+<td>BCP/ICT備妥性資料。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 審查結論與決策準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>結論類型</th>
+<th>判定條件</th>
+<th>後續要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>通過</td>
+<td>所有必要控制符合要求，無High/Critical未處理缺失。</td>
+<td>可進入下一階段或上線閘門。</td>
+</tr>
+<tr>
+<td>有條件通過</td>
+<td>存在Low/Medium缺失或可於上線前完成之改善項。</td>
+<td>需設定Owner、期限、驗證方式與上線前確認。</td>
+</tr>
+<tr>
+<td>需修正後再審</td>
+<td>存在High缺失、關鍵文件不足或設計無法證明控制有效。</td>
+<td>完成修正並提交再審。</td>
+</tr>
+<tr>
+<td>風險接受後通過</td>
+<td>存在無法立即修正之剩餘風險，但具補償控制與正式核准。</td>
+<td>需風險接受單、期限、重評與管理審查。</td>
+</tr>
+<tr>
+<td>不通過</td>
+<td>存在Critical缺失、違反法規/合約、資料外洩重大風險或缺乏基本控制。</td>
+<td>不得上線或導入，需重新設計。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 架構審查缺失與風險追蹤表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>缺失編號</th>
+<th>發現日期</th>
+<th>審查領域</th>
+<th>缺失 / 風險描述</th>
+<th>風險等級</th>
+<th>處理方式</th>
+<th>Owner</th>
+<th>期限</th>
+<th>狀態</th>
+<th>驗證結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SAR-FIND-001</td>
+<td>YYYY-MM-DD</td>
+<td>□ IAM □ 資料 □ 網路 □ 應用 □ 雲端 □ AI □ 供應商 □ BCP</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ 修正 □ 補償控制 □ 風險接受 □ 重新設計</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>SAR-FIND-002</td>
+<td>YYYY-MM-DD</td>
+<td>□ IAM □ 資料 □ 網路 □ 應用 □ 雲端 □ AI □ 供應商 □ BCP</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ 修正 □ 補償控制 □ 風險接受 □ 重新設計</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>SAR-FIND-003</td>
+<td>YYYY-MM-DD</td>
+<td>□ IAM □ 資料 □ 網路 □ 應用 □ 雲端 □ AI □ 供應商 □ BCP</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ 修正 □ 補償控制 □ 風險接受 □ 重新設計</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>SAR-FIND-004</td>
+<td>YYYY-MM-DD</td>
+<td>□ IAM □ 資料 □ 網路 □ 應用 □ 雲端 □ AI □ 供應商 □ BCP</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>□ 修正 □ 補償控制 □ 風險接受 □ 重新設計</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 逾期 □ 例外接受</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 安全架構審查紀錄表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>審查單號</td>
+<td>SAR-YYYY-0001</td>
+</tr>
+<tr>
+<td>系統 / 服務名稱</td>
+<td></td>
+</tr>
+<tr>
+<td>專案 / 變更名稱</td>
+<td></td>
+</tr>
+<tr>
+<td>Service Owner / Business Owner</td>
+<td></td>
+</tr>
+<tr>
+<td>Solution Architect / Technical Owner</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料 □ GHG/ESG資料</td>
+</tr>
+<tr>
+<td>審查分級</td>
+<td>□ 輕量 □ 標準 □ 強化 □ 重大風險</td>
+</tr>
+<tr>
+<td>審查類型</td>
+<td>□ 新系統 □ 重大變更 □ 雲端導入 □ AI/ML □ SaaS □ 供應商整合 □ 事件後重構 □ 其他</td>
+</tr>
+<tr>
+<td>審查日期</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查參與者</td>
+<td></td>
+</tr>
+<tr>
+<td>主要架構文件位置</td>
+<td></td>
+</tr>
+<tr>
+<td>主要資料流文件位置</td>
+<td></td>
+</tr>
+<tr>
+<td>威脅模型文件位置</td>
+<td></td>
+</tr>
+<tr>
+<td>審查結論</td>
+<td>□ 通過 □ 有條件通過 □ 需修正後再審 □ 風險接受後通過 □ 不通過</td>
+</tr>
+<tr>
+<td>核准條件</td>
+<td></td>
+</tr>
+<tr>
+<td>需納入風險登錄</td>
+<td>□ 否 □ 是，風險編號：__________</td>
+</tr>
+<tr>
+<td>需納入上線閘門</td>
+<td>□ 否 □ 是，條件：__________</td>
+</tr>
+<tr>
+<td>下次重評日期</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 上線前安全架構閘門</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>閘門項目</th>
+<th>最低通過條件</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全架構審查結論</td>
+<td>通過、有條件通過且High/Critical缺失已關閉或正式接受。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類與隱私審查</td>
+<td>PII、客戶資料、機密/高機密資料已完成Data Owner/DPO審查。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端與網路安全</td>
+<td>防火牆、WAF/API Gateway、Private Link、Security Group、CSPM與日誌已確認。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>身份與權限</td>
+<td>SSO/MFA、RBAC、PAM、服務帳號、Secrets與權限審查已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安全測試</td>
+<td>SAST/DAST/SCA、弱點掃描、滲透測試、AI安全測試或補償測試已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>必要日誌已啟用並接入SIEM或集中保存，告警規則已建立。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>備份、還原測試、RTO/RPO、DR或復原Runbook已確認。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商與合約</td>
+<td>供應商評估、DPA、SLA、事件通報、稽核權與退場條款已完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>風險與例外</td>
+<td>剩餘風險、例外、補償控制與到期日已核准並登錄。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 架構設計模式與防呆要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設計模式</th>
+<th>適用情境</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SSO/MFA集中身份模式</td>
+<td>所有使用者登入、SaaS、雲端與管理介面。</td>
+<td>使用集中身份、MFA、條件式存取、離職撤權。</td>
+<td>IAM設計與測試紀錄。</td>
+</tr>
+<tr>
+<td>API Gateway邊界模式</td>
+<td>對外API、內部服務API、AI API與B2B API。</td>
+<td>認證授權、Rate Limit、Schema、日誌、WAF/Threat Protection。</td>
+<td>API Gateway設定。</td>
+</tr>
+<tr>
+<td>Private Endpoint模式</td>
+<td>資料庫、儲存、AI服務、雲端平台與管理服務。</td>
+<td>優先私有連線，禁止不必要Internet暴露。</td>
+<td>雲端網路設計。</td>
+</tr>
+<tr>
+<td>Secrets Manager模式</td>
+<td>應用、CI/CD、AI API Key、資料庫密碼與服務帳號。</td>
+<td>禁止硬編碼，集中保存、輪替、審計。</td>
+<td>Vault/KMS紀錄。</td>
+</tr>
+<tr>
+<td>RAG權限繼承模式</td>
+<td>RAG、知識庫、向量資料庫與AI助理。</td>
+<td>檢索權限繼承來源資料權限，刪除同步與越權測試。</td>
+<td>RAG測試報告。</td>
+</tr>
+<tr>
+<td>不可變備份模式</td>
+<td>關鍵系統、勒索防護、事件證據與高價值資料。</td>
+<td>不可變、異地、隔離、還原測試。</td>
+<td>備份設計與測試。</td>
+</tr>
+<tr>
+<td>安全預設模板模式</td>
+<td>雲端帳號、Kubernetes、端點、SaaS、資料庫與網路。</td>
+<td>使用核准基準與IaC/Policy as Code部署。</td>
+<td>基準與Pipeline紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未完成完整安全架構審查即需上線</td>
+<td>需說明業務必要性、限制範圍、補償控制、期限與快速補審計畫。</td>
+<td>CISO / Business Owner / 管理階層授權代表</td>
+<td>最長30日，Critical不得例外。</td>
+</tr>
+<tr>
+<td>缺少架構圖或資料流圖</td>
+<td>需提供替代文件與補件期限，不得涉及高風險資料或重大外部暴露。</td>
+<td>Security Architecture Owner</td>
+<td>最長30日。</td>
+</tr>
+<tr>
+<td>無法修正High缺失</td>
+<td>需風險接受、補償控制、監控、期限與重評。</td>
+<td>CISO / Risk Owner</td>
+<td>最長90日，高風險每30日追蹤。</td>
+</tr>
+<tr>
+<td>供應商無法提供必要安全證據</td>
+<td>需合約補償、限制資料、限制存取、替代供應商或退場計畫。</td>
+<td>CISO / Supplier Management / Legal</td>
+<td>續約前重評。</td>
+</tr>
+<tr>
+<td>AI安全測試未完整完成</td>
+<td>需限制用途、限制資料分類、人工覆核、監控與補測期限。</td>
+<td>AI Governance Owner / CISO</td>
+<td>最長60日。</td>
+</tr>
+<tr>
+<td>隱私或DPIA未完成</td>
+<td>涉及PII且未完成必要審查者原則不得上線；例外需DPO與Legal核准。</td>
+<td>DPO / Legal / CISO</td>
+<td>依案件核准，需短期補齊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全架構審查申請</td>
+<td>系統名稱、Owner、範圍、資料分類、審查分級、文件連結與申請紀錄。</td>
+<td>Security Architecture Owner</td>
+<td>系統有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>架構與資料流文件</td>
+<td>架構圖、資料流圖、信任邊界、元件清單、ADR與控制設計。</td>
+<td>System Owner / Architect</td>
+<td>系統有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>威脅模型與風險分析</td>
+<td>資產、威脅、濫用案例、控制對映、剩餘風險與測試計畫。</td>
+<td>Security Architecture Owner</td>
+<td>至少3年或依風險要求。</td>
+</tr>
+<tr>
+<td>審查紀錄與結論</td>
+<td>會議紀錄、審查意見、缺失、結論、核准條件與簽核。</td>
+<td>ISMS管理代表 / Security Architecture Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>缺失與改善追蹤</td>
+<td>缺失、風險等級、Owner、期限、修正證據、驗證與關閉。</td>
+<td>Project Owner / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / Risk Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>上線閘門證據</td>
+<td>安全測試、日誌接入、備份、權限、供應商、DPIA、AI測試與核准證據。</td>
+<td>Release Owner / DevSecOps</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>管理審查輸入</td>
+<td>架構審查KPI/KRI、重大缺失、逾期、例外、風險趨勢與改善。</td>
+<td>ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>架構審查覆蓋率</td>
+<td>已完成安全架構審查之應審查專案 / 應審查專案總數。</td>
+<td>目標100%。</td>
+<td>安全設計治理完整性。</td>
+</tr>
+<tr>
+<td>強化審查完成率</td>
+<td>高風險、AI、雲端、PII或對外服務完成強化審查比例。</td>
+<td>目標100%。</td>
+<td>高風險治理。</td>
+</tr>
+<tr>
+<td>上線前High/Critical未關閉數</td>
+<td>上線前仍未關閉且未正式接受之High/Critical缺失數。</td>
+<td>目標0。</td>
+<td>上線風險控制。</td>
+</tr>
+<tr>
+<td>架構缺失逾期數</td>
+<td>超過期限未修正或未重評之架構缺失數。</td>
+<td>Critical/High目標0。</td>
+<td>改善追蹤。</td>
+</tr>
+<tr>
+<td>風險接受到期未重評數</td>
+<td>到期但未重評或未關閉之架構風險接受數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>重複性架構缺失數</td>
+<td>同類型架構缺失於不同專案重複發生次數。</td>
+<td>趨勢應下降。</td>
+<td>安全模式與教育改善。</td>
+</tr>
+<tr>
+<td>事件後架構改善完成率</td>
+<td>事件根因涉及架構缺口之改善完成比例。</td>
+<td>目標100%。</td>
+<td>防再發能力。</td>
+</tr>
+<tr>
+<td>AI架構審查缺失數</td>
+<td>AI/RAG/MLOps/Agent相關安全架構缺失數。</td>
+<td>重大缺失需管理審查。</td>
+<td>AI治理成熟度。</td>
+</tr>
+<tr>
+<td>供應商架構缺口數</td>
+<td>供應商或SaaS責任邊界、日誌、備份、DPA或退場缺口數。</td>
+<td>高風險缺口需改善或接受。</td>
+<td>供應鏈風險管理。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>觸發與分級</td>
+<td>應審查專案是否依觸發條件完成安全架構審查與審查分級。</td>
+<td>審查申請、專案清單、分級紀錄。</td>
+</tr>
+<tr>
+<td>輸入資料完整性</td>
+<td>架構圖、資料流、信任邊界、資產、供應商、AI、RTO/RPO與測試計畫是否完整。</td>
+<td>架構文件、檢核表。</td>
+</tr>
+<tr>
+<td>審查品質</td>
+<td>審查是否涵蓋身份、資料、網路、雲端、應用、API、AI、供應商、BCP與監控。</td>
+<td>審查紀錄、意見表。</td>
+</tr>
+<tr>
+<td>威脅模型</td>
+<td>高風險專案是否完成威脅模型、濫用案例、控制對映與剩餘風險處理。</td>
+<td>威脅模型文件。</td>
+</tr>
+<tr>
+<td>缺失追蹤</td>
+<td>缺失是否分級、指定Owner、期限、修正證據與驗證關閉。</td>
+<td>缺失追蹤表、修正證據。</td>
+</tr>
+<tr>
+<td>上線閘門</td>
+<td>上線前是否確認High/Critical缺失關閉或正式風險接受。</td>
+<td>Release Gate證據。</td>
+</tr>
+<tr>
+<td>風險接受</td>
+<td>例外與剩餘風險是否具補償控制、核准、期限與重評。</td>
+<td>風險接受紀錄。</td>
+</tr>
+<tr>
+<td>供應商與合約</td>
+<td>供應商與SaaS架構風險是否連動供應商評估、DPA、SLA、稽核權與退場條款。</td>
+<td>供應商評估與合約。</td>
+</tr>
+<tr>
+<td>AI架構治理</td>
+<td>AI/RAG/MLOps是否完成資料、Prompt、模型版本、RAG權限、Agent工具與AI安全測試審查。</td>
+<td>AI審查紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大缺失、逾期、例外與趨勢是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 附錄A：安全架構審查申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>SAR-REQ-YYYY-0001</td>
+<td>安全架構審查唯一編號。</td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>系統 / 服務名稱</td>
+<td></td>
+<td>需與資產清冊一致。</td>
+</tr>
+<tr>
+<td>專案 / 變更名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Business Owner / Service Owner</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Technical Owner / Architect</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>審查類型</td>
+<td>□ 新系統 □ 重大變更 □ 雲端 □ AI/ML □ SaaS □ API □ 供應商 □ 事件後</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>是否對外暴露</td>
+<td>□ 否 □ 是，說明：__________</td>
+<td></td>
+</tr>
+<tr>
+<td>是否涉及供應商</td>
+<td>□ 否 □ 是，供應商：__________</td>
+<td></td>
+</tr>
+<tr>
+<td>是否涉及AI/RAG/Agent</td>
+<td>□ 否 □ 是，說明：__________</td>
+<td></td>
+</tr>
+<tr>
+<td>預計上線日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>附件清單</td>
+<td>□ 架構圖 □ 資料流圖 □ 威脅模型 □ 權限矩陣 □ 網路需求 □ 供應商文件 □ 測試計畫</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人確認</td>
+<td>姓名 / 日期</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 附錄B：威脅模型簡表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產 / 資料</td>
+<td></td>
+<td>重要資產、資料、金鑰、模型、API或服務。</td>
+</tr>
+<tr>
+<td>信任邊界</td>
+<td></td>
+<td>外部/內部、供應商、雲端、AI模型、資料源等。</td>
+</tr>
+<tr>
+<td>威脅情境</td>
+<td></td>
+<td>例如越權、資料外洩、Prompt Injection、API濫用、供應鏈攻擊。</td>
+</tr>
+<tr>
+<td>可能攻擊者</td>
+<td></td>
+<td>外部攻擊者、惡意內部人員、供應商、誤用者、AI Agent失控等。</td>
+</tr>
+<tr>
+<td>現有控制</td>
+<td></td>
+<td>MFA、WAF、DLP、加密、日誌、RAG權限、Rate Limit等。</td>
+</tr>
+<tr>
+<td>控制缺口</td>
+<td></td>
+<td>缺少控制或控制不足處。</td>
+</tr>
+<tr>
+<td>風險等級</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td>依可能性與衝擊判定。</td>
+</tr>
+<tr>
+<td>改善措施</td>
+<td></td>
+<td>修正、補償控制、測試、監控或重新設計。</td>
+</tr>
+<tr>
+<td>Owner / 期限</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 附錄C：架構決策紀錄 ADR 範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ADR編號</td>
+<td>ADR-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>決策標題</td>
+<td></td>
+<td>例如是否採用外部AI API或內部部署模型。</td>
+</tr>
+<tr>
+<td>決策背景</td>
+<td></td>
+<td>說明業務需求、限制、假設與現況。</td>
+</tr>
+<tr>
+<td>可選方案</td>
+<td></td>
+<td>列出至少兩種可行方案與不採用方案。</td>
+</tr>
+<tr>
+<td>安全與隱私影響</td>
+<td></td>
+<td>說明各方案對資料、身份、網路、日誌、供應商、AI與合規之影響。</td>
+</tr>
+<tr>
+<td>選定方案</td>
+<td></td>
+<td>說明選定理由與安全控制。</td>
+</tr>
+<tr>
+<td>剩餘風險</td>
+<td></td>
+<td>列出需接受或持續追蹤之風險。</td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td></td>
+<td>CISO、Owner、DPO、AI Governance等。</td>
+</tr>
+<tr>
+<td>重評條件</td>
+<td></td>
+<td>例如供應商條款變更、資料分類提高、模型版本變更、事件後。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

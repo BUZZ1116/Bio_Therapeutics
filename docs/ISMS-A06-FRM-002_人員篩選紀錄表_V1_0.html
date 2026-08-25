@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A06-FRM-002 人員篩選紀錄表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.checkbox { white-space: nowrap; }
+.notice { border: 1px solid #999; padding: 10px; background: #fafafa; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A06-FRM-002 人員篩選紀錄表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A06-FRM-002</td>
+<td>人員篩選紀錄表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R10 / 10 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.6 / 人員篩選、保密、遠端工作與違規處理</td>
+<td>人力資源Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.6 / ISMS-A06-FRM-002</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>人力資源Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>表單建立</td>
+<td></td>
+<td>HR Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>人資審查</td>
+<td></td>
+<td>HR主管 / 招募負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Information Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與隱私審查</td>
+<td></td>
+<td>法務 / DPO / PIMS負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>用人單位確認</td>
+<td></td>
+<td>Hiring Manager / Department Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>HR主管 / CISO / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 表單目的</h2>
+<p>本紀錄表用於記錄組織於人員任用、委任、派駐、轉任、升任、外包或授權存取資訊資產前，依職務風險、法規與合約要求所執行之人員篩選、資格確認、背景查核、利益衝突揭露、保密義務確認與資訊安全風險評估結果。</p>
+<p>本表單之目的不是以不必要或過度方式蒐集個人資料，而是在合法、正當、必要、比例、透明與最小化原則下，確保即將取得組織資訊、系統、場所、客戶資料、PII、雲端平台、AI系統、營運關鍵流程、財務或研發資料之人員，其身分、資格、授權適配性與可信任程度已獲得適當確認。</p>
+
+<h2>2. 使用原則與隱私保護聲明</h2>
+<div class="notice">
+<p>本表所涉人員篩選資訊可能包含個人資料、求職資料、職涯經歷、學經歷證明、專業資格、前雇主查證結果、法規要求之背景確認、利益衝突聲明與資訊安全承諾紀錄。所有資料應依個人資料保護、勞動法規、反歧視規範、合約要求與組織文件化資訊管制要求保存、存取、使用、揭露與銷毀。</p>
+</div>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>原則</th>
+<th>執行要求</th>
+<th>控制證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合法與正當</td>
+<td>人員篩選應具合法依據、業務必要性與明確目的，不得任意蒐集與職務無關之資料。</td>
+<td>招募公告、同意書、法務或HR審查紀錄。</td>
+</tr>
+<tr>
+<td>最小化</td>
+<td>僅就職務風險等級、法規要求、客戶要求或合約要求所必要項目進行查核。</td>
+<td>篩選項目適用性判定。</td>
+</tr>
+<tr>
+<td>透明與告知</td>
+<td>於篩選前向當事人說明目的、範圍、資料來源、使用方式、保存期限與權利。</td>
+<td>個資告知聲明、查核同意紀錄。</td>
+</tr>
+<tr>
+<td>公平與不歧視</td>
+<td>不得以與職務無關之個人特徵、信仰、家庭狀態或其他受保護事項作為篩選依據。</td>
+<td>HR審查紀錄、標準化評核準則。</td>
+</tr>
+<tr>
+<td>保密與限制存取</td>
+<td>篩選資料限HR、法務、用人主管、CISO及必要授權人員存取。</td>
+<td>權限設定、存取紀錄。</td>
+</tr>
+<tr>
+<td>可追溯與可稽核</td>
+<td>篩選決策、例外接受、限制條件、補救措施與核准應留存紀錄。</td>
+<td>本表、簽核紀錄、風險接受紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>3. 人員基本資料與任用情境</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">姓名</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">申請/員工/供應商人員編號</th>
+<td style="width:30%;"></td>
+</tr>
+<tr>
+<th>身分別</th>
+<td colspan="3">□ 正職員工　□ 約聘人員　□ 派遣人員　□ 實習生　□ 顧問　□ 承包商　□ 外包人員　□ 供應商派駐　□ 第三方遠端支援　□ 其他：__________</td>
+</tr>
+<tr>
+<th>用人單位 / 專案</th>
+<td></td>
+<th>職稱 / 角色</th>
+<td></td>
+</tr>
+<tr>
+<th>預計到職 / 生效日期</th>
+<td></td>
+<th>任用期間 / 合約期間</th>
+<td></td>
+</tr>
+<tr>
+<th>工作地點 / 服務地區</th>
+<td colspan="3">□ 辦公室　□ 資料中心/機房　□ 客戶現場　□ 遠距　□ 混合　□ 跨境/海外　□ 雲端遠端管理　□ 其他：__________</td>
+</tr>
+<tr>
+<th>任用情境</th>
+<td colspan="3">□ 新進任用　□ 職務轉任　□ 升任高敏感職務　□ 專案臨時授權　□ 第三方進場　□ 特權帳號授權　□ 客戶要求查核　□ 法規/合約要求查核　□ 事件後重新評估　□ 其他：__________</td>
+</tr>
+<tr>
+<th>資料分類接觸範圍</th>
+<td colspan="3">□ 公開　□ 內部　□ 機密　□ 高機密　□ PII　□ 客戶資料　□ AI資料/模型/Prompt/RAG　□ 金鑰/Secrets　□ 原始碼　□ 財務資料　□ GHG/ESG資料　□ 營運持續/DR資料</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 職務敏感度與篩選等級判定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>職務風險因素</th>
+<th>是否適用</th>
+<th>說明 / 系統 / 資料 / 場所</th>
+<th>風險影響</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可存取機密或高機密資訊</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響機密性、合約義務、商業秘密與客戶信任。</td>
+</tr>
+<tr>
+<td>可處理PII或敏感個人資料</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能涉及個資法、跨境、資料主體權利與隱私事件。</td>
+</tr>
+<tr>
+<td>具特權帳號、系統管理或安全管理權限</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響系統完整性、可用性、日誌可信度與資安事件風險。</td>
+</tr>
+<tr>
+<td>可接觸原始碼、AI模型、訓練資料或MLOps管線</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響智慧財產權、模型安全、資料投毒、輸出濫用與供應鏈風險。</td>
+</tr>
+<tr>
+<td>可進入資料中心、機房、備援中心或關鍵實體區域</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響實體安全、設備可用性與營運持續。</td>
+</tr>
+<tr>
+<td>可處理財務、付款、合約、採購或供應商資料</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能涉及舞弊、利益衝突、付款詐欺與法遵風險。</td>
+</tr>
+<tr>
+<td>可代表組織對外溝通、提交客戶交付物或簽核證據</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響聲譽、合約履約、稽核證據與法規遵循。</td>
+</tr>
+<tr>
+<td>受客戶、監管、驗證或合約明定需背景查核</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>可能影響客戶准入、外包合約、驗證範圍與稽核結果。</td>
+</tr>
+</tbody>
+</table>
+
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>篩選等級</th>
+<th>適用條件</th>
+<th>最低查核範圍</th>
+<th>核准要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Level 1 一般篩選</td>
+<td>接觸公開或一般內部資訊，無特權、無PII、無客戶高敏感資料。</td>
+<td>身分確認、履歷與資格確認、保密與資安承諾、基本資安認知。</td>
+<td>HR與用人主管確認。</td>
+</tr>
+<tr>
+<td>Level 2 增強篩選</td>
+<td>接觸機密資訊、客戶資料、內部系統、一般雲端平台或供應商支援。</td>
+<td>Level 1項目，加上工作經歷查證、專業資格、利益衝突與合規限制確認。</td>
+<td>HR、用人主管與資訊安全確認。</td>
+</tr>
+<tr>
+<td>Level 3 高敏感篩選</td>
+<td>接觸高機密、PII、特權帳號、機房、AI模型/資料、核心系統、財務付款或關鍵營運流程。</td>
+<td>Level 2項目，加上進階背景查核、法務/隱私審查、職務風險評估與必要限制條件。</td>
+<td>HR主管、CISO、法務/DPO與用人單位主管核准。</td>
+</tr>
+<tr>
+<td>Level 4 特殊/受監管篩選</td>
+<td>客戶、主管機關、驗證、金融、政府、國防、跨境或合約明定需特定查核。</td>
+<td>依法規與合約要求執行，並保留查核依據、同意、結果與例外核准。</td>
+<td>最高管理階層授權代表、法務、CISO及客戶/監管要求之角色核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 篩選前告知、同意與資料來源確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>確認內容</th>
+<th>結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>個資告知</td>
+<td>已向當事人告知資料蒐集目的、查核範圍、資料來源、保存期間、權利行使方式與聯絡窗口。</td>
+<td>□ 完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>查核同意</td>
+<td>背景查核、前雇主查證、學經歷確認或第三方查核已取得必要同意。</td>
+<td>□ 完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料來源合法性</td>
+<td>使用之資料來源合法、可信且與職務相關，未使用不當或未經授權來源。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>第三方查核機構</td>
+<td>若委外查核，已確認DPA/保密條款、資料安全要求、保存與刪除責任。</td>
+<td>□ 完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>跨境處理</td>
+<td>若篩選資料跨境傳輸或由海外服務處理，已完成跨境與法務/DPO審查。</td>
+<td>□ 完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>敏感資料限制</td>
+<td>未蒐集與職務無關或法律禁止作為任用決策依據之敏感資料。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 身分、資格與經歷查核紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核項目</th>
+<th>查核內容</th>
+<th>適用等級</th>
+<th>結果</th>
+<th>查核人 / 日期</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分確認</td>
+<td>確認姓名、身分文件、聯絡方式與工作資格，並依所在地法規限制留存必要資訊。</td>
+<td>Level 1~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>工作資格</td>
+<td>確認工作許可、簽證、派駐資格、合約身分或供應商派工資格。</td>
+<td>Level 1~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>學歷確認</td>
+<td>依職務需求確認學歷、畢業證明或等效資格。</td>
+<td>Level 1~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>專業資格</td>
+<td>確認必要證照、稽核員資格、雲端證照、資安證照、隱私證照、職安或其他專業資格。</td>
+<td>Level 2~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>工作經歷</td>
+<td>確認履歷中關鍵經歷、任職期間、職務責任與離職資訊是否合理一致。</td>
+<td>Level 2~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>前雇主查證</td>
+<td>於取得同意並符合法規前提下，確認任職事實、職務與必要之誠信或資安相關事項。</td>
+<td>Level 2~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商人員資格</td>
+<td>確認供應商已完成其內部篩選、保密承諾、資安訓練與合約要求。</td>
+<td>Level 2~4</td>
+<td>□ 通過　□ 待補　□ 不通過　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 誠信、利益衝突與法規限制確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>確認項目</th>
+<th>確認問題</th>
+<th>結果</th>
+<th>補充說明 / 控制措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>利益衝突</td>
+<td>是否存在與供應商、客戶、競爭者、審查對象、採購或決策事項相關之利益衝突？</td>
+<td>□ 無　□ 有　□ 待釐清</td>
+<td></td>
+</tr>
+<tr>
+<td>保密限制</td>
+<td>是否仍受前雇主、客戶或第三方保密、競業、資料使用或智慧財產權限制影響？</td>
+<td>□ 無　□ 有　□ 待釐清</td>
+<td></td>
+</tr>
+<tr>
+<td>外部兼職或顧問</td>
+<td>是否存在可能影響職務獨立性、可用性、保密性或資安責任之外部職務？</td>
+<td>□ 無　□ 有　□ 待釐清</td>
+<td></td>
+</tr>
+<tr>
+<td>法規或合約限制</td>
+<td>是否存在法律、監管、客戶合約、出口管制、資料所在地或專案准入限制？</td>
+<td>□ 無　□ 有　□ 待釐清</td>
+<td></td>
+</tr>
+<tr>
+<td>資安事件或違規紀錄</td>
+<td>是否有與職務相關且依法得查核之重大資安、詐欺、違規或不當使用紀錄？</td>
+<td>□ 無　□ 有　□ 待釐清</td>
+<td></td>
+</tr>
+<tr>
+<td>財務或付款敏感職務</td>
+<td>若涉及付款、採購、合約或財務簽核，是否需額外誠信、職務區隔或雙人覆核？</td>
+<td>□ 否　□ 是　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 資訊安全與存取風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險領域</th>
+<th>預計授權或接觸內容</th>
+<th>可能風險</th>
+<th>必要控制措施</th>
+<th>剩餘風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>邏輯存取</td>
+<td>系統、應用、雲端平台、資料庫、API、管理介面。</td>
+<td>未授權存取、權限過大、帳號濫用、存取紀錄不足。</td>
+<td>最小權限、MFA、PAM、權限核准、定期審查、日誌監控。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+<tr>
+<td>實體存取</td>
+<td>辦公室、機房、資料中心、倉庫、文件室、備援場地。</td>
+<td>設備或文件未授權接觸、破壞、竊取或可用性中斷。</td>
+<td>門禁授權、訪客管理、區域分級、監視、陪同、定期盤點。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+<tr>
+<td>資料處理</td>
+<td>PII、客戶資料、商業秘密、財務資料、AI資料、GHG/ESG資料。</td>
+<td>外洩、誤用、過度複製、未授權再分享、資料完整性受損。</td>
+<td>資料分類、DLP、加密、傳輸管制、保留期限、資料最小化。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+<tr>
+<td>特權操作</td>
+<td>系統管理、雲端管理、資安工具、備份復原、金鑰與Secrets管理。</td>
+<td>大範圍破壞、隱匿行為、服務中斷、金鑰外洩。</td>
+<td>PAM、雙人覆核、命令紀錄、Session Recording、JIT/JEA權限。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+<tr>
+<td>第三方與外包</td>
+<td>供應商派駐、遠端支援、委外維運、專案顧問。</td>
+<td>供應鏈攻擊、責任不明、第四方風險、離場未撤權。</td>
+<td>合約條款、NDA、DPA、第三方審查、帳號到期、退場檢核。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+<tr>
+<td>AI與自動化</td>
+<td>AI工具、RAG資料、模型訓練、Prompt、代理人、自動化腳本。</td>
+<td>敏感資料輸入AI、模型洩漏、錯誤輸出、自動化越權。</td>
+<td>AI使用政策、資料輸入限制、人工覆核、模型與資料存取控管。</td>
+<td>□ 低　□ 中　□ 高</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 篩選結果彙總與差異處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>結果</th>
+<th>差異 / 風險說明</th>
+<th>處理方式</th>
+<th>責任人</th>
+<th>完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分與工作資格</td>
+<td>□ 通過　□ 待補　□ 不通過</td>
+<td></td>
+<td>□ 補件　□ 限制任用　□ 不予任用　□ 例外核准</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>學經歷與資格</td>
+<td>□ 通過　□ 待補　□ 不通過</td>
+<td></td>
+<td>□ 補件　□ 條件式任用　□ 重新分派職務　□ 不予任用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>誠信與利益衝突</td>
+<td>□ 通過　□ 待釐清　□ 不通過</td>
+<td></td>
+<td>□ 迴避安排　□ 職務區隔　□ 雙人覆核　□ 法務審查</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>法規與合約限制</td>
+<td>□ 通過　□ 待釐清　□ 不通過</td>
+<td></td>
+<td>□ 法務確認　□ 客戶確認　□ 限制存取　□ 不予指派</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資訊安全風險</td>
+<td>□ 可接受　□ 需控制後接受　□ 不可接受</td>
+<td></td>
+<td>□ 最小權限　□ 延後授權　□ 監控強化　□ 風險接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>隱私與PII風險</td>
+<td>□ 可接受　□ 需DPO審查　□ 不可接受</td>
+<td></td>
+<td>□ DPIA/PIA　□ DPA　□ 權限限制　□ 訓練後授權</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 任用、授權與限制條件決定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:25%;">整體篩選結論</th>
+<td colspan="3">□ 通過，可依一般流程任用/授權<br>□ 條件式通過，需完成下列補救或限制條件後方可任用/授權<br>□ 暫緩，需補件、查證或管理階層決定<br>□ 不通過，不得任用、派駐或授權接觸相關資訊資產<br>□ 例外接受，需風險擁有者與授權主管核准並列入追蹤</td>
+</tr>
+<tr>
+<th>限制條件</th>
+<td colspan="3">□ 限制資料分類　□ 限制系統範圍　□ 延後特權授權　□ 需完成訓練　□ 需雙人覆核　□ 需強化監控　□ 需簽署額外保密/利益衝突文件　□ 需客戶准入核准　□ 其他：__________</td>
+</tr>
+<tr>
+<th>授權生效條件</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>授權到期或重評日期</th>
+<td></td>
+<th style="width:25%;">是否需定期重新篩選</th>
+<td>□ 否　□ 是，頻率：__________</td>
+</tr>
+<tr>
+<th>風險擁有者</th>
+<td></td>
+<th>用人主管</th>
+<td></td>
+</tr>
+<tr>
+<th>例外接受理由</th>
+<td colspan="3"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 到職前資訊安全前置要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>前置要求</th>
+<th>適用情境</th>
+<th>完成狀態</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>簽署保密與資訊安全承諾書</td>
+<td>所有人員、供應商人員與外包人員。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成資訊安全政策宣導</td>
+<td>所有需接觸組織資訊者。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成角色所需資安訓練</td>
+<td>雲端、系統管理、AI、PII、SOC、開發、稽核等角色。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成個資與隱私訓練</td>
+<td>處理PII、客戶資料、HR資料或跨境資料者。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成AI與資料使用規範確認</td>
+<td>使用AI工具、AI服務、模型、RAG或自動化代理者。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成權限申請與核准</td>
+<td>需系統、資料、雲端、實體或特權存取者。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>完成設備與帳號發放檢核</td>
+<td>需使用公司設備、行動裝置、VPN、MFA或憑證者。</td>
+<td>□ 完成　□ 待完成　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 供應商、外包與第三方人員補充紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:22%;">供應商 / 外包公司名稱</th>
+<td></td>
+<th style="width:22%;">合約 / 採購 / 專案編號</th>
+<td></td>
+</tr>
+<tr>
+<th>供應商負責窗口</th>
+<td></td>
+<th>組織內部管理Owner</th>
+<td></td>
+</tr>
+<tr>
+<th>供應商篩選聲明</th>
+<td colspan="3">□ 供應商已依合約完成其人員篩選　□ 已簽署NDA/保密條款　□ 已完成資安訓練　□ 已確認無未揭露第四方　□ 不適用</td>
+</tr>
+<tr>
+<th>外部人員存取方式</th>
+<td colspan="3">□ 現場作業　□ VPN　□ VDI　□ 跳板機　□ PAM　□ 雲端IAM　□ API　□ 客戶場域　□ 其他：__________</td>
+</tr>
+<tr>
+<th>存取限制</th>
+<td colspan="3">□ 限定期間　□ 限定IP/地區　□ 限定系統　□ 禁止下載　□ 禁止外部分享　□ Session Recording　□ 雙人陪同　□ 其他：__________</td>
+</tr>
+<tr>
+<th>退場要求</th>
+<td colspan="3">供應商人員離場、專案結束、合約終止或角色變更時，須依離職與終止資訊安全檢核表撤銷帳號、收回設備、移除門禁、返還或刪除資料，並取得刪除/返還證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 重新篩選觸發條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發情境</th>
+<th>重新篩選要求</th>
+<th>責任角色</th>
+<th>紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>職務轉任或升任</td>
+<td>依新職務之資料、系統、權限與場所風險重新判定篩選等級。</td>
+<td>HR / 用人主管 / CISO</td>
+<td>職務異動資訊安全檢核表、本表更新。</td>
+</tr>
+<tr>
+<td>新增特權帳號或高敏感資料存取</td>
+<td>執行Level 3或Level 4篩選，並確認PAM、監控與訓練要求。</td>
+<td>System Owner / CISO</td>
+<td>權限申請、特權帳號核准。</td>
+</tr>
+<tr>
+<td>供應商人員更換</td>
+<td>新派駐或替補人員不得沿用原人員權限，須重新篩選與核准。</td>
+<td>Vendor Owner / HR / CISO</td>
+<td>供應商人員清冊、帳號核准。</td>
+</tr>
+<tr>
+<td>重大資安事件或違規</td>
+<td>事件涉及人員可信任性、濫用權限或違反承諾時，重新評估任用與授權。</td>
+<td>Incident Manager / HR / 法務</td>
+<td>事件紀錄、調查報告、處置紀錄。</td>
+</tr>
+<tr>
+<td>法規、客戶或合約要求變更</td>
+<td>依新增要求補充查核項目、同意與紀錄。</td>
+<td>法務 / 客戶Owner / HR</td>
+<td>法規與合約要求清冊、補充查核紀錄。</td>
+</tr>
+<tr>
+<td>定期重評</td>
+<td>高敏感職務、長期外包與特權角色應依風險定期重新確認資格與限制。</td>
+<td>HR / CISO / 用人主管</td>
+<td>定期重評紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 紀錄保存、存取與銷毀要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存要求</th>
+<th>存取限制</th>
+<th>銷毀 / 刪除要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>本篩選紀錄表</td>
+<td>依紀錄保存期限清冊、勞動法規、個資法規、合約與稽核要求保存。</td>
+<td>限HR、用人主管、CISO、法務、DPO及經授權稽核人員。</td>
+<td>保存期限屆滿且無法規、爭議、稽核或事件保全需求時安全銷毀。</td>
+</tr>
+<tr>
+<td>背景查核證據</td>
+<td>僅保存必要結論與證明，避免保存過度原始資料。</td>
+<td>限HR、法務與必要授權人員。</td>
+<td>依最小化原則刪除不必要副本與第三方暫存資料。</td>
+</tr>
+<tr>
+<td>同意與告知紀錄</td>
+<td>保存至足以證明查核合法性與透明義務已履行。</td>
+<td>限HR、法務、DPO與稽核人員。</td>
+<td>期限屆滿後安全刪除或封存。</td>
+</tr>
+<tr>
+<td>例外核准與風險接受</td>
+<td>保存至該人員任用或授權期間結束後，依風險與稽核要求保留。</td>
+<td>限風險擁有者、CISO、HR與管理階層授權人員。</td>
+<td>依文件化資訊管制程序處置。</td>
+</tr>
+<tr>
+<td>供應商人員查核聲明</td>
+<td>保存至合約終止與稽核期間結束，必要時依客戶要求延長。</td>
+<td>限Vendor Owner、HR、CISO、法務與稽核人員。</td>
+<td>合約終止後依DPA、NDA與紀錄保存規範銷毀。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 最終簽核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>簽核角色</th>
+<th>簽核意見</th>
+<th>姓名 / 職稱</th>
+<th>簽核</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>HR承辦</td>
+<td>□ 已完成必要篩選　□ 待補件　□ 不建議任用/授權</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>用人主管</td>
+<td>□ 同意任用/授權　□ 條件式同意　□ 不同意</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資訊安全負責人</td>
+<td>□ 風險可接受　□ 需補強控制　□ 不可接受</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>法務 / DPO</td>
+<td>□ 無重大法遵/隱私疑慮　□ 需補充措施　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HR主管 / 授權代表</td>
+<td>□ 核准　□ 條件式核准　□ 駁回　□ 送管理階層決議</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 附錄A：篩選紀錄品質檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核標準</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>必填欄位、職務風險判定、查核結果、差異處理與簽核均已完成。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>篩選等級、授權範圍、職務敏感度與控制措施一致。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>合法性</td>
+<td>已完成必要告知、同意、資料最小化與法務/DPO審查。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>可稽核性</td>
+<td>查核來源、查核人、日期、結果、例外與核准可追溯。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>保護性</td>
+<td>篩選紀錄之存取權限、保存位置與銷毀要求已定義。</td>
+<td>□ 符合　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-012 資料遮罩作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-012 資料遮罩作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-012</td>
+<td>資料遮罩作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-012</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Data Protection Owner / Data Governance Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理審查</td>
+<td></td>
+<td>Data Governance Owner / Data Owner代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與法務審查</td>
+<td></td>
+<td>DPO / Legal / Privacy Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料庫與平台審查</td>
+<td></td>
+<td>Database Owner / Data Platform Owner / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps與測試審查</td>
+<td></td>
+<td>DevSecOps Owner / QA Owner / Application Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與委外審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / DPO / 資料治理主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織資料遮罩、去識別化、假名化、匿名化、Tokenization、資料擾動、資料合成與測試資料保護之方法、流程、角色責任、驗證、核准、保存、例外與稽核要求，確保敏感資料於非正式環境、測試、開發、教育訓練、Demo、分析、AI訓練、供應商支援、客戶服務、報表、除錯、日誌及資料分享場景中受到適當保護。</p>
+<p>資料遮罩之目的在於降低資料可識別性與外洩衝擊，同時維持必要之業務、測試、分析或模型訓練效用。本文件要求資料遮罩作業必須與資料分類分級、隱私治理、DLP、存取控制、加密、日誌監控、測試資料管理、AI資料治理及供應商管理整合，形成可驗證、可追溯、可重複執行且符合法規與合約要求之資料保護控制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>正式敏感資料原則上不得直接使用於開發、測試、教育訓練、Demo、AI實驗、供應商除錯或非正式環境；如確有必要，應優先使用合成資料、去識別資料或經核准之遮罩資料。</li>
+<li>資料遮罩方法應依資料敏感度、使用目的、重識別風險、資料效用、法規合約、資料流向及使用者權限決定，不得以單一遮罩方法套用所有情境。</li>
+<li>遮罩後資料仍可能因多欄位組合、外部資料比對、統計推論或AI模型反推而具重識別風險，應定期評估並採取補強控制。</li>
+<li>遮罩規則、對照表、Token Vault、Salt、金鑰、演算法與映射資料本身屬高敏感資訊，應限制存取、加密、監控並納入Secrets與金鑰管理。</li>
+<li>資料遮罩結果需經驗證，確認敏感資料不可被未授權識別、測試需求仍可滿足、資料關聯性符合用途，且未破壞關鍵測試或業務邏輯。</li>
+<li>所有遮罩例外、可逆遮罩、保留原始欄位、使用正式資料或資料集外部分享均應經Data Owner、DPO與CISO視風險核准。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料遮罩</td>
+<td>對敏感資料進行遮蔽、替換、擾動、雜湊、Tokenization或其他處理，使未授權對象無法直接取得原始資料之控制措施。</td>
+</tr>
+<tr>
+<td>靜態資料遮罩</td>
+<td>在資料複製、匯出、移轉或產生測試資料集時，將資料轉換為遮罩後版本。</td>
+</tr>
+<tr>
+<td>動態資料遮罩</td>
+<td>依使用者角色、查詢情境或應用層規則，在資料存取或呈現時動態遮蔽部分資料。</td>
+</tr>
+<tr>
+<td>去識別化</td>
+<td>移除或轉換可直接或間接識別個人、客戶或資料主體之資料，以降低識別風險。</td>
+</tr>
+<tr>
+<td>假名化</td>
+<td>以代碼、Token或替代值取代識別資料，但在保留對照表或補充資料時仍可重新識別。</td>
+</tr>
+<tr>
+<td>匿名化</td>
+<td>資料經處理後，在合理可預見條件下無法再識別資料主體之狀態。</td>
+</tr>
+<tr>
+<td>Tokenization</td>
+<td>以Token取代敏感資料，原始值由受控Token Vault或等效機制保存。</td>
+</tr>
+<tr>
+<td>資料合成</td>
+<td>使用人工產生、統計生成或模型生成之資料取代真實資料，以維持測試或分析效用。</td>
+</tr>
+<tr>
+<td>重識別風險</td>
+<td>遮罩或去識別資料被透過欄位組合、外部資料集、背景知識或模型推論重新識別之可能性。</td>
+</tr>
+<tr>
+<td>遮罩規則</td>
+<td>定義哪些欄位、資料類型、資料集、環境與使用情境應採何種遮罩方法、保留格式與驗證要求之規則。</td>
+</tr>
+<tr>
+<td>映射表 / 對照表</td>
+<td>保存原始資料與遮罩值、Token或假名之對應關係，屬高敏感資料。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准高風險遮罩策略、可逆遮罩、正式資料使用例外、外部分享與風險接受。</td>
+<td>核准紀錄、風險接受、管理審查。</td>
+</tr>
+<tr>
+<td>DPO / Privacy Owner</td>
+<td>審查PII遮罩、去識別化充分性、DPIA、重識別風險、跨境與資料主體權利影響。</td>
+<td>DPIA、隱私審查紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>定義資料分類、使用目的、遮罩需求、資料效用、可接受風險與例外核准。</td>
+<td>資料分類與遮罩核准。</td>
+</tr>
+<tr>
+<td>Data Governance Owner</td>
+<td>維護資料目錄、欄位分類、資料血緣、遮罩政策、資料使用與品質治理。</td>
+<td>資料目錄、遮罩規則清冊。</td>
+</tr>
+<tr>
+<td>Data Protection / Masking Owner</td>
+<td>設計遮罩方法、規則、流程、驗證、工具設定與定期審查。</td>
+<td>遮罩方案、測試報告。</td>
+</tr>
+<tr>
+<td>Database / Data Platform Owner</td>
+<td>執行資料庫、資料倉儲、資料湖、ETL/ELT、Token Vault與資料平台遮罩控制。</td>
+<td>資料處理紀錄。</td>
+</tr>
+<tr>
+<td>Application Owner</td>
+<td>確保應用層動態遮罩、API回應遮罩、報表遮罩與使用者權限正確。</td>
+<td>應用設定與測試。</td>
+</tr>
+<tr>
+<td>QA / Test Data Owner</td>
+<td>定義測試資料需求，優先使用合成或遮罩資料，保護測試環境。</td>
+<td>測試資料申請與驗證。</td>
+</tr>
+<tr>
+<td>DevSecOps / Application Security</td>
+<td>審查遮罩流程、CI/CD資料處理、Secrets、測試資料、程式碼與日誌外洩風險。</td>
+<td>安全審查紀錄。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>審查AI訓練、微調、評估、Prompt、RAG與向量資料之遮罩與重識別風險。</td>
+<td>AI資料評估與模型紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控未遮罩資料外傳、異常存取、遮罩例外與資料外洩事件。</td>
+<td>DLP/SIEM告警。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商使用遮罩資料，並於合約規範資料保護、刪除、事件通報與稽核。</td>
+<td>供應商合約與證據。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查遮罩規則、核准、執行、驗證、例外、日誌與重識別風險評估。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 資料遮罩適用場景與最低要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>最低要求</th>
+<th>禁止或限制事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>開發環境</td>
+<td>原則使用合成資料或遮罩資料，不得直接複製正式PII或客戶資料。</td>
+<td>禁止開發人員任意取得完整正式資料。</td>
+</tr>
+<tr>
+<td>測試 / UAT</td>
+<td>依測試目的使用遮罩、Tokenization或合成資料，保留必要格式與關聯。</td>
+<td>不得以便利性為由使用未遮罩正式資料。</td>
+</tr>
+<tr>
+<td>教育訓練 / Demo</td>
+<td>使用完全合成或高度遮罩資料。</td>
+<td>禁止使用真實客戶、員工、交易或Secrets。</td>
+</tr>
+<tr>
+<td>除錯與客戶支援</td>
+<td>僅提供最小必要遮罩資料，必要原始資料需Data Owner核准。</td>
+<td>禁止截圖或匯出完整敏感資料至非核准工具。</td>
+</tr>
+<tr>
+<td>報表與分析</td>
+<td>依角色、目的與粒度遮罩或彙總資料。</td>
+<td>禁止將可識別資料提供給無必要知悉者。</td>
+</tr>
+<tr>
+<td>資料倉儲 / 資料湖</td>
+<td>欄位分類、權限、動態遮罩與資料集級遮罩需受控。</td>
+<td>禁止未分類資料直接進入共享區。</td>
+</tr>
+<tr>
+<td>API回應</td>
+<td>應用層應依角色遮罩PII、Token、帳號、交易與敏感欄位。</td>
+<td>禁止將完整敏感欄位暴露於前端或第三方API。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>日誌不得保存明文密碼、Token、完整PII或敏感資料，必要時遮罩。</td>
+<td>禁止Debug Log長期保存敏感資料。</td>
+</tr>
+<tr>
+<td>AI訓練 / 評估</td>
+<td>優先使用合成、去識別或遮罩資料，評估模型記憶與重識別風險。</td>
+<td>禁止未核准PII、Secrets或客戶資料輸入外部AI。</td>
+</tr>
+<tr>
+<td>RAG / 向量資料庫</td>
+<td>RAG資料需依來源分類處理，敏感Metadata與文件內容需遮罩或權限繼承。</td>
+<td>禁止將未授權資料Embedding至共享向量庫。</td>
+</tr>
+<tr>
+<td>供應商 / 委外</td>
+<td>原則僅提供遮罩資料；若需原始資料需合約、DPA、NDA與風險核准。</td>
+<td>禁止供應商自行保留資料副本。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 資料遮罩方法選擇矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>遮罩方法</th>
+<th>適用情境</th>
+<th>優點</th>
+<th>限制 / 風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>固定字元遮蔽</td>
+<td>顯示資料時僅保留部分字元，例如手機後三碼、Email部分遮蔽。</td>
+<td>簡單、易理解、適合顯示層。</td>
+<td>不適合測試關聯性或防止高風險重識別。</td>
+</tr>
+<tr>
+<td>格式保留替換</td>
+<td>以假資料取代原始值並保持格式，例如身分證、電話、信用卡格式。</td>
+<td>適合測試、UAT與系統驗證。</td>
+<td>需避免生成有效真實資料。</td>
+</tr>
+<tr>
+<td>隨機化 / 擾動</td>
+<td>對數值、日期、金額等加入擾動或區間化。</td>
+<td>保留統計特性。</td>
+<td>可能影響精準分析，仍需重識別評估。</td>
+</tr>
+<tr>
+<td>雜湊</td>
+<td>將資料轉換為不可讀Hash，用於比對或去識別識別碼。</td>
+<td>適合比對與去識別。</td>
+<td>低熵資料可能被字典攻擊，需Salt或Pepper。</td>
+</tr>
+<tr>
+<td>Tokenization</td>
+<td>以Token取代原始值，原始值保存於受控Token Vault。</td>
+<td>適合可逆需求與支付/客戶識別。</td>
+<td>Token Vault成為高敏感目標。</td>
+</tr>
+<tr>
+<td>假名化</td>
+<td>以假名或代碼取代識別欄位，保留分析關聯。</td>
+<td>可支援長期追蹤分析。</td>
+<td>保留對照表時仍屬可識別資料。</td>
+</tr>
+<tr>
+<td>資料彙總</td>
+<td>將細部資料轉為統計、區間、群組或彙總結果。</td>
+<td>降低可識別性，適合報表。</td>
+<td>不適合需明細測試情境。</td>
+</tr>
+<tr>
+<td>欄位刪除</td>
+<td>移除不必要敏感欄位。</td>
+<td>最小化風險。</td>
+<td>可能降低資料效用。</td>
+</tr>
+<tr>
+<td>資料合成</td>
+<td>產生非真實但具測試或統計特性之資料。</td>
+<td>外洩風險最低，適合測試與AI評估。</td>
+<td>需驗證效用與避免反映真實個體。</td>
+</tr>
+<tr>
+<td>動態遮罩</td>
+<td>依角色或查詢即時遮罩顯示結果。</td>
+<td>適合正式查詢與報表。</td>
+<td>需防止透過查詢推論繞過。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 資料遮罩作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>申請人說明資料集、用途、環境、使用者、期限、資料欄位、效用需求與是否可使用合成資料。</td>
+<td>申請人 / Business Owner</td>
+<td>資料遮罩申請單。</td>
+</tr>
+<tr>
+<td>2. 資料分類與欄位識別</td>
+<td>識別PII、客戶資料、Secrets、敏感欄位、準識別欄位、資料關聯與資料Owner。</td>
+<td>Data Owner / Data Steward</td>
+<td>欄位分類表。</td>
+</tr>
+<tr>
+<td>3. 風險與隱私評估</td>
+<td>評估重識別、外洩影響、法規合約、AI推論、供應商與跨境風險。</td>
+<td>DPO / CISO / Data Owner</td>
+<td>DPIA或風險評估。</td>
+</tr>
+<tr>
+<td>4. 遮罩方法設計</td>
+<td>依欄位與用途選擇遮罩方法、保留格式、關聯性、可逆性與驗證標準。</td>
+<td>Masking Owner / Data Engineer</td>
+<td>遮罩方案。</td>
+</tr>
+<tr>
+<td>5. 核准</td>
+<td>依風險取得Data Owner、DPO、CISO、AI Governance或Legal核准。</td>
+<td>核准角色</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>6. 實作與執行</td>
+<td>於受控環境執行遮罩，保護原始資料、映射表、金鑰與處理日誌。</td>
+<td>Data Platform / DBA</td>
+<td>執行紀錄。</td>
+</tr>
+<tr>
+<td>7. 驗證</td>
+<td>驗證遮罩完整性、資料效用、格式、關聯、重識別風險與無敏感殘留。</td>
+<td>QA / Data Owner / Security</td>
+<td>驗證報告。</td>
+</tr>
+<tr>
+<td>8. 交付與使用</td>
+<td>交付遮罩資料至核准位置、使用者與期間，限制複製與再分享。</td>
+<td>Data Owner / IT</td>
+<td>交付紀錄。</td>
+</tr>
+<tr>
+<td>9. 監控與保存</td>
+<td>監控遮罩資料使用、DLP告警、存取權限、保存期限與刪除。</td>
+<td>SOC / Data Owner</td>
+<td>監控與刪除紀錄。</td>
+</tr>
+<tr>
+<td>10. 定期審查</td>
+<td>定期審查遮罩規則、資料效用、例外、供應商使用與AI資料風險。</td>
+<td>ISMS代表 / DPO</td>
+<td>審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 欄位級遮罩規則建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料欄位類型</th>
+<th>建議遮罩方式</th>
+<th>驗證要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>姓名</td>
+<td>替換為假名、Tokenization或部分遮蔽。</td>
+<td>不得與真實個體可合理連結。</td>
+<td>測試需保留語系與長度時使用假名。</td>
+</tr>
+<tr>
+<td>身分證 / 證件號</td>
+<td>格式保留替換、Tokenization或Hash加Salt。</td>
+<td>不得產生真實有效證號。</td>
+<td>高度敏感欄位。</td>
+</tr>
+<tr>
+<td>生日</td>
+<td>區間化、年份保留、日期擾動或替換。</td>
+<td>避免與其他欄位組合重識別。</td>
+<td>依用途保留年齡區間即可。</td>
+</tr>
+<tr>
+<td>電話</td>
+<td>格式保留替換或僅保留末三碼。</td>
+<td>不得對應真實可撥打號碼。</td>
+<td>避免測試簡訊誤發。</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>替換為測試網域或遮蔽帳號。</td>
+<td>不得寄送至真實外部信箱。</td>
+<td>建議使用example.com或內部測試網域。</td>
+</tr>
+<tr>
+<td>地址</td>
+<td>區域化、移除門牌、替換為假地址。</td>
+<td>避免精確定位個人。</td>
+<td>可保留縣市作統計。</td>
+</tr>
+<tr>
+<td>銀行帳號 / 信用卡</td>
+<td>Tokenization、格式保留假資料或完全移除。</td>
+<td>不得保留完整真實號碼。</td>
+<td>需防止測試付款誤觸發。</td>
+</tr>
+<tr>
+<td>客戶編號</td>
+<td>假名化、Tokenization或Hash加Salt。</td>
+<td>保留關聯時需保護對照表。</td>
+<td>可支援測試關聯性。</td>
+</tr>
+<tr>
+<td>交易金額</td>
+<td>區間化、擾動或合成。</td>
+<td>不得影響測試邏輯或財務統計誤用。</td>
+<td>正式報表需另行控管。</td>
+</tr>
+<tr>
+<td>醫療/健康資料</td>
+<td>去識別、彙總、移除直接識別碼與準識別碼。</td>
+<td>需DPO與Data Owner核准。</td>
+<td>高度敏感資料。</td>
+</tr>
+<tr>
+<td>Secrets / Token / 密碼</td>
+<td>完全移除、替換為測試Secrets、不可逆Hash。</td>
+<td>不得保留任何有效Secrets。</td>
+<td>需搭配Secrets掃描。</td>
+</tr>
+<tr>
+<td>原始碼片段</td>
+<td>移除Secrets、客戶資料、內部端點與敏感註解。</td>
+<td>需SAST/Secrets掃描。</td>
+<td>AI工具使用需特別審查。</td>
+</tr>
+<tr>
+<td>Prompt / AI輸入</td>
+<td>移除PII、Secrets、客戶資料與高機密內容。</td>
+<td>需AI DLP或人工審查。</td>
+<td>注意上下文重識別。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 測試資料與非正式環境遮罩要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>正式資料使用限制</td>
+<td>開發、測試、UAT不得直接使用未遮罩正式敏感資料。</td>
+<td>資料遮罩申請與核准。</td>
+</tr>
+<tr>
+<td>環境隔離</td>
+<td>遮罩資料環境應與正式環境分離，權限不得高於必要範圍。</td>
+<td>環境與權限設定。</td>
+</tr>
+<tr>
+<td>資料量最小化</td>
+<td>僅提供測試所需最小資料欄位、筆數、期間與關聯。</td>
+<td>資料交付紀錄。</td>
+</tr>
+<tr>
+<td>批次遮罩</td>
+<td>正式資料複製至非正式環境前應先遮罩或於隔離區完成遮罩後再交付。</td>
+<td>ETL/遮罩日誌。</td>
+</tr>
+<tr>
+<td>測試Email/簡訊</td>
+<td>遮罩或替換收件人，避免發送至真實客戶或員工。</td>
+<td>測試設定。</td>
+</tr>
+<tr>
+<td>付款/交易測試</td>
+<td>支付、帳務、訂單與金融欄位需使用測試代碼與模擬資料。</td>
+<td>測試資料驗證。</td>
+</tr>
+<tr>
+<td>測試資料保存</td>
+<td>遮罩資料仍需設定保存期限、存取控管與刪除機制。</td>
+<td>保存與刪除紀錄。</td>
+</tr>
+<tr>
+<td>供應商測試</td>
+<td>供應商測試資料應為遮罩或合成資料，且需NDA/DPA與刪除證明。</td>
+<td>供應商證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. AI、RAG與資料科學遮罩要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>遮罩要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI訓練資料</td>
+<td>優先使用合成、去識別或最小化資料，移除直接識別碼與不必要準識別碼。</td>
+<td>資料集風險評估與抽樣檢查。</td>
+</tr>
+<tr>
+<td>模型微調</td>
+<td>微調資料不得包含未核准PII、Secrets、客戶資料或高機密內容。</td>
+<td>AI資料審查與DLP掃描。</td>
+</tr>
+<tr>
+<td>模型評估資料</td>
+<td>評估集應使用合成或遮罩資料，必要真實案例需DPO/Data Owner核准。</td>
+<td>評估資料清冊。</td>
+</tr>
+<tr>
+<td>Prompt樣本</td>
+<td>Prompt樣本需移除個資、客戶內容、商業秘密、內部端點與Secrets。</td>
+<td>Prompt審查紀錄。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>RAG文件進入索引前需依分類檢查，敏感資料需遮罩或權限繼承。</td>
+<td>RAG資料源清冊。</td>
+</tr>
+<tr>
+<td>向量資料庫</td>
+<td>Embedding可能洩露來源語意，需依來源分類保護並限制查詢與匯出。</td>
+<td>向量庫權限與測試。</td>
+</tr>
+<tr>
+<td>AI輸出檢查</td>
+<td>模型輸出不得重現訓練資料中的敏感資料或可識別內容。</td>
+<td>模型記憶測試。</td>
+</tr>
+<tr>
+<td>外部AI服務</td>
+<td>輸入外部AI前需AI DLP、資料不訓練條款與必要遮罩。</td>
+<td>供應商合約與AI DLP紀錄。</td>
+</tr>
+<tr>
+<td>AI Agent</td>
+<td>Agent讀取資料、生成Email、上傳檔案或呼叫API前需檢查遮罩與DLP規則。</td>
+<td>Agent操作日誌。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 遮罩資料驗證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>驗證項目</th>
+<th>驗證內容</th>
+<th>通過標準</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>遮罩完整性</td>
+<td>所有指定敏感欄位是否已依規則遮罩。</td>
+<td>未發現未遮罩敏感欄位。</td>
+</tr>
+<tr>
+<td>格式保留</td>
+<td>遮罩後資料是否符合系統格式、長度、型態與欄位限制。</td>
+<td>應用與資料庫驗證通過。</td>
+</tr>
+<tr>
+<td>關聯一致性</td>
+<td>需保留關聯之欄位是否維持一致映射。</td>
+<td>跨表、跨系統關聯可用且不洩露原始值。</td>
+</tr>
+<tr>
+<td>重識別風險</td>
+<td>是否可能透過欄位組合、外部資料或稀有值重識別。</td>
+<td>風險低於核准門檻或有補償控制。</td>
+</tr>
+<tr>
+<td>資料效用</td>
+<td>是否滿足測試、分析、報表、AI評估或除錯需求。</td>
+<td>使用者驗收通過。</td>
+</tr>
+<tr>
+<td>Secrets殘留</td>
+<td>是否存在有效Secrets、Token、憑證、密碼或內部端點。</td>
+<td>Secrets掃描無有效命中。</td>
+</tr>
+<tr>
+<td>DLP檢查</td>
+<td>遮罩資料是否仍觸發高風險DLP規則。</td>
+<td>Critical/High命中需處理。</td>
+</tr>
+<tr>
+<td>AI記憶風險</td>
+<td>AI資料是否可能造成模型重現敏感內容。</td>
+<td>模型記憶與敏感輸出測試通過。</td>
+</tr>
+<tr>
+<td>存取權限</td>
+<td>遮罩資料集是否僅授權必要人員與系統存取。</td>
+<td>權限審查通過。</td>
+</tr>
+<tr>
+<td>刪除期限</td>
+<td>遮罩資料是否設定保存期限與刪除責任。</td>
+<td>保存期限與刪除計畫已登錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 可逆遮罩、Token Vault與對照表管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>高風險要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可逆性核准</td>
+<td>可逆遮罩或保留對照表需說明必要性並取得Data Owner、DPO與CISO核准。</td>
+<td>高敏感資料需管理階層或指定授權人核准。</td>
+</tr>
+<tr>
+<td>對照表保護</td>
+<td>對照表、Token Vault、Salt、Pepper、金鑰與映射規則需加密、分權與監控。</td>
+<td>使用KMS/HSM、PAM與完整日誌。</td>
+</tr>
+<tr>
+<td>職務分離</td>
+<td>可存取遮罩資料者不得同時可存取對照表與原始資料，除非正式核准。</td>
+<td>高風險需雙人核准。</td>
+</tr>
+<tr>
+<td>存取日誌</td>
+<td>對照表查詢、還原、匯出、備份與管理操作需完整記錄。</td>
+<td>接入SIEM並設定異常告警。</td>
+</tr>
+<tr>
+<td>輪替與撤銷</td>
+<td>Tokenization金鑰、Salt或Vault憑證應依金鑰管理要求輪替。</td>
+<td>外洩時需立即撤銷與重新Token化。</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>對照表備份需加密、限制存取並測試可復原。</td>
+<td>確保備援不破壞隔離與職務分離。</td>
+</tr>
+<tr>
+<td>刪除與退場</td>
+<td>用途結束後應刪除對照表或封存並限制存取。</td>
+<td>需保留刪除或封存證明。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 供應商與委外資料遮罩要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料交付原則</td>
+<td>原則僅交付遮罩、去識別或合成資料予供應商。</td>
+<td>資料交付紀錄。</td>
+</tr>
+<tr>
+<td>合約條款</td>
+<td>合約需規範資料使用目的、保密、DPA、再委外、保存、刪除、事件通報與稽核權。</td>
+<td>合約/SOW/DPA。</td>
+</tr>
+<tr>
+<td>例外核准</td>
+<td>如需提供原始資料，需Data Owner、DPO、CISO與Legal核准。</td>
+<td>例外核准紀錄。</td>
+</tr>
+<tr>
+<td>環境控管</td>
+<td>供應商處理資料之環境需具存取控制、加密、日誌、DLP與隔離。</td>
+<td>供應商安全證據。</td>
+</tr>
+<tr>
+<td>資料再分享</td>
+<td>供應商不得將遮罩資料或原始資料再分享至未核准第三方或AI服務。</td>
+<td>合約條款與稽核證據。</td>
+</tr>
+<tr>
+<td>刪除證明</td>
+<td>專案結束或期限屆滿需提供資料刪除、對照表刪除與副本清理證明。</td>
+<td>刪除證明。</td>
+</tr>
+<tr>
+<td>事件通報</td>
+<td>資料外洩、誤用、重識別、未授權存取或AI服務誤用需即時通報。</td>
+<td>事件通報紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 資料遮罩申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>MASK-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料集 / 系統名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料Owner</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>使用目的</td>
+<td>□ 開發 □ 測試 □ UAT □ 分析 □ AI訓練 □ AI評估 □ 供應商支援 □ Demo □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>使用環境</td>
+<td>□ Dev □ Test □ UAT □ Sandbox □ AI/MLOps □ 供應商環境 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>資料範圍</td>
+<td>欄位、筆數、期間、資料表、檔案或資料集描述</td>
+<td></td>
+</tr>
+<tr>
+<td>是否可使用合成資料</td>
+<td>□ 是 □ 否，原因：______</td>
+<td></td>
+</tr>
+<tr>
+<td>遮罩方法</td>
+<td>□ 固定遮蔽 □ 格式替換 □ 擾動 □ Hash □ Tokenization □ 假名化 □ 彙總 □ 合成 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>是否可逆</td>
+<td>□ 否 □ 是，理由與保護措施：______</td>
+<td></td>
+</tr>
+<tr>
+<td>使用期限</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Data Owner / DPO / CISO / AI Governance / Legal / Supplier Owner</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 遮罩規則清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>規則編號</th>
+<th>資料集 / 系統</th>
+<th>欄位名稱</th>
+<th>資料類型</th>
+<th>遮罩方法</th>
+<th>是否可逆</th>
+<th>Owner</th>
+<th>適用環境</th>
+<th>生效日期</th>
+<th>下次審查日</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MASK-RULE-001</td>
+<td></td>
+<td></td>
+<td>□ PII □ 客戶資料 □ Secrets □ 財務 □ 人資 □ AI資料 □ 其他</td>
+<td>□ 遮蔽 □ 替換 □ Hash □ Token □ 假名 □ 擾動 □ 合成</td>
+<td>□ 否 □ 是</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ AI/MLOps □ Supplier</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+<tr>
+<td>MASK-RULE-002</td>
+<td></td>
+<td></td>
+<td>□ PII □ 客戶資料 □ Secrets □ 財務 □ 人資 □ AI資料 □ 其他</td>
+<td>□ 遮蔽 □ 替換 □ Hash □ Token □ 假名 □ 擾動 □ 合成</td>
+<td>□ 否 □ 是</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ AI/MLOps □ Supplier</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+<tr>
+<td>MASK-RULE-003</td>
+<td></td>
+<td></td>
+<td>□ PII □ 客戶資料 □ Secrets □ 財務 □ 人資 □ AI資料 □ 其他</td>
+<td>□ 遮蔽 □ 替換 □ Hash □ Token □ 假名 □ 擾動 □ 合成</td>
+<td>□ 否 □ 是</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ AI/MLOps □ Supplier</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 遮罩執行紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>執行編號</th>
+<th>資料集 / 系統</th>
+<th>執行日期</th>
+<th>執行人</th>
+<th>遮罩規則版本</th>
+<th>資料筆數 / 範圍</th>
+<th>驗證結果</th>
+<th>交付位置</th>
+<th>保存期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MASK-RUN-001</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 已交付 □ 待修正 □ 已刪除</td>
+</tr>
+<tr>
+<td>MASK-RUN-002</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 已交付 □ 待修正 □ 已刪除</td>
+</tr>
+<tr>
+<td>MASK-RUN-003</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 已交付 □ 待修正 □ 已刪除</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 資料遮罩檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>是否已識別所有敏感欄位、準識別欄位、資料Owner與資料分類？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>目的限制</td>
+<td>遮罩資料使用目的、環境、使用者與期限是否明確？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>方法適切</td>
+<td>遮罩方法是否符合資料敏感度、資料效用與重識別風險？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>正式資料限制</td>
+<td>是否避免將未遮罩正式資料用於非正式環境？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>可逆資料保護</td>
+<td>若可逆，對照表、Token Vault、Salt、金鑰是否受到高敏感保護？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>重識別評估</td>
+<td>是否評估欄位組合、外部資料、稀有值與AI推論重識別風險？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets殘留</td>
+<td>是否確認無有效Secrets、Token、憑證、密碼或內部端點殘留？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI資料風險</td>
+<td>AI訓練、微調、Prompt或RAG資料是否完成AI治理與DLP檢查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>交付控管</td>
+<td>遮罩資料是否交付至核准位置並限制複製、下載與再分享？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保存刪除</td>
+<td>遮罩資料是否設定保存期限、刪除責任與刪除證據？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商控制</td>
+<td>供應商是否僅取得核准遮罩資料並提供刪除與事件通報承諾？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>18. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需使用未遮罩正式資料</td>
+<td>需說明必要性、資料範圍、替代方案不可行原因、補償控制、保存期限與刪除方式。</td>
+<td>Data Owner / DPO / CISO</td>
+<td>單次或最長30日。</td>
+</tr>
+<tr>
+<td>需可逆遮罩</td>
+<td>需說明還原需求、對照表保護、職務分離、日誌與到期刪除。</td>
+<td>DPO / CISO / Data Owner</td>
+<td>最長90日重評。</td>
+</tr>
+<tr>
+<td>遮罩後資料仍可能重識別</td>
+<td>需採補充遮罩、彙總、欄位刪除、限制存取或正式風險接受。</td>
+<td>DPO / Data Owner / CISO</td>
+<td>依風險設定。</td>
+</tr>
+<tr>
+<td>供應商需原始資料</td>
+<td>需合約、DPA、NDA、加密、受控環境、最小資料、刪除證明與事件通報。</td>
+<td>Legal / DPO / CISO</td>
+<td>專案期限內。</td>
+</tr>
+<tr>
+<td>AI需真實資料評估</td>
+<td>需AI風險評估、資料最小化、隔離環境、資料不訓練與輸出檢查。</td>
+<td>AI Governance / DPO / CISO</td>
+<td>單次評估。</td>
+</tr>
+<tr>
+<td>遮罩規則暫停</td>
+<td>需停用理由、影響分析、替代控制、期限、監控與回復計畫。</td>
+<td>CISO / Data Owner</td>
+<td>最長30日。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 監控、事件與違規處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控項目</th>
+<th>異常情境</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未遮罩資料外傳</td>
+<td>未遮罩PII、客戶資料、高機密資料或Secrets出現在Email、Web、SaaS、AI或外部分享。</td>
+<td>啟動DLP事件調查，必要時升級資訊安全事件。</td>
+</tr>
+<tr>
+<td>非正式環境存在正式資料</td>
+<td>Dev/Test/UAT發現未遮罩正式資料。</td>
+<td>隔離資料集，通知Data Owner，執行遮罩或刪除。</td>
+</tr>
+<tr>
+<td>遮罩失敗</td>
+<td>遮罩批次失敗、欄位遺漏、規則版本錯誤或資料殘留。</td>
+<td>停止交付，修正規則，重新驗證。</td>
+</tr>
+<tr>
+<td>對照表異常存取</td>
+<td>Token Vault、映射表、Salt或金鑰被未授權存取。</td>
+<td>啟動事件，撤權、輪替、調查影響。</td>
+</tr>
+<tr>
+<td>供應商違規</td>
+<td>供應商保留、分享、外傳或未刪除遮罩/原始資料。</td>
+<td>依合約與事件程序處理。</td>
+</tr>
+<tr>
+<td>AI資料誤用</td>
+<td>未遮罩資料輸入AI、模型重現敏感內容或RAG越權輸出。</td>
+<td>通知AI Governance、DPO與CISO，停止使用相關資料。</td>
+</tr>
+<tr>
+<td>重識別事件</td>
+<td>遮罩資料可被重新識別或被與外部資料連結。</td>
+<td>重新評估遮罩方法，通知DPO並採CAPA。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料遮罩申請</td>
+<td>申請人、資料集、用途、欄位、分類、方法、期限、核准與例外。</td>
+<td>Data Protection Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>遮罩規則清冊</td>
+<td>規則、欄位、方法、可逆性、Owner、版本、生效日與審查日。</td>
+<td>Masking Owner / Data Governance</td>
+<td>規則有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>遮罩執行紀錄</td>
+<td>執行日期、資料範圍、規則版本、筆數、執行人、驗證結果與交付位置。</td>
+<td>Data Platform Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>驗證報告</td>
+<td>遮罩完整性、資料效用、重識別風險、DLP/Secrets掃描與使用者驗收。</td>
+<td>QA / Data Owner / Security</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>隱私與風險評估</td>
+<td>DPIA、重識別風險、AI資料風險、跨境與法規合約審查。</td>
+<td>DPO / Risk Owner</td>
+<td>至少3至7年或依法規。</td>
+</tr>
+<tr>
+<td>對照表與Token Vault紀錄</td>
+<td>存取、查詢、還原、備份、輪替、撤銷與刪除紀錄。</td>
+<td>Data Protection / KMS Owner</td>
+<td>至少3年或依資料敏感度。</td>
+</tr>
+<tr>
+<td>供應商遮罩資料紀錄</td>
+<td>交付、使用、刪除證明、事件通報與合約證據。</td>
+<td>Supplier Management</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>遮罩需求完成率</td>
+<td>已完成遮罩交付之需求 / 已核准遮罩需求。</td>
+<td>目標依SLA達成。</td>
+<td>流程效率。</td>
+</tr>
+<tr>
+<td>非正式環境未遮罩資料數</td>
+<td>Dev/Test/UAT/Sandbox發現未遮罩敏感資料事件數。</td>
+<td>目標0。</td>
+<td>重大風險監控。</td>
+</tr>
+<tr>
+<td>遮罩驗證失敗率</td>
+<td>遮罩驗證不通過次數 / 遮罩執行次數。</td>
+<td>持續下降。</td>
+<td>品質改善。</td>
+</tr>
+<tr>
+<td>重識別高風險資料集數</td>
+<td>評估後仍具高重識別風險之資料集數。</td>
+<td>高風險需改善或接受。</td>
+<td>隱私風險。</td>
+</tr>
+<tr>
+<td>可逆遮罩例外數</td>
+<td>使用可逆遮罩或保留對照表之例外數。</td>
+<td>需管理審查。</td>
+<td>敏感控制。</td>
+</tr>
+<tr>
+<td>逾期遮罩資料集數</td>
+<td>超過保存期限未刪除之遮罩資料集數。</td>
+<td>目標0。</td>
+<td>資料生命週期。</td>
+</tr>
+<tr>
+<td>AI資料遮罩缺口數</td>
+<td>AI訓練、Prompt、RAG或模型資料未完成遮罩檢查之數量。</td>
+<td>高風險目標0。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>供應商資料刪除逾期數</td>
+<td>供應商未如期提供刪除證明之件數。</td>
+<td>目標0。</td>
+<td>供應鏈風險。</td>
+</tr>
+<tr>
+<td>DLP命中未遮罩資料數</td>
+<td>遮罩資料交付後仍被DLP偵測為敏感資料之有效事件數。</td>
+<td>Critical/High目標0。</td>
+<td>控制有效性。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>遮罩作業是否依資料分類、欄位分類、Data Owner與資料目錄進行。</td>
+<td>資料分類表、資料目錄。</td>
+</tr>
+<tr>
+<td>申請與核准</td>
+<td>遮罩需求是否具用途、範圍、方法、期限、核准與風險評估。</td>
+<td>遮罩申請單。</td>
+</tr>
+<tr>
+<td>遮罩方法</td>
+<td>方法是否符合資料敏感度、效用需求、可逆性與重識別風險。</td>
+<td>遮罩方案與驗證報告。</td>
+</tr>
+<tr>
+<td>非正式環境</td>
+<td>Dev/Test/UAT是否無未核准正式敏感資料。</td>
+<td>環境抽查與DLP結果。</td>
+</tr>
+<tr>
+<td>可逆遮罩</td>
+<td>Token Vault、對照表、Salt、金鑰是否受控並具職務分離。</td>
+<td>權限與存取日誌。</td>
+</tr>
+<tr>
+<td>AI資料</td>
+<td>AI訓練、微調、Prompt、RAG、向量資料是否完成遮罩與重識別評估。</td>
+<td>AI資料審查紀錄。</td>
+</tr>
+<tr>
+<td>供應商</td>
+<td>供應商是否僅使用核准遮罩資料並提供刪除與事件通報證據。</td>
+<td>合約與刪除證明。</td>
+</tr>
+<tr>
+<td>監控事件</td>
+<td>未遮罩資料外傳、遮罩失敗、重識別或對照表異常是否依事件處理。</td>
+<td>DLP/SIEM事件紀錄。</td>
+</tr>
+<tr>
+<td>保存刪除</td>
+<td>遮罩資料是否有保存期限、刪除紀錄與清冊更新。</td>
+<td>刪除證據。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大例外、缺口、事件與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 附錄A：重識別風險評估表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>評估問題</th>
+<th>結果 / 說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>直接識別碼</td>
+<td>資料集中是否仍含姓名、證件號、電話、Email、帳號或客戶編號等直接識別碼？</td>
+<td></td>
+</tr>
+<tr>
+<td>準識別欄位</td>
+<td>生日、地址、職稱、部門、交易時間、地點、裝置ID等是否可能組合識別？</td>
+<td></td>
+</tr>
+<tr>
+<td>稀有值</td>
+<td>是否存在少數族群、極端金額、特殊日期、罕見疾病或特殊事件？</td>
+<td></td>
+</tr>
+<tr>
+<td>外部資料可比對性</td>
+<td>是否可與公開資料、社群、客戶清單、供應商資料或內部其他資料集連結？</td>
+<td></td>
+</tr>
+<tr>
+<td>資料量與粒度</td>
+<td>資料是否過細、期間過長或樣本過少而提升識別風險？</td>
+<td></td>
+</tr>
+<tr>
+<td>AI推論風險</td>
+<td>模型是否可能從資料中記憶、重現或推論個體資訊？</td>
+<td></td>
+</tr>
+<tr>
+<td>對照表保護</td>
+<td>若保留對照表或Token Vault，是否有加密、分權、日誌與刪除期限？</td>
+<td></td>
+</tr>
+<tr>
+<td>殘餘風險等級</td>
+<td>遮罩後重識別殘餘風險為何？</td>
+<td>□ Low □ Medium □ High □ Critical</td>
+</tr>
+<tr>
+<td>改善措施</td>
+<td>需採取何種補充遮罩、彙總、刪除、限制存取或風險接受？</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>24. 附錄B：遮罩資料交付與刪除確認表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>交付編號</td>
+<td>MASK-DEL-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>資料集名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>交付日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>交付對象</td>
+<td>使用者、團隊、供應商或系統</td>
+<td></td>
+</tr>
+<tr>
+<td>交付位置</td>
+<td>受控儲存位置、SaaS、雲端Bucket或資料庫</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 內部 □ 機密 □ 高機密 □ PII遮罩 □ 客戶資料遮罩 □ AI資料遮罩</td>
+<td></td>
+</tr>
+<tr>
+<td>使用期限</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>存取限制</td>
+<td>角色、帳號、群組、IP、MFA、DLP或水印設定</td>
+<td></td>
+</tr>
+<tr>
+<td>再分享限制</td>
+<td>□ 禁止再分享 □ 需Data Owner核准 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>刪除日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>刪除證據</td>
+<td>工單、系統日誌、截圖、供應商證明或自動刪除紀錄</td>
+<td></td>
+</tr>
+<tr>
+<td>確認人</td>
+<td>Data Owner / Masking Owner / 使用單位</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

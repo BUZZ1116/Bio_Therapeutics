@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-014 備份與還原作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-014 備份與還原作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-014</td>
+<td>備份與還原作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-014</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Backup and Recovery Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料庫與應用審查</td>
+<td></td>
+<td>Database Owner / Application Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與SaaS審查</td>
+<td></td>
+<td>Cloud Security Owner / SaaS Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner / SOC負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>營運持續審查</td>
+<td></td>
+<td>BCMS / ICT Readiness Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理與隱私審查</td>
+<td></td>
+<td>Data Owner / DPO（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範備份與還原之策略、範圍、頻率、保留、加密、不可變性、異地保存、存取控制、監控、測試、事件復原、災難復原、資料刪除與稽核要求，確保組織在資料損毀、誤刪、勒索軟體、系統故障、供應商中斷、雲端區域事故、資安事件、自然災害或人為錯誤時，能於核定之RTO/RPO內恢復關鍵服務與資料。</p>
+<p>本文件亦確保備份資料本身受到與原資料相當或更高等級之保護，避免備份成為未授權存取、資料外洩、勒索軟體加密、保留期限違反、隱私刪除失敗或查證證據缺失之風險來源。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有重要資訊資產、關鍵系統、關鍵資料、設定、日誌、證據與支援營運持續之資料，應依業務影響分析、資料分類與風險評估結果定義備份與還原要求。</li>
+<li>備份策略應符合RTO、RPO、資料保存期限、法規、合約、客戶承諾、隱私、AI治理及GHG/ESG查證要求。</li>
+<li>備份資料應啟用加密、存取控制、日誌監控與完整性檢查；高風險與關鍵資料應具不可變備份、離線備份或隔離備份能力。</li>
+<li>備份成功不等於復原成功；關鍵系統與資料應定期進行還原測試、災難復原演練與證據保存。</li>
+<li>備份與還原權限應採最小權限與職務分離，備份管理員不得任意讀取業務資料；還原作業應有申請、核准、驗證及紀錄。</li>
+<li>勒索軟體、資料破壞或惡意刪除情境下，應優先保護備份完整性，避免將受污染資料覆蓋乾淨備份。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份</td>
+<td>將資料、系統、設定、映像、資料庫、日誌或其他資訊複製至受控位置，以支援資料復原、服務恢復、證據保存或營運持續。</td>
+</tr>
+<tr>
+<td>還原</td>
+<td>將備份資料、系統、設定或服務恢復至指定時間點、指定環境或指定狀態之作業。</td>
+</tr>
+<tr>
+<td>RTO</td>
+<td>Recovery Time Objective，復原時間目標，即服務中斷後可接受之最長復原時間。</td>
+</tr>
+<tr>
+<td>RPO</td>
+<td>Recovery Point Objective，復原點目標，即資料可接受之最大損失時間範圍。</td>
+</tr>
+<tr>
+<td>不可變備份</td>
+<td>在保留期間內不得被修改、刪除或覆寫之備份，通常用於防勒索軟體與證據保護。</td>
+</tr>
+<tr>
+<td>離線備份</td>
+<td>與生產環境邏輯或實體隔離之備份，避免遭線上攻擊、帳號濫用或勒索軟體同步加密。</td>
+</tr>
+<tr>
+<td>異地備份</td>
+<td>保存於不同地理位置、資料中心、雲端區域或隔離環境之備份，用於災害復原。</td>
+</tr>
+<tr>
+<td>完整備份</td>
+<td>備份完整資料集或系統映像。</td>
+</tr>
+<tr>
+<td>增量備份</td>
+<td>僅備份自上次備份後異動之資料。</td>
+</tr>
+<tr>
+<td>差異備份</td>
+<td>備份自上次完整備份後異動之資料。</td>
+</tr>
+<tr>
+<td>還原測試</td>
+<td>定期驗證備份是否可讀取、可還原、完整且可於RTO/RPO內達成預期復原能力。</td>
+</tr>
+<tr>
+<td>乾淨還原點</td>
+<td>經確認未受惡意軟體、資料破壞或錯誤變更污染之可用備份版本。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准高風險備份策略、不可變備份要求、事件復原決策、重大例外與備份安全控制。</td>
+<td>安全審查、風險接受、事件決策。</td>
+</tr>
+<tr>
+<td>Backup and Recovery Owner</td>
+<td>制定備份策略、維護備份平台、監控備份狀態、執行還原測試與保存證據。</td>
+<td>備份清冊、報表、還原測試紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations Owner</td>
+<td>確保基礎設施、伺服器、儲存、網路與平台依要求備份與復原。</td>
+<td>備份作業紀錄、復原紀錄。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>定義系統RTO/RPO、資料範圍、還原優先順序、驗證方式與還原核准。</td>
+<td>系統備份需求、驗收紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>定義資料分類、保存期限、備份保護、刪除要求、隱私限制與還原後資料驗證。</td>
+<td>資料分類、保存與刪除要求。</td>
+</tr>
+<tr>
+<td>Database Owner</td>
+<td>管理資料庫備份、交易日誌、時間點復原、資料一致性與還原測試。</td>
+<td>DB備份紀錄、PITR測試。</td>
+</tr>
+<tr>
+<td>Cloud Security / Cloud Operations Owner</td>
+<td>管理雲端快照、物件版本、跨區備份、KMS、不可變儲存與雲端備份安全。</td>
+<td>雲端備份設定、CSPM報告。</td>
+</tr>
+<tr>
+<td>SaaS Owner</td>
+<td>確認SaaS資料匯出、版本保存、供應商備份責任、退場與資料還原能力。</td>
+<td>SaaS備份或匯出紀錄。</td>
+</tr>
+<tr>
+<td>MLOps / AI Governance Owner</td>
+<td>確保AI模型、模型版本、訓練資料、Prompt、RAG資料源、向量資料庫與模型設定可復原且受控。</td>
+<td>AI備份清冊、模型復原紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Incident Manager</td>
+<td>於事件期間保護備份、判定乾淨還原點、監控備份攻擊與協調事件復原。</td>
+<td>事件復原紀錄、告警紀錄。</td>
+</tr>
+<tr>
+<td>BCMS / ICT Readiness Owner</td>
+<td>確保備份與還原能力符合營運持續、ICT備妥性與災難復原要求。</td>
+<td>ICT備妥性評估、演練紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查備份策略、備份成功率、還原測試、權限、例外與證據。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 備份範圍與分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>備份類別</th>
+<th>備份內容</th>
+<th>最低要求</th>
+<th>主要Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>關鍵系統備份</td>
+<td>核心應用、資料庫、中介軟體、設定、依賴服務、系統映像。</td>
+<td>依RTO/RPO設定頻率，具異地與不可變保護，定期還原測試。</td>
+<td>System Owner / IT Operations</td>
+</tr>
+<tr>
+<td>資料庫備份</td>
+<td>完整備份、交易日誌、增量/差異備份、時間點復原資料。</td>
+<td>支援PITR，驗證一致性與交易完整性。</td>
+<td>Database Owner</td>
+</tr>
+<tr>
+<td>檔案與文件備份</td>
+<td>檔案伺服器、文件庫、協作平台、共享資料夾。</td>
+<td>依分類與保留期限備份，啟用版本與DLP。</td>
+<td>Data Owner / SaaS Owner</td>
+</tr>
+<tr>
+<td>雲端資源備份</td>
+<td>雲端磁碟、快照、資料庫、物件儲存、設定、KMS、網路與IAM設定。</td>
+<td>跨區或異地，KMS保護，CSPM監控。</td>
+<td>Cloud Owner</td>
+</tr>
+<tr>
+<td>SaaS資料備份</td>
+<td>Email、協作文件、CRM、HR、財務、工單、Moodle、AI SaaS資料。</td>
+<td>確認供應商責任與必要第三方備份或匯出。</td>
+<td>SaaS Owner</td>
+</tr>
+<tr>
+<td>端點資料備份</td>
+<td>受管端點之業務必要資料、使用者文件、設定或同步資料。</td>
+<td>優先使用受控雲端同步，避免本機唯一副本。</td>
+<td>Endpoint Owner / User</td>
+</tr>
+<tr>
+<td>網路與安全設備組態</td>
+<td>防火牆、交換器、VPN、WAF、SIEM、EDR、PAM、DLP、KMS設定。</td>
+<td>組態變更後備份，版本控管與加密保存。</td>
+<td>Network / Security Owner</td>
+</tr>
+<tr>
+<td>原始碼與CI/CD</td>
+<td>Repo、分支、Pipeline設定、Artifact、SBOM、Secrets參照設定。</td>
+<td>Repo備援、分支保護、Artifact保留、Secrets不備份明文。</td>
+<td>DevSecOps Owner</td>
+</tr>
+<tr>
+<td>AI與MLOps資料</td>
+<td>模型版本、訓練資料、Prompt模板、RAG資料源、向量索引、特徵資料、評估結果。</td>
+<td>版本化、可追溯、加密、權限限制與還原測試。</td>
+<td>AI Governance / MLOps Owner</td>
+</tr>
+<tr>
+<td>日誌與事件證據</td>
+<td>安全日誌、稽核日誌、事件證據、保管鏈資料。</td>
+<td>完整性保護、不可竄改、保存期限與存取限制。</td>
+<td>SOC / Incident Manager</td>
+</tr>
+<tr>
+<td>GHG/ESG底稿</td>
+<td>碳資料、係數、報表、查證底稿、供應商碳資料。</td>
+<td>版本控管、完整性保護、查證可追溯。</td>
+<td>GHG/ESG Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 備份策略與RTO/RPO分級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>業務重要性</th>
+<th>建議RTO</th>
+<th>建議RPO</th>
+<th>備份與復原要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Tier 0 極關鍵</td>
+<td>身份、網路、KMS、PAM、核心資料庫、關鍵客戶服務、不可中斷服務。</td>
+<td>0-4小時</td>
+<td>0-1小時</td>
+<td>高可用、連續備份或近即時複寫、不可變備份、異地復原、定期DR演練。</td>
+</tr>
+<tr>
+<td>Tier 1 關鍵</td>
+<td>重要業務系統、重要SaaS、核心營運資料、重要AI服務。</td>
+<td>4-24小時</td>
+<td>1-4小時</td>
+<td>每日或更高頻率備份、交易日誌、異地副本、至少半年還原測試。</td>
+</tr>
+<tr>
+<td>Tier 2 重要</td>
+<td>部門級系統、內部流程、一般資料庫、文件平台。</td>
+<td>1-3日</td>
+<td>4-24小時</td>
+<td>每日或每週備份，定期還原測試。</td>
+</tr>
+<tr>
+<td>Tier 3 一般</td>
+<td>低風險內部資料、可重建資料、非關鍵服務。</td>
+<td>3-7日</td>
+<td>1-7日</td>
+<td>依業務需求週期備份，可抽樣測試。</td>
+</tr>
+<tr>
+<td>Tier 4 封存</td>
+<td>依保存要求保留之歷史資料、稽核證據、查證底稿。</td>
+<td>依需求</td>
+<td>依保存點</td>
+<td>封存、加密、完整性保護、保留期限與查詢能力。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 備份作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 備份需求定義</td>
+<td>依資產清冊、資料分類、BIA、RTO/RPO、法規、合約與風險評估定義備份需求。</td>
+<td>System Owner / Data Owner / BCMS Owner</td>
+<td>備份需求表、ICT備妥性評估。</td>
+</tr>
+<tr>
+<td>2. 備份方案設計</td>
+<td>決定備份頻率、類型、保留、加密、異地、不可變、存取、監控與復原方式。</td>
+<td>Backup Owner / Security Architect</td>
+<td>備份設計與核准紀錄。</td>
+</tr>
+<tr>
+<td>3. 備份設定</td>
+<td>於備份平台、雲端服務、SaaS或資料庫中設定備份任務與保護策略。</td>
+<td>Backup Admin / Cloud / DB Owner</td>
+<td>備份任務設定。</td>
+</tr>
+<tr>
+<td>4. 初次備份驗證</td>
+<td>完成初次備份後確認成功、資料量合理、加密、保存位置與權限。</td>
+<td>Backup Owner</td>
+<td>初次備份驗證紀錄。</td>
+</tr>
+<tr>
+<td>5. 例行監控</td>
+<td>每日或依系統重要性監控備份成功率、錯誤、容量、保留、不可變狀態與告警。</td>
+<td>Backup Owner / SOC</td>
+<td>備份監控報表。</td>
+</tr>
+<tr>
+<td>6. 失敗處理</td>
+<td>備份失敗、逾期、容量不足或不可變失效時，依優先級修復並升級。</td>
+<td>Backup Owner / System Owner</td>
+<td>失敗處理工單。</td>
+</tr>
+<tr>
+<td>7. 還原測試</td>
+<td>依測試計畫定期執行檔案、資料庫、系統、雲端、SaaS或災難復原測試。</td>
+<td>Backup Owner / System Owner</td>
+<td>還原測試紀錄。</td>
+</tr>
+<tr>
+<td>8. 變更與退場</td>
+<td>系統變更、資料分類變更、退場或保留期限變更時更新備份策略。</td>
+<td>System Owner / Backup Owner</td>
+<td>變更紀錄、清冊更新。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 備份保存、加密與不可變要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險加強要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份加密</td>
+<td>備份資料傳輸與儲存應加密，金鑰受KMS、HSM或Secrets管理保護。</td>
+<td>高機密、PII、客戶資料與關鍵備份須使用獨立金鑰與嚴格存取。</td>
+</tr>
+<tr>
+<td>不可變備份</td>
+<td>關鍵系統、勒索風險高資料與事件證據應啟用不可變或WORM保護。</td>
+<td>Tier 0/Tier 1需具不可變、隔離或離線備份。</td>
+</tr>
+<tr>
+<td>異地保存</td>
+<td>關鍵備份應保存於不同區域、資料中心、雲端帳號或隔離位置。</td>
+<td>需符合災難復原與地區風險要求。</td>
+</tr>
+<tr>
+<td>離線或隔離副本</td>
+<td>勒索軟體高風險系統應具離線、隔離或獨立權限域備份。</td>
+<td>備份管理帳號與生產管理帳號分離。</td>
+</tr>
+<tr>
+<td>保留期限</td>
+<td>依業務、法規、合約、隱私、稽核、GHG查證與事件保存要求設定。</td>
+<td>保留期限與刪除權利衝突時須DPO/法務審查。</td>
+</tr>
+<tr>
+<td>存取控制</td>
+<td>備份管理、還原與讀取權限應分離，採最小權限、MFA與審計。</td>
+<td>高風險還原需雙人核准或PAM。</td>
+</tr>
+<tr>
+<td>完整性檢查</td>
+<td>定期檢查備份可讀性、雜湊、校驗、版本與還原可用性。</td>
+<td>事件證據與GHG底稿需保留完整性證明。</td>
+</tr>
+<tr>
+<td>防刪除控制</td>
+<td>備份刪除需核准、延遲刪除或刪除保護。</td>
+<td>管理員不得單人刪除所有備份副本。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 還原申請與執行流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 還原申請</td>
+<td>提出還原對象、原因、時間點、資料範圍、目標環境、緊急程度與業務影響。</td>
+<td>申請人 / System Owner</td>
+<td>還原申請紀錄。</td>
+</tr>
+<tr>
+<td>2. 核准與分級</td>
+<td>依資料分類、系統重要性、是否含PII/客戶資料與事件情境取得核准。</td>
+<td>System Owner / Data Owner / CISO</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>3. 選擇還原點</td>
+<td>確認備份版本、時間點、完整性、未受污染狀態與預期資料損失。</td>
+<td>Backup Owner / Incident Manager</td>
+<td>還原點確認紀錄。</td>
+</tr>
+<tr>
+<td>4. 還原前準備</td>
+<td>確認目標環境、容量、網路、權限、金鑰、相依服務與避免覆寫風險。</td>
+<td>IT / DB / Cloud Owner</td>
+<td>還原前檢查表。</td>
+</tr>
+<tr>
+<td>5. 執行還原</td>
+<td>依程序執行還原，必要時先還原至隔離環境驗證。</td>
+<td>Backup Admin / System Owner</td>
+<td>還原作業紀錄。</td>
+</tr>
+<tr>
+<td>6. 驗證與驗收</td>
+<td>驗證資料完整性、應用功能、權限、日誌、資料分類與業務可用性。</td>
+<td>System Owner / Data Owner / User</td>
+<td>驗收紀錄。</td>
+</tr>
+<tr>
+<td>7. 後續處理</td>
+<td>更新事件、變更、風險或問題紀錄，分析原因並必要時改善備份策略。</td>
+<td>Backup Owner / ISMS管理代表</td>
+<td>復原報告、CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 還原測試要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試類型</th>
+<th>測試內容</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>檔案還原測試</td>
+<td>抽樣還原檔案、文件、權限與版本，確認可讀與完整。</td>
+<td>至少每年；重要資料每半年。</td>
+<td>測試紀錄、驗收紀錄。</td>
+</tr>
+<tr>
+<td>資料庫還原測試</td>
+<td>測試完整備份、交易日誌、時間點復原與資料一致性。</td>
+<td>關鍵資料庫至少每半年。</td>
+<td>DB還原測試報告。</td>
+</tr>
+<tr>
+<td>系統還原測試</td>
+<td>還原伺服器、應用、設定、依賴服務並驗證功能。</td>
+<td>Tier 0/Tier 1至少每年或每半年。</td>
+<td>系統測試報告。</td>
+</tr>
+<tr>
+<td>雲端快照復原測試</td>
+<td>測試雲端磁碟、資料庫、物件儲存、區域復原與KMS可用性。</td>
+<td>至少每年；關鍵雲端每半年。</td>
+<td>雲端復原紀錄。</td>
+</tr>
+<tr>
+<td>SaaS資料復原測試</td>
+<td>測試SaaS資料匯出、版本復原、使用者資料與權限復原。</td>
+<td>至少每年；高風險SaaS每半年。</td>
+<td>SaaS復原報告。</td>
+</tr>
+<tr>
+<td>AI/MLOps復原測試</td>
+<td>測試模型版本、Prompt、RAG資料源、向量資料庫、訓練資料與模型服務復原。</td>
+<td>正式AI服務至少每年；高風險每半年。</td>
+<td>AI復原測試紀錄。</td>
+</tr>
+<tr>
+<td>災難復原演練</td>
+<td>模擬主要區域/資料中心不可用，驗證RTO/RPO、通報、切換與回復。</td>
+<td>Tier 0/Tier 1至少每年。</td>
+<td>DR演練報告。</td>
+</tr>
+<tr>
+<td>勒索軟體復原演練</td>
+<td>驗證不可變備份、乾淨還原點、隔離還原與受污染資料辨識。</td>
+<td>高風險系統至少每年。</td>
+<td>勒索復原演練紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 勒索軟體與資安事件復原要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>要求</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份保護優先</td>
+<td>發生勒索或破壞事件時，應立即確認備份平台、備份帳號、不可變設定及離線副本是否安全。</td>
+<td>Incident Manager / Backup Owner / CISO</td>
+</tr>
+<tr>
+<td>暫停覆寫策略</td>
+<td>必要時暫停會覆寫乾淨備份之排程，避免污染備份取代可用還原點。</td>
+<td>Backup Owner</td>
+</tr>
+<tr>
+<td>判定乾淨還原點</td>
+<td>依EDR、SIEM、弱點、變更、日誌與事件時間線判定未受污染之備份版本。</td>
+<td>SOC / Incident Manager / System Owner</td>
+</tr>
+<tr>
+<td>隔離環境還原</td>
+<td>先於隔離環境還原與掃描，確認無惡意程式、後門、異常帳號或錯誤設定。</td>
+<td>IT / SOC / System Owner</td>
+</tr>
+<tr>
+<td>憑證與Secrets輪替</td>
+<td>復原前後應輪替可能受影響密碼、Token、API Key、憑證、服務帳號與金鑰。</td>
+<td>IAM / Secrets Owner</td>
+</tr>
+<tr>
+<td>復原後監控</td>
+<td>服務復原後加強監控登入、檔案變更、資料外傳、異常程序與攻擊指標。</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>事件檢討</td>
+<td>完成根因分析、備份策略檢討、不可變性、權限、監控與演練改善。</td>
+<td>Incident Manager / ISMS管理代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 雲端、SaaS與供應商備份要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端IaaS/PaaS</td>
+<td>確認快照、備份、跨區、KMS、刪除保護、不可變儲存與還原測試。</td>
+<td>雲端備份設定、CSPM報告。</td>
+</tr>
+<tr>
+<td>雲端資料庫</td>
+<td>啟用自動備份、PITR、快照、跨區複寫與加密。</td>
+<td>DB備份設定、還原測試。</td>
+</tr>
+<tr>
+<td>物件儲存</td>
+<td>啟用版本控制、物件鎖定、刪除保護、生命週期與存取日誌。</td>
+<td>儲存桶設定、CSPM。</td>
+</tr>
+<tr>
+<td>SaaS平台</td>
+<td>確認供應商備份責任、資料匯出、版本復原、第三方備份或API備份能力。</td>
+<td>SaaS風險評估、合約條款。</td>
+</tr>
+<tr>
+<td>供應商代管系統</td>
+<td>合約應要求備份頻率、RTO/RPO、加密、還原測試、事件復原與資料刪除證明。</td>
+<td>合約、SLA、供應商報告。</td>
+</tr>
+<tr>
+<td>AI供應商服務</td>
+<td>確認模型、Prompt、輸入輸出、RAG資料、向量資料與API設定之備份、刪除與復原責任。</td>
+<td>AI供應商評估、AI清冊。</td>
+</tr>
+<tr>
+<td>跨雲或多區備援</td>
+<td>關鍵服務應評估跨區、跨帳號或跨供應商復原能力與資料一致性。</td>
+<td>DR設計、演練紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. AI、MLOps、RAG與模型資料備份要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類型</th>
+<th>備份要求</th>
+<th>還原驗證</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI模型版本</td>
+<td>模型權重、版本、設定、模型卡、評估結果與部署設定應版本化保存。</td>
+<td>確認模型可重新部署並產生預期輸出範圍。</td>
+</tr>
+<tr>
+<td>訓練與微調資料</td>
+<td>依資料分類、授權、PII與保存要求備份，保留資料來源與版本。</td>
+<td>確認資料可追溯、可重建且未違反刪除要求。</td>
+</tr>
+<tr>
+<td>Prompt模板</td>
+<td>正式Prompt、System Prompt、Guardrail、測試Prompt與版本變更應保存。</td>
+<td>確認應用可載入正確版本並通過安全測試。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>知識庫原始資料、索引設定、Embedding版本、資料分類與權限規則需保存。</td>
+<td>確認權限繼承、刪除同步與查詢結果正確。</td>
+</tr>
+<tr>
+<td>向量資料庫</td>
+<td>向量索引、Metadata、Schema、權限、加密與備份版本需保存。</td>
+<td>確認可復原並避免越權檢索。</td>
+</tr>
+<tr>
+<td>MLOps Pipeline</td>
+<td>Notebook、Pipeline、特徵工程、Model Registry、CI/CD設定與Artifact應備份。</td>
+<td>確認Pipeline可重新執行或回復。</td>
+</tr>
+<tr>
+<td>AI API設定</td>
+<td>API Key參照、Rate Limit、模型端點、監控、告警與成本限制需可復原。</td>
+<td>確認端點、權限與監控正常。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 備份安全監控與告警</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控項目</th>
+<th>告警條件</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份失敗</td>
+<td>關鍵任務失敗、連續失敗、未於SLA內完成。</td>
+<td>建立工單，依Tier升級。</td>
+</tr>
+<tr>
+<td>備份延遲</td>
+<td>備份完成時間超過RPO或未完成每日備份。</td>
+<td>分析容量、網路、權限或服務問題。</td>
+</tr>
+<tr>
+<td>不可變保護失效</td>
+<td>不可變設定關閉、保留政策變更或刪除保護被停用。</td>
+<td>高優先告警，通報CISO。</td>
+</tr>
+<tr>
+<td>大量刪除或異常變更</td>
+<td>備份被大量刪除、保留政策縮短、管理帳號異常操作。</td>
+<td>疑似攻擊時啟動事件管理。</td>
+</tr>
+<tr>
+<td>備份容量異常</td>
+<td>資料量突然大幅增加、減少或備份大小不合理。</td>
+<td>檢查勒索、資料刪除、同步錯誤或備份範圍變更。</td>
+</tr>
+<tr>
+<td>未授權還原</td>
+<td>非核准還原、異常下載、跨環境還原或資料大量匯出。</td>
+<td>立即調查並限制權限。</td>
+</tr>
+<tr>
+<td>備份帳號異常</td>
+<td>備份管理帳號異常登入、MFA失敗、來源IP異常。</td>
+<td>停用帳號、輪替Secrets、調查。</td>
+</tr>
+<tr>
+<td>還原測試逾期</td>
+<td>未於計畫期限完成還原測試或演練。</td>
+<td>升級至IT管理與ISMS管理代表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 備份清冊與作業登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>備份編號</th>
+<th>系統 / 資料名稱</th>
+<th>Owner</th>
+<th>資料分類</th>
+<th>Tier</th>
+<th>備份類型</th>
+<th>頻率</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>保存期限</th>
+<th>加密</th>
+<th>不可變 / 離線</th>
+<th>異地</th>
+<th>最近備份狀態</th>
+<th>最近還原測試</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>BKP-0001</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□ T0 □ T1 □ T2 □ T3 □ T4</td>
+<td>□ 完整 □ 增量 □ 差異 □ 快照 □ 交易日誌 □ 匯出</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 成功 □ 失敗 □ 警告</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>BKP-0002</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□ T0 □ T1 □ T2 □ T3 □ T4</td>
+<td>□ 完整 □ 增量 □ 差異 □ 快照 □ 交易日誌 □ 匯出</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 成功 □ 失敗 □ 警告</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>BKP-0003</td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□ T0 □ T1 □ T2 □ T3 □ T4</td>
+<td>□ 完整 □ 增量 □ 差異 □ 快照 □ 交易日誌 □ 匯出</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 成功 □ 失敗 □ 警告</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 還原測試紀錄表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試編號</th>
+<th>測試日期</th>
+<th>系統 / 資料</th>
+<th>測試類型</th>
+<th>目標RTO</th>
+<th>實際RTO</th>
+<th>目標RPO</th>
+<th>實際RPO</th>
+<th>測試結果</th>
+<th>缺失與改善</th>
+<th>驗收人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>RST-0001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 檔案 □ DB □ 系統 □ 雲端 □ SaaS □ AI/MLOps □ DR □ 勒索復原</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RST-0002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 檔案 □ DB □ 系統 □ 雲端 □ SaaS □ AI/MLOps □ DR □ 勒索復原</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RST-0003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td>□ 檔案 □ DB □ 系統 □ 雲端 □ SaaS □ AI/MLOps □ DR □ 勒索復原</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 通過 □ 部分通過 □ 不通過</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法符合RTO/RPO</td>
+<td>需業務影響分析、風險評估、補償控制、改善計畫與管理階層確認。</td>
+<td>Business Owner / CISO / BCMS Owner</td>
+<td>至少每季重評。</td>
+</tr>
+<tr>
+<td>無法啟用不可變備份</td>
+<td>需說明技術限制，提供隔離、離線或權限分離等替代控制。</td>
+<td>CISO / Backup Owner</td>
+<td>最長90日，高風險每30日追蹤。</td>
+</tr>
+<tr>
+<td>無法加密備份</td>
+<td>原則不允許；若因技術限制，需限制資料分類、隔離保存與改善時程。</td>
+<td>CISO / Data Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>無法定期還原測試</td>
+<td>需說明限制，採抽樣、替代環境、部分復原或供應商證據。</td>
+<td>BCMS Owner / CISO</td>
+<td>下一期必須補測或重評。</td>
+</tr>
+<tr>
+<td>SaaS無完整還原能力</td>
+<td>需評估第三方備份、資料匯出、供應商SLA與退場方案。</td>
+<td>SaaS Owner / Supplier Management / CISO</td>
+<td>續約前重評。</td>
+</tr>
+<tr>
+<td>資料刪除與備份保留衝突</td>
+<td>需DPO、Legal與Data Owner審查保留、刪除、封存或不可識別化方案。</td>
+<td>DPO / Legal / CISO</td>
+<td>依案件重評。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 備份與還原檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份範圍</td>
+<td>所有關鍵系統、資料庫、設定、SaaS、AI、日誌與證據是否納入備份範圍？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>RTO/RPO</td>
+<td>每項重要資產是否定義RTO與RPO並與備份策略一致？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>備份成功監控</td>
+<td>備份任務是否每日或依風險監控成功、失敗、延遲與容量？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>加密</td>
+<td>備份傳輸與儲存是否加密，金鑰是否受控？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>不可變與異地</td>
+<td>關鍵備份是否具不可變、離線、隔離或異地保護？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>存取控制</td>
+<td>備份管理、讀取、還原與刪除權限是否分離並定期審查？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>還原測試</td>
+<td>是否依計畫完成還原測試並驗證RTO/RPO？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>勒索復原</td>
+<td>是否具乾淨還原點判定、隔離還原與Secrets輪替流程？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>SaaS與供應商</td>
+<td>供應商代管或SaaS資料是否確認備份責任、匯出與還原能力？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除</td>
+<td>備份保留是否符合隱私、法規、合約與刪除要求？</td>
+<td>□ 是 □ 否 □ 部分</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份清冊</td>
+<td>備份對象、Owner、Tier、頻率、RTO/RPO、保留、加密、不可變、異地與狀態。</td>
+<td>Backup and Recovery Owner</td>
+<td>備份有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>備份作業紀錄</td>
+<td>每日備份成功/失敗、容量、告警、錯誤、修復與重跑紀錄。</td>
+<td>Backup Owner</td>
+<td>至少1至3年，依系統重要性。</td>
+</tr>
+<tr>
+<td>還原申請與核准</td>
+<td>還原原因、範圍、時間點、核准、執行與驗收紀錄。</td>
+<td>Backup Owner / System Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>還原測試與DR演練</td>
+<td>測試計畫、測試結果、RTO/RPO、缺失、改善與驗收。</td>
+<td>BCMS / Backup Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>備份權限紀錄</td>
+<td>備份平台帳號、管理權限、還原權限、權限審查與PAM紀錄。</td>
+<td>IAM / Backup Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>備份安全事件紀錄</td>
+<td>備份刪除、加密、勒索、外洩、不可變失效或未授權還原事件。</td>
+<td>Incident Manager / CISO</td>
+<td>至少3至7年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商備份證據</td>
+<td>供應商SLA、備份報告、還原測試、刪除證明與合約條款。</td>
+<td>Supplier Management / SaaS Owner</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份覆蓋率</td>
+<td>已納入備份之重要資產 / 應備份重要資產。</td>
+<td>Tier 0/Tier 1目標100%。</td>
+<td>備份完整性。</td>
+</tr>
+<tr>
+<td>備份成功率</td>
+<td>成功完成之備份任務 / 全部備份任務。</td>
+<td>依Tier設定，關鍵任務目標接近100%。</td>
+<td>作業穩定性。</td>
+</tr>
+<tr>
+<td>備份失敗逾期數</td>
+<td>超過SLA仍未修復之備份失敗項目數。</td>
+<td>Tier 0/Tier 1目標0。</td>
+<td>風險升級。</td>
+</tr>
+<tr>
+<td>還原測試完成率</td>
+<td>期限內完成還原測試之系統 / 計畫測試系統。</td>
+<td>目標100%。</td>
+<td>復原能力驗證。</td>
+</tr>
+<tr>
+<td>RTO達成率</td>
+<td>還原測試或事件中達成RTO之比例。</td>
+<td>Tier 0/Tier 1目標100%。</td>
+<td>營運持續能力。</td>
+</tr>
+<tr>
+<td>RPO達成率</td>
+<td>還原測試或事件中達成RPO之比例。</td>
+<td>Tier 0/Tier 1目標100%。</td>
+<td>資料損失控制。</td>
+</tr>
+<tr>
+<td>不可變備份覆蓋率</td>
+<td>具不可變或隔離備份之關鍵資產 / 應具備資產。</td>
+<td>關鍵資產目標100%。</td>
+<td>勒索防護。</td>
+</tr>
+<tr>
+<td>未核准還原事件數</td>
+<td>未經核准或異常還原、下載或讀取備份之事件數。</td>
+<td>目標0。</td>
+<td>備份資料保護。</td>
+</tr>
+<tr>
+<td>備份容量異常數</td>
+<td>容量異常、備份變小、資料暴增或保留異常事件數。</td>
+<td>重大異常需調查。</td>
+<td>資料完整性與勒索監控。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>備份策略</td>
+<td>是否依BIA、RTO/RPO、資料分類、法規與風險定義備份策略。</td>
+<td>備份策略、BIA、ICT備妥性評估。</td>
+</tr>
+<tr>
+<td>備份範圍</td>
+<td>關鍵系統、資料、設定、SaaS、AI與日誌是否納入清冊與備份。</td>
+<td>備份清冊、資產清冊。</td>
+</tr>
+<tr>
+<td>備份安全</td>
+<td>備份是否加密、權限受控、異地、不可變、日誌監控與防刪除。</td>
+<td>備份平台設定、KMS、權限報告。</td>
+</tr>
+<tr>
+<td>備份監控</td>
+<td>備份成功、失敗、容量、保留與異常是否持續監控並追蹤。</td>
+<td>備份報表、工單。</td>
+</tr>
+<tr>
+<td>還原測試</td>
+<td>是否依計畫進行還原測試，結果是否驗證RTO/RPO與資料完整性。</td>
+<td>還原測試報告、驗收紀錄。</td>
+</tr>
+<tr>
+<td>事件復原</td>
+<td>勒索或資安事件下是否有乾淨還原點、隔離還原與Secrets輪替程序。</td>
+<td>事件Runbook、演練紀錄。</td>
+</tr>
+<tr>
+<td>供應商與SaaS</td>
+<td>供應商代管與SaaS資料是否確認備份責任、合約SLA與退場能力。</td>
+<td>供應商評估、合約、SLA。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>備份、加密、不可變、測試或RTO/RPO例外是否有核准、補償控制與期限。</td>
+<td>例外紀錄、風險接受。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大失敗、演練缺失、例外與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 附錄A：備份需求申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>BKP-REQ-YYYY-0001</td>
+<td>備份需求唯一編號。</td>
+</tr>
+<tr>
+<td>系統 / 資料名稱</td>
+<td></td>
+<td>需與資產清冊一致。</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td></td>
+<td>System Owner / Data Owner。</td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>依資訊分類分級表。</td>
+</tr>
+<tr>
+<td>業務重要性</td>
+<td>□ Tier 0 □ Tier 1 □ Tier 2 □ Tier 3 □ Tier 4</td>
+<td>依BIA或ICT備妥性評估。</td>
+</tr>
+<tr>
+<td>RTO / RPO</td>
+<td></td>
+<td>需由業務與IT確認。</td>
+</tr>
+<tr>
+<td>備份範圍</td>
+<td></td>
+<td>資料庫、檔案、設定、系統映像、日誌、AI模型等。</td>
+</tr>
+<tr>
+<td>備份頻率</td>
+<td></td>
+<td>每日、每小時、交易日誌、即時複寫等。</td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td></td>
+<td>依法規、合約、隱私、查證或業務要求。</td>
+</tr>
+<tr>
+<td>加密與不可變要求</td>
+<td>□ 加密 □ 不可變 □ 異地 □ 離線 □ 刪除保護</td>
+<td>高風險資料需加強。</td>
+</tr>
+<tr>
+<td>還原測試頻率</td>
+<td></td>
+<td>每季、半年、年度或事件後。</td>
+</tr>
+<tr>
+<td>核准人</td>
+<td></td>
+<td>Business Owner / CISO / BCMS Owner。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 附錄B：還原作業檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>檢查事項</th>
+<th>完成確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>確認還原申請、核准、資料分類、還原範圍與目標時間點。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>2</td>
+<td>確認備份版本完整、可讀、未受污染且符合RPO。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>3</td>
+<td>確認目標環境、容量、權限、金鑰、網路與相依服務。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>4</td>
+<td>高風險或事件情境先還原至隔離環境並進行惡意程式與完整性檢查。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>5</td>
+<td>執行還原並記錄開始、結束時間、操作人員、備份版本與錯誤訊息。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>6</td>
+<td>由System Owner與Data Owner驗證資料完整性、功能、權限與業務可用性。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>7</td>
+<td>確認日誌、監控、備份排程、權限與安全控制恢復正常。</td>
+<td>□ 完成</td>
+</tr>
+<tr>
+<td>8</td>
+<td>完成還原報告，記錄RTO/RPO達成情形、缺失與改善。</td>
+<td>□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

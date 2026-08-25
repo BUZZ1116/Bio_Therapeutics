@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-PRO-003 資訊安全事件管理程序</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 22px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.badge { display:inline-block; padding:2px 6px; border:1px solid #999; border-radius:4px; font-size:12px; background:#f8f8f8; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-PRO-003 資訊安全事件管理程序</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-PRO-003</td>
+<td>資訊安全事件管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R10 / 10 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>資訊安全事件Owner / CISO</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-PRO-003</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資訊安全事件Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>ISMS管理代表 / Incident Response Manager</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC Manager</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT營運主管 / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端安全審查</td>
+<td></td>
+<td>Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與法遵審查</td>
+<td></td>
+<td>DPO / 法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>營運持續審查</td>
+<td></td>
+<td>BCMS / DRP負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>最高管理階層核准</td>
+<td></td>
+<td>授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 目的</h2>
+<p>本程序旨在建立完整、可執行、可稽核、可衡量且可持續改進之資訊安全事件管理制度，使組織能及時識別、通報、記錄、評估、分類、升級、決策、遏止、根除、復原、溝通、蒐證、檢討及改善資訊安全事件，降低事件對資訊資產、客戶、個人資料、雲端服務、AI系統、供應鏈、營運持續、合規義務、碳/GHG資料可信度及組織聲譽之影響。</p>
+<p>本程序同時作為ISO/IEC 27001:2022 Annex A.5.24至A.5.28與A.6.8之控制落地文件，確保事件管理規劃與準備、事件評估與決策、事件回應、事件學習、證據蒐集及人員事件通報均具備明確流程、角色責任、紀錄格式、升級門檻、保存要求與驗證證據。</p>
+
+<h2>2. 管理原則</h2>
+<ul>
+<li>所有可疑事件均應通報，未能確認是否為事件時，應先依資安事件疑似情境進行登錄與初步評估。</li>
+<li>事件處理應兼顧機密性、完整性、可用性、可追溯性、合法合規性、營運持續、證據保存與利害關係人溝通。</li>
+<li>事件應依衝擊、範圍、資料敏感性、系統重要性、可擴散性、法規與合約通報義務及媒體/聲譽風險進行分級。</li>
+<li>重大事件應啟動CSIRT/IRT，並由CISO、Incident Commander或授權主管進行決策與資源協調。</li>
+<li>事件證據不得任意刪除、覆寫、重啟、格式化或改變；必要時應依數位證據保存作業指導書建立證據鏈。</li>
+<li>涉及PII、客戶資料、雲端服務、AI系統、供應商、跨境、法規、營運中斷或GHG/ESG外部揭露資料者，應立即納入對應Owner及法遵角色。</li>
+<li>事件結案前應完成根本原因分析、控制有效性評估、風險登錄更新、矯正措施與經驗回饋。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊安全事件（Information Security Incident）</td>
+<td>一個或多個不期望或未授權之資訊安全事件，可能或已經對資訊安全、營運、法遵、客戶、個人資料、系統、服務或組織聲譽造成損害。</td>
+</tr>
+<tr>
+<td>資訊安全事件徵兆 / 事件通報（Information Security Event）</td>
+<td>系統、服務、網路、使用者、供應商或監控工具偵測到可能與資訊安全相關之狀況、告警、異常或違規跡象，需評估是否構成事件。</td>
+</tr>
+<tr>
+<td>資安弱點</td>
+<td>可能被威脅利用而導致資訊安全事件之技術、流程、人員、實體、供應商或組態缺陷。</td>
+</tr>
+<tr>
+<td>CSIRT / IRT</td>
+<td>Computer Security Incident Response Team / Incident Response Team，負責協調、調查、遏止、復原、通報及檢討資訊安全事件之跨職能團隊。</td>
+</tr>
+<tr>
+<td>Incident Commander</td>
+<td>重大事件處理期間負責統一指揮、決策協調、資源調度、進度追蹤與對管理階層報告之角色。</td>
+</tr>
+<tr>
+<td>遏止（Containment）</td>
+<td>限制事件擴散、阻斷攻擊路徑、隔離受影響系統、停用帳號或封鎖通道之活動。</td>
+</tr>
+<tr>
+<td>根除（Eradication）</td>
+<td>移除惡意程式、攻擊工具、後門、錯誤設定、惡意帳號、弱點利用條件或造成事件之根本技術原因。</td>
+</tr>
+<tr>
+<td>復原（Recovery）</td>
+<td>將受影響服務、系統、資料或流程恢復至可接受之安全營運狀態，並驗證其完整性與可用性。</td>
+</tr>
+<tr>
+<td>證據鏈（Chain of Custody）</td>
+<td>記錄證據從取得、封存、移交、分析、保存至處置全過程之人員、時間、地點、方法、完整性驗證與授權紀錄。</td>
+</tr>
+<tr>
+<td>重大資安事件</td>
+<td>可能造成重大營運中斷、重大資料外洩、法規通報、客戶重大影響、媒體曝光、高額財務損失或高階管理階層決策需求之事件。</td>
+</tr>
+<tr>
+<td>PII事件</td>
+<td>涉及個人可識別資訊未授權存取、揭露、遺失、破壞、竄改、跨境違規或無法於必要期間提供服務之事件。</td>
+</tr>
+<tr>
+<td>AI安全事件</td>
+<td>涉及AI系統、模型、資料集、Prompt、RAG、代理工具、AI SaaS、模型輸出、訓練資料或推論服務之資安、隱私、完整性、濫用或治理事件。</td>
+</tr>
+<tr>
+<td>雲端安全事件</td>
+<td>涉及SaaS、PaaS、IaaS、Cloud IAM、雲端儲存、容器、Kubernetes、Serverless、雲端網路、雲端日誌或雲端供應商服務之安全事件。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出/證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大事件策略、法規與客戶溝通策略、重大資源、業務中斷決策、重大剩餘風險接受與對外聲明。</td>
+<td>重大事件決策紀錄、管理審查輸入、資源核准。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>維護事件管理制度，核准事件分級、升級、遏止策略、外部支援與結案，向最高管理階層報告重大事件。</td>
+<td>事件指揮紀錄、分級決策、結案核准。</td>
+</tr>
+<tr>
+<td>Incident Commander</td>
+<td>於重大事件期間統一指揮跨部門回應，建立事件作戰節奏、任務分派、時程追蹤、決策記錄與狀態報告。</td>
+<td>事件處理日誌、任務看板、狀態報告。</td>
+</tr>
+<tr>
+<td>SOC / Security Monitoring Team</td>
+<td>監控SIEM、EDR、NDR、DLP、CASB、雲端日誌、IAM告警及威脅情資，執行初步分析、通報與升級。</td>
+<td>告警紀錄、初判紀錄、SIEM查詢、事件工單。</td>
+</tr>
+<tr>
+<td>CSIRT / IRT</td>
+<td>執行技術調查、遏止、根除、復原、惡意程式分析、日誌分析、證據保存、技術建議及事後檢討。</td>
+<td>調查報告、遏止紀錄、復原驗證、證據鏈。</td>
+</tr>
+<tr>
+<td>IT營運 / System Owner</td>
+<td>提供系統資訊、帳號權限、變更紀錄、備份復原、補丁修復及服務恢復支援。</td>
+<td>系統日誌、變更紀錄、復原紀錄、修復證據。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>處理雲端帳號、權限、金鑰、組態、日誌、儲存桶、雲端網路、雲端原生安全控制與供應商協調。</td>
+<td>CloudTrail/Activity Log、雲端組態、IAM修復紀錄。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>支援封鎖惡意IP/網域、隔離網段、調整防火牆、VPN、Proxy、WAF、NDR與流量分析。</td>
+<td>防火牆紀錄、封鎖清單、流量分析報告。</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人</td>
+<td>判斷PII事件、隱私衝擊、資料主體影響、跨境、主管機關或資料主體通報義務。</td>
+<td>PII事件評估、DPIA更新、通報紀錄。</td>
+</tr>
+<tr>
+<td>法務 / 法遵</td>
+<td>評估法規、合約、客戶、監理、訴訟、證據保全、外部通報及法律特權要求。</td>
+<td>法遵判斷、合約通報清單、法律意見。</td>
+</tr>
+<tr>
+<td>HR / 人資</td>
+<td>支援涉及員工違規、內部濫用、紀律處分、教育訓練與人員溝通。</td>
+<td>訪談紀錄、紀律程序、訓練紀錄。</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>協調供應商、雲端服務商、MSSP、第三方與第四方事件通報、證據、SLA與補救措施。</td>
+<td>供應商通報、SLA證據、第三方RCA。</td>
+</tr>
+<tr>
+<td>AI Governance Owner</td>
+<td>判斷AI安全事件、資料輸入輸出風險、模型濫用、Prompt洩漏、RAG資料外洩與AI供應商處理責任。</td>
+<td>AI事件評估、模型/資料處理紀錄、人工覆核紀錄。</td>
+</tr>
+<tr>
+<td>BCMS / DRP負責人</td>
+<td>判斷事件是否啟動BCP/DRP，協調RTO/RPO、替代流程、中斷期間控制與復原測試。</td>
+<td>BCP啟動紀錄、DR復原紀錄、演練結果。</td>
+</tr>
+<tr>
+<td>全體人員</td>
+<td>立即通報可疑事件，不得自行刪除、隱匿或擴散證據，並配合調查與補救。</td>
+<td>事件通報紀錄、訪談紀錄、教育訓練紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 事件管理流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>流程活動</th>
+<th>責任角色</th>
+<th>主要輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 規劃與準備</td>
+<td>建立事件管理政策、流程、分級、通報管道、工具、通訊錄、演練、教育訓練與證據保存能力。</td>
+<td>CISO / ISMS管理代表 / SOC / CSIRT</td>
+<td>事件管理程序、演練紀錄、通訊錄、值班表。</td>
+</tr>
+<tr>
+<td>2. 偵測與通報</td>
+<td>由人員、監控工具、供應商、客戶或主管機關通報告警、弱點、可疑活動或事件。</td>
+<td>全體人員 / SOC / 供應商</td>
+<td> 資訊安全事件通報紀錄表。</td>
+</tr>
+<tr>
+<td>3. 登錄與初判</td>
+<td>建立事件編號，確認事件來源、時間、範圍、受影響資產、資料分類、初步影響與是否需立即遏止。</td>
+<td>SOC / Incident Manager</td>
+<td>事件工單、初判紀錄、初步分級。</td>
+</tr>
+<tr>
+<td>4. 評估與決策</td>
+<td>依衝擊、可能性、擴散性、資料敏感性、法遵、供應商、AI/PII/GHG/雲端因素決定事件等級、處理策略與升級。</td>
+<td>CISO / Incident Commander / DPO / 法務</td>
+<td>事件分級決策、升級紀錄、管理階層通報。</td>
+</tr>
+<tr>
+<td>5. 遏止</td>
+<td>限制事件擴散，包括隔離主機、停用帳號、封鎖流量、撤銷金鑰、關閉分享、暫停服務或切換備援。</td>
+<td>CSIRT / IT / Cloud / Network</td>
+<td>遏止紀錄、變更紀錄、封鎖/隔離證據。</td>
+</tr>
+<tr>
+<td>6. 調查與蒐證</td>
+<td>保存日誌、磁碟映像、記憶體、封包、雲端日誌、帳號活動、DLP、AI輸入輸出與供應商證據。</td>
+<td>CSIRT / Forensic Lead / 法務</td>
+<td>證據鏈、Hash、蒐證紀錄、調查報告。</td>
+</tr>
+<tr>
+<td>7. 根除與修復</td>
+<td>移除惡意程式、後門、濫用帳號、錯誤組態、弱點、過度權限與造成事件之流程缺陷。</td>
+<td>IT / Cloud / DevSecOps / CSIRT</td>
+<td>修復紀錄、補丁紀錄、組態修正證據。</td>
+</tr>
+<tr>
+<td>8. 復原與監控</td>
+<td>安全恢復服務，驗證資料完整性、系統可用性、權限正確性與攻擊未復發，並進行加強監控。</td>
+<td>IT / System Owner / SOC / BCMS</td>
+<td>復原驗證、監控紀錄、RTO/RPO結果。</td>
+</tr>
+<tr>
+<td>9. 溝通與通報</td>
+<td>依事件等級與義務進行內部、客戶、主管機關、資料主體、供應商、查證機構或媒體溝通。</td>
+<td>CISO / 法務 / DPO / PR / 管理階層</td>
+<td>通報紀錄、對外聲明、客戶通知。</td>
+</tr>
+<tr>
+<td>10. 結案與學習</td>
+<td>完成根因分析、控制有效性檢討、風險更新、CAPA、教育訓練、文件修訂與管理審查輸入。</td>
+<td>Incident Manager / ISMS管理代表</td>
+<td>事件檢討報告、CAPA、KPI/KRI、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 事件類型分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件類型</th>
+<th>範例情境</th>
+<th>必要參與角色</th>
+<th>特別要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意程式 / 勒索軟體</td>
+<td>EDR告警、檔案加密、惡意連線、橫向移動、疑似C2。</td>
+<td>SOC、CSIRT、IT、BCMS、法務</td>
+<td>立即隔離、保存記憶體/磁碟/EDR證據、啟動備份完整性檢查。</td>
+</tr>
+<tr>
+<td>未授權存取</td>
+<td>帳號被盜、異常登入、特權濫用、MFA疲勞攻擊、密碼噴灑。</td>
+<td>SOC、IAM Owner、System Owner</td>
+<td>停用帳號、撤銷Session/Token、檢查權限與日誌。</td>
+</tr>
+<tr>
+<td>資料外洩 / 誤傳</td>
+<td>郵件誤寄、DLP告警、公開分享連結、資料庫外洩、未授權下載。</td>
+<td>Data Owner、DPO、法務、CISO</td>
+<td>確認資料範圍、分類、收件方、可回收性、法規/客戶通報義務。</td>
+</tr>
+<tr>
+<td>雲端安全事件</td>
+<td>儲存桶公開、IAM過度權限、Access Key洩漏、CloudTrail停用、雲端資源被濫用。</td>
+<td>Cloud Security Owner、SOC、供應商管理</td>
+<td>保留雲端控制平面日誌、撤銷金鑰、檢查責任共擔與供應商SLA。</td>
+</tr>
+<tr>
+<td>AI安全事件</td>
+<td>Prompt注入、RAG資料洩漏、模型輸出不當、AI SaaS資料外洩、模型濫用、代理工具越權。</td>
+<td>AI Governance Owner、Data Owner、DPO、CISO</td>
+<td>保存輸入輸出、模型/資料集版本、供應商條款與人工覆核紀錄。</td>
+</tr>
+<tr>
+<td>供應鏈事件</td>
+<td>供應商遭入侵、第三方服務中斷、惡意更新、子處理者外洩。</td>
+<td>供應商管理、法務、CISO、Service Owner</td>
+<td>取得供應商RCA、影響範圍、補救時程、合約通報與SLA證據。</td>
+</tr>
+<tr>
+<td>弱點遭利用</td>
+<td>Web漏洞、API漏洞、未修補CVE、弱密碼、錯誤組態遭利用。</td>
+<td>DevSecOps、System Owner、CSIRT</td>
+<td>確認攻擊路徑、補丁/緩解、掃描驗證與風險登錄更新。</td>
+</tr>
+<tr>
+<td>實體安全事件</td>
+<td>設備遺失、未授權進入、機房異常、紙本資料遺失。</td>
+<td>Facility、IT、CISO、DPO</td>
+<td>檢查門禁、CCTV、資產、加密狀態與資料範圍。</td>
+</tr>
+<tr>
+<td>營運中斷期間資安事件</td>
+<td>災害、停電、網路中斷、資料中心故障、DR切換時控制失效。</td>
+<td>BCMS、IT、CISO、Service Owner</td>
+<td>啟動BCP/DRP，確保中斷期間權限、日誌、變更與資料保護持續。</td>
+</tr>
+<tr>
+<td>GHG/ESG資料完整性事件</td>
+<td>排放係數遭竄改、盤查底稿遺失、查證證據未授權修改、碳揭露資料版本錯誤。</td>
+<td>GHG Data Owner、ISMS、法務、查證窗口</td>
+<td>保留資料版本、來源、計算邏輯、審核軌跡與查證溝通證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 事件分級與升級標準</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>定義</th>
+<th>判定條件</th>
+<th>處理時限</th>
+<th>核准/升級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SEV-1 緊急/重大</td>
+<td>已造成或高度可能造成重大營運中斷、重大資料外洩、法規通報、客戶重大影響或媒體/聲譽重大風險。</td>
+<td>核心服務中斷；高機密/大量PII外洩；勒索軟體擴散；雲端主帳號入侵；重大供應鏈攻擊；主管機關通報義務；AI系統造成重大錯誤決策或資料外洩。</td>
+<td>15分鐘內通報CISO；30分鐘內啟動CSIRT；1小時內管理階層簡報；依義務執行外部通報。</td>
+<td>CISO、Incident Commander、最高管理階層、法務、DPO。</td>
+</tr>
+<tr>
+<td>SEV-2 高</td>
+<td>已確認事件且影響重要系統、機密資料、受監管資料、供應商服務或可能擴散。</td>
+<td>重要系統受影響；機密資料可能外洩；多使用者帳號異常；雲端重大錯誤設定；高風險漏洞遭利用；外部客戶可能受影響。</td>
+<td>30分鐘內通報CISO/SOC Manager；4小時內完成初步遏止策略；24小時內提交初步報告。</td>
+<td>CISO或授權主管。</td>
+</tr>
+<tr>
+<td>SEV-3 中</td>
+<td>局部事件或可疑活動，影響有限，尚無重大資料外洩或營運衝擊跡象。</td>
+<td>單一端點惡意程式已阻擋；少量誤傳可回收；單一帳號異常已停用；中風險弱點被掃描但未確認利用。</td>
+<td>4小時內登錄；1個工作日內完成初判與處置計畫；5個工作日內結案或升級。</td>
+<td>SOC Manager / Incident Manager。</td>
+</tr>
+<tr>
+<td>SEV-4 低</td>
+<td>資訊安全事件徵兆、政策違反或弱點回報，未造成明顯影響。</td>
+<td>可疑郵件、誤報告警、低風險弱點、可教育改善之違規、未成功攻擊嘗試。</td>
+<td>1個工作日內登錄；10個工作日內完成處置或納入改善追蹤。</td>
+<td>SOC / ISMS管理代表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 通報管道與時限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>通報來源</th>
+<th>通報管道</th>
+<th>最低通報內容</th>
+<th>時限要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>員工/內部人員</td>
+<td>資安通報信箱、服務台、SOC熱線、事件通報表、主管通報。</td>
+<td>發現時間、事件描述、受影響系統/資料、截圖或證據、是否仍在發生、聯絡人。</td>
+<td>發現後立即通報；重大可疑事件不得晚於15分鐘。</td>
+</tr>
+<tr>
+<td>系統監控工具</td>
+<td>SIEM、EDR、NDR、DLP、WAF、CASB、CSPM、IAM、雲端監控、Ticket系統。</td>
+<td>告警ID、來源、目標、時間、規則、嚴重度、原始日誌、關聯事件。</td>
+<td>依告警規則即時或排程通報；高嚴重度需即時升級。</td>
+</tr>
+<tr>
+<td>供應商/雲端服務商</td>
+<td>合約指定窗口、供應商入口、MSSP、雲端支援Case。</td>
+<td>事件影響、受影響服務、時間軸、資料範圍、暫行控制、預計修復時間。</td>
+<td>依合約/SLA；重大事件應要求立即通報並持續更新。</td>
+</tr>
+<tr>
+<td>客戶/外部關注方</td>
+<td>客戶服務窗口、法務窗口、資訊安全窗口、正式函文。</td>
+<td>客戶回報內容、證據、影響範圍、要求事項、合約/案件編號。</td>
+<td>收到後立即登錄，SEV-1/2應即時升級。</td>
+</tr>
+<tr>
+<td>主管機關/執法機關</td>
+<td>法務/法遵指定管道。</td>
+<td>正式通知、要求事項、期限、案件編號、涉及資料或系統。</td>
+<td>收到後立即通知法務、CISO與最高管理階層。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 事件評估與決策要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估構面</th>
+<th>評估問題</th>
+<th>證據來源</th>
+<th>決策輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>受影響資產</td>
+<td>哪些系統、帳號、資料、網路、雲端資源、AI系統、供應商服務或實體設備受影響？</td>
+<td>資產清冊、CMDB、雲端清冊、AI服務清冊、日誌。</td>
+<td>事件範圍、受影響Owner、優先順序。</td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>是否涉及機密、高機密、PII、客戶資料、金鑰、原始碼、AI資料集、GHG查證資料？</td>
+<td>資料分類標籤、DLP、Data Owner確認、資料庫欄位清單。</td>
+<td>DPO/法務/客戶通報判斷、加嚴控制。</td>
+</tr>
+<tr>
+<td>攻擊進展</td>
+<td>事件是否仍在進行？是否有橫向移動、資料外傳、權限提升、持久化或破壞？</td>
+<td>EDR、SIEM、NDR、IAM、網路流量、雲端日誌。</td>
+<td>遏止優先順序、隔離範圍、封鎖策略。</td>
+</tr>
+<tr>
+<td>營運衝擊</td>
+<td>是否影響關鍵流程、SLA、RTO/RPO、客戶服務、供應鏈或查證活動？</td>
+<td>服務監控、BCIA/BIA、客戶服務紀錄、營運指標。</td>
+<td>是否啟動BCP/DRP、客戶溝通策略。</td>
+</tr>
+<tr>
+<td>法規/合約義務</td>
+<td>是否涉及主管機關、資料主體、客戶、驗證機構、查證機構或合約通報期限？</td>
+<td>法規合約清冊、DPA、SLA、客戶合約、監理要求。</td>
+<td>通報對象、內容、期限、核准層級。</td>
+</tr>
+<tr>
+<td>證據保存</td>
+<td>是否需要法律可用證據、保全日誌、磁碟/記憶體映像、供應商證據或鑑識？</td>
+<td>證據清單、日誌來源、鑑識工具、法務指示。</td>
+<td>證據保存計畫、證據鏈、取證優先順序。</td>
+</tr>
+<tr>
+<td>風險與剩餘風險</td>
+<td>事件是否改變既有風險、控制有效性或風險接受狀態？</td>
+<td>風險登錄、SoA、控制測試、KPI/KRI。</td>
+<td>風險登錄更新、控制改善、CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 遏止、根除與復原控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>控制要求</th>
+<th>注意事項</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>短期遏止</td>
+<td>隔離受影響主機、封鎖惡意IP/網域、停用帳號、撤銷Token/金鑰、關閉公開分享、限制流量或暫停高風險服務。</td>
+<td>遏止前應盡可能保存關鍵證據；避免破壞鑑識與造成更大營運衝擊。</td>
+<td>隔離紀錄、封鎖紀錄、帳號停用紀錄。</td>
+</tr>
+<tr>
+<td>長期遏止</td>
+<td>修正防火牆/WAF/EDR政策、強化IAM、提高監控、部署補丁、啟用臨時替代流程。</td>
+<td>應透過緊急變更或標準變更程序留下紀錄。</td>
+<td>變更紀錄、政策更新、監控規則。</td>
+</tr>
+<tr>
+<td>根除</td>
+<td>移除惡意程式、後門、排程工作、惡意帳號、漏洞利用條件、錯誤組態與受害金鑰。</td>
+<td>不得僅重開機或刪除表面檔案而未確認持久化機制。</td>
+<td>惡意程式清除紀錄、弱點修補紀錄。</td>
+</tr>
+<tr>
+<td>憑證與金鑰輪替</td>
+<td>更換密碼、API Key、SSH Key、憑證、OAuth Secret、雲端Access Key、Service Account Credential。</td>
+<td>應確認下游系統與自動化流程不因輪替造成未控中斷。</td>
+<td>金鑰輪替紀錄、憑證更新紀錄。</td>
+</tr>
+<tr>
+<td>復原</td>
+<td>從可信備份或乾淨映像復原，驗證完整性、惡意程式掃描、補丁狀態、權限、日誌與監控。</td>
+<td>復原前應確認根因已處理，避免恢復後再次被入侵。</td>
+<td>復原測試、Hash/Checksum、服務驗證。</td>
+</tr>
+<tr>
+<td>加強監控</td>
+<td>於復原後設定特定IOC、帳號、系統、網段、雲端資源與資料外傳監控。</td>
+<td>SEV-1/2事件至少維持30日加強監控，或依CISO決定。</td>
+<td>SIEM規則、EDR Watchlist、監控報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 數位證據與日誌保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據類型</th>
+<th>保存內容</th>
+<th>完整性要求</th>
+<th>保存責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>系統日誌</td>
+<td>作業系統、應用程式、資料庫、API Gateway、身份驗證、管理活動、錯誤與安全事件。</td>
+<td>匯出原始格式，保留時區、時間戳、來源、Hash與查詢語法。</td>
+<td>SOC / System Owner。</td>
+</tr>
+<tr>
+<td>網路證據</td>
+<td>防火牆、Proxy、DNS、VPN、NDR、NetFlow、封包擷取、WAF與IDS/IPS紀錄。</td>
+<td>保存原始日誌與封包檔，記錄擷取時間、工具與Hash。</td>
+<td>Network Security Owner。</td>
+</tr>
+<tr>
+<td>端點證據</td>
+<td>EDR事件、程序樹、檔案、Registry、排程工作、記憶體、磁碟映像、隔離檔案。</td>
+<td>依鑑識程序取得映像，計算Hash，限制接觸人員。</td>
+<td>CSIRT / Forensic Lead。</td>
+</tr>
+<tr>
+<td>雲端證據</td>
+<td>CloudTrail/Activity Log、IAM、Storage、KMS、Security Group、CSPM、容器、Kubernetes、Serverless事件。</td>
+<td>啟用不可竄改保存或匯出至受控儲存，記錄區域、帳號與資源ID。</td>
+<td>Cloud Security Owner。</td>
+</tr>
+<tr>
+<td>郵件與DLP證據</td>
+<td>郵件標頭、內容摘要、附件Hash、收件人、DLP政策、阻擋/放行紀錄。</td>
+<td>不得任意轉寄完整敏感內容；應以受控方式保存。</td>
+<td>SOC / Messaging Owner / DPO。</td>
+</tr>
+<tr>
+<td>AI事件證據</td>
+<td>Prompt、輸入資料類型、模型版本、RAG來源、輸出、人工覆核、供應商回應。</td>
+<td>避免擴散敏感Prompt或PII；以最小必要保存並標示分類。</td>
+<td>AI Governance Owner / Data Owner。</td>
+</tr>
+<tr>
+<td>供應商證據</td>
+<td>供應商通報、RCA、日誌摘要、SLA、補救計畫、第四方影響資訊。</td>
+<td>確認來源、完整性、簽章或正式回覆；保存合約對應證據。</td>
+<td>供應商管理 / 法務。</td>
+</tr>
+<tr>
+<td>訪談與決策紀錄</td>
+<td>訪談紀錄、會議紀錄、決策、核准、對外通報、事件時間軸。</td>
+<td>記錄參與者、時間、事實與決策理由，避免未經證實推論作為結論。</td>
+<td>Incident Commander / ISMS管理代表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 內外部溝通與法遵通報</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>溝通對象</th>
+<th>啟動條件</th>
+<th>核准角色</th>
+<th>內容要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>SEV-1、重大客戶/法規/聲譽風險、營運中斷、重大資源需求。</td>
+<td>CISO / Incident Commander</td>
+<td>事件摘要、影響、已採取措施、風險、決策需求、下一步。</td>
+</tr>
+<tr>
+<td>內部員工</td>
+<td>需提醒使用者防範、重設密碼、避免點擊、配合調查或停止使用特定服務。</td>
+<td>CISO / HR / PR</td>
+<td>清楚指示、行動要求、期限、聯絡窗口；避免不必要恐慌。</td>
+</tr>
+<tr>
+<td>客戶</td>
+<td>合約要求、客戶資料受影響、服務中斷、客戶可能需採取行動。</td>
+<td>最高管理階層 / 法務 / CISO</td>
+<td>已知事實、影響範圍、補救措施、客戶應採取行動、後續更新機制。</td>
+</tr>
+<tr>
+<td>主管機關</td>
+<td>法規、監理、個資、金融、關鍵基礎設施或其他法定通報義務。</td>
+<td>法務 / 法遵 / DPO / 授權代表</td>
+<td>依主管機關格式、期限與內容要求；保存通報證據。</td>
+</tr>
+<tr>
+<td>資料主體</td>
+<td>PII事件造成權利風險且法律或DPO判斷需通知。</td>
+<td>DPO / 法務 / 管理階層</td>
+<td>事件性質、受影響資料、可能影響、組織措施、資料主體可採行動。</td>
+</tr>
+<tr>
+<td>供應商/合作夥伴</td>
+<td>需要協助調查、服務修復、資料刪除、憑證輪替或其服務受影響。</td>
+<td>供應商管理 / CISO</td>
+<td>要求事項、SLA、證據需求、保密要求、回覆期限。</td>
+</tr>
+<tr>
+<td>媒體/社群</td>
+<td>事件已公開、可能被媒體報導、需對外聲明或澄清。</td>
+<td>最高管理階層 / PR / 法務</td>
+<td>統一口徑、事實基礎、不得揭露敏感細節或影響調查。</td>
+</tr>
+<tr>
+<td>驗證/查證機構</td>
+<td>事件影響ISMS驗證範圍、GHG查證證據、碳揭露資料可信度或重大不符合。</td>
+<td>ISMS管理代表 / GHG Owner / 法務</td>
+<td>影響範圍、修復措施、證據完整性、管理系統改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 雲端服務事件特別程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>雲端事件情境</th>
+<th>必要處置</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端帳號或管理員權限遭入侵</td>
+<td>停用帳號、撤銷Session、輪替Access Key、檢查IAM政策、檢查新增帳號/Role/Trust Relationship。</td>
+<td>Cloud Security Owner / IAM Owner</td>
+<td>IAM日誌、權限變更紀錄、金鑰輪替證據。</td>
+</tr>
+<tr>
+<td>雲端儲存公開或錯誤分享</td>
+<td>立即關閉公開權限、保存存取日誌、確認下載者、資料分類、DLP/PII影響與快照。</td>
+<td>Cloud Security Owner / Data Owner / DPO</td>
+<td>Storage ACL、Bucket Policy、Access Log、資料範圍。</td>
+</tr>
+<tr>
+<td>雲端日誌被停用或刪除</td>
+<td>確認停用人員與時間，恢復日誌，保存殘存證據，檢查是否有惡意隱匿。</td>
+<td>SOC / Cloud Security Owner</td>
+<td>Control Plane Log、組態歷史、告警紀錄。</td>
+</tr>
+<tr>
+<td>雲端資源被濫用</td>
+<td>封鎖惡意資源、檢查金鑰外洩、確認費用異常、通知供應商。</td>
+<td>Cloud Owner / Finance / SOC</td>
+<td>資源建立紀錄、費用異常報告、供應商Case。</td>
+</tr>
+<tr>
+<td>SaaS資料外洩</td>
+<td>撤銷分享、檢查外部協作者、下載紀錄、DLP、SSO登入紀錄與第三方App授權。</td>
+<td>SaaS Owner / DPO / CISO</td>
+<td>Audit Log、Sharing Report、OAuth App清單。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. AI安全事件特別程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>AI事件情境</th>
+<th>必要處置</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>敏感資料輸入未核准AI服務</td>
+<td>確認輸入內容、資料分類、服務條款、是否保留/訓練/人工審查，必要時要求供應商刪除。</td>
+<td>AI Governance Owner / DPO / 法務</td>
+<td>Prompt紀錄、供應商條款、刪除確認。</td>
+</tr>
+<tr>
+<td>Prompt Injection / RAG資料外洩</td>
+<td>保存攻擊Prompt、RAG檢索來源、輸出內容，停用受影響連接器或資料來源。</td>
+<td>AI Owner / DevSecOps / CSIRT</td>
+<td>Prompt、模型版本、RAG查詢、輸出紀錄。</td>
+</tr>
+<tr>
+<td>AI代理工具越權操作</td>
+<td>撤銷代理權限、檢查API Key、審查任務紀錄、限制工具Scope。</td>
+<td>AI Owner / IAM Owner / SOC</td>
+<td>Agent Log、API呼叫、權限設定。</td>
+</tr>
+<tr>
+<td>AI輸出造成錯誤決策或外部誤導</td>
+<td>確認人工覆核狀態、使用場景、受影響對象，必要時撤回或更正輸出。</td>
+<td>AI Governance Owner / Business Owner / 法務</td>
+<td>輸出版本、覆核紀錄、對外更正紀錄。</td>
+</tr>
+<tr>
+<td>模型或資料集遭竄改</td>
+<td>停用模型版本、比對Hash/簽章、回復可信版本、檢查MLOps Pipeline與權限。</td>
+<td>MLOps Owner / CSIRT / Data Owner</td>
+<td>模型版本、資料集版本、Pipeline Log。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. PII與隱私事件特別程序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處理項目</th>
+<th>要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PII範圍判定</td>
+<td>確認資料主體類型、資料欄位、筆數、敏感程度、資料來源、處理目的與是否跨境。</td>
+<td>DPO / Data Owner</td>
+<td>PII清單、資料流圖、事件通報表。</td>
+</tr>
+<tr>
+<td>風險評估</td>
+<td>評估對資料主體權利自由、財務、身份盜用、歧視、聲譽或其他損害之可能影響。</td>
+<td>DPO / 法務</td>
+<td>隱私事件評估紀錄、DPIA更新。</td>
+</tr>
+<tr>
+<td>通報判斷</td>
+<td>依適用法規、合約、客戶要求及資料主體風險判斷主管機關、客戶與資料主體通報義務。</td>
+<td>DPO / 法務 / 管理階層</td>
+<td>通報義務判斷、通報紀錄。</td>
+</tr>
+<tr>
+<td>補救措施</td>
+<td>撤回誤傳、刪除資料、停止處理、重設密碼、提供資料主體建議或信用監控等措施。</td>
+<td>Data Owner / IT / DPO</td>
+<td>補救紀錄、刪除確認、資料主體通知。</td>
+</tr>
+<tr>
+<td>保存限制</td>
+<td>PII事件證據應遵守最小必要、存取限制、保存期限與加密保存要求。</td>
+<td>DPO / ISMS管理代表</td>
+<td>證據存取紀錄、保存期限清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 供應商與第三方事件管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理項目</th>
+<th>程序要求</th>
+<th>供應商應提供資訊</th>
+<th>內部責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件通報</td>
+<td>供應商應依合約於指定時限內通報事件，並持續提供狀態更新。</td>
+<td>事件時間、影響服務、資料範圍、暫行措施、聯絡窗口。</td>
+<td>供應商管理 / CISO。</td>
+</tr>
+<tr>
+<td>影響評估</td>
+<td>確認事件是否影響本組織資料、系統、客戶、PII、雲端資源或合規義務。</td>
+<td>受影響客戶/租戶、資料類型、可用性影響、跨境/第四方資訊。</td>
+<td>Service Owner / Data Owner / DPO。</td>
+</tr>
+<tr>
+<td>證據與RCA</td>
+<td>要求供應商提供足夠證據、根因分析、補救措施與控制改善。</td>
+<td>RCA、IOC、修復時間軸、補丁/組態證據、SLA報告。</td>
+<td>供應商管理 / CSIRT。</td>
+</tr>
+<tr>
+<td>合約與法律行動</td>
+<td>評估SLA、違約、賠償、通報、稽核權、終止與資料刪除要求。</td>
+<td>合約條款對應、正式說明、刪除/返還證明。</td>
+<td>法務 / 採購 / 供應商管理。</td>
+</tr>
+<tr>
+<td>持續監督</td>
+<td>重大供應商事件後應重新評估供應商風險等級、服務監控與合約控制。</td>
+<td>改善計畫、證明文件、第三方稽核報告。</td>
+<td>供應商管理 / ISMS管理代表。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 營運持續與危機管理銜接</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>銜接程序</th>
+<th>決策角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>服務中斷超過RTO風險門檻</td>
+<td>啟動BCP/DRP，切換備援或替代流程，保持中斷期間資安控制。</td>
+<td>BCMS負責人 / IT營運主管 / CISO</td>
+<td>BCP啟動紀錄、DR切換紀錄。</td>
+</tr>
+<tr>
+<td>勒索軟體或破壞性攻擊</td>
+<td>隔離網段，驗證備份，決定復原點，禁止使用未驗證備份。</td>
+<td>Incident Commander / BCMS / IT</td>
+<td>備份驗證、復原決策、RPO紀錄。</td>
+</tr>
+<tr>
+<td>雲端或供應商大規模中斷</td>
+<td>啟用替代供應商、降級服務、手動流程或客戶通知。</td>
+<td>Service Owner / 供應商管理 / 管理階層</td>
+<td>供應商狀態、替代流程紀錄。</td>
+</tr>
+<tr>
+<td>事件影響安全控制能力</td>
+<td>若日誌、EDR、IAM、網路控制或備份受影響，應優先恢復控制能力。</td>
+<td>CISO / SOC / IT</td>
+<td>控制恢復紀錄、加強監控報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 事件結案條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>結案條件</th>
+<th>最低要求</th>
+<th>核准角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件已遏止</td>
+<td>攻擊或異常活動已停止，擴散風險已控制。</td>
+<td>Incident Manager / CISO</td>
+<td>監控紀錄、封鎖/隔離證據。</td>
+</tr>
+<tr>
+<td>根因已識別</td>
+<td>已確認技術、流程、人員、供應商或控制失效之根因；若無法完全確認，應記錄限制與假設。</td>
+<td>CSIRT / CISO</td>
+<td>RCA、調查報告。</td>
+</tr>
+<tr>
+<td>修復已完成</td>
+<td>漏洞、錯誤組態、帳號、權限、金鑰、流程或合約缺口已修正或納入正式改善計畫。</td>
+<td>System Owner / Control Owner</td>
+<td>修復證據、變更紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>復原已驗證</td>
+<td>服務、資料、權限、日誌、監控與備份已恢復至可接受安全狀態。</td>
+<td>Service Owner / SOC</td>
+<td>復原測試、完整性驗證。</td>
+</tr>
+<tr>
+<td>通報已完成</td>
+<td>內部、客戶、主管機關、資料主體、供應商、驗證/查證機構等必要通報已完成或記錄不通報理由。</td>
+<td>法務 / DPO / CISO</td>
+<td>通報紀錄、不通報判斷。</td>
+</tr>
+<tr>
+<td>文件已更新</td>
+<td>事件通報表、處理日誌、證據鏈、檢討報告、風險登錄、KPI/KRI與CAPA已完成。</td>
+<td>ISMS管理代表</td>
+<td>完整事件檔案。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 事件檢討與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢討項目</th>
+<th>檢討問題</th>
+<th>改善輸出</th>
+<th>追蹤方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>偵測能力</td>
+<td>事件是否可更早被發現？是否需新增SIEM規則、EDR政策、雲端告警、DLP或AI監控？</td>
+<td>新增/調整監控規則、威脅情資整合。</td>
+<td>KPI/KRI、規則測試、告警品質檢查。</td>
+</tr>
+<tr>
+<td>通報效率</td>
+<td>通報是否即時？人員是否知道通報管道？是否有延誤或漏報？</td>
+<td>教育訓練、通報流程改善、演練。</td>
+<td>通報時間KPI、訓練紀錄。</td>
+</tr>
+<tr>
+<td>回應品質</td>
+<td>分級、遏止、調查、復原是否有效？是否有決策延誤或責任不清？</td>
+<td>RACI更新、Runbook更新、值班制度調整。</td>
+<td>演練、事後檢討、稽核。</td>
+</tr>
+<tr>
+<td>控制有效性</td>
+<td>既有控制為何未能防止或偵測事件？是否需更新SoA、風險處理或控制措施？</td>
+<td>SoA更新、風險登錄更新、控制改善。</td>
+<td>控制測試、內部稽核、管理審查。</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商通報、證據、SLA、RCA與補救是否符合合約？</td>
+<td>供應商改善計畫、合約條款更新、風險等級調整。</td>
+<td>供應商審查、服務監督紀錄。</td>
+</tr>
+<tr>
+<td>法遵與溝通</td>
+<td>通報判斷、對外訊息、客戶溝通與主管機關要求是否適切？</td>
+<td>通報模板、法遵矩陣、溝通計畫更新。</td>
+<td>法務審查、稽核證據。</td>
+</tr>
+<tr>
+<td>教育與文化</td>
+<td>是否反映人員認知不足、違規或流程未遵循？</td>
+<td>目標式教育、宣導、紀律程序或流程簡化。</td>
+<td>訓練完成率、模擬演練結果。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. KPI / KRI 與監督量測</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>建議門檻</th>
+<th>資料來源</th>
+<th>管理用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MTTD</td>
+<td>Mean Time to Detect，從事件發生或可偵測點至被發現之平均時間。</td>
+<td>依事件類型設定，SEV-1/2應逐季降低。</td>
+<td>SIEM、EDR、事件工單。</td>
+<td>評估偵測能力。</td>
+</tr>
+<tr>
+<td>MTTA</td>
+<td>Mean Time to Acknowledge，告警或通報至有人接手之平均時間。</td>
+<td>SEV-1小於15分鐘；SEV-2小於30分鐘。</td>
+<td>服務台、SOC工單。</td>
+<td>評估值班與升級效率。</td>
+</tr>
+<tr>
+<td>MTTC</td>
+<td>Mean Time to Contain，從確認事件至完成主要遏止之平均時間。</td>
+<td>依事件類型與系統重要性設定。</td>
+<td>事件處理日誌、變更紀錄。</td>
+<td>評估遏止能力。</td>
+</tr>
+<tr>
+<td>MTTR</td>
+<td>Mean Time to Recover/Resolve，從事件確認至復原或結案之平均時間。</td>
+<td>不得超過RTO或管理階層核准之例外。</td>
+<td>事件紀錄、BCP/DR紀錄。</td>
+<td>評估復原與解決能力。</td>
+</tr>
+<tr>
+<td>重大事件數</td>
+<td>SEV-1/SEV-2事件數量與趨勢。</td>
+<td>逐季監控；異常上升需管理審查。</td>
+<td>事件登錄表。</td>
+<td>管理風險趨勢。</td>
+</tr>
+<tr>
+<td>事件重複發生率</td>
+<td>同類根因或同一控制失效於期間內重複發生之比例。</td>
+<td>應持續降低；重複重大事件需高階審查。</td>
+<td>RCA、CAPA、事件檢討報告。</td>
+<td>評估CAPA有效性。</td>
+</tr>
+<tr>
+<td>通報延誤率</td>
+<td>超過本程序通報時限之事件比例。</td>
+<td>應接近0；重大事件不得延誤。</td>
+<td>事件通報時間、發現時間。</td>
+<td>評估通報文化與訓練。</td>
+</tr>
+<tr>
+<td>CAPA逾期率</td>
+<td>事件衍生矯正措施逾期未完成比例。</td>
+<td>不得超過管理階層核准門檻。</td>
+<td>CAPA追蹤表。</td>
+<td>評估改善執行力。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 教育訓練與演練</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>對象</th>
+<th>訓練/演練內容</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>全體人員</td>
+<td>事件通報管道、可疑郵件、資料外洩、設備遺失、AI工具誤用、雲端分享風險。</td>
+<td>至少每年一次；重大事件後必要時加強。</td>
+<td>訓練紀錄、測驗結果、宣導紀錄。</td>
+</tr>
+<tr>
+<td>SOC / CSIRT</td>
+<td>事件分級、日誌分析、EDR處理、雲端事件、鑑識、遏止、復原與報告撰寫。</td>
+<td>至少每年一次專業訓練。</td>
+<td>訓練證書、演練紀錄。</td>
+</tr>
+<tr>
+<td>管理階層</td>
+<td>重大事件決策、危機溝通、法遵通報、客戶溝通與資源核准。</td>
+<td>至少每年一次桌上演練。</td>
+<td>桌上演練紀錄、決策紀錄。</td>
+</tr>
+<tr>
+<td>雲端/DevSecOps團隊</td>
+<td>雲端憑證外洩、儲存公開、CI/CD事件、漏洞利用、Secrets外洩。</td>
+<td>至少每年一次；重大變更後加強。</td>
+<td>演練腳本、技術修復紀錄。</td>
+</tr>
+<tr>
+<td>DPO / 法務 / PR</td>
+<td>PII事件判斷、法規通報、資料主體通知、對外聲明與證據保全。</td>
+<td>至少每年一次。</td>
+<td>演練紀錄、通報模板測試。</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商事件通報、SLA追蹤、第三方RCA要求、合約控制。</td>
+<td>至少每年一次或重大供應商導入時。</td>
+<td>供應商演練、會議紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄名稱</th>
+<th>資訊來源</th>
+<th>保存責任</th>
+<th>建議保存期限</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊安全事件通報紀錄表</td>
+<td></td>
+<td>SOC / ISMS管理代表</td>
+<td>至少3年或依法規/合約較長期限。</td>
+<td>所有事件均需建立。</td>
+</tr>
+<tr>
+<td>事件處理日誌</td>
+<td>事件工單 / SOC平台</td>
+<td>Incident Manager</td>
+<td>至少3年。</td>
+<td>包含時間軸、決策、任務與狀態。</td>
+</tr>
+<tr>
+<td>事件檢討報告</td>
+<td></td>
+<td>ISMS管理代表</td>
+<td>至少3年；重大事件至少5年。</td>
+<td>重大事件必備。</td>
+</tr>
+<tr>
+<td>數位證據與證據鏈</td>
+<td>相關紀錄</td>
+<td>Forensic Lead / 法務</td>
+<td>依法務指示、案件需求或至少5年。</td>
+<td>涉及法律或重大事件需加嚴管制。</td>
+</tr>
+<tr>
+<td>外部通報紀錄</td>
+<td>法務/DPO/客戶通知紀錄</td>
+<td>法務 / DPO</td>
+<td>依法規/合約；至少5年。</td>
+<td>包含不通報判斷理由。</td>
+</tr>
+<tr>
+<td>CAPA與改善追蹤</td>
+<td>ISMS-101系列</td>
+<td>ISMS管理代表 / Control Owner</td>
+<td>至少3年。</td>
+<td>需驗證有效性。</td>
+</tr>
+<tr>
+<td>演練與訓練紀錄</td>
+<td>等</td>
+<td>HR / ISMS管理代表</td>
+<td>至少3年。</td>
+<td>支援A.6.8與A.5.24證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>稽核問題</th>
+<th>預期證據</th>
+<th>對應控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件準備</td>
+<td>是否建立事件流程、角色、通報管道、分級標準、演練與工具？</td>
+<td>本程序、通訊錄、演練紀錄、值班表。</td>
+<td>A.5.24</td>
+</tr>
+<tr>
+<td>事件評估與決策</td>
+<td>事件是否依標準評估、分級、升級並保存決策？</td>
+<td>事件通報紀錄、分級紀錄、會議/決策紀錄。</td>
+<td>A.5.25</td>
+</tr>
+<tr>
+<td>事件回應</td>
+<td>是否執行遏止、根除、復原、通報與監控？</td>
+<td>處理日誌、封鎖紀錄、復原紀錄、通報紀錄。</td>
+<td>A.5.26</td>
+</tr>
+<tr>
+<td>事件學習</td>
+<td>是否完成RCA、CAPA、風險更新、控制改善與管理審查輸入？</td>
+<td>事件檢討報告、CAPA、風險登錄、管理審查紀錄。</td>
+<td>A.5.27 / 10.2</td>
+</tr>
+<tr>
+<td>證據蒐集</td>
+<td>證據是否保持完整性、可追溯性、存取限制與保存期限？</td>
+<td>證據鏈、Hash、證據庫存取紀錄。</td>
+<td>A.5.28</td>
+</tr>
+<tr>
+<td>事件通報</td>
+<td>全體人員是否知道如何通報，通報是否及時？</td>
+<td>教育訓練紀錄、通報紀錄、測驗結果。</td>
+<td>A.6.8</td>
+</tr>
+<tr>
+<td>法遵與隱私</td>
+<td>PII、法規、合約與客戶通報是否有判斷與證據？</td>
+<td>DPO/法務評估、通報紀錄、不通報理由。</td>
+<td>A.5.31 / A.5.34</td>
+</tr>
+<tr>
+<td>雲端與供應鏈</td>
+<td>雲端或供應商事件是否納入責任共擔、SLA、RCA與第四方影響？</td>
+<td>雲端日誌、供應商RCA、供應商監督紀錄。</td>
+<td>A.5.19~A.5.23</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 附錄A：事件通報最低資料欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>說明</th>
+<th>必填</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件編號</td>
+<td>由SOC或事件管理平台產生之唯一編號。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>通報人與聯絡方式</td>
+<td>通報人姓名、部門、電話、電子郵件。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>發現時間與通報時間</td>
+<td>記錄實際發現時間與完成通報時間，支援通報效率指標。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>事件描述</td>
+<td>以事實描述可疑狀況、錯誤訊息、畫面、告警、對象與目前狀態。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>受影響資產</td>
+<td>系統、主機、帳號、資料庫、雲端資源、SaaS、AI工具或實體設備。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>資料類型與分類</td>
+<td>是否涉及內部、機密、高機密、PII、客戶資料、金鑰、原始碼、GHG資料。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>已採取動作</td>
+<td>通報前已做之隔離、停用、刪除、聯絡、截圖或其他動作。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>附件/證據</td>
+<td>截圖、郵件標頭、日誌、檔案Hash、URL、IP、告警ID等。</td>
+<td>視情況</td>
+</tr>
+<tr>
+<td>初步影響</td>
+<td>服務中斷、資料外洩、客戶影響、法規影響、供應商影響之初步判斷。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>建議分級</td>
+<td>通報或初判時之SEV等級，後續可由CISO或Incident Manager調整。</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 附錄B：事件處理時間軸模板</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>時間</th>
+<th>事件/活動</th>
+<th>執行人</th>
+<th>證據/連結</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>事件被發現或告警產生。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成事件通報與登錄。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成初步評估與分級。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>啟動CSIRT/IRT及分派任務。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成初步遏止措施。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成關鍵證據保存。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成根因判斷與修復計畫。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成復原驗證與加強監控。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td>完成通報、結案、檢討與CAPA。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 附錄C：重大事件管理階層簡報模板</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:25%;">事件名稱</th>
+<td></td>
+</tr>
+<tr>
+<th>事件等級</th>
+<td>□ SEV-1　□ SEV-2　□ SEV-3　□ SEV-4</td>
+</tr>
+<tr>
+<th>目前狀態</th>
+<td>□ 調查中　□ 已遏止　□ 根除中　□ 復原中　□ 加強監控　□ 已結案</td>
+</tr>
+<tr>
+<th>事件摘要</th>
+<td></td>
+</tr>
+<tr>
+<th>已知影響</th>
+<td>系統/服務：<br>資料/PII：<br>客戶/供應商：<br>營運/SLA：<br>法規/合約：</td>
+</tr>
+<tr>
+<th>已採取措施</th>
+<td></td>
+</tr>
+<tr>
+<th>待決事項</th>
+<td></td>
+</tr>
+<tr>
+<th>資源需求</th>
+<td></td>
+</tr>
+<tr>
+<th>對外溝通建議</th>
+<td></td>
+</tr>
+<tr>
+<th>下一次更新時間</th>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 附錄D：事件管理與控制措施對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制/條款</th>
+<th>本程序對應章節</th>
+<th>主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27001 6.1.2 / 8.2</td>
+<td>第9章、第19章、第20章</td>
+<td>事件風險評估、風險登錄更新、KRI。</td>
+</tr>
+<tr>
+<td>ISO/IEC 27001 8.3</td>
+<td>第10章、第18章、第19章</td>
+<td>風險處理、修復紀錄、CAPA。</td>
+</tr>
+<tr>
+<td>ISO/IEC 27001 9.1</td>
+<td>第20章</td>
+<td>KPI/KRI、績效分析。</td>
+</tr>
+<tr>
+<td>ISO/IEC 27001 10.2</td>
+<td>第19章、第22章</td>
+<td>事件檢討報告、矯正措施、有效性驗證。</td>
+</tr>
+<tr>
+<td>Annex A.5.24</td>
+<td>第5章、第21章</td>
+<td>事件流程、角色、分級、演練。</td>
+</tr>
+<tr>
+<td>Annex A.5.25</td>
+<td>第7章、第9章</td>
+<td>事件評估、分級、升級與決策紀錄。</td>
+</tr>
+<tr>
+<td>Annex A.5.26</td>
+<td>第10章、第13章、第14章、第15章、第16章</td>
+<td>遏止、根除、復原、通報紀錄。</td>
+</tr>
+<tr>
+<td>Annex A.5.27</td>
+<td>第18章、第19章</td>
+<td>事件檢討報告、CAPA、經驗回饋。</td>
+</tr>
+<tr>
+<td>Annex A.5.28</td>
+<td>第11章</td>
+<td>證據鏈、Hash、保存與移交紀錄。</td>
+</tr>
+<tr>
+<td>Annex A.6.8</td>
+<td>第8章、第21章</td>
+<td>事件通報紀錄、通報訓練與演練。</td>
+</tr>
+</tbody>
+</table>
+
+<p class="small">文件結束。本文件為ISMS文件化資訊模板，實際導入時應依組織法規適用性、產業監理要求、合約要求、系統架構、雲端責任共擔、資料分類、AI使用情境、PII處理活動、GHG/ESG資料治理及營運持續策略進行必要調整、核准與版本管制。</p>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

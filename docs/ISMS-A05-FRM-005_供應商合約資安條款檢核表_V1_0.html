@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-FRM-005 供應商合約資安條款檢核表</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-FRM-005 供應商合約資安條款檢核表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-FRM-005</td>
+<td>供應商合約資安條款檢核表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>供應商與雲端安全Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-FRM-005</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>供應商與雲端安全Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>檢核建立</td>
+<td></td>
+<td>採購 / 供應商管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>ISMS管理代表 / CISO代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務合約審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與DPA審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與技術審查</td>
+<td></td>
+<td>Cloud Security / IT架構負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS / DRP審查</td>
+<td></td>
+<td>BCMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG資料審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>採購確認</td>
+<td></td>
+<td>採購主管</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 法務主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 表單目的</h2>
+<p>本檢核表用於確認供應商合約、採購條款、服務條款、SOW、DPA、NDA、SLA、安全附件、雲端服務條款、AI服務條款與子處理者條款，是否已納入充分之資訊安全、隱私、AI治理、供應鏈、雲端、事件通報、營運持續、資料保護、稽核權、退場與合規要求。</p>
+<p>本檢核表之目的在於降低因供應商合約條款不足所造成之資料外洩、未授權再委外、事件通報延誤、服務中斷、跨境資料風險、AI資料誤用、第四方不可視、SLA無法落實、查證資料失控及驗證不符合等風險。</p>
+
+<h2>2. 使用原則</h2>
+<ul>
+<li>所有中高風險供應商、新供應商、續約、重大合約變更、服務範圍變更、子處理者變更或事件後重評，均應完成本檢核表。</li>
+<li>若合約涉及PII、AI服務、雲端服務、客戶資料、關鍵營運、外包開發、跨境傳輸、第四方、GHG/CO2資料或法規合約要求，應啟動專項檢核。</li>
+<li>檢核結果若有「不符合」或「部分符合」，應記錄補救條款、補償控制、風險接受或CAPA，不得以口頭承諾取代合約條款或正式證據。</li>
+<li>供應商合約資安條款之最終接受，應依風險等級由採購、法務、CISO、DPO、AI治理或最高管理階層授權代表核准。</li>
+</ul>
+
+<h2>3. 供應商與合約基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">供應商名稱</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">供應商編號</th>
+<td style="width:30%;">SUP-YYYY-NNN</td>
+</tr>
+<tr>
+<th>合約名稱</th>
+<td></td>
+<th>合約編號</th>
+<td></td>
+</tr>
+<tr>
+<th>服務/產品名稱</th>
+<td></td>
+<th>採購案號</th>
+<td></td>
+</tr>
+<tr>
+<th>合約類型</th>
+<td colspan="3">□ 主合約　□ SOW　□ SLA　□ DPA　□ NDA　□ 安全附件　□ 雲端服務條款　□ AI服務條款　□ 維護合約　□ 授權合約　□ 外包開發合約</td>
+</tr>
+<tr>
+<th>合約期間</th>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<th>續約方式</th>
+<td>□ 自動續約　□ 需重新核准　□ 不續約　□ 待確認</td>
+</tr>
+<tr>
+<th>服務Owner</th>
+<td></td>
+<th>供應商Owner</th>
+<td></td>
+</tr>
+<tr>
+<th>資料Owner</th>
+<td></td>
+<th>合約Owner</th>
+<td></td>
+</tr>
+<tr>
+<th>供應商風險等級</th>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<th>服務重要性</th>
+<td>□ 關鍵　□ 重要　□ 一般　□ 低</td>
+</tr>
+<tr>
+<th>是否涉及PII</th>
+<td>□ 是　□ 否</td>
+<th>是否涉及AI/雲端</th>
+<td>□ AI　□ 雲端　□ 兩者皆有　□ 不適用</td>
+</tr>
+<tr>
+<th>是否涉及客戶資料</th>
+<td>□ 是　□ 否</td>
+<th>是否涉及第四方/子處理者</th>
+<td>□ 是　□ 否　□ 待確認</td>
+</tr>
+<tr>
+<th>是否涉及GHG/CO2資料</th>
+<td>□ 是　□ 否</td>
+<th>是否影響BCMS/DRP</th>
+<td>□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 檢核結論摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:25%;">整體檢核結論</th>
+<td>□ 可接受　□ 附條件接受　□ 不可接受　□ 待補件　□ 需高層核准</td>
+</tr>
+<tr>
+<th>主要缺口摘要</th>
+<td></td>
+</tr>
+<tr>
+<th>必要補救條款/附件</th>
+<td></td>
+</tr>
+<tr>
+<th>是否需風險接受</th>
+<td>□ 是，風險接受編號：__________　□ 否</td>
+</tr>
+<tr>
+<th>是否需CAPA</th>
+<td>□ 是，CAPA編號：__________　□ 否</td>
+</tr>
+<tr>
+<th>是否可簽約/續約</th>
+<td>□ 可簽約　□ 附條件簽約　□ 暫緩　□ 不建議簽約</td>
+</tr>
+<tr>
+<th>核准條件</th>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 合約文件完整性檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>缺口/補救</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>主合約</td>
+<td>應明確定義服務範圍、責任、交付物、費用、期限、終止與違約。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>SOW/工作說明書</td>
+<td>應明確定義工作內容、服務邊界、交付物、里程碑、驗收與變更流程。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>NDA/保密條款</td>
+<td>應涵蓋機密資訊定義、使用限制、揭露限制、保密期限與違約責任。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>DPA/資料處理協議</td>
+<td>涉及PII時，應包含處理目的、角色、子處理者、跨境、資料主體權利與刪除要求。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>SLA</td>
+<td>應定義可用性、支援、事件回應、通報、維護窗口與服務信用或補救。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安全附件</td>
+<td>應包含資訊安全控制、事件通報、稽核權、弱點管理、資料保護與退場條款。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端/AI服務條款</td>
+<td>涉及雲端或AI服務時，應涵蓋資料地區、共享責任、模型/資料使用、保留與刪除。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 資訊安全治理條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊安全政策遵循</td>
+<td>供應商應遵守組織資訊安全政策、可接受使用、資料保護、存取與事件通報要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>控制責任分工</td>
+<td>應明確供應商與組織各自負責之安全控制，尤其雲端與外包服務共享責任。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>安全角色與聯絡窗口</td>
+<td>應指定資安、事件、服務、合約與資料保護聯絡窗口及升級路徑。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>安全管理制度</td>
+<td>高風險供應商應具ISMS、SOC 2、CSA STAR或等效管理制度證據。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>政策異動通知</td>
+<td>供應商安全政策、控制範圍、認證或重大控制變更應通知。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>人員保密與背景查核</td>
+<td>供應商人員應受保密義務、必要訓練與適當範圍之背景查核。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 資訊分類、標示與可接受使用條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊分類遵循</td>
+<td>供應商應依組織資訊分類與標示要求處理資訊。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>可接受使用限制</td>
+<td>供應商不得將資訊用於合約目的以外用途、未授權分析、測試、訓練或商業利用。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>最小揭露</td>
+<td>供應商僅得存取與服務目的相關之最小必要資訊。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>未授權複製限制</td>
+<td>限制未授權複製、下載、截圖、列印、快取、備份或轉存。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>使用者承諾</td>
+<td>供應商應確保其人員瞭解並承諾資訊使用限制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 存取控制與身分驗證條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最小權限</td>
+<td>供應商存取應依最小權限、必要知悉與角色分離原則授權。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>帳號管理</td>
+<td>應定義帳號申請、核准、變更、停用、到期與定期審查要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>MFA要求</td>
+<td>遠端、雲端、管理者、特權及PII系統存取應要求MFA或等效控制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>特權存取</td>
+<td>特權存取應受PAM、跳板機、Session Recording、雙人核准或等效控制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>帳號共用禁止</td>
+<td>禁止共用帳號、借用帳號或使用未具名之高權限帳號，例外需審查。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>存取紀錄</td>
+<td>供應商存取組織系統或資料時應保留可稽核日誌。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 資料保護與加密條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>傳輸加密</td>
+<td>機密以上、PII、客戶資料及受限制資料傳輸需使用TLS、SFTP、MFT、VPN或等效加密。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>儲存加密</td>
+<td>供應商儲存機密以上或PII資料需加密，並明確金鑰管理責任。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>金鑰管理</td>
+<td>應定義金鑰Owner、輪替、保存、撤銷、存取控制與事件處理。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料遮罩/去識別</td>
+<td>測試、分析、AI或非正式環境處理PII/敏感資料時，應遮罩或去識別。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>DLP與外洩防護</td>
+<td>高風險供應商應具資料外洩防護、下載限制或外部分享控管。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料完整性</td>
+<td>應提供防篡改、校驗、對帳、版本控制或完整性保護。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 資訊傳輸與資料交換條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准傳輸通道</td>
+<td>合約應指定核准傳輸通道，禁止個人信箱、個人雲端或未核准通道。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料交換規格</td>
+<td>系統介接或批次傳輸應定義格式、頻率、加密、對帳、錯誤處理與重送機制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>跨境傳輸</td>
+<td>跨境傳輸需明確地區、合法依據、資料類型、供應商責任與變更通知。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>傳輸紀錄</td>
+<td>供應商應保存傳輸時間、來源、目的、資料量、成功/失敗與錯誤紀錄。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>誤傳處理</td>
+<td>誤傳、錯誤收件人、未授權存取或傳輸失敗需立即通報並補救。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 事件通報與資安事件管理條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件定義</td>
+<td>合約應明定資訊安全事件、隱私事件、AI事件、供應商事件與服務中斷事件定義。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>通報時限</td>
+<td>高風險事件應要求24小時內初步通報；PII事件依法律/DPA要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>通報內容</td>
+<td>通報應包含事件時間、範圍、資料類型、影響、初步原因、處置與後續計畫。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>事件協作</td>
+<td>供應商應配合調查、證據保全、根因分析、法規/客戶通報與改善。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>證據保全</td>
+<td>供應商應保存日誌、封存證據並避免刪除或覆寫關鍵資料。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>事件後報告</td>
+<td>供應商應於約定期限提供RCA、PIR、CAPA及有效性驗證結果。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 弱點管理與修補條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>弱點管理制度</td>
+<td>供應商應具弱點識別、評估、修補、例外與追蹤流程。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>修補期限</td>
+<td>Critical/High弱點應有明確修補期限與緊急處理機制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點通知</td>
+<td>影響組織服務或資料之重大弱點應及時通知。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>滲透測試</td>
+<td>高風險服務應定期進行滲透測試或提供第三方測試證據。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>SCA/SBOM</td>
+<td>軟體、外包開發或SaaS供應商應提供SBOM、開源元件與弱點處理機制。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外處理</td>
+<td>未能及時修補需提供補償控制、風險評估與預計完成日。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 安全開發與外包開發條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Secure SDLC</td>
+<td>外包開發應遵循安全需求、安全設計、安全編碼、測試與驗收。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>安全編碼標準</td>
+<td>供應商應使用OWASP、CERT或等效安全編碼規範。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>程式碼審查</td>
+<td>應定義Code Review、變更審查、分支保護與交付審查。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>測試資料保護</td>
+<td>禁止使用未遮罩PII或高機密正式資料於開發/測試環境。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>智慧財產權</td>
+<td>應明確程式碼、文件、模型、資料集、成果物之權利歸屬與授權。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>交付安全要求</td>
+<td>交付需包含原始碼、文件、SBOM、測試報告、部署文件與安全缺口清單。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 雲端服務條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>共享責任</td>
+<td>應明確雲端供應商、組織與共同責任。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料地區</td>
+<td>應明確資料儲存、處理、備份、支援與存取之地區。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端安全控制</td>
+<td>應包含IAM、MFA、加密、日誌、備份、組態、監控與DLP/CASB支援。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>管理介面保護</td>
+<td>管理介面需支援MFA、權限分離、日誌與高權限監控。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>服務變更通知</td>
+<td>供應商需通知重大服務、區域、架構、控制或資料處理變更。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端退場</td>
+<td>需支援資料匯出、刪除、帳號撤銷、金鑰撤銷與刪除證明。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. AI服務與模型治理條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI用途限制</td>
+<td>合約應限制AI服務使用目的，禁止未授權次級使用或商業利用。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料訓練條款</td>
+<td>需明確輸入資料是否用於模型訓練、微調、改善服務或人工審查。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料保留與刪除</td>
+<td>需明確AI輸入、輸出、Prompt、Embedding與模型資料保留與刪除機制。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>模型版本與變更</td>
+<td>需通知模型版本、重大能力、風險或輸出行為變更。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI事件通報</td>
+<td>資料外洩、不當輸出、偏差、越權、自動化錯誤應具通報要求。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>人類監督支援</td>
+<td>高風險AI服務應支援人類覆核、日誌、解釋、回溯與申訴機制。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>輸出權利與侵權風險</td>
+<td>需明確AI輸出之使用權、IP風險、第三方權利與供應商責任。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. PII、DPA與隱私條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>角色定位</td>
+<td>明確控制者、處理者、子處理者或共同控制者角色。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>處理目的與指示</td>
+<td>供應商僅得依書面指示、合約目的與合法依據處理PII。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料主體權利</td>
+<td>供應商應協助查詢、更正、刪除、限制、攜出、反對與申訴。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>子處理者</td>
+<td>子處理者需事前揭露、核准或通知，並承擔同等資料保護義務。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>跨境傳輸</td>
+<td>明確跨境地區、合法機制、SCC或其他資料保護安排。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>PII事件通報</td>
+<td>PII事件需依法規/DPA時限通報並配合調查與通知。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>返還與刪除</td>
+<td>服務終止或目的消失時，PII需返還、刪除或匿名化並提供證明。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 子處理者、第四方與ICT供應鏈條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>第四方揭露</td>
+<td>供應商應揭露關鍵第四方、子處理者、雲端平台與資料中心。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>變更通知</td>
+<td>新增、替換或移除子處理者/第四方需事前通知或依合約期限通知。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>同等義務傳遞</td>
+<td>供應商應將同等安全、隱私、事件、稽核與刪除要求傳遞給第四方。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>供應鏈事件通報</td>
+<td>第四方發生影響組織資料或服務之事件時，供應商需及時通報。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>集中依賴風險</td>
+<td>關鍵第四方或單點依賴應可識別，並支援替代或退場策略。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>SBOM/元件透明度</td>
+<td>軟體/平台供應商需提供或支援SBOM、元件弱點與供應鏈安全證據。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 服務可用性、BCMS與DRP條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SLA可用性</td>
+<td>關鍵服務應定義可用性、維護窗口、停機通知與補償。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>RTO/RPO</td>
+<td>應定義或支援組織所需RTO/RPO與復原要求。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>BCP/DR證據</td>
+<td>高風險供應商應提供BCP/DR計畫摘要、演練或第三方證明。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>重大中斷通報</td>
+<td>中斷、災害、勒索、雲端區域故障或人力不可用需通報。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>營運替代方案</td>
+<td>合約應支持資料匯出、備援、替代供應商或緊急支援安排。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>演練與測試</td>
+<td>關鍵供應商應支援年度或定期BCP/DR測試與結果改善。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 稽核權、證明與合規證據條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>稽核權</td>
+<td>合約應保留組織或其代表對供應商控制進行查核或取得證據之權利。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>第三方證明</td>
+<td>供應商應提供ISO 27001、SOC 2、CSA STAR、PCI DSS或等效證據。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>稽核缺失改善</td>
+<td>供應商需針對稽核缺失提出改善計畫、期限與證據。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>合規要求</td>
+<td>應符合適用法律、監管、客戶合約、出口管制、智慧財產與資料保護要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>紀錄保存</td>
+<td>供應商應保存服務、存取、傳輸、事件與控制紀錄達約定期限。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>配合客戶/主管機關稽核</td>
+<td>供應商應合理配合客戶、驗證機構或主管機關要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 變更管理條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>服務變更通知</td>
+<td>供應商需通知可能影響安全、資料、可用性、地區或合規之服務變更。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>安全控制變更</td>
+<td>重大安全控制、認證範圍、加密、日誌、存取或BCP變更需通知。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>子處理者變更</td>
+<td>新增或變更子處理者/第四方需事前或依約定期限通知。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI模型變更</td>
+<td>AI模型、資料使用、輸出行為或高風險功能變更需通知。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>緊急變更</td>
+<td>緊急變更需保留紀錄、事後通知、風險評估與補救。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>組織核准權</td>
+<td>高風險變更應允許組織提出異議、暫停使用或終止服務。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 資料保存、返還、刪除與銷毀條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>保存期限</td>
+<td>應定義資料、日誌、備份、事件證據、AI輸入輸出之保存期限。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料返還</td>
+<td>服務終止、合約到期或組織要求時，供應商應可返還資料。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除</td>
+<td>供應商應依要求刪除資料、備份或暫存，並提供刪除證明。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>安全銷毀</td>
+<td>實體媒體、紙本或設備應安全銷毀，保留銷毀證明。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Legal Hold</td>
+<td>涉及調查、訴訟、稽核或事件時，需支援暫停刪除與證據保全。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>退場支援</td>
+<td>供應商應提供合理退場期間、資料匯出格式、轉移協助與知識移轉。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 保密、智慧財產與資料所有權條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>機密資訊定義</td>
+<td>合約應明確機密資訊範圍，包含文件、資料、系統、源碼、漏洞、事件證據等。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>保密期限</td>
+<td>保密義務應於合約終止後持續有效，且對高機密可具較長期限。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料所有權</td>
+<td>組織或客戶資料之所有權、使用權及衍生資料權利應明確。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>智慧財產權</td>
+<td>交付物、程式碼、模型、文件、設定、資料集與產出成果權利歸屬需明確。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>反向工程與未授權使用</td>
+<td>供應商不得對資料、系統、模型或成果物進行未授權使用、再利用或逆向分析。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>公開引用限制</td>
+<td>供應商不得未經核准使用組織名稱、Logo、案例、資料或客戶資訊對外宣傳。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 法規、監管與客戶要求條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>適用法律遵循</td>
+<td>供應商需遵守所有適用資訊安全、隱私、資料保護、智慧財產及產業法規。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>客戶合約要求流下</td>
+<td>若服務支持客戶合約，應將必要安全、隱私、SLA與稽核要求流下給供應商。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監管配合</td>
+<td>供應商需配合主管機關、監管稽核或法定通報所需資訊。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>出口管制與制裁</td>
+<td>涉及跨境、加密、AI、軟體或技術移轉時，需遵守出口管制與制裁要求。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料主權</td>
+<td>涉及特定司法管轄或客戶要求時，需明確資料地區、存取地與下游處理地。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. GHG/CO2、ESG與查證資料條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料來源與品質</td>
+<td>供應商提供GHG/CO2或ESG資料時，應明確來源、期間、方法與品質控制。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>排放係數與計算方法</td>
+<td>應提供係數來源、版本、適用年度、假設與計算方法。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>查證支援</td>
+<td>供應商應配合查證、提供證據、回答查證問題並保存底稿。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料更正通知</td>
+<td>供應商發現碳資料錯誤或重算時，應通知並提供修正依據。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>揭露限制</td>
+<td>未經核准不得對外揭露組織GHG/ESG資料或查證資訊。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 安全監控、日誌與證據保存條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>存取日誌</td>
+<td>供應商應保存登入、管理操作、資料存取、API與異常活動日誌。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌保存期限</td>
+<td>日誌保存期限應符合合約、法規、事件調查與稽核要求。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌提供</td>
+<td>發生事件、稽核或調查時，供應商應於約定時限提供必要日誌。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>監控與告警</td>
+<td>供應商應具備安全監控、異常偵測、DLP、EDR、SIEM或等效能力。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>證據完整性</td>
+<td>事件證據、日誌、報告需防竄改並保存Chain of Custody（高風險時）。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 服務支援、維護與遠端存取條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>支援窗口</td>
+<td>合約應定義支援時間、窗口、回應時限、升級路徑與緊急聯絡方式。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>遠端支援控制</td>
+<td>供應商遠端支援需經核准、限定期間、監控、錄影或日誌。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>維護通知</td>
+<td>例行維護與緊急維護應提前通知並說明影響、風險與回復方案。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>存取撤銷</td>
+<td>支援結束、合約終止或人員離任時應撤銷存取。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>工具使用限制</td>
+<td>供應商不得使用未核准遠端工具、個人裝置或未授權帳號存取。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 違約責任、賠償、保險與責任限制檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>違約責任</td>
+<td>供應商違反資訊安全、隱私、保密、事件通報或刪除要求應有明確責任。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>損害賠償</td>
+<td>應合理涵蓋資料外洩、事件處理、客戶賠償、罰鍰、通知與調查成本。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>責任上限例外</td>
+<td>重大保密、PII外洩、惡意、重大過失或IP侵權不宜受過低責任上限限制。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資安/網路保險</td>
+<td>高風險供應商應具適當網路安全或專業責任保險。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>補救義務</td>
+<td>供應商應負責修補、替換、改善、通知與支援事件處理。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 終止、退場與交接條款檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款項目</th>
+<th>最低要求</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>終止權</td>
+<td>重大資安事件、重大違約、合規不符、子處理者不可接受或服務不可用時應具終止權。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>退場協助</td>
+<td>供應商需提供資料匯出、移轉、交接、技術支援與合理過渡期間。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>資料返還/刪除</td>
+<td>終止後需返還或刪除資料、備份、暫存、AI資料與下游副本並提供證明。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>帳號與權限撤銷</td>
+<td>終止時撤銷所有帳號、API、Token、遠端支援與第三方存取。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>知識移轉</td>
+<td>關鍵服務需移交文件、組態、程式碼、Runbook、資產清單與事件未結事項。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>持續保密義務</td>
+<td>終止後保密、資料保護、事件協作與稽核配合義務持續有效。</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. 合約附件與證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>附件/證據編號</th>
+<th>文件名稱</th>
+<th>文件類型</th>
+<th>版本/日期</th>
+<th>提供者</th>
+<th>保存位置</th>
+<th>有效性</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EVD-001</td>
+<td></td>
+<td>□ 主合約　□ SOW　□ NDA　□ DPA　□ SLA　□ 安全附件　□ SOC/ISO　□ BCP　□ AI條款</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 到期　□ 待補</td>
+</tr>
+<tr>
+<td>EVD-002</td>
+<td></td>
+<td>□ 主合約　□ SOW　□ NDA　□ DPA　□ SLA　□ 安全附件　□ SOC/ISO　□ BCP　□ AI條款</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 到期　□ 待補</td>
+</tr>
+<tr>
+<td>EVD-003</td>
+<td></td>
+<td>□ 主合約　□ SOW　□ NDA　□ DPA　□ SLA　□ 安全附件　□ SOC/ISO　□ BCP　□ AI條款</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 到期　□ 待補</td>
+</tr>
+<tr>
+<td>EVD-004</td>
+<td></td>
+<td>□ 主合約　□ SOW　□ NDA　□ DPA　□ SLA　□ 安全附件　□ SOC/ISO　□ BCP　□ AI條款</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 到期　□ 待補</td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. 條款缺口與補救計畫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>缺口編號</th>
+<th>條款領域</th>
+<th>缺口描述</th>
+<th>風險等級</th>
+<th>補救方式</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>GAP-001</td>
+<td>□ 資安　□ 隱私　□ AI　□ 雲端　□ 供應鏈　□ BCMS　□ 合約　□ GHG</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補充條款　□ 安全附件　□ 補償控制　□ 風險接受　□ CAPA</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+<tr>
+<td>GAP-002</td>
+<td>□ 資安　□ 隱私　□ AI　□ 雲端　□ 供應鏈　□ BCMS　□ 合約　□ GHG</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補充條款　□ 安全附件　□ 補償控制　□ 風險接受　□ CAPA</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+<tr>
+<td>GAP-003</td>
+<td>□ 資安　□ 隱私　□ AI　□ 雲端　□ 供應鏈　□ BCMS　□ 合約　□ GHG</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補充條款　□ 安全附件　□ 補償控制　□ 風險接受　□ CAPA</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. 風險接受與附條件核准</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險/缺口編號</th>
+<th>風險描述</th>
+<th>無法補正原因</th>
+<th>補償控制</th>
+<th>接受期限</th>
+<th>核准層級</th>
+<th>重評日</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>GAP/R-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ 法務　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GAP/R-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ 法務　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GAP/R-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ 法務　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. 供應商合約資安條款風險評分</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估面向</th>
+<th>分數1低風險</th>
+<th>分數3中風險</th>
+<th>分數5高風險</th>
+<th>本案分數</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料敏感性</td>
+<td>不處理內部以上資料</td>
+<td>處理內部/少量機密資料</td>
+<td>處理高機密、PII、客戶資料或源碼</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務重要性</td>
+<td>低影響服務</td>
+<td>重要但可替代服務</td>
+<td>關鍵服務或影響RTO/RPO/SLA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>合約條款完整性</td>
+<td>資安條款完整</td>
+<td>部分條款缺漏</td>
+<td>重大條款缺失或供應商拒絕</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應鏈透明度</td>
+<td>無第四方或完整揭露</td>
+<td>部分揭露</td>
+<td>不揭露或存在關鍵不可視第四方</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>事件通報能力</td>
+<td>明確24-72小時通報</td>
+<td>通報要求部分明確</td>
+<td>無明確通報或不承諾</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>退場可行性</td>
+<td>清楚資料返還/刪除與移轉</td>
+<td>退場條款部分明確</td>
+<td>退場困難、資料鎖定或無刪除證明</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI/雲端/跨境風險</td>
+<td>不涉及或條款完整</td>
+<td>部分涉及且待補</td>
+<td>涉及高風險但條款不足</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. 最終核准與簽約建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:25%;">檢核總分</th>
+<td>__________</td>
+</tr>
+<tr>
+<th>風險等級</th>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<th>簽約建議</th>
+<td>□ 建議簽約　□ 附條件簽約　□ 暫緩簽約　□ 不建議簽約　□ 需高層核准</td>
+</tr>
+<tr>
+<th>必要簽約前條件</th>
+<td></td>
+</tr>
+<tr>
+<th>簽約後追蹤事項</th>
+<td></td>
+</tr>
+<tr>
+<th>下次合約/供應商審查日</th>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. 核准簽署表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>意見</th>
+<th>簽核</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>採購負責人</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>服務Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CISO / 資安負責人</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS / GHG / 其他專項Owner（如適用）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>最高管理階層授權代表（如需）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. 合約條款範本引用檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>條款範本</th>
+<th>是否納入</th>
+<th>版本</th>
+<th>差異說明</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊安全要求附件</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>資料處理協議 DPA</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>DPO / 法務</td>
+</tr>
+<tr>
+<td>保密協議 NDA</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>法務</td>
+</tr>
+<tr>
+<td>雲端服務安全條款</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>Cloud Security Owner</td>
+</tr>
+<tr>
+<td>AI服務資料使用條款</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>事件通報與協作條款</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>CISO / SOC</td>
+</tr>
+<tr>
+<td>BCP/DR與SLA附件</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>BCMS / 服務Owner</td>
+</tr>
+<tr>
+<td>資料返還刪除與退場條款</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+<td>法務 / Data Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. KPI/KRI與合約資安條款監督指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標名稱</th>
+<th>目標/門檻</th>
+<th>資料來源</th>
+<th>頻率</th>
+<th>Owner</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>中高風險供應商合約資安檢核完成率</td>
+<td>100%</td>
+<td>本檢核表 / 採購系統</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>未完成不得簽約或續約</td>
+</tr>
+<tr>
+<td>高風險合約DPA完成率</td>
+<td>100%（適用時）</td>
+<td>法務/DPO紀錄</td>
+<td>每季</td>
+<td>DPO / 法務</td>
+<td>暫緩簽約或高層核准</td>
+</tr>
+<tr>
+<td>資安重大條款缺口未關閉數</td>
+<td>0或下降趨勢</td>
+<td>缺口追蹤表</td>
+<td>每月</td>
+<td>ISMS代表 / 法務</td>
+<td>升級CISO</td>
+</tr>
+<tr>
+<td>供應商事件通報條款涵蓋率</td>
+<td>≥ 95%</td>
+<td>合約審查紀錄</td>
+<td>每季</td>
+<td>SOC / 供應商管理</td>
+<td>補充附件或CAPA</td>
+</tr>
+<tr>
+<td>第四方揭露條款涵蓋率</td>
+<td>≥ 95%</td>
+<td>合約 / 第四方清冊</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>補正或風險接受</td>
+</tr>
+<tr>
+<td>AI服務資料訓練限制明確率</td>
+<td>100%（適用時）</td>
+<td>AI條款審查</td>
+<td>每季</td>
+<td>AI治理負責人</td>
+<td>限制使用或補約</td>
+</tr>
+<tr>
+<td>合約退場與資料刪除條款涵蓋率</td>
+<td>≥ 95%</td>
+<td>合約審查紀錄</td>
+<td>每季</td>
+<td>法務 / Data Owner</td>
+<td>補充條款</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>ISMS代表</th>
+<th>採購</th>
+<th>法務</th>
+<th>Data Owner</th>
+<th>DPO</th>
+<th>AI治理</th>
+<th>供應商管理</th>
+<th>服務Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>建立合約資安條款要求</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>執行合約條款初檢</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查資訊安全條款</td>
+<td>I</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查DPA與PII條款</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查AI條款</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查雲端與技術條款</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>審查第四方與供應鏈條款</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>核准附條件或風險接受</td>
+<td>A（重大）</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R（PII）</td>
+<td>R（AI）</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>追蹤缺口與補救</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>提交管理審查輸入</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本表單對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>供應商、ICT供應鏈、雲端、AI、法規與外部議題識別。</td>
+<td>第3、14、15、17章</td>
+<td>供應商管理 / ISMS代表</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>利害關係人、客戶、主管機關、資料主體與供應商要求。</td>
+<td>第16、23章</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>合約資安審查角色與責任。</td>
+<td>第0.1、37章</td>
+<td>CISO / 法務</td>
+</tr>
+<tr>
+<td>6.1.2</td>
+<td>合約條款缺口與供應商風險評估。</td>
+<td>第30、32章</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>6.1.3</td>
+<td>條款缺口風險處理、補償控制與風險接受。</td>
+<td>第30、31章</td>
+<td>CISO / Data Owner</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>合約、證據、檢核表與核准紀錄受控保存。</td>
+<td>第29、42章</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>供應商合約資安條款納入運作控制。</td>
+<td>第5-28章</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>供應商合約風險評鑑。</td>
+<td>第32章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>不可接受條款缺口納入風險處理。</td>
+<td>第30、31章</td>
+<td>風險Owner</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>合約資安條款KPI/KRI監督。</td>
+<td>第36章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>內部稽核查核合約條款檢核證據。</td>
+<td>第41章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>重大供應商合約缺口納入管理審查。</td>
+<td>第40章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>合約條款不足、事件或重複缺口導出CAPA。</td>
+<td>第30、44章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Annex A控制</th>
+<th>本表單對應內容</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.8</td>
+<td>專案與供應商導入合約資安要求。</td>
+<td>SOW、安全附件、專案合約審查</td>
+<td>PM / 採購</td>
+</tr>
+<tr>
+<td>A.5.10</td>
+<td>資訊與相關資產可接受使用條款。</td>
+<td>可接受使用與限制條款</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.12-A.5.14</td>
+<td>資訊分類、標示與傳輸條款。</td>
+<td>分類、標示、傳輸通道與加密條款</td>
+<td>Data Owner / IT</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取控制、身分、驗證資訊與權限條款。</td>
+<td>IAM、MFA、PAM、權限審查條款</td>
+<td>IT / CISO</td>
+</tr>
+<tr>
+<td>A.5.19</td>
+<td>供應商關係中的資訊安全。</td>
+<td>供應商安全條款、檢核表</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.20</td>
+<td>供應商服務協議中的資訊安全。</td>
+<td>SLA、安全附件、服務協議</td>
+<td>法務 / 採購</td>
+</tr>
+<tr>
+<td>A.5.21</td>
+<td>ICT供應鏈資訊安全。</td>
+<td>第四方、SBOM、供應鏈透明度條款</td>
+<td>供應商管理 / DevSecOps</td>
+</tr>
+<tr>
+<td>A.5.22</td>
+<td>供應商服務監控、審查與變更管理。</td>
+<td>稽核權、變更通知、證據提供條款</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.23</td>
+<td>雲端服務使用資訊安全。</td>
+<td>雲端共享責任、資料地區、加密與日誌條款</td>
+<td>Cloud Owner</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理與證據保全。</td>
+<td>事件通報、協作、證據、RCA與CAPA條款</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.30</td>
+<td>ICT營運持續就緒度。</td>
+<td>BCP/DR、RTO/RPO、SLA與演練條款</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.34</td>
+<td>法律、智慧財產、紀錄保護與PII。</td>
+<td>法規、DPA、IP、稽核證據與PII條款</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>A.8.30</td>
+<td>外包開發。</td>
+<td>Secure SDLC、SBOM、測試、交付與IP條款</td>
+<td>DevSecOps / 法務</td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入項目</th>
+<th>是否納入</th>
+<th>摘要</th>
+<th>責任角色</th>
+<th>提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>重大供應商合約資安條款缺口</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>ISMS代表 / 法務</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>高風險供應商附條件簽約或風險接受</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / 供應商管理</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>PII、AI、雲端、第四方或BCMS重大合約風險</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>專項Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商事件與合約通報條款不足趨勢</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / 供應商管理</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商合約資安審查資源與工具需求</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>採購 / CISO / 法務</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>稽核缺失、CAPA與重複性條款缺口</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CAPA負責人 / 稽核主管</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>檢核完整性</td>
+<td>中高風險供應商是否完成合約資安條款檢核？</td>
+<td>本檢核表、採購紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>供應商安全條款</td>
+<td>合約是否包含資訊安全、存取、加密、事件、稽核與退場要求？</td>
+<td>合約、安全附件</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>PII/DPA</td>
+<td>涉及PII時是否完成DPA與子處理者條款？</td>
+<td>DPA、DPO審查</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>AI/雲端條款</td>
+<td>涉及AI或雲端時是否完成資料使用、保留、共享責任與模型條款？</td>
+<td>AI/雲端條款、審查紀錄</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>第四方供應鏈</td>
+<td>合約是否要求第四方揭露、變更通知與同等義務流下？</td>
+<td>第四方清冊、合約條款</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>缺口處理</td>
+<td>條款缺口是否有補救計畫、風險接受或CAPA？</td>
+<td>缺口表、風險接受、CAPA</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>證據保存</td>
+<td>合約、檢核表、證據與核准紀錄是否受控保存？</td>
+<td>文件庫、版本、簽核紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>42. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准版合約資安條款檢核表</td>
+<td>供應商管理 / ISMS代表</td>
+<td>GRC / ISMS文件庫 / 採購系統</td>
+<td>合約終止後至少3年</td>
+<td>需保留審查、核准與版本紀錄。</td>
+</tr>
+<tr>
+<td>主合約、SOW、SLA、安全附件、NDA、DPA</td>
+<td>法務 / 採購</td>
+<td>合約管理系統</td>
+<td>合約終止後至少3年或依法規較長者</td>
+<td>需保存簽署版與所有附件。</td>
+</tr>
+<tr>
+<td>供應商安全證據</td>
+<td>供應商管理 / ISMS代表</td>
+<td>供應商文件庫</td>
+<td>證據到期後至少3年</td>
+<td>需追蹤證據有效期限。</td>
+</tr>
+<tr>
+<td>DPO/AI/BCMS/GHG專項審查紀錄</td>
+<td>專項Owner</td>
+<td>專項文件庫</td>
+<td>依專項要求</td>
+<td>涉及敏感資訊需限制存取。</td>
+</tr>
+<tr>
+<td>缺口、風險接受與CAPA紀錄</td>
+<td>ISMS代表 / CAPA負責人</td>
+<td>GRC / CAPA系統</td>
+<td>結案後至少3年</td>
+<td>重大風險需追蹤至關閉。</td>
+</tr>
+<tr>
+<td>管理審查輸入與決議</td>
+<td>ISMS代表</td>
+<td>管理審查文件庫</td>
+<td>至少3年</td>
+<td>高風險供應商議題需追蹤至關閉。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>43. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本表單對應要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27005</td>
+<td>供應商合約資安條款缺口之風險評估與處理。</td>
+<td>風險評分、缺口表、風險接受</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>ISO 31000</td>
+<td>供應商合約風險治理、監督、溝通與改善。</td>
+<td>KPI/KRI、管理審查</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701</td>
+<td>DPA、子處理者、跨境、PII事件與資料主體權利條款。</td>
+<td>DPA、DPIA、DPO審查</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001</td>
+<td>AI服務條款、資料使用、模型治理、人類監督與AI事件。</td>
+<td>AI條款審查、AI風險接受</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI供應鏈風險來源、事件、後果與控制。</td>
+<td>AI供應商風險評估</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>供應商BCP/DR、RTO/RPO、SLA、退場與替代方案。</td>
+<td>BCP/DR條款、SLA</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>合約資安條款檢核證據支援稽核追溯。</td>
+<td>檢核表、證據清單</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI供應商治理、責任、監督與資料使用決策。</td>
+<td>AI治理審查</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>供應商GHG資料來源、查證支援、揭露與資料保護條款。</td>
+<td>GHG條款、查證資料</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>44. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>是否觸發CAPA</th>
+<th>CAPA編號</th>
+<th>原因摘要</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高風險供應商未完成合約資安條款檢核即簽約</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>合約未包含事件通報、DPA、稽核權或退場等重大條款</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>供應商事件顯示合約條款不足或無法執行</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>重複出現合約資安條款缺口或補件逾期</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<h2>45. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的、使用原則與供應商基本資料完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>合約完整性、資安治理、資訊分類、存取控制、資料保護與傳輸條款完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>事件通報、弱點管理、安全開發、雲端、AI、PII/DPA與第四方條款完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>BCMS/DRP、稽核權、變更、保存刪除、保密/IP、法規/GHG條款完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監控日誌、遠端支援、違約責任、退場、證據清單與缺口補救完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>風險接受、風險評分、最終核准、條款範本、KPI/KRI與RACI完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>ISO條文、Annex A、管理審查、稽核提示、保存要求、整合標準與CAPA完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>46. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本表單之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>組織控制措施管理程序</td>
+<td>定義供應商、ICT供應鏈與雲端治理要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>供應商資訊安全登錄表</td>
+<td>提供供應商主檔、風險等級與服務範圍。</td>
+</tr>
+<tr>
+<td></td>
+<td>第四方供應鏈登錄表</td>
+<td>承接子處理者與第四方揭露條款。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務與AI服務清冊</td>
+<td>承接雲端與AI服務條款審查。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊傳輸安全作業指導書</td>
+<td>支援合約中資料傳輸與通道要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊安全風險登錄表</td>
+<td>承接供應商合約條款缺口與剩餘風險。</td>
+</tr>
+<tr>
+<td>ISMS-083系列</td>
+<td>資訊安全風險處理文件</td>
+<td>承接不可接受合約風險之處理與接受。</td>
+</tr>
+<tr>
+<td>ISMS-091/092/093/101系列</td>
+<td>監督量測、稽核、管理審查與CAPA</td>
+<td>承接KPI/KRI、稽核、管理審查與改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>48. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISMS供應商合約資訊安全條款檢核之正式企業級表單，可支援ISO/IEC 27001:2022 Annex A.5.19「Information security in supplier relationships」、A.5.20「Addressing information security within supplier agreements」、A.5.21「Managing information security in the ICT supply chain」、A.5.22「Monitoring, review and change management of supplier services」與A.5.23「Information security for use of cloud services」之證據要求。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

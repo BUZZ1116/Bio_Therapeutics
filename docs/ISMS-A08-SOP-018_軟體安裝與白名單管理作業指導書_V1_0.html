@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-018 軟體安裝與白名單管理作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-018 軟體安裝與白名單管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-018</td>
+<td>軟體安裝與白名單管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-018</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Endpoint Security Owner / Software Asset Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / IT Helpdesk Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>端點安全審查</td>
+<td></td>
+<td>Endpoint Security Owner / SOC Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>採購與法務審查</td>
+<td></td>
+<td>Procurement / Legal / License Compliance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps與開發工具審查</td>
+<td></td>
+<td>DevSecOps Owner / Application Security Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理與隱私審查</td>
+<td></td>
+<td>Data Owner / DPO（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / Endpoint Security主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範軟體安裝、軟體白名單、封鎖清單、授權合規、軟體資產清冊、安裝申請、風險評估、測試驗證、部署、維護、移除、例外與稽核要求，以防止未授權軟體、惡意軟體、破解軟體、盜版軟體、風險工具、未核准AI工具、未受控遠端管理工具、弱點軟體及供應鏈高風險元件進入組織環境。</p>
+<p>本文件旨在建立軟體生命週期管理與應用程式控制機制，確保軟體之來源、用途、授權、版本、弱點、資料存取、網路連線、特權需求、AI與隱私風險均經適當審查，並與端點防護、MDM、EDR、IAM、DLP、弱點管理、採購、法務、供應商管理及內部稽核流程整合。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>組織設備與系統原則上僅得安裝、執行或使用經核准之軟體；非核准軟體應阻擋、移除或依例外流程處理。</li>
+<li>軟體安裝應遵循最小權限、集中部署、版本控管、來源驗證、授權合規、弱點檢查及安全測試原則。</li>
+<li>使用者不得自行下載、安裝、執行或攜入未核准軟體、破解工具、序號產生器、可繞過監控之工具、未核准遠端管理工具、未核准AI工具或高風險瀏覽器外掛。</li>
+<li>白名單規則應以軟體名稱、版本、發行者、簽章、Hash、路徑、來源、使用者群組、設備群組及業務用途為依據，避免過度寬鬆。</li>
+<li>軟體例外應具備業務必要性、風險評估、補償控制、核准、期限與重評，不得以永久例外替代正式核准與治理。</li>
+<li>軟體移除、退場或授權到期時，應同步處理設定檔、暫存資料、服務帳號、網路規則、瀏覽器外掛、資料留存與供應商存取。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體白名單</td>
+<td>經核准可安裝、執行、更新或使用之軟體清單、規則或控制政策。</td>
+</tr>
+<tr>
+<td>應用程式控制</td>
+<td>透過端點、作業系統、MDM、EDR、App Control或其他工具限制可執行程式之技術控制。</td>
+</tr>
+<tr>
+<td>封鎖清單</td>
+<td>已知不允許安裝或執行之軟體、工具、Hash、發行者、路徑、套件、外掛或服務清單。</td>
+</tr>
+<tr>
+<td>未授權軟體</td>
+<td>未經組織核准、未登錄、未授權、未符合安全要求或不具業務必要性之軟體。</td>
+</tr>
+<tr>
+<td>影子IT軟體</td>
+<td>未經IT、安全、採購或法務核准而由使用者自行導入或使用之軟體或SaaS。</td>
+</tr>
+<tr>
+<td>特權安裝</td>
+<td>需本機管理員、Root、sudo、MDM特權、系統服務權限或安全例外方可安裝之軟體安裝活動。</td>
+</tr>
+<tr>
+<td>開源軟體</td>
+<td>以開源授權發布之軟體、套件、Library、工具、框架、模型或容器映像。</td>
+</tr>
+<tr>
+<td>瀏覽器外掛</td>
+<td>安裝於瀏覽器內之Extension、Plugin或Add-on，可能存取網頁內容、剪貼簿、憑證或資料。</td>
+</tr>
+<tr>
+<td>AI工具</td>
+<td>生成式AI、程式碼輔助、資料分析、模型工具、Prompt工具、RAG工具或AI SaaS應用。</td>
+</tr>
+<tr>
+<td>軟體資產清冊</td>
+<td>記錄軟體名稱、版本、Owner、授權、設備、用途、風險、弱點、到期與狀態之清冊。</td>
+</tr>
+<tr>
+<td>軟體供應鏈風險</td>
+<td>由軟體來源、開源套件、供應商、更新機制、簽章、建置流程或依賴元件所導致之安全風險。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准軟體安裝與白名單政策、高風險軟體、例外、風險接受與重大事件處置。</td>
+<td>核准紀錄、風險接受、事件決策。</td>
+</tr>
+<tr>
+<td>Software Asset Management Owner</td>
+<td>維護軟體資產清冊、授權狀態、使用範圍、到期與退場追蹤。</td>
+<td>軟體清冊、授權紀錄。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>設計與維護應用程式控制、白名單、封鎖清單、EDR/MDM政策與端點執行限制。</td>
+<td>EDR/MDM設定、白名單紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations / IT Helpdesk</td>
+<td>受理安裝申請、部署核准軟體、移除未授權軟體、支援使用者與維護標準軟體包。</td>
+<td>服務單、部署紀錄。</td>
+</tr>
+<tr>
+<td>Procurement / Legal</td>
+<td>審查軟體採購、授權條款、開源授權、資料處理、供應商合約與使用限制。</td>
+<td>採購紀錄、合約與授權審查。</td>
+</tr>
+<tr>
+<td>System / Business Owner</td>
+<td>提出業務需求、確認用途、資料分類、使用者範圍、成本與風險接受。</td>
+<td>需求與核准紀錄。</td>
+</tr>
+<tr>
+<td>Application Security / DevSecOps</td>
+<td>審查開發工具、開源套件、容器、CI/CD工具、程式碼輔助與供應鏈風險。</td>
+<td>安全審查與掃描報告。</td>
+</tr>
+<tr>
+<td>Data Owner / DPO</td>
+<td>審查軟體是否處理PII、客戶資料、跨境、資料上傳、同步或隱私影響。</td>
+<td>資料與隱私審查紀錄。</td>
+</tr>
+<tr>
+<td>AI Governance Owner</td>
+<td>審查AI工具、模型工具、AI程式碼輔助、資料不訓練、Prompt保存與AI風險。</td>
+<td>AI工具核准紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Incident Response</td>
+<td>監控未授權軟體、惡意軟體、封鎖事件、可疑安裝、資料外洩與事件調查。</td>
+<td>告警、事件紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查軟體清冊、白名單規則、授權、例外、未授權軟體與控制有效性。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 軟體分類與預設處置</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>軟體分類</th>
+<th>範例</th>
+<th>預設處置</th>
+<th>核准要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>標準辦公軟體</td>
+<td>辦公套件、PDF工具、瀏覽器、會議軟體。</td>
+<td>集中部署或核准清單允許。</td>
+<td>IT Owner核准，授權合規。</td>
+</tr>
+<tr>
+<td>業務專用軟體</td>
+<td>ERP客戶端、財務工具、設計軟體、專業分析工具。</td>
+<td>依業務Owner與授權核准。</td>
+<td>Business Owner、IT、Procurement核准。</td>
+</tr>
+<tr>
+<td>開發工具</td>
+<td>IDE、SDK、Compiler、套件管理器、DB工具、API測試工具。</td>
+<td>依開發角色與環境允許。</td>
+<td>DevSecOps/AppSec審查。</td>
+</tr>
+<tr>
+<td>系統工具</td>
+<td>壓縮、遠端管理、磁碟、網路掃描、管理工具。</td>
+<td>限制或需特權核准。</td>
+<td>IT/Security核准。</td>
+</tr>
+<tr>
+<td>安全工具</td>
+<td>掃描、封包分析、惡意樣本分析、滲透測試工具。</td>
+<td>限資安人員與隔離環境使用。</td>
+<td>CISO/SOC核准。</td>
+</tr>
+<tr>
+<td>AI工具</td>
+<td>生成式AI、程式碼輔助、AI資料分析、模型工具。</td>
+<td>未核准預設阻擋或限制。</td>
+<td>AI Governance、CISO、Data Owner視情況核准。</td>
+</tr>
+<tr>
+<td>瀏覽器外掛</td>
+<td>密碼管理、翻譯、截圖、AI外掛、資料擷取外掛。</td>
+<td>白名單管理，未核准禁止。</td>
+<td>Endpoint Security與Data Owner視風險核准。</td>
+</tr>
+<tr>
+<td>雲端同步/分享工具</td>
+<td>個人雲端、P2P同步、檔案分享。</td>
+<td>未核准禁止。</td>
+<td>Data Owner、CISO核准。</td>
+</tr>
+<tr>
+<td>遠端控制工具</td>
+<td>遠端桌面、RMM、VPN、Tunnel、Proxy工具。</td>
+<td>未核准禁止。</td>
+<td>IT、CISO核准。</td>
+</tr>
+<tr>
+<td>破解/盜版/繞控工具</td>
+<td>Keygen、Crack、盜版軟體、規避監控工具。</td>
+<td>禁止。</td>
+<td>無例外，必要時事件處理。</td>
+</tr>
+<tr>
+<td>高風險未知軟體</td>
+<td>來源不明、未簽章、低信譽、過期或含已知重大弱點。</td>
+<td>阻擋或隔離。</td>
+<td>CISO核准例外。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 軟體安裝與白名單管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 安裝需求提出</td>
+<td>申請人說明軟體名稱、版本、來源、用途、使用者、設備、資料類型、期限與授權需求。</td>
+<td>申請人 / Business Owner</td>
+<td>軟體安裝申請單。</td>
+</tr>
+<tr>
+<td>2. 初步審查</td>
+<td>確認是否已有核准替代軟體、是否屬標準軟體、是否需採購與授權。</td>
+<td>IT Helpdesk / SAM Owner</td>
+<td>初審紀錄。</td>
+</tr>
+<tr>
+<td>3. 安全風險評估</td>
+<td>評估來源、簽章、Hash、弱點、權限、網路連線、資料存取、AI/雲端/供應鏈風險。</td>
+<td>Endpoint Security / AppSec / CISO</td>
+<td>安全評估紀錄。</td>
+</tr>
+<tr>
+<td>4. 法務與授權審查</td>
+<td>確認授權條款、開源授權、使用範圍、商用限制、資料處理與合約義務。</td>
+<td>Procurement / Legal</td>
+<td>授權審查紀錄。</td>
+</tr>
+<tr>
+<td>5. 隱私與AI審查</td>
+<td>涉及PII、客戶資料、雲端同步、AI、Prompt或資料上傳時審查。</td>
+<td>DPO / Data Owner / AI Governance</td>
+<td>資料與AI審查紀錄。</td>
+</tr>
+<tr>
+<td>6. 測試與封裝</td>
+<td>於受控環境測試安裝、相容性、弱點、EDR告警、網路行為與移除程序。</td>
+<td>IT / Endpoint Security</td>
+<td>測試與封裝紀錄。</td>
+</tr>
+<tr>
+<td>7. 核准與白名單設定</td>
+<td>依風險取得核准，設定白名單條件與適用對象。</td>
+<td>CISO / IT / Endpoint Security</td>
+<td>核准與白名單紀錄。</td>
+</tr>
+<tr>
+<td>8. 部署與使用</td>
+<td>透過MDM、軟體中心、套件管理或受控方式部署，不鼓勵手動安裝。</td>
+<td>IT Operations</td>
+<td>部署紀錄。</td>
+</tr>
+<tr>
+<td>9. 監控與維護</td>
+<td>監控版本、弱點、授權、使用、異常行為與更新。</td>
+<td>SAM / SOC / IT</td>
+<td>監控與修補紀錄。</td>
+</tr>
+<tr>
+<td>10. 退場與移除</td>
+<td>軟體不再需要、授權到期或風險不可接受時移除並更新清冊。</td>
+<td>IT / SAM Owner</td>
+<td>移除與退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 軟體安裝申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>SW-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>軟體名稱 / 版本</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商 / 發行者</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>下載來源 / 官方網址</td>
+<td></td>
+<td>不得填寫不可信來源。</td>
+</tr>
+<tr>
+<td>業務用途</td>
+<td></td>
+<td>說明必要性與替代方案。</td>
+</tr>
+<tr>
+<td>使用者 / 設備範圍</td>
+<td>□ 個人 □ 部門 □ 專案 □ 全公司 □ 伺服器 □ 開發環境 □ AI/MLOps</td>
+<td></td>
+</tr>
+<tr>
+<td>資料類型</td>
+<td>□ 無資料 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需特權安裝</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>是否需對外連線</td>
+<td>□ 否 □ 是，目的地：______</td>
+<td></td>
+</tr>
+<tr>
+<td>是否含AI功能或雲端同步</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>授權類型</td>
+<td>□ 商業 □ 免費 □ 開源 □ 試用 □ SaaS □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>使用期限</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td>臨時軟體需到期日。</td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Business Owner / IT / Security / Legal / DPO / AI Governance / CISO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 軟體安全評估項目</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估領域</th>
+<th>評估問題</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>來源可信度</td>
+<td>是否來自官方網站、核准套件倉庫、企業市集或可信供應商？</td>
+<td>來源不明者不得安裝。</td>
+</tr>
+<tr>
+<td>數位簽章</td>
+<td>安裝檔是否具有效簽章、可信發行者與未遭竄改？</td>
+<td>未簽章或簽章異常需加強審查。</td>
+</tr>
+<tr>
+<td>Hash與完整性</td>
+<td>是否可驗證Hash或Checksum？</td>
+<td>高風險軟體需保存Hash。</td>
+</tr>
+<tr>
+<td>弱點狀態</td>
+<td>是否存在Critical/High CVE或已知被利用弱點？</td>
+<td>未修復重大弱點原則不得核准。</td>
+</tr>
+<tr>
+<td>授權合規</td>
+<td>授權是否允許商用、內部使用、修改、散布或雲端部署？</td>
+<td>Legal/Procurement審查。</td>
+</tr>
+<tr>
+<td>資料存取</td>
+<td>是否可存取檔案、剪貼簿、Email、瀏覽器資料、PII或客戶資料？</td>
+<td>需Data Owner/DPO審查。</td>
+</tr>
+<tr>
+<td>網路行為</td>
+<td>是否需連接外部API、雲端、遙測、更新伺服器或未知網域？</td>
+<td>需網路與DLP控制。</td>
+</tr>
+<tr>
+<td>權限需求</td>
+<td>是否需要本機管理員、Root、Kernel Extension、Driver或系統服務？</td>
+<td>需特權安裝與安全審查。</td>
+</tr>
+<tr>
+<td>供應鏈風險</td>
+<td>是否使用第三方套件、Auto-update、插件、腳本或模型下載？</td>
+<td>需供應鏈評估。</td>
+</tr>
+<tr>
+<td>AI風險</td>
+<td>是否含生成式AI、模型訓練、Prompt保存、資料上傳或資料不訓練條款？</td>
+<td>需AI Governance審查。</td>
+</tr>
+<tr>
+<td>移除能力</td>
+<td>是否可完整移除軟體、Agent、驅動、外掛、設定與資料？</td>
+<td>需退場程序。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 白名單規則設計要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>規則項目</th>
+<th>最低要求</th>
+<th>避免事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體名稱與版本</td>
+<td>白名單應指定核准名稱與版本範圍。</td>
+<td>避免允許所有版本或未知版本。</td>
+</tr>
+<tr>
+<td>發行者簽章</td>
+<td>優先依可信發行者與簽章控管。</td>
+<td>不得將不可信或過寬發行者完全信任。</td>
+</tr>
+<tr>
+<td>Hash控制</td>
+<td>對高風險、固定版本、特定工具應使用Hash白名單。</td>
+<td>避免使用路徑白名單取代Hash。</td>
+</tr>
+<tr>
+<td>安裝路徑</td>
+<td>限制標準安裝路徑與不可寫入路徑。</td>
+<td>避免允許使用者可寫目錄執行。</td>
+</tr>
+<tr>
+<td>使用者群組</td>
+<td>依角色、部門、設備群組、專案或環境限制。</td>
+<td>避免全公司開放不必要軟體。</td>
+</tr>
+<tr>
+<td>設備範圍</td>
+<td>依受管理設備、伺服器、開發工作站或隔離環境限制。</td>
+<td>避免BYOD或未知裝置使用高風險軟體。</td>
+</tr>
+<tr>
+<td>網路目的地</td>
+<td>需外連之軟體應限定目的地、協定、埠號與Proxy。</td>
+<td>避免任意Egress。</td>
+</tr>
+<tr>
+<td>到期日</td>
+<td>臨時白名單應設定到期日與自動重評。</td>
+<td>避免永久例外。</td>
+</tr>
+<tr>
+<td>審計日誌</td>
+<td>白名單命中、阻擋、例外與規則變更需記錄。</td>
+<td>避免無法追溯。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 封鎖清單與禁止軟體管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>禁止 / 限制類型</th>
+<th>處置要求</th>
+<th>補充說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>破解、盜版與Keygen</td>
+<td>立即阻擋、移除並依違規或事件程序處理。</td>
+<td>涉及法律與惡意程式風險。</td>
+</tr>
+<tr>
+<td>未核准遠端控制工具</td>
+<td>阻擋或移除；若業務需要需正式核准與日誌。</td>
+<td>避免未授權遠端存取。</td>
+</tr>
+<tr>
+<td>匿名代理與繞控工具</td>
+<td>阻擋或移除。</td>
+<td>避免規避網頁過濾、DLP與監控。</td>
+</tr>
+<tr>
+<td>未核准AI工具</td>
+<td>阻擋、限制或要求改用核准工具。</td>
+<td>避免資料、Prompt、Secrets外洩。</td>
+</tr>
+<tr>
+<td>個人雲端同步工具</td>
+<td>未核准者阻擋或限制同步。</td>
+<td>避免資料外傳。</td>
+</tr>
+<tr>
+<td>高風險瀏覽器外掛</td>
+<td>阻擋或移除可讀取全部網站、剪貼簿、密碼或資料之外掛。</td>
+<td>需外掛白名單。</td>
+</tr>
+<tr>
+<td>已知惡意或低信譽軟體</td>
+<td>阻擋、隔離、移除並檢查IOC。</td>
+<td>需SOC調查。</td>
+</tr>
+<tr>
+<td>過期與不支援軟體</td>
+<td>限制使用、升級或退場。</td>
+<td>若無法退場需風險接受。</td>
+</tr>
+<tr>
+<td>未授權套件管理器或腳本</td>
+<td>限制可使用之套件來源、Registry與執行政策。</td>
+<td>防止供應鏈攻擊。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 特權安裝與管理員權限控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>本機管理員限制</td>
+<td>一般使用者不得長期持有本機管理員權限。</td>
+<td>端點權限報告。</td>
+</tr>
+<tr>
+<td>JIT特權</td>
+<td>需要安裝時應使用Just-in-Time、臨時提權或IT代安裝。</td>
+<td>JIT紀錄。</td>
+</tr>
+<tr>
+<td>安裝審批</td>
+<td>特權安裝需有服務單、核准、軟體評估與安裝紀錄。</td>
+<td>安裝工單。</td>
+</tr>
+<tr>
+<td>系統服務</td>
+<td>安裝背景服務、Driver、Kernel Extension、Agent需安全審查。</td>
+<td>審查紀錄。</td>
+</tr>
+<tr>
+<td>安裝來源</td>
+<td>安裝檔應由IT軟體庫、MDM、套件管理或官方來源取得。</td>
+<td>來源紀錄。</td>
+</tr>
+<tr>
+<td>安裝日誌</td>
+<td>安裝、失敗、提權、修改系統設定與重啟需記錄。</td>
+<td>端點日誌。</td>
+</tr>
+<tr>
+<td>事後檢查</td>
+<td>安裝後確認EDR狀態、弱點、網路連線、服務與自動啟動項。</td>
+<td>驗證紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 開發工具、開源套件與供應鏈控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>開發工具清單</td>
+<td>IDE、SDK、Compiler、DB工具、API工具、套件管理器需依角色核准。</td>
+<td>開發工具白名單。</td>
+</tr>
+<tr>
+<td>套件來源</td>
+<td>使用核准Registry、Mirror或套件來源，限制未知或個人來源。</td>
+<td>套件政策。</td>
+</tr>
+<tr>
+<td>開源授權</td>
+<td>開源軟體與套件需依用途檢查授權與商用限制。</td>
+<td>授權審查。</td>
+</tr>
+<tr>
+<td>SCA掃描</td>
+<td>開發專案使用之套件應納入SCA與弱點管理。</td>
+<td>SCA報告。</td>
+</tr>
+<tr>
+<td>惡意套件防護</td>
+<td>限制Typosquatting、Dependency Confusion與惡意Script風險。</td>
+<td>套件安全設定。</td>
+</tr>
+<tr>
+<td>容器映像</td>
+<td>開發/測試/正式使用映像需來自核准Registry並掃描弱點。</td>
+<td>容器掃描報告。</td>
+</tr>
+<tr>
+<td>程式碼輔助AI</td>
+<td>AI程式碼工具需核准，限制上傳敏感程式碼與Secrets。</td>
+<td>AI工具核准紀錄。</td>
+</tr>
+<tr>
+<td>建置工具</td>
+<td>CI/CD Runner與建置工具需白名單、版本控管與Secrets保護。</td>
+<td>CI/CD設定。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. AI工具與SaaS軟體安裝/使用要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>安全要求</th>
+<th>核准角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>生成式AI桌面/瀏覽器工具</td>
+<td>需確認資料不訓練、Prompt保存、資料上傳、外掛權限與企業管理能力。</td>
+<td>AI Governance / CISO / Data Owner。</td>
+</tr>
+<tr>
+<td>AI程式碼輔助工具</td>
+<td>需限制上傳未授權原始碼、Secrets、客戶資料與高機密資料。</td>
+<td>DevSecOps / AppSec / AI Governance。</td>
+</tr>
+<tr>
+<td>AI資料分析工具</td>
+<td>涉及資料上傳、模型訓練或外部處理時需DPO/Data Owner審查。</td>
+<td>Data Owner / DPO / AI Governance。</td>
+</tr>
+<tr>
+<td>瀏覽器AI外掛</td>
+<td>需檢查可讀取網站內容、剪貼簿、帳密、Email或文件權限。</td>
+<td>Endpoint Security / DPO。</td>
+</tr>
+<tr>
+<td>SaaS客戶端</td>
+<td>需確認合約、DPA、資料地區、帳號管理、SSO、MFA與退場。</td>
+<td>SaaS Owner / Legal / CISO。</td>
+</tr>
+<tr>
+<td>模型或Embedding工具</td>
+<td>需確認來源、授權、模型安全、資料保存與輸出風險。</td>
+<td>AI Governance / Legal。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 軟體部署、更新與修補要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>集中部署</td>
+<td>標準軟體應透過MDM、軟體中心、套件管理、GPO或端點管理工具部署。</td>
+<td>部署紀錄。</td>
+</tr>
+<tr>
+<td>版本標準化</td>
+<td>同類軟體應維持核准版本，降低版本分散與弱點管理困難。</td>
+<td>版本報表。</td>
+</tr>
+<tr>
+<td>自動更新</td>
+<td>允許自動更新之軟體需確認來源可信、簽章驗證與相容性。</td>
+<td>更新設定。</td>
+</tr>
+<tr>
+<td>修補SLA</td>
+<td>含弱點軟體應依弱點分級與SLA完成更新或移除。</td>
+<td>修補紀錄。</td>
+</tr>
+<tr>
+<td>更新測試</td>
+<td>關鍵軟體、驅動、EDR、VPN、瀏覽器、開發工具更新前需測試。</td>
+<td>測試紀錄。</td>
+</tr>
+<tr>
+<td>回復機制</td>
+<td>高風險部署需有回復、解除安裝或版本回退方案。</td>
+<td>回復計畫。</td>
+</tr>
+<tr>
+<td>授權到期</td>
+<td>授權到期前需續約、替換或退場。</td>
+<td>授權清冊。</td>
+</tr>
+<tr>
+<td>停用軟體</td>
+<td>不支援、停止維護或高風險軟體應移除或風險接受。</td>
+<td>退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 軟體資產清冊欄位要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體編號</td>
+<td>SW-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>軟體名稱 / 版本</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>發行者 / 供應商</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>授權類型</td>
+<td>□ 商業 □ 免費 □ 開源 □ 試用 □ SaaS □ 內部開發</td>
+<td></td>
+</tr>
+<tr>
+<td>Owner</td>
+<td></td>
+<td>Business/Technical Owner。</td>
+</tr>
+<tr>
+<td>用途</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>適用設備 / 群組</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 無 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>安裝方式</td>
+<td>□ MDM □ 軟體中心 □ IT代安裝 □ 套件管理 □ 手動核准 □ SaaS Client</td>
+<td></td>
+</tr>
+<tr>
+<td>白名單條件</td>
+<td>簽章 / Hash / 路徑 / 群組 / 版本 / 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點狀態</td>
+<td>□ 無重大弱點 □ 有待修補 □ 風險接受 □ 已退場</td>
+<td></td>
+</tr>
+<tr>
+<td>授權到期日</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>下次審查日</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>狀態</td>
+<td>□ 核准使用 □ 限制使用 □ 暫停 □ 退場中 □ 禁止</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>16. 軟體白名單規則清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>規則編號</th>
+<th>軟體名稱</th>
+<th>版本 / Hash / 發行者</th>
+<th>適用對象</th>
+<th>設備範圍</th>
+<th>處置</th>
+<th>Owner</th>
+<th>生效日期</th>
+<th>到期日</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>WL-0001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 限制 □ 封鎖 □ 監控</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+<tr>
+<td>WL-0002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 限制 □ 封鎖 □ 監控</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+<tr>
+<td>WL-0003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 限制 □ 封鎖 □ 監控</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 監控、偵測與事件處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控項目</th>
+<th>異常情境</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未授權安裝</td>
+<td>端點偵測到未核准軟體、外掛或工具。</td>
+<td>阻擋或移除，通知使用者與Owner。</td>
+</tr>
+<tr>
+<td>封鎖清單命中</td>
+<td>執行破解、惡意、未核准遠端控制或繞控工具。</td>
+<td>隔離端點並依事件程序處理。</td>
+</tr>
+<tr>
+<td>高風險軟體行為</td>
+<td>軟體大量讀取檔案、外傳資料、注入程序、建立持久化。</td>
+<td>SOC調查、EDR隔離、取證。</td>
+</tr>
+<tr>
+<td>Secrets外洩</td>
+<td>軟體或外掛存取/上傳Secrets、Token或憑證。</td>
+<td>撤銷輪替並啟動事件。</td>
+</tr>
+<tr>
+<td>AI工具誤用</td>
+<td>使用未核准AI工具處理PII、客戶資料、原始碼或Secrets。</td>
+<td>依AI政策與事件程序處理。</td>
+</tr>
+<tr>
+<td>授權違規</td>
+<td>發現超量安裝、未授權使用、試用到期或盜版。</td>
+<td>移除、補授權或法務處理。</td>
+</tr>
+<tr>
+<td>弱點逾期</td>
+<td>軟體含Critical/High弱點且未於SLA修補。</td>
+<td>升級風險，限制或移除。</td>
+</tr>
+<tr>
+<td>白名單繞過</td>
+<td>使用者嘗試改名、改路徑、腳本或可寫路徑繞過規則。</td>
+<td>修正規則並依違規程序處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需安裝未核准軟體</td>
+<td>需業務必要性、安全評估、授權審查、限制範圍與期限。</td>
+<td>CISO / IT Owner / Business Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>需使用含重大弱點軟體</td>
+<td>需補償控制、隔離、監控、修補計畫與風險接受。</td>
+<td>CISO / System Owner</td>
+<td>Critical最長30日，High最長60日。</td>
+</tr>
+<tr>
+<td>需長期本機管理員</td>
+<td>原則不允許；需JIT替代評估、補償控制、監控與定期審查。</td>
+<td>CISO / IT主管</td>
+<td>最長90日重評。</td>
+</tr>
+<tr>
+<td>需使用未核准AI工具</td>
+<td>需AI風險評估、資料不訓練、DLP限制與Data Owner核准。</td>
+<td>AI Governance / CISO / Data Owner</td>
+<td>最長90日。</td>
+</tr>
+<tr>
+<td>需使用未簽章或來源特殊軟體</td>
+<td>需Hash白名單、隔離測試、供應商確認與監控。</td>
+<td>CISO / Endpoint Security</td>
+<td>最短期限。</td>
+</tr>
+<tr>
+<td>需安裝特權Driver或Kernel Extension</td>
+<td>需安全審查、測試、供應商評估與回復計畫。</td>
+<td>CISO / IT Operations</td>
+<td>依案件核准。</td>
+</tr>
+<tr>
+<td>授權暫時不足</td>
+<td>需採購計畫、限制使用人數與期限，不得以盜版替代。</td>
+<td>Procurement / Legal / Business Owner</td>
+<td>最長30至60日。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 軟體退場與移除要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>退場項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求確認</td>
+<td>確認軟體不再需要、授權到期、風險不可接受或已有替代工具。</td>
+<td>退場申請。</td>
+</tr>
+<tr>
+<td>使用者通知</td>
+<td>通知受影響使用者、替代方案、時間表與資料備份要求。</td>
+<td>通知紀錄。</td>
+</tr>
+<tr>
+<td>資料處理</td>
+<td>確認軟體保存之本機資料、雲端同步資料、Cache、設定與輸出檔已處理。</td>
+<td>資料清理紀錄。</td>
+</tr>
+<tr>
+<td>軟體移除</td>
+<td>透過受控工具移除軟體、服務、Agent、Driver、外掛與自動啟動項。</td>
+<td>移除紀錄。</td>
+</tr>
+<tr>
+<td>權限與Secrets</td>
+<td>撤銷服務帳號、API Key、Token、憑證與外部連線。</td>
+<td>撤權與輪替紀錄。</td>
+</tr>
+<tr>
+<td>白名單更新</td>
+<td>移除白名單或改為封鎖清單。</td>
+<td>白名單變更。</td>
+</tr>
+<tr>
+<td>授權結束</td>
+<td>取消訂閱、回收授權、確認合約終止或保存義務。</td>
+<td>授權/合約紀錄。</td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>更新軟體資產清冊、風險登錄與例外狀態。</td>
+<td>清冊更新紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 軟體安裝與白名單檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求合理性</td>
+<td>是否具備明確業務用途與替代方案評估？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>來源可信</td>
+<td>是否來自官方、核准市集、企業軟體庫或可信供應商？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>授權合規</td>
+<td>是否已確認商用、開源、試用或SaaS授權合規？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點檢查</td>
+<td>是否確認無未處理Critical/High弱點？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>簽章與完整性</td>
+<td>是否確認簽章、Hash或完整性？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料風險</td>
+<td>是否評估資料存取、PII、客戶資料、AI資料與雲端上傳？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>特權需求</td>
+<td>是否評估本機管理員、Driver、服務、Kernel Extension或系統權限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>網路行為</td>
+<td>是否評估外部連線、Proxy、API、更新伺服器與遙測？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>白名單精準度</td>
+<td>白名單是否限制版本、簽章、Hash、群組、路徑與期限？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監控與日誌</td>
+<td>是否啟用安裝、執行、封鎖、更新與異常行為監控？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>退場機制</td>
+<td>是否定義移除、資料清理、授權回收與白名單移除方式？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>21. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體安裝申請</td>
+<td>申請人、軟體、版本、用途、資料分類、核准、期限與部署範圍。</td>
+<td>IT Helpdesk / SAM Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>軟體資產清冊</td>
+<td>軟體名稱、版本、Owner、授權、設備、風險、狀態、到期與退場。</td>
+<td>SAM Owner</td>
+<td>軟體有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>白名單與封鎖規則</td>
+<td>規則內容、適用範圍、核准、變更、到期、命中與例外。</td>
+<td>Endpoint Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>安全評估紀錄</td>
+<td>來源、簽章、Hash、弱點、資料、AI、網路、供應鏈與特權評估。</td>
+<td>Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>授權與合約紀錄</td>
+<td>採購、授權、開源授權、SaaS合約、DPA與使用限制。</td>
+<td>Procurement / Legal</td>
+<td>合約期間及終止後至少7年或依法規。</td>
+</tr>
+<tr>
+<td>監控與事件紀錄</td>
+<td>未授權軟體、封鎖、惡意軟體、授權違規、AI誤用與例外事件。</td>
+<td>SOC / Endpoint Security</td>
+<td>至少3至7年依事件等級。</td>
+</tr>
+<tr>
+<td>退場與移除紀錄</td>
+<td>軟體移除、授權回收、資料清理、Secrets撤銷與清冊更新。</td>
+<td>IT / SAM Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體清冊完整率</td>
+<td>已登錄軟體 / 應登錄軟體。</td>
+<td>目標100%。</td>
+<td>軟體資產治理。</td>
+</tr>
+<tr>
+<td>未授權軟體數</td>
+<td>端點或伺服器發現未核准軟體數。</td>
+<td>目標0或持續下降。</td>
+<td>控制有效性。</td>
+</tr>
+<tr>
+<td>白名單覆蓋率</td>
+<td>受應用程式控制管理之端點或伺服器比例。</td>
+<td>高風險設備目標100%。</td>
+<td>應用程式控制。</td>
+</tr>
+<tr>
+<td>Critical/High弱點軟體逾期數</td>
+<td>含重大弱點且超過SLA未修補或未移除之軟體數。</td>
+<td>目標0。</td>
+<td>弱點風險。</td>
+</tr>
+<tr>
+<td>授權違規數</td>
+<td>超量、盜版、試用到期或授權不符事件數。</td>
+<td>目標0。</td>
+<td>法務與合規。</td>
+</tr>
+<tr>
+<td>高風險例外數</td>
+<td>未核准AI、遠端工具、特權軟體或弱點軟體例外數。</td>
+<td>需管理審查。</td>
+<td>剩餘風險。</td>
+</tr>
+<tr>
+<td>過期例外數</td>
+<td>到期未重評或未關閉之軟體例外數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>AI工具違規使用數</td>
+<td>未核准AI工具安裝或使用事件數。</td>
+<td>目標0。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>退場完成率</td>
+<td>應退場軟體完成移除、授權回收與清冊更新比例。</td>
+<td>目標100%。</td>
+<td>生命週期管理。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>軟體清冊</td>
+<td>軟體是否完整登錄版本、Owner、授權、設備、風險與狀態。</td>
+<td>軟體資產清冊。</td>
+</tr>
+<tr>
+<td>安裝申請</td>
+<td>抽樣軟體是否具備申請、業務用途、安全審查與核准。</td>
+<td>安裝申請單。</td>
+</tr>
+<tr>
+<td>白名單控制</td>
+<td>端點與伺服器是否套用白名單或等效應用程式控制。</td>
+<td>EDR/MDM/App Control報告。</td>
+</tr>
+<tr>
+<td>封鎖清單</td>
+<td>高風險、破解、未核准遠端工具、未核准AI工具是否被阻擋。</td>
+<td>封鎖清單與告警。</td>
+</tr>
+<tr>
+<td>授權合規</td>
+<td>商業與開源軟體是否符合授權要求。</td>
+<td>採購與授權紀錄。</td>
+</tr>
+<tr>
+<td>弱點修補</td>
+<td>軟體版本是否無逾期Critical/High弱點。</td>
+<td>弱點報告與修補紀錄。</td>
+</tr>
+<tr>
+<td>特權安裝</td>
+<td>本機管理員、Driver、系統服務安裝是否受控。</td>
+<td>JIT/PAM/工單紀錄。</td>
+</tr>
+<tr>
+<td>AI與資料風險</td>
+<td>AI工具與資料上傳軟體是否完成AI、DPO與Data Owner審查。</td>
+<td>AI核准與DPIA。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>軟體例外是否有期限、補償控制、核准與重評。</td>
+<td>例外紀錄。</td>
+</tr>
+<tr>
+<td>退場移除</td>
+<td>停用或高風險軟體是否移除、授權回收與清冊更新。</td>
+<td>移除紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大例外、違規、授權缺口與弱點趨勢是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 附錄A：未授權軟體處理表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>案件編號</td>
+<td>SW-UNAUTH-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>發現日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>發現來源</td>
+<td>□ EDR □ MDM □ 稽核 □ Helpdesk □ SOC □ 使用者通報 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>設備 / 使用者</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>軟體名稱 / 版本</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>軟體分類</td>
+<td>□ 未核准 □ 破解/盜版 □ 遠端工具 □ AI工具 □ 高風險外掛 □ 惡意 □ 授權違規 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>初步風險</td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+</tr>
+<tr>
+<td>處置措施</td>
+<td>□ 移除 □ 阻擋 □ 隔離 □ 例外申請 □ 事件處理 □ 授權補正</td>
+<td></td>
+</tr>
+<tr>
+<td>是否涉及資料外洩</td>
+<td>□ 否 □ 是 □ 待確認</td>
+<td></td>
+</tr>
+<tr>
+<td>是否升級事件</td>
+<td>□ 否 □ 是，事件單號：______</td>
+<td></td>
+</tr>
+<tr>
+<td>結案日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>25. 附錄B：軟體退場檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查內容</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>使用範圍確認</td>
+<td>確認受影響使用者、設備、系統、服務與替代方案。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>資料備份/移轉</td>
+<td>確認必要資料已備份、移轉、匯出或刪除。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>軟體移除</td>
+<td>移除主程式、Agent、Driver、外掛、服務與自動啟動項。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>授權回收</td>
+<td>回收授權、取消訂閱、更新採購與授權紀錄。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>白名單更新</td>
+<td>移除允許規則或加入封鎖規則。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>Secrets撤銷</td>
+<td>撤銷API Key、Token、憑證、服務帳號與外部整合。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>網路規則清理</td>
+<td>移除相關Firewall、Proxy、DNS、CASB或DLP例外。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>更新軟體資產清冊、風險登錄與例外狀態。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+<tr>
+<td>驗收確認</td>
+<td>由IT、Security、Business Owner確認退場完成。</td>
+<td>□ 完成 □ 未完成 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

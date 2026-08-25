@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-PRO-004 營運持續與ICT備妥性管理程序</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #234; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 4px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A05-PRO-004 營運持續與ICT備妥性管理程序</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-PRO-004</td>
+<td>營運持續與ICT備妥性管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-PRO-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">姓名</th>
+<th style="vertical-align: top;">職稱</th>
+<th style="vertical-align: top;">簽核/確認</th>
+<th style="vertical-align: top;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">文件建立</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">ICT Continuity Owner / ISMS管理代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資訊安全審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / SOC負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT營運審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">IT營運主管 / 基礎架構負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端與網路審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Cloud Security Owner / Network Security Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">業務持續審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">BCMS負責人 / 危機管理負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法務與合規審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">法務 / 法遵負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">隱私審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">DPO / PIMS負責人（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">AI治理負責人（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/ESG資料治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">GHG資料治理負責人（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">核准</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / IT營運主管 / 最高管理階層授權代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 目的</h2>
+<p>本程序旨在建立組織於營運中斷、ICT服務不可用、資訊安全事件、供應鏈中斷、雲端服務中斷、資料中心故障、網路中斷、勒索軟體、重大弱點、自然災害、公共衛生事件、關鍵人員不可用、法規或客戶要求變更等情境下，維持資訊安全、關鍵業務流程及ICT服務可持續運作、可恢復及可驗證之管理要求。</p>
+<p>本程序同時整合ISO/IEC 27001:2022 Annex A.5.29「中斷期間資訊安全」與A.5.30「營運持續之ICT備妥性」之控制目的，將資訊安全風險管理、業務衝擊分析、復原時間目標、復原點目標、備份、備援、演練、事件回應、供應商持續性、雲端持續性、PII與AI服務持續性及GHG/CO2資料治理要求納入同一管理流程。</p>
+<h2>2. 政策聲明</h2>
+<div class="notice">
+<p>組織承諾在營運中斷或ICT服務中斷期間，仍應維持資訊機密性、完整性、可用性、可追溯性、合法合規性與可稽核性。任何復原、替代作業、緊急變更、手工作業、臨時存取、資料還原、雲端切換或供應商支援行動，均不得因緊急狀態而豁免基本資訊安全控制；如因情境限制需採取例外措施，應經授權核准、記錄、限期、監控並於事後檢討。</p>
+</div>
+<h2>3. 適用原則</h2>
+<ul>
+<li>以風險為基礎：ICT備妥性應依業務影響、資訊資產價值、資料分類、法規合約、客戶承諾、供應鏈依賴及威脅情境決定。</li>
+<li>以業務衝擊為導向：關鍵服務之RTO、RPO、MTPD、MBCO與復原優先順序，應由業務流程擁有者、資訊資產擁有者與ICT服務擁有者共同確認。</li>
+<li>安全不中斷：中斷期間不得停用必要安全控制；如為復原而暫時調整控制，應採取補償控制並保留證據。</li>
+<li>備援可驗證：備份、備援、異地、跨區、容錯、手動替代流程與供應商持續性承諾，均應定期測試並保留紀錄。</li>
+<li>責任明確：每項關鍵流程、ICT服務、雲端服務、AI服務、PII資料處理及GHG/CO2資料平台，均應指定Owner與代理人。</li>
+<li>持續改進：演練、事件、復原測試、稽核、管理審查與供應商服務審查之結果，應回饋至風險評鑑、控制措施、復原策略與文件更新。</li>
+</ul>
+<h2>4. 名詞與定義</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">名詞</th>
+<th style="vertical-align: top;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">營運持續（Business Continuity）</td>
+<td style="vertical-align: top;">組織於中斷事件發生後，依預先定義之可接受水準持續交付產品、服務或關鍵營運活動之能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT備妥性（ICT Readiness for Business Continuity）</td>
+<td style="vertical-align: top;">ICT服務、資訊系統、資料、網路、雲端平台、通訊、設備、人員與程序在中斷期間支援營運持續之能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">BIA</td>
+<td style="vertical-align: top;">Business Impact Analysis，業務衝擊分析，用於識別中斷對組織、客戶、法規、財務、聲譽、合約及資訊安全之影響。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RTO</td>
+<td style="vertical-align: top;">Recovery Time Objective，復原時間目標，表示服務中斷後應恢復至最低可接受服務水準之最長時間。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RPO</td>
+<td style="vertical-align: top;">Recovery Point Objective，復原點目標，表示可接受之最大資料遺失時間點或資料遺失量。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MTPD</td>
+<td style="vertical-align: top;">Maximum Tolerable Period of Disruption，最大可容忍中斷期間，表示業務活動中斷超過後將造成不可接受影響之期間。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MBCO</td>
+<td style="vertical-align: top;">Minimum Business Continuity Objective，最低營運持續目標，表示中斷期間必須維持之最低服務能力、交易量、客戶支援或合規能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DRP</td>
+<td style="vertical-align: top;">Disaster Recovery Plan，災難復原計畫，用於恢復ICT服務、系統、資料、基礎架構與雲端服務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">替代作業</td>
+<td style="vertical-align: top;">當正常系統或流程不可用時，以手工、替代系統、備援站點、離線表單、臨時流程或供應商支援方式維持最低服務能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷期間資訊安全</td>
+<td style="vertical-align: top;">在營運或ICT中斷期間仍維持身份驗證、授權、日誌、資料保護、加密、變更控管、事件通報與證據保存之控制要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原演練</td>
+<td style="vertical-align: top;">透過桌上推演、技術測試、備份還原、切換演練、供應商演練、跨區復原或全流程演練驗證持續性策略之有效性。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 角色與責任</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">主要責任</th>
+<th style="vertical-align: top;">主要輸出/證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">最高管理階層</td>
+<td style="vertical-align: top;">核准營運持續與ICT備妥性政策方向、資源、重大風險接受、重大中斷決策、重大復原策略及管理審查結論。</td>
+<td style="vertical-align: top;">核准紀錄、管理審查紀錄、資源核准、風險接受紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ISMS治理委員會</td>
+<td style="vertical-align: top;">整合ISMS、BCMS、PIMS、AI治理、供應鏈、雲端及GHG資料治理之持續性議題，審查KPI/KRI、重大演練結果、缺失與改善。</td>
+<td style="vertical-align: top;">會議紀錄、決議事項、追蹤清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top;">定義中斷期間資訊安全控制、緊急例外核准、事件升級、SOC監控、數位證據與復原期間安全要求。</td>
+<td style="vertical-align: top;">安全要求、例外核准、事件紀錄、證據保存紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">BCMS負責人</td>
+<td style="vertical-align: top;">維護業務持續方法、BIA、營運持續策略、演練方案、危機溝通與跨部門協調。</td>
+<td style="vertical-align: top;">BIA、BCP、演練計畫、演練報告、改善計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT Continuity Owner</td>
+<td style="vertical-align: top;">規劃ICT備妥性要求、DRP、復原架構、備援、備份、容量、通訊、依賴關係及復原測試。</td>
+<td style="vertical-align: top;">ICT備妥性計畫、DRP、復原測試紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT營運主管</td>
+<td style="vertical-align: top;">確保系統、網路、雲端、資料庫、備份、監控、服務台及變更管理支援營運持續。</td>
+<td style="vertical-align: top;">運作紀錄、監控報表、變更紀錄、復原紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">System Owner</td>
+<td style="vertical-align: top;">定義系統RTO/RPO、資料與服務依賴、復原步驟、替代方案、測試案例及業務驗收。</td>
+<td style="vertical-align: top;">系統復原手冊、測試紀錄、驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Business Process Owner</td>
+<td style="vertical-align: top;">定義關鍵流程、MTPD、MBCO、業務優先順序、替代作業及復原驗收條件。</td>
+<td style="vertical-align: top;">BIA輸入、替代作業程序、驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Data Owner</td>
+<td style="vertical-align: top;">確認資料分類、保存、備份、RPO、復原後完整性、敏感資料保護與資料最小化要求。</td>
+<td style="vertical-align: top;">資料復原確認、完整性驗證、資料分類紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SOC / 監控團隊</td>
+<td style="vertical-align: top;">於中斷期間維持安全監控、告警分析、事件升級、日誌保全、異常偵測及復原期間風險監測。</td>
+<td style="vertical-align: top;">SIEM/SOC紀錄、告警紀錄、事件通報。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Cloud Security Owner</td>
+<td style="vertical-align: top;">管理雲端可用性架構、跨區復原、雲端設定、雲端備份、雲端服務等級與供應商持續性要求。</td>
+<td style="vertical-align: top;">雲端架構文件、SLA/SLO紀錄、雲端復原測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商管理</td>
+<td style="vertical-align: top;">確認關鍵供應商之營運持續能力、SLA、RTO/RPO支援、事件通報、第四方依賴與退場方案。</td>
+<td style="vertical-align: top;">供應商評鑑、合約條款、服務審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DPO / PIMS負責人</td>
+<td style="vertical-align: top;">確認中斷與復原期間PII保護、資料主體權利、跨境處理、外洩通報與隱私法規要求。</td>
+<td style="vertical-align: top;">DPIA/PII評估、隱私事件紀錄、通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI治理負責人</td>
+<td style="vertical-align: top;">確認AI服務、模型、資料集、Prompt/RAG、推論服務及第三方AI平台於中斷期間之安全與可用性。</td>
+<td style="vertical-align: top;">AI服務持續性評估、AI風險紀錄、替代方案。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/ESG資料治理負責人</td>
+<td style="vertical-align: top;">確認GHG/CO2資料平台、盤查證據、排放係數、查證資料與碳揭露資料於中斷期間之完整性與可追溯性。</td>
+<td style="vertical-align: top;">GHG資料復原紀錄、查證證據保全紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">內部稽核員</td>
+<td style="vertical-align: top;">稽核本程序之符合性、有效性、演練紀錄、復原證據、供應商證據與改善追蹤。</td>
+<td style="vertical-align: top;">稽核計畫、稽核工作底稿、不符合與改善追蹤。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 程序總覽</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">階段</th>
+<th style="vertical-align: top;">目的</th>
+<th style="vertical-align: top;">主要活動</th>
+<th style="vertical-align: top;">主要輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一、範圍與治理建立</td>
+<td style="vertical-align: top;">定義持續性治理邊界與責任。</td>
+<td style="vertical-align: top;">識別關鍵流程、ICT服務、雲端服務、供應商、AI/PII/GHG資料平台與責任人。</td>
+<td style="vertical-align: top;">範圍清單、RACI、關鍵服務清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">二、BIA與風險評鑑</td>
+<td style="vertical-align: top;">識別業務衝擊與中斷風險。</td>
+<td style="vertical-align: top;">執行BIA、RTO/RPO/MTPD/MBCO設定、依賴分析、威脅與弱點評估。</td>
+<td style="vertical-align: top;">BIA報告、風險評鑑表、依賴關係圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">三、策略設計</td>
+<td style="vertical-align: top;">建立符合風險與業務要求之持續性與復原策略。</td>
+<td style="vertical-align: top;">設計備份、備援、雲端跨區、替代作業、供應商支援、緊急通訊與安全控制。</td>
+<td style="vertical-align: top;">持續性策略、ICT備妥性計畫、DRP架構。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">四、計畫與程序建立</td>
+<td style="vertical-align: top;">將策略轉化為可執行程序。</td>
+<td style="vertical-align: top;">制定BCP、DRP、系統復原手冊、通訊計畫、手動替代流程、緊急變更流程。</td>
+<td style="vertical-align: top;">計畫文件、作業指導書、檢核表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">五、實施與維護</td>
+<td style="vertical-align: top;">落實控制並維持可用狀態。</td>
+<td style="vertical-align: top;">配置備援、備份、監控、權限、日誌、供應商SLA、演練資源與教育訓練。</td>
+<td style="vertical-align: top;">配置紀錄、備份紀錄、監控紀錄、訓練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">六、演練與測試</td>
+<td style="vertical-align: top;">驗證策略與程序有效性。</td>
+<td style="vertical-align: top;">執行桌上推演、備份還原、系統切換、雲端跨區、供應商與全流程演練。</td>
+<td style="vertical-align: top;">演練計畫、測試紀錄、演練報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">七、事件啟動與復原</td>
+<td style="vertical-align: top;">於中斷期間執行控制與復原。</td>
+<td style="vertical-align: top;">啟動應變、事件分類、危機溝通、復原執行、資訊安全監控與業務驗收。</td>
+<td style="vertical-align: top;">啟動紀錄、復原紀錄、通報紀錄、驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">八、檢討與改進</td>
+<td style="vertical-align: top;">改善控制與管理系統有效性。</td>
+<td style="vertical-align: top;">事件檢討、根因分析、CAPA、風險重評、文件更新、管理審查。</td>
+<td style="vertical-align: top;">檢討報告、改善計畫、更新紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 範圍界定與關鍵服務識別</h2>
+<p>組織應至少每年一次，並於重大變更、重大事件、雲端服務變更、供應商變更、AI系統上線、資料中心遷移、法規或客戶合約要求變更時，重新識別營運持續與ICT備妥性管理範圍。</p>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">識別項目</th>
+<th style="vertical-align: top;">最低要求</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">關鍵業務流程</td>
+<td style="vertical-align: top;">識別對客戶交付、法規義務、財務收入、營運安全、聲譽與合約承諾有重大影響之流程。</td>
+<td style="vertical-align: top;">Business Process Owner / BCMS負責人</td>
+<td style="vertical-align: top;">BIA、流程清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵ICT服務</td>
+<td style="vertical-align: top;">識別支援關鍵流程之系統、資料庫、網路、雲端、IAM、SOC、備份、服務台與通訊服務。</td>
+<td style="vertical-align: top;">ICT Continuity Owner / IT營運</td>
+<td style="vertical-align: top;">ICT服務清冊、CMDB。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資訊資產與資料</td>
+<td style="vertical-align: top;">識別關鍵資料、資料分類、資料Owner、備份要求、RPO、保存期限及完整性要求。</td>
+<td style="vertical-align: top;">Data Owner / ISMS管理代表</td>
+<td style="vertical-align: top;">資訊資產清冊、資料分類紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端與外包服務</td>
+<td style="vertical-align: top;">識別雲端SaaS/PaaS/IaaS、資料所在地、可用區域、供應商SLA、跨區與退場能力。</td>
+<td style="vertical-align: top;">Cloud Security Owner / 供應商管理</td>
+<td style="vertical-align: top;">雲端服務清冊、SLA、供應商評鑑。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI服務與模型</td>
+<td style="vertical-align: top;">識別AI推論、MLOps、RAG、模型儲存、資料集、API、第三方AI服務及替代方案。</td>
+<td style="vertical-align: top;">AI治理負責人 / System Owner</td>
+<td style="vertical-align: top;">AI服務清冊、AI風險評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PII處理活動</td>
+<td style="vertical-align: top;">識別中斷期間可能影響資料主體權利、資料外洩通報、跨境傳輸與合法處理之活動。</td>
+<td style="vertical-align: top;">DPO / PIMS負責人</td>
+<td style="vertical-align: top;">PII處理清冊、DPIA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/CO2資料平台</td>
+<td style="vertical-align: top;">識別盤查活動數據、排放係數、查證證據、碳揭露資料與外部查證時程依賴。</td>
+<td style="vertical-align: top;">GHG資料治理負責人</td>
+<td style="vertical-align: top;">GHG資料清冊、查證計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵供應商與第四方</td>
+<td style="vertical-align: top;">識別支援關鍵服務之供應商、代管商、資料中心、雲端商、網路商、軟體商與第四方依賴。</td>
+<td style="vertical-align: top;">供應商管理 / IT營運</td>
+<td style="vertical-align: top;">供應商清冊、第四方登錄表。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 業務衝擊分析（BIA）要求</h2>
+<p>BIA應作為ICT備妥性要求之主要輸入，並應由業務流程擁有者與ICT服務擁有者共同確認。BIA結果應用於復原策略、資源配置、測試頻率、供應商SLA、雲端可用性設計、備份政策、事件升級與管理審查。</p>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">BIA欄位</th>
+<th style="vertical-align: top;">填寫要求</th>
+<th style="vertical-align: top;">審查重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">流程/服務名稱</td>
+<td style="vertical-align: top;">列明業務流程、ICT服務、系統、雲端服務或資料平台名稱。</td>
+<td style="vertical-align: top;">是否與ISMS範圍、資產清冊、雲端服務清冊一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">流程擁有者</td>
+<td style="vertical-align: top;">指定業務Owner、系統Owner、資料Owner與代理人。</td>
+<td style="vertical-align: top;">責任是否明確且具授權能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷衝擊</td>
+<td style="vertical-align: top;">分析財務、客戶、法規、合約、聲譽、營運安全、資訊安全、隱私、AI治理、GHG查證及供應鏈影響。</td>
+<td style="vertical-align: top;">是否包含定量與定性衝擊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MTPD</td>
+<td style="vertical-align: top;">定義最大可容忍中斷期間，超過後即造成不可接受影響。</td>
+<td style="vertical-align: top;">是否合理且經業務Owner核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RTO</td>
+<td style="vertical-align: top;">定義復原至最低可接受水準所需時間。</td>
+<td style="vertical-align: top;">RTO是否小於或等於MTPD。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RPO</td>
+<td style="vertical-align: top;">定義可接受資料遺失時間點或資料遺失量。</td>
+<td style="vertical-align: top;">是否與備份頻率、資料完整性及合約要求一致。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MBCO</td>
+<td style="vertical-align: top;">定義中斷期間最低服務能力、交易量、使用者支援、客戶服務或合規產出。</td>
+<td style="vertical-align: top;">是否可操作、可測量、可驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵期間</td>
+<td style="vertical-align: top;">識別月結、年結、稽核、查證、發薪、客戶交付、申報與法規期限。</td>
+<td style="vertical-align: top;">是否影響復原優先順序與演練安排。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">依賴關係</td>
+<td style="vertical-align: top;">列明人員、場所、系統、資料、網路、供應商、雲端、API、電力、通訊及外部機構依賴。</td>
+<td style="vertical-align: top;">是否識別單點失效與第四方依賴。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">替代作業</td>
+<td style="vertical-align: top;">定義系統不可用時之手動、離線、替代系統、臨時權限或外包支援方案。</td>
+<td style="vertical-align: top;">替代作業是否包含安全控制與紀錄保存。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 中斷風險評鑑要求</h2>
+<p>中斷風險評鑑應納入資訊安全風險管理程序，並與資訊安全風險登錄表、風險處理計畫及SoA維持一致。風險情境至少應包含下列面向。</p>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">風險類別</th>
+<th style="vertical-align: top;">可能情境</th>
+<th style="vertical-align: top;">評估重點</th>
+<th style="vertical-align: top;">常見控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">資安攻擊</td>
+<td style="vertical-align: top;">勒索軟體、DDoS、憑證外洩、惡意程式、供應鏈攻擊、雲端帳號接管。</td>
+<td style="vertical-align: top;">服務不可用、資料加密或破壞、橫向移動、復原環境污染。</td>
+<td style="vertical-align: top;">EDR、備份隔離、MFA、Zero Trust、網路分段、事件回應。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料損毀</td>
+<td style="vertical-align: top;">資料庫毀損、同步錯誤、批次覆寫、備份失敗、誤刪或完整性被破壞。</td>
+<td style="vertical-align: top;">RPO、資料完整性、可追溯性、還原點可信度。</td>
+<td style="vertical-align: top;">不可變備份、校驗、版本管理、復原測試、資料對帳。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">基礎架構故障</td>
+<td style="vertical-align: top;">伺服器、儲存、網路、防火牆、DNS、IAM、電力、空調或機房中斷。</td>
+<td style="vertical-align: top;">單點失效、容量、維護、備援、監控告警。</td>
+<td style="vertical-align: top;">HA、Cluster、備援線路、UPS、監控、容量管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端服務中斷</td>
+<td style="vertical-align: top;">雲端區域故障、SaaS不可用、雲端設定錯誤、API限制、供應商維護。</td>
+<td style="vertical-align: top;">SLA、跨區、資料可攜、退出策略、共享責任。</td>
+<td style="vertical-align: top;">Multi-AZ、備份匯出、雲端監控、替代流程、供應商審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應鏈中斷</td>
+<td style="vertical-align: top;">關鍵供應商停擺、第四方故障、服務品質下降、支援不可用。</td>
+<td style="vertical-align: top;">替代供應商、合約SLA、通報義務、第四方透明度。</td>
+<td style="vertical-align: top;">供應商BCP審查、SLA、定期演練、退出與替代方案。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">人員與場所不可用</td>
+<td style="vertical-align: top;">疫情、交通中斷、辦公室不可用、關鍵人員離職或無法聯繫。</td>
+<td style="vertical-align: top;">代理人、遠距工作、職務區隔、知識保存。</td>
+<td style="vertical-align: top;">代理人制度、遠距工作、交接文件、訓練與通訊樹。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法規與合約衝擊</td>
+<td style="vertical-align: top;">通報時限、資料主體權利、客戶SLA、查證期限、監管要求未能履行。</td>
+<td style="vertical-align: top;">義務清單、通報流程、法律風險、證據保存。</td>
+<td style="vertical-align: top;">法規清冊、通報矩陣、法務審查、證據鏈。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI服務中斷</td>
+<td style="vertical-align: top;">模型API不可用、RAG資料庫故障、模型版本回退、第三方AI服務限制。</td>
+<td style="vertical-align: top;">替代模型、輸出品質、人工覆核、資料安全。</td>
+<td style="vertical-align: top;">Fallback模型、人工流程、版本控制、AI使用紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/ESG資料中斷</td>
+<td style="vertical-align: top;">盤查平台不可用、查證證據遺失、排放係數版本錯誤、供應商碳資料延遲。</td>
+<td style="vertical-align: top;">資料完整性、可追溯性、查證時程、外部揭露風險。</td>
+<td style="vertical-align: top;">證據清冊、版本控管、備份、替代蒐集流程。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. ICT備妥性策略設計</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">策略領域</th>
+<th style="vertical-align: top;">控制要求</th>
+<th style="vertical-align: top;">適用情境</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">備份策略</td>
+<td style="vertical-align: top;">依資料分類與RPO設定備份頻率、保存期限、加密、不可變性、離線或隔離備份及還原測試。</td>
+<td style="vertical-align: top;">所有關鍵系統、資料庫、雲端資料、AI資料集、PII與GHG資料。</td>
+<td style="vertical-align: top;">備份政策、備份日誌、還原測試紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備援與高可用</td>
+<td style="vertical-align: top;">依RTO與可用性要求規劃HA、Cluster、Load Balancing、跨區、雙線路與容錯。</td>
+<td style="vertical-align: top;">RTO短、客戶或法規要求高可用之服務。</td>
+<td style="vertical-align: top;">架構圖、設定紀錄、監控紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">災難復原</td>
+<td style="vertical-align: top;">建立DRP、復原順序、復原步驟、系統依賴、資料還原、驗收與回切程序。</td>
+<td style="vertical-align: top;">關鍵ICT服務與資料中心/雲端中斷。</td>
+<td style="vertical-align: top;">DRP、復原測試、驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">替代作業</td>
+<td style="vertical-align: top;">建立系統不可用時之手動流程、離線表單、臨時工具、替代通訊與事後補登程序。</td>
+<td style="vertical-align: top;">系統復原需較長時間或業務不可中斷之流程。</td>
+<td style="vertical-align: top;">替代作業指導書、演練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端持續性</td>
+<td style="vertical-align: top;">確認雲端SLA、區域架構、備份匯出、IAM備援、組態備份、雲端變更與供應商通報。</td>
+<td style="vertical-align: top;">SaaS/PaaS/IaaS與雲端資料平台。</td>
+<td style="vertical-align: top;">雲端風險評估、SLA、跨區測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">通訊與協作</td>
+<td style="vertical-align: top;">建立危機通訊清單、替代通訊工具、外部通報模板、客戶與供應商溝通窗口。</td>
+<td style="vertical-align: top;">重大中斷、事件升級、供應商中斷。</td>
+<td style="vertical-align: top;">通訊矩陣、通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">安全監控</td>
+<td style="vertical-align: top;">中斷期間仍維持SIEM、SOC、EDR、DLP、雲端監控、日誌收集與告警。</td>
+<td style="vertical-align: top;">所有中斷與復原期間。</td>
+<td style="vertical-align: top;">監控紀錄、告警紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">緊急變更</td>
+<td style="vertical-align: top;">復原期間之變更應依緊急變更流程核准、記錄、測試、回復與事後審查。</td>
+<td style="vertical-align: top;">修補、切換、規則調整、權限開放、配置變更。</td>
+<td style="vertical-align: top;">緊急變更紀錄、PIR。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商支援</td>
+<td style="vertical-align: top;">關鍵供應商應提供支援時段、RTO/RPO支援、事件通報、演練參與與服務恢復證據。</td>
+<td style="vertical-align: top;">外包、雲端、網路、資料中心、資安代管服務。</td>
+<td style="vertical-align: top;">SLA、供應商BCP、審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. RTO / RPO 分級與最低控制要求</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">等級</th>
+<th style="vertical-align: top;">RTO參考</th>
+<th style="vertical-align: top;">RPO參考</th>
+<th style="vertical-align: top;">服務特性</th>
+<th style="vertical-align: top;">最低控制要求</th>
+<th style="vertical-align: top;">測試頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">Tier 1 關鍵即時</td>
+<td style="vertical-align: top;">0-4小時</td>
+<td style="vertical-align: top;">0-1小時</td>
+<td style="vertical-align: top;">支援核心營運、客戶承諾、監管或重大財務活動。</td>
+<td style="vertical-align: top;">高可用、跨區或熱備、不可變備份、7x24監控、明確DRP、定期切換測試。</td>
+<td style="vertical-align: top;">至少每半年一次，重大變更後加測。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Tier 2 重要營運</td>
+<td style="vertical-align: top;">4-24小時</td>
+<td style="vertical-align: top;">1-8小時</td>
+<td style="vertical-align: top;">中斷將影響主要流程、客戶服務或合規時程。</td>
+<td style="vertical-align: top;">備援或快速重建、每日多次備份、監控告警、復原手冊、替代流程。</td>
+<td style="vertical-align: top;">至少每年一次。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Tier 3 一般支援</td>
+<td style="vertical-align: top;">1-3個工作日</td>
+<td style="vertical-align: top;">24小時</td>
+<td style="vertical-align: top;">支援內部管理、報表或非即時流程。</td>
+<td style="vertical-align: top;">每日備份、基本復原程序、服務台支援、權限與日誌保存。</td>
+<td style="vertical-align: top;">至少每年抽測一次。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Tier 4 低衝擊</td>
+<td style="vertical-align: top;">3-7個工作日</td>
+<td style="vertical-align: top;">2-5個工作日</td>
+<td style="vertical-align: top;">中斷可由手工作業或延後處理承受。</td>
+<td style="vertical-align: top;">週期備份、文件化重建步驟、Owner確認。</td>
+<td style="vertical-align: top;">依風險或變更需要測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">特殊合規/證據</td>
+<td style="vertical-align: top;">依法規、合約或查證時程</td>
+<td style="vertical-align: top;">接近零資料遺失或依證據要求</td>
+<td style="vertical-align: top;">PII、事件證據、稽核證據、GHG查證資料、法定紀錄。</td>
+<td style="vertical-align: top;">完整性保護、不可竄改、保留期限、存取控管、證據鏈、復原驗證。</td>
+<td style="vertical-align: top;">依稽核、查證或法規要求。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 中斷期間資訊安全控制</h2>
+<p>營運中斷或ICT中斷期間，應持續維持下列資訊安全控制。若因復原需要暫時調整控制，應由CISO或授權角色核准，並於事後完成回復與檢討。</p>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">控制領域</th>
+<th style="vertical-align: top;">最低要求</th>
+<th style="vertical-align: top;">例外處理</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">身份驗證與存取控制</td>
+<td style="vertical-align: top;">維持MFA、最小權限、臨時權限到期、PAM與管理帳號監控。</td>
+<td style="vertical-align: top;">緊急權限需記錄申請人、核准人、目的、期限及移除時間。</td>
+<td style="vertical-align: top;">權限申請、PAM紀錄、IAM日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌與監控</td>
+<td style="vertical-align: top;">維持安全日誌、系統日誌、雲端日誌、API日誌、VPN日誌與SIEM告警。</td>
+<td style="vertical-align: top;">監控系統不可用時，應啟用替代日誌收集或手動紀錄。</td>
+<td style="vertical-align: top;">SIEM紀錄、替代監控紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料保護</td>
+<td style="vertical-align: top;">復原、替代作業與資料匯入匯出均應維持加密、分類、最小化與完整性驗證。</td>
+<td style="vertical-align: top;">手動處理資料需保留收發、保存、銷毀與補登紀錄。</td>
+<td style="vertical-align: top;">資料處理紀錄、完整性校驗。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">變更管理</td>
+<td style="vertical-align: top;">復原期間之配置、網路、帳號、系統、雲端、安全規則變更應納入緊急變更。</td>
+<td style="vertical-align: top;">事前無法完整審查時，應先取得緊急授權並於事後補齊PIR。</td>
+<td style="vertical-align: top;">緊急變更紀錄、PIR。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">網路安全</td>
+<td style="vertical-align: top;">不得為復原任意開放高風險連線；需採IP限制、時間限制、監控與事後關閉。</td>
+<td style="vertical-align: top;">臨時防火牆規則需具到期日與Owner。</td>
+<td style="vertical-align: top;">防火牆變更、網路日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商存取</td>
+<td style="vertical-align: top;">第三方支援需經核准、限定期間、限定來源、Session Recording或日誌監控。</td>
+<td style="vertical-align: top;">緊急支援需於24小時內完成補登與審查。</td>
+<td style="vertical-align: top;">供應商支援紀錄、Session紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">事件通報</td>
+<td style="vertical-align: top;">中斷若涉及資安事件、PII、客戶資料、法規或合約要求，應依事件管理程序升級。</td>
+<td style="vertical-align: top;">若事實尚未明確，仍應先行預警並持續更新。</td>
+<td style="vertical-align: top;">事件通報紀錄、客戶/主管機關通報。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">數位證據</td>
+<td style="vertical-align: top;">涉及攻擊、資料破壞或違規時，應保全日誌、磁碟映像、雜湊、截圖、通訊與操作紀錄。</td>
+<td style="vertical-align: top;">復原前若需清除或重建系統，應先評估證據保全需求。</td>
+<td style="vertical-align: top;">證據保存紀錄、雜湊值、保管鏈。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 備份與還原管理要求</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">作業項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">備份範圍</td>
+<td style="vertical-align: top;">涵蓋系統、資料庫、設定檔、IAM設定、雲端組態、程式碼、金鑰材料、日誌、AI資料集與GHG查證資料。</td>
+<td style="vertical-align: top;">System Owner / Data Owner / IT營運</td>
+<td style="vertical-align: top;">備份範圍清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份頻率</td>
+<td style="vertical-align: top;">依RPO、資料變動頻率與法規合約要求設定全備、差異、增量或連續備份。</td>
+<td style="vertical-align: top;">IT營運 / Data Owner</td>
+<td style="vertical-align: top;">備份排程、備份日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份保護</td>
+<td style="vertical-align: top;">備份資料應加密、限制存取、隔離保護、不可變或防刪除，避免被勒索軟體同步破壞。</td>
+<td style="vertical-align: top;">CISO / IT營運</td>
+<td style="vertical-align: top;">加密設定、不可變設定、權限紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">異地保存</td>
+<td style="vertical-align: top;">關鍵資料應具異地、跨區、離線或雲端隔離保存方案。</td>
+<td style="vertical-align: top;">ICT Continuity Owner</td>
+<td style="vertical-align: top;">異地保存紀錄、架構圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">還原測試</td>
+<td style="vertical-align: top;">定期測試資料可還原、應用可啟動、筆數一致、完整性符合與業務可驗收。</td>
+<td style="vertical-align: top;">System Owner / Data Owner</td>
+<td style="vertical-align: top;">還原測試報告、驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份失敗處理</td>
+<td style="vertical-align: top;">備份失敗需告警、分析、重跑、升級與紀錄；連續失敗應視為風險或事件。</td>
+<td style="vertical-align: top;">IT營運 / SOC</td>
+<td style="vertical-align: top;">告警紀錄、處理紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份刪除與保存期限</td>
+<td style="vertical-align: top;">備份刪除應依保存期限、法規、訴訟保全、事件證據保全及資料最小化要求管理。</td>
+<td style="vertical-align: top;">Data Owner / 法務 / DPO</td>
+<td style="vertical-align: top;">保存期限清冊、刪除紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 雲端服務與SaaS持續性管理</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">控制項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">審查證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">雲端服務分類</td>
+<td style="vertical-align: top;">依服務重要性、資料分類、依賴流程、SLA、RTO/RPO與退出難度分級。</td>
+<td style="vertical-align: top;">雲端服務與AI服務清冊、雲端風險評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">共享責任確認</td>
+<td style="vertical-align: top;">確認雲端商、組織及第三方各自負責之備份、可用性、組態、IAM、日誌與資安事件責任。</td>
+<td style="vertical-align: top;">共享責任矩陣、合約/SLA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料可攜與匯出</td>
+<td style="vertical-align: top;">SaaS服務應確認資料匯出格式、頻率、權限、加密與替代平台可用性。</td>
+<td style="vertical-align: top;">資料匯出測試、退場計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">跨區與高可用</td>
+<td style="vertical-align: top;">IaaS/PaaS關鍵服務應視RTO/RPO採用Multi-AZ、跨區備份、異地部署或容錯架構。</td>
+<td style="vertical-align: top;">雲端架構圖、切換測試紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端組態備份</td>
+<td style="vertical-align: top;">保存IaC、網路、IAM、KMS、監控、日誌、政策與安全設定，確保可重建。</td>
+<td style="vertical-align: top;">IaC儲存庫、組態備份紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商中斷通報</td>
+<td style="vertical-align: top;">訂閱供應商Status Page與事件通知，定義內部升級、客戶通報與替代方案啟動條件。</td>
+<td style="vertical-align: top;">Status通知紀錄、通報矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端安全監控</td>
+<td style="vertical-align: top;">中斷期間仍應維持CSPM、CASB、雲端日誌、異常登入、資料外洩與權限變更監控。</td>
+<td style="vertical-align: top;">CSPM/CASB/SIEM紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 供應商與第三方ICT持續性管理</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">管理項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">關鍵供應商識別</td>
+<td style="vertical-align: top;">依支援關鍵流程、資料敏感度、替代難度、SLA、第四方依賴與中斷影響分級。</td>
+<td style="vertical-align: top;">供應商管理 / Business Owner</td>
+<td style="vertical-align: top;">供應商分級清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">合約條款</td>
+<td style="vertical-align: top;">納入SLA、RTO/RPO支援、事件通報、資安要求、稽核權、資料返還、退場及第四方通知。</td>
+<td style="vertical-align: top;">法務 / 供應商管理</td>
+<td style="vertical-align: top;">合約、DPA、SLA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商BCP審查</td>
+<td style="vertical-align: top;">取得或審查供應商營運持續能力、災難復原、測試結果、認證報告與保險要求。</td>
+<td style="vertical-align: top;">供應商管理 / CISO</td>
+<td style="vertical-align: top;">供應商評鑑、SOC報告、測試摘要。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷通報</td>
+<td style="vertical-align: top;">定義供應商於服務中斷、資安事件、資料外洩、第四方中斷時之通報時限與內容。</td>
+<td style="vertical-align: top;">供應商管理</td>
+<td style="vertical-align: top;">通報條款、事件紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">替代方案</td>
+<td style="vertical-align: top;">對Tier 1與高風險供應商建立替代供應商、內部替代流程、資料匯出或退場方案。</td>
+<td style="vertical-align: top;">Business Owner / ICT Owner</td>
+<td style="vertical-align: top;">替代方案、退場測試。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">定期服務審查</td>
+<td style="vertical-align: top;">至少每年審查供應商SLA達成、事件、演練、變更、弱點及改善狀態。</td>
+<td style="vertical-align: top;">供應商管理 / ISMS管理代表</td>
+<td style="vertical-align: top;">服務審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. AI、PII與GHG/CO2資料之持續性特殊要求</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">領域</th>
+<th style="vertical-align: top;">中斷風險</th>
+<th style="vertical-align: top;">最低持續性要求</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">AI服務</td>
+<td style="vertical-align: top;">AI API不可用、模型版本異常、RAG知識庫不可用、輸出品質下降或第三方AI服務停止。</td>
+<td style="vertical-align: top;">建立替代模型或人工流程；保留模型版本、Prompt、RAG資料與輸出覆核紀錄；不得在緊急狀態下使用未核准AI工具處理機密資料。</td>
+<td style="vertical-align: top;">AI服務清冊、AI替代方案、人工覆核紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PII處理</td>
+<td style="vertical-align: top;">資料主體權利無法處理、PII外洩通報逾期、跨境處理異常、PII資料復原不完整。</td>
+<td style="vertical-align: top;">維持DPO聯絡、PII清冊、通報流程、資料最小化、復原完整性驗證與法規時限追蹤。</td>
+<td style="vertical-align: top;">PII處理紀錄、DPIA、通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/CO2資料</td>
+<td style="vertical-align: top;">查證證據遺失、盤查底稿不可用、排放係數版本錯誤、供應商碳資料延遲。</td>
+<td style="vertical-align: top;">保留版本、來源、期間、完整性校驗與查證證據；建立替代蒐集與離線保存機制。</td>
+<td style="vertical-align: top;">GHG資料清冊、查證證據、版本紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">稽核與驗證證據</td>
+<td style="vertical-align: top;">ISMS/PIMS/客戶稽核或驗證證據不可用、紀錄遺失或不可追溯。</td>
+<td style="vertical-align: top;">關鍵紀錄應依保存期限備份、限制存取、保護完整性並可於稽核時調閱。</td>
+<td style="vertical-align: top;">紀錄保存清冊、存取紀錄、備份紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法規與合約通報</td>
+<td style="vertical-align: top;">中斷期間漏報或延遲通報主管機關、客戶、資料主體或驗證機構。</td>
+<td style="vertical-align: top;">建立通報矩陣、聯絡清單、授權發言人與預先核准模板。</td>
+<td style="vertical-align: top;">通報矩陣、通訊紀錄、核准模板。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 營運持續與ICT備妥性計畫文件要求</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">文件/紀錄</th>
+<th style="vertical-align: top;">內容要求</th>
+<th style="vertical-align: top;">Owner</th>
+<th style="vertical-align: top;">更新頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">BIA報告</td>
+<td style="vertical-align: top;">流程、衝擊、RTO、RPO、MTPD、MBCO、依賴關係、復原優先順序。</td>
+<td style="vertical-align: top;">BCMS負責人 / Business Owner</td>
+<td style="vertical-align: top;">至少每年或重大變更後。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT備妥性計畫</td>
+<td style="vertical-align: top;">ICT服務分級、架構、備援、備份、復原策略、監控、供應商依賴與測試要求。</td>
+<td style="vertical-align: top;">ICT Continuity Owner</td>
+<td style="vertical-align: top;">至少每年或重大變更後。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DRP</td>
+<td style="vertical-align: top;">災難情境、啟動條件、復原順序、步驟、責任、驗收、回切與通報。</td>
+<td style="vertical-align: top;">IT營運 / System Owner</td>
+<td style="vertical-align: top;">至少每年或重大變更後。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">系統復原手冊</td>
+<td style="vertical-align: top;">系統架構、依賴、備份位置、復原命令、配置、測試、驗收與回復步驟。</td>
+<td style="vertical-align: top;">System Owner</td>
+<td style="vertical-align: top;">系統變更時更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">替代作業程序</td>
+<td style="vertical-align: top;">手動流程、離線表單、權限、資料保存、補登、核對與安全控制。</td>
+<td style="vertical-align: top;">Business Owner</td>
+<td style="vertical-align: top;">至少每年或流程變更後。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">危機通訊矩陣</td>
+<td style="vertical-align: top;">內部、客戶、供應商、主管機關、資料主體、驗證機構、媒體之通報對象與時限。</td>
+<td style="vertical-align: top;">BCMS負責人 / 法務 / CISO</td>
+<td style="vertical-align: top;">至少每半年確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練計畫與報告</td>
+<td style="vertical-align: top;">演練目標、範圍、情境、參與者、結果、缺失、改善與追蹤。</td>
+<td style="vertical-align: top;">BCMS負責人 / ICT Owner</td>
+<td style="vertical-align: top;">依年度計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">改善追蹤表</td>
+<td style="vertical-align: top;">演練、事件、稽核、供應商審查產生之改善事項、責任、期限與狀態。</td>
+<td style="vertical-align: top;">ISMS管理代表</td>
+<td style="vertical-align: top;">每月或依治理會議追蹤。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 啟動條件與升級決策</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">啟動級別</th>
+<th style="vertical-align: top;">啟動條件</th>
+<th style="vertical-align: top;">核准/決策角色</th>
+<th style="vertical-align: top;">行動要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">Level 1 局部異常</td>
+<td style="vertical-align: top;">單一系統、單一地點或單一供應商服務異常，尚未超過RTO或造成重大衝擊。</td>
+<td style="vertical-align: top;">IT營運主管 / System Owner</td>
+<td style="vertical-align: top;">啟動技術排除、監控、服務台公告及事件紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Level 2 重要中斷</td>
+<td style="vertical-align: top;">關鍵服務受到影響，可能超過RTO、影響客戶、資料完整性或合約承諾。</td>
+<td style="vertical-align: top;">CISO / ICT Continuity Owner / BCMS負責人</td>
+<td style="vertical-align: top;">啟動DRP或替代作業，召集應變團隊，評估通報需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Level 3 重大危機</td>
+<td style="vertical-align: top;">多項關鍵流程中斷、資安重大事件、資料外洩、雲端區域故障、重大供應鏈中斷或法規通報風險。</td>
+<td style="vertical-align: top;">最高管理階層授權代表 / 危機管理小組</td>
+<td style="vertical-align: top;">啟動危機管理、外部通報、跨部門復原、管理階層定時簡報。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Level 4 企業級災難</td>
+<td style="vertical-align: top;">主要營運場所不可用、核心ICT全面中斷、重大公共事件或長時間營運無法維持。</td>
+<td style="vertical-align: top;">最高管理階層</td>
+<td style="vertical-align: top;">啟動企業級BCP、替代據點、跨區復原、重大客戶與監管溝通。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 復原執行程序</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">步驟</th>
+<th style="vertical-align: top;">作業內容</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">控制重點</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1. 偵測與通報</td>
+<td style="vertical-align: top;">接收監控告警、使用者通報、供應商通知或事件升級資訊。</td>
+<td style="vertical-align: top;">SOC / Service Desk / 使用者</td>
+<td style="vertical-align: top;">通報時間、影響範圍、初步分類。</td>
+<td style="vertical-align: top;">通報紀錄、告警紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2. 初步評估</td>
+<td style="vertical-align: top;">評估中斷範圍、資訊安全影響、資料完整性、PII、客戶、法規與供應商衝擊。</td>
+<td style="vertical-align: top;">Incident Commander / CISO / IT營運</td>
+<td style="vertical-align: top;">是否啟動DRP、BCP、事件管理或法規通報。</td>
+<td style="vertical-align: top;">初判紀錄、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3. 啟動決策</td>
+<td style="vertical-align: top;">依Level、RTO、MTPD、客戶衝擊與安全風險決定啟動復原或替代作業。</td>
+<td style="vertical-align: top;">授權決策者</td>
+<td style="vertical-align: top;">授權、時間、範圍、目標明確。</td>
+<td style="vertical-align: top;">啟動核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4. 隔離與保護</td>
+<td style="vertical-align: top;">若涉及資安事件，先隔離受影響系統、保全證據、避免污染備份或復原環境。</td>
+<td style="vertical-align: top;">CISO / SOC / IT營運</td>
+<td style="vertical-align: top;">證據保存、最小影響、避免擴散。</td>
+<td style="vertical-align: top;">隔離紀錄、證據保存紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5. 復原準備</td>
+<td style="vertical-align: top;">確認還原點、備份可用性、復原環境、權限、網路、依賴服務與驗收準則。</td>
+<td style="vertical-align: top;">ICT Owner / System Owner</td>
+<td style="vertical-align: top;">復原點可信、環境安全、依賴順序正確。</td>
+<td style="vertical-align: top;">復原前檢核表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">6. 執行復原</td>
+<td style="vertical-align: top;">依DRP與系統復原手冊執行切換、重建、還原、組態恢復或替代作業。</td>
+<td style="vertical-align: top;">IT營運 / Cloud / System Owner</td>
+<td style="vertical-align: top;">日誌記錄、變更控制、狀態同步。</td>
+<td style="vertical-align: top;">復原執行紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">7. 安全驗證</td>
+<td style="vertical-align: top;">確認權限、日誌、監控、EDR、DLP、網路規則、漏洞修補及資料保護控制恢復。</td>
+<td style="vertical-align: top;">CISO / SOC / IT營運</td>
+<td style="vertical-align: top;">不得因復原而降低安全基線。</td>
+<td style="vertical-align: top;">安全驗證紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">8. 業務驗收</td>
+<td style="vertical-align: top;">由Business Owner確認服務功能、資料完整性、交易筆數、客戶流程與最低服務水準。</td>
+<td style="vertical-align: top;">Business Owner / Data Owner</td>
+<td style="vertical-align: top;">驗收結果、限制條件、待改善事項。</td>
+<td style="vertical-align: top;">業務驗收紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">9. 對外溝通</td>
+<td style="vertical-align: top;">依通報矩陣通知客戶、供應商、主管機關、資料主體、驗證機構或其他關注方。</td>
+<td style="vertical-align: top;">法務 / CISO / 客戶窗口</td>
+<td style="vertical-align: top;">內容一致、合法、授權、可追溯。</td>
+<td style="vertical-align: top;">通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">10. 回切與關閉</td>
+<td style="vertical-align: top;">正常服務恢復後，執行回切、臨時權限移除、臨時規則關閉、資料補登與事件關閉。</td>
+<td style="vertical-align: top;">ICT Owner / IT營運 / CISO</td>
+<td style="vertical-align: top;">控制恢復、權限清理、資料一致。</td>
+<td style="vertical-align: top;">關閉紀錄、PIR。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 演練與測試管理</h2>
+<p>演練與測試應以風險、BIA、服務分級、前次演練結果、重大變更、供應商依賴與稽核發現為基礎規劃。測試不得對正式營運造成不可接受影響；若測試涉及正式資料或正式環境，應事前完成風險評估與核准。</p>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">演練類型</th>
+<th style="vertical-align: top;">目的</th>
+<th style="vertical-align: top;">最低頻率</th>
+<th style="vertical-align: top;">參與角色</th>
+<th style="vertical-align: top;">輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">桌上推演</td>
+<td style="vertical-align: top;">驗證角色、決策、通報、升級、替代作業與危機溝通。</td>
+<td style="vertical-align: top;">至少每年一次。</td>
+<td style="vertical-align: top;">管理階層、CISO、BCMS、IT、法務、供應商管理。</td>
+<td style="vertical-align: top;">推演紀錄、缺口清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份還原測試</td>
+<td style="vertical-align: top;">驗證備份可用、資料完整、RPO可達成。</td>
+<td style="vertical-align: top;">Tier 1每半年；其他至少每年抽測。</td>
+<td style="vertical-align: top;">IT營運、System Owner、Data Owner。</td>
+<td style="vertical-align: top;">還原測試紀錄、完整性驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">系統復原測試</td>
+<td style="vertical-align: top;">驗證DRP、系統依賴、RTO、復原步驟與業務驗收。</td>
+<td style="vertical-align: top;">Tier 1至少每年；重大變更後加測。</td>
+<td style="vertical-align: top;">IT、System Owner、Business Owner、SOC。</td>
+<td style="vertical-align: top;">復原測試報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端切換測試</td>
+<td style="vertical-align: top;">驗證跨區、備援、DNS、IAM、資料同步與雲端監控。</td>
+<td style="vertical-align: top;">依風險與架構，每年至少評估一次。</td>
+<td style="vertical-align: top;">Cloud Owner、Network、Security、Business Owner。</td>
+<td style="vertical-align: top;">切換測試紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商聯合演練</td>
+<td style="vertical-align: top;">驗證供應商中斷通報、SLA、支援、第四方資訊與替代方案。</td>
+<td style="vertical-align: top;">關鍵供應商至少每年審查，必要時演練。</td>
+<td style="vertical-align: top;">供應商管理、供應商、IT、CISO。</td>
+<td style="vertical-align: top;">供應商演練或審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資安中斷演練</td>
+<td style="vertical-align: top;">驗證勒索軟體、帳號接管、DDoS、資料破壞情境下的復原與證據保存。</td>
+<td style="vertical-align: top;">至少每年一次或與事件演練整合。</td>
+<td style="vertical-align: top;">SOC、CISO、IT、法務、DPO。</td>
+<td style="vertical-align: top;">演練報告、事件檢討。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">全流程演練</td>
+<td style="vertical-align: top;">驗證端到端流程、業務替代作業、ICT復原、通報與業務驗收。</td>
+<td style="vertical-align: top;">依關鍵性與成熟度規劃。</td>
+<td style="vertical-align: top;">跨部門與必要供應商。</td>
+<td style="vertical-align: top;">全流程演練報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 演練設計與驗收準則</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">驗收準則</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">演練目標</td>
+<td style="vertical-align: top;">每次演練應定義具體目標，例如驗證RTO、RPO、通報時限、復原步驟或供應商支援能力。</td>
+<td style="vertical-align: top;">目標可測量且與BIA/風險相連。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練範圍</td>
+<td style="vertical-align: top;">定義流程、系統、資料、供應商、角色、場景、排除項目及測試限制。</td>
+<td style="vertical-align: top;">範圍清楚且取得Owner核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練情境</td>
+<td style="vertical-align: top;">情境應包含觸發事件、假設條件、影響範圍、時間壓力、資訊安全限制與溝通需求。</td>
+<td style="vertical-align: top;">情境符合實際威脅與營運情境。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">安全控制</td>
+<td style="vertical-align: top;">測試期間不得造成資料外洩、未授權存取、正式服務中斷或證據損毀。</td>
+<td style="vertical-align: top;">完成風險評估、變更核准與回復計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RTO/RPO驗證</td>
+<td style="vertical-align: top;">記錄開始、啟動、復原、驗收、回切時間與資料還原點。</td>
+<td style="vertical-align: top;">達成或明確說明未達成原因與改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料完整性</td>
+<td style="vertical-align: top;">執行筆數、Hash、Checksum、交易總額、版本或抽樣比對。</td>
+<td style="vertical-align: top;">資料完整性符合業務驗收標準。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">業務驗收</td>
+<td style="vertical-align: top;">Business Owner確認功能、資料、流程、報表、客戶服務與合規輸出。</td>
+<td style="vertical-align: top;">取得業務驗收簽核或限制接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">改善追蹤</td>
+<td style="vertical-align: top;">所有缺失應指定責任人、期限、風險等級、改善措施與驗證方式。</td>
+<td style="vertical-align: top;">改善項目納入CAPA或風險處理計畫。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 通訊與通報管理</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">對象</th>
+<th style="vertical-align: top;">通報時機</th>
+<th style="vertical-align: top;">通報內容</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">內部管理階層</td>
+<td style="vertical-align: top;">Level 2以上中斷、可能超過RTO、重大客戶或法規影響。</td>
+<td style="vertical-align: top;">事件摘要、影響範圍、復原進度、風險、決策需求。</td>
+<td style="vertical-align: top;">BCMS負責人 / CISO</td>
+<td style="vertical-align: top;">簡報、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">使用者與員工</td>
+<td style="vertical-align: top;">服務不可用、替代作業啟動、安全注意事項、遠距工作或臨時流程。</td>
+<td style="vertical-align: top;">影響服務、替代方式、注意事項、預估恢復時間。</td>
+<td style="vertical-align: top;">Service Desk / HR / IT</td>
+<td style="vertical-align: top;">公告紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">客戶</td>
+<td style="vertical-align: top;">客戶服務受影響、SLA風險、資料或合約義務受影響。</td>
+<td style="vertical-align: top;">影響、復原計畫、臨時措施、聯絡窗口、後續更新。</td>
+<td style="vertical-align: top;">客戶窗口 / 法務 / CISO</td>
+<td style="vertical-align: top;">客戶通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商</td>
+<td style="vertical-align: top;">需要供應商支援、升級、切換、調整SLA或確認第四方狀態。</td>
+<td style="vertical-align: top;">問題、支援需求、優先級、回覆時限、證據要求。</td>
+<td style="vertical-align: top;">供應商管理 / IT</td>
+<td style="vertical-align: top;">Ticket、郵件、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">主管機關</td>
+<td style="vertical-align: top;">法規要求通報、資安事件、PII外洩、關鍵服務中斷或監管要求。</td>
+<td style="vertical-align: top;">依法律與主管機關要求提供。</td>
+<td style="vertical-align: top;">法務 / DPO / CISO</td>
+<td style="vertical-align: top;">主管機關通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料主體</td>
+<td style="vertical-align: top;">涉及PII事件且依法需通知資料主體。</td>
+<td style="vertical-align: top;">事件性質、影響、建議措施、聯絡窗口、權利行使方式。</td>
+<td style="vertical-align: top;">DPO / 法務</td>
+<td style="vertical-align: top;">資料主體通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">驗證/查證機構</td>
+<td style="vertical-align: top;">事件或中斷影響驗證範圍、稽核時程、GHG查證證據或管理系統有效性。</td>
+<td style="vertical-align: top;">影響範圍、補救、證據狀態、時程調整。</td>
+<td style="vertical-align: top;">ISMS管理代表 / GHG負責人</td>
+<td style="vertical-align: top;">溝通紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 營運持續與ICT備妥性KPI/KRI</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">指標</th>
+<th style="vertical-align: top;">類型</th>
+<th style="vertical-align: top;">計算/衡量方式</th>
+<th style="vertical-align: top;">目標/門檻</th>
+<th style="vertical-align: top;">審查頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">關鍵服務RTO達成率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">演練或實際復原中達成RTO之關鍵服務數 / 測試或事件服務數。</td>
+<td style="vertical-align: top;">依年度目標設定。</td>
+<td style="vertical-align: top;">每季/管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵服務RPO達成率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">復原資料符合RPO之服務數 / 測試或事件服務數。</td>
+<td style="vertical-align: top;">依資料分類與BIA設定。</td>
+<td style="vertical-align: top;">每季/管理審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份成功率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">成功備份次數 / 應執行備份次數。</td>
+<td style="vertical-align: top;">Tier 1應設定較高門檻。</td>
+<td style="vertical-align: top;">每月。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份連續失敗次數</td>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">同一系統連續備份失敗次數或失敗時長。</td>
+<td style="vertical-align: top;">達門檻即升級。</td>
+<td style="vertical-align: top;">即時/每月。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練缺失逾期率</td>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">逾期未完成改善項目 / 全部改善項目。</td>
+<td style="vertical-align: top;">逾期需升級治理委員會。</td>
+<td style="vertical-align: top;">每月。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵供應商SLA違反次數</td>
+<td style="vertical-align: top;">KRI</td>
+<td style="vertical-align: top;">關鍵供應商於期間內違反SLA或通報要求之次數。</td>
+<td style="vertical-align: top;">依供應商分級設定。</td>
+<td style="vertical-align: top;">每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原測試覆蓋率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">已測試關鍵服務 / 應測試關鍵服務。</td>
+<td style="vertical-align: top;">依年度演練計畫。</td>
+<td style="vertical-align: top;">每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">緊急變更事後審查完成率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">完成PIR之緊急變更 / 全部復原期間緊急變更。</td>
+<td style="vertical-align: top;">100%為原則。</td>
+<td style="vertical-align: top;">每月。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">重大中斷通報準時率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">於定義時限內完成內外部通報之事件數 / 應通報事件數。</td>
+<td style="vertical-align: top;">依法規、合約與內規。</td>
+<td style="vertical-align: top;">每季。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵紀錄可調閱率</td>
+<td style="vertical-align: top;">KPI</td>
+<td style="vertical-align: top;">抽測可於要求時間內調閱之紀錄數 / 抽測紀錄數。</td>
+<td style="vertical-align: top;">依稽核要求。</td>
+<td style="vertical-align: top;">每半年。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. 文件與紀錄保存要求</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">紀錄類型</th>
+<th style="vertical-align: top;">保存內容</th>
+<th style="vertical-align: top;">保存期限</th>
+<th style="vertical-align: top;">保存Owner</th>
+<th style="vertical-align: top;">保護要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">BIA與風險評鑑紀錄</td>
+<td style="vertical-align: top;">BIA、RTO/RPO、風險情境、風險等級、核准紀錄。</td>
+<td style="vertical-align: top;">至少三年或依法規/合約。</td>
+<td style="vertical-align: top;">BCMS負責人 / ISMS管理代表</td>
+<td style="vertical-align: top;">內部以上、版本控管。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT備妥性與DRP文件</td>
+<td style="vertical-align: top;">ICT計畫、DRP、系統復原手冊、替代作業程序。</td>
+<td style="vertical-align: top;">現行版及前一版，至少三年。</td>
+<td style="vertical-align: top;">ICT Continuity Owner</td>
+<td style="vertical-align: top;">限制存取、定期審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份與還原紀錄</td>
+<td style="vertical-align: top;">備份日誌、失敗處理、還原測試、完整性驗證。</td>
+<td style="vertical-align: top;">至少一年；關鍵系統依風險延長。</td>
+<td style="vertical-align: top;">IT營運</td>
+<td style="vertical-align: top;">防竄改、可追溯。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練與測試紀錄</td>
+<td style="vertical-align: top;">演練計畫、出席、測試結果、缺失、改善追蹤。</td>
+<td style="vertical-align: top;">至少三年。</td>
+<td style="vertical-align: top;">BCMS負責人 / ICT Owner</td>
+<td style="vertical-align: top;">內部以上、完整保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷與復原紀錄</td>
+<td style="vertical-align: top;">啟動、決策、通報、復原步驟、驗收、回切與關閉紀錄。</td>
+<td style="vertical-align: top;">至少三年；重大事件依事件保存要求。</td>
+<td style="vertical-align: top;">Incident Commander / ISMS管理代表</td>
+<td style="vertical-align: top;">機密、證據鏈管理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商持續性證據</td>
+<td style="vertical-align: top;">SLA、供應商BCP、演練結果、服務審查、第四方通報。</td>
+<td style="vertical-align: top;">合約期間及終止後至少三年。</td>
+<td style="vertical-align: top;">供應商管理</td>
+<td style="vertical-align: top;">合約保密、存取限制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法規與外部通報紀錄</td>
+<td style="vertical-align: top;">主管機關、客戶、資料主體、驗證機構、查證機構通報紀錄。</td>
+<td style="vertical-align: top;">依法規、合約或至少三年。</td>
+<td style="vertical-align: top;">法務 / DPO / ISMS代表</td>
+<td style="vertical-align: top;">機密、法律保存要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">數位證據</td>
+<td style="vertical-align: top;">日誌、映像、雜湊、截圖、通訊、操作紀錄與保管鏈。</td>
+<td style="vertical-align: top;">依事件管理與法務要求。</td>
+<td style="vertical-align: top;">CISO / SOC / 法務</td>
+<td style="vertical-align: top;">不可竄改、保管鏈。</td>
+</tr>
+</tbody>
+</table>
+<h2>25. 稽核與符合性檢查</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">稽核領域</th>
+<th style="vertical-align: top;">稽核問題</th>
+<th style="vertical-align: top;">預期證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">治理與責任</td>
+<td style="vertical-align: top;">是否明確指定BCMS、ICT備妥性、系統、資料、雲端、供應商及安全責任？</td>
+<td style="vertical-align: top;">RACI、任命書、會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">BIA</td>
+<td style="vertical-align: top;">關鍵流程與ICT服務是否完成BIA並設定RTO/RPO/MTPD/MBCO？</td>
+<td style="vertical-align: top;">BIA表、核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">風險評鑑</td>
+<td style="vertical-align: top;">中斷風險是否納入資訊安全風險登錄並規劃處理措施？</td>
+<td style="vertical-align: top;">風險評鑑表、風險登錄表、處理計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原策略</td>
+<td style="vertical-align: top;">復原策略是否與BIA、風險、合約及資源一致？</td>
+<td style="vertical-align: top;">ICT備妥性計畫、DRP、架構圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份與還原</td>
+<td style="vertical-align: top;">備份是否成功、受保護且已測試可還原？</td>
+<td style="vertical-align: top;">備份日誌、還原測試報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷期間安全</td>
+<td style="vertical-align: top;">中斷或復原期間是否維持身份驗證、日誌、監控、資料保護與變更控制？</td>
+<td style="vertical-align: top;">事件紀錄、緊急變更、SIEM日誌、權限紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練</td>
+<td style="vertical-align: top;">演練是否依計畫執行，結果是否形成改善並追蹤完成？</td>
+<td style="vertical-align: top;">演練報告、改善追蹤表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商</td>
+<td style="vertical-align: top;">關鍵供應商是否具持續性要求、SLA、通報義務與審查紀錄？</td>
+<td style="vertical-align: top;">合約、SLA、供應商審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">通報與溝通</td>
+<td style="vertical-align: top;">重大中斷是否依內外部通報要求執行？</td>
+<td style="vertical-align: top;">通報矩陣、通報紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">持續改進</td>
+<td style="vertical-align: top;">事件、演練、稽核與管理審查是否促成文件、風險與控制更新？</td>
+<td style="vertical-align: top;">CAPA、文件修訂紀錄、管理審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>26. 不符合、矯正措施與持續改進</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">來源</th>
+<th style="vertical-align: top;">可能不符合</th>
+<th style="vertical-align: top;">處理要求</th>
+<th style="vertical-align: top;">追蹤證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">演練結果</td>
+<td style="vertical-align: top;">RTO/RPO未達成、復原步驟不可行、角色不清、通報延遲。</td>
+<td style="vertical-align: top;">執行根因分析，修訂DRP、調整資源、重新演練。</td>
+<td style="vertical-align: top;">演練報告、改善計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">實際事件</td>
+<td style="vertical-align: top;">備份不可用、證據未保存、復原環境不安全、外部通報延遲。</td>
+<td style="vertical-align: top;">依事件檢討報告提出CAPA，必要時重新評鑑風險。</td>
+<td style="vertical-align: top;">事件檢討、CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">稽核發現</td>
+<td style="vertical-align: top;">文件過期、紀錄不足、供應商未審查、演練未執行。</td>
+<td style="vertical-align: top;">依不符合程序指定責任、期限、矯正措施與有效性驗證。</td>
+<td style="vertical-align: top;">稽核報告、不符合改善紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商服務審查</td>
+<td style="vertical-align: top;">SLA未達成、通報不足、第四方資訊不透明、BCP證據不足。</td>
+<td style="vertical-align: top;">要求供應商改善、調整合約、提高監督或啟動替代方案。</td>
+<td style="vertical-align: top;">供應商改善追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">重大變更</td>
+<td style="vertical-align: top;">新系統、雲端遷移、AI服務導入、資料中心搬遷未同步更新持續性要求。</td>
+<td style="vertical-align: top;">啟動變更影響評估，更新BIA、DRP、風險與演練計畫。</td>
+<td style="vertical-align: top;">變更紀錄、文件修訂。</td>
+</tr>
+</tbody>
+</table>
+<h2>27. 附錄A：營運持續與ICT備妥性檢核表</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">檢核項目</th>
+<th style="vertical-align: top;">符合狀態</th>
+<th style="vertical-align: top;">說明/證據</th>
+<th style="vertical-align: top;">改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">關鍵業務流程與ICT服務已完成識別並指定Owner。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">BIA已設定RTO、RPO、MTPD、MBCO與復原優先順序。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">中斷風險已納入資訊安全風險評鑑與風險登錄。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">DRP與系統復原手冊已建立並與現行架構一致。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">備份範圍、頻率、保存、加密、不可變性與還原測試符合RPO。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">6</td>
+<td style="vertical-align: top;">Tier 1與Tier 2服務已具備適當備援、高可用或替代流程。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">7</td>
+<td style="vertical-align: top;">中斷期間資訊安全控制、監控、日誌、存取與變更管理均有要求。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">8</td>
+<td style="vertical-align: top;">雲端服務已完成SLA、共享責任、資料匯出、跨區與退場評估。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">9</td>
+<td style="vertical-align: top;">關鍵供應商已納入持續性、通報、SLA、第四方與替代方案管理。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">10</td>
+<td style="vertical-align: top;">年度演練計畫已涵蓋桌上推演、備份還原、復原測試與必要供應商演練。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">11</td>
+<td style="vertical-align: top;">演練與實際事件之改善事項已追蹤至完成並驗證有效性。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">12</td>
+<td style="vertical-align: top;">PII、AI、GHG/CO2資料與稽核證據之持續性特殊要求已被納入。</td>
+<td style="vertical-align: top;">□ 符合 □ 部分符合 □ 不符合 □ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>28. 附錄B：RACI矩陣</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+<thead><tr>
+<th style="vertical-align: top;">活動</th>
+<th style="vertical-align: top;">最高管理階層</th>
+<th style="vertical-align: top;">CISO</th>
+<th style="vertical-align: top;">BCMS負責人</th>
+<th style="vertical-align: top;">ICT Owner</th>
+<th style="vertical-align: top;">Business Owner</th>
+<th style="vertical-align: top;">IT營運</th>
+<th style="vertical-align: top;">供應商管理</th>
+<th style="vertical-align: top;">DPO/法務</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">範圍與治理核准</td>
+<td style="vertical-align: top;">A</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">BIA執行</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT備妥性策略</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷期間安全控制</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DRP建立與維護</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練規劃</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷啟動決策</td>
+<td style="vertical-align: top;">A</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商持續性審查</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">外部通報</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">I</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">A/R</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">檢討與改善</td>
+<td style="vertical-align: top;">A</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">R</td>
+<td style="vertical-align: top;">C</td>
+<td style="vertical-align: top;">C</td>
+</tr>
+</tbody>
+</table>
+<p class="small">註：R = Responsible（執行負責）、A = Accountable（最終負責）、C = Consulted（諮詢）、I = Informed（被通知）。</p>
+<h2>30. 文件使用聲明</h2>
+<p>本文件為組織ISMS文件化資訊之一部分，供營運持續、ICT備妥性、資訊安全、雲端服務、供應鏈、AI治理、隱私保護、GHG/CO2資料治理、內部稽核與管理審查使用。文件內容應依組織實際營運模式、法規合約義務、客戶要求、服務架構、風險評鑑結果及管理審查決議進行調整、核准與版本管制。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

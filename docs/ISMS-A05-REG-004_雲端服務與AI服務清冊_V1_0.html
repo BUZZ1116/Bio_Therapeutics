@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-REG-004 雲端服務與AI服務清冊</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-REG-004 雲端服務與AI服務清冊</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-REG-004</td>
+<td>雲端服務與AI服務清冊</td>
+<td>第四階：表單與紀錄 / REG / 清冊</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>供應商與雲端安全Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-REG-004</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>供應商與雲端安全Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>清冊建立</td>
+<td></td>
+<td>雲端服務Owner / AI治理負責人 / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC / Cloud Security代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT架構審查</td>
+<td></td>
+<td>IT架構負責人 / Cloud Architect</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務合約審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS審查</td>
+<td></td>
+<td>BCMS / DRP負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 雲端治理委員會 / AI治理委員會 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 清冊目的</h2>
+<p>本清冊用於完整識別、登錄、分類、審查、監督與治理組織使用之雲端服務與AI服務，確保每一項服務均具備明確業務目的、Owner、資料分類、存取控制、合約條款、供應商關係、第四方依賴、PII/AI風險、營運持續、事件通報、資料保留、退場策略、控制證據與監督指標。</p>
+<p>本清冊支援ISO/IEC 27001:2022 Annex A 5.23雲端服務使用資訊安全、A.5.10資訊資產可接受使用、A.5.19至A.5.22供應商治理、A.5.34隱私與PII保護、A.8.28安全編碼、A.8.30外包開發、A.8.32變更管理及AI治理、風險管理與營運持續要求。</p>
+
+<h2>2. 使用原則</h2>
+<ul>
+<li>所有雲端服務與AI服務，不論免費、試用、正式採購、個人註冊、部門自購、API整合或供應商提供，均應納入本清冊或經正式排除。</li>
+<li>涉及機密資訊、PII、客戶資料、AI輸入/輸出、源碼、金鑰、GHG/CO2資料、營運關鍵流程或跨境資料傳輸之服務，須完成風險評估與專項審查。</li>
+<li>未登錄、未核准、未完成風險審查或違反資料輸入限制之雲端/AI服務不得用於處理組織資訊資產。</li>
+<li>服務新增、用途變更、資料類型變更、供應商/第四方變更、AI模型變更、重大事件或合約變更時，應觸發重新審查。</li>
+</ul>
+
+<h2>3. 清冊基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">清冊版本</th>
+<td style="width:30%;">V60.0</td>
+<th style="width:20%;">清冊期間</th>
+<td style="width:30%;">YYYY-MM-DD 至 YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>清冊Owner</th>
+<td></td>
+<th>維護頻率</th>
+<td>□ 每月　□ 每季　□ 半年　□ 年度　□ 事件/變更觸發</td>
+</tr>
+<tr>
+<th>雲端服務總數</th>
+<td>___</td>
+<th>AI服務總數</th>
+<td>___</td>
+</tr>
+<tr>
+<th>高風險服務數</th>
+<td>___</td>
+<th>未完成審查服務數</th>
+<td>___</td>
+</tr>
+<tr>
+<th>最近更新日期</th>
+<td>YYYY-MM-DD</td>
+<th>清冊狀態</th>
+<td>□ 草稿　□ 審查中　□ 核准版　□ 待更新　□ 封存版</td>
+</tr>
+<tr>
+<th>更新摘要</th>
+<td colspan="3"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 雲端服務與AI服務主清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>服務名稱</th>
+<th>服務類型</th>
+<th>供應商</th>
+<th>業務用途</th>
+<th>服務Owner</th>
+<th>資料分類</th>
+<th>風險等級</th>
+<th>核准狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS　□ AI工具　□ AI API　□ GenAI　□ MLOps　□ 資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開　□ 不處理資料</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 已核准　□ 附條件　□ 待審查　□ 禁止使用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS　□ AI工具　□ AI API　□ GenAI　□ MLOps　□ 資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開　□ 不處理資料</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 已核准　□ 附條件　□ 待審查　□ 禁止使用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS　□ AI工具　□ AI API　□ GenAI　□ MLOps　□ 資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開　□ 不處理資料</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 已核准　□ 附條件　□ 待審查　□ 禁止使用</td>
+</tr>
+<tr>
+<td>CSAIS-004</td>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS　□ AI工具　□ AI API　□ GenAI　□ MLOps　□ 資料集</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開　□ 不處理資料</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 已核准　□ 附條件　□ 待審查　□ 禁止使用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 服務分類與治理分級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務分類</th>
+<th>範圍說明</th>
+<th>治理要求</th>
+<th>典型證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核心雲端基礎設施</td>
+<td>IaaS、PaaS、Kubernetes、雲端資料庫、儲存、網路、IAM、KMS。</td>
+<td>需完成雲端架構、安全基準、共享責任、日誌、備份、BCP/DR審查。</td>
+<td>雲端架構圖、組態基準、CSPM報告、SOC報告。</td>
+</tr>
+<tr>
+<td>企業SaaS</td>
+<td>Email、協作、CRM、ERP、HR、ITSM、文件管理、通訊平台。</td>
+<td>需完成資料分類、存取權限、DLP、供應商、DPA與合約審查。</td>
+<td>SLA、DPA、權限報表、稽核日誌。</td>
+</tr>
+<tr>
+<td>AI工具與生成式AI</td>
+<td>生成式AI聊天、文件生成、程式碼生成、影像生成、語音、翻譯、摘要。</td>
+<td>需完成資料輸入限制、輸出覆核、人類監督、AI風險與供應商條款審查。</td>
+<td>AI使用政策、AI風險評估、使用紀錄。</td>
+</tr>
+<tr>
+<td>AI API與模型服務</td>
+<td>LLM API、嵌入模型、分類、預測、推薦、自動化決策服務。</td>
+<td>需完成模型用途、資料保留、訓練條款、監控、偏差與事件通報審查。</td>
+<td>API合約、模型卡、資料使用條款。</td>
+</tr>
+<tr>
+<td>MLOps與資料平台</td>
+<td>模型訓練、資料標註、特徵平台、資料湖、BI、分析平台。</td>
+<td>需完成資料治理、存取控制、資料來源、可追溯性、模型生命週期審查。</td>
+<td>資料流圖、MLOps紀錄、資料字典。</td>
+</tr>
+<tr>
+<td>外部資料集服務</td>
+<td>第三方資料集、標註資料、GHG/ESG資料來源、研究資料。</td>
+<td>需完成授權、資料來源、合法性、品質、偏差、版本與查證審查。</td>
+<td>授權條款、資料來源證明、查證紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 服務Owner與責任登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>服務Owner</th>
+<th>System Owner</th>
+<th>Data Owner</th>
+<th>Security Owner</th>
+<th>AI Owner</th>
+<th>DPO/Privacy Owner</th>
+<th>供應商Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 業務用途與核准目的登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>核准業務用途</th>
+<th>禁止用途</th>
+<th>使用部門</th>
+<th>使用者範圍</th>
+<th>核准日期</th>
+<th>核准人</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 全公司　□ 特定部門　□ 特定角色　□ 個案使用</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 全公司　□ 特定部門　□ 特定角色　□ 個案使用</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 全公司　□ 特定部門　□ 特定角色　□ 個案使用</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 資料分類與資料處理登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>處理資料類型</th>
+<th>最高資料分類</th>
+<th>是否處理PII</th>
+<th>是否處理客戶資料</th>
+<th>是否處理源碼/金鑰</th>
+<th>是否處理GHG/CO2資料</th>
+<th>資料Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 文件　□ 郵件　□ 日誌　□ 交易資料　□ 源碼　□ AI輸入/輸出　□ GHG資料　□ 不處理資料</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 文件　□ 郵件　□ 日誌　□ 交易資料　□ 源碼　□ AI輸入/輸出　□ GHG資料　□ 不處理資料</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 文件　□ 郵件　□ 日誌　□ 交易資料　□ 源碼　□ AI輸入/輸出　□ GHG資料　□ 不處理資料</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 資料流向、儲存地點與跨境傳輸</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>資料輸入來源</th>
+<th>資料輸出目的地</th>
+<th>儲存地區</th>
+<th>處理地區</th>
+<th>跨境傳輸</th>
+<th>跨境依據/機制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td>□ DPA　□ SCC　□ 合約　□ 法規允許　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td>□ DPA　□ SCC　□ 合約　□ 法規允許　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td>□ DPA　□ SCC　□ 合約　□ 法規允許　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 合約、SLA與供應商審查登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>供應商編號</th>
+<th>合約編號</th>
+<th>SLA要求</th>
+<th>安全條款</th>
+<th>DPA/資料處理條款</th>
+<th>稽核權</th>
+<th>審查結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>SUP-___</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完整　□ 部分　□ 不適用</td>
+<td>□ 有　□ 無</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>SUP-___</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完整　□ 部分　□ 不適用</td>
+<td>□ 有　□ 無</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>SUP-___</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完整　□ 部分　□ 不適用</td>
+<td>□ 有　□ 無</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 第四方與子處理者依賴登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>是否有第四方</th>
+<th>第四方清冊編號</th>
+<th>主要第四方</th>
+<th>子處理者公告方式</th>
+<th>變更通知期限</th>
+<th>風險狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td> / 4P-___</td>
+<td></td>
+<td>□ Portal　□ Email　□ 合約附件　□ 未提供</td>
+<td>□ 事前　□ 30日　□ 60日　□ 合約另定</td>
+<td>□ 可接受　□ 附條件　□ 待評估</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td> / 4P-___</td>
+<td></td>
+<td>□ Portal　□ Email　□ 合約附件　□ 未提供</td>
+<td>□ 事前　□ 30日　□ 60日　□ 合約另定</td>
+<td>□ 可接受　□ 附條件　□ 待評估</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td> / 4P-___</td>
+<td></td>
+<td>□ Portal　□ Email　□ 合約附件　□ 未提供</td>
+<td>□ 事前　□ 30日　□ 60日　□ 合約另定</td>
+<td>□ 可接受　□ 附條件　□ 待評估</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 雲端共享責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>服務模式</th>
+<th>供應商責任</th>
+<th>組織責任</th>
+<th>共同責任</th>
+<th>責任缺口</th>
+<th>確認狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完成　□ 部分　□ 未完成　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完成　□ 部分　□ 未完成　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 完成　□ 部分　□ 未完成　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 存取控制與身分驗證登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>登入方式</th>
+<th>MFA</th>
+<th>SSO整合</th>
+<th>權限模型</th>
+<th>特權帳號管理</th>
+<th>權限審查頻率</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ SSO　□ 本地帳號　□ API Key　□ 服務帳號</td>
+<td>□ 已啟用　□ 未啟用　□ 不適用</td>
+<td>□ 是　□ 否</td>
+<td>□ RBAC　□ ABAC　□ 角色群組　□ 其他</td>
+<td>□ PAM　□ 人工控管　□ 未定義</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ SSO　□ 本地帳號　□ API Key　□ 服務帳號</td>
+<td>□ 已啟用　□ 未啟用　□ 不適用</td>
+<td>□ 是　□ 否</td>
+<td>□ RBAC　□ ABAC　□ 角色群組　□ 其他</td>
+<td>□ PAM　□ 人工控管　□ 未定義</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ SSO　□ 本地帳號　□ API Key　□ 服務帳號</td>
+<td>□ 已啟用　□ 未啟用　□ 不適用</td>
+<td>□ 是　□ 否</td>
+<td>□ RBAC　□ ABAC　□ 角色群組　□ 其他</td>
+<td>□ PAM　□ 人工控管　□ 未定義</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 加密、金鑰與秘密資訊管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>傳輸加密</th>
+<th>儲存加密</th>
+<th>金鑰管理方式</th>
+<th>客戶自管金鑰</th>
+<th>Secret管理</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ TLS　□ VPN　□ 專線　□ 不適用</td>
+<td>□ 供應商管理　□ 客戶管理　□ 未確認</td>
+<td>□ KMS　□ HSM　□ 供應商代管　□ 未確認</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ Vault　□ KMS　□ 手動　□ 未定義</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ TLS　□ VPN　□ 專線　□ 不適用</td>
+<td>□ 供應商管理　□ 客戶管理　□ 未確認</td>
+<td>□ KMS　□ HSM　□ 供應商代管　□ 未確認</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ Vault　□ KMS　□ 手動　□ 未定義</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ TLS　□ VPN　□ 專線　□ 不適用</td>
+<td>□ 供應商管理　□ 客戶管理　□ 未確認</td>
+<td>□ KMS　□ HSM　□ 供應商代管　□ 未確認</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ Vault　□ KMS　□ 手動　□ 未定義</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 日誌、監控與稽核追蹤登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>可取得日誌</th>
+<th>日誌類型</th>
+<th>日誌保存期間</th>
+<th>SIEM整合</th>
+<th>告警機制</th>
+<th>稽核追蹤狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td>□ 登入　□ 管理　□ API　□ 資料存取　□ AI使用　□ 系統事件</td>
+<td></td>
+<td>□ 已整合　□ 未整合　□ 不適用</td>
+<td>□ 即時　□ 每日　□ 事件觸發　□ 無</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td>□ 登入　□ 管理　□ API　□ 資料存取　□ AI使用　□ 系統事件</td>
+<td></td>
+<td>□ 已整合　□ 未整合　□ 不適用</td>
+<td>□ 即時　□ 每日　□ 事件觸發　□ 無</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td>□ 登入　□ 管理　□ API　□ 資料存取　□ AI使用　□ 系統事件</td>
+<td></td>
+<td>□ 已整合　□ 未整合　□ 不適用</td>
+<td>□ 即時　□ 每日　□ 事件觸發　□ 無</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 安全組態與基準登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>安全基準</th>
+<th>組態檢查方式</th>
+<th>CSPM/SSPM整合</th>
+<th>弱點掃描</th>
+<th>最近檢查日期</th>
+<th>缺口狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 已建立　□ 未建立　□ 不適用</td>
+<td>□ 自動　□ 人工　□ 供應商報告</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>YYYY-MM-DD</td>
+<td>□ 無缺口　□ 有缺口　□ 待確認</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 已建立　□ 未建立　□ 不適用</td>
+<td>□ 自動　□ 人工　□ 供應商報告</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>YYYY-MM-DD</td>
+<td>□ 無缺口　□ 有缺口　□ 待確認</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 已建立　□ 未建立　□ 不適用</td>
+<td>□ 自動　□ 人工　□ 供應商報告</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td>YYYY-MM-DD</td>
+<td>□ 無缺口　□ 有缺口　□ 待確認</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 資料保留、刪除與退場要求登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>資料保留期限</th>
+<th>刪除方式</th>
+<th>刪除證明</th>
+<th>資料匯出能力</th>
+<th>退場策略</th>
+<th>退場測試狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td>□ 自動刪除　□ 手動刪除　□ 供應商刪除　□ 未定義</td>
+<td>□ 可提供　□ 不提供　□ 待確認</td>
+<td>□ 完整　□ 部分　□ 無</td>
+<td></td>
+<td>□ 已測試　□ 未測試　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td>□ 自動刪除　□ 手動刪除　□ 供應商刪除　□ 未定義</td>
+<td>□ 可提供　□ 不提供　□ 待確認</td>
+<td>□ 完整　□ 部分　□ 無</td>
+<td></td>
+<td>□ 已測試　□ 未測試　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td>□ 自動刪除　□ 手動刪除　□ 供應商刪除　□ 未定義</td>
+<td>□ 可提供　□ 不提供　□ 待確認</td>
+<td>□ 完整　□ 部分　□ 無</td>
+<td></td>
+<td>□ 已測試　□ 未測試　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 事件通報與事件應變要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>供應商通報時限</th>
+<th>通報通道</th>
+<th>證據保全</th>
+<th>事件協作支援</th>
+<th>客戶/主管機關通報支援</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 24小時　□ 48小時　□ 72小時　□ 合約另定</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 24小時　□ 48小時　□ 72小時　□ 合約另定</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 24小時　□ 48小時　□ 72小時　□ 合約另定</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 是　□ 否</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 服務可用性、BCMS與DRP登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>SLA可用性</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>備援區域</th>
+<th>供應商BCP/DR證據</th>
+<th>演練/測試證據</th>
+<th>BCMS狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. AI服務用途、模型與人類監督登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>AI用途</th>
+<th>模型類型</th>
+<th>自動化程度</th>
+<th>是否影響個人/客戶權益</th>
+<th>人類監督設計</th>
+<th>AI風險等級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 內容生成　□ 分析　□ 分類　□ 預測　□ 推薦　□ 自動化決策　□ 程式碼生成</td>
+<td>□ LLM　□ ML　□ CV　□ NLP　□ RPA+AI　□ 其他</td>
+<td>□ 輔助　□ 半自動　□ 全自動</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 內容生成　□ 分析　□ 分類　□ 預測　□ 推薦　□ 自動化決策　□ 程式碼生成</td>
+<td>□ LLM　□ ML　□ CV　□ NLP　□ RPA+AI　□ 其他</td>
+<td>□ 輔助　□ 半自動　□ 全自動</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 內容生成　□ 分析　□ 分類　□ 預測　□ 推薦　□ 自動化決策　□ 程式碼生成</td>
+<td>□ LLM　□ ML　□ CV　□ NLP　□ RPA+AI　□ 其他</td>
+<td>□ 輔助　□ 半自動　□ 全自動</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. AI資料輸入、訓練與保留限制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>允許輸入資料</th>
+<th>禁止輸入資料</th>
+<th>是否用於模型訓練</th>
+<th>資料保留政策</th>
+<th>輸入/輸出記錄</th>
+<th>審查狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td>□ PII　□ 客戶機密　□ 源碼　□ 金鑰　□ 財務未公開　□ 高機密</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td></td>
+<td>□ 有　□ 無　□ 部分</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td>□ PII　□ 客戶機密　□ 源碼　□ 金鑰　□ 財務未公開　□ 高機密</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td></td>
+<td>□ 有　□ 無　□ 部分</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td>□ PII　□ 客戶機密　□ 源碼　□ 金鑰　□ 財務未公開　□ 高機密</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td></td>
+<td>□ 有　□ 無　□ 部分</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. AI輸出驗證、偏差與安全限制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>輸出用途</th>
+<th>人工覆核要求</th>
+<th>偏差/公平性審查</th>
+<th>幻覺/錯誤控制</th>
+<th>安全過濾</th>
+<th>禁止決策</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td>□ 必須　□ 建議　□ 不適用</td>
+<td>□ 需要　□ 不需要　□ 待確認</td>
+<td>□ 已定義　□ 未定義</td>
+<td>□ 有　□ 無　□ 待確認</td>
+<td>□ 自動拒絕個人權益重大決策　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td>□ 必須　□ 建議　□ 不適用</td>
+<td>□ 需要　□ 不需要　□ 待確認</td>
+<td>□ 已定義　□ 未定義</td>
+<td>□ 有　□ 無　□ 待確認</td>
+<td>□ 自動拒絕個人權益重大決策　□ 不適用</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td>□ 必須　□ 建議　□ 不適用</td>
+<td>□ 需要　□ 不需要　□ 待確認</td>
+<td>□ 已定義　□ 未定義</td>
+<td>□ 有　□ 無　□ 待確認</td>
+<td>□ 自動拒絕個人權益重大決策　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. AI供應商條款與模型治理登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>模型提供者</th>
+<th>模型版本可視性</th>
+<th>資料使用條款</th>
+<th>IP/著作權條款</th>
+<th>AI事件通報</th>
+<th>模型變更通知</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td></td>
+<td>□ 可視　□ 部分　□ 不可視</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 有　□ 無</td>
+<td>□ 事前　□ 事後　□ 無</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td></td>
+<td>□ 可視　□ 部分　□ 不可視</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 有　□ 無</td>
+<td>□ 事前　□ 事後　□ 無</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td></td>
+<td>□ 可視　□ 部分　□ 不可視</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 有　□ 無</td>
+<td>□ 事前　□ 事後　□ 無</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. PII與隱私審查登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>是否涉及PII</th>
+<th>PII角色</th>
+<th>DPIA需求</th>
+<th>DPA狀態</th>
+<th>資料主體權利支援</th>
+<th>DPO審查結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 是　□ 否</td>
+<td>□ 控制者　□ 處理者　□ 子處理者　□ 共同控制者　□ 不適用</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 完整　□ 部分　□ 不足　□ 不適用</td>
+<td>□ 支援　□ 部分　□ 不支援</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 是　□ 否</td>
+<td>□ 控制者　□ 處理者　□ 子處理者　□ 共同控制者　□ 不適用</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 完整　□ 部分　□ 不足　□ 不適用</td>
+<td>□ 支援　□ 部分　□ 不支援</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 是　□ 否</td>
+<td>□ 控制者　□ 處理者　□ 子處理者　□ 共同控制者　□ 不適用</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 完整　□ 部分　□ 不足　□ 不適用</td>
+<td>□ 支援　□ 部分　□ 不支援</td>
+<td>□ 可接受　□ 附條件　□ 不可接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. GHG/CO2與ESG資料使用登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>是否處理GHG/ESG資料</th>
+<th>資料類型</th>
+<th>資料來源可信度</th>
+<th>版本控制</th>
+<th>查證支援</th>
+<th>揭露影響</th>
+<th>GHG審查</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 是　□ 否</td>
+<td>□ 活動數據　□ 排放係數　□ 供應商碳資料　□ 查證資料　□ ESG揭露</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 是　□ 否</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 是　□ 否</td>
+<td>□ 活動數據　□ 排放係數　□ 供應商碳資料　□ 查證資料　□ ESG揭露</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 是　□ 否</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 是　□ 否</td>
+<td>□ 活動數據　□ 排放係數　□ 供應商碳資料　□ 查證資料　□ ESG揭露</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 是　□ 否</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 服務風險評估摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>機密性風險</th>
+<th>完整性風險</th>
+<th>可用性風險</th>
+<th>隱私風險</th>
+<th>AI風險</th>
+<th>供應鏈風險</th>
+<th>總體風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 風險處理與附條件核准</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>風險處理策略</th>
+<th>必要控制/條件</th>
+<th>責任人</th>
+<th>完成期限</th>
+<th>核准層級</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免　□ 補償控制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Owner　□ CISO　□ 管理階層</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免　□ 補償控制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Owner　□ CISO　□ 管理階層</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免　□ 補償控制</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Owner　□ CISO　□ 管理階層</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 例外、禁止與限制使用清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務編號</th>
+<th>使用狀態</th>
+<th>限制條件</th>
+<th>禁止輸入/處理資料</th>
+<th>例外核准編號</th>
+<th>到期日</th>
+<th>重評日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-001</td>
+<td>□ 核准　□ 附條件　□ 限制使用　□ 禁止使用</td>
+<td></td>
+<td></td>
+<td>EXC-YYYY-___</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CSAIS-002</td>
+<td>□ 核准　□ 附條件　□ 限制使用　□ 禁止使用</td>
+<td></td>
+<td></td>
+<td>EXC-YYYY-___</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CSAIS-003</td>
+<td>□ 核准　□ 附條件　□ 限制使用　□ 禁止使用</td>
+<td></td>
+<td></td>
+<td>EXC-YYYY-___</td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. 服務變更管理登錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>變更編號</th>
+<th>服務編號</th>
+<th>變更類型</th>
+<th>變更內容</th>
+<th>是否需重評</th>
+<th>審查結果</th>
+<th>完成日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CHG-001</td>
+<td>CSAIS-___</td>
+<td>□ 用途　□ 資料　□ 區域　□ 供應商　□ 第四方　□ AI模型　□ 合約　□ 控制</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 核准　□ 附條件　□ 不核准</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CHG-002</td>
+<td>CSAIS-___</td>
+<td>□ 用途　□ 資料　□ 區域　□ 供應商　□ 第四方　□ AI模型　□ 合約　□ 控制</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 核准　□ 附條件　□ 不核准</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>CHG-003</td>
+<td>CSAIS-___</td>
+<td>□ 用途　□ 資料　□ 區域　□ 供應商　□ 第四方　□ AI模型　□ 合約　□ 控制</td>
+<td></td>
+<td>□ 是　□ 否</td>
+<td>□ 核准　□ 附條件　□ 不核准</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. 事件、缺口與改善追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>追蹤編號</th>
+<th>服務編號</th>
+<th>事件/缺口描述</th>
+<th>嚴重度</th>
+<th>處理措施</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CSAIS-ISS-001</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>CSAIS-ISS-002</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>CSAIS-ISS-003</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. 服務證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據編號</th>
+<th>服務編號</th>
+<th>證據名稱</th>
+<th>證據類型</th>
+<th>保存位置</th>
+<th>Owner</th>
+<th>有效期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EVD-001</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 合約　□ DPA　□ SOC/ISO　□ SLA　□ 架構圖　□ 風險評估　□ AI審查　□ BCP/DR　□ GHG證據</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>EVD-002</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 合約　□ DPA　□ SOC/ISO　□ SLA　□ 架構圖　□ 風險評估　□ AI審查　□ BCP/DR　□ GHG證據</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>EVD-003</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 合約　□ DPA　□ SOC/ISO　□ SLA　□ 架構圖　□ 風險評估　□ AI審查　□ BCP/DR　□ GHG證據</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>EVD-004</td>
+<td>CSAIS-___</td>
+<td></td>
+<td>□ 合約　□ DPA　□ SOC/ISO　□ SLA　□ 架構圖　□ 風險評估　□ AI審查　□ BCP/DR　□ GHG證據</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. KPI/KRI與服務監督指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標名稱</th>
+<th>目標/門檻</th>
+<th>資料來源</th>
+<th>頻率</th>
+<th>Owner</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端/AI服務完整登錄率</td>
+<td>100%</td>
+<td>本清冊 / 採購 / CASB / SSO</td>
+<td>每季</td>
+<td>ISMS代表 / IT</td>
+<td>未登錄服務限制使用</td>
+</tr>
+<tr>
+<td>高風險服務審查完成率</td>
+<td>≥ 95%</td>
+<td>GRC / 審查紀錄</td>
+<td>每季</td>
+<td>CISO / AI治理</td>
+<td>逾期升級</td>
+</tr>
+<tr>
+<td>未核准雲端/AI服務偵測數</td>
+<td>下降趨勢</td>
+<td>CASB / Proxy / DLP / SSO</td>
+<td>每月</td>
+<td>SOC / IT</td>
+<td>調查與封鎖</td>
+</tr>
+<tr>
+<td>AI禁止資料輸入事件數</td>
+<td>0</td>
+<td>DLP / AI使用紀錄 / 事件管理</td>
+<td>每月</td>
+<td>AI治理 / SOC</td>
+<td>事件通報與CAPA</td>
+</tr>
+<tr>
+<td>PII雲端/AI處理合規率</td>
+<td>100%</td>
+<td>DPIA / DPA / DPO審查</td>
+<td>每季</td>
+<td>DPO</td>
+<td>補件或暫停使用</td>
+</tr>
+<tr>
+<td>雲端安全基準符合率</td>
+<td>≥ 95%</td>
+<td>CSPM / SSPM / 組態檢查</td>
+<td>每月</td>
+<td>Cloud Security</td>
+<td>風險處理</td>
+</tr>
+<tr>
+<td>服務證據有效率</td>
+<td>≥ 95%</td>
+<td>證據清單</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>補證或重評</td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. 服務集中風險與單點依賴分析</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險熱點</th>
+<th>受影響服務</th>
+<th>單點依賴說明</th>
+<th>影響範圍</th>
+<th>風險等級</th>
+<th>替代方案</th>
+<th>處理狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端平台集中依賴</td>
+<td></td>
+<td></td>
+<td>□ 全組織　□ 特定服務　□ 客戶服務</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>身份服務集中依賴</td>
+<td></td>
+<td></td>
+<td>□ 全組織　□ 特定服務　□ 客戶服務</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>AI模型/API集中依賴</td>
+<td></td>
+<td></td>
+<td>□ 全組織　□ 特定服務　□ 客戶服務</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>資料倉儲/分析平台集中依賴</td>
+<td></td>
+<td></td>
+<td>□ 全組織　□ 特定服務　□ 客戶服務</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>協作與文件平台集中依賴</td>
+<td></td>
+<td></td>
+<td>□ 全組織　□ 特定服務　□ 客戶服務</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入項目</th>
+<th>是否納入</th>
+<th>摘要</th>
+<th>責任角色</th>
+<th>提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高/極高雲端與AI服務風險</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / ISMS代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>未核准或影子IT/影子AI使用趨勢</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / IT / AI治理</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>重大雲端/AI事件或缺口</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / 服務Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端集中依賴與替代方案不足</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>BCMS / Cloud Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI高影響用途與風險接受事項</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>AI治理負責人</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>PII、合約、跨境或DPA重大缺口</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>DPO / 法務</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資源、工具、監控或治理能力需求</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / IT</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. 清冊品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>品質檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>改善要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>是否涵蓋所有正式、試用、部門自購、API整合與供應商提供服務？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類完整性</td>
+<td>各服務處理資料類型、最高分類與Owner是否明確？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>合約與供應商證據</td>
+<td>合約、SLA、DPA、SOC/ISO與稽核權是否完整？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端安全控制</td>
+<td>共享責任、存取、加密、日誌、組態與BCP/DR是否完整？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>AI治理控制</td>
+<td>AI用途、資料輸入限制、人類監督、輸出驗證與模型條款是否完整？</td>
+<td>□ 通過　□ 修正　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>風險與監督</td>
+<td>服務風險、處理措施、KPI/KRI、例外與重評是否完整？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>專項治理</td>
+<td>PII、AI、BCMS、GHG、第四方與合規審查是否完成？</td>
+<td>□ 通過　□ 修正　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>ISMS代表</th>
+<th>IT/Cloud</th>
+<th>AI治理</th>
+<th>DPO/法務</th>
+<th>供應商管理</th>
+<th>服務Owner</th>
+<th>SOC</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准雲端/AI治理要求</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>建立與維護清冊</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查雲端安全控制</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>審查AI治理與資料使用</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>審查PII與合約條款</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>監控未核准服務</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>追蹤缺口與風險處理</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>提交管理審查輸入</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本清冊對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>識別雲端、AI、供應鏈、法規與技術外部議題。</td>
+<td>第4、5、33章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>識別客戶、資料主體、供應商、主管機關與AI使用者要求。</td>
+<td>第10、24、34章</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>6.1.2</td>
+<td>雲端與AI服務風險評鑑。</td>
+<td>第26、27章</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>6.1.3</td>
+<td>不可接受雲端/AI風險之風險處理與接受。</td>
+<td>第27、28章</td>
+<td>CISO / 服務Owner</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>清冊與證據受控保存。</td>
+<td>第31、41章</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>雲端與AI服務治理納入運作控制。</td>
+<td>第12-19、20-23章</td>
+<td>IT / AI治理</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>用途、資料、供應商、模型或區域變更觸發重評。</td>
+<td>第29章</td>
+<td>風險管理</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>風險處理措施執行與有效性驗證。</td>
+<td>第27、30章</td>
+<td>服務Owner</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>雲端/AI KPI/KRI監督與分析。</td>
+<td>第32章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>稽核清冊完整性、審查與控制證據。</td>
+<td>第40章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>重大雲端/AI風險納入管理審查。</td>
+<td>第34章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>服務缺口、事件或未核准使用導出CAPA。</td>
+<td>第30章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Annex A控制</th>
+<th>本清冊對應內容</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.9-A.5.10</td>
+<td>資訊資產清冊與可接受使用。</td>
+<td>本清冊、使用政策、核准紀錄</td>
+<td>ISMS代表 / 服務Owner</td>
+</tr>
+<tr>
+<td>A.5.12-A.5.14</td>
+<td>資訊分類、標示與傳輸。</td>
+<td>資料分類、資料流向、跨境紀錄</td>
+<td>Data Owner / DPO</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取控制、身分、驗證資訊與權限。</td>
+<td>SSO、MFA、IAM報表、權限審查</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.5.19-A.5.23</td>
+<td>供應商、ICT供應鏈與雲端服務安全。</td>
+<td>合約、SLA、DPA、SOC、共享責任</td>
+<td>供應商管理 / Cloud Owner</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理與證據。</td>
+<td>事件通報條款、日誌、證據保全</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.30</td>
+<td>ICT營運持續就緒度。</td>
+<td>BCP/DR、RTO/RPO、備援證據</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.34</td>
+<td>法律、智慧財產、紀錄保護與PII。</td>
+<td>法務審查、DPA、DPIA、IP條款</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>A.8.9-A.8.12</td>
+<td>組態、資料刪除、資料遮罩與DLP。</td>
+<td>CSPM、刪除證明、DLP政策</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.8.15-A.8.16</td>
+<td>日誌與監控。</td>
+<td>SIEM整合、日誌保存、告警紀錄</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>A.8.20-A.8.24</td>
+<td>網路、安全服務、隔離、Web Filtering與加密。</td>
+<td>網路架構、加密與安全服務證據</td>
+<td>IT / Cloud Security</td>
+</tr>
+<tr>
+<td>A.8.28-A.8.30</td>
+<td>安全開發、測試與外包開發。</td>
+<td>AI/API審查、開發安全、供應商開發控制</td>
+<td>DevSecOps / AI治理</td>
+</tr>
+<tr>
+<td>A.8.32-A.8.34</td>
+<td>變更管理、測試資訊與稽核期間資訊保護。</td>
+<td>變更紀錄、測試資料控制、稽核保護</td>
+<td>IT / ISMS代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本清冊對應要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27005</td>
+<td>雲端與AI服務風險識別、分析、評估與處理。</td>
+<td>第26、27章</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>ISO 31000</td>
+<td>服務風險監督、利害關係人溝通與治理紀錄。</td>
+<td>第32、34章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701</td>
+<td>雲端/AI服務PII處理、DPIA、DPA與跨境傳輸。</td>
+<td>第8、9、24章</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001</td>
+<td>AI服務清冊、AI用途、風險、治理、供應商與人類監督。</td>
+<td>第20-23章</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI風險來源、事件、後果、控制與剩餘風險。</td>
+<td>第20-23、26章</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>雲端/AI服務中斷、BCP/DR、RTO/RPO與替代方案。</td>
+<td>第19、33章</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>清冊、審查與控制證據支援稽核追溯。</td>
+<td>第31、35、40章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI治理責任、監督、透明度與決策。</td>
+<td>第20-23、34章</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>雲端/AI服務處理GHG資料、查證資料與揭露資訊。</td>
+<td>第25章</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>清冊完整性</td>
+<td>所有雲端、SaaS、AI、API與試用服務是否完整登錄？</td>
+<td>清冊、採購紀錄、CASB/SSO發現</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>核准與用途</td>
+<td>每項服務是否具核准用途、Owner與使用限制？</td>
+<td>核准紀錄、服務Owner、用途登錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>資料分類、PII、客戶資料、跨境傳輸與DPA是否完整？</td>
+<td>DPIA、DPA、資料流向、分類紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>雲端安全</td>
+<td>共享責任、MFA、加密、日誌、組態與BCP/DR是否落實？</td>
+<td>CSPM、IAM、SIEM、BCP/DR證據</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>AI治理</td>
+<td>AI用途、輸入限制、輸出覆核、人類監督與供應商條款是否完整？</td>
+<td>AI風險評估、AI條款、使用紀錄</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>供應鏈</td>
+<td>第四方、子處理者、SOC/ISO與服務證據是否受控？</td>
+<td>第四方清冊、供應商證據</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>風險處理</td>
+<td>高風險服務是否具處理計畫、附條件核准或接受紀錄？</td>
+<td>風險登錄、處理計畫、例外紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准版雲端服務與AI服務清冊</td>
+<td>ISMS代表 / Cloud Owner / AI治理負責人</td>
+<td>GRC / ISMS文件庫</td>
+<td>服務終止後至少3年</td>
+<td>需保留版本、審查與核准紀錄。</td>
+</tr>
+<tr>
+<td>合約、SLA、DPA與供應商證據</td>
+<td>法務 / 供應商管理</td>
+<td>合約系統 / 供應商文件庫</td>
+<td>合約終止後至少3年或依法規較長者</td>
+<td>需保留安全與資料保護條款。</td>
+</tr>
+<tr>
+<td>雲端安全證據</td>
+<td>IT / Cloud Security / SOC</td>
+<td>雲端平台 / SIEM / ISMS文件庫</td>
+<td>至少3年</td>
+<td>需保留組態、日誌、CSPM與權限審查證據。</td>
+</tr>
+<tr>
+<td>AI治理證據</td>
+<td>AI治理負責人 / 服務Owner</td>
+<td>AI治理文件庫 / GRC</td>
+<td>服務終止後至少3年</td>
+<td>需保留用途、輸入限制、輸出覆核與風險評估。</td>
+</tr>
+<tr>
+<td>PII與DPIA/DPA紀錄</td>
+<td>DPO</td>
+<td>PIMS文件庫</td>
+<td>依法規與組織要求</td>
+<td>涉及資料主體權利與跨境需特別保存。</td>
+</tr>
+<tr>
+<td>事件、缺口與CAPA紀錄</td>
+<td>SOC / CAPA負責人</td>
+<td>事件管理 / CAPA系統</td>
+<td>結案後至少3年</td>
+<td>重大事件依法規或合約保存。</td>
+</tr>
+<tr>
+<td>管理審查輸入與決議</td>
+<td>ISMS代表</td>
+<td>管理審查文件庫</td>
+<td>至少3年</td>
+<td>重大雲端/AI風險需追蹤至關閉。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>42. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的與使用原則完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>清冊基本資料、主清冊、服務分類、Owner與業務用途完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類、資料流向、合約SLA、第四方、共享責任與存取控制完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>加密、日誌、組態、資料保留、事件通報與BCMS/DRP完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>AI用途、AI資料限制、AI輸出驗證、AI供應商條款與PIMS/GHG審查完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>風險評估、處理、例外限制、變更、缺口追蹤與證據清單完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>KPI/KRI、集中風險、管理審查、品質檢查、RACI與條文矩陣完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>Annex A、整合標準、稽核提示、保存要求與流程銜接完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>43. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本清冊之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>組織控制措施管理程序</td>
+<td>定義Annex A.5組織控制與雲端/AI治理要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊資產可接受使用政策</td>
+<td>定義雲端與AI服務使用限制與禁止事項。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務使用政策</td>
+<td>定義雲端服務採購、使用、監督與退場要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>AI工具與資料使用政策</td>
+<td>定義AI服務用途、資料輸入、輸出覆核與人類監督要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊資產清冊</td>
+<td>承接雲端與AI服務作為資訊資產之登錄。</td>
+</tr>
+<tr>
+<td></td>
+<td>供應商資訊安全登錄表</td>
+<td>提供直接供應商主檔與供應商審查。</td>
+</tr>
+<tr>
+<td></td>
+<td>第四方供應鏈登錄表</td>
+<td>提供子處理者與第四方依賴資訊。</td>
+</tr>
+<tr>
+<td>ISMS-082/083系列</td>
+<td>風險評鑑與風險處理文件</td>
+<td>承接雲端與AI服務風險、處理與剩餘風險接受。</td>
+</tr>
+<tr>
+<td>ISMS-091/092/093/101系列</td>
+<td>監督量測、稽核、管理審查與CAPA</td>
+<td>承接服務KPI/KRI、稽核、管理決策與改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>45. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISMS雲端服務與AI服務治理之正式企業級清冊，可支援ISO/IEC 27001:2022 Annex A.5.23「Information security for use of cloud services」、A.5.10資訊資產可接受使用、A.5.19至A.5.22供應商與ICT供應鏈治理，以及ISO/IEC 42001、ISO/IEC 23894、ISO/IEC 27701、ISO 22301與GHG/CO2資料治理之整合管理要求。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

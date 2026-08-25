@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-027 環境區隔作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-027 環境區隔作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-027</td>
+<td>環境區隔作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-027</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Environment Segregation Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps審查</td>
+<td></td>
+<td>DevSecOps Owner / Release Manager</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與雲端審查</td>
+<td></td>
+<td>IT Operations Owner / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路安全審查</td>
+<td></td>
+<td>Network Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理與隱私審查</td>
+<td></td>
+<td>Data Owner / DPO（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與法務審查</td>
+<td></td>
+<td>Supplier Management / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / DevSecOps主管 / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範開發、測試、預備、正式、災備、沙箱、教育訓練、AI/MLOps與供應商環境之區隔、存取、資料、網路、Secrets、CI/CD、監控、變更、例外與稽核要求，確保不同環境之資料、帳號、權限、設定、服務、金鑰及網路流量不被混用或相互污染，降低未授權存取、正式資料外洩、測試資料濫用、錯誤部署、供應鏈風險、AI資料洩漏、服務中斷與合規缺口。</p>
+<p>本文件旨在建立一致且可驗證之環境隔離模型，支援安全開發生命週期、弱點管理、安全測試、變更管理、營運持續、隱私保護與AI治理，並確保任何需跨環境傳輸資料、同步設定、部署程式或使用正式資料之行為均經核准、記錄與風險控制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>正式環境應與開發、測試、預備、沙箱、教育訓練及供應商環境進行邏輯或實體區隔，且不得共享高風險帳號、Secrets、資料庫、儲存、管理介面或未經授權之網路連線。</li>
+<li>不同環境應具備明確Owner、用途、資料分類、網路邊界、存取權限、部署管道、資料來源、備份與退場要求。</li>
+<li>正式資料不得任意複製至非正式環境；如因測試、除錯、模型訓練或驗證需求必須使用，應經Data Owner、DPO及CISO依資料分類核准並完成遮罩、去識別、最小化與保存期限設定。</li>
+<li>開發、測試與預備環境不得使用正式環境Secrets、API Key、雲端金鑰、資料庫密碼、憑證、模型供應商Token或客戶正式憑證。</li>
+<li>部署至正式環境應透過受控CI/CD、變更管理、職務分離、安全閘門與可回復機制，不得由開發人員以未受控方式直接修改正式環境。</li>
+<li>環境區隔不應僅依命名或文件聲明，而應透過雲端帳號/訂閱隔離、網路分段、IAM權限、Secrets隔離、資料遮罩、資源標籤、監控與稽核證據加以實施。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境區隔</td>
+<td>透過管理、技術、網路、權限、資料、Secrets、流程及監控控制，使不同用途環境間風險不相互擴散之措施。</td>
+</tr>
+<tr>
+<td>開發環境</td>
+<td>供開發人員撰寫、整合與初步測試程式碼之環境，原則不得保存正式資料或正式Secrets。</td>
+</tr>
+<tr>
+<td>測試環境</td>
+<td>供QA、功能測試、整合測試、安全測試與使用者驗收準備之環境。</td>
+</tr>
+<tr>
+<td>預備 / 準正式環境</td>
+<td>接近正式設定並用於上線前驗證、效能測試或UAT之環境，仍不得直接使用未遮罩正式資料，除非核准。</td>
+</tr>
+<tr>
+<td>正式環境</td>
+<td>提供真實業務服務、客戶服務、正式資料處理或正式AI推論之環境。</td>
+</tr>
+<tr>
+<td>災備環境</td>
+<td>用於災難復原、故障切換、備援或營運持續之環境，應依正式環境同等級保護。</td>
+</tr>
+<tr>
+<td>沙箱環境</td>
+<td>用於技術驗證、概念驗證、供應商測試、AI實驗或臨時性探索之受限環境。</td>
+</tr>
+<tr>
+<td>環境提升</td>
+<td>將程式碼、設定、資料庫變更、模型版本、IaC或資源設定由低階環境推進至較高階環境之流程。</td>
+</tr>
+<tr>
+<td>正式資料</td>
+<td>正式環境中真實業務、客戶、PII、交易、機密、AI或營運資料。</td>
+</tr>
+<tr>
+<td>資料遮罩</td>
+<td>將敏感資料以不可逆或受控方式轉換，使其不再直接識別個人、客戶或敏感內容。</td>
+</tr>
+<tr>
+<td>環境漂移</td>
+<td>不同環境之設定、版本、權限、資料結構或控制措施與基準不一致，造成測試結果失真或安全風險。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准環境區隔要求、高風險跨環境連線、正式資料使用例外與重大剩餘風險。</td>
+<td>核准紀錄、風險接受、例外審查。</td>
+</tr>
+<tr>
+<td>Environment Segregation Owner</td>
+<td>維護環境區隔模型、環境清冊、區隔基準、跨環境例外與合規報告。</td>
+<td>環境清冊、區隔檢查報告。</td>
+</tr>
+<tr>
+<td>DevSecOps Owner</td>
+<td>管理CI/CD環境提升、部署權限、安全閘門、Artifact與環境變數隔離。</td>
+<td>Pipeline設定、Release紀錄。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>管理雲端帳號、訂閱、IAM、網路、安全群組、KMS與CSPM之環境隔離。</td>
+<td>雲端環境設計、CSPM報告。</td>
+</tr>
+<tr>
+<td>IT Operations Owner</td>
+<td>管理伺服器、資料庫、網路、備份、監控與正式維運環境之隔離。</td>
+<td>組態紀錄、維運紀錄。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>設計與維護跨環境網路分段、防火牆、VPN、ZTNA、API Gateway與管理通道限制。</td>
+<td>網路規則、分段圖。</td>
+</tr>
+<tr>
+<td>System / Application Owner</td>
+<td>定義系統各環境用途、資料需求、部署流程、測試需求與權限要求。</td>
+<td>系統環境矩陣。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>核准資料跨環境使用、遮罩、去識別、保存期限、刪除與測試資料集。</td>
+<td>資料使用核准與遮罩紀錄。</td>
+</tr>
+<tr>
+<td>DPO / 隱私負責人</td>
+<td>審查PII於非正式環境之使用、去識別、DPIA、跨境與資料主體權利影響。</td>
+<td>隱私審查、DPIA。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>管理AI模型、Prompt、RAG、訓練資料、模型版本、模型端點與AI測試環境隔離。</td>
+<td>AI環境矩陣、模型版本紀錄。</td>
+</tr>
+<tr>
+<td>QA / Test Owner</td>
+<td>確保測試環境、測試資料、測試帳號及測試結果符合區隔與資料保護要求。</td>
+<td>測試資料與帳號紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商開發、測試或維運環境符合環境隔離、資料保護與退場要求。</td>
+<td>合約條款、供應商評估。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查環境清冊、區隔證據、跨環境存取、正式資料使用與例外管理。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 環境類型與最低隔離要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>環境類型</th>
+<th>用途</th>
+<th>最低隔離要求</th>
+<th>正式資料使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>開發環境</td>
+<td>程式開發、單元測試、初步功能驗證。</td>
+<td>獨立帳號/權限、獨立Secrets、不得連正式資料庫，不得開放正式管理權限。</td>
+<td>禁止，除非不可逆去識別且經核准。</td>
+</tr>
+<tr>
+<td>測試環境</td>
+<td>功能測試、整合測試、安全測試、QA驗證。</td>
+<td>與開發/正式分離，測試帳號與測試資料獨立，網路受限。</td>
+<td>原則禁止，必要時遮罩並核准。</td>
+</tr>
+<tr>
+<td>預備 / 準正式環境</td>
+<td>上線前驗證、UAT、效能與部署演練。</td>
+<td>接近正式設定但與正式網路、資料、Secrets隔離；部署需受控。</td>
+<td>需核准、遮罩、最小化、期限與刪除。</td>
+</tr>
+<tr>
+<td>正式環境</td>
+<td>正式業務、客戶服務、正式資料處理。</td>
+<td>最高等級控管，最小權限、PAM、MFA、變更管理、監控、備份。</td>
+<td>可使用正式資料，需依資料分類保護。</td>
+</tr>
+<tr>
+<td>災備環境</td>
+<td>故障切換、復原與營運持續。</td>
+<td>依正式環境同等級控制，與測試環境隔離，定期演練。</td>
+<td>依正式資料保護要求。</td>
+</tr>
+<tr>
+<td>沙箱 / POC環境</td>
+<td>概念驗證、供應商測試、技術探索。</td>
+<td>限制網路、帳號、資料、成本、期限與外部連線；到期清除。</td>
+<td>禁止使用正式資料。</td>
+</tr>
+<tr>
+<td>教育訓練環境</td>
+<td>訓練、示範、演練與課程。</td>
+<td>與正式資源完全隔離，資料合成或假名化，帳號短期。</td>
+<td>禁止使用正式資料。</td>
+</tr>
+<tr>
+<td>AI/MLOps實驗環境</td>
+<td>模型實驗、Prompt測試、RAG測試、Notebook與資料分析。</td>
+<td>資料集、模型、API Key、GPU、Notebook與RAG資料源隔離。</td>
+<td>需AI治理與Data Owner核准。</td>
+</tr>
+<tr>
+<td>供應商環境</td>
+<td>外包開發、測試、維運或代管服務。</td>
+<td>合約要求、資料限制、存取隔離、日誌、退場刪除與稽核權。</td>
+<td>原則禁止，必要時須DPA與核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 環境區隔生命週期流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 環境需求提出</td>
+<td>提出環境用途、系統、資料分類、使用者、期限、雲端/網路/資料需求與風險等級。</td>
+<td>System Owner / Project Owner</td>
+<td>環境申請紀錄。</td>
+</tr>
+<tr>
+<td>2. 區隔設計</td>
+<td>定義環境邊界、帳號/訂閱、網路、IAM、Secrets、資料、CI/CD、監控與備份。</td>
+<td>Security Architecture / Cloud / DevSecOps</td>
+<td>環境區隔設計。</td>
+</tr>
+<tr>
+<td>3. 安全審查與核准</td>
+<td>依資料、AI、供應商、對外暴露及正式資料使用情境審查。</td>
+<td>CISO / Data Owner / DPO</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>4. 建置與基準套用</td>
+<td>依安全組態基準、IaC、標籤、Policy as Code、Secrets Manager與監控建置。</td>
+<td>IT / Cloud / DevSecOps</td>
+<td>建置紀錄與基準檢查。</td>
+</tr>
+<tr>
+<td>5. 資料與Secrets配置</td>
+<td>建立獨立測試資料、環境專用Secrets、短期憑證與遮罩資料。</td>
+<td>Data Owner / Secrets Owner</td>
+<td>資料核准與Secrets紀錄。</td>
+</tr>
+<tr>
+<td>6. 使用與監控</td>
+<td>持續監控跨環境連線、權限、資料移動、成本、AI用量、部署與異常。</td>
+<td>SOC / Environment Owner</td>
+<td>監控報告。</td>
+</tr>
+<tr>
+<td>7. 定期審查</td>
+<td>審查環境必要性、Owner、資料、帳號、Secrets、網路規則、成本與合規狀態。</td>
+<td>Environment Owner</td>
+<td>環境審查紀錄。</td>
+</tr>
+<tr>
+<td>8. 退場與清理</td>
+<td>環境不再需要時刪除資料、撤銷權限、停用Secrets、銷毀資源並更新清冊。</td>
+<td>System Owner / Cloud / IT</td>
+<td>退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 網路與連線隔離要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險加強要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路分段</td>
+<td>不同環境應以VLAN、子網、VPC/VNet、Security Group、ACL、防火牆或微分段隔離。</td>
+<td>正式與非正式環境不得同網段或無限制互通。</td>
+</tr>
+<tr>
+<td>跨環境連線</td>
+<td>所有跨環境連線需有申請、Owner、用途、來源、目的、埠、期限與日誌。</td>
+<td>正式至非正式或非正式至正式連線需CISO審查。</td>
+</tr>
+<tr>
+<td>管理介面</td>
+<td>正式管理介面不得由開發/測試網段直接存取。</td>
+<td>需PAM、跳板、ZTNA、MFA與Session Recording。</td>
+</tr>
+<tr>
+<td>資料庫連線</td>
+<td>非正式環境不得直接連接正式資料庫。</td>
+<td>例外需Data Owner、DPO與CISO核准並採唯讀、遮罩或隔離機制。</td>
+</tr>
+<tr>
+<td>API與服務呼叫</td>
+<td>測試環境應呼叫測試API、Mock、Stub或沙箱服務，不得誤呼正式外部API。</td>
+<td>需Egress控制、API Gateway與環境標籤。</td>
+</tr>
+<tr>
+<td>供應商連線</td>
+<td>供應商測試/維運通道應與正式網路分段並限制時間與用途。</td>
+<td>高風險需Session Recording與單次授權。</td>
+</tr>
+<tr>
+<td>AI外部服務</td>
+<td>非正式AI測試應使用測試Key與測試資料，不得直連正式AI API Key或正式RAG資料源。</td>
+<td>需Proxy/CASB/DLP與用量監控。</td>
+</tr>
+<tr>
+<td>日誌監控</td>
+<td>跨環境連線、拒絕流量、異常Egress與資料移動需記錄並可供調查。</td>
+<td>高風險連線接入SIEM並建立告警。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 身份、權限與職務分離要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境專用角色</td>
+<td>開發、測試、預備、正式及災備應使用不同角色與權限集合。</td>
+<td>IAM角色矩陣。</td>
+</tr>
+<tr>
+<td>正式環境存取</td>
+<td>正式環境存取需最小權限、MFA、PAM/JIT、核准與日誌。</td>
+<td>PAM/IAM紀錄。</td>
+</tr>
+<tr>
+<td>開發人員限制</td>
+<td>開發人員原則不得直接修改正式環境資料、設定或程式；需透過Release流程。</td>
+<td>CI/CD紀錄、權限審查。</td>
+</tr>
+<tr>
+<td>測試帳號</td>
+<td>測試帳號需具名或可追溯、限定環境、期限、角色與資料範圍。</td>
+<td>測試帳號清冊。</td>
+</tr>
+<tr>
+<td>服務帳號</td>
+<td>不同環境服務帳號不得共用，且權限、Secrets、Token與憑證應分離。</td>
+<td>服務帳號清冊。</td>
+</tr>
+<tr>
+<td>Break-glass</td>
+<td>緊急正式環境存取需Break-glass流程，使用後立即審查與輪替。</td>
+<td>緊急存取紀錄。</td>
+</tr>
+<tr>
+<td>供應商權限</td>
+<td>供應商權限限定環境、期限、用途，禁止使用組織共享帳號。</td>
+<td>供應商存取紀錄。</td>
+</tr>
+<tr>
+<td>權限審查</td>
+<td>正式與高風險非正式環境權限至少每季審查，其他環境至少每年。</td>
+<td>權限審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 資料隔離、遮罩與測試資料要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料處理情境</th>
+<th>控制要求</th>
+<th>核准要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>使用合成資料</td>
+<td>優先使用合成資料、範例資料或人工建立測試資料。</td>
+<td>通常由System Owner核准。</td>
+</tr>
+<tr>
+<td>使用遮罩正式資料</td>
+<td>需資料最小化、不可逆遮罩或去識別、保留期限、刪除與存取限制。</td>
+<td>Data Owner、DPO與CISO依風險核准。</td>
+</tr>
+<tr>
+<td>使用未遮罩正式資料</td>
+<td>原則禁止；僅於重大故障、法規測試或無替代方案時短期核准。</td>
+<td>管理階層授權、DPO、CISO與Data Owner核准。</td>
+</tr>
+<tr>
+<td>資料複製至雲端測試</td>
+<td>需確認資料所在地、加密、權限、跨境、供應商條款與刪除。</td>
+<td>Data Owner / DPO / Cloud Security核准。</td>
+</tr>
+<tr>
+<td>AI模型訓練或微調</td>
+<td>正式資料用於AI訓練需AI治理、授權、PII評估、資料不訓練條款與刪除計畫。</td>
+<td>AI Governance、Data Owner、DPO核准。</td>
+</tr>
+<tr>
+<td>RAG索引建立</td>
+<td>非正式RAG不得索引正式機密資料，除非完成權限繼承與遮罩。</td>
+<td>Data Owner與AI Governance核准。</td>
+</tr>
+<tr>
+<td>測試資料保存</td>
+<td>測試資料需設定保存期限、刪除責任與刪除證據。</td>
+<td>System Owner / Data Owner確認。</td>
+</tr>
+<tr>
+<td>資料回流正式</td>
+<td>測試或非正式環境資料不得回流正式環境，除非經驗證與核准。</td>
+<td>Change Owner與Data Owner核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. Secrets、金鑰與憑證區隔要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Secrets類型</th>
+<th>區隔要求</th>
+<th>禁止事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料庫密碼</td>
+<td>不同環境使用不同帳號、密碼與權限。</td>
+<td>禁止測試環境使用正式資料庫帳密。</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>開發、測試、預備、正式需分環境Key，設定Scope、到期與用量限制。</td>
+<td>禁止非正式環境使用正式API Key。</td>
+</tr>
+<tr>
+<td>雲端Access Key</td>
+<td>不同雲端帳號/訂閱/專案與環境需分離Key或Role。</td>
+<td>禁止跨環境共用高權限Access Key。</td>
+</tr>
+<tr>
+<td>TLS憑證</td>
+<td>測試與正式憑證分離，正式私鑰不得出現在非正式環境。</td>
+<td>禁止複製正式私鑰至開發或測試。</td>
+</tr>
+<tr>
+<td>KMS金鑰</td>
+<td>不同環境應使用不同KMS Key或Key Policy限制，正式Key權限嚴格控管。</td>
+<td>禁止非正式環境解密正式資料。</td>
+</tr>
+<tr>
+<td>CI/CD Secrets</td>
+<td>Pipeline變數需分環境保護，正式Secrets僅允許正式部署Job存取。</td>
+<td>禁止在PR、Fork、測試Job曝光正式Secrets。</td>
+</tr>
+<tr>
+<td>AI API Key</td>
+<td>AI測試、開發、正式推論需分Key，正式Key不得用於Notebook或沙箱。</td>
+<td>禁止將AI Key輸入Prompt或提交Repo。</td>
+</tr>
+<tr>
+<td>Webhook Secret</td>
+<td>測試Webhook與正式Webhook Secret分離，並具簽章與Replay Protection。</td>
+<td>禁止測試服務接收正式Webhook資料。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. CI/CD、部署與環境提升要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境流水線</td>
+<td>程式碼、IaC、模型或設定應依開發、測試、預備、正式順序提升，避免人工跳環境部署。</td>
+<td>Pipeline設定。</td>
+</tr>
+<tr>
+<td>部署權限</td>
+<td>正式部署權限應與開發權限分離，需核准、雙人審查或Release Gate。</td>
+<td>部署權限矩陣。</td>
+</tr>
+<tr>
+<td>Artifact一致性</td>
+<td>正式環境部署之Artifact需來自受控Build，具版本、雜湊、SBOM或簽章。</td>
+<td>Artifact紀錄。</td>
+</tr>
+<tr>
+<td>環境變數</td>
+<td>環境變數與設定需分環境管理，避免開發設定進入正式。</td>
+<td>設定管理紀錄。</td>
+</tr>
+<tr>
+<td>資料庫變更</td>
+<td>資料庫Schema與Migration需經測試、備份、回復計畫與變更核准。</td>
+<td>DB變更紀錄。</td>
+</tr>
+<tr>
+<td>AI模型提升</td>
+<td>模型、Prompt、RAG索引、特徵與模型端點提升需版本控管、測試、核准與回滾。</td>
+<td>模型版本與部署紀錄。</td>
+</tr>
+<tr>
+<td>安全閘門</td>
+<td>正式部署前需通過SAST、SCA、Secrets、IaC、容器、DAST/API或AI安全測試。</td>
+<td>Release Gate證據。</td>
+</tr>
+<tr>
+<td>回滾機制</td>
+<td>正式部署需具回滾、藍綠部署、金絲雀或備援策略。</td>
+<td>回滾測試與Runbook。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 雲端、SaaS與租戶環境區隔</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>環境型態</th>
+<th>區隔要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端帳號 / 訂閱</td>
+<td>正式、非正式與沙箱應優先使用不同帳號、訂閱、專案或資源群組隔離。</td>
+<td>雲端帳號架構圖。</td>
+</tr>
+<tr>
+<td>VPC / VNet</td>
+<td>不同環境使用不同VPC/VNet、子網、路由與安全群組，跨環境連線需核准。</td>
+<td>網路圖、Security Group。</td>
+</tr>
+<tr>
+<td>雲端IAM</td>
+<td>不同環境Role、Service Principal、Managed Identity與Policy應分離。</td>
+<td>IAM矩陣。</td>
+</tr>
+<tr>
+<td>雲端KMS</td>
+<td>正式與非正式KMS Key應分離，正式Key權限不可給非正式資源。</td>
+<td>KMS設定。</td>
+</tr>
+<tr>
+<td>SaaS租戶</td>
+<td>高風險SaaS應使用獨立正式/測試租戶或沙箱功能。</td>
+<td>SaaS租戶設定。</td>
+</tr>
+<tr>
+<td>資料同步</td>
+<td>SaaS正式資料同步至測試租戶需遮罩、核准、保存與刪除。</td>
+<td>同步與刪除紀錄。</td>
+</tr>
+<tr>
+<td>CSPM/CASB</td>
+<td>雲端與SaaS環境需納入CSPM/CASB，偵測公開暴露、過寬權限與資料外傳。</td>
+<td>工具報告。</td>
+</tr>
+<tr>
+<td>成本與資源控制</td>
+<td>沙箱與測試環境需設定成本、區域、資源類型與生命週期限制。</td>
+<td>成本報表、標籤合規。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. AI、MLOps、RAG與資料科學環境區隔</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Notebook環境</td>
+<td>Notebook不得保存正式Secrets或未核准正式資料；需版本控管、權限與執行紀錄。</td>
+<td>Notebook清冊與權限。</td>
+</tr>
+<tr>
+<td>訓練資料</td>
+<td>開發/實驗使用資料需去識別、最小化、授權與保存期限。</td>
+<td>資料核准紀錄。</td>
+</tr>
+<tr>
+<td>模型版本</td>
+<td>開發、實驗、驗證與正式模型需版本分離，正式模型需核准與回滾。</td>
+<td>模型Registry紀錄。</td>
+</tr>
+<tr>
+<td>Prompt與System Prompt</td>
+<td>測試Prompt與正式Prompt應分離，正式Prompt需版本與權限控管。</td>
+<td>Prompt資產清冊。</td>
+</tr>
+<tr>
+<td>RAG資料源</td>
+<td>測試RAG不得連正式知識庫；若需使用需權限繼承、遮罩與越權測試。</td>
+<td>RAG設計與測試。</td>
+</tr>
+<tr>
+<td>向量資料庫</td>
+<td>開發、測試、正式向量庫需分離，索引資料需可刪除與追溯。</td>
+<td>向量庫清冊。</td>
+</tr>
+<tr>
+<td>AI Agent工具</td>
+<td>測試Agent不得連正式工具、Email、檔案、部署或支付API。</td>
+<td>Agent工具矩陣。</td>
+</tr>
+<tr>
+<td>模型API Key</td>
+<td>開發、測試、正式模型API Key分離，用量與成本需監控。</td>
+<td>API Key清冊與用量報告。</td>
+</tr>
+<tr>
+<td>AI輸出資料</td>
+<td>非正式AI輸出不得直接回寫正式系統，除非經驗證與核准。</td>
+<td>輸出驗證紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 供應商與委外環境區隔</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境責任邊界</td>
+<td>合約或SOW需明確供應商開發、測試、正式、代管與維運環境責任。</td>
+<td>合約/SOW。</td>
+</tr>
+<tr>
+<td>資料使用限制</td>
+<td>供應商不得使用正式資料，除非經核准、遮罩、DPA與刪除承諾。</td>
+<td>資料核准與DPA。</td>
+</tr>
+<tr>
+<td>存取隔離</td>
+<td>供應商存取應限定環境、系統、時間、來源與角色。</td>
+<td>供應商存取紀錄。</td>
+</tr>
+<tr>
+<td>Secrets交付</td>
+<td>不得以Email、聊天或文件交付正式Secrets；測試Secrets需短效且可撤銷。</td>
+<td>Secrets交付紀錄。</td>
+</tr>
+<tr>
+<td>交付驗收</td>
+<td>供應商交付物需標示適用環境，通過安全測試與Secrets掃描。</td>
+<td>驗收報告。</td>
+</tr>
+<tr>
+<td>遠端維運</td>
+<td>維運通道需PAM、MFA、Session Recording與最小權限。</td>
+<td>PAM紀錄。</td>
+</tr>
+<tr>
+<td>退場清理</td>
+<td>專案結束需刪除供應商環境中資料、帳號、Secrets、備份與暫存。</td>
+<td>刪除證明、退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 環境標籤、命名與資產清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>最低要求</th>
+<th>範例 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境命名</td>
+<td>所有資源名稱需標示環境，例如 dev、test、uat、stg、prod、dr、sandbox。</td>
+<td>Resource Tag、命名標準。</td>
+</tr>
+<tr>
+<td>Owner標籤</td>
+<td>每個環境與資源需指定Business Owner與Technical Owner。</td>
+<td>雲端Tag、資產清冊。</td>
+</tr>
+<tr>
+<td>資料分類標籤</td>
+<td>標示環境可處理之資料分類上限。</td>
+<td>DataClassification=Internal/Confidential。</td>
+</tr>
+<tr>
+<td>生命週期標籤</td>
+<td>沙箱、POC與臨時環境需標示到期日與清理責任。</td>
+<td>ExpiryDate、AutoDelete。</td>
+</tr>
+<tr>
+<td>成本與碳資料標籤</td>
+<td>雲端與AI資源需標示成本中心、服務、模型/工作負載與必要碳資料屬性。</td>
+<td>CostCenter、AIWorkload。</td>
+</tr>
+<tr>
+<td>連線標籤</td>
+<td>跨環境連線需標示申請單、規則ID、用途與到期日。</td>
+<td>Firewall Rule Tag。</td>
+</tr>
+<tr>
+<td>清冊維護</td>
+<td>環境清冊需包含環境用途、Owner、資料、網路、Secrets、CI/CD、備份與風險等級。</td>
+<td>環境清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 環境漂移、監控與定期審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監控項目</th>
+<th>監控內容</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境漂移</td>
+<td>設定、版本、IAM、網路、KMS、部署、Policy與安全基準差異。</td>
+<td>建立修正工單或例外。</td>
+</tr>
+<tr>
+<td>跨環境連線</td>
+<td>非預期連線、過期規則、未授權API呼叫或資料庫連線。</td>
+<td>立即調查與阻斷。</td>
+</tr>
+<tr>
+<td>正式資料外流</td>
+<td>正式資料複製至非正式環境、未遮罩資料、DLP命中。</td>
+<td>啟動事件或違規處理。</td>
+</tr>
+<tr>
+<td>Secrets混用</td>
+<td>正式Secrets出現在非正式環境、Repo、Notebook或CI/CD測試Job。</td>
+<td>立即撤銷輪替並通報事件。</td>
+</tr>
+<tr>
+<td>權限異常</td>
+<td>開發者或供應商持有不必要正式權限。</td>
+<td>撤權與權限審查。</td>
+</tr>
+<tr>
+<td>環境閒置</td>
+<td>長期未使用沙箱、測試資源或臨時環境。</td>
+<td>停用、刪除或重新核准。</td>
+</tr>
+<tr>
+<td>AI用量異常</td>
+<td>非正式AI環境使用正式Key、用量暴增、未知模型端點。</td>
+<td>停用Key、調查來源。</td>
+</tr>
+<tr>
+<td>成本/資源異常</td>
+<td>沙箱或測試環境資源暴增、超出預算或不合規區域。</td>
+<td>限制資源與通知Owner。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 正式資料使用於非正式環境之核准流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>說明使用正式資料之目的、範圍、必要性、替代方案與使用期限。</td>
+<td>Project Owner / QA / Data Scientist</td>
+<td>正式資料使用申請。</td>
+</tr>
+<tr>
+<td>2. 資料分類與影響評估</td>
+<td>確認是否含PII、客戶資料、高機密、合約限制、跨境或AI訓練用途。</td>
+<td>Data Owner / DPO</td>
+<td>資料影響評估。</td>
+</tr>
+<tr>
+<td>3. 遮罩與最小化設計</td>
+<td>定義欄位遮罩、去識別、抽樣、Tokenization、合成資料或資料削減方式。</td>
+<td>Data Owner / Engineering</td>
+<td>遮罩設計。</td>
+</tr>
+<tr>
+<td>4. 安全控制審查</td>
+<td>確認環境隔離、加密、權限、日誌、保存期限、刪除、DLP與監控。</td>
+<td>CISO / Security Owner</td>
+<td>安全審查。</td>
+</tr>
+<tr>
+<td>5. 核准與執行</td>
+<td>取得必要核准後執行資料移轉，記錄資料版本、位置、使用者與期限。</td>
+<td>Data Owner / IT</td>
+<td>核准與移轉紀錄。</td>
+</tr>
+<tr>
+<td>6. 使用監控</td>
+<td>監控資料存取、複製、匯出、AI輸入、供應商接觸與異常活動。</td>
+<td>SOC / Data Owner</td>
+<td>監控紀錄。</td>
+</tr>
+<tr>
+<td>7. 刪除與驗證</td>
+<td>期限屆滿或任務完成後刪除資料、備份與暫存，保存刪除證據。</td>
+<td>System Owner / Data Owner</td>
+<td>刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 環境例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>非正式環境需存取正式資料</td>
+<td>需正式資料使用申請、遮罩、DPO/Data Owner/CISO核准、保存期限與刪除證據。</td>
+<td>Data Owner / DPO / CISO</td>
+<td>最長90日或專案期限內。</td>
+</tr>
+<tr>
+<td>跨環境網路連線</td>
+<td>需連線申請、最小來源目的、日誌、到期日與補償控制。</td>
+<td>Network Owner / CISO</td>
+<td>最長90日，高風險每30日重評。</td>
+</tr>
+<tr>
+<td>共用服務或平台</td>
+<td>需明確資料與權限隔離、租戶隔離、日誌與風險評估。</td>
+<td>CISO / Platform Owner</td>
+<td>至少每季審查。</td>
+</tr>
+<tr>
+<td>開發人員直接存取正式環境</td>
+<td>原則禁止；若緊急需PAM/JIT、核准、Session Recording與事後審查。</td>
+<td>CISO / System Owner</td>
+<td>單次或最短期限。</td>
+</tr>
+<tr>
+<td>使用正式Secrets於測試</td>
+<td>原則禁止；若因供應商或技術限制需短期、Scope限制、監控與立即輪替。</td>
+<td>CISO / Secrets Owner</td>
+<td>單次或最長30日。</td>
+</tr>
+<tr>
+<td>供應商使用組織環境</td>
+<td>需NDA、DPA、存取限制、Session紀錄、資料刪除與退場。</td>
+<td>Supplier Management / CISO</td>
+<td>依合約與專案期限。</td>
+</tr>
+<tr>
+<td>AI測試連正式資料源</td>
+<td>需AI治理、Data Owner、DPO與CISO核准，並完成RAG越權測試。</td>
+<td>AI Governance / CISO</td>
+<td>最長90日或模型測試期。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 環境區隔檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境清冊</td>
+<td>是否完整登錄開發、測試、預備、正式、災備、沙箱與AI/MLOps環境？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Owner指定</td>
+<td>每個環境是否指定Business Owner與Technical Owner？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>網路隔離</td>
+<td>不同環境是否以網路分段、安全群組、防火牆或租戶隔離？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>IAM隔離</td>
+<td>不同環境是否使用獨立角色、權限、服務帳號與權限審查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets隔離</td>
+<td>不同環境是否使用獨立Secrets、API Key、憑證、KMS Key與Token？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>正式資料控管</td>
+<td>非正式環境是否未使用未核准正式資料，或已完成遮罩與核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>CI/CD隔離</td>
+<td>部署Pipeline是否分環境，正式部署是否具安全閘門與職務分離？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI環境隔離</td>
+<td>AI/RAG/MLOps環境是否區分實驗、測試與正式模型、資料源與API Key？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商環境</td>
+<td>供應商存取與測試環境是否受合約、權限、資料與退場控管？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監控與日誌</td>
+<td>跨環境連線、資料移動、權限變更與Secrets使用是否記錄與監控？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>退場清理</td>
+<td>臨時、沙箱、供應商與測試環境是否到期清理並保存證據？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 環境清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>環境編號</th>
+<th>系統 / 服務</th>
+<th>環境類型</th>
+<th>Owner</th>
+<th>資料分類上限</th>
+<th>雲端帳號 / 網段</th>
+<th>Secrets位置</th>
+<th>CI/CD管道</th>
+<th>有效期限</th>
+<th>狀態</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ENV-0001</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Staging □ Prod □ DR □ Sandbox □ AI/MLOps</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 暫停 □ 退場中 □ 已退場</td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-0002</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Staging □ Prod □ DR □ Sandbox □ AI/MLOps</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 暫停 □ 退場中 □ 已退場</td>
+<td></td>
+</tr>
+<tr>
+<td>ENV-0003</td>
+<td></td>
+<td>□ Dev □ Test □ UAT □ Staging □ Prod □ DR □ Sandbox □ AI/MLOps</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 暫停 □ 退場中 □ 已退場</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 跨環境資料使用申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>ENV-DATA-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>來源環境</td>
+<td>□ Prod □ DR □ UAT □ Test □ Dev □ SaaS □ AI/MLOps</td>
+<td></td>
+</tr>
+<tr>
+<td>目標環境</td>
+<td>□ Dev □ Test □ UAT □ Staging □ Sandbox □ AI/MLOps □ Vendor</td>
+<td></td>
+</tr>
+<tr>
+<td>資料範圍</td>
+<td></td>
+<td>資料表、檔案、資料集、RAG資料源或模型資料。</td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>使用目的</td>
+<td></td>
+<td>測試、除錯、訓練、UAT、模型評估等。</td>
+</tr>
+<tr>
+<td>替代方案評估</td>
+<td>□ 合成資料 □ 遮罩資料 □ 抽樣資料 □ 無替代方案</td>
+<td></td>
+</tr>
+<tr>
+<td>遮罩/去識別方式</td>
+<td></td>
+<td>欄位、方法、不可逆性、驗證方式。</td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Data Owner / DPO / CISO / AI Governance（如適用）</td>
+<td></td>
+</tr>
+<tr>
+<td>刪除驗證方式</td>
+<td></td>
+<td>刪除證明、Log、儲存快照清理等。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境清冊</td>
+<td>環境類型、Owner、資料分類、雲端帳號、網路、Secrets、CI/CD、期限與狀態。</td>
+<td>Environment Segregation Owner</td>
+<td>環境有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>環境區隔設計</td>
+<td>架構圖、網路分段、IAM矩陣、資料流、Secrets設計、CI/CD與監控設計。</td>
+<td>Security Architecture / Cloud Owner</td>
+<td>系統有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>正式資料使用紀錄</td>
+<td>資料範圍、遮罩、核准、移轉、存取、保存期限與刪除證明。</td>
+<td>Data Owner / DPO</td>
+<td>至少3年或依法規/合約。</td>
+</tr>
+<tr>
+<td>跨環境連線紀錄</td>
+<td>連線申請、來源、目的、埠、期限、規則、日誌與審查。</td>
+<td>Network Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>Secrets與Key分環境紀錄</td>
+<td>Secrets位置、Owner、用途、輪替、撤銷與環境限制。</td>
+<td>Secrets Management Owner</td>
+<td>Secret有效期間及退場後至少3年。</td>
+</tr>
+<tr>
+<td>環境審查紀錄</td>
+<td>定期審查結果、缺失、修復、例外、過期環境與清理。</td>
+<td>Environment Owner / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商環境退場紀錄</td>
+<td>資料刪除、帳號撤銷、Secrets撤銷、交付物驗收與刪除證明。</td>
+<td>Supplier Management</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境清冊完整率</td>
+<td>已登錄環境 / 應登錄環境。</td>
+<td>目標100%。</td>
+<td>環境治理完整性。</td>
+</tr>
+<tr>
+<td>正式資料非正式使用核准率</td>
+<td>非正式環境使用正式資料且有核准與遮罩之比例。</td>
+<td>目標100%；未核准目標0。</td>
+<td>資料外洩風險控制。</td>
+</tr>
+<tr>
+<td>正式Secrets混用數</td>
+<td>正式Secrets出現在非正式環境之次數。</td>
+<td>目標0。</td>
+<td>Secrets外洩預防。</td>
+</tr>
+<tr>
+<td>跨環境未核准連線數</td>
+<td>未經核准或過期之跨環境連線數。</td>
+<td>目標0。</td>
+<td>網路區隔控制。</td>
+</tr>
+<tr>
+<td>過期環境數</td>
+<td>超過有效期限仍未退場或重評之沙箱、測試或臨時環境。</td>
+<td>目標0。</td>
+<td>資源與風險控制。</td>
+</tr>
+<tr>
+<td>環境漂移重大缺失數</td>
+<td>正式與預備/基準間重大設定差異或不合規差異數。</td>
+<td>High/Critical目標0。</td>
+<td>測試有效性與安全基準。</td>
+</tr>
+<tr>
+<td>AI環境區隔缺失數</td>
+<td>AI/MLOps/RAG環境中資料、模型、Prompt或Key混用缺失數。</td>
+<td>重大缺失需管理審查。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>供應商環境退場完成率</td>
+<td>供應商專案結束後完成資料刪除、撤權與Secrets撤銷比例。</td>
+<td>目標100%。</td>
+<td>供應鏈風險。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境清冊</td>
+<td>所有開發、測試、預備、正式、DR、沙箱與AI/MLOps環境是否登錄且有Owner。</td>
+<td>環境清冊、資產清冊。</td>
+</tr>
+<tr>
+<td>網路與帳號區隔</td>
+<td>不同環境是否以網路、雲端帳號、IAM、PAM、Security Group或防火牆隔離。</td>
+<td>網路圖、IAM矩陣、CSPM報告。</td>
+</tr>
+<tr>
+<td>正式資料使用</td>
+<td>非正式環境是否未使用未核准正式資料；已使用者是否有遮罩、核准與刪除證據。</td>
+<td>資料使用申請、遮罩與刪除紀錄。</td>
+</tr>
+<tr>
+<td>Secrets隔離</td>
+<td>正式Secrets、Key、憑證與Token是否未出現在非正式環境。</td>
+<td>Secrets掃描、Vault紀錄。</td>
+</tr>
+<tr>
+<td>CI/CD與部署</td>
+<td>環境提升是否受Pipeline、職務分離、安全閘門、Artifact與變更管理控制。</td>
+<td>Pipeline與Release紀錄。</td>
+</tr>
+<tr>
+<td>AI環境區隔</td>
+<td>AI模型、Prompt、RAG資料源、向量庫與API Key是否依開發、測試、正式分離。</td>
+<td>AI清冊、MLOps紀錄。</td>
+</tr>
+<tr>
+<td>供應商環境</td>
+<td>供應商環境是否受合約、資料限制、存取控管、測試與退場清理管理。</td>
+<td>供應商評估、退場證明。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>環境隔離例外是否有風險評估、補償控制、核准、期限與重評。</td>
+<td>例外紀錄、風險接受。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大缺失、例外、正式資料使用與趨勢是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 附錄A：環境退場檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查內容</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>環境確認</td>
+<td>確認待退場環境名稱、Owner、資產、資料、雲端資源、網路與依賴服務。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>資料備份或移轉</td>
+<td>必要資料已依核准方式備份、移轉或封存；不必要資料已刪除。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>資料刪除</td>
+<td>測試資料、正式資料副本、暫存、備份、快照與輸出檔已刪除或封存。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>Secrets撤銷</td>
+<td>環境Secrets、API Key、Token、憑證與服務帳號已撤銷或停用。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>權限撤銷</td>
+<td>使用者、供應商、服務帳號與管理權限已撤銷。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>網路規則移除</td>
+<td>防火牆、安全群組、DNS、VPN、Webhook與跨環境連線已移除。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>CI/CD清理</td>
+<td>Pipeline、Runner、部署Key、環境變數與Artifact保留已處理。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>監控與清冊更新</td>
+<td>監控、告警、資產清冊、環境清冊與成本標籤已更新。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+<tr>
+<td>退場核准</td>
+<td>Owner、IT、Security與Data Owner已確認退場完成。</td>
+<td>□ 通過 □ 不通過 □ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 附錄B：環境區隔安全測試案例建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試案例</th>
+<th>測試目的</th>
+<th>預期結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>非正式環境連正式資料庫</td>
+<td>確認測試或開發環境無法直接連接正式資料庫。</td>
+<td>連線應被阻擋或需核准通道。</td>
+</tr>
+<tr>
+<td>測試帳號登入正式環境</td>
+<td>確認測試帳號不能存取正式環境。</td>
+<td>登入失敗或無正式權限。</td>
+</tr>
+<tr>
+<td>正式Secrets掃描</td>
+<td>檢查Repo、CI/CD、Notebook與非正式環境是否含正式Secrets。</td>
+<td>不得命中有效正式Secrets。</td>
+</tr>
+<tr>
+<td>跨環境API誤呼叫</td>
+<td>確認測試API不會呼叫正式外部服務或正式Webhook。</td>
+<td>測試環境應呼叫Mock或沙箱API。</td>
+</tr>
+<tr>
+<td>RAG越權檢索</td>
+<td>以測試角色嘗試檢索正式RAG資料源或未授權文件。</td>
+<td>不得回傳未授權資料。</td>
+</tr>
+<tr>
+<td>正式資料遮罩驗證</td>
+<td>確認非正式資料集已遮罩且不可逆識別個人或客戶。</td>
+<td>遮罩通過，無明文PII。</td>
+</tr>
+<tr>
+<td>CI/CD正式部署權限</td>
+<td>確認開發者無法直接繞過Pipeline部署正式環境。</td>
+<td>應被阻擋或需核准。</td>
+</tr>
+<tr>
+<td>沙箱到期清理</td>
+<td>確認過期沙箱環境被通知、停用或清理。</td>
+<td>資源與權限已清除。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-021 網頁過濾作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A08-SOP-021 網頁過濾作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-021</td>
+<td>網頁過濾作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>技術控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-021</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>技術控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Network Security Owner / Endpoint Security Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>網路與端點審查</td>
+<td></td>
+<td>Network Security Owner / Endpoint Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SOC與事件管理審查</td>
+<td></td>
+<td>SOC Owner / Incident Response Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與SaaS審查</td>
+<td></td>
+<td>Cloud Security Owner / SaaS Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與法務審查</td>
+<td></td>
+<td>DPO / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>HR與使用規範審查</td>
+<td></td>
+<td>HR / Compliance Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI Governance Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / Network Security主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織網頁過濾之政策、分類、設定、監控、例外、事件處理、日誌保存、隱私保護、遠端工作、供應商、SaaS與AI服務存取管制要求，確保員工、承包商及系統於使用企業網路或受管理端點進行網頁存取時，能有效降低惡意網站、釣魚網站、惡意下載、命令與控制連線、資料外洩、違規雲端服務、未核准AI工具、成人/賭博/非法內容、濫用頻寬及法規/合約違反之風險。</p>
+<p>本文件旨在將網頁過濾作為深度防禦的一部分，與端點安全、DNS安全、Firewall、Proxy、SASE/SSE、CASB、DLP、日誌監控、事件回應、AI工具與資料使用政策及使用者教育訓練整合，建立可管理、可稽核、可例外核准且可持續改善之網頁存取控制機制。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>網頁過濾應依業務必要性、資料風險、使用者角色、裝置狀態、網路位置、威脅情報、網站分類及法規合約要求採風險導向管理。</li>
+<li>惡意、釣魚、命令與控制、惡意軟體、非法內容、已知資料外洩、匿名代理、未核准檔案分享、未核准AI工具及高風險未知分類網站應預設阻擋或受限制。</li>
+<li>網頁過濾例外應具備申請、風險評估、Owner、期限、補償控制、核准與定期重評，不得以永久白名單取代安全審查。</li>
+<li>網頁存取日誌應以安全、合規與事件調查為目的，依最小必要原則保存及使用，避免不必要侵犯個人隱私。</li>
+<li>遠端工作、BYOD或供應商存取情境應透過受管理端點、VPN/ZTNA、SASE/SSE、DNS安全或等效方式維持網頁過濾控制。</li>
+<li>涉及AI服務、SaaS、雲端儲存、開發者工具、程式碼分享與資料上傳之網站，應與DLP、CASB及AI資料使用政策連動。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網頁過濾</td>
+<td>依URL、網域、IP、網站分類、內容、信譽、檔案類型、使用者、裝置或風險條件，允許、阻擋、警示、隔離或記錄網頁存取之控制措施。</td>
+</tr>
+<tr>
+<td>Secure Web Gateway（SWG）</td>
+<td>安全網頁閘道，用於檢查、過濾、記錄與控制HTTP/HTTPS網頁流量。</td>
+</tr>
+<tr>
+<td>DNS Security</td>
+<td>透過DNS解析層阻擋惡意網域、釣魚、C2、DGA或高風險查詢之控制措施。</td>
+</tr>
+<tr>
+<td>CASB</td>
+<td>Cloud Access Security Broker，雲端存取安全代理，用於管控SaaS、雲端服務及資料上傳下載風險。</td>
+</tr>
+<tr>
+<td>SASE / SSE</td>
+<td>Secure Access Service Edge / Security Service Edge，整合網路與安全存取能力之架構或服務。</td>
+</tr>
+<tr>
+<td>Browser Isolation</td>
+<td>瀏覽器隔離，將高風險網站於隔離環境中開啟，降低惡意內容對端點之影響。</td>
+</tr>
+<tr>
+<td>URL分類</td>
+<td>依網站內容、用途、風險、信譽及業務需求對URL或網域進行分類。</td>
+</tr>
+<tr>
+<td>例外清單</td>
+<td>經核准允許、暫時允許或特定條件允許存取之URL、網域、分類或使用者清單。</td>
+</tr>
+<tr>
+<td>封鎖清單</td>
+<td>因惡意、違規、高風險或不符合政策而禁止存取之URL、網域、IP或分類清單。</td>
+</tr>
+<tr>
+<td>未知分類網站</td>
+<td>尚未被威脅情報或URL分類服務判定類別之網站，通常需採限制、警示或隔離策略。</td>
+</tr>
+<tr>
+<td>SSL/TLS檢查</td>
+<td>在符合法規、隱私與技術可行性前提下，對加密網頁流量進行安全檢查之機制。</td>
+</tr>
+<tr>
+<td>AI服務存取控制</td>
+<td>針對生成式AI、模型API、AI寫作、程式碼生成、影像生成、RAG或AI SaaS工具之網頁存取與資料上傳管控。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准網頁過濾策略、高風險例外、重大封鎖/開放決策與管理審查輸入。</td>
+<td>政策核准、風險接受、管理審查紀錄。</td>
+</tr>
+<tr>
+<td>Network Security Owner</td>
+<td>設計、維護Proxy、SWG、DNS Security、Firewall、SASE/SSE與網路層過濾規則。</td>
+<td>規則設定、網路圖、變更紀錄。</td>
+</tr>
+<tr>
+<td>Endpoint Security Owner</td>
+<td>確保端點、瀏覽器、行動裝置與遠端工作環境套用網頁過濾與防護。</td>
+<td>端點設定、MDM/EDR紀錄。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>監控網頁存取異常、惡意連線、封鎖事件、資料外傳、AI服務濫用與告警。</td>
+<td>SIEM告警、調查紀錄。</td>
+</tr>
+<tr>
+<td>IT Helpdesk</td>
+<td>受理使用者網頁存取問題、例外申請初步資訊收集與教育提醒。</td>
+<td>服務單、使用者回覆紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner / DPO</td>
+<td>審查涉及PII、客戶資料、日誌監控、SSL檢查、DLP與跨境資料傳輸之隱私與資料保護風險。</td>
+<td>DPIA、隱私審查。</td>
+</tr>
+<tr>
+<td>AI Governance Owner</td>
+<td>審查AI工具、模型服務、Prompt平台、AI API與AI SaaS之存取與資料上傳要求。</td>
+<td>AI工具核准清單、風險評估。</td>
+</tr>
+<tr>
+<td>HR / Compliance Owner</td>
+<td>協助使用者可接受使用、違規處理、教育訓練與勞動/合規要求。</td>
+<td>教育訓練、違規處理紀錄。</td>
+</tr>
+<tr>
+<td>System / Business Owner</td>
+<td>提出業務所需網站、SaaS或AI服務例外，承擔業務風險與使用控管責任。</td>
+<td>例外申請與核准。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商與承包商使用組織網路或資料時遵守網頁過濾與資料保護要求。</td>
+<td>合約條款、供應商紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查網頁過濾策略、例外、日誌、事件、使用者訓練與控制有效性。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 網頁過濾政策分類與建議處置</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>網站 / 流量分類</th>
+<th>預設處置</th>
+<th>處置說明</th>
+<th>例外要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意軟體、C2、釣魚、詐騙、憑證竊取</td>
+<td>阻擋</td>
+<td>立即封鎖並產生安全告警。</td>
+<td>原則不得例外；若為誤判需SOC與CISO核准。</td>
+</tr>
+<tr>
+<td>已知惡意下載、惡意廣告、Drive-by Download</td>
+<td>阻擋</td>
+<td>阻擋下載與存取，必要時隔離端點。</td>
+<td>需威脅情報確認後處理。</td>
+</tr>
+<tr>
+<td>匿名代理、Tor、規避工具、未核准VPN</td>
+<td>阻擋</td>
+<td>避免繞過監控、DLP與地理限制。</td>
+<td>高風險例外需CISO核准。</td>
+</tr>
+<tr>
+<td>非法內容、賭博、成人、仇恨、暴力極端內容</td>
+<td>阻擋</td>
+<td>依法律、合規與公司政策阻擋。</td>
+<td>原則不得例外。</td>
+</tr>
+<tr>
+<td>未核准雲端儲存與檔案分享</td>
+<td>阻擋或限制</td>
+<td>避免資料外洩與未授權分享。</td>
+<td>需Data Owner與Security核准。</td>
+</tr>
+<tr>
+<td>未核准AI工具與生成式AI平台</td>
+<td>阻擋或限制</td>
+<td>避免Prompt、原始碼、PII、客戶資料或Secrets外洩。</td>
+<td>需AI Governance與CISO核准。</td>
+</tr>
+<tr>
+<td>社群媒體、影音串流、遊戲、娛樂</td>
+<td>依角色限制或警示</td>
+<td>依業務與頻寬需求控制。</td>
+<td>業務用途需Owner核准。</td>
+</tr>
+<tr>
+<td>開發者工具、程式碼平台、套件倉庫</td>
+<td>允許但監控</td>
+<td>允許核准工具，監控Secrets與惡意套件風險。</td>
+<td>高風險下載或上傳需DLP/CASB。</td>
+</tr>
+<tr>
+<td>金融、政府、教育、醫療與客戶網站</td>
+<td>允許</td>
+<td>依業務需求允許，仍需威脅檢查。</td>
+<td>特殊限制依風險設定。</td>
+</tr>
+<tr>
+<td>未知分類、新註冊網域、高風險地區網站</td>
+<td>警示、隔離或阻擋</td>
+<td>依威脅情報、使用者角色與裝置健康決定。</td>
+<td>需短期例外與重評。</td>
+</tr>
+<tr>
+<td>個人Email與個人雲端</td>
+<td>阻擋或限制上傳</td>
+<td>降低資料外傳與憑證釣魚風險。</td>
+<td>業務需要需核准。</td>
+</tr>
+<tr>
+<td>AI模型API與開發測試端點</td>
+<td>限制或允許核准清單</td>
+<td>需檢查資料不訓練、API Key、用量與DLP。</td>
+<td>需AI與Data Owner核准。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 網頁過濾作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求與風險識別</td>
+<td>識別網頁過濾需求、使用者群組、業務例外、資料外傳、AI/SaaS與遠端工作情境。</td>
+<td>Network Security / Business Owner</td>
+<td>需求與風險紀錄。</td>
+</tr>
+<tr>
+<td>2. 策略設計</td>
+<td>定義網站分類、允許/封鎖規則、SSL檢查、檔案下載、上傳管控與告警條件。</td>
+<td>Network Security / SOC / CISO</td>
+<td>策略設計文件。</td>
+</tr>
+<tr>
+<td>3. 隱私與合規審查</td>
+<td>涉及SSL檢查、使用者行為監控、PII日誌與跨境傳輸時需審查。</td>
+<td>DPO / Legal / HR</td>
+<td>隱私與合規審查。</td>
+</tr>
+<tr>
+<td>4. 設定與部署</td>
+<td>於Proxy、SWG、DNS Security、CASB、SASE/SSE、Firewall與端點套用策略。</td>
+<td>Network Security / Endpoint Security</td>
+<td>設定與變更紀錄。</td>
+</tr>
+<tr>
+<td>5. 測試與驗證</td>
+<td>測試封鎖、允許、警示、隔離、日誌、DLP、例外與遠端情境。</td>
+<td>SOC / QA / IT</td>
+<td>測試報告。</td>
+</tr>
+<tr>
+<td>6. 使用者溝通</td>
+<td>公告可接受使用規範、阻擋頁面說明、例外申請流程與AI工具限制。</td>
+<td>HR / IT / Security</td>
+<td>公告與教育紀錄。</td>
+</tr>
+<tr>
+<td>7. 監控與事件處理</td>
+<td>監控惡意連線、封鎖事件、資料外傳、異常瀏覽與規避嘗試。</td>
+<td>SOC / Incident Response</td>
+<td>告警與事件紀錄。</td>
+</tr>
+<tr>
+<td>8. 例外管理</td>
+<td>評估、核准、設定、到期、重評與關閉例外。</td>
+<td>CISO / Network Security</td>
+<td>例外紀錄。</td>
+</tr>
+<tr>
+<td>9. 定期審查</td>
+<td>審查策略有效性、分類誤判、例外清單、日誌保存與KPI/KRI。</td>
+<td>CISO / ISMS代表</td>
+<td>審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 技術架構與控制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Secure Web Gateway</td>
+<td>應對HTTP/HTTPS流量進行URL分類、惡意內容檢查、檔案下載控制與日誌記錄。</td>
+<td>SWG設定與報告。</td>
+</tr>
+<tr>
+<td>DNS Security</td>
+<td>應阻擋惡意網域、C2、DGA、釣魚、新註冊高風險網域與未知惡意查詢。</td>
+<td>DNS安全報告。</td>
+</tr>
+<tr>
+<td>Proxy / SASE / SSE</td>
+<td>使用者無論在辦公室或遠端均應套用一致策略或等效補償控制。</td>
+<td>Proxy/SASE設定。</td>
+</tr>
+<tr>
+<td>Firewall / Egress控制</td>
+<td>重要網段、伺服器與正式環境出站網頁流量應限制目的地與必要服務。</td>
+<td>Firewall規則。</td>
+</tr>
+<tr>
+<td>CASB / SaaS控制</td>
+<td>對雲端儲存、SaaS、AI服務與個人帳號使用應識別、限制與監控。</td>
+<td>CASB報告。</td>
+</tr>
+<tr>
+<td>DLP整合</td>
+<td>檔案上傳、表單提交、Prompt輸入與雲端分享應依資料分類套用DLP。</td>
+<td>DLP事件報告。</td>
+</tr>
+<tr>
+<td>Browser Isolation</td>
+<td>對高風險但業務必要之網站可採隔離瀏覽、唯讀、禁止剪貼或下載。</td>
+<td>隔離策略設定。</td>
+</tr>
+<tr>
+<td>SSL/TLS檢查</td>
+<td>在合法、透明、最小必要與隱私審查通過之前提下，對高風險流量進行檢查。</td>
+<td>審查紀錄與組態。</td>
+</tr>
+<tr>
+<td>端點代理</td>
+<td>受管理端點應安裝網頁過濾代理或使用等效流量導向控制。</td>
+<td>EDR/MDM報告。</td>
+</tr>
+<tr>
+<td>日誌集中化</td>
+<td>關鍵網頁存取、封鎖、例外、DLP與惡意事件應接入SIEM或集中平台。</td>
+<td>SIEM接入證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 使用者、角色與情境化政策</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>使用者 / 情境</th>
+<th>政策要求</th>
+<th>補充控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般員工</td>
+<td>套用標準URL分類、惡意網站阻擋、未核准雲端與AI工具限制。</td>
+<td>教育訓練與阻擋頁面說明。</td>
+</tr>
+<tr>
+<td>特權使用者</td>
+<td>加強惡意網站阻擋、未知網站限制、下載掃描與日誌監控。</td>
+<td>PAM、EDR、MFA與行為分析。</td>
+</tr>
+<tr>
+<td>開發人員</td>
+<td>允許核准開發者網站、套件倉庫與技術文件，監控Secrets與惡意套件。</td>
+<td>SCA、Secrets掃描、DLP。</td>
+</tr>
+<tr>
+<td>SOC / 資安研究人員</td>
+<td>可申請受控存取高風險網站或惡意樣本研究環境。</td>
+<td>隔離沙箱、專用帳號、無正式資料。</td>
+</tr>
+<tr>
+<td>遠端工作者</td>
+<td>透過VPN/ZTNA/SASE/端點代理套用等效網頁過濾。</td>
+<td>端點健康檢查與DLP。</td>
+</tr>
+<tr>
+<td>供應商 / 承包商</td>
+<td>僅允許業務必要網站與核准SaaS，限制資料上傳與個人雲端。</td>
+<td>合約、NDA、Session Recording視風險。</td>
+</tr>
+<tr>
+<td>高敏感資料處理人員</td>
+<td>限制個人Email、檔案分享、AI工具與外部雲端上傳。</td>
+<td>DLP、CASB、分層授權。</td>
+</tr>
+<tr>
+<td>AI / MLOps人員</td>
+<td>僅允許核准AI平台、模型API、資料集來源與雲端服務。</td>
+<td>AI工具清單、Prompt與資料監控。</td>
+</tr>
+<tr>
+<td>訪客與公共Wi-Fi</td>
+<td>訪客網路應與內部網路分離並套用基本惡意網站與非法內容阻擋。</td>
+<td>Captive Portal與頻寬限制。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. AI、SaaS與雲端服務網頁存取管制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>服務類型</th>
+<th>管制要求</th>
+<th>例外核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>生成式AI工具</td>
+<td>未核准AI工具預設阻擋或限制；核准工具需資料不訓練、DLP與使用紀錄。</td>
+<td>AI Governance / CISO / Data Owner。</td>
+</tr>
+<tr>
+<td>AI程式碼輔助工具</td>
+<td>需確認不得上傳Secrets、未授權原始碼、客戶資料或高機密資訊。</td>
+<td>DevSecOps / AppSec / AI Governance。</td>
+</tr>
+<tr>
+<td>雲端儲存</td>
+<td>個人雲端預設阻擋或限制上傳；企業核准雲端需CASB與DLP。</td>
+<td>Data Owner / CISO。</td>
+</tr>
+<tr>
+<td>SaaS應用</td>
+<td>依核准清單、資料分類、使用目的與合約審查開放。</td>
+<td>SaaS Owner / Supplier Management。</td>
+</tr>
+<tr>
+<td>檔案轉換與線上工具</td>
+<td>涉及文件上傳、PDF轉換、翻譯、OCR、截圖、壓縮或程式碼格式化之工具需限制。</td>
+<td>Data Owner / Security。</td>
+</tr>
+<tr>
+<td>外部開發平台</td>
+<td>程式碼平台、套件Registry、CI/CD SaaS需與供應鏈安全控制連動。</td>
+<td>DevSecOps / AppSec。</td>
+</tr>
+<tr>
+<td>社群與協作平台</td>
+<td>需限制敏感資料、客戶資料與Secrets發布或上傳。</td>
+<td>Business Owner / DLP。</td>
+</tr>
+<tr>
+<td>模型API與資料集網站</td>
+<td>需確認來源可信、授權、資料分類、惡意模型風險與網域信譽。</td>
+<td>AI Governance / Legal。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 檔案下載、上傳與內容檢查要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>控制要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可執行檔下載</td>
+<td>對EXE、MSI、Script、Macro、容器映像、套件與壓縮檔下載應掃描或限制。</td>
+<td>下載策略與告警。</td>
+</tr>
+<tr>
+<td>文件下載</td>
+<td>Office、PDF、壓縮檔、影像與未知格式需進行惡意內容與信譽檢查。</td>
+<td>SWG掃描報告。</td>
+</tr>
+<tr>
+<td>檔案上傳</td>
+<td>上傳至雲端、AI、個人Email、社群或檔案分享網站應依資料分類套用DLP。</td>
+<td>DLP事件。</td>
+</tr>
+<tr>
+<td>大型資料傳輸</td>
+<td>異常大量下載/上傳需告警並調查。</td>
+<td>SIEM告警。</td>
+</tr>
+<tr>
+<td>開發套件下載</td>
+<td>套件、Library、模型、Docker Image與Binary需與SCA/供應鏈風險管理連動。</td>
+<td>套件下載紀錄。</td>
+</tr>
+<tr>
+<td>加密壓縮檔</td>
+<td>無法掃描之加密壓縮檔應限制或隔離。</td>
+<td>SWG策略。</td>
+</tr>
+<tr>
+<td>未知檔案</td>
+<td>未知或低信譽檔案應阻擋、沙箱分析或隔離下載。</td>
+<td>Sandbox報告。</td>
+</tr>
+<tr>
+<td>AI輸入內容</td>
+<td>Prompt、文件上傳與模型API請求應檢查是否含PII、Secrets或高機密資料。</td>
+<td>AI/DLP監控紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 例外申請與核准流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 例外提出</td>
+<td>申請人說明URL/網域、分類、用途、使用者、期間、資料類型與業務必要性。</td>
+<td>申請人 / Business Owner</td>
+<td>例外申請單。</td>
+</tr>
+<tr>
+<td>2. 初步檢查</td>
+<td>檢查網站信譽、分類、惡意紀錄、資料外傳、供應商與AI風險。</td>
+<td>IT Helpdesk / SOC</td>
+<td>初步風險檢查。</td>
+</tr>
+<tr>
+<td>3. 風險評估</td>
+<td>依資料分類、使用者角色、裝置狀態、上傳下載、隱私與合規風險評估。</td>
+<td>Network Security / Data Owner / DPO</td>
+<td>風險評估紀錄。</td>
+</tr>
+<tr>
+<td>4. 補償控制</td>
+<td>設定唯讀、禁止上傳、Browser Isolation、DLP、短期開放、特定使用者或監控告警。</td>
+<td>Network Security / SOC</td>
+<td>補償控制設定。</td>
+</tr>
+<tr>
+<td>5. 核准</td>
+<td>依風險由Business Owner、CISO、Data Owner、DPO、AI Governance或Legal核准。</td>
+<td>核准角色</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>6. 設定與通知</td>
+<td>依核准範圍設定例外，通知申請人可用範圍、限制與到期日。</td>
+<td>Network Security / IT</td>
+<td>變更紀錄。</td>
+</tr>
+<tr>
+<td>7. 到期重評</td>
+<td>例外到期前重新確認是否仍有必要，未核准續用者自動移除。</td>
+<td>Exception Owner</td>
+<td>重評紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 網頁過濾例外申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>WEB-EXC-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>申請URL / 網域 / 分類</td>
+<td></td>
+<td>需列明完整URL、網域或分類。</td>
+</tr>
+<tr>
+<td>用途說明</td>
+<td></td>
+<td>業務必要性、使用情境、預期使用者。</td>
+</tr>
+<tr>
+<td>使用者範圍</td>
+<td>□ 個人 □ 部門 □ 專案團隊 □ 供應商 □ 全公司</td>
+<td></td>
+</tr>
+<tr>
+<td>存取期間</td>
+<td>YYYY-MM-DD 至 YYYY-MM-DD</td>
+<td>例外應設定到期日。</td>
+</tr>
+<tr>
+<td>是否涉及上傳資料</td>
+<td>□ 否 □ 是，資料分類：______</td>
+<td></td>
+</tr>
+<tr>
+<td>是否涉及AI/SaaS/雲端服務</td>
+<td>□ 否 □ 是</td>
+<td></td>
+</tr>
+<tr>
+<td>風險檢查結果</td>
+<td>□ 低 □ 中 □ 高 □ Critical</td>
+<td>SOC或Security填寫。</td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>□ DLP □ Browser Isolation □ 禁止上傳 □ 只允許特定使用者 □ SIEM告警 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Business Owner / CISO / Data Owner / DPO / AI Governance / Legal</td>
+<td></td>
+</tr>
+<tr>
+<td>到期重評日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>13. 日誌、監控與隱私保護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>隱私與合規注意</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>日誌內容</td>
+<td>記錄使用者、裝置、來源IP、URL/網域、分類、處置、時間、檔案雜湊、告警ID。</td>
+<td>避免記錄不必要內容或完整敏感資料。</td>
+</tr>
+<tr>
+<td>日誌保存</td>
+<td>依紀錄保存期限清冊保存，支援事件調查與稽核。</td>
+<td>保存期限需合理且可說明。</td>
+</tr>
+<tr>
+<td>存取限制</td>
+<td>網頁存取日誌僅限SOC、Security、稽核或授權調查人員存取。</td>
+<td>需角色權限與存取審計。</td>
+</tr>
+<tr>
+<td>使用者透明</td>
+<td>應透過政策或公告告知網頁存取可能受監控與過濾。</td>
+<td>依當地法規與HR政策。</td>
+</tr>
+<tr>
+<td>SSL檢查排除</td>
+<td>金融、醫療、個人隱私高度敏感網站可依政策排除SSL解密。</td>
+<td>需平衡安全與隱私。</td>
+</tr>
+<tr>
+<td>告警監控</td>
+<td>惡意連線、規避、未知網站、大量下載/上傳、AI工具濫用需告警。</td>
+<td>告警不得過度收集個人內容。</td>
+</tr>
+<tr>
+<td>調查使用</td>
+<td>日誌用於資安、合規、事件、稽核或違規調查，不得任意監控私人行為。</td>
+<td>需授權與紀錄。</td>
+</tr>
+<tr>
+<td>跨境日誌</td>
+<td>若日誌傳輸至境外SaaS或安全平台，需DPO/Legal審查。</td>
+<td>DPA與資料地區要求。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 網頁過濾事件處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>事件類型</th>
+<th>判定條件</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意網站存取</td>
+<td>使用者或系統嘗試連線惡意、C2、釣魚或惡意下載網站。</td>
+<td>SOC調查端點、封鎖網域、檢查EDR與身份風險。</td>
+</tr>
+<tr>
+<td>釣魚連結點擊</td>
+<td>使用者點擊釣魚URL或提交憑證跡象。</td>
+<td>重設密碼、檢查MFA、通報事件、使用者教育。</td>
+</tr>
+<tr>
+<td>資料外傳風險</td>
+<td>大量上傳、敏感資料上傳至未核准雲端/AI/Email。</td>
+<td>啟動DLP調查、通知Data Owner與DPO。</td>
+</tr>
+<tr>
+<td>規避控制</td>
+<td>使用匿名代理、Tor、未核准VPN或私人熱點規避網頁過濾。</td>
+<td>依違規程序處理並加強端點控制。</td>
+</tr>
+<tr>
+<td>惡意下載</td>
+<td>下載惡意檔案、低信譽檔案或含惡意Macro文件。</td>
+<td>隔離端點、刪除檔案、分析IOC。</td>
+</tr>
+<tr>
+<td>AI工具誤用</td>
+<td>將Secrets、PII、客戶資料或高機密資料輸入未核准AI服務。</td>
+<td>依AI政策與事件程序處理。</td>
+</tr>
+<tr>
+<td>誤判封鎖</td>
+<td>合法業務網站遭錯誤封鎖。</td>
+<td>驗證信譽、暫時例外、回報分類供應商。</td>
+</tr>
+<tr>
+<td>供應商濫用</td>
+<td>供應商使用組織存取上傳資料或瀏覽未授權網站。</td>
+<td>暫停存取、通知Supplier Management與Legal。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 規則變更與版本管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>變更類型</th>
+<th>管理要求</th>
+<th>核准層級</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般分類策略調整</td>
+<td>調整社群、娛樂、個人雲端、AI工具等分類政策。</td>
+<td>Network Security Owner / CISO視影響。</td>
+<td>變更紀錄。</td>
+</tr>
+<tr>
+<td>高風險封鎖規則</td>
+<td>新增惡意網域、IP、URL、TLD或威脅情報封鎖。</td>
+<td>SOC / Network Security，可緊急執行。</td>
+<td>IOC與告警紀錄。</td>
+</tr>
+<tr>
+<td>全公司例外</td>
+<td>開放全公司可存取特定網站或分類。</td>
+<td>CISO / Business Owner。</td>
+<td>風險評估與核准。</td>
+</tr>
+<tr>
+<td>SSL檢查策略變更</td>
+<td>新增或移除SSL檢查、排除清單或憑證部署。</td>
+<td>CISO / DPO / Legal視情況。</td>
+<td>隱私審查與變更紀錄。</td>
+</tr>
+<tr>
+<td>AI工具允許清單</td>
+<td>新增或變更AI服務、模型API或生成式AI網站允許清單。</td>
+<td>AI Governance / CISO / Data Owner。</td>
+<td>AI工具評估。</td>
+</tr>
+<tr>
+<td>DLP整合規則</td>
+<td>調整上傳、下載、Prompt、雲端分享與敏感資料規則。</td>
+<td>Data Owner / CISO / DPO。</td>
+<td>DLP規則與測試。</td>
+</tr>
+<tr>
+<td>緊急封鎖</td>
+<td>事件期間立即封鎖特定網域、分類、地區或服務。</td>
+<td>Incident Manager / CISO事後補核。</td>
+<td>事件與變更紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 網頁過濾測試與有效性驗證</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試項目</th>
+<th>測試內容</th>
+<th>頻率 / 時機</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意網域阻擋</td>
+<td>使用安全測試網域或威脅情報樣本驗證阻擋。</td>
+<td>每季或策略變更後。</td>
+<td>測試紀錄。</td>
+</tr>
+<tr>
+<td>URL分類測試</td>
+<td>抽查常見分類、未知網站、新註冊網域與誤判回報。</td>
+<td>每季。</td>
+<td>分類測試報告。</td>
+</tr>
+<tr>
+<td>DNS安全測試</td>
+<td>驗證惡意DNS查詢、C2、DGA與DoH/DoT繞過控制。</td>
+<td>每季或變更後。</td>
+<td>DNS報告。</td>
+</tr>
+<tr>
+<td>檔案下載測試</td>
+<td>測試惡意檔案、EICAR、壓縮檔、腳本與未知檔案策略。</td>
+<td>每季。</td>
+<td>下載測試紀錄。</td>
+</tr>
+<tr>
+<td>DLP上傳測試</td>
+<td>測試PII、Secrets、客戶資料與高機密資料上傳阻擋。</td>
+<td>每半年或DLP變更後。</td>
+<td>DLP測試報告。</td>
+</tr>
+<tr>
+<td>AI工具管制測試</td>
+<td>驗證未核准AI工具阻擋、核准AI工具DLP與用量監控。</td>
+<td>每季或AI清單變更後。</td>
+<td>AI存取測試紀錄。</td>
+</tr>
+<tr>
+<td>遠端工作測試</td>
+<td>確認遠端端點仍套用網頁過濾與DNS安全。</td>
+<td>每季或代理更新後。</td>
+<td>端點測試。</td>
+</tr>
+<tr>
+<td>例外到期測試</td>
+<td>確認過期例外自動移除或經重評續核。</td>
+<td>每月。</td>
+<td>例外審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 使用者溝通與教育訓練</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>對象</th>
+<th>教育內容</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般使用者</td>
+<td>可接受使用、封鎖頁面說明、例外申請、釣魚防範、禁止上傳敏感資料。</td>
+<td>到職與每年。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>特權使用者</td>
+<td>高風險網站、規避控制風險、供應商工具、遠端管理與事件通報。</td>
+<td>每年或角色任命。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>開發人員</td>
+<td>套件下載、程式碼平台、Secrets外洩、AI工具使用、資料上傳與供應鏈風險。</td>
+<td>每年或專案啟動。</td>
+<td>訓練紀錄。</td>
+</tr>
+<tr>
+<td>SOC / IT Helpdesk</td>
+<td>例外流程、誤判處理、使用者支援、事件升級與證據保存。</td>
+<td>每年或工具變更。</td>
+<td>演練紀錄。</td>
+</tr>
+<tr>
+<td>供應商與承包商</td>
+<td>公司網路使用規範、禁止未核准AI/雲端、資料外傳與違規後果。</td>
+<td>專案開始前。</td>
+<td>簽署與確認紀錄。</td>
+</tr>
+<tr>
+<td>AI使用者</td>
+<td>核准AI工具、Prompt安全、資料不訓練、PII/Secrets禁止輸入與DLP告警。</td>
+<td>每年或工具導入。</td>
+<td>AI訓練紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 網頁過濾檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>策略完整性</td>
+<td>是否定義允許、阻擋、警示、隔離與例外策略？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>惡意網站阻擋</td>
+<td>是否阻擋惡意、釣魚、C2、惡意下載與高風險網域？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI/SaaS管制</td>
+<td>未核准AI、雲端儲存與SaaS是否受限制或阻擋？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>遠端適用</td>
+<td>遠端工作與受管理端點是否套用等效網頁過濾？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>DLP整合</td>
+<td>敏感資料上傳、Prompt輸入與檔案分享是否受DLP或CASB控管？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌監控</td>
+<td>網頁存取、封鎖、例外、DLP與惡意事件是否集中記錄？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td>SSL檢查、日誌保存與使用者監控是否完成隱私與合規審查？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否有Owner、核准、期限、補償控制與重評？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>事件流程</td>
+<td>惡意連線、釣魚、資料外傳、AI誤用是否有事件處理流程？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>有效性測試</td>
+<td>是否定期測試阻擋、DLP、AI管制、DNS安全與遠端控制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>教育訓練</td>
+<td>使用者是否了解可接受使用、例外流程與資料上傳限制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 網頁過濾規則清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>規則編號</th>
+<th>規則名稱</th>
+<th>分類 / URL / 網域</th>
+<th>處置</th>
+<th>適用對象</th>
+<th>Owner</th>
+<th>生效日期</th>
+<th>到期日</th>
+<th>狀態</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>WEB-RULE-001</td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 阻擋 □ 警示 □ 隔離 □ 限制上傳</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+<td></td>
+</tr>
+<tr>
+<td>WEB-RULE-002</td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 阻擋 □ 警示 □ 隔離 □ 限制上傳</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+<td></td>
+</tr>
+<tr>
+<td>WEB-RULE-003</td>
+<td></td>
+<td></td>
+<td>□ 允許 □ 阻擋 □ 警示 □ 隔離 □ 限制上傳</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+<td>□ 啟用 □ 停用 □ 待審查</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>20. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網頁過濾策略與規則</td>
+<td>分類策略、允許/封鎖規則、DLP、AI管制、SSL檢查與變更紀錄。</td>
+<td>Network Security Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>例外申請與核准</td>
+<td>申請URL、用途、風險評估、核准、期限、補償控制與重評。</td>
+<td>Network Security / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>網頁存取日誌</td>
+<td>使用者、裝置、URL/網域、分類、處置、時間、檔案與告警資訊。</td>
+<td>SOC / IT Operations</td>
+<td>至少1至3年，依法規與風險。</td>
+</tr>
+<tr>
+<td>DLP與CASB事件</td>
+<td>資料上傳、雲端分享、AI輸入、敏感資料命中與處置。</td>
+<td>SOC / Data Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>事件調查紀錄</td>
+<td>釣魚、惡意下載、C2、資料外傳、AI誤用、規避控制之調查。</td>
+<td>Incident Response Owner</td>
+<td>至少3至7年，依事件等級。</td>
+</tr>
+<tr>
+<td>有效性測試紀錄</td>
+<td>阻擋測試、DLP測試、DNS安全測試、遠端工作測試與AI工具測試。</td>
+<td>Network Security / SOC</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>使用者教育紀錄</td>
+<td>可接受使用、釣魚防範、AI工具與資料上傳限制訓練。</td>
+<td>HR / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>供應商存取紀錄</td>
+<td>供應商網頁存取限制、違規、例外與退場紀錄。</td>
+<td>Supplier Management</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意網站阻擋數</td>
+<td>網頁過濾阻擋惡意、釣魚、C2、惡意下載事件數。</td>
+<td>趨勢分析，異常升高需調查。</td>
+<td>威脅態勢。</td>
+</tr>
+<tr>
+<td>有效誤判率</td>
+<td>經確認合法業務網站遭錯誤封鎖之比例。</td>
+<td>趨勢應下降。</td>
+<td>策略品質改善。</td>
+</tr>
+<tr>
+<td>高風險例外數</td>
+<td>高風險分類、AI工具、雲端上傳或未知網站例外數。</td>
+<td>需管理審查。</td>
+<td>剩餘風險管理。</td>
+</tr>
+<tr>
+<td>逾期例外數</td>
+<td>超過到期日未重評或未移除之例外數。</td>
+<td>目標0。</td>
+<td>例外治理。</td>
+</tr>
+<tr>
+<td>DLP上傳阻擋數</td>
+<td>敏感資料上傳至未核准網站、雲端或AI工具之阻擋數。</td>
+<td>趨勢分析。</td>
+<td>資料外洩預防。</td>
+</tr>
+<tr>
+<td>規避控制事件數</td>
+<td>使用Tor、匿名代理、未核准VPN或其他繞過方式事件數。</td>
+<td>目標0或持續下降。</td>
+<td>政策遵循。</td>
+</tr>
+<tr>
+<td>遠端端點覆蓋率</td>
+<td>遠端受管理端點套用網頁過濾之比例。</td>
+<td>目標100%。</td>
+<td>遠端工作控制。</td>
+</tr>
+<tr>
+<td>AI工具違規使用數</td>
+<td>未核准AI工具存取或敏感資料輸入AI事件數。</td>
+<td>目標0。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>教育訓練完成率</td>
+<td>應完成網頁安全與AI工具訓練人員比例。</td>
+<td>目標100%。</td>
+<td>能力與意識。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>策略與範圍</td>
+<td>網頁過濾是否涵蓋辦公室、遠端、端點、供應商、SaaS與AI服務。</td>
+<td>策略文件、架構圖。</td>
+</tr>
+<tr>
+<td>封鎖分類</td>
+<td>惡意、釣魚、C2、非法、匿名代理、未核准AI/雲端是否受控。</td>
+<td>規則清冊、測試報告。</td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>例外是否具備申請、風險評估、核准、期限、補償控制與重評。</td>
+<td>例外申請表。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>網頁存取、封鎖、DLP、AI工具與惡意事件是否記錄並監控。</td>
+<td>SIEM、SWG、CASB報告。</td>
+</tr>
+<tr>
+<td>隱私與合規</td>
+<td>SSL檢查、使用者監控與日誌保存是否完成必要審查。</td>
+<td>DPO/Legal審查。</td>
+</tr>
+<tr>
+<td>DLP/CASB整合</td>
+<td>敏感資料上傳至網站、雲端、AI工具是否被偵測或阻擋。</td>
+<td>DLP事件與測試。</td>
+</tr>
+<tr>
+<td>遠端工作</td>
+<td>遠端端點是否仍套用網頁過濾與DNS安全。</td>
+<td>端點代理報告。</td>
+</tr>
+<tr>
+<td>事件處理</td>
+<td>釣魚、惡意下載、資料外洩、AI誤用與規避控制是否依事件程序處理。</td>
+<td>事件紀錄。</td>
+</tr>
+<tr>
+<td>有效性測試</td>
+<td>是否定期測試封鎖、DLP、DNS、安全分類與AI管制有效性。</td>
+<td>測試紀錄。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大例外、違規趨勢、事件與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 附錄A：網頁過濾事件調查表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件編號</td>
+<td>WEB-INC-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>發現日期時間</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+</tr>
+<tr>
+<td>事件類型</td>
+<td>□ 惡意網站 □ 釣魚 □ 惡意下載 □ 資料上傳 □ AI誤用 □ 規避控制 □ 誤判 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>使用者 / 裝置</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>URL / 網域 / IP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>網站分類</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>處置結果</td>
+<td>□ 阻擋 □ 警示 □ 允許 □ 隔離 □ DLP阻擋</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 無 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>初步影響</td>
+<td></td>
+<td>是否涉及帳密、資料外洩、惡意程式或服務影響。</td>
+</tr>
+<tr>
+<td>處置措施</td>
+<td></td>
+<td>封鎖、端點隔離、密碼重設、DLP、使用者通知。</td>
+</tr>
+<tr>
+<td>是否升級事件</td>
+<td>□ 否 □ 是，事件單號：______</td>
+<td></td>
+</tr>
+<tr>
+<td>結案日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>24. 附錄B：阻擋頁面建議內容</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>建議內容</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>阻擋原因</td>
+<td>顯示網站因安全、法規、公司政策或資料保護要求被限制。</td>
+<td>避免揭露過多規則細節。</td>
+</tr>
+<tr>
+<td>網站資訊</td>
+<td>顯示URL、分類、時間與參考編號。</td>
+<td>避免顯示敏感日誌細節。</td>
+</tr>
+<tr>
+<td>使用者行動</td>
+<td>提供例外申請連結、Helpdesk聯絡方式與必要資訊。</td>
+<td>引導正確流程。</td>
+</tr>
+<tr>
+<td>資安提醒</td>
+<td>提醒不得輸入公司資料、Secrets、PII或客戶資料至未核准網站或AI工具。</td>
+<td>強化教育。</td>
+</tr>
+<tr>
+<td>誤判回報</td>
+<td>提供誤判回報方式與處理SLA。</td>
+<td>降低業務中斷。</td>
+</tr>
+<tr>
+<td>隱私聲明</td>
+<td>說明網頁存取依公司政策可能被記錄與審查。</td>
+<td>符合法規與透明性。</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

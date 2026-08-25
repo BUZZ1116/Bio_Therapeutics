@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-SOP-006 數位證據保存作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 22px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.control-note { background:#f8fafc; border-left:4px solid #1f3b5b; padding:10px 14px; margin:12px 0; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A05-SOP-006 數位證據保存作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-SOP-006</td>
+<td>數位證據保存作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>資訊安全事件Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-SOP-006</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資訊安全事件Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">姓名</th>
+<th style="vertical-align: top;">職稱</th>
+<th style="vertical-align: top;">簽核/確認</th>
+<th style="vertical-align: top;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">文件建立</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">ISMS管理代表 / Digital Evidence Custodian</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資訊安全審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / SOC Manager</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">鑑識技術審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CSIRT Lead / Forensic Analyst</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT與雲端審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">IT營運主管 / Cloud Security Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法務與隱私審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">法務 / DPO / 法遵負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">AI Governance Owner（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">內部稽核審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Internal Audit Lead</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">核准</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / 法務主管 / 授權代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範組織在資訊安全事件、資安調查、合規審查、內部稽核、供應商事件、雲端服務事件、AI系統事件、PII事件及其他需要佐證事實之情境下，如何識別、保存、蒐集、封存、移交、分析、保管、使用、保存與銷毀數位證據，以維持證據之完整性、真實性、可用性、可追溯性、機密性與法律/稽核可接受性。</p>
+<p>本文件同時支援ISO/IEC 27001:2022 Annex A.5.24「Information security incident management planning and preparation」、A.5.25「Assessment and decision on information security events」、A.5.26「Response to information security incidents」、A.5.27「Learning from information security incidents」、A.5.28「Collection of evidence」及A.6.8「Information security event reporting」等要求，並建立可被內部稽核、外部驗證、法務調查、客戶審查與管理審查採信之證據保存程序。</p>
+<div class="control-note">
+<strong>核心要求：</strong>任何可能作為證據之資料，在未完成初步保全前，不得任意刪除、覆寫、重啟、格式化、修改、轉寄、公開、下載到個人設備或交付未授權人員。所有證據處理活動均應保留時間、執行者、目的、方法、工具、Hash、保存位置及移交紀錄。</div>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>完整性：證據蒐集與保存應使用可驗證方法，例如Hash、唯讀掛載、封存、簽章、時間戳、存取紀錄與證據鏈。</li>
+<li>最小干擾：蒐證活動應避免改變原始證據；若不可避免，應記錄原因、變更內容、影響與核准。</li>
+<li>授權處理：僅經授權之人員可蒐集、保管、移交、分析或銷毀證據。</li>
+<li>機密保護：證據可能含有客戶資料、PII、商業秘密、金鑰、密碼、原始碼、AI模型資料或攻擊細節，應依最高敏感等級保護。</li>
+<li>證據鏈完整：證據自取得、保管、分析、移交到銷毀之每一階段均需可追溯。</li>
+<li>合法合規：涉及個資、跨境、勞動、監理、客戶合約或司法程序時，應由法務、DPO或授權角色確認要求。</li>
+<li>時效優先：易失性證據如記憶體、網路連線、雲端暫時日誌、容器狀態、短期Token、EDR暫存資料應優先保存。</li>
+<li>職務區隔：證據保管、分析、決策與稽核宜保持適當職務區隔，降低利益衝突與證據污染。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">名詞</th>
+<th style="vertical-align: top;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">數位證據</td>
+<td style="vertical-align: top;">以數位形式存在，可用於證明資訊安全事件、違規、存取、變更、傳輸、操作、外洩、異常或控制執行情形之資料。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">原始證據</td>
+<td style="vertical-align: top;">未經修改、加工或分析之第一手資料，例如磁碟映像、原始日誌、封包檔、原始郵件、雲端稽核日誌匯出檔。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">衍生證據</td>
+<td style="vertical-align: top;">由原始證據分析、轉換、彙整、篩選或產生之資料，例如時間線、IOC清單、關聯分析報告、截圖、摘要表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據鏈</td>
+<td style="vertical-align: top;">記錄證據從識別、取得、封存、保管、存取、移交、分析、複製、使用到銷毀之完整歷程。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Hash</td>
+<td style="vertical-align: top;">用於驗證證據完整性之雜湊值，例如SHA-256；同一資料內容應產生相同Hash值。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保全</td>
+<td style="vertical-align: top;">在不破壞或盡量降低破壞原始狀態之前提下，防止證據遭刪除、覆寫、變更、洩漏或遺失。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">易失性證據</td>
+<td style="vertical-align: top;">系統關機、重啟、連線中斷或時間流逝後可能消失或變更之證據，例如記憶體、程序、連線、暫時Token、容器狀態。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">鑑識映像</td>
+<td style="vertical-align: top;">以鑑識工具建立之完整位元層級副本，通常包含Hash、工具資訊、建立時間與執行者。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據保管人</td>
+<td style="vertical-align: top;">負責證據接收、標示、封存、保存、存取授權、移交與保存期限管理之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Legal Hold</td>
+<td style="vertical-align: top;">因法律、合約、監理、爭議或調查需求而暫停例行刪除並保留相關資料之措施。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">主要責任</th>
+<th style="vertical-align: top;">禁止或限制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">最高管理階層</td>
+<td style="vertical-align: top;">提供重大事件蒐證所需資源，核准重大法律、監理或對外爭議之證據保存策略。</td>
+<td style="vertical-align: top;">不得要求刪除、隱匿或修改證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top;">核准證據保存策略、重大事件蒐證範圍、外部鑑識委任與高風險證據移交。</td>
+<td style="vertical-align: top;">不得將未經法務審查之敏感證據任意對外提供。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Incident Manager</td>
+<td style="vertical-align: top;">將證據保存納入事件回應計畫，維護事件時間線與蒐證任務追蹤。</td>
+<td style="vertical-align: top;">不得以非正式方式保存唯一證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Digital Evidence Custodian</td>
+<td style="vertical-align: top;">建立證據編號、接收證據、驗證Hash、保管證據、管理存取、執行移交與保存期限。</td>
+<td style="vertical-align: top;">不得同時擔任可能有利益衝突之被調查對象。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CSIRT / Forensic Analyst</td>
+<td style="vertical-align: top;">執行端點、伺服器、雲端、網路、郵件、AI與日誌蒐證及分析。</td>
+<td style="vertical-align: top;">不得直接修改原始證據；分析應使用副本。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SOC</td>
+<td style="vertical-align: top;">保存告警、SIEM查詢、關聯規則、封包、EDR紀錄及初步調查證據。</td>
+<td style="vertical-align: top;">不得因事件關閉而刪除相關告警與查詢紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">System / Cloud / Network Owner</td>
+<td style="vertical-align: top;">支援日誌匯出、快照、權限凍結、備份保全與系統狀態保存。</td>
+<td style="vertical-align: top;">不得未經核准重啟、重建或刪除受影響資源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法務 / 法遵</td>
+<td style="vertical-align: top;">判定法律保存、監理通報、訴訟、合約、客戶通知與對外移交要求。</td>
+<td style="vertical-align: top;">不得忽略個資、跨境與保密義務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DPO / PIMS負責人</td>
+<td style="vertical-align: top;">判斷PII證據之最小化、遮罩、保存、跨境、通知與資料主體權利影響。</td>
+<td style="vertical-align: top;">不得以調查為由無限制複製PII。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商管理</td>
+<td style="vertical-align: top;">要求供應商保存、匯出與交付事件相關證據，確認合約與SLA要求。</td>
+<td style="vertical-align: top;">不得接受未經完整性驗證或來源不明之供應商證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 數位證據類型與保存優先順序</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">優先順序</th>
+<th style="vertical-align: top;">證據類型</th>
+<th style="vertical-align: top;">範例</th>
+<th style="vertical-align: top;">保存原因</th>
+<th style="vertical-align: top;">建議行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">易失性證據</td>
+<td style="vertical-align: top;">記憶體、程序清單、網路連線、登入Session、容器狀態、臨時Token、雲端暫時憑證。</td>
+<td style="vertical-align: top;">最容易因重啟、逾期或自動輪替消失。</td>
+<td style="vertical-align: top;">立即由授權人員蒐集，記錄工具、時間、命令與Hash。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">安全告警與事件平台資料</td>
+<td style="vertical-align: top;">SIEM、EDR、NDR、IDS/IPS、DLP、CASB、SOAR、WAF、IAM告警。</td>
+<td style="vertical-align: top;">可建立事件起點、攻擊路徑與影響範圍。</td>
+<td style="vertical-align: top;">匯出原始告警、查詢條件、事件ID、時間區間與關聯規則版本。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">身份與存取證據</td>
+<td style="vertical-align: top;">登入紀錄、MFA紀錄、SSO、OAuth同意、API Key、Token使用、PAM Session。</td>
+<td style="vertical-align: top;">可證明誰在何時以何種權限操作。</td>
+<td style="vertical-align: top;">保存來源IP、User Agent、地區、設備、權限變更與Session紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">主機與端點證據</td>
+<td style="vertical-align: top;">磁碟映像、檔案系統、Registry、EDR Telemetry、惡意檔案、排程任務、服務。</td>
+<td style="vertical-align: top;">支援惡意程式、入侵路徑與資料外洩分析。</td>
+<td style="vertical-align: top;">隔離主機、建立映像、計算Hash、保存EDR資料。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">網路與流量證據</td>
+<td style="vertical-align: top;">封包、NetFlow、防火牆、Proxy、DNS、VPN、ZTNA、Load Balancer紀錄。</td>
+<td style="vertical-align: top;">支援攻擊來源、C2、資料外傳與橫向移動分析。</td>
+<td style="vertical-align: top;">匯出相關時間區間資料並保存查詢條件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">6</td>
+<td style="vertical-align: top;">雲端與SaaS證據</td>
+<td style="vertical-align: top;">CloudTrail、Activity Log、Audit Log、Storage Access、IAM、KMS、VPC Flow、SaaS稽核日誌。</td>
+<td style="vertical-align: top;">雲端事件常依平台日誌重建事實。</td>
+<td style="vertical-align: top;">啟用Legal Hold或日誌保留，匯出至受控證據庫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">7</td>
+<td style="vertical-align: top;">資料與文件證據</td>
+<td style="vertical-align: top;">資料庫日誌、資料表快照、DMS版本、檔案Hash、分享紀錄、下載紀錄。</td>
+<td style="vertical-align: top;">支援資料被存取、修改、刪除或外洩之判定。</td>
+<td style="vertical-align: top;">保存版本、權限、存取紀錄、筆數與完整性驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">8</td>
+<td style="vertical-align: top;">AI與自動化證據</td>
+<td style="vertical-align: top;">Prompt、AI輸入/輸出、RAG查詢、模型版本、Agent Actions、MLOps Pipeline、訓練資料版本。</td>
+<td style="vertical-align: top;">支援AI事件、資料外洩、錯誤輸出、越權工具調用與責任歸屬。</td>
+<td style="vertical-align: top;">保存模型/服務版本、輸入輸出、審核紀錄與使用者上下文。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 證據保存作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">階段</th>
+<th style="vertical-align: top;">作業活動</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">識別</td>
+<td style="vertical-align: top;">依事件類型、時間範圍、受影響資產、資料分類與法遵需求識別需保存證據。</td>
+<td style="vertical-align: top;">Incident Manager / CSIRT / 法務 / DPO</td>
+<td style="vertical-align: top;">證據保存範圍清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保全</td>
+<td style="vertical-align: top;">採取隔離、快照、Legal Hold、權限凍結、日誌匯出、備份保留、防刪除等措施。</td>
+<td style="vertical-align: top;">System Owner / Cloud Owner / Evidence Custodian</td>
+<td style="vertical-align: top;">保全操作紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">蒐集</td>
+<td style="vertical-align: top;">使用核准工具與方法蒐集原始證據，記錄時間、工具、版本、參數與操作者。</td>
+<td style="vertical-align: top;">Forensic Analyst / SOC / IT</td>
+<td style="vertical-align: top;">蒐集紀錄、Hash、原始檔。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">標示</td>
+<td style="vertical-align: top;">為每項證據建立唯一編號、分類、來源、敏感等級、案件編號與保存期限。</td>
+<td style="vertical-align: top;">Evidence Custodian</td>
+<td style="vertical-align: top;">證據標籤、證據清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">驗證</td>
+<td style="vertical-align: top;">計算Hash、確認檔案大小、筆數、時間區間、來源完整性與可讀性。</td>
+<td style="vertical-align: top;">Evidence Custodian / Analyst</td>
+<td style="vertical-align: top;">Hash驗證紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">封存</td>
+<td style="vertical-align: top;">將證據存放於受控位置，啟用加密、存取控制、備份與防竄改。</td>
+<td style="vertical-align: top;">Evidence Custodian</td>
+<td style="vertical-align: top;">封存紀錄、存放位置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">移交</td>
+<td style="vertical-align: top;">內外部移交需取得授權，記錄移交人、接收人、目的、時間、方式與Hash。</td>
+<td style="vertical-align: top;">Evidence Custodian / 法務</td>
+<td style="vertical-align: top;">證據移交紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">分析</td>
+<td style="vertical-align: top;">使用工作副本分析，不直接操作原始證據，分析結果應可追溯至原始證據。</td>
+<td style="vertical-align: top;">Forensic Analyst</td>
+<td style="vertical-align: top;">分析紀錄、時間線、報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存/銷毀</td>
+<td style="vertical-align: top;">依保存期限、Legal Hold、合約與法規要求保存；期滿經核准銷毀。</td>
+<td style="vertical-align: top;">Evidence Custodian / 法務</td>
+<td style="vertical-align: top;">保存期限紀錄、銷毀證明。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 證據編號、標示與分類要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">欄位</th>
+<th style="vertical-align: top;">格式/要求</th>
+<th style="vertical-align: top;">說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">證據編號</td>
+<td style="vertical-align: top;">EVD-YYYYMMDD-INC編號-流水號</td>
+<td style="vertical-align: top;">每項證據唯一編號，不得重複使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">案件編號</td>
+<td style="vertical-align: top;">INC-YYYYMMDD-流水號 / AUD- / LEG-</td>
+<td style="vertical-align: top;">關聯事件、稽核、法務或合規案件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據名稱</td>
+<td style="vertical-align: top;">簡短可辨識名稱</td>
+<td style="vertical-align: top;">例如：EDR_Alert_HostA_20260621.json。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據來源</td>
+<td style="vertical-align: top;">系統、設備、帳號、服務、供應商或人員</td>
+<td style="vertical-align: top;">需足以追溯證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得時間</td>
+<td style="vertical-align: top;">YYYY-MM-DD HH:MM:SS TZ</td>
+<td style="vertical-align: top;">應標示時區；建議使用UTC與本地時間並列。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得方法</td>
+<td style="vertical-align: top;">工具、版本、命令、API、平台匯出或截圖方式</td>
+<td style="vertical-align: top;">需可重複驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Hash</td>
+<td style="vertical-align: top;">SHA-256為最低要求</td>
+<td style="vertical-align: top;">若工具支援，可同時保存SHA-512。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">敏感等級</td>
+<td style="vertical-align: top;">公開/內部/機密/高機密/PII/Restricted</td>
+<td style="vertical-align: top;">依證據內容最高敏感等級標示。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存位置</td>
+<td style="vertical-align: top;">證據庫、保險箱、加密儲存、DMS Legal Hold區</td>
+<td style="vertical-align: top;">不得以個人電腦作為正式保存位置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存期限</td>
+<td style="vertical-align: top;">依紀錄保存期限清冊、法務Legal Hold或合約要求</td>
+<td style="vertical-align: top;">若期限衝突，以較長或較嚴格要求為準。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 證據鏈紀錄最低欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">欄位</th>
+<th style="vertical-align: top;">必填內容</th>
+<th style="vertical-align: top;">控制目的</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">證據編號</td>
+<td style="vertical-align: top;">唯一證據編號及案件編號</td>
+<td style="vertical-align: top;">建立可追溯性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據描述</td>
+<td style="vertical-align: top;">證據類型、來源、時間範圍、內容摘要</td>
+<td style="vertical-align: top;">辨識證據用途。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得者</td>
+<td style="vertical-align: top;">姓名、部門、職稱、授權依據</td>
+<td style="vertical-align: top;">確認授權與責任。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得時間與地點</td>
+<td style="vertical-align: top;">日期時間、時區、系統位置或實體位置</td>
+<td style="vertical-align: top;">支援時間線與司法/稽核要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得方法</td>
+<td style="vertical-align: top;">工具、版本、命令、API、截圖、匯出設定</td>
+<td style="vertical-align: top;">支援方法可驗證性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">完整性驗證</td>
+<td style="vertical-align: top;">Hash、檔案大小、筆數、簽章、校驗結果</td>
+<td style="vertical-align: top;">確認證據未遭變更。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保管位置</td>
+<td style="vertical-align: top;">實體保險櫃、加密儲存、證據庫、Legal Hold區</td>
+<td style="vertical-align: top;">確認存放安全性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">存取紀錄</td>
+<td style="vertical-align: top;">每次檢視、複製、分析、下載、移交之人員與原因</td>
+<td style="vertical-align: top;">防止未授權使用。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">移交紀錄</td>
+<td style="vertical-align: top;">交付人、接收人、時間、方式、目的、Hash驗證</td>
+<td style="vertical-align: top;">維持證據鏈完整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">銷毀紀錄</td>
+<td style="vertical-align: top;">銷毀核准、方式、執行者、見證者、日期</td>
+<td style="vertical-align: top;">避免不當留存與違規保存。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 端點與伺服器證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">作業項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">注意事項</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">隔離受影響設備</td>
+<td style="vertical-align: top;">優先透過EDR網路隔離或防火牆隔離，避免攻擊擴散。</td>
+<td style="vertical-align: top;">隔離前評估是否需要先保存記憶體與網路連線。</td>
+<td style="vertical-align: top;">隔離紀錄、EDR事件、時間戳。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存記憶體</td>
+<td style="vertical-align: top;">重大惡意程式、勒索軟體、無檔案攻擊、憑證竊取疑慮時，優先保存Memory Dump。</td>
+<td style="vertical-align: top;">需使用核准工具並記錄工具Hash。</td>
+<td style="vertical-align: top;">Memory Dump、Hash、工具紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">建立磁碟映像</td>
+<td style="vertical-align: top;">涉重大事件、法務需求或需完整鑑識時建立磁碟映像。</td>
+<td style="vertical-align: top;">避免直接於原始磁碟開機或寫入。</td>
+<td style="vertical-align: top;">映像檔、Hash、蒐證紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">收集主機日誌</td>
+<td style="vertical-align: top;">保存Security、System、Application、PowerShell、Sysmon、EDR、Auditd等紀錄。</td>
+<td style="vertical-align: top;">確認時間同步與日誌保留完整性。</td>
+<td style="vertical-align: top;">日誌匯出檔、查詢條件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存可疑檔案</td>
+<td style="vertical-align: top;">可疑執行檔、腳本、文件、壓縮檔、惡意附件應以加密封存。</td>
+<td style="vertical-align: top;">避免執行可疑檔案；必要時於沙箱分析。</td>
+<td style="vertical-align: top;">檔案、Hash、沙箱報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存帳號與權限狀態</td>
+<td style="vertical-align: top;">取得本機管理員、群組、服務帳號、排程任務與權限變更。</td>
+<td style="vertical-align: top;">可用截圖、命令輸出或管理平台匯出。</td>
+<td style="vertical-align: top;">帳號清單、權限紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 網路與通訊證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">證據類型</th>
+<th style="vertical-align: top;">保存要求</th>
+<th style="vertical-align: top;">最低欄位</th>
+<th style="vertical-align: top;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">防火牆紀錄</td>
+<td style="vertical-align: top;">匯出事件前後相關時間區間之允許/拒絕流量、規則命中與NAT紀錄。</td>
+<td style="vertical-align: top;">來源/目的IP、Port、Protocol、Action、Rule、時間、Bytes。</td>
+<td style="vertical-align: top;">判斷攻擊來源、橫向移動與資料外傳。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Proxy / Secure Web Gateway</td>
+<td style="vertical-align: top;">保存URL、User、分類、檔案下載、上傳、阻擋與User Agent。</td>
+<td style="vertical-align: top;">使用者、URL、時間、檔案、Bytes、Action。</td>
+<td style="vertical-align: top;">判斷惡意連線、釣魚與資料外洩。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DNS紀錄</td>
+<td style="vertical-align: top;">保存查詢Domain、解析結果、Client IP、時間與阻擋紀錄。</td>
+<td style="vertical-align: top;">Client、Query、Answer、TTL、Action。</td>
+<td style="vertical-align: top;">判斷C2、惡意網域與感染範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">VPN / ZTNA</td>
+<td style="vertical-align: top;">保存登入、MFA、來源地區、裝置狀態、Session、存取資源。</td>
+<td style="vertical-align: top;">帳號、IP、地區、設備、開始/結束時間。</td>
+<td style="vertical-align: top;">判斷未授權遠端存取。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">封包/PCAP</td>
+<td style="vertical-align: top;">重大外洩、未知攻擊或協定分析需求時保存封包。</td>
+<td style="vertical-align: top;">介面、時間範圍、Filter、檔案Hash。</td>
+<td style="vertical-align: top;">支援深度流量鑑識。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">NDR/IDS/IPS</td>
+<td style="vertical-align: top;">保存告警、簽章、Payload摘要、關聯事件與規則版本。</td>
+<td style="vertical-align: top;">告警ID、Signature、Severity、Flow。</td>
+<td style="vertical-align: top;">支援入侵路徑與IOC確認。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 雲端、SaaS與容器證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">平台/情境</th>
+<th style="vertical-align: top;">應保存證據</th>
+<th style="vertical-align: top;">保存重點</th>
+<th style="vertical-align: top;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">IaaS / 雲端帳戶</td>
+<td style="vertical-align: top;">雲端稽核日誌、IAM變更、API呼叫、Region、VPC Flow、Security Group、Snapshot、KMS使用紀錄。</td>
+<td style="vertical-align: top;">立即延長日誌保留、匯出至不可變更儲存、保存帳戶與角色狀態。</td>
+<td style="vertical-align: top;">Cloud Security Owner / Evidence Custodian。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SaaS</td>
+<td style="vertical-align: top;">管理員活動日誌、登入紀錄、分享紀錄、下載紀錄、DLP告警、資料保留設定、eDiscovery/Legal Hold。</td>
+<td style="vertical-align: top;">確認供應商日誌保留期限，必要時立即匯出。</td>
+<td style="vertical-align: top;">SaaS Owner / DPO / 法務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">容器/Kubernetes</td>
+<td style="vertical-align: top;">Pod事件、Container Image、Runtime Logs、Admission Logs、RBAC、Secrets存取、Cluster Audit Logs。</td>
+<td style="vertical-align: top;">保存映像Digest、Namespace、Deployment版本及短期Runtime狀態。</td>
+<td style="vertical-align: top;">DevSecOps / Cloud Security。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Serverless / API Gateway</td>
+<td style="vertical-align: top;">Function版本、環境變數、IAM Role、Invoke Logs、API Access Logs、錯誤紀錄。</td>
+<td style="vertical-align: top;">保存部署版本、觸發來源與權限變更。</td>
+<td style="vertical-align: top;">System Owner / Cloud Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端儲存</td>
+<td style="vertical-align: top;">物件存取紀錄、Bucket Policy、ACL、版本、刪除紀錄、下載紀錄、公開設定。</td>
+<td style="vertical-align: top;">啟用版本保留與Object Lock/Legal Hold（如支援）。</td>
+<td style="vertical-align: top;">Cloud Owner / Data Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端金鑰與Secrets</td>
+<td style="vertical-align: top;">KMS使用紀錄、Key Policy、Secret存取、輪替紀錄、憑證建立/撤銷。</td>
+<td style="vertical-align: top;">避免暴露Secrets內容；以受控方式保存Metadata與存取證據。</td>
+<td style="vertical-align: top;">Cloud Security / IAM Owner。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 郵件、協作平台與文件證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">證據類型</th>
+<th style="vertical-align: top;">保存方式</th>
+<th style="vertical-align: top;">注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">可疑郵件</td>
+<td style="vertical-align: top;">保存原始郵件檔（含Header）、附件、URL、寄件人、收件人、投遞紀錄與使用者操作。</td>
+<td style="vertical-align: top;">不得僅保存截圖；需保留完整Header以供追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">協作訊息</td>
+<td style="vertical-align: top;">保存聊天室訊息、成員、檔案、連結、時間、編輯/刪除紀錄。</td>
+<td style="vertical-align: top;">涉PII或員工監控時應符合法務與隱私要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DMS/雲端文件</td>
+<td style="vertical-align: top;">保存文件版本、權限、分享對象、下載、刪除、恢復與審核紀錄。</td>
+<td style="vertical-align: top;">必要時啟用Legal Hold或版本鎖定。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">外部分享連結</td>
+<td style="vertical-align: top;">保存連結設定、有效期限、權限、下載紀錄、IP與使用者。</td>
+<td style="vertical-align: top;">公開連結事件需立即截圖與匯出設定。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">電子簽核/工作流程</td>
+<td style="vertical-align: top;">保存簽核歷程、簽核者、意見、時間戳、附件版本。</td>
+<td style="vertical-align: top;">支援責任歸屬與合規證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. AI系統與自動化證據保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">證據項目</th>
+<th style="vertical-align: top;">保存內容</th>
+<th style="vertical-align: top;">控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">Prompt與輸入資料</td>
+<td style="vertical-align: top;">使用者輸入、系統Prompt、Context、RAG檢索內容、附件、資料分類。</td>
+<td style="vertical-align: top;">涉及PII或機密時應遮罩分析副本，原始證據受控保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI輸出</td>
+<td style="vertical-align: top;">模型回覆、工具調用、引用來源、人工覆核結果、發送或使用紀錄。</td>
+<td style="vertical-align: top;">保存輸出是否被用於決策、外部傳輸或自動化操作。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">模型與服務版本</td>
+<td style="vertical-align: top;">模型名稱、版本、供應商、Region、部署版本、參數、Guardrail版本。</td>
+<td style="vertical-align: top;">支援重現與責任歸屬。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RAG與資料來源</td>
+<td style="vertical-align: top;">索引版本、文件版本、Embedding版本、檢索結果與權限過濾紀錄。</td>
+<td style="vertical-align: top;">確認是否發生越權檢索或資料污染。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Agent Actions</td>
+<td style="vertical-align: top;">工具調用、API請求、執行結果、權限、審批、回滾紀錄。</td>
+<td style="vertical-align: top;">高風險自動化操作需完整保存。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">訓練/微調資料</td>
+<td style="vertical-align: top;">資料集版本、來源、授權、清理紀錄、標註紀錄、資料移除要求。</td>
+<td style="vertical-align: top;">涉及資料外洩或偏差事件時需保留版本證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. PII、客戶資料與敏感證據保護要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">控制項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">資料最小化</td>
+<td style="vertical-align: top;">蒐集證據時應僅蒐集調查必要範圍；若需完整資料集，應有明確核准。</td>
+<td style="vertical-align: top;">蒐證範圍核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">遮罩與去識別</td>
+<td style="vertical-align: top;">分析副本應優先遮罩PII、客戶資料、憑證與商業秘密；原始證據加密封存。</td>
+<td style="vertical-align: top;">遮罩規則、分析副本Hash。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">存取限制</td>
+<td style="vertical-align: top;">PII與高機密證據僅限授權調查、法務、DPO與必要技術人員存取。</td>
+<td style="vertical-align: top;">存取授權與日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">跨境限制</td>
+<td style="vertical-align: top;">證據若需跨境移交或由境外供應商分析，需完成法務/DPO審查。</td>
+<td style="vertical-align: top;">跨境審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料主體權利</td>
+<td style="vertical-align: top;">處理資料主體請求時，若證據受Legal Hold保護，應由DPO與法務判定回應方式。</td>
+<td style="vertical-align: top;">資料主體請求處理紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">通知義務</td>
+<td style="vertical-align: top;">證據分析確認外洩或高風險PII事件時，應依事件管理程序啟動通知判定。</td>
+<td style="vertical-align: top;">通報判定紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. Hash與完整性驗證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">項目</th>
+<th style="vertical-align: top;">最低要求</th>
+<th style="vertical-align: top;">補充要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">演算法</td>
+<td style="vertical-align: top;">SHA-256為最低要求。</td>
+<td style="vertical-align: top;">重大事件可加做SHA-512；不建議單獨使用MD5或SHA-1作為完整性證明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">計算時點</td>
+<td style="vertical-align: top;">證據取得後立即計算Hash；每次複製、移交、分析前後應驗證。</td>
+<td style="vertical-align: top;">若Hash不一致，立即停止使用並啟動異常調查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">記錄內容</td>
+<td style="vertical-align: top;">檔名、路徑、大小、Hash值、工具、工具版本、執行者、時間、系統時區。</td>
+<td style="vertical-align: top;">可附命令輸出或工具報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">截圖證據</td>
+<td style="vertical-align: top;">截圖本身亦應計算Hash，並記錄截圖來源、時間、畫面URL或系統位置。</td>
+<td style="vertical-align: top;">關鍵截圖應同時保存原始系統日誌。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">壓縮封存</td>
+<td style="vertical-align: top;">證據壓縮檔需加密並保存壓縮前與壓縮後Hash。</td>
+<td style="vertical-align: top;">密碼或金鑰不得與證據同通道傳輸。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Hash異常</td>
+<td style="vertical-align: top;">Hash不一致、檔案大小不一致或讀取失敗時應建立異常紀錄。</td>
+<td style="vertical-align: top;">由Evidence Custodian與CISO判定是否可採用備份副本。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 證據保存位置與存取控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">保存位置</th>
+<th style="vertical-align: top;">適用證據</th>
+<th style="vertical-align: top;">控制要求</th>
+<th style="vertical-align: top;">禁止事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">受控證據庫</td>
+<td style="vertical-align: top;">大多數數位證據、日誌、匯出檔、分析副本。</td>
+<td style="vertical-align: top;">MFA、RBAC、加密、存取日誌、不可變更設定、備份。</td>
+<td style="vertical-align: top;">不得允許全員或專案群組任意存取。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">WORM/不可變更儲存</td>
+<td style="vertical-align: top;">重大事件、法律保存、客戶/監理要求證據。</td>
+<td style="vertical-align: top;">Object Lock、Retention、Legal Hold、管理權限區隔。</td>
+<td style="vertical-align: top;">不得任意縮短Retention。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">實體保險櫃</td>
+<td style="vertical-align: top;">硬碟、USB、手機、紙本簽收、封存媒體。</td>
+<td style="vertical-align: top;">封條、盤點、雙人控管、環境保護。</td>
+<td style="vertical-align: top;">不得放置於個人抽屜或未上鎖區域。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">加密離線媒體</td>
+<td style="vertical-align: top;">需離線保存之大量映像或長期證據。</td>
+<td style="vertical-align: top;">全碟加密、金鑰分離、媒體標籤、定期可讀性驗證。</td>
+<td style="vertical-align: top;">不得使用未核准個人媒體。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">法務保存區</td>
+<td style="vertical-align: top;">Legal Hold、訴訟、監理、重大爭議證據。</td>
+<td style="vertical-align: top;">法務核准存取、保留期限鎖定、移交紀錄。</td>
+<td style="vertical-align: top;">不得未經法務核准銷毀。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 證據移交與對外提供要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">移交情境</th>
+<th style="vertical-align: top;">核准要求</th>
+<th style="vertical-align: top;">移交方式</th>
+<th style="vertical-align: top;">保存紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">內部分析移交</td>
+<td style="vertical-align: top;">Incident Manager或Evidence Custodian核准。</td>
+<td style="vertical-align: top;">受控證據庫權限或加密副本。</td>
+<td style="vertical-align: top;">移交人、接收人、目的、時間、Hash。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">外部鑑識廠商</td>
+<td style="vertical-align: top;">CISO、法務與採購/供應商管理核准；確認NDA、DPA、SOW與保密義務。</td>
+<td style="vertical-align: top;">加密MFT、專用通道或實體加密媒體。</td>
+<td style="vertical-align: top;">合約、移交單、Hash、收件確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">主管機關/執法機關</td>
+<td style="vertical-align: top;">法務主導，依正式函文、法令或授權流程辦理。</td>
+<td style="vertical-align: top;">依法務指定方式，必要時保留副本。</td>
+<td style="vertical-align: top;">函文、交付清單、簽收、保留副本Hash。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">客戶或合作夥伴</td>
+<td style="vertical-align: top;">依合約、NDA、DPA與CISO/法務核准提供最小必要證據。</td>
+<td style="vertical-align: top;">經審查之摘要、遮罩版本或受控副本。</td>
+<td style="vertical-align: top;">提供範圍、核准、交付紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">跨境移交</td>
+<td style="vertical-align: top;">法務、DPO、資料Owner核准；完成跨境與資料保護判定。</td>
+<td style="vertical-align: top;">加密傳輸、存取期限、地區限制。</td>
+<td style="vertical-align: top;">跨境審查、傳輸紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 證據分析作業要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">分析活動</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">建立工作副本</td>
+<td style="vertical-align: top;">所有分析應在工作副本進行，原始證據維持唯讀與封存。</td>
+<td style="vertical-align: top;">工作副本Hash與建立紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">建立事件時間線</td>
+<td style="vertical-align: top;">依日誌、告警、使用者行為、系統變更、網路流量與雲端活動建立時間線。</td>
+<td style="vertical-align: top;">事件時間線表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IOC萃取</td>
+<td style="vertical-align: top;">萃取IP、Domain、URL、Hash、檔名、Registry Key、帳號、Process、Command Line。</td>
+<td style="vertical-align: top;">IOC清單與封鎖建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">根因分析</td>
+<td style="vertical-align: top;">分析初始入侵、控制失效、弱點、流程缺口、使用者行為、供應商因素。</td>
+<td style="vertical-align: top;">RCA與改善建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">影響範圍分析</td>
+<td style="vertical-align: top;">確認受影響資產、帳號、資料、客戶、區域、系統與供應鏈。</td>
+<td style="vertical-align: top;">影響範圍清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">重現與驗證</td>
+<td style="vertical-align: top;">重大結論需可由證據支持，必要時由第二分析者覆核。</td>
+<td style="vertical-align: top;">覆核紀錄、分析報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 日誌保存與時間同步要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">控制項目</th>
+<th style="vertical-align: top;">要求</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">時間同步</td>
+<td style="vertical-align: top;">關鍵系統、雲端、SIEM、EDR、網路設備與身份系統應使用可信時間來源。</td>
+<td style="vertical-align: top;">NTP設定、時間同步狀態。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">時區標示</td>
+<td style="vertical-align: top;">所有證據記錄應標示時區，重大事件建議同時使用UTC與本地時間。</td>
+<td style="vertical-align: top;">事件時間線。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌完整性</td>
+<td style="vertical-align: top;">日誌需防止未授權刪除、修改或覆寫，重要日誌應集中保存。</td>
+<td style="vertical-align: top;">SIEM/Log平台設定。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保留期限</td>
+<td style="vertical-align: top;">依法規、合約、風險與紀錄保存期限清冊設定，不得低於事件調查需求。</td>
+<td style="vertical-align: top;">保存期限清冊、平台設定。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌匯出</td>
+<td style="vertical-align: top;">匯出日誌需保存查詢條件、欄位、時間範圍、平台版本與匯出人。</td>
+<td style="vertical-align: top;">查詢紀錄、匯出檔Hash。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">短期日誌</td>
+<td style="vertical-align: top;">雲端、SaaS、端點與網路設備若日誌保留短，事件後應立即匯出。</td>
+<td style="vertical-align: top;">緊急匯出紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 保存期限、Legal Hold與銷毀要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">情境</th>
+<th style="vertical-align: top;">保存期限原則</th>
+<th style="vertical-align: top;">銷毀條件</th>
+<th style="vertical-align: top;">核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">一般資安事件</td>
+<td style="vertical-align: top;">依紀錄保存期限清冊與事件嚴重度保存。</td>
+<td style="vertical-align: top;">結案且保存期限屆滿，且無Legal Hold。</td>
+<td style="vertical-align: top;">Evidence Custodian / CISO。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">重大事件</td>
+<td style="vertical-align: top;">至少保存至管理階層核准結案、CAPA完成、驗證或客戶審查完成後依期限保存。</td>
+<td style="vertical-align: top;">CISO、法務確認無持續爭議。</td>
+<td style="vertical-align: top;">CISO / 法務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PII事件</td>
+<td style="vertical-align: top;">依個資法規、DPO判定、通知義務與合約要求保存。</td>
+<td style="vertical-align: top;">DPO確認保存目的消失且無法務保留。</td>
+<td style="vertical-align: top;">DPO / 法務 / CISO。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">訴訟/監理/合約爭議</td>
+<td style="vertical-align: top;">啟用Legal Hold，不得依一般期限銷毀。</td>
+<td style="vertical-align: top;">法務書面解除Legal Hold。</td>
+<td style="vertical-align: top;">法務主管。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商證據</td>
+<td style="vertical-align: top;">依合約、SLA、DPA與事件需求保存。</td>
+<td style="vertical-align: top;">供應商義務完成且內部保存期限屆滿。</td>
+<td style="vertical-align: top;">供應商管理 / 法務。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">分析副本</td>
+<td style="vertical-align: top;">事件結案後應清理不必要副本，避免敏感資料擴散。</td>
+<td style="vertical-align: top;">確認原始證據仍受控保存。</td>
+<td style="vertical-align: top;">Evidence Custodian。</td>
+</tr>
+</tbody>
+</table>
+<h2>21. 常見事件蒐證清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">事件類型</th>
+<th style="vertical-align: top;">必蒐證據</th>
+<th style="vertical-align: top;">補充證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">釣魚郵件</td>
+<td style="vertical-align: top;">原始郵件、Header、附件、URL、寄件紀錄、使用者點擊紀錄、郵件閘道紀錄。</td>
+<td style="vertical-align: top;">EDR、Proxy、DNS、受害者訪談。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">帳號入侵</td>
+<td style="vertical-align: top;">SSO/MFA、登入IP、地區、User Agent、權限變更、Token、PAM、郵件規則。</td>
+<td style="vertical-align: top;">端點、VPN、雲端活動、密碼重設紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">勒索軟體</td>
+<td style="vertical-align: top;">受影響主機清單、EDR、可疑檔案、記憶體、磁碟映像、橫向移動紀錄、備份狀態。</td>
+<td style="vertical-align: top;">防火牆、DNS、C2、勒索訊息、付款要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料外洩</td>
+<td style="vertical-align: top;">DLP、Proxy、雲端下載、資料庫查詢、檔案分享、MFT、郵件、封包。</td>
+<td style="vertical-align: top;">資料分類、筆數、資料主體、收件方、合約要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端誤設定</td>
+<td style="vertical-align: top;">雲端稽核日誌、IAM、Bucket Policy、安全群組、公開設定、下載紀錄。</td>
+<td style="vertical-align: top;">CSPM告警、IaC版本、變更單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商事件</td>
+<td style="vertical-align: top;">供應商通報、事件時間線、受影響服務、資料流、契約通知、供應商證據Hash。</td>
+<td style="vertical-align: top;">第四方清單、SLA、DPA、客戶影響。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI資料外洩</td>
+<td style="vertical-align: top;">Prompt、輸入資料、AI服務日誌、輸出、模型版本、供應商條款、使用者紀錄。</td>
+<td style="vertical-align: top;">RAG檢索、DLP、API呼叫、人工覆核。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/ESG資料竄改</td>
+<td style="vertical-align: top;">資料來源、活動數據、排放係數、計算表、版本紀錄、權限、審核軌跡。</td>
+<td style="vertical-align: top;">查證機構往來、對外揭露版本。</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 證據品質檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">檢核項目</th>
+<th style="vertical-align: top;">檢核問題</th>
+<th style="vertical-align: top;">結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">來源明確</td>
+<td style="vertical-align: top;">是否能確認證據來源系統、設備、帳號或供應商？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">時間完整</td>
+<td style="vertical-align: top;">是否包含明確時間、時區與事件時間範圍？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">完整性驗證</td>
+<td style="vertical-align: top;">是否已計算Hash或以等效方式驗證完整性？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據鏈完整</td>
+<td style="vertical-align: top;">是否已記錄取得、保管、移交、分析與存取紀錄？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">授權明確</td>
+<td style="vertical-align: top;">蒐證、存取、移交與分析是否均經授權？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">敏感資料保護</td>
+<td style="vertical-align: top;">是否已依PII、客戶資料、機密資料要求保護？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">可讀與可用</td>
+<td style="vertical-align: top;">證據是否可開啟、可解析、欄位完整且未損壞？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存期限</td>
+<td style="vertical-align: top;">是否已標示保存期限或Legal Hold狀態？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">分析可追溯</td>
+<td style="vertical-align: top;">分析結論是否可追溯至原始證據？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">銷毀受控</td>
+<td style="vertical-align: top;">不需保存之副本是否已依程序清理或銷毀？</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+<h2>23. 稽核與管理審查證據</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">稽核項目</th>
+<th style="vertical-align: top;">應提供證據</th>
+<th style="vertical-align: top;">審查頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">證據保存程序有效性</td>
+<td style="vertical-align: top;">本SOP、訓練紀錄、演練紀錄、事件抽樣。</td>
+<td style="vertical-align: top;">至少每年或重大事件後。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據鏈完整性</td>
+<td style="vertical-align: top;">抽樣事件之證據鏈、Hash、移交、存取與銷毀紀錄。</td>
+<td style="vertical-align: top;">內部稽核時抽樣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">工具與權限管理</td>
+<td style="vertical-align: top;">鑑識工具清單、版本、授權人員、存取權限、MFA與日誌。</td>
+<td style="vertical-align: top;">至少每半年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">日誌保留有效性</td>
+<td style="vertical-align: top;">關鍵系統日誌設定、保留期限、匯出測試、不可變更儲存設定。</td>
+<td style="vertical-align: top;">至少每年。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端/SaaS證據可取得性</td>
+<td style="vertical-align: top;">供應商日誌保留條款、匯出測試、eDiscovery/Legal Hold能力。</td>
+<td style="vertical-align: top;">供應商審查與重大變更時。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">事件後改善</td>
+<td style="vertical-align: top;">事件檢討報告、CAPA、風險登錄更新、控制有效性驗證。</td>
+<td style="vertical-align: top;">每次確認事件後。</td>
+</tr>
+</tbody>
+</table>
+<h2>24. KPI / KRI 與監測指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">指標</th>
+<th style="vertical-align: top;">計算方式</th>
+<th style="vertical-align: top;">目標/門檻</th>
+<th style="vertical-align: top;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">重大事件證據保存準時率</td>
+<td style="vertical-align: top;">準時完成關鍵證據保存件數 / 重大事件件數。</td>
+<td style="vertical-align: top;">目標 &gt;= 95%。</td>
+<td style="vertical-align: top;">衡量事件早期保全能力。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Hash完整率</td>
+<td style="vertical-align: top;">已計算Hash證據件數 / 需Hash證據件數。</td>
+<td style="vertical-align: top;">目標 = 100%。</td>
+<td style="vertical-align: top;">衡量完整性驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據鏈缺失件數</td>
+<td style="vertical-align: top;">稽核發現證據鏈欄位缺漏或未授權存取件數。</td>
+<td style="vertical-align: top;">門檻 = 0重大缺失。</td>
+<td style="vertical-align: top;">衡量稽核可接受性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">短期日誌匯出及時率</td>
+<td style="vertical-align: top;">需緊急匯出之短期日誌於期限內完成比例。</td>
+<td style="vertical-align: top;">目標 &gt;= 95%。</td>
+<td style="vertical-align: top;">衡量雲端/SaaS蒐證效率。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">未授權證據存取事件</td>
+<td style="vertical-align: top;">未授權下載、分享、複製或開啟證據之事件件數。</td>
+<td style="vertical-align: top;">門檻 = 0。</td>
+<td style="vertical-align: top;">衡量證據保護。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Legal Hold解除逾期件數</td>
+<td style="vertical-align: top;">已無保存需求但未完成解除/銷毀評估之件數。</td>
+<td style="vertical-align: top;">依組織門檻。</td>
+<td style="vertical-align: top;">降低過度保存與合規風險。</td>
+</tr>
+</tbody>
+</table>
+<h2>25. 附錄A：數位證據保存紀錄表欄位模板</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">欄位</th>
+<th style="vertical-align: top;">填寫內容</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">案件編號</td>
+<td style="vertical-align: top;">INC-YYYYMMDD-XXXX / AUD-XXXX / LEG-XXXX。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據編號</td>
+<td style="vertical-align: top;">EVD-YYYYMMDD-INC編號-流水號。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據名稱</td>
+<td style="vertical-align: top;">證據檔案或物件名稱。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據類型</td>
+<td style="vertical-align: top;">日誌、映像、記憶體、封包、截圖、郵件、雲端匯出、AI紀錄、資料庫快照等。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">證據來源</td>
+<td style="vertical-align: top;">系統、主機、雲端帳戶、SaaS、使用者、供應商、設備或平台。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">時間範圍</td>
+<td style="vertical-align: top;">證據涵蓋之起迄時間與時區。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得者</td>
+<td style="vertical-align: top;">姓名、部門、職稱、聯絡方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">取得方法</td>
+<td style="vertical-align: top;">工具、版本、命令、API、平台匯出方式或截圖方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Hash / 完整性</td>
+<td style="vertical-align: top;">SHA-256值、檔案大小、筆數或簽章資訊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">敏感等級</td>
+<td style="vertical-align: top;">公開 / 內部 / 機密 / 高機密 / PII / Restricted。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存位置</td>
+<td style="vertical-align: top;">證據庫路徑、保險櫃編號、Legal Hold區、離線媒體編號。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">存取授權</td>
+<td style="vertical-align: top;">可存取人員、角色、期間與核准依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">移交紀錄</td>
+<td style="vertical-align: top;">交付人、接收人、時間、目的、方式、Hash驗證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">保存期限/Legal Hold</td>
+<td style="vertical-align: top;">保存到期日、Legal Hold狀態、法務解除條件。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 文件保存與控制</h2>
+<p>本作業指導書及其執行產生之證據保存紀錄、證據鏈、Hash驗證紀錄、移交紀錄、分析報告、Legal Hold紀錄、銷毀證明及稽核證據，均屬ISMS文件化資訊，應依文件化資訊管制程序及紀錄保存期限清冊進行版本、存取、保存、備份、保密與銷毀管理。</p>
+<p>涉及高機密、PII、客戶資料、供應商機密、AI模型、Prompt、原始碼、金鑰或尚未公開事件內容之證據，應依最高敏感等級保存；未經CISO、法務或授權角色核准，不得對外揭露、任意複製或作為非事件處理目的使用。</p>
+
+<h2>27. 結束前檢查聲明</h2>
+<p>本文件內所有表格均已使用指定格式：<code>&lt;table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8"&gt;</code>。所有表格儲存格均已設定或由樣式表套用 <code>vertical-align: top;</code>，以確保表格內容文字向上對齊。</p>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-SOP-002 資訊標示與處理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-SOP-002 資訊標示與處理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-SOP-002</td>
+<td>資訊標示與處理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-SOP-002</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>資訊資產管理負責人 / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資訊安全負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>文件管制審查</td>
+<td></td>
+<td>文件管制負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT與資料治理審查</td>
+<td></td>
+<td>IT營運負責人 / Data Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS審查</td>
+<td></td>
+<td>BCMS / DRP負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範組織資訊之分類、標示、處理、傳輸、儲存、共享、列印、攜出、歸檔、保存、刪除、銷毀與例外管理方式，確保資訊在整個生命週期中依其價值、敏感度、法規合約要求及風險等級受到適當保護。</p>
+<p>本文件同時提供使用者可操作之標示方式、處理規則、控制要求、檢核表與稽核證據基準，以支援ISO/IEC 27001:2022 Annex A.5.12資訊分類、A.5.13資訊標示、A.5.14資訊傳輸及相關控制之落實。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有資訊均應依業務價值、機密性、完整性、可用性、法規合約、PII、AI、供應鏈、營運持續與GHG/CO2揭露影響進行分類。</li>
+<li>資訊標示應清楚、可見、可追溯，且不得因格式、媒介或系統限制而免除保護責任。</li>
+<li>資訊處理應遵循最小權限、最小揭露、最小保存、必要知悉、加密保護、完整性保護與可稽核性原則。</li>
+<li>高機密、PII、客戶資料、AI輸入輸出、源碼、金鑰、稽核證據與GHG/CO2查證底稿應依專項規則加強保護。</li>
+<li>資訊分類、標示或處理方式發生疑義時，應依較高保護等級處理，並由Data Owner、資訊資產Owner或ISMS管理代表確認。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊分類</td>
+<td>依資訊敏感度、價值、法規要求、業務影響與風險等級，對資訊指定保護等級之活動。</td>
+</tr>
+<tr>
+<td>資訊標示</td>
+<td>以文字、標籤、浮水印、metadata、系統欄位、檔名、頁首頁尾或其他方式標示資訊分類與處理限制。</td>
+</tr>
+<tr>
+<td>資訊處理</td>
+<td>資訊之建立、收集、存取、使用、修改、複製、傳輸、共享、列印、儲存、備份、歸檔、刪除與銷毀。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>對資料之分類、用途、授權、保護、保存、刪除及風險承擔負責之角色。</td>
+</tr>
+<tr>
+<td>Information Custodian</td>
+<td>受託保管或維運資訊之角色，例如IT、雲端管理員、系統管理員或外包服務提供者。</td>
+</tr>
+<tr>
+<td>必要知悉</td>
+<td>僅允許因職務或核准目的確有需要者存取資訊。</td>
+</tr>
+<tr>
+<td>PII</td>
+<td>可識別自然人或與自然人相關之個人資料，包括一般PII與敏感PII。</td>
+</tr>
+<tr>
+<td>高機密資訊</td>
+<td>若未授權揭露、修改或遺失，可能造成重大法規、財務、營運、聲譽、客戶或個人權益損害之資訊。</td>
+</tr>
+<tr>
+<td>受控傳輸</td>
+<td>依資訊分類使用核准通道、加密、收件人確認、傳輸紀錄與必要核准之資訊傳輸活動。</td>
+</tr>
+<tr>
+<td>安全銷毀</td>
+<td>使資訊無法被合理還原或復原之刪除、覆寫、消磁、粉碎、熔毀或供應商銷毀程序。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>支持資訊分類與標示制度，核准重大例外、資源與風險接受。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定與監督資訊標示與處理安全要求，核准高風險例外與重大違規處置。</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>維護本作業指導書，整合風險、稽核、CAPA、教育訓練與管理審查。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>指定資料分類、使用限制、保留期限、共享條件與刪除要求。</td>
+</tr>
+<tr>
+<td>資訊資產Owner</td>
+<td>確保資訊資產清冊、分類、標示、授權與保護措施維持正確。</td>
+</tr>
+<tr>
+<td>Information Custodian</td>
+<td>依Owner要求實施存取控制、備份、加密、日誌、保存、刪除與技術保護。</td>
+</tr>
+<tr>
+<td>文件管制負責人</td>
+<td>確保文件版次、發行、回收、保存、封存與銷毀符合文件化資訊要求。</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人</td>
+<td>審查PII分類、標示、跨境傳輸、DPIA、DPA與隱私處理要求。</td>
+</tr>
+<tr>
+<td>AI治理負責人</td>
+<td>審查AI輸入、AI輸出、模型資料、提示內容與AI服務資料處理限制。</td>
+</tr>
+<tr>
+<td>BCMS / DRP負責人</td>
+<td>確認關鍵資訊之備份、復原、保存與中斷期間保護要求。</td>
+</tr>
+<tr>
+<td>GHG資料治理負責人</td>
+<td>確認碳資料、排放係數、查證底稿與對外揭露資訊之標示與處理要求。</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>依分類與標示要求處理資訊，保護資訊，避免未授權揭露，並即時通報異常。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 資訊分類等級</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>定義</th>
+<th>範例</th>
+<th>基本處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開（Public）</td>
+<td>經正式核准可對外公開，揭露不會造成不利影響之資訊。</td>
+<td>公開網站內容、公開新聞稿、已發布型錄。</td>
+<td>需經對外發布程序核准，避免誤導或過期資訊。</td>
+</tr>
+<tr>
+<td>內部（Internal）</td>
+<td>僅供組織內部使用，未授權外流可能造成輕微影響之資訊。</td>
+<td>一般內部公告、部門流程、內部會議資料。</td>
+<td>限內部授權使用，不得公開或輸入未核准外部平台。</td>
+</tr>
+<tr>
+<td>機密（Confidential）</td>
+<td>未授權揭露可能造成中度至重大影響之業務、客戶、技術、合約或營運資訊。</td>
+<td>客戶資料、合約、內部稽核、系統設計、財務草案。</td>
+<td>需限制授權、加密傳輸、受控共享、保存紀錄。</td>
+</tr>
+<tr>
+<td>高機密（Highly Confidential）</td>
+<td>未授權揭露、竄改或遺失可能造成重大法規、財務、營運、聲譽或個人權益損害之資訊。</td>
+<td>大量PII、敏感PII、金鑰、核心源碼、併購、重大漏洞、資安事件證據。</td>
+<td>最小權限、強加密、強監控、DLP、雙人覆核、嚴格傳輸與銷毀。</td>
+</tr>
+<tr>
+<td>受法規/合約限制（Restricted）</td>
+<td>受法律、合約、DPA、NDA、客戶要求、監管或查證要求限制之資訊，可與上述等級疊加。</td>
+<td>PII、客戶受託資料、支付資料、醫療資料、GHG查證底稿。</td>
+<td>依最嚴格適用要求處理，保留法規與合約證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 分類判定準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>判定面向</th>
+<th>判定問題</th>
+<th>提高分類等級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>機密性</td>
+<td>未授權揭露是否造成業務、客戶、合約或法規損害？</td>
+<td>涉及客戶資料、商業秘密、未公開財務、資安事件、金鑰或源碼。</td>
+</tr>
+<tr>
+<td>完整性</td>
+<td>資訊錯誤、竄改或未授權修改是否造成決策、營運或揭露錯誤？</td>
+<td>涉及財務、GHG/CO2、查證、合規報告、系統設定或AI訓練/評估資料。</td>
+</tr>
+<tr>
+<td>可用性</td>
+<td>資訊不可用是否影響關鍵流程、客戶SLA或RTO/RPO？</td>
+<td>涉及關鍵系統設定、復原文件、備份索引、事件應變與DRP資料。</td>
+</tr>
+<tr>
+<td>隱私</td>
+<td>是否可識別自然人或涉及敏感PII？</td>
+<td>涉及大量PII、敏感PII、資料主體權利或跨境處理。</td>
+</tr>
+<tr>
+<td>AI風險</td>
+<td>資訊是否會作為AI輸入、訓練、評估或自動化決策依據？</td>
+<td>涉及高影響AI用途、模型資料、提示資料、標註資料或AI輸出決策。</td>
+</tr>
+<tr>
+<td>供應鏈</td>
+<td>資訊是否提供給供應商、第四方或雲端服務處理？</td>
+<td>涉及外包、子處理者、雲端、AI API或供應商遠端支援。</td>
+</tr>
+<tr>
+<td>法規合約</td>
+<td>是否受法規、合約、NDA、DPA、SLA或客戶承諾限制？</td>
+<td>違反可能導致罰則、違約、通報、客戶損害或驗證不符合。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 資訊分類決策流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>作業內容</th>
+<th>責任角色</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 識別資訊</td>
+<td>確認資訊名稱、來源、用途、Owner、資料類型、使用者與生命週期。</td>
+<td>資訊產生者 / Data Owner</td>
+<td>資訊識別紀錄。</td>
+</tr>
+<tr>
+<td>2. 判定敏感度</td>
+<td>依機密性、完整性、可用性、PII、AI、供應鏈、法規合約與營運影響判定。</td>
+<td>Data Owner / ISMS代表</td>
+<td>分類判定結果。</td>
+</tr>
+<tr>
+<td>3. 指定分類</td>
+<td>選擇公開、內部、機密、高機密及受限制標籤，必要時加上專項標籤。</td>
+<td>Data Owner</td>
+<td>分類與標示設定。</td>
+</tr>
+<tr>
+<td>4. 定義處理規則</td>
+<td>定義存取、傳輸、共享、列印、保存、刪除、備份、AI使用與第三方處理限制。</td>
+<td>Data Owner / Custodian</td>
+<td>處理規則。</td>
+</tr>
+<tr>
+<td>5. 設定技術控制</td>
+<td>於DMS、雲端、DLP、權限、標籤、加密或系統欄位實作控制。</td>
+<td>IT / Custodian</td>
+<td>控制實施證據。</td>
+</tr>
+<tr>
+<td>6. 定期檢討</td>
+<td>依年度、事件、法規、合約、用途或Owner變更重新檢討。</td>
+<td>Data Owner / ISMS代表</td>
+<td>重評紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 標示要求總則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標示原則</th>
+<th>要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可見性</td>
+<td>紙本、電子文件、郵件、簡報、報表與匯出資料應有清楚可見之分類標示。</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>檔名、頁首/頁尾、浮水印、metadata、DMS標籤與系統欄位應盡量一致。</td>
+</tr>
+<tr>
+<td>可機器讀取</td>
+<td>可行時應使用DLP、Microsoft Purview、Google Workspace Labels、DMS欄位或等效標籤支援自動控制。</td>
+</tr>
+<tr>
+<td>最嚴格標示</td>
+<td>混合多種分類資訊時，應以最高分類等級標示整體文件或清楚標示區段差異。</td>
+</tr>
+<tr>
+<td>不可移除</td>
+<td>除非資料重新分類或由Owner核准，使用者不得移除、降低或規避分類標示。</td>
+</tr>
+<tr>
+<td>外部接收</td>
+<td>接收外部資訊時，應保留原標示；若無標示，應依組織分類準則重新判定。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 標示格式規範</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>標示位置</th>
+<th>標示格式範例</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>電子文件</td>
+<td>封面、頁首或頁尾、metadata、檔名。</td>
+<td>[Confidential] 文件名稱_V1.0；頁尾：機密 Confidential。</td>
+<td>適用Word、PDF、簡報、試算表。</td>
+</tr>
+<tr>
+<td>紙本文件</td>
+<td>封面、每頁頁首/頁尾、章節或浮水印。</td>
+<td>高機密 Highly Confidential - 僅限授權人員。</td>
+<td>列印高機密資料需登錄或受控回收。</td>
+</tr>
+<tr>
+<td>電子郵件</td>
+<td>主旨、本文開頭、附件檔名、郵件標籤。</td>
+<td>[Confidential] 專案資料；本文標示處理限制。</td>
+<td>外部寄送機密以上需確認收件人。</td>
+</tr>
+<tr>
+<td>即時通訊</td>
+<td>訊息開頭或群組公告標示。</td>
+<td>[Internal]、[Confidential]。</td>
+<td>不適合傳送高機密或大量PII。</td>
+</tr>
+<tr>
+<td>資料庫/資料集</td>
+<td>資料字典、欄位metadata、資料目錄標籤。</td>
+<td>classification=Confidential；pii=true。</td>
+<td>需支援權限與資料治理。</td>
+</tr>
+<tr>
+<td>原始碼/設定檔</td>
+<td>Repo標籤、README、安全分類、Secret標示。</td>
+<td>Repository: Confidential；Secrets prohibited。</td>
+<td>金鑰不得以標示取代Secret管理。</td>
+</tr>
+<tr>
+<td>AI輸入/輸出</td>
+<td>Prompt紀錄、AI工作區、輸出文件標示。</td>
+<td>AI Output - Requires Human Review - Confidential。</td>
+<td>AI輸出不得自動降低分類。</td>
+</tr>
+<tr>
+<td>GHG/CO2資料</td>
+<td>資料表、盤查底稿、係數庫、查證證據標示。</td>
+<td>GHG Verification Evidence - Confidential。</td>
+<td>需保持版本與追溯性。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 電子文件處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分類等級</th>
+<th>存取</th>
+<th>傳輸</th>
+<th>儲存</th>
+<th>共享</th>
+<th>處理限制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開</td>
+<td>依對外發布流程授權後可公開。</td>
+<td>可使用一般通道。</td>
+<td>可存於核准公開平台。</td>
+<td>可公開分享。</td>
+<td>需避免過期、錯誤或未核准聲明。</td>
+</tr>
+<tr>
+<td>內部</td>
+<td>限內部授權人員。</td>
+<td>可使用公司郵件、內部協作平台。</td>
+<td>公司核准儲存位置。</td>
+<td>限組織內部。</td>
+<td>不得放置公開平台或個人帳號。</td>
+</tr>
+<tr>
+<td>機密</td>
+<td>限必要知悉者。</td>
+<td>需使用公司核准加密或受控通道。</td>
+<td>核准DMS、雲端或加密儲存。</td>
+<td>需Owner核准或受控分享。</td>
+<td>不得使用個人雲端或未核准AI工具。</td>
+</tr>
+<tr>
+<td>高機密</td>
+<td>限最小授權、強驗證與監控。</td>
+<td>需加密、收件人確認、必要時雙人覆核。</td>
+<td>高安全區域、加密儲存、DLP監控。</td>
+<td>原則上不得外部分享，必要時高層核准。</td>
+<td>禁止輸入未核准AI、禁止公開連結、需嚴格銷毀。</td>
+</tr>
+<tr>
+<td>受限制</td>
+<td>依法規、合約、DPA、NDA或客戶要求。</td>
+<td>依最嚴格要求加密、核准與留痕。</td>
+<td>需符合法規地區、保存與刪除要求。</td>
+<td>限合約或法定目的。</td>
+<td>需保留處理依據、授權與稽核證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 紙本文件處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分類等級</th>
+<th>列印</th>
+<th>保存</th>
+<th>攜出</th>
+<th>銷毀</th>
+<th>特殊要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開</td>
+<td>依需求列印。</td>
+<td>一般保存。</td>
+<td>可攜出。</td>
+<td>一般回收或銷毀。</td>
+<td>需確認為核准公開版。</td>
+</tr>
+<tr>
+<td>內部</td>
+<td>限業務需要列印。</td>
+<td>內部辦公區域保存。</td>
+<td>避免不必要攜出。</td>
+<td>碎紙或受控回收。</td>
+<td>不得遺留於公共區域。</td>
+</tr>
+<tr>
+<td>機密</td>
+<td>需業務必要，建議列印登錄。</td>
+<td>上鎖櫃或受控區域。</td>
+<td>攜出需主管或Owner核准。</td>
+<td>碎紙、機密文件銷毀或委外銷毀證明。</td>
+<td>列印後即時取件。</td>
+</tr>
+<tr>
+<td>高機密</td>
+<td>原則上避免列印，必要時核准並登錄。</td>
+<td>保險櫃或高安全區域。</td>
+<td>原則上不得攜出，例外需CISO或授權核准。</td>
+<td>交叉碎紙、熔毀或受控銷毀證明。</td>
+<td>需編號、收發、回收與盤點。</td>
+</tr>
+<tr>
+<td>受限制</td>
+<td>依法規、合約或客戶要求。</td>
+<td>依保存與存取限制。</td>
+<td>依授權與傳輸要求。</td>
+<td>依法規或合約銷毀要求。</td>
+<td>需保留銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 電子郵件與附件處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>處理要求</th>
+<th>控制措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>寄送內部資訊</td>
+<td>確認收件人與業務目的，可使用公司郵件。</td>
+<td>內部標示、避免轉寄外部。</td>
+</tr>
+<tr>
+<td>寄送機密資訊</td>
+<td>確認收件人、附件、分類、授權與必要加密。</td>
+<td>加密附件、權限連結、DLP提示。</td>
+</tr>
+<tr>
+<td>寄送高機密資訊</td>
+<td>需Owner核准，使用受控傳輸，避免附件外寄。</td>
+<td>加密、到期權限、下載限制、雙人覆核。</td>
+</tr>
+<tr>
+<td>寄送PII</td>
+<td>需確認合法目的、最小資料、收件人與DPO/流程要求。</td>
+<td>加密、DLP、收件人確認、傳輸紀錄。</td>
+</tr>
+<tr>
+<td>誤寄處理</td>
+<td>立即通報SOC/DPO/主管，不得自行隱匿。</td>
+<td>事件通報、收件人回收要求、證據保全。</td>
+</tr>
+<tr>
+<td>外部郵件附件</td>
+<td>對可疑附件或連結不得開啟，應通報。</td>
+<td>郵件安全閘道、釣魚通報。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 即時通訊與協作平台處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>允許要求</th>
+<th>禁止或限制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般內部討論</td>
+<td>可使用核准通訊工具與授權群組。</td>
+<td>不得加入未授權外部人員。</td>
+</tr>
+<tr>
+<td>機密資訊分享</td>
+<td>需確認群組成員、權限、保存與下載限制。</td>
+<td>不得使用個人通訊軟體或公開群組。</td>
+</tr>
+<tr>
+<td>高機密資訊分享</td>
+<td>原則上避免於即時通訊中傳送，必要時使用受控文件連結。</td>
+<td>不得貼上完整高機密內容、金鑰或大量PII。</td>
+</tr>
+<tr>
+<td>PII討論</td>
+<td>僅分享最小必要內容，必要時遮罩。</td>
+<td>不得於非核准通道傳送敏感PII。</td>
+</tr>
+<tr>
+<td>AI輸出分享</td>
+<td>需標示AI Output與覆核狀態。</td>
+<td>不得將未覆核AI輸出作為正式決策。</td>
+</tr>
+<tr>
+<td>群組退場</td>
+<td>人員離職、轉調或專案結束時移除群組。</td>
+<td>不得保留無業務必要之存取。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 雲端儲存與共享處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>作業要求</th>
+<th>禁止事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准平台</td>
+<td>僅得使用核准雲端儲存、DMS或協作平台保存組織資訊。</td>
+<td>禁止使用個人雲端、私人帳號或未核准SaaS。</td>
+</tr>
+<tr>
+<td>共享權限</td>
+<td>共享應採最小權限、指定對象、到期日與必要下載限制。</td>
+<td>禁止公開連結分享內部以上資訊。</td>
+</tr>
+<tr>
+<td>外部分享</td>
+<td>外部分享機密資訊需Owner核准並記錄目的與期限。</td>
+<td>不得將高機密資料外部分享，除非正式核准。</td>
+</tr>
+<tr>
+<td>下載與同步</td>
+<td>大量下載、離線同步或跨裝置同步需符合分類與設備安全要求。</td>
+<td>禁止同步至未受管設備。</td>
+</tr>
+<tr>
+<td>雲端標籤</td>
+<td>雲端資料夾、文件或資料集應套用分類標籤與DLP規則。</td>
+<td>不得移除標籤或規避DLP。</td>
+</tr>
+<tr>
+<td>到期清理</td>
+<td>專案結束或用途消失時，應檢討權限、封存或刪除。</td>
+<td>不得無限期保留共享權限。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 可攜式媒體與外部儲存處理規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分類等級</th>
+<th>使用要求</th>
+<th>控制措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開</td>
+<td>可依業務需求使用。</td>
+<td>避免混入內部或機密資料。</td>
+</tr>
+<tr>
+<td>內部</td>
+<td>需使用公司核准媒體，避免不必要複製。</td>
+<td>標示、盤點、基本加密。</td>
+</tr>
+<tr>
+<td>機密</td>
+<td>需Owner核准，使用加密媒體並保留移轉紀錄。</td>
+<td>全碟加密、密碼分離傳送、歸還或銷毀紀錄。</td>
+</tr>
+<tr>
+<td>高機密</td>
+<td>原則上禁止使用可攜式媒體，例外需CISO核准。</td>
+<td>硬體加密、雙人覆核、登錄、交接與銷毀證明。</td>
+</tr>
+<tr>
+<td>受限制</td>
+<td>依法規、合約或客戶要求。</td>
+<td>保留傳輸與銷毀證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 資料庫、資料集與結構化資料標示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標示項目</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料表分類</td>
+<td>資料表應標示最高資料分類與Owner。</td>
+<td>資料目錄、Data Catalog。</td>
+</tr>
+<tr>
+<td>欄位分類</td>
+<td>PII、敏感PII、金鑰、財務、客戶資料、GHG資料欄位需標示。</td>
+<td>資料字典、欄位metadata。</td>
+</tr>
+<tr>
+<td>資料集用途</td>
+<td>資料集需記錄使用目的、授權範圍、保留期限與禁止用途。</td>
+<td>資料集登錄表。</td>
+</tr>
+<tr>
+<td>資料輸出</td>
+<td>匯出資料需保留分類標示，若降敏或彙總需記錄處理方式。</td>
+<td>匯出紀錄、遮罩紀錄。</td>
+</tr>
+<tr>
+<td>資料血緣</td>
+<td>重要資料需維持來源、轉換、使用與輸出可追溯性。</td>
+<td>Data Lineage紀錄。</td>
+</tr>
+<tr>
+<td>資料品質</td>
+<td>關鍵資料需定義完整性、正確性、一致性與版本控制。</td>
+<td>資料品質檢查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 系統日誌、稽核證據與事件資料處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>分類建議</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>系統日誌</td>
+<td>內部至機密，含PII或安全事件時提高至機密/高機密。</td>
+<td>限制存取、完整性保護、集中保存、避免任意刪除。</td>
+</tr>
+<tr>
+<td>稽核證據</td>
+<td>機密或高機密。</td>
+<td>受控保存、版本控制、禁止未授權修改、依稽核計畫提供。</td>
+</tr>
+<tr>
+<td>資安事件證據</td>
+<td>高機密。</td>
+<td>證據保全、Chain of Custody、限制存取、法務/資安核准分享。</td>
+</tr>
+<tr>
+<td>弱點報告</td>
+<td>機密或高機密。</td>
+<td>限制散布、修補後再擴大揭露、不得公開細節。</td>
+</tr>
+<tr>
+<td>PIR/CAPA紀錄</td>
+<td>內部至機密。</td>
+<td>依管理系統與CAPA保存要求維護。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 原始碼、金鑰與技術秘密處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>分類建議</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>原始碼</td>
+<td>機密；核心產品、資安模組或客戶專案可為高機密。</td>
+<td>Repo權限、Code Review、Secret Scan、禁止公開上傳。</td>
+</tr>
+<tr>
+<td>API Key / Token</td>
+<td>高機密。</td>
+<td>Secret Manager、輪替、最小權限、不得硬編碼或貼於文件/訊息。</td>
+</tr>
+<tr>
+<td>憑證與私鑰</td>
+<td>高機密。</td>
+<td>KMS/HSM/Vault保存、存取紀錄、到期與撤銷管理。</td>
+</tr>
+<tr>
+<td>系統架構圖</td>
+<td>機密或高機密。</td>
+<td>限制存取，對外版本需去敏。</td>
+</tr>
+<tr>
+<td>漏洞資訊</td>
+<td>高機密。</td>
+<td>僅限修補團隊、CISO與必要角色存取。</td>
+</tr>
+<tr>
+<td>部署與組態檔</td>
+<td>機密；含Secrets則高機密。</td>
+<td>組態管理、權限控制、變更紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. AI輸入、AI輸出與模型資料處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>標示要求</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI Prompt / 輸入</td>
+<td>依輸入內容最高分類標示，含機密或PII時不得輸入未核准AI。</td>
+<td>保留用途、工具、輸入類型與授權紀錄。</td>
+</tr>
+<tr>
+<td>AI Output / 輸出</td>
+<td>標示AI Output、分類等級與Human Review狀態。</td>
+<td>未覆核不得對外發布或作重大決策依據。</td>
+</tr>
+<tr>
+<td>訓練資料</td>
+<td>依資料內容與模型風險標示，可能為機密或高機密。</td>
+<td>需資料授權、去識別、版本控制、偏差檢查。</td>
+</tr>
+<tr>
+<td>模型權重/模型檔</td>
+<td>機密或高機密。</td>
+<td>限制下載、存取、複製與外部分享。</td>
+</tr>
+<tr>
+<td>AI評估資料</td>
+<td>機密，若含PII或攻擊樣本則高機密。</td>
+<td>安全保存、限制存取、避免污染正式模型。</td>
+</tr>
+<tr>
+<td>AI事件資料</td>
+<td>高機密。</td>
+<td>事件應變、證據保全、DPO/AI治理審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. PII與隱私資料標示與處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>PII類型</th>
+<th>標示建議</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般PII</td>
+<td>Restricted-PII / Confidential。</td>
+<td>合法目的、最小化、授權存取、加密傳輸、保存期限。</td>
+</tr>
+<tr>
+<td>敏感PII</td>
+<td>Restricted-Sensitive PII / Highly Confidential。</td>
+<td>加強存取控制、DPIA、DPO審查、傳輸與共享限制。</td>
+</tr>
+<tr>
+<td>大量PII</td>
+<td>Restricted-PII / Highly Confidential。</td>
+<td>批次匯出管控、DLP、日誌監控、Owner核准。</td>
+</tr>
+<tr>
+<td>去識別/匿名化資料</td>
+<td>依再識別風險標示，可為Internal至Confidential。</td>
+<td>需保留去識別方法與再識別風險評估。</td>
+</tr>
+<tr>
+<td>資料主體請求資料</td>
+<td>Confidential或Highly Confidential。</td>
+<td>限DPO與授權人員處理，保留處理紀錄。</td>
+</tr>
+<tr>
+<td>PII事件資料</td>
+<td>Highly Confidential。</td>
+<td>事件應變、證據保全、通報時限與法務/DPO審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. GHG/CO2與ESG資料標示與處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料類型</th>
+<th>分類建議</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>活動數據</td>
+<td>內部至機密，若影響對外揭露則機密。</td>
+<td>來源可追溯、版本控制、異動紀錄。</td>
+</tr>
+<tr>
+<td>排放係數</td>
+<td>內部至機密。</td>
+<td>標示來源、版本、適用年度與查證依據。</td>
+</tr>
+<tr>
+<td>盤查底稿</td>
+<td>機密。</td>
+<td>限制修改、保存查證證據、保留計算邏輯。</td>
+</tr>
+<tr>
+<td>查證證據</td>
+<td>機密或高機密。</td>
+<td>限制存取、保存查證期間、不得未核准外傳。</td>
+</tr>
+<tr>
+<td>供應鏈碳資料</td>
+<td>機密，可能受供應商合約限制。</td>
+<td>依合約目的使用，限制外部分享。</td>
+</tr>
+<tr>
+<td>對外揭露資料</td>
+<td>公開前為機密，核准發布後可為公開。</td>
+<td>對外發布前需審查與授權。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 資訊傳輸通道要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>通道</th>
+<th>允許分類</th>
+<th>控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公司郵件</td>
+<td>公開、內部、機密；高機密需加強控制。</td>
+<td>DLP、加密、收件人確認、附件管控。</td>
+</tr>
+<tr>
+<td>DMS/雲端受控分享</td>
+<td>公開、內部、機密、高機密（依平台能力）。</td>
+<td>權限控管、到期日、下載限制、日誌。</td>
+</tr>
+<tr>
+<td>SFTP / MFT</td>
+<td>機密、高機密、受限制資料。</td>
+<td>加密、帳號控管、傳輸紀錄、完整性驗證。</td>
+</tr>
+<tr>
+<td>API傳輸</td>
+<td>依系統設計。</td>
+<td>TLS、OAuth/mTLS、簽章、速率限制、日誌。</td>
+</tr>
+<tr>
+<td>即時通訊</td>
+<td>內部與少量機密摘要。</td>
+<td>避免高機密、大量PII、金鑰與完整客戶資料。</td>
+</tr>
+<tr>
+<td>可攜式媒體</td>
+<td>僅例外或必要情境。</td>
+<td>加密、核准、登錄、交接與銷毀。</td>
+</tr>
+<tr>
+<td>未核准個人雲端/個人信箱</td>
+<td>不允許。</td>
+<td>不得用於任何內部以上資訊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 外部分享與第三方處理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分享類型</th>
+<th>核准要求</th>
+<th>處理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>一般外部分享</td>
+<td>確認業務目的、分類、收件人、授權與保留期限。</td>
+<td>最小揭露、受控通道、必要標示。</td>
+</tr>
+<tr>
+<td>機密資訊外部分享</td>
+<td>需Data Owner或資訊資產Owner核准。</td>
+<td>加密、到期權限、下載限制、保存傳輸紀錄。</td>
+</tr>
+<tr>
+<td>高機密資訊外部分享</td>
+<td>需CISO或授權高階主管核准。</td>
+<td>雙人覆核、合約/NDA、強加密、事件通報要求。</td>
+</tr>
+<tr>
+<td>PII外部分享</td>
+<td>需DPO/法務審查，確認DPA、合法目的與跨境要求。</td>
+<td>最小化、加密、傳輸紀錄、資料主體權利支援。</td>
+</tr>
+<tr>
+<td>AI服務處理</td>
+<td>需AI治理審查與工具核准。</td>
+<td>禁止未核准訓練、保留、外洩或次級使用。</td>
+</tr>
+<tr>
+<td>供應商處理</td>
+<td>需合約、安全條款、DPA、SLA、稽核權與第四方揭露。</td>
+<td>供應商登錄與定期審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 資訊保存與保留期限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>保存要求</th>
+<th>保存期限原則</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>受控文件</td>
+<td>依文件化資訊管理程序維護版本、核准與發行紀錄。</td>
+<td>有效期間加至少3年或依適用要求。</td>
+</tr>
+<tr>
+<td>合約與法務文件</td>
+<td>依法務、合約與法規要求保存。</td>
+<td>合約終止後至少3年或依法規較長者。</td>
+</tr>
+<tr>
+<td>PII資料</td>
+<td>依合法目的與保存期限，目的消失後刪除或匿名化。</td>
+<td>依法規、DPA或資料保留政策。</td>
+</tr>
+<tr>
+<td>系統日誌</td>
+<td>依日誌政策與法規要求。</td>
+<td>依系統重要性、法規與事件需求。</td>
+</tr>
+<tr>
+<td>稽核證據</td>
+<td>依稽核計畫、驗證與管理系統要求。</td>
+<td>至少3年或依驗證要求。</td>
+</tr>
+<tr>
+<td>GHG/CO2資料</td>
+<td>依盤查、查證與揭露要求保存。</td>
+<td>依查證、法規、客戶或組織要求。</td>
+</tr>
+<tr>
+<td>AI使用紀錄</td>
+<td>高風險AI需保存用途、輸入類型、輸出覆核與決策證據。</td>
+<td>依AI治理政策與風險等級。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 資訊刪除與安全銷毀</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>媒介/資訊類型</th>
+<th>銷毀方式</th>
+<th>證據要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>紙本內部資料</td>
+<td>碎紙或受控回收。</td>
+<td>必要時保存回收紀錄。</td>
+</tr>
+<tr>
+<td>紙本機密/高機密</td>
+<td>交叉碎紙、熔毀或機密銷毀服務。</td>
+<td>銷毀紀錄或銷毀證明。</td>
+</tr>
+<tr>
+<td>硬碟/SSD</td>
+<td>安全抹除、加密銷毀、物理破壞或合格供應商銷毀。</td>
+<td>抹除報告、資產報廢紀錄。</td>
+</tr>
+<tr>
+<td>可攜式媒體</td>
+<td>安全抹除或物理破壞。</td>
+<td>媒體銷毀紀錄。</td>
+</tr>
+<tr>
+<td>雲端資料</td>
+<td>依平台安全刪除、保留原則與合約刪除證明。</td>
+<td>刪除紀錄、供應商證明。</td>
+</tr>
+<tr>
+<td>PII資料</td>
+<td>依DPO要求刪除、匿名化或封存。</td>
+<td>刪除/匿名化證據。</td>
+</tr>
+<tr>
+<td>備份資料</td>
+<td>依備份保存週期到期清除，必要時標記隔離。</td>
+<td>備份保存與銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 重新分類與降級處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>要求</th>
+<th>核准角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開發布</td>
+<td>資訊由內部/機密降為公開前，需完成對外發布與法務/品牌/Owner審查。</td>
+<td>Data Owner / 法務 / 對外溝通Owner</td>
+</tr>
+<tr>
+<td>資料去識別</td>
+<td>PII經去識別或匿名化後，仍需評估再識別風險。</td>
+<td>DPO / Data Owner</td>
+</tr>
+<tr>
+<td>期限屆滿</td>
+<td>合約、專案、查證或保密期限屆滿後可評估降級。</td>
+<td>Data Owner / 法務</td>
+</tr>
+<tr>
+<td>錯誤分類</td>
+<td>發現分類過高或過低時，需由Owner確認並更新標示與控制。</td>
+<td>Data Owner / ISMS代表</td>
+</tr>
+<tr>
+<td>AI輸出重分類</td>
+<td>AI輸出經人工覆核、去敏與發布核准後可重新分類。</td>
+<td>AI Owner / Data Owner</td>
+</tr>
+<tr>
+<td>禁止自行降級</td>
+<td>使用者不得自行降低分類、移除標籤或取消DLP控制。</td>
+<td>需Owner核准</td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 標示與處理例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外類型</th>
+<th>申請內容</th>
+<th>核准層級</th>
+<th>期限與追蹤</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>無法標示</td>
+<td>系統或格式限制無法標示時，需採替代控制。</td>
+<td>Data Owner / ISMS代表</td>
+<td>設定補償控制與重評日。</td>
+</tr>
+<tr>
+<td>外部傳輸例外</td>
+<td>無法使用核准傳輸通道時，需說明原因與風險。</td>
+<td>CISO / Data Owner</td>
+<td>最短必要期間，保留傳輸證據。</td>
+</tr>
+<tr>
+<td>保存期限例外</td>
+<td>需延長或縮短保存期限時，需確認法規、合約與業務理由。</td>
+<td>法務 / Data Owner / DPO</td>
+<td>設定到期檢討。</td>
+</tr>
+<tr>
+<td>銷毀例外</td>
+<td>因訴訟、稽核、事件調查或查證需要暫停銷毀。</td>
+<td>法務 / CISO</td>
+<td>Legal Hold或事件保全解除後處理。</td>
+</tr>
+<tr>
+<td>AI處理例外</td>
+<td>需將敏感資料用於AI工具時，必須取得AI治理與DPO/CISO審查。</td>
+<td>AI治理 / DPO / CISO</td>
+<td>限定工具、資料、用途與期限。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. 資訊標示與DLP控制對應</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分類/標籤</th>
+<th>DLP控制</th>
+<th>監控與告警</th>
+<th>例外</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Internal</td>
+<td>外部分享提示或阻擋未核准公開。</td>
+<td>外部分享報表。</td>
+<td>Owner可核准合理外部分享。</td>
+</tr>
+<tr>
+<td>Confidential</td>
+<td>外部傳輸檢查、下載限制、未核准雲端阻擋。</td>
+<td>DLP告警、CASB告警。</td>
+<td>需Owner核准。</td>
+</tr>
+<tr>
+<td>Highly Confidential</td>
+<td>禁止公開連結、限制外寄、加密、強告警。</td>
+<td>即時告警SOC/CISO。</td>
+<td>需CISO核准。</td>
+</tr>
+<tr>
+<td>Restricted-PII</td>
+<td>PII偵測、加密、跨境/外部分享管控。</td>
+<td>DPO與SOC告警。</td>
+<td>需DPO/法務核准。</td>
+</tr>
+<tr>
+<td>AI-Restricted</td>
+<td>禁止輸入未核准AI與外部GenAI平台。</td>
+<td>AI/DLP告警。</td>
+<td>需AI治理核准。</td>
+</tr>
+<tr>
+<td>GHG-Controlled</td>
+<td>對外揭露前阻擋未核准分享。</td>
+<td>GHG Owner告警或審查。</td>
+<td>需GHG Owner核准。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. 標示與處理常見情境</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>正確作法</th>
+<th>錯誤作法</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>將客戶合約寄給外部律師</td>
+<td>確認NDA/法務核准，標示Confidential，使用加密或受控分享。</td>
+<td>直接附件寄送至私人信箱或未確認收件人。</td>
+</tr>
+<tr>
+<td>將員工名冊上傳雲端</td>
+<td>確認核准平台、PII標籤、DPA、權限與保存期限。</td>
+<td>上傳個人雲端或公開分享連結。</td>
+</tr>
+<tr>
+<td>使用AI摘要會議紀錄</td>
+<td>確認會議內容分類與AI工具核准，避免輸入PII/高機密。</td>
+<td>將未公開財務、客戶機密或PII貼入公開AI工具。</td>
+</tr>
+<tr>
+<td>匯出資料庫報表</td>
+<td>保留分類標示，限制下載，必要時遮罩PII。</td>
+<td>匯出完整資料後以未標示Excel轉寄。</td>
+</tr>
+<tr>
+<td>列印高機密文件</td>
+<td>取得核准，列印後即時取件，登錄、上鎖保存與受控銷毀。</td>
+<td>遺留印表機、會議室或一般垃圾桶。</td>
+</tr>
+<tr>
+<td>分享GHG查證底稿</td>
+<td>確認查證目的、收件人與版本，保留傳輸紀錄。</td>
+<td>任意寄送未核准版本或刪改底稿。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. 教育訓練與認知要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>對象</th>
+<th>訓練內容</th>
+<th>頻率</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>全體使用者</td>
+<td>資訊分類、標示、傳輸、雲端共享、AI限制、事件通報。</td>
+<td>到職與年度</td>
+<td>LMS紀錄、測驗紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>分類判定、保留期限、共享核准、例外與重評。</td>
+<td>年度或角色異動時</td>
+<td>角色訓練紀錄。</td>
+</tr>
+<tr>
+<td>System Owner / IT</td>
+<td>技術標籤、DLP、權限、日誌、備份、刪除與銷毀。</td>
+<td>年度或系統導入時</td>
+<td>訓練與操作紀錄。</td>
+</tr>
+<tr>
+<td>DPO / PII處理人員</td>
+<td>PII分類、DPIA、DPA、資料主體權利與隱私事件。</td>
+<td>年度</td>
+<td>PIMS訓練紀錄。</td>
+</tr>
+<tr>
+<td>AI使用者</td>
+<td>AI輸入限制、AI輸出標示、人類覆核與AI事件通報。</td>
+<td>年度或AI工具導入時</td>
+<td>AI治理訓練紀錄。</td>
+</tr>
+<tr>
+<td>GHG資料處理人員</td>
+<td>碳資料分類、版本、查證底稿、揭露資料與證據保存。</td>
+<td>年度或盤查前</td>
+<td>GHG訓練紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. KPI/KRI與監督指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標名稱</th>
+<th>目標/門檻</th>
+<th>資料來源</th>
+<th>頻率</th>
+<th>Owner</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>機密以上文件標示正確率</td>
+<td>≥ 95%</td>
+<td>DMS抽查 / DLP / 稽核</td>
+<td>每季</td>
+<td>ISMS代表 / 文件管制</td>
+<td>補標示、教育訓練或CAPA</td>
+</tr>
+<tr>
+<td>高機密外部傳輸核准率</td>
+<td>100%</td>
+<td>DLP / 傳輸紀錄</td>
+<td>每月</td>
+<td>SOC / CISO</td>
+<td>事件調查</td>
+</tr>
+<tr>
+<td>PII文件標示與DLP命中處理率</td>
+<td>100%</td>
+<td>DLP / PIMS紀錄</td>
+<td>每月</td>
+<td>DPO / SOC</td>
+<td>通報DPO並補正</td>
+</tr>
+<tr>
+<td>未核准公開分享連結數</td>
+<td>0或下降趨勢</td>
+<td>CASB / 雲端平台</td>
+<td>每月</td>
+<td>IT / SOC</td>
+<td>撤銷連結與通知Owner</td>
+</tr>
+<tr>
+<td>AI禁止資料輸入事件數</td>
+<td>0</td>
+<td>AI DLP / 使用紀錄</td>
+<td>每月</td>
+<td>AI治理 / SOC</td>
+<td>事件通報與補訓</td>
+</tr>
+<tr>
+<td>機密文件銷毀證據完整率</td>
+<td>≥ 95%</td>
+<td>銷毀紀錄</td>
+<td>每季</td>
+<td>文件管制 / Facilities</td>
+<td>補證或CAPA</td>
+</tr>
+<tr>
+<td>分類重評逾期數</td>
+<td>0</td>
+<td>資料清冊 / DMS</td>
+<td>每季</td>
+<td>Data Owner</td>
+<td>升級主管</td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. 標示與處理稽核抽樣表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>抽樣編號</th>
+<th>資訊名稱</th>
+<th>Owner</th>
+<th>分類標示</th>
+<th>處理方式</th>
+<th>抽查結果</th>
+<th>缺口</th>
+<th>改善期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SMP-001</td>
+<td></td>
+<td></td>
+<td>□ 正確　□ 不正確　□ 未標示</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td>□ 通過　□ 缺失</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SMP-002</td>
+<td></td>
+<td></td>
+<td>□ 正確　□ 不正確　□ 未標示</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td>□ 通過　□ 缺失</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SMP-003</td>
+<td></td>
+<td></td>
+<td>□ 正確　□ 不正確　□ 未標示</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td>□ 通過　□ 缺失</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SMP-004</td>
+<td></td>
+<td></td>
+<td>□ 正確　□ 不正確　□ 未標示</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td>□ 通過　□ 缺失</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. 不符合、事件與CAPA轉銜</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>處理要求</th>
+<th>是否觸發CAPA</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未標示或錯誤標示高風險資訊</td>
+<td>立即補正、評估外洩風險、通知Owner。</td>
+<td>□ 是　□ 否</td>
+<td>Data Owner / ISMS代表</td>
+</tr>
+<tr>
+<td>機密資訊公開分享</td>
+<td>立即撤銷分享、保全證據、啟動事件評估。</td>
+<td>□ 是　□ 否</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>PII誤傳或未授權共享</td>
+<td>立即通報DPO/SOC，進行隱私事件判定。</td>
+<td>□ 是　□ 否</td>
+<td>DPO / SOC</td>
+</tr>
+<tr>
+<td>高機密列印或銷毀失控</td>
+<td>回收、盤點、調查、補救與紀律處置。</td>
+<td>□ 是　□ 否</td>
+<td>文件管制 / CISO</td>
+</tr>
+<tr>
+<td>AI禁止資料輸入</td>
+<td>評估資料外洩、通知AI治理與DPO，要求供應商刪除或隔離。</td>
+<td>□ 是　□ 否</td>
+<td>AI治理 / SOC</td>
+</tr>
+<tr>
+<td>重複性標示缺口</td>
+<td>執行根因分析、補訓、技術控制或流程修訂。</td>
+<td>□ 是　□ 否</td>
+<td>ISMS代表 / CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入項目</th>
+<th>是否納入</th>
+<th>摘要</th>
+<th>責任角色</th>
+<th>提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>重大資訊標示與處理違規</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>ISMS代表 / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>PII、AI、高機密或GHG資料處理重大事件</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>DPO / AI / GHG Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DLP、CASB與資料外洩趨勢</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / IT</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊分類與標示訓練成效</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>HR / ISMS代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>技術標籤、DLP、DMS或資料治理資源需求</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / IT</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>稽核缺失、CAPA與重複性問題</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CAPA負責人 / 稽核主管</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>ISMS代表</th>
+<th>Data Owner</th>
+<th>Custodian/IT</th>
+<th>文件管制</th>
+<th>DPO/AI/GHG Owner</th>
+<th>使用者</th>
+<th>內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准資訊標示與處理制度</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>制定與維護SOP</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>判定資訊分類</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>實施標示與技術控制</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>核准外部分享或例外</td>
+<td>I</td>
+<td>A（高風險）</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>處理PII/AI/GHG專項標示</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>通報標示或處理異常</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>稽核遵循情形</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本SOP對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>5.3</td>
+<td>定義資訊標示與處理角色責任。</td>
+<td>第4、36章</td>
+<td>CISO / ISMS代表</td>
+</tr>
+<tr>
+<td>6.1.2</td>
+<td>分類判定納入風險面向。</td>
+<td>第6、7章</td>
+<td>Data Owner</td>
+</tr>
+<tr>
+<td>6.1.3</td>
+<td>資訊處理控制與DLP、加密、傳輸、銷毀等風險處理。</td>
+<td>第11-30章</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>使用者需具備資訊分類與標示能力。</td>
+<td>第31章</td>
+<td>HR / ISMS代表</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>提升資訊標示、處理與事件通報認知。</td>
+<td>第31章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>標示、文件化資訊、保存與銷毀要求。</td>
+<td>第10、25、26、41章</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>資訊處理規則納入日常運作控制。</td>
+<td>第11-30章</td>
+<td>流程Owner</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>透過KPI/KRI監督資訊標示與處理有效性。</td>
+<td>第32章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>內部稽核查核分類、標示與處理證據。</td>
+<td>第33、40章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>重大標示缺失、事件與資源需求納入管理審查。</td>
+<td>第35章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>標示錯誤、外洩、錯誤傳輸與重複缺失導出CAPA。</td>
+<td>第34章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Annex A控制</th>
+<th>本SOP對應內容</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.9</td>
+<td>資訊資產清冊與Owner支援分類。</td>
+<td>資訊資產清冊、Data Owner紀錄</td>
+<td>資訊資產Owner</td>
+</tr>
+<tr>
+<td>A.5.10</td>
+<td>資訊與相關資產可接受使用。</td>
+<td>可接受使用規則、訓練紀錄</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.12</td>
+<td>資訊分類。</td>
+<td>分類準則、分類判定紀錄</td>
+<td>Data Owner</td>
+</tr>
+<tr>
+<td>A.5.13</td>
+<td>資訊標示。</td>
+<td>文件標籤、DMS標籤、metadata、浮水印</td>
+<td>文件管制 / IT</td>
+</tr>
+<tr>
+<td>A.5.14</td>
+<td>資訊傳輸。</td>
+<td>傳輸通道、加密、DLP與傳輸紀錄</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取控制、身分與權限。</td>
+<td>權限矩陣、IAM紀錄、存取審查</td>
+<td>IT / IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.23</td>
+<td>雲端服務中資訊安全。</td>
+<td>雲端標籤、共享權限、CASB、DLP</td>
+<td>Cloud Owner</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理與證據。</td>
+<td>標示違規事件、證據保全、通報紀錄</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.34</td>
+<td>法律、智慧財產、紀錄保護與PII。</td>
+<td>法務審查、DPIA、DPA、PII標示</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>A.6.3</td>
+<td>資訊安全認知與訓練。</td>
+<td>訓練與測驗紀錄</td>
+<td>HR / ISMS代表</td>
+</tr>
+<tr>
+<td>A.7.7、A.7.10</td>
+<td>清桌清屏與儲存媒體。</td>
+<td>清桌檢查、媒體銷毀紀錄</td>
+<td>Facilities / IT</td>
+</tr>
+<tr>
+<td>A.8.10-A.8.12</td>
+<td>資訊刪除、資料遮罩與DLP。</td>
+<td>刪除證明、遮罩紀錄、DLP規則</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.8.15-A.8.16</td>
+<td>日誌與監控。</td>
+<td>DLP/CASB/SIEM告警與監控紀錄</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>A.8.23-A.8.24</td>
+<td>Web Filtering與加密使用。</td>
+<td>Web控制、加密政策與技術證據</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.8.33-A.8.34</td>
+<td>測試資訊與稽核期間資訊保護。</td>
+<td>測試資料遮罩、稽核證據保護</td>
+<td>QA / 稽核主管</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本SOP對應要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27005</td>
+<td>資訊分類與處理作為風險處理控制。</td>
+<td>分類風險、DLP、處理規則</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>ISO 31000</td>
+<td>資訊處理風險之溝通、監督與改善。</td>
+<td>KPI/KRI、管理審查、CAPA</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701</td>
+<td>PII分類、標示、跨境、DPIA/DPA與資料主體權利支援。</td>
+<td>PII標示、DPIA、DPA</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001</td>
+<td>AI輸入、AI輸出、模型資料、AI事件與人類覆核標示。</td>
+<td>AI使用紀錄、AI標示</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI資料風險來源、事件、後果與控制。</td>
+<td>AI資料風險評估</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>關鍵資訊保存、備份、復原與中斷期間資訊保護。</td>
+<td>BCP/DR、備份、復原紀錄</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>資訊標示與處理紀錄支援稽核追溯。</td>
+<td>抽樣紀錄、稽核證據</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI資訊治理、責任與監督。</td>
+<td>AI標示、人類覆核、治理紀錄</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>碳資料、排放係數、查證底稿、揭露資料標示與處理。</td>
+<td>GHG標示、查證證據</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>分類制度</td>
+<td>是否定義資訊分類等級、判定準則與Owner責任？</td>
+<td>本SOP、分類政策、Owner紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>標示落實</td>
+<td>抽樣文件、資料集、郵件、雲端檔案是否正確標示？</td>
+<td>抽樣表、DMS標籤、metadata</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>傳輸控制</td>
+<td>機密以上資料傳輸是否依核准通道與加密要求？</td>
+<td>DLP、傳輸紀錄、核准紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>PII處理</td>
+<td>PII是否正確標示、限制共享並符合DPIA/DPA要求？</td>
+<td>PII標示、DPIA、DPA</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>AI資料處理</td>
+<td>AI輸入輸出是否依規則標示、限制與覆核？</td>
+<td>AI使用紀錄、AI標籤、覆核紀錄</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>紙本與媒體</td>
+<td>紙本、可攜式媒體與銷毀紀錄是否符合分類要求？</td>
+<td>列印/銷毀/媒體紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>事件與CAPA</td>
+<td>標示錯誤、誤傳、外洩或重複缺失是否通報並改善？</td>
+<td>事件紀錄、CAPA</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准版SOP文件</td>
+<td>ISMS代表 / 文件管制</td>
+<td>ISMS文件庫</td>
+<td>有效期間加至少3年</td>
+<td>需保留版本、審查與核准紀錄。</td>
+</tr>
+<tr>
+<td>分類判定與重評紀錄</td>
+<td>Data Owner / ISMS代表</td>
+<td>資料治理平台 / ISMS文件庫</td>
+<td>資訊有效期間加至少3年</td>
+<td>重大資訊需保留判定依據。</td>
+</tr>
+<tr>
+<td>標示抽樣與稽核紀錄</td>
+<td>ISMS代表 / 稽核主管</td>
+<td>稽核文件庫</td>
+<td>至少3年</td>
+<td>需保留樣本與缺口追蹤。</td>
+</tr>
+<tr>
+<td>外部傳輸與共享核准紀錄</td>
+<td>Data Owner / SOC</td>
+<td>DLP / DMS / GRC</td>
+<td>至少3年或依要求較長者</td>
+<td>機密以上需可追溯。</td>
+</tr>
+<tr>
+<td>PII、AI、GHG專項處理紀錄</td>
+<td>DPO / AI / GHG Owner</td>
+<td>專項文件庫</td>
+<td>依法規、合約或專項要求</td>
+<td>涉及敏感資料需限制存取。</td>
+</tr>
+<tr>
+<td>銷毀與刪除證據</td>
+<td>文件管制 / IT / Facilities</td>
+<td>銷毀紀錄庫 / ITSM</td>
+<td>至少3年</td>
+<td>高機密與受限制資料需保存證明。</td>
+</tr>
+<tr>
+<td>事件、違規與CAPA紀錄</td>
+<td>SOC / CAPA負責人</td>
+<td>事件管理 / CAPA系統</td>
+<td>結案後至少3年</td>
+<td>重大事件依法律或合約延長保存。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>42. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的、原則、名詞與角色責任完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>資訊分類等級、判定準則、決策流程、標示總則與格式規範完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>電子文件、紙本、郵件、即時通訊、雲端、可攜式媒體處理規則完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>資料庫、日誌、稽核證據、源碼金鑰、AI、PII、GHG資料處理完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>傳輸、外部分享、保存、刪除銷毀、重新分類與例外管理完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>DLP對應、常見情境、訓練、KPI/KRI、抽樣與CAPA完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>RACI、ISO條文、Annex A、整合標準、稽核提示與保存要求完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>43. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本SOP之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>資訊資產可接受使用政策</td>
+<td>定義資訊使用之總體限制與禁止行為。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊分類與標示政策</td>
+<td>提供本SOP之上階政策要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>存取控制政策</td>
+<td>支援依分類執行權限與最小權限。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務使用政策</td>
+<td>支援雲端保存、共享、DLP與跨境處理要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>AI工具與資料使用政策</td>
+<td>支援AI輸入、AI輸出與AI資料標示要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊資產清冊</td>
+<td>記錄資訊資產、Owner與分類。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務與AI服務清冊</td>
+<td>記錄可處理資訊之雲端與AI服務。</td>
+</tr>
+<tr>
+<td>ISMS-075系列</td>
+<td>文件化資訊管理文件</td>
+<td>支援文件版本、保存、發行、回收與銷毀。</td>
+</tr>
+<tr>
+<td>ISMS-082/083系列</td>
+<td>風險評鑑與風險處理文件</td>
+<td>承接資訊標示與處理缺口之風險處理。</td>
+</tr>
+<tr>
+<td>ISMS-091/092/093/101系列</td>
+<td>監督量測、稽核、管理審查與CAPA</td>
+<td>承接KPI/KRI、稽核、管理決策與改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>45. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISMS資訊標示與處理之正式企業級作業指導書，可支援ISO/IEC 27001:2022 Annex A.5.12「Classification of information」、A.5.13「Labelling of information」、A.5.14「Information transfer」及相關存取控制、隱私、雲端、AI、資料外洩防護、日誌、銷毀、稽核證據與持續改善要求。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

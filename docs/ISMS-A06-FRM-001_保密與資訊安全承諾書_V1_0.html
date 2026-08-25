@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A06-FRM-001 保密與資訊安全承諾書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #2f4f6f; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.checkbox { white-space: nowrap; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A06-FRM-001 保密與資訊安全承諾書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A06-FRM-001</td>
+<td>保密與資訊安全承諾書</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R10 / 10 年</td>
+<td>Highly Confidential / 高度機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.6 / 人員篩選、保密、遠端工作與違規處理</td>
+<td>人力資源Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.6 / ISMS-A06-FRM-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>人力資源Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>HR Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資訊安全負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務審查</td>
+<td></td>
+<td>法務 / 合約管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG資料治理審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>最高管理階層授權代表 / CISO / HR主管</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 承諾目的</h2>
+<p>本人因任職、受僱、受託、派駐、承攬、顧問、實習、專案合作或其他業務關係，可能接觸組織或其客戶、供應商、合作夥伴、資料主體、查證機構、監理機關及其他關注方之資訊資產與非公開資訊。為維護資訊之機密性、完整性、可用性、真實性、可追溯性、隱私保護、智慧財產權、營業秘密、合約義務、法規遵循與資訊安全管理系統有效性，本人願遵守本承諾書、組織資訊安全政策、相關作業程序、契約要求、法令規範及主管機關或客戶要求。</p>
+<p>本承諾書同時作為 ISO/IEC 27001:2022 Annex A.6.2「Terms and conditions of employment」、A.6.3「Information security awareness, education and training」、A.6.6「Confidentiality or non-disclosure agreements」、A.6.7「Remote working」、A.6.8「Information security event reporting」及相關組織、技術、實體控制措施之執行證據。</p>
+
+<h2>2. 基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">姓名</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">員工/人員編號</th>
+<td style="width:30%;"></td>
+</tr>
+<tr>
+<th>身分別</th>
+<td colspan="3">
+<span class="checkbox">□ 正職員工</span>　<span class="checkbox">□ 主管</span>　<span class="checkbox">□ 約聘/派遣</span>　<span class="checkbox">□ 實習生</span>　<span class="checkbox">□ 顧問</span>　<span class="checkbox">□ 承包商</span>　<span class="checkbox">□ 供應商派駐</span>　<span class="checkbox">□ 其他：</span>
+</td>
+</tr>
+<tr>
+<th>部門/公司</th>
+<td></td>
+<th>職稱/角色</th>
+<td></td>
+</tr>
+<tr>
+<th>直屬主管/窗口</th>
+<td></td>
+<th>到職/服務開始日</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>服務或專案名稱</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>服務期間</th>
+<td colspan="3">自 YYYY-MM-DD 起至 YYYY-MM-DD 止；若為不定期服務或任職關係，依實際僱傭、委任、承攬、專案或契約期間為準。</td>
+</tr>
+<tr>
+<th>使用帳號/識別資訊</th>
+<td colspan="3">公司帳號：　　　　系統帳號：　　　　雲端帳號：　　　　VPN/遠距存取：　　　　其他：</td>
+</tr>
+<tr>
+<th>接觸資訊類型</th>
+<td colspan="3">
+<span class="checkbox">□ 內部資訊</span>　<span class="checkbox">□ 機密資訊</span>　<span class="checkbox">□ 高機密資訊</span>　<span class="checkbox">□ PII/個人資料</span>　<span class="checkbox">□ 客戶資料</span>　<span class="checkbox">□ 原始碼</span>　<span class="checkbox">□ AI資料/模型/Prompt</span>　<span class="checkbox">□ 營業秘密</span>　<span class="checkbox">□ GHG/CO2資料</span>　<span class="checkbox">□ 稽核/查證證據</span>　<span class="checkbox">□ 其他：</span>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>保密資訊</td>
+<td>指組織或其客戶、供應商、合作夥伴、關注方所有或受託保管，未公開、具商業價值、合約限制、法規要求或資訊安全需求之資訊，包括文件、資料、原始碼、設定、設計、模型、金鑰、帳號、稽核證據、營業秘密與任何可由內容、情境或標示辨識為非公開之資訊。</td>
+</tr>
+<tr>
+<td>資訊資產</td>
+<td>具有資訊價值且需受保護之資料、文件、系統、應用程式、雲端服務、AI工具、模型、資料集、資料庫、設備、網路、憑證、紀錄、流程、知識、服務及相關資源。</td>
+</tr>
+<tr>
+<td>PII/個人資料</td>
+<td>可直接或間接識別自然人之資料，以及依適用法規、客戶合約、DPA或組織政策須保護之個人資料、敏感資料、資料主體請求與處理紀錄。</td>
+</tr>
+<tr>
+<td>AI資料</td>
+<td>用於AI系統、AI工具、模型、Prompt、RAG、向量資料庫、訓練、微調、推論、評估、監控與輸出之資料、指令、模型參數、嵌入向量、回饋紀錄及人工覆核紀錄。</td>
+</tr>
+<tr>
+<td>營業秘密</td>
+<td>非一般涉及該類資訊之人所知、因其秘密性而具有實際或潛在經濟價值，且組織已採取合理保密措施之技術、方法、製程、配方、程式、設計、客戶名單、價格、策略、財務、標案與商業資訊。</td>
+</tr>
+<tr>
+<td>未授權揭露</td>
+<td>未經合法授權、業務必要、適當核准或安全控制，而將資訊告知、傳送、複製、上傳、輸入、展示、分享、轉寄、下載、拍攝、截圖、公開、出售或使第三人可取得之行為。</td>
+</tr>
+<tr>
+<td>離職/終止後義務</td>
+<td>即使僱傭、承攬、委任、派駐、顧問、合作或其他關係終止，仍應持續遵守保密、資料返還、刪除、不得使用、不得揭露、事件通報及協助調查等義務。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 承諾範圍與義務總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>承諾領域</th>
+<th>本人承諾事項</th>
+<th>最低證據或可驗證事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>政策遵循</td>
+<td>本人已知悉並同意遵守資訊安全政策、可接受使用政策、資料分類與標示政策、存取控制政策、雲端服務使用政策、AI工具與資料使用政策、事件通報程序、遠距工作要求及其他相關規範。</td>
+<td>本承諾書、教育訓練紀錄、政策公告確認。</td>
+</tr>
+<tr>
+<td>保密義務</td>
+<td>本人不得以任何方式未授權使用、保存、複製、揭露、出售、轉讓、交換、上傳、輸入、散布或利用保密資訊。</td>
+<td>簽署紀錄、權限核准、監控紀錄。</td>
+</tr>
+<tr>
+<td>最小必要</td>
+<td>本人僅得於授權範圍、業務必要、指定目的、指定期間與必要資料量內使用資訊。</td>
+<td>職務說明、權限申請與審查紀錄。</td>
+</tr>
+<tr>
+<td>帳號與身份</td>
+<td>本人不得共用、借用、轉讓、出租或揭露帳號、密碼、Token、憑證、MFA設備或任何身份驗證資料。</td>
+<td>帳號使用紀錄、MFA啟用紀錄、PAM紀錄。</td>
+</tr>
+<tr>
+<td>事件通報</td>
+<td>本人發現或懷疑資訊安全事件、個資事件、誤寄、遺失、未授權存取、惡意程式、社交工程、AI資料外洩或政策違反時，應立即通報。</td>
+<td>事件通報紀錄、服務台紀錄、SOC紀錄。</td>
+</tr>
+<tr>
+<td>離職返還</td>
+<td>本人於離職、合約終止、專案結束、職務異動或授權目的消失時，應返還、刪除或依組織指示處理所有資訊資產與資料副本。</td>
+<td>離職/異動資訊安全檢核表、資料返還或刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 保密資訊分類與處理承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資訊類型</th>
+<th>本人應遵守之處理要求</th>
+<th>禁止或限制事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開資訊</td>
+<td>僅得使用經核准公開之版本，對外引用前確認來源、版次、授權與發布狀態。</td>
+<td>不得將草稿、未核准簡報、內部討論內容視為公開資訊。</td>
+</tr>
+<tr>
+<td>內部資訊</td>
+<td>限於內部業務用途，對外分享應確認業務必要、授權對象、核准流程與保護要求。</td>
+<td>不得傳送至個人信箱、個人雲端、私人通訊群組或未核准平台。</td>
+</tr>
+<tr>
+<td>機密資訊</td>
+<td>依必要知悉、權限控管、受控傳輸、加密、標示與紀錄保存要求處理。</td>
+<td>不得以公開連結、未加密附件、未核准AI工具或未受控媒體分享。</td>
+</tr>
+<tr>
+<td>高機密資訊</td>
+<td>僅得於明確核准、強身份驗證、最小權限、完整日誌、必要時雙人覆核之環境下處理。</td>
+<td>不得私自下載、截圖、拍照、列印、複製或攜出。</td>
+</tr>
+<tr>
+<td>PII/個人資料</td>
+<td>依合法目的、資料最小化、保留期限、資料主體權利、跨境要求與DPO/法務審查要求處理。</td>
+<td>不得任意蒐集、再利用、外傳、輸入AI工具或留存不必要副本。</td>
+</tr>
+<tr>
+<td>客戶與供應商資料</td>
+<td>依合約、NDA、DPA、SLA、資料使用限制、稽核權與事件通報要求處理。</td>
+<td>不得超出客戶授權目的使用，不得與無關專案或第三方共享。</td>
+</tr>
+<tr>
+<td>AI資料、Prompt與模型輸出</td>
+<td>使用核准AI服務，確認資料分類、輸入限制、輸出覆核、模型供應商條款與紀錄要求。</td>
+<td>不得將PII、高機密、金鑰、未公開原始碼、客戶機密或受限制資料輸入未核准AI服務。</td>
+</tr>
+<tr>
+<td>GHG/CO2、ESG與查證資料</td>
+<td>維持資料來源、版本、計算依據、查證證據、授權對象、完整性與可追溯性。</td>
+<td>不得未經核准修改盤查底稿、排放係數、查證證據或對外揭露資料。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 帳號、密碼、憑證與存取控制承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>本人承諾內容</th>
+<th>違反風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>帳號專屬使用</td>
+<td>所有帳號僅限本人依授權目的使用，不得共用、代登、借用、轉讓或允許他人以本人身份操作。</td>
+<td>造成責任歸屬不清、未授權存取、稽核證據失真。</td>
+</tr>
+<tr>
+<td>密碼與MFA</td>
+<td>密碼、MFA裝置、Token、憑證與恢復碼應妥善保管，不得貼於桌面、文件、聊天、郵件、程式碼或未加密檔案。</td>
+<td>導致帳號接管、權限濫用、資料外洩。</td>
+</tr>
+<tr>
+<td>特權存取</td>
+<td>取得管理員、系統、資料庫、雲端、PAM、DevOps或安全工具權限時，僅得依核准工作項目執行，並保留必要日誌。</td>
+<td>導致重大系統破壞、資料竄改或服務中斷。</td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>本人不得要求或保留超出職務必要之權限；發現過度權限、離職未關閉帳號或異常存取時應通報。</td>
+<td>增加橫向移動、內部威脅與法規風險。</td>
+</tr>
+<tr>
+<td>遠距存取</td>
+<td>遠距工作或外部連線應使用核准設備、VPN/ZTNA、MFA與安全網路，避免於公共環境處理高敏感資料。</td>
+<td>導致憑證竊取、旁觀窺視、未受管設備外洩。</td>
+</tr>
+<tr>
+<td>權限異動</td>
+<td>職務異動、專案結束、服務終止或權限不再必要時，應配合權限移除、資料返還與交接。</td>
+<td>造成殘留權限與不當存取。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 資訊使用、傳輸、儲存與銷毀承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>生命週期階段</th>
+<th>本人承諾內容</th>
+<th>應保存或配合之證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>蒐集/取得</td>
+<td>僅依核准目的取得必要資料，避免蒐集過多、來源不明、未授權或不可信資料。</td>
+<td>資料來源、核准紀錄、需求單。</td>
+</tr>
+<tr>
+<td>使用/處理</td>
+<td>依授權目的、資料分類、作業程序與安全控制處理，不得私自加工、轉用、重建、出售或提供第三方。</td>
+<td>作業紀錄、系統日誌、審查紀錄。</td>
+</tr>
+<tr>
+<td>傳輸/分享</td>
+<td>使用核准傳輸通道，確認收件人、權限、加密、到期、DLP、跨境與合約要求。</td>
+<td>傳輸紀錄、分享設定、DLP紀錄。</td>
+</tr>
+<tr>
+<td>儲存/暫存</td>
+<td>資料應儲存於核准平台或設備，暫存資料應加密、限制權限並於目的完成後清理。</td>
+<td>平台紀錄、清理紀錄。</td>
+</tr>
+<tr>
+<td>列印/紙本</td>
+<td>列印機密以上資訊需有必要目的，妥善保管、標示、回收與銷毀。</td>
+<td>列印紀錄、銷毀紀錄。</td>
+</tr>
+<tr>
+<td>備份/複製</td>
+<td>不得私自建立不受控副本、個人備份或外部同步；必要備份應依核准流程執行。</td>
+<td>備份紀錄、備份權限。</td>
+</tr>
+<tr>
+<td>刪除/銷毀</td>
+<td>目的消失、保存期限屆滿或離職終止時，依指示返還、刪除、抹除或銷毀資料。</td>
+<td>刪除證明、銷毀證明、交接紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 雲端服務、AI工具與第三方平台承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>使用情境</th>
+<th>本人承諾內容</th>
+<th>禁止事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端儲存與協作</td>
+<td>僅使用組織核准雲端服務；分享資料時設定指定對象、最小權限、到期日、下載限制與必要監控。</td>
+<td>不得建立公開連結、匿名分享或將資料同步至個人雲端。</td>
+</tr>
+<tr>
+<td>SaaS工具</td>
+<td>使用前確認服務已列入核准清冊或取得授權；遵守資料輸入、授權、帳號與第三方存取限制。</td>
+<td>不得以個人帳號處理組織資料，不得繞過採購、資安或法務審查。</td>
+</tr>
+<tr>
+<td>AI工具與生成式AI</td>
+<td>使用AI前確認工具核准狀態、資料分類、模型供應商條款、輸入限制、輸出覆核與引用標示。</td>
+<td>不得輸入PII、高機密、客戶機密、金鑰、密碼、原始碼、未公開財務、合約限制資料或事件證據至未核准AI工具。</td>
+</tr>
+<tr>
+<td>外部平台/社群</td>
+<td>涉及組織資訊、客戶案例、截圖、系統畫面、稽核結果或專案資訊之發布應經核准。</td>
+<td>不得於社群媒體、論壇、個人網站或公開課程洩露非公開資訊。</td>
+</tr>
+<tr>
+<td>供應商平台</td>
+<td>依合約與核准目的使用供應商平台，避免超出授權範圍或將資料提供未審查第四方。</td>
+<td>不得接受供應商要求而上傳超出必要或未核准資料。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 智慧財產權、營業秘密與文件著作承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>本人承諾內容</th>
+<th>管制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>組織智慧財產</td>
+<td>因職務、專案、委託、承攬或服務所產出之文件、教材、程式碼、設計、流程、模型、Prompt、資料集、分析報告、查證底稿及其他成果，除契約另有約定外，應依組織規定歸屬、管理與使用。</td>
+<td>保留版本、作者、審查、授權與交付紀錄。</td>
+</tr>
+<tr>
+<td>第三方著作與授權</td>
+<td>使用第三方文件、圖片、程式庫、資料集、模型、軟體、標準、教材或工具時，應遵守授權條款、引用要求與禁止用途。</td>
+<td>保存授權證明、來源、版本與使用範圍。</td>
+</tr>
+<tr>
+<td>開源軟體</td>
+<td>不得未經核准導入、修改、散布或併入產品/客戶交付物；應遵守授權、弱點、SBOM與供應鏈要求。</td>
+<td>開源審查紀錄、SBOM、授權清單。</td>
+</tr>
+<tr>
+<td>營業秘密</td>
+<td>對於策略、價格、客戶清單、標案、技術設計、源碼、演算法、AI模型、風險評估、事件調查與未公開文件應採高度保密措施。</td>
+<td>限制存取、標示、加密、日誌與違規通報。</td>
+</tr>
+<tr>
+<td>外部揭露</td>
+<td>對外簡報、投稿、授課、演講、顧問報告、社群發布或媒體回應涉及組織資訊時，應事前取得核准。</td>
+<td>對外發布核准紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 隱私、個人資料與資料主體權利承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>承諾項目</th>
+<th>本人應遵守之要求</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合法與透明</td>
+<td>本人僅得依組織授權、法規、合約、告知事項、同意或其他合法依據處理PII。</td>
+<td>若不確定合法性，應停止處理並諮詢DPO/法務。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>僅處理達成目的所需最少欄位、最少筆數、最短期間與最小存取範圍。</td>
+<td>發現過量資料應通報Data Owner並依指示清理。</td>
+</tr>
+<tr>
+<td>敏感資料</td>
+<td>處理敏感PII、大量PII、跨境PII或高風險處理活動時，應遵守DPIA、DPA、加密與核准要求。</td>
+<td>發生誤寄、遺失、外洩或未授權存取時立即通報。</td>
+</tr>
+<tr>
+<td>資料主體請求</td>
+<td>接獲查詢、更正、刪除、限制、攜出、撤回同意或申訴時，不得私自回覆，應轉交指定窗口。</td>
+<td>保留收到時間、內容與轉交通知紀錄。</td>
+</tr>
+<tr>
+<td>委外處理</td>
+<td>不得將PII提供未授權供應商、AI工具、外部平台或個人裝置處理。</td>
+<td>若供應商要求或發生例外，應先取得DPO/法務審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 遠距工作、行動裝置與實體安全承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境</th>
+<th>本人承諾內容</th>
+<th>禁止或注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>遠距工作</td>
+<td>使用核准設備、受管帳號、VPN/ZTNA、MFA及安全網路；工作環境應避免旁觀窺視、錄音錄影或未授權接觸。</td>
+<td>不得於公共場所處理高機密資訊或大量PII，必要時使用隱私螢幕與耳機。</td>
+</tr>
+<tr>
+<td>行動裝置</td>
+<td>行動裝置應啟用螢幕鎖定、加密、MDM或安全設定；遺失或遭竊應立即通報。</td>
+<td>不得越獄/root、安裝未核准App或保存未加密機密資料。</td>
+</tr>
+<tr>
+<td>可攜式媒體</td>
+<td>使用USB、外接硬碟或記憶卡需經核准並加密，交接、保存、回收及銷毀需留存紀錄。</td>
+<td>不得使用個人或來源不明媒體處理組織資訊。</td>
+</tr>
+<tr>
+<td>紙本資料</td>
+<td>紙本文件應依分類標示、妥善保管、避免遺留於印表機、會議室、交通工具或公共空間。</td>
+<td>不得任意丟棄含內部以上資訊之紙本，應使用受控銷毀。</td>
+</tr>
+<tr>
+<td>會議與錄影</td>
+<td>會議涉及機密、PII、客戶資料、AI或事件資訊時，應確認參與者、錄影許可與資料分享範圍。</td>
+<td>不得未經同意錄音、錄影、截圖或轉發會議內容。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 資訊安全事件與違規通報承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需通報情境</th>
+<th>本人應立即採取之行動</th>
+<th>通報對象/證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>帳號異常</td>
+<td>發現帳號遭盜用、MFA異常、密碼外洩、異常登入或可疑通知時，立即停止相關作業並通報。</td>
+<td>Service Desk、SOC、主管；保存截圖與時間。</td>
+</tr>
+<tr>
+<td>資料誤傳/外洩</td>
+<td>誤寄、誤分享、公開連結、錯誤收件人、遺失設備或資料被未授權存取時，立即通報並不得自行掩飾。</td>
+<td>事件通報紀錄、傳輸紀錄、分享連結資訊。</td>
+</tr>
+<tr>
+<td>惡意程式/釣魚</td>
+<td>收到可疑郵件、附件、連結、QR Code、USB或社交工程訊息時，不點擊、不轉發，立即回報。</td>
+<td>可疑郵件回報、SOC分析紀錄。</td>
+</tr>
+<tr>
+<td>政策違反</td>
+<td>發現同仁、供應商或本人可能違反政策、超權使用、未核准AI或雲端服務時，應依通報管道回報。</td>
+<td>主管、CISO、HR、合規/吹哨通道。</td>
+</tr>
+<tr>
+<td>AI與模型事件</td>
+<td>AI工具疑似保留敏感輸入、輸出外洩、產生未授權揭露、錯誤決策或偏差影響時，應立即通報。</td>
+<td>AI治理負責人、CISO、DPO；保存Prompt與輸出紀錄。</td>
+</tr>
+<tr>
+<td>實體遺失</td>
+<td>筆電、手機、識別證、門禁卡、紙本、可攜式媒體或備份媒體遺失、遭竊或疑似遭接觸時，立即通報。</td>
+<td>HR、IT、實體安全、SOC；遺失報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 教育訓練與認知承諾</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>訓練/認知項目</th>
+<th>本人承諾</th>
+<th>確認狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊安全政策與可接受使用</td>
+<td>本人已閱讀或將於指定期限內完成資訊安全政策、可接受使用、資料分類與事件通報訓練。</td>
+<td>□ 已完成　□ 待完成　期限：YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>角色專屬訓練</td>
+<td>若本人具有特權帳號、開發、雲端、AI、PII、GHG、稽核、供應商管理或事件處理職責，將完成相應專項訓練。</td>
+<td>□ 已完成　□ 待完成　□ 不適用</td>
+</tr>
+<tr>
+<td>社交工程與釣魚防護</td>
+<td>本人承諾遵守郵件、連結、附件、QR Code、電話、簡訊與社群訊息之安全識別與回報要求。</td>
+<td>□ 已知悉　□ 需補訓</td>
+</tr>
+<tr>
+<td>隱私與PII保護</td>
+<td>若處理PII，本人承諾完成隱私、資料最小化、跨境、資料主體權利與事件通報訓練。</td>
+<td>□ 已完成　□ 待完成　□ 不適用</td>
+</tr>
+<tr>
+<td>AI工具安全使用</td>
+<td>若使用AI工具，本人承諾完成AI資料輸入限制、輸出覆核、供應商條款與AI事件通報訓練。</td>
+<td>□ 已完成　□ 待完成　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 離職、異動、契約終止與後續義務</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>本人承諾內容</th>
+<th>組織可要求之配合事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>職務異動</td>
+<td>配合重新評估權限、交接資料、停止使用不再必要之資訊與系統。</td>
+<td>權限調整、交接清冊、資料返還。</td>
+</tr>
+<tr>
+<td>離職/合約終止</td>
+<td>返還所有設備、門禁卡、文件、媒體、帳號、憑證、資料副本及工作成果；不得保留或轉移資料至個人環境。</td>
+<td>設備返還、帳號關閉、資料刪除證明。</td>
+</tr>
+<tr>
+<td>專案結束</td>
+<td>依專案Owner與Data Owner要求封存、交付、刪除或移除專案資料與權限。</td>
+<td>專案結案檢核、共享權限移除。</td>
+</tr>
+<tr>
+<td>終止後保密</td>
+<td>即使任職、服務、委託或合約關係終止，仍不得使用、揭露或利用任職或服務期間知悉之保密資訊。</td>
+<td>必要時配合調查、稽核、法律程序或證據保全。</td>
+</tr>
+<tr>
+<td>後續通知</td>
+<td>終止後若發現曾接觸資料外洩、設備遺失、帳號異常或第三方要求揭露資料，仍應通知組織。</td>
+<td>事件通報與調查協助。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 違反承諾之處理與法律責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>違反類型</th>
+<th>可能處置</th>
+<th>補充說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>輕微違規</td>
+<td>提醒、補訓、主管輔導、限期改善、紀錄留存。</td>
+<td>例如未依分類標示、未即時完成訓練、一般性作業疏失且未造成重大影響。</td>
+</tr>
+<tr>
+<td>重大違規</td>
+<td>停權、調查、紀律處分、契約處理、供應商處置、損害賠償或法律行動。</td>
+<td>例如未授權揭露、保留資料副本、共用帳號、繞過控制、故意規避政策。</td>
+</tr>
+<tr>
+<td>資安或個資事件</td>
+<td>事件應變、證據保存、根因分析、外部通報、監理或客戶通知、矯正措施。</td>
+<td>可能涉及個資法、營業秘密、著作權、合約、監管或民刑事責任。</td>
+</tr>
+<tr>
+<td>惡意或故意行為</td>
+<td>立即停權、法務介入、通報主管機關或司法機關、求償及追究責任。</td>
+<td>包含竊取資料、破壞系統、勒索、洩密、出售資訊、未授權刪除或竄改紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 承諾確認事項</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="width:8%;">序號</th>
+<th>確認事項</th>
+<th style="width:18%;">確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>本人確認已閱讀、理解並同意遵守本承諾書及組織資訊安全相關政策、程序、作業指導書與合約要求。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>本人確認了解保密資訊、PII、客戶資料、AI資料、GHG/CO2資料、原始碼、金鑰、營業秘密及稽核證據之保護要求。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>本人確認不得使用個人信箱、個人雲端、未核准AI工具、未核准SaaS或私人裝置處理組織內部以上資訊，除非已取得明確核准並符合控制要求。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>本人確認不得共用帳號、密碼、憑證、Token、MFA裝置、門禁卡或其他身份識別工具。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>本人確認發現或懷疑任何資訊安全事件、個資事件、誤傳、外洩、遺失、惡意程式、釣魚、未授權存取或政策違反時，將立即通報。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>6</td>
+<td>本人確認離職、合約終止、職務異動或授權目的消失後，仍負有保密義務，並會配合返還、刪除、銷毀或交接資訊資產。</td>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>本人確認若違反本承諾書，組織得依政策、契約、法令與損害情形採取必要處置。</td>
+<td>□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 例外、補充限制與特殊授權</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>項目</th>
+<th>內容</th>
+<th>核准者</th>
+<th>期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>特殊接觸資料</td>
+<td>□ 高機密　□ 大量PII　□ 客戶受限資料　□ 原始碼　□ 金鑰/Secrets　□ AI模型/資料集　□ GHG查證資料　□ 其他：</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>特殊工作地點/方式</td>
+<td>□ 遠距工作　□ 跨境存取　□ 客戶現場　□ 供應商場所　□ 公共場域限制例外　□ 其他：</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>特殊工具/平台</td>
+<td>□ 雲端服務　□ AI工具　□ 外部協作平台　□ 開發平台　□ 測試環境　□ 其他：</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>補充限制</td>
+<td colspan="3">例如不得下載、不得列印、不得外部分享、需雙人覆核、需加密、需每日清理、需保留日誌、需DPO或CISO覆核等：</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 簽署欄位</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">承諾人姓名</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">身分證明/員工編號</th>
+<td style="width:30%;"></td>
+</tr>
+<tr>
+<th>部門/公司</th>
+<td></td>
+<th>職稱/角色</th>
+<td></td>
+</tr>
+<tr>
+<th>電子郵件</th>
+<td></td>
+<th>聯絡電話</th>
+<td></td>
+</tr>
+<tr>
+<th>承諾人簽名</th>
+<td style="height:60px;"></td>
+<th>簽署日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>法定代理人簽名<br><span class="small">未成年人或依法需代理者適用</span>
+</th>
+<td style="height:60px;"></td>
+<th>簽署日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>直屬主管/窗口確認</th>
+<td style="height:60px;"></td>
+<th>日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>HR確認</th>
+<td style="height:60px;"></td>
+<th>日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>資訊安全確認</th>
+<td style="height:60px;"></td>
+<th>日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 紀錄保存、稽核與管理審查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存期限</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>本承諾書正本或電子簽署紀錄</td>
+<td>HR / 文件管制中心</td>
+<td>任職或服務期間及終止後依法規、合約與紀錄保存期限清冊要求保存。</td>
+<td>任用、委外、稽核、法務與事件調查證據。</td>
+</tr>
+<tr>
+<td>教育訓練與認知確認紀錄</td>
+<td>HR / ISMS管理代表</td>
+<td>依ISMS/PIMS/AI/GHG紀錄保存期限清冊。</td>
+<td>能力、認知、稽核與管理審查輸入。</td>
+</tr>
+<tr>
+<td>特殊授權與例外核准紀錄</td>
+<td>Data Owner / CISO / DPO / 主管</td>
+<td>依風險、合約、事件與稽核要求保存。</td>
+<td>證明高風險資料存取已經審查與核准。</td>
+</tr>
+<tr>
+<td>離職、異動、資料返還與刪除紀錄</td>
+<td>HR / IT / 主管 / Data Owner</td>
+<td>依人員控制措施與紀錄保存要求。</td>
+<td>證明終止後權限與資料已受控處理。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

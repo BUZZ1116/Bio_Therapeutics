@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-SOP-001 專案資安管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-SOP-001 專案資安管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-SOP-001</td>
+<td>專案資安管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-SOP-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>PMO / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資安架構負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT架構審查</td>
+<td></td>
+<td>IT架構負責人 / Enterprise Architect</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>開發與DevSecOps審查</td>
+<td></td>
+<td>開發主管 / DevSecOps負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS審查</td>
+<td></td>
+<td>BCMS / DRP負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商審查</td>
+<td></td>
+<td>供應商管理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / PMO主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書用於規範專案生命週期中資訊安全、隱私、AI治理、供應鏈、雲端、營運持續與合規控制之導入、審查、驗證與保存方式，確保專案自立案至結案皆能依風險導向原則設計、執行與驗證必要控制。</p>
+<p>本作業指導書之目標在於將資訊安全要求前移至專案初期，避免於上線前才發現重大控制缺口，並確保專案輸出可被稽核、可追溯、可移交、可維運、可持續改善。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>所有專案均應依專案風險分級決定資安審查深度，不得以時程、成本或便利性規避必要資安控制。</li>
+<li>涉及機密資訊、PII、客戶資料、AI系統、雲端服務、供應商、關鍵營運、跨境傳輸或GHG/CO2資料之專案，應完成專項審查。</li>
+<li>專案各階段應保留可稽核證據，包括需求、風險、設計、開發、測試、弱點修補、變更、驗收、上線與移交紀錄。</li>
+<li>高風險缺口或未完成控制不得逕行上線，除非取得正式例外、補償控制、剩餘風險接受與管理階層核准。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>專案</td>
+<td>為達成特定業務、技術、產品、流程、合規、資安或治理目標而建立之一次性或階段性工作。</td>
+</tr>
+<tr>
+<td>專案資安管理</td>
+<td>於專案生命週期中規劃、執行、驗證及監督資訊安全、隱私、AI、供應鏈與營運持續控制之活動。</td>
+</tr>
+<tr>
+<td>Secure SDLC</td>
+<td>將安全需求、威脅建模、安全設計、安全開發、安全測試與安全維運整合於軟體生命週期之方法。</td>
+</tr>
+<tr>
+<td>安全閘門</td>
+<td>專案在進入下一階段前必須完成之資安條件、審查或核准點。</td>
+</tr>
+<tr>
+<td>高風險專案</td>
+<td>涉及高機密資料、PII、大量資料、雲端、AI、關鍵流程、外部連線、第三方或重大合規要求之專案。</td>
+</tr>
+<tr>
+<td>專案Owner</td>
+<td>對專案成果、風險、資源、決策與交付品質負最終責任之角色。</td>
+</tr>
+<tr>
+<td>System Owner</td>
+<td>對系統、平台、服務或技術資產之運作、控制、風險與維護負責之角色。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>對資料分類、授權、使用限制、保護要求與保存刪除負責之角色。</td>
+</tr>
+<tr>
+<td>Control Owner</td>
+<td>對特定控制措施設計、執行、證據與有效性負責之角色。</td>
+</tr>
+<tr>
+<td>Go-Live</td>
+<td>專案成果正式上線、啟用、對內外部使用者開放或移交營運之活動。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最高管理階層</td>
+<td>核准重大專案資安風險、剩餘風險接受、資源需求與重大例外。</td>
+</tr>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>制定專案資安管理要求，核准高風險專案資安結論與上線例外。</td>
+</tr>
+<tr>
+<td>PMO / 專案管理辦公室</td>
+<td>確保專案管理方法納入資安閘門、審查、交付物與結案要求。</td>
+</tr>
+<tr>
+<td>專案經理 / PM</td>
+<td>規劃專案資安活動，協調審查、追蹤缺口、保存證據並確保交付。</td>
+</tr>
+<tr>
+<td>產品Owner / 業務Owner</td>
+<td>提出業務需求、使用情境、風險承擔與驗收標準。</td>
+</tr>
+<tr>
+<td>System Owner</td>
+<td>負責系統安全設計、維運、權限、日誌、備份、變更與移交。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>負責資料分類、資料使用目的、最小化、保留、刪除與授權要求。</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>確保專案符合ISMS程序、風險管理、文件化資訊與稽核追溯要求。</td>
+</tr>
+<tr>
+<td>資安架構 / SOC / DevSecOps</td>
+<td>執行安全架構審查、威脅建模、弱點掃描、滲透測試、日誌監控與安全驗證。</td>
+</tr>
+<tr>
+<td>DPO / PIMS負責人</td>
+<td>審查PII、DPIA、DPA、資料主體權利、跨境傳輸與隱私事件要求。</td>
+</tr>
+<tr>
+<td>AI治理負責人</td>
+<td>審查AI用途、資料輸入、模型、輸出、人類監督、AI供應商與AI風險。</td>
+</tr>
+<tr>
+<td>供應商管理 / 採購</td>
+<td>審查供應商、第四方、合約、安全條款、SLA、DPA與退場策略。</td>
+</tr>
+<tr>
+<td>BCMS / DRP負責人</td>
+<td>審查專案對關鍵流程、RTO/RPO、備援、復原與演練之影響。</td>
+</tr>
+<tr>
+<td>專案團隊成員</td>
+<td>依本作業指導書執行任務、保存證據、通報風險與遵守安全要求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 專案資安分級準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分級</th>
+<th>判定條件</th>
+<th>最低資安要求</th>
+<th>核准層級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Level 1 低風險</td>
+<td>不處理機密/PII，不涉及外部連線、雲端、AI、供應商或關鍵流程。</td>
+<td>基本資安需求檢核、Owner確認、結案保存。</td>
+<td>專案Owner / ISMS代表抽查</td>
+</tr>
+<tr>
+<td>Level 2 中風險</td>
+<td>涉及內部資料、一般系統變更、少量外部連線或非關鍵SaaS。</td>
+<td>資安需求檢核、基本風險評估、權限與日誌設計、上線檢核。</td>
+<td>System Owner / ISMS代表</td>
+</tr>
+<tr>
+<td>Level 3 高風險</td>
+<td>涉及機密資料、PII、客戶資料、雲端、供應商、API、行動應用或重要流程。</td>
+<td>完整風險評估、安全設計審查、弱點掃描、DPIA/DPA（如適用）、Go-Live核准。</td>
+<td>CISO / 專項Owner</td>
+</tr>
+<tr>
+<td>Level 4 極高風險</td>
+<td>涉及高機密、大量PII、AI高影響用途、關鍵營運、跨境、重大合規、核心平台或高可用需求。</td>
+<td>威脅建模、架構審查、滲透測試、BCP/DR審查、剩餘風險接受、管理階層核准。</td>
+<td>CISO / 最高管理階層授權代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 專案生命週期安全閘門</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>安全閘門</th>
+<th>通過條件</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>立案</td>
+<td>G0 專案資安分級</td>
+<td>完成資安分級、範圍、Owner與初步風險識別。</td>
+<td>專案立案表、資安分級表。</td>
+</tr>
+<tr>
+<td>需求</td>
+<td>G1 資安與隱私需求確認</td>
+<td>需求文件納入資安、隱私、AI、供應商、BCMS與合規要求。</td>
+<td>需求規格、DPIA初判、AI用途評估。</td>
+</tr>
+<tr>
+<td>設計</td>
+<td>G2 安全架構審查</td>
+<td>完成安全架構、資料流、威脅建模、控制設計與審查。</td>
+<td>架構圖、資料流圖、威脅模型、審查紀錄。</td>
+</tr>
+<tr>
+<td>建置</td>
+<td>G3 安全開發與組態檢查</td>
+<td>完成安全開發、程式碼審查、組態基準與弱點修補。</td>
+<td>Code Review、SAST/DAST/SCA、組態檢查。</td>
+</tr>
+<tr>
+<td>測試</td>
+<td>G4 安全測試與有效性驗證</td>
+<td>完成安全測試、滲透測試（如適用）、缺口修補與重測。</td>
+<td>測試報告、修補紀錄、重測證據。</td>
+</tr>
+<tr>
+<td>上線</td>
+<td>G5 Go-Live資安核准</td>
+<td>完成變更核准、剩餘風險接受、備援與回復計畫。</td>
+<td>CAB紀錄、Go-Live Checklist、風險接受。</td>
+</tr>
+<tr>
+<td>移交</td>
+<td>G6 營運移交與監控啟用</td>
+<td>完成維運手冊、監控、日誌、備份、權限與SLA移交。</td>
+<td>營運移交紀錄、監控證據、備份測試。</td>
+</tr>
+<tr>
+<td>結案</td>
+<td>G7 結案與證據封存</td>
+<td>完成結案、經驗回饋、CAPA轉銜與文件封存。</td>
+<td>結案報告、Lessons Learned、證據清單。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 專案立案階段作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>作業說明</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>建立專案基本資料</td>
+<td>定義專案名稱、範圍、目的、Owner、時程、預算與主要交付物。</td>
+<td>PM / 專案Owner</td>
+<td>專案立案文件。</td>
+</tr>
+<tr>
+<td>完成資安初判</td>
+<td>依資料類型、外部連線、供應商、AI、雲端、PII與關鍵性完成資安分級。</td>
+<td>PM / ISMS代表</td>
+<td>專案資安分級紀錄。</td>
+</tr>
+<tr>
+<td>識別利害關係人</td>
+<td>識別業務、IT、資安、法務、DPO、AI、供應商、BCMS與稽核角色。</td>
+<td>PM</td>
+<td>利害關係人清單。</td>
+</tr>
+<tr>
+<td>初步風險識別</td>
+<td>識別主要威脅、弱點、合規、供應鏈、隱私、AI與營運持續風險。</td>
+<td>PM / 風險Owner</td>
+<td>初步風險清單。</td>
+</tr>
+<tr>
+<td>建立資安活動計畫</td>
+<td>規劃各階段資安審查、測試、核准與證據保存。</td>
+<td>PM / CISO代表</td>
+<td>專案資安活動計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 專案範圍與邊界確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>範圍項目</th>
+<th>確認要求</th>
+<th>常見證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>系統邊界</td>
+<td>確認系統、模組、介面、API、網路區域、使用者群組與管理介面。</td>
+<td>系統範圍圖、架構圖。</td>
+</tr>
+<tr>
+<td>資料邊界</td>
+<td>確認資料來源、資料流向、資料分類、跨境傳輸、保存與刪除要求。</td>
+<td>資料流圖、資料字典。</td>
+</tr>
+<tr>
+<td>供應商邊界</td>
+<td>確認直接供應商、第四方、子處理者、雲端與外包範圍。</td>
+<td>供應商清冊、合約資料。</td>
+</tr>
+<tr>
+<td>營運邊界</td>
+<td>確認營運時段、SLA、RTO/RPO、監控、備份、值班與事件應變。</td>
+<td>SLA、BIA、維運計畫。</td>
+</tr>
+<tr>
+<td>法規合約邊界</td>
+<td>確認適用法規、客戶合約、DPA、NDA、稽核權與產業要求。</td>
+<td>法規適用性分析、合約審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 專案資安需求管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>需求類別</th>
+<th>最低要求</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份與存取管理</td>
+<td>SSO、MFA、RBAC/ABAC、特權帳號管理、權限審查、服務帳號Owner。</td>
+<td>IAM設計、權限矩陣。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>資料分類、加密、DLP、資料遮罩、資料最小化、保留與安全刪除。</td>
+<td>資料保護需求表。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>登入、管理操作、資料存取、API、錯誤、告警與資安事件日誌。</td>
+<td>日誌需求與SIEM整合設計。</td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td>SAST、DAST、SCA、IaC掃描、容器掃描、弱點修補與重測。</td>
+<td>弱點管理計畫。</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>備份範圍、頻率、保留、加密、復原測試與RTO/RPO。</td>
+<td>備份復原設計。</td>
+</tr>
+<tr>
+<td>事件應變</td>
+<td>事件偵測、通報、分級、證據保全、責任分工與演練。</td>
+<td>事件應變介面與通報流程。</td>
+</tr>
+<tr>
+<td>供應商控制</td>
+<td>安全條款、SLA、SOC/ISO、DPA、第四方、變更通知與退場。</td>
+<td>供應商安全審查。</td>
+</tr>
+<tr>
+<td>AI治理</td>
+<td>AI用途、輸入限制、模型風險、輸出覆核、人類監督與AI事件通報。</td>
+<td>AI風險評估與治理要求。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 隱私與PII需求管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PII識別</td>
+<td>確認專案是否收集、產生、儲存、分析、傳輸或刪除PII。</td>
+<td>Data Owner / DPO</td>
+<td>PII盤點紀錄。</td>
+</tr>
+<tr>
+<td>合法性與目的限制</td>
+<td>確認PII處理目的、合法依據、資料主體告知與同意需求。</td>
+<td>DPO / 法務</td>
+<td>隱私需求紀錄。</td>
+</tr>
+<tr>
+<td>DPIA初判</td>
+<td>涉及大量、敏感、高風險、自動化決策或跨境時，應執行DPIA。</td>
+<td>DPO / PM</td>
+<td>DPIA或DPIA不適用理由。</td>
+</tr>
+<tr>
+<td>DPA與子處理者</td>
+<td>涉及供應商或雲端處理PII時，需完成DPA與子處理者審查。</td>
+<td>法務 / DPO / 供應商管理</td>
+<td>DPA、子處理者清單。</td>
+</tr>
+<tr>
+<td>資料主體權利支援</td>
+<td>系統應支援查詢、更正、刪除、限制處理、攜出與申訴流程（依適用法規）。</td>
+<td>System Owner / DPO</td>
+<td>功能需求與測試紀錄。</td>
+</tr>
+<tr>
+<td>隱私事件通報</td>
+<td>設計PII事件偵測、通報、證據保全與主管機關/資料主體通報支援。</td>
+<td>SOC / DPO</td>
+<td>事件應變設計。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. AI治理與AI風險需求管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI用途分類</td>
+<td>確認AI是否用於內容生成、推薦、分類、預測、自動化決策、程式碼生成或客戶互動。</td>
+<td>AI Owner / PM</td>
+<td>AI用途分類表。</td>
+</tr>
+<tr>
+<td>AI高影響判定</td>
+<td>判定AI是否影響個人權益、客戶權益、合規決策、資安防護、營運關鍵流程或品牌聲譽。</td>
+<td>AI治理負責人</td>
+<td>AI風險等級判定。</td>
+</tr>
+<tr>
+<td>資料輸入限制</td>
+<td>定義禁止輸入PII、客戶機密、源碼、金鑰、高機密資料或受合約限制資料之規則。</td>
+<td>Data Owner / AI治理</td>
+<td>AI資料使用規範。</td>
+</tr>
+<tr>
+<td>模型與供應商審查</td>
+<td>確認模型來源、資料保留、訓練條款、IP條款、模型變更通知與事件通報。</td>
+<td>AI治理 / 法務</td>
+<td>AI供應商審查紀錄。</td>
+</tr>
+<tr>
+<td>人類監督</td>
+<td>依AI風險等級定義人工覆核、雙人覆核、抽樣監督與拒絕自動化重大決策機制。</td>
+<td>AI Owner / 業務Owner</td>
+<td>人類監督設計。</td>
+</tr>
+<tr>
+<td>AI輸出驗證</td>
+<td>定義AI輸出事實查核、偏差檢查、幻覺防護、安全過濾與禁止用途。</td>
+<td>AI Owner / QA</td>
+<td>AI輸出驗證紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 供應商與第四方專案管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>作業項目</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商識別</td>
+<td>確認專案涉及之直接供應商、外包人員、顧問、雲端、AI與資料處理者。</td>
+<td>PM / 採購</td>
+<td>供應商清單。</td>
+</tr>
+<tr>
+<td>供應商資安審查</td>
+<td>依服務重要性、資料敏感性、PII、AI、雲端與BCMS影響完成審查。</td>
+<td>供應商管理 / CISO</td>
+<td>供應商審查表。</td>
+</tr>
+<tr>
+<td>第四方揭露</td>
+<td>要求供應商揭露子處理者、第四方、雲端區域、資料中心與關鍵依賴。</td>
+<td>供應商管理</td>
+<td>第四方登錄表。</td>
+</tr>
+<tr>
+<td>合約條款</td>
+<td>合約應含保密、資料保護、資安控制、事件通報、稽核權、SLA、退場與銷毀。</td>
+<td>法務 / 採購</td>
+<td>合約與安全附件。</td>
+</tr>
+<tr>
+<td>外包開發控制</td>
+<td>外包開發需遵循Secure SDLC、程式碼交付、弱點修補、SBOM與智慧財產要求。</td>
+<td>DevSecOps / 法務</td>
+<td>外包開發安全條款。</td>
+</tr>
+<tr>
+<td>供應商移交與退場</td>
+<td>服務終止需回收帳號、返還/刪除資料、移交文件與取得銷毀證明。</td>
+<td>供應商管理 / IT</td>
+<td>退場紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 安全架構設計作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設計領域</th>
+<th>設計要求</th>
+<th>驗證重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>網路與區域隔離</td>
+<td>依資料敏感性與服務暴露面設計網段、子網、Security Group、防火牆與零信任策略。</td>
+<td>網路圖、規則審查、最小開放原則。</td>
+</tr>
+<tr>
+<td>身分與權限</td>
+<td>設計SSO、MFA、RBAC/ABAC、特權管理、服務帳號與權限審查。</td>
+<td>IAM矩陣、權限測試。</td>
+</tr>
+<tr>
+<td>資料安全</td>
+<td>設計加密、遮罩、Tokenization、DLP、備份、資料保留與刪除。</td>
+<td>資料流圖、加密與DLP證據。</td>
+</tr>
+<tr>
+<td>應用安全</td>
+<td>設計輸入驗證、輸出編碼、Session、API安全、錯誤處理與安全標頭。</td>
+<td>安全設計審查。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>設計日誌欄位、保存、告警、SIEM整合、監控責任與事件分級。</td>
+<td>日誌需求與監控規則。</td>
+</tr>
+<tr>
+<td>可用性與復原</td>
+<td>設計HA、備援、備份、復原、容量、SLA、RTO/RPO與演練。</td>
+<td>BCP/DR設計與測試。</td>
+</tr>
+<tr>
+<td>雲端安全</td>
+<td>設計共享責任、CSPM、KMS、IAM、組態基準、雲端日誌與雲端監控。</td>
+<td>雲端安全架構審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 威脅建模作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>步驟</th>
+<th>作業內容</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>定義範圍</td>
+<td>確認系統邊界、資料流、信任邊界、外部依賴與攻擊面。</td>
+<td>DFD、攻擊面清單。</td>
+</tr>
+<tr>
+<td>識別威脅</td>
+<td>使用STRIDE、MITRE ATT&amp;CK、OWASP、雲端威脅或AI威脅模型識別威脅。</td>
+<td>威脅清單。</td>
+</tr>
+<tr>
+<td>分析弱點</td>
+<td>識別設計、組態、流程、供應商、AI、PII、BCMS與操作弱點。</td>
+<td>弱點清單。</td>
+</tr>
+<tr>
+<td>評估風險</td>
+<td>依可能性與衝擊評估風險等級，確認不可接受風險。</td>
+<td>風險評估紀錄。</td>
+</tr>
+<tr>
+<td>定義控制</td>
+<td>設計預防、偵測、矯正、補償控制與驗證方法。</td>
+<td>控制設計與追蹤表。</td>
+</tr>
+<tr>
+<td>追蹤關閉</td>
+<td>將高風險威脅轉入風險處理、缺口追蹤或CAPA。</td>
+<td>風險處理計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 安全開發作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>開發控制</th>
+<th>作業要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>安全編碼標準</td>
+<td>依語言、平台與OWASP要求建立安全編碼規範。</td>
+<td>安全編碼標準、訓練紀錄。</td>
+</tr>
+<tr>
+<td>程式碼審查</td>
+<td>重要功能、認證、授權、資料處理、加密與API需執行Code Review。</td>
+<td>Pull Request、Review紀錄。</td>
+</tr>
+<tr>
+<td>Secrets管理</td>
+<td>禁止將密碼、金鑰、Token、憑證硬編碼或提交至Repo。</td>
+<td>Secret Scanning報告。</td>
+</tr>
+<tr>
+<td>相依元件管理</td>
+<td>使用SCA檢查開源元件、授權、弱點與維護狀態。</td>
+<td>SCA報告、SBOM。</td>
+</tr>
+<tr>
+<td>安全建置管線</td>
+<td>CI/CD需具權限控管、簽章、掃描、審批、部署日誌與回復能力。</td>
+<td>Pipeline紀錄。</td>
+</tr>
+<tr>
+<td>測試資料保護</td>
+<td>測試環境不得使用未遮罩之正式PII或高機密資料。</td>
+<td>測試資料核准與遮罩紀錄。</td>
+</tr>
+<tr>
+<td>容器與IaC安全</td>
+<td>容器映像、IaC、Kubernetes、雲端組態需掃描與基準檢查。</td>
+<td>容器/IaC掃描報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 安全測試作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>測試類型</th>
+<th>適用時機</th>
+<th>最低要求</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SAST</td>
+<td>開發中與Merge前。</td>
+<td>高風險弱點不得進入正式分支，例外需核准。</td>
+<td>SAST報告、修補紀錄。</td>
+</tr>
+<tr>
+<td>DAST</td>
+<td>測試環境或預上線環境。</td>
+<td>OWASP Top 10風險需測試並處理。</td>
+<td>DAST報告。</td>
+</tr>
+<tr>
+<td>SCA</td>
+<td>每次版本釋出或重大依賴變更。</td>
+<td>高風險元件需修補、替換或接受。</td>
+<td>SCA報告、SBOM。</td>
+</tr>
+<tr>
+<td>IaC/容器掃描</td>
+<td>雲端或容器化部署前。</td>
+<td>高風險組態不得上線。</td>
+<td>IaC/容器報告。</td>
+</tr>
+<tr>
+<td>滲透測試</td>
+<td>高/極高風險專案、外部暴露系統、客戶要求或重大版本。</td>
+<td>由合格人員執行，重大弱點須修補重測。</td>
+<td>滲透測試報告。</td>
+</tr>
+<tr>
+<td>隱私測試</td>
+<td>涉及PII處理、資料主體權利或DPIA要求時。</td>
+<td>驗證資料最小化、遮罩、刪除、查詢與通報支援。</td>
+<td>隱私測試紀錄。</td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>涉及AI輸入/輸出、模型或自動化決策時。</td>
+<td>測試提示注入、資料外洩、偏差、幻覺、越權與不當輸出。</td>
+<td>AI測試報告。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 弱點管理與修補要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>弱點等級</th>
+<th>處理期限</th>
+<th>上線限制</th>
+<th>例外要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Critical / 極高</td>
+<td>立即處理，原則上不得超過7日。</td>
+<td>未修補不得上線，除非CISO核准。</td>
+<td>需風險接受、補償控制與重評日期。</td>
+</tr>
+<tr>
+<td>High / 高</td>
+<td>原則上14日內完成修補或補償控制。</td>
+<td>高風險外部暴露弱點不得上線。</td>
+<td>需CISO或授權代表核准。</td>
+</tr>
+<tr>
+<td>Medium / 中</td>
+<td>原則上30至60日內完成處理。</td>
+<td>可依風險與暴露面決定是否延後。</td>
+<td>需Owner核准與追蹤。</td>
+</tr>
+<tr>
+<td>Low / 低</td>
+<td>依版本計畫或年度改善處理。</td>
+<td>通常不阻擋上線。</td>
+<td>需保留追蹤紀錄。</td>
+</tr>
+<tr>
+<td>False Positive</td>
+<td>需由具資格人員判定。</td>
+<td>不阻擋上線。</td>
+<td>需保存判定理由與證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 專案變更管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>變更類型</th>
+<th>資安要求</th>
+<th>核准角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求變更</td>
+<td>若影響資料類型、外部連線、供應商、AI、PII或範圍，需重新資安分級。</td>
+<td>PM / ISMS代表</td>
+</tr>
+<tr>
+<td>架構變更</td>
+<td>需更新架構圖、資料流、威脅模型與安全設計審查。</td>
+<td>資安架構 / IT架構</td>
+</tr>
+<tr>
+<td>雲端組態變更</td>
+<td>需執行CSPM/IaC檢查、權限審查與日誌確認。</td>
+<td>Cloud Owner / SOC</td>
+</tr>
+<tr>
+<td>AI模型或用途變更</td>
+<td>需重新AI風險評估、輸入限制、輸出驗證與人類監督設計。</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>供應商/第四方變更</td>
+<td>需重新供應商、第四方、DPA、SLA與BCMS審查。</td>
+<td>供應商管理 / 法務</td>
+</tr>
+<tr>
+<td>上線範圍變更</td>
+<td>需更新Go-Live Checklist、回復計畫、通報與核准紀錄。</td>
+<td>CAB / CISO</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. Go-Live上線核准作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>核准項目</th>
+<th>通過標準</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求與範圍完成</td>
+<td>專案範圍、需求、資安需求與驗收標準已完成。</td>
+<td>PM / 業務Owner</td>
+<td>需求簽核。</td>
+</tr>
+<tr>
+<td>安全測試完成</td>
+<td>必要SAST、DAST、SCA、滲測、雲端組態與AI測試已完成。</td>
+<td>DevSecOps / SOC</td>
+<td>測試報告。</td>
+</tr>
+<tr>
+<td>弱點處理完成</td>
+<td>Critical/High弱點已修補、重測或正式接受。</td>
+<td>System Owner / CISO</td>
+<td>弱點修補與接受紀錄。</td>
+</tr>
+<tr>
+<td>風險評估更新</td>
+<td>剩餘風險已評估，不可接受風險已處理。</td>
+<td>風險Owner / ISMS代表</td>
+<td>風險登錄表。</td>
+</tr>
+<tr>
+<td>變更核准完成</td>
+<td>CAB/ECAB、部署計畫、回復計畫與通報窗口已核准。</td>
+<td>Change Manager</td>
+<td>CAB紀錄。</td>
+</tr>
+<tr>
+<td>營運移交準備</td>
+<td>監控、日誌、備份、Runbook、SLA與支援窗口已準備。</td>
+<td>IT營運 / System Owner</td>
+<td>移交清單。</td>
+</tr>
+<tr>
+<td>專項審查完成</td>
+<td>PII、AI、供應商、BCMS、GHG/CO2或法務審查已完成。</td>
+<td>專項Owner</td>
+<td>專項審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 營運移交作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>移交項目</th>
+<th>移交要求</th>
+<th>接收角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>系統文件</td>
+<td>系統架構、資料流、權限模型、介面、API、組態與依賴。</td>
+<td>System Owner / IT營運</td>
+<td>系統文件清單。</td>
+</tr>
+<tr>
+<td>維運手冊</td>
+<td>啟停程序、常見問題、監控、告警、升級路徑與回復程序。</td>
+<td>IT營運 / SOC</td>
+<td>Runbook。</td>
+</tr>
+<tr>
+<td>帳號與權限</td>
+<td>移交系統管理帳號、服務帳號、PAM、權限審查與停用機制。</td>
+<td>IT / IAM Owner</td>
+<td>權限移交紀錄。</td>
+</tr>
+<tr>
+<td>監控與日誌</td>
+<td>SIEM整合、告警規則、保存期間、監控責任與例外。</td>
+<td>SOC</td>
+<td>監控啟用證據。</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>備份策略、復原程序、RTO/RPO、最近復原測試結果。</td>
+<td>BCMS / IT營運</td>
+<td>備份復原測試。</td>
+</tr>
+<tr>
+<td>供應商支援</td>
+<td>供應商聯絡窗口、SLA、事件通報、維護窗口、第四方與退場資訊。</td>
+<td>供應商管理</td>
+<td>供應商移交資料。</td>
+</tr>
+<tr>
+<td>未結事項</td>
+<td>缺口、例外、剩餘風險、CAPA與後續改善事項。</td>
+<td>System Owner / ISMS代表</td>
+<td>未結事項清單。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 專案結案作業</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>結案項目</th>
+<th>結案要求</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>交付物確認</td>
+<td>所有契約、需求、資安與驗收交付物已完成或正式例外。</td>
+<td>交付物驗收清單。</td>
+</tr>
+<tr>
+<td>證據封存</td>
+<td>專案資安證據依文件化資訊要求保存。</td>
+<td>證據清單與保存位置。</td>
+</tr>
+<tr>
+<td>未結事項轉銜</td>
+<td>未完成風險、缺口、CAPA、例外與剩餘風險轉入營運追蹤。</td>
+<td>轉銜紀錄。</td>
+</tr>
+<tr>
+<td>Lessons Learned</td>
+<td>記錄資安缺口、改善建議、流程調整與再發防止。</td>
+<td>Lessons Learned報告。</td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>資訊資產清冊、雲端/AI清冊、供應商清冊、風險登錄表與SoA已更新。</td>
+<td>清冊更新紀錄。</td>
+</tr>
+<tr>
+<td>結案核准</td>
+<td>由PM、業務Owner、System Owner、ISMS代表與必要專項Owner確認。</td>
+<td>結案簽核紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 專案文件與證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>必要證據</th>
+<th>保存Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>立案</td>
+<td>專案立案書、資安分級、利害關係人、初步風險。</td>
+<td>PM / PMO</td>
+</tr>
+<tr>
+<td>需求</td>
+<td>需求規格、資安需求、隱私需求、AI需求、供應商需求。</td>
+<td>PM / Business Owner</td>
+</tr>
+<tr>
+<td>設計</td>
+<td>架構圖、資料流圖、威脅模型、安全設計審查。</td>
+<td>System Owner / 資安架構</td>
+</tr>
+<tr>
+<td>建置</td>
+<td>Code Review、SAST、SCA、Secret Scan、組態掃描、SBOM。</td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>測試</td>
+<td>DAST、滲測、UAT、安全測試、隱私測試、AI測試、重測證據。</td>
+<td>QA / SOC</td>
+</tr>
+<tr>
+<td>上線</td>
+<td>CAB、Go-Live Checklist、回復計畫、剩餘風險接受、核准紀錄。</td>
+<td>Change Manager</td>
+</tr>
+<tr>
+<td>移交</td>
+<td>Runbook、監控、備份、權限、SLA、供應商支援、未結事項。</td>
+<td>IT營運 / System Owner</td>
+</tr>
+<tr>
+<td>結案</td>
+<td>結案報告、Lessons Learned、證據封存、清冊更新。</td>
+<td>PM / ISMS代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 專案風險登錄與處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險編號</th>
+<th>風險描述</th>
+<th>風險來源</th>
+<th>風險等級</th>
+<th>處理措施</th>
+<th>Owner</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PRJ-R-001</td>
+<td></td>
+<td>□ 技術　□ 資料　□ 供應商　□ AI　□ PII　□ 雲端　□ BCMS　□ 合規</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+<tr>
+<td>PRJ-R-002</td>
+<td></td>
+<td>□ 技術　□ 資料　□ 供應商　□ AI　□ PII　□ 雲端　□ BCMS　□ 合規</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+<tr>
+<td>PRJ-R-003</td>
+<td></td>
+<td>□ 技術　□ 資料　□ 供應商　□ AI　□ PII　□ 雲端　□ BCMS　□ 合規</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 接受</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 專案例外與剩餘風險管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外/接受編號</th>
+<th>類型</th>
+<th>描述</th>
+<th>風險等級</th>
+<th>補償控制</th>
+<th>核准人</th>
+<th>到期日</th>
+<th>重評日</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>EXC-001</td>
+<td>□ 例外　□ 剩餘風險接受　□ 暫時核准</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>EXC-002</td>
+<td>□ 例外　□ 剩餘風險接受　□ 暫時核准</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>EXC-003</td>
+<td>□ 例外　□ 剩餘風險接受　□ 暫時核准</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 專案供應商與合約檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>要求</th>
+<th>結果</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商資安審查</td>
+<td>完成供應商資訊安全評估與風險分級。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>合約安全條款</td>
+<td>合約含保密、資安、事件、稽核權、SLA與退場要求。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>DPA與PII條款</td>
+<td>涉及PII時，完成DPA與子處理者審查。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>第四方揭露</td>
+<td>確認第四方、雲端區域、子處理者與關鍵依賴。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>外包開發要求</td>
+<td>外包開發符合Secure SDLC、SBOM、弱掃、程式碼交付與IP條款。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>退場策略</td>
+<td>定義資料返還、刪除、服務替代、帳號撤銷與移交。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 專案雲端服務檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>要求</th>
+<th>結果</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端服務登錄</td>
+<td>雲端服務已納入雲端服務與AI服務清冊。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>共享責任確認</td>
+<td>明確供應商、組織與共同責任。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端安全基準</td>
+<td>完成CSPM/IaC/安全組態基準檢查。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端IAM</td>
+<td>SSO、MFA、最小權限、服務帳號與權限審查已設計。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端日誌</td>
+<td>CloudTrail/Activity Log/API Log已啟用並整合監控。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端資料保護</td>
+<td>加密、KMS、備份、DLP、資料刪除與區域已確認。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 專案AI服務檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>要求</th>
+<th>結果</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI服務登錄</td>
+<td>AI工具、AI API、模型或MLOps平台已納入清冊。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI用途核准</td>
+<td>AI用途、禁止用途、高影響判定與使用者範圍已核准。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料輸入限制</td>
+<td>禁止輸入PII、高機密、客戶機密、金鑰或未核准資料。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>模型條款審查</td>
+<td>資料保留、訓練、IP、模型變更與事件通報條款已確認。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>人類監督</td>
+<td>高風險AI輸出需人工覆核、抽樣監控與責任歸屬。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI安全測試</td>
+<td>完成提示注入、資料洩漏、偏差、幻覺與越權測試。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 專案BCMS/DRP檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>要求</th>
+<th>結果</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>BIA連結</td>
+<td>確認專案是否影響關鍵流程、產品、客戶服務或法規承諾。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>RTO/RPO</td>
+<td>定義並驗證RTO/RPO與可用性要求。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份復原</td>
+<td>完成備份策略、復原流程與測試。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>營運替代方案</td>
+<td>定義系統中斷、供應商中斷、雲端中斷或AI服務中斷之替代方案。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>演練要求</td>
+<td>高風險或關鍵專案需納入BCP/DR演練。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. 專案GHG/CO2資料治理檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>要求</th>
+<th>結果</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>GHG資料識別</td>
+<td>確認專案是否處理活動數據、排放係數、查證底稿或ESG揭露資料。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料來源控制</td>
+<td>GHG資料來源、版本、係數與供應商資料需可追溯。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料完整性</td>
+<td>建立審核、鎖定、異動紀錄與查證支援。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI/雲端使用</td>
+<td>使用AI或雲端處理GHG資料時需確認資料保護與保留條款。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>揭露審查</td>
+<td>對外揭露前需經授權與查證流程。</td>
+<td>□ 完成　□ 部分　□ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. 專案資安KPI/KRI</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標名稱</th>
+<th>目標/門檻</th>
+<th>資料來源</th>
+<th>頻率</th>
+<th>Owner</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高風險專案資安分級完成率</td>
+<td>100%</td>
+<td>PMO / GRC</td>
+<td>每月</td>
+<td>PMO / ISMS代表</td>
+<td>未完成不得進入需求階段</td>
+</tr>
+<tr>
+<td>安全架構審查完成率</td>
+<td>≥ 95%</td>
+<td>審查紀錄</td>
+<td>每季</td>
+<td>資安架構</td>
+<td>逾期升級CISO</td>
+</tr>
+<tr>
+<td>高風險弱點上線前關閉率</td>
+<td>100%</td>
+<td>弱點管理平台</td>
+<td>每版</td>
+<td>DevSecOps / SOC</td>
+<td>未關閉不得上線</td>
+</tr>
+<tr>
+<td>Go-Live資安核准完成率</td>
+<td>100%</td>
+<td>CAB / Go-Live清單</td>
+<td>每版</td>
+<td>Change Manager</td>
+<td>未核准不得上線</td>
+</tr>
+<tr>
+<td>AI專項審查完成率</td>
+<td>100%（適用時）</td>
+<td>AI治理紀錄</td>
+<td>每季</td>
+<td>AI治理負責人</td>
+<td>限制使用或補審</td>
+</tr>
+<tr>
+<td>DPIA/DPA完成率</td>
+<td>100%（適用時）</td>
+<td>PIMS文件庫</td>
+<td>每季</td>
+<td>DPO</td>
+<td>補件或暫停上線</td>
+</tr>
+<tr>
+<td>專案結案證據完整率</td>
+<td>≥ 95%</td>
+<td>證據清單</td>
+<td>每季</td>
+<td>PMO / ISMS代表</td>
+<td>補證或CAPA</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. 專案資安RACI矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>PMO</th>
+<th>PM</th>
+<th>System Owner</th>
+<th>Data Owner</th>
+<th>DevSecOps/SOC</th>
+<th>DPO/AI/BCMS</th>
+<th>供應商管理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>專案資安分級</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>資安需求定義</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>隱私/AI/BCMS專項審查</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>供應商與第四方審查</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+</tr>
+<tr>
+<td>安全架構審查</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>安全開發與測試</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Go-Live資安核准</td>
+<td>I</td>
+<td>A/R</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>剩餘風險接受</td>
+<td>A（重大）</td>
+<td>A/R</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>營運移交</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>A/R</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>結案與證據封存</td>
+<td>I</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. 專案資安品質檢查</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>品質檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>改善要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>分級完整性</td>
+<td>專案是否完成資安分級並由適當角色確認？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>需求完整性</td>
+<td>資安、隱私、AI、供應商、BCMS與合規需求是否完整？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>設計完整性</td>
+<td>安全架構、資料流、威脅模型與控制設計是否完整？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>測試充分性</td>
+<td>安全測試是否涵蓋專案風險與適用技術？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點處理</td>
+<td>高風險弱點是否修補、重測或正式接受？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>上線準備</td>
+<td>Go-Live前是否完成變更核准、回復計畫、監控與移交？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+<tr>
+<td>證據完整性</td>
+<td>專案資安證據是否完整、受控保存且可追溯？</td>
+<td>□ 通過　□ 修正　□ 退回</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. 專案內部稽核查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資安分級</td>
+<td>高風險專案是否依準則正確分級？</td>
+<td>分級紀錄、立案文件</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>安全需求</td>
+<td>資安、PII、AI、供應商與BCMS需求是否納入需求文件？</td>
+<td>需求規格、專項審查</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>安全設計</td>
+<td>是否完成架構審查、資料流與威脅建模？</td>
+<td>架構圖、威脅模型</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>安全測試</td>
+<td>是否依風險執行必要SAST、DAST、SCA、滲測或AI測試？</td>
+<td>測試報告、修補紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>上線核准</td>
+<td>Go-Live是否完成CAB、風險接受與營運移交？</td>
+<td>CAB、Go-Live清單、移交紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>專案供應商與第四方是否完成審查？</td>
+<td>供應商審查、合約、第四方清冊</td>
+<td>□ 符合　□ 部分　□ 不適用</td>
+</tr>
+<tr>
+<td>結案證據</td>
+<td>專案證據是否完整封存並轉入營運追蹤？</td>
+<td>結案報告、證據清單</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入項目</th>
+<th>是否納入</th>
+<th>摘要</th>
+<th>責任角色</th>
+<th>提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高/極高風險專案狀態</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>PMO / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>重大專案資安缺口或上線例外</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / PM</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>高風險弱點未依期修補</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / DevSecOps</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI、PII、雲端、供應商或BCMS重大專項風險</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>專項Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>專案資安資源、工具或能力需求</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>PMO / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>重複性專案缺口與CAPA趨勢</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>ISMS代表 / CAPA負責人</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>是否觸發CAPA</th>
+<th>CAPA編號</th>
+<th>原因摘要</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>專案未完成資安分級或資安需求即進入後續階段</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>Go-Live前未完成必要安全測試或高風險弱點處理</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>發生專案導入後資安事件或重大缺口</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>重複發生專案證據不足、審查逾期或上線例外</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>專案立案與資安分級紀錄</td>
+<td>PM / PMO</td>
+<td>PMO系統 / ISMS文件庫</td>
+<td>專案結束後至少3年</td>
+<td>高風險專案需保留核准紀錄。</td>
+</tr>
+<tr>
+<td>安全需求、隱私需求與AI需求</td>
+<td>PM / Data Owner / AI Owner</td>
+<td>專案文件庫</td>
+<td>專案結束後至少3年</td>
+<td>需可追溯至設計與測試。</td>
+</tr>
+<tr>
+<td>架構審查與威脅模型</td>
+<td>System Owner / 資安架構</td>
+<td>ISMS文件庫 / 架構庫</td>
+<td>系統生命週期加至少3年</td>
+<td>重大系統需版本化保存。</td>
+</tr>
+<tr>
+<td>安全測試與弱點修補紀錄</td>
+<td>DevSecOps / SOC</td>
+<td>弱點管理平台 / ISMS文件庫</td>
+<td>至少3年</td>
+<td>需保留修補與重測證據。</td>
+</tr>
+<tr>
+<td>供應商、DPA、第四方與合約證據</td>
+<td>採購 / 法務 / 供應商管理</td>
+<td>合約系統 / 供應商文件庫</td>
+<td>合約結束後至少3年</td>
+<td>依合約或法規較長者為準。</td>
+</tr>
+<tr>
+<td>CAB、Go-Live與移交紀錄</td>
+<td>Change Manager / IT營運</td>
+<td>ITSM / 變更管理系統</td>
+<td>至少3年</td>
+<td>需保留回復計畫與核准紀錄。</td>
+</tr>
+<tr>
+<td>結案與Lessons Learned</td>
+<td>PM / PMO</td>
+<td>PMO系統 / ISMS文件庫</td>
+<td>至少3年</td>
+<td>需納入持續改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本SOP對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>專案需識別內外部議題、技術變更、供應鏈與法規情境。</td>
+<td>第7、8、12章</td>
+<td>PM / ISMS代表</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>識別客戶、資料主體、供應商、主管機關與使用者要求。</td>
+<td>第8、10、12章</td>
+<td>PM / 法務 / DPO</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>明確專案資安角色、責任與授權。</td>
+<td>第4、31章</td>
+<td>PMO / CISO</td>
+</tr>
+<tr>
+<td>6.1.1</td>
+<td>專案風險與機會納入規劃與控制。</td>
+<td>第7、23章</td>
+<td>PM / 風險Owner</td>
+</tr>
+<tr>
+<td>6.1.2</td>
+<td>專案資訊安全風險評鑑。</td>
+<td>第5、14、23章</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>6.1.3</td>
+<td>專案風險處理、控制選擇與剩餘風險接受。</td>
+<td>第17、23、24章</td>
+<td>CISO / 風險Owner</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>專案變更管理。</td>
+<td>第18、19章</td>
+<td>Change Manager</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>專案角色需具備安全開發、雲端、AI、隱私等必要能力。</td>
+<td>第15、16、27章</td>
+<td>PMO / HR</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>專案文件化資訊與證據保存。</td>
+<td>第22、36章</td>
+<td>PM / ISMS代表</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>專案運作規劃與控制。</td>
+<td>第6-21章</td>
+<td>PM / PMO</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>專案風險評鑑執行。</td>
+<td>第14、23章</td>
+<td>風險Owner</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>專案風險處理與有效性驗證。</td>
+<td>第16、17、19章</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>KPI/KRI監督專案資安績效。</td>
+<td>第30章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>內部稽核可查核專案資安證據。</td>
+<td>第33章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>重大專案風險與趨勢納入管理審查。</td>
+<td>第34章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>專案缺口、事件與重複問題導出CAPA。</td>
+<td>第35章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Annex A控制</th>
+<th>本SOP對應內容</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.8</td>
+<td>專案管理中的資訊安全。</td>
+<td>專案資安分級、資安活動計畫、階段閘門</td>
+<td>PM / PMO / CISO</td>
+</tr>
+<tr>
+<td>A.5.9-A.5.10</td>
+<td>資訊資產清冊與可接受使用。</td>
+<td>資產登錄、使用限制、移交紀錄</td>
+<td>System Owner</td>
+</tr>
+<tr>
+<td>A.5.12-A.5.14</td>
+<td>資訊分類、標示與傳輸。</td>
+<td>資料分類、資料流圖、傳輸設計</td>
+<td>Data Owner / DPO</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取控制與身分管理。</td>
+<td>IAM矩陣、MFA、權限審查</td>
+<td>IT / IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.19-A.5.23</td>
+<td>供應商、ICT供應鏈與雲端服務安全。</td>
+<td>供應商審查、合約、第四方、雲端審查</td>
+<td>供應商管理 / Cloud Owner</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理與證據。</td>
+<td>事件通報設計、監控與日誌、應變流程</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.30</td>
+<td>ICT營運持續就緒。</td>
+<td>RTO/RPO、備份、復原、BCP/DR測試</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.34</td>
+<td>法律、智慧財產、紀錄保護與PII。</td>
+<td>法務審查、DPA、DPIA、資料主體權利</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>A.6.3</td>
+<td>資訊安全認知、教育與訓練。</td>
+<td>專案角色能力與訓練紀錄</td>
+<td>HR / PMO</td>
+</tr>
+<tr>
+<td>A.8.8-A.8.12</td>
+<td>弱點、組態、資料刪除、遮罩與DLP。</td>
+<td>弱掃、組態、刪除、DLP、遮罩紀錄</td>
+<td>DevSecOps / SOC</td>
+</tr>
+<tr>
+<td>A.8.25-A.8.31</td>
+<td>安全開發生命週期、應用安全、測試與外包開發。</td>
+<td>Secure SDLC、SAST、DAST、SCA、滲測、SBOM</td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>A.8.32-A.8.34</td>
+<td>變更管理、測試資訊與稽核期間保護。</td>
+<td>CAB、測試資料管理、稽核證據保護</td>
+<td>Change Manager / ISMS代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本SOP對應要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27005</td>
+<td>專案風險識別、分析、評估、處理與剩餘風險。</td>
+<td>風險登錄、處理計畫</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>ISO 31000</td>
+<td>專案風險治理、監督、溝通與持續改善。</td>
+<td>KPI/KRI、管理審查輸入</td>
+<td>PMO / ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701</td>
+<td>專案PII處理、DPIA、DPA、資料主體權利與隱私事件。</td>
+<td>DPIA、DPA、隱私測試</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001</td>
+<td>專案AI用途、AI風險、模型治理、人類監督與AI供應商。</td>
+<td>AI風險評估、AI審查紀錄</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI風險來源、事件、後果、控制與利益相關者影響。</td>
+<td>AI威脅模型、AI測試報告</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO/IEC/IEEE 15288</td>
+<td>系統生命週期需求、架構、驗證、確認、風險與配置管理。</td>
+<td>需求、架構、測試、配置紀錄</td>
+<td>System Owner</td>
+</tr>
+<tr>
+<td>ISO/IEC/IEEE 12207</td>
+<td>軟體生命週期、軟體需求、設計、建置、測試、維護與外包開發。</td>
+<td>Secure SDLC、Code Review、測試報告</td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>專案對關鍵流程、RTO/RPO、BCP/DR與營運持續之影響。</td>
+<td>BIA、DR測試、移交紀錄</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>專案資安管理證據支援內部稽核與外部驗證。</td>
+<td>稽核提示、證據清單</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI治理、責任、監督、決策與透明度。</td>
+<td>AI治理核准、管理審查</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>專案處理碳資料、係數、查證、揭露與供應鏈碳資料。</td>
+<td>GHG審查、查證證據</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的、原則、名詞與角色責任完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>專案資安分級、生命週期安全閘門、立案與範圍邊界作業完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>資安需求、隱私需求、AI治理需求、供應商與第四方管理完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>安全架構、威脅建模、安全開發、安全測試、弱點管理與變更管理完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>Go-Live、營運移交、結案、證據清單、風險登錄與例外管理完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商、雲端、AI、BCMS、GHG/CO2專項檢核完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>KPI/KRI、RACI、品質檢查、稽核提示、管理審查與CAPA完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本SOP之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>組織控制措施管理程序</td>
+<td>定義Annex A.5組織控制與專案資安治理要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊資產可接受使用政策</td>
+<td>規範專案產出與專案中資訊資產之可接受使用。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊資產清冊</td>
+<td>專案新增或變更資訊資產需更新清冊。</td>
+</tr>
+<tr>
+<td></td>
+<td>供應商資訊安全登錄表</td>
+<td>專案涉及供應商時需完成供應商登錄與審查。</td>
+</tr>
+<tr>
+<td></td>
+<td>第四方供應鏈登錄表</td>
+<td>專案涉及第四方或子處理者時需登錄。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務與AI服務清冊</td>
+<td>專案涉及雲端或AI服務時需登錄與審查。</td>
+</tr>
+<tr>
+<td>ISMS-082系列</td>
+<td>資訊安全風險評鑑文件</td>
+<td>專案風險應納入風險評鑑與風險登錄。</td>
+</tr>
+<tr>
+<td>ISMS-083系列</td>
+<td>資訊安全風險處理文件</td>
+<td>不可接受專案風險應建立處理計畫與驗證紀錄。</td>
+</tr>
+<tr>
+<td>ISMS-091/092/093/101系列</td>
+<td>監督量測、稽核、管理審查與CAPA</td>
+<td>承接專案資安KPI、稽核、管理決策與改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>43. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISMS專案資訊安全管理之正式企業級作業指導書，可支援ISO/IEC 27001:2022 Annex A.5.8「Information security in project management」及相關供應商、雲端、AI、隱私、Secure SDLC、變更管理、營運持續、稽核與CAPA要求，並可作為專案立案、需求、設計、開發、測試、上線、移交與結案各階段之稽核證據基準。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

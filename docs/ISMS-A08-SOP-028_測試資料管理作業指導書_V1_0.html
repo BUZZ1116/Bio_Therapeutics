@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A08-SOP-028 測試資料管理作業指導書</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A08-SOP-028 測試資料管理作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A08-SOP-028</td>
+<td>測試資料管理作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.8 / 存取、弱點、日誌、開發、網路與加密</td>
+<td>Application Security / DevSecOps Owner</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.8 / ISMS-A08-SOP-028</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>Application Security / DevSecOps Owner / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>Test Data Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / Security Architecture Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理審查</td>
+<td></td>
+<td>Data Governance Owner / Data Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / Privacy Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>DevSecOps與測試審查</td>
+<td></td>
+<td>DevSecOps Owner / QA Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與平台審查</td>
+<td></td>
+<td>Cloud Security Owner / Platform Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI/MLOps審查</td>
+<td></td>
+<td>AI Governance Owner / MLOps Owner（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商與法務審查</td>
+<td></td>
+<td>Supplier Management / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / Data Governance主管 / DPO / DevSecOps主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範測試資料之需求提出、分類分級、產生、抽樣、遮罩、去識別、使用、傳輸、保存、監控、刪除、例外核准與稽核要求，確保測試活動能取得足夠且具代表性之資料，同時避免正式資料、PII、客戶資料、Secrets、機密資料、AI訓練資料或營運敏感資料在非正式環境中遭未授權存取、外洩、誤用或不當保存。</p>
+<p>本文件支援安全開發生命週期、安全測試、環境區隔、隱私保護、AI治理與供應商管理，要求測試資料管理具備可追溯、可核准、可遮罩、可限制、可刪除、可稽核及可驗證之控制能力。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>測試資料應優先使用合成資料、範例資料或人工建立資料；不得將正式資料作為測試資料之預設選項。</li>
+<li>測試資料應依資料分類分級管理，任何可能含PII、客戶資料、機密/高機密資料、交易資料、健康/金融資料、AI資料、Prompt或GHG/ESG底稿之資料，應先完成資料影響評估與核准。</li>
+<li>正式資料複製至非正式環境前，應完成資料最小化、遮罩、去識別、抽樣、加密、存取限制、保存期限、刪除方式與監控設計。</li>
+<li>測試資料不得包含明文密碼、正式Secrets、正式API Key、正式憑證、私鑰、Token、正式金鑰材料或可直接登入正式系統之資料。</li>
+<li>測試資料之使用應與測試目的相符，不得擴大用途、轉移給未核准人員或供應商，亦不得輸入未核准AI工具或外部服務。</li>
+<li>測試資料於測試目的完成、有效期限屆滿、專案結束或供應商退場時，應刪除、銷毀或依核准方式封存，並保存刪除或封存證據。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>測試資料</td>
+<td>為開發、測試、驗證、UAT、效能測試、安全測試、AI評估、教育訓練或供應商測試所使用之資料。</td>
+</tr>
+<tr>
+<td>正式資料</td>
+<td>正式環境中真實業務、客戶、PII、交易、機密、AI或營運資料。</td>
+</tr>
+<tr>
+<td>合成資料</td>
+<td>依統計規則或業務邏輯人工或自動產生，並非直接取自正式個人或客戶資料之測試資料。</td>
+</tr>
+<tr>
+<td>遮罩資料</td>
+<td>將敏感欄位以替代、亂數、泛化、雜湊、Tokenization或其他方法處理，使其降低識別或敏感程度之資料。</td>
+</tr>
+<tr>
+<td>去識別資料</td>
+<td>經處理後無法或難以識別特定個人或客戶，且需評估重新識別風險之資料。</td>
+</tr>
+<tr>
+<td>匿名化</td>
+<td>使資料不可再識別特定個人，且無合理方式重新識別之處理。</td>
+</tr>
+<tr>
+<td>假名化</td>
+<td>以替代識別碼取代直接識別資料，但仍可能透過額外資訊重新識別之處理。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>僅取得測試目的必要之最少資料欄位、筆數、期間與敏感內容。</td>
+</tr>
+<tr>
+<td>重新識別風險</td>
+<td>遮罩、假名化或去識別資料被透過其他資料集、邏輯或推論重新識別之可能性。</td>
+</tr>
+<tr>
+<td>測試資料集</td>
+<td>依特定測試目的建立、版本化、核准、保存與刪除之一組測試資料。</td>
+</tr>
+<tr>
+<td>RAG測試資料源</td>
+<td>供AI檢索增強生成系統測試使用之文件、知識庫、向量索引或資料片段。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>主要責任</th>
+<th>主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO / 資訊安全負責人</td>
+<td>核准高風險測試資料使用、正式資料非正式環境使用例外、重大資料外洩風險與風險接受。</td>
+<td>核准紀錄、風險接受、事件決策。</td>
+</tr>
+<tr>
+<td>Test Data Management Owner</td>
+<td>建立測試資料管理流程、維護測試資料清冊、追蹤資料使用、保存、刪除與例外。</td>
+<td>測試資料清冊、檢核紀錄。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>核准資料用於測試之目的、範圍、欄位、遮罩方式、保存期限、刪除要求與使用限制。</td>
+<td>資料使用核准、資料分類。</td>
+</tr>
+<tr>
+<td>DPO / 隱私負責人</td>
+<td>審查PII、個資、跨境、資料主體權利、去識別、DPIA與重新識別風險。</td>
+<td>隱私審查、DPIA紀錄。</td>
+</tr>
+<tr>
+<td>Application / System Owner</td>
+<td>提出測試資料需求、確認測試目的、資料範圍、測試環境與驗收標準。</td>
+<td>測試資料需求單。</td>
+</tr>
+<tr>
+<td>QA / Test Owner</td>
+<td>定義測試案例所需資料條件，使用核准資料並確保測試完成後清理。</td>
+<td>測試計畫、使用紀錄。</td>
+</tr>
+<tr>
+<td>DevSecOps Owner</td>
+<td>確保CI/CD、測試環境、測試資料載入、資料產生器與Secrets掃描符合控制。</td>
+<td>Pipeline紀錄、掃描報告。</td>
+</tr>
+<tr>
+<td>Database / Data Engineer</td>
+<td>執行資料抽取、遮罩、轉換、載入、驗證與刪除作業。</td>
+<td>ETL/ELT紀錄、遮罩驗證。</td>
+</tr>
+<tr>
+<td>Cloud Security Owner</td>
+<td>審查雲端測試資料儲存、加密、存取、跨區、跨境、儲存桶公開與CSPM。</td>
+<td>雲端設定、CSPM報告。</td>
+</tr>
+<tr>
+<td>AI Governance / MLOps Owner</td>
+<td>審查測試資料用於AI訓練、微調、評估、RAG索引、Prompt測試與模型驗證之風險。</td>
+<td>AI資料核准、模型測試紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>確保供應商取得、使用、保存及刪除測試資料符合合約、DPA、NDA與退場要求。</td>
+<td>供應商資料使用紀錄。</td>
+</tr>
+<tr>
+<td>Internal Auditor</td>
+<td>抽查測試資料核准、遮罩、存取、保存、刪除、例外與證據。</td>
+<td>稽核底稿、稽核發現。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 測試資料分類與允許使用原則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料類型</th>
+<th>允許使用原則</th>
+<th>最低控制</th>
+<th>核准角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合成資料</td>
+<td>優先使用，可用於一般開發、測試、教育訓練與安全測試。</td>
+<td>需符合測試案例需求，不得意外包含真實個資或Secrets。</td>
+<td>System Owner / QA Owner。</td>
+</tr>
+<tr>
+<td>範例資料</td>
+<td>可用於示範、文件、訓練與低風險測試。</td>
+<td>不得包含真實客戶、PII、正式交易或內部機密。</td>
+<td>System Owner。</td>
+</tr>
+<tr>
+<td>遮罩正式資料</td>
+<td>可於必要情境使用，需完成遮罩、最小化、核准、保存期限與刪除。</td>
+<td>欄位遮罩、存取限制、加密、日誌、刪除證明。</td>
+<td>Data Owner / DPO / CISO依風險。</td>
+</tr>
+<tr>
+<td>假名化資料</td>
+<td>可用於統計、測試或AI評估，但需控制重新識別Key。</td>
+<td>重新識別Key分離保存，限制存取。</td>
+<td>Data Owner / DPO。</td>
+</tr>
+<tr>
+<td>未遮罩正式資料</td>
+<td>原則禁止於非正式環境使用。</td>
+<td>僅於無替代方案且具強控制、短期限與高層核准時允許。</td>
+<td>CISO / DPO / Data Owner / 管理階層授權代表。</td>
+</tr>
+<tr>
+<td>Secrets或憑證資料</td>
+<td>不得作為測試資料；測試應使用專用短期測試Secrets。</td>
+<td>Secrets掃描、測試Key、到期與撤銷。</td>
+<td>Secrets Owner。</td>
+</tr>
+<tr>
+<td>AI訓練或評估資料</td>
+<td>需依AI治理、資料授權、PII、資料品質與模型用途核准。</td>
+<td>版本、來源、授權、去識別、刪除與模型記錄。</td>
+<td>AI Governance / Data Owner / DPO。</td>
+</tr>
+<tr>
+<td>RAG測試資料</td>
+<td>需確認文件來源、資料分類、權限繼承、索引刪除與越權檢索測試。</td>
+<td>RAG權限測試、索引清冊、刪除同步。</td>
+<td>AI Governance / Data Owner。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 測試資料管理流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 需求提出</td>
+<td>說明測試目的、系統、環境、資料欄位、筆數、期間、資料分類、使用者與保存期限。</td>
+<td>QA / System Owner</td>
+<td>測試資料申請。</td>
+</tr>
+<tr>
+<td>2. 替代方案評估</td>
+<td>優先評估合成資料、範例資料、Mock資料、Stub或小型抽樣資料。</td>
+<td>Test Data Owner / QA</td>
+<td>替代方案評估紀錄。</td>
+</tr>
+<tr>
+<td>3. 分類與影響評估</td>
+<td>確認資料是否含PII、客戶資料、機密、AI資料、跨境、合約限制或重新識別風險。</td>
+<td>Data Owner / DPO</td>
+<td>資料影響評估。</td>
+</tr>
+<tr>
+<td>4. 遮罩與最小化設計</td>
+<td>定義欄位遮罩、假名化、匿名化、抽樣、欄位排除、Tokenization與驗證方式。</td>
+<td>Data Engineer / DPO</td>
+<td>遮罩設計與測試。</td>
+</tr>
+<tr>
+<td>5. 安全核准</td>
+<td>依資料敏感度取得Data Owner、DPO、CISO、AI Governance或供應商管理核准。</td>
+<td>相關Owner</td>
+<td>核准紀錄。</td>
+</tr>
+<tr>
+<td>6. 產生與載入</td>
+<td>依核准方式產生、抽取、遮罩、驗證、加密傳輸並載入指定測試環境。</td>
+<td>Data Engineer / DBA / DevSecOps</td>
+<td>產生與載入紀錄。</td>
+</tr>
+<tr>
+<td>7. 使用與監控</td>
+<td>依核准目的使用，監控存取、複製、下載、外傳、AI輸入與供應商存取。</td>
+<td>QA / SOC / Data Owner</td>
+<td>使用與監控紀錄。</td>
+</tr>
+<tr>
+<td>8. 變更與續用</td>
+<td>資料範圍、用途、環境、使用者、期限或供應商變更時需重新核准。</td>
+<td>System Owner / Data Owner</td>
+<td>變更核准。</td>
+</tr>
+<tr>
+<td>9. 刪除與關閉</td>
+<td>測試完成或期限屆滿後刪除資料、索引、備份、快照、暫存與輸出，保存證據。</td>
+<td>System Owner / Data Owner</td>
+<td>刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 測試資料產生方法與適用情境</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>方法</th>
+<th>適用情境</th>
+<th>優點</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合成資料產生</td>
+<td>功能測試、壓力測試、教育訓練、初期開發。</td>
+<td>不含真實PII，可大量產生且低風險。</td>
+<td>需符合業務規則、資料格式與邊界條件。</td>
+</tr>
+<tr>
+<td>資料工廠 / Test Data Factory</td>
+<td>需要可重複、可版本化之標準測試資料集。</td>
+<td>可自動化、可追溯、可重複建置。</td>
+<td>需納入版本控管與存取控制。</td>
+</tr>
+<tr>
+<td>Mock / Stub資料</td>
+<td>API測試、外部服務尚未可用或不可直接連正式服務。</td>
+<td>降低外部依賴與正式服務誤呼叫。</td>
+<td>需確保與真實行為足夠一致。</td>
+</tr>
+<tr>
+<td>抽樣遮罩資料</td>
+<td>複雜業務邏輯、UAT、資料遷移驗證。</td>
+<td>保留部分真實分布與關聯性。</td>
+<td>需嚴格遮罩、最小化與重新識別風險評估。</td>
+</tr>
+<tr>
+<td>匿名化資料</td>
+<td>統計測試、趨勢分析、低風險模型驗證。</td>
+<td>降低個人識別風險。</td>
+<td>需確認匿名化不可逆且無合理重新識別方式。</td>
+</tr>
+<tr>
+<td>假名化資料</td>
+<td>需維持同一個體關聯性之測試。</td>
+<td>可保留資料關聯與測試一致性。</td>
+<td>需保護對照表與重新識別Key。</td>
+</tr>
+<tr>
+<td>邊界條件資料</td>
+<td>安全測試、輸入驗證、例外流程測試。</td>
+<td>強化測試完整性。</td>
+<td>不得包含真實敏感資料。</td>
+</tr>
+<tr>
+<td>AI評估資料集</td>
+<td>AI輸出品質、安全性、偏誤與RAG測試。</td>
+<td>可支援模型評估與安全測試。</td>
+<td>需版本化、授權、資料分類與刪除控制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 遮罩、去識別與匿名化要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>技術方法</th>
+<th>適用資料</th>
+<th>要求</th>
+<th>風險注意</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>替代 / Substitution</td>
+<td>姓名、地址、電話、Email、公司名稱。</td>
+<td>以可信測試值替代，保留格式。</td>
+<td>需避免替代值仍指向真實個人。</td>
+</tr>
+<tr>
+<td>亂數化 / Randomization</td>
+<td>ID、金額、日期、序號。</td>
+<td>保留資料型態與範圍，避免破壞測試邏輯。</td>
+<td>關聯性需求需另行設計。</td>
+</tr>
+<tr>
+<td>泛化 / Generalization</td>
+<td>年齡、地區、職稱、時間。</td>
+<td>將精細資料轉為區間或較高層級。</td>
+<td>可能降低測試精度。</td>
+</tr>
+<tr>
+<td>截斷 / Suppression</td>
+<td>不必要敏感欄位。</td>
+<td>直接移除測試不需要欄位。</td>
+<td>需確認應用不依賴該欄位。</td>
+</tr>
+<tr>
+<td>雜湊 / Hashing</td>
+<td>識別碼、帳號、Email。</td>
+<td>需加Salt並評估字典攻擊風險。</td>
+<td>不可將低熵資料單純Hash視為匿名。</td>
+</tr>
+<tr>
+<td>Tokenization</td>
+<td>需保留一致性且降低直接識別之資料。</td>
+<td>Token對照表需分離、加密與嚴格限制。</td>
+<td>若對照表外洩可重新識別。</td>
+</tr>
+<tr>
+<td>日期偏移</td>
+<td>出生日期、交易日期、事件日期。</td>
+<td>維持相對間距但改變實際日期。</td>
+<td>仍可能透過罕見事件重新識別。</td>
+</tr>
+<tr>
+<td>資料合成</td>
+<td>大量PII、AI訓練、效能測試。</td>
+<td>以統計或規則生成非真實資料。</td>
+<td>需檢查是否過度接近真實個體。</td>
+</tr>
+<tr>
+<td>差分隱私或統計保護</td>
+<td>分析、模型評估、報表測試。</td>
+<td>依風險使用噪音或限制輸出。</td>
+<td>需專業評估效用與風險。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 測試資料安全控制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>高風險加強要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>存取控制</td>
+<td>測試資料僅限核准人員、核准系統與核准環境使用。</td>
+<td>高風險資料採PAM/JIT、MFA與定期權限審查。</td>
+</tr>
+<tr>
+<td>加密</td>
+<td>測試資料傳輸與儲存應依分類加密。</td>
+<td>PII、客戶資料、機密以上需KMS或等效金鑰控管。</td>
+</tr>
+<tr>
+<td>環境區隔</td>
+<td>測試資料應放置於核准測試環境，不得散落於個人端點、聊天工具或未核准雲端。</td>
+<td>正式資料副本需獨立網段、DLP與SIEM監控。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>測試資料存取、匯出、下載、刪除與跨環境傳輸需記錄。</td>
+<td>高風險資料需建立異常告警。</td>
+</tr>
+<tr>
+<td>DLP控制</td>
+<td>對含PII、客戶資料或機密資料之測試資料套用DLP、CASB或外傳監控。</td>
+<td>外部分享與AI輸入需阻擋或告警。</td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>測試資料需設定明確期限，逾期刪除或重新核准。</td>
+<td>高風險資料最短化保存並定期檢查。</td>
+</tr>
+<tr>
+<td>版本管理</td>
+<td>重要測試資料集需版本、來源、遮罩規則、用途與Owner。</td>
+<td>AI評估資料集需與模型版本關聯。</td>
+</tr>
+<tr>
+<td>備份控制</td>
+<td>測試資料備份需符合保存與刪除要求；不得因備份延長未核准保存。</td>
+<td>刪除時需處理快照、備份與暫存。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 禁止事項</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>禁止事項</th>
+<th>說明</th>
+<th>例外條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>禁止未核准複製正式資料</td>
+<td>不得將正式資料庫、檔案、日誌、RAG資料源或客戶資料直接複製至非正式環境。</td>
+<td>需正式資料使用申請與核准。</td>
+</tr>
+<tr>
+<td>禁止未遮罩PII測試</td>
+<td>不得以未遮罩PII進行一般開發、測試、教育訓練或供應商測試。</td>
+<td>僅重大例外並需DPO、Data Owner、CISO核准。</td>
+</tr>
+<tr>
+<td>禁止保存正式Secrets</td>
+<td>測試資料不得包含正式密碼、Token、API Key、私鑰、憑證或KMS材料。</td>
+<td>無例外；應使用測試Secrets。</td>
+</tr>
+<tr>
+<td>禁止輸入未核准AI工具</td>
+<td>測試資料不得輸入未核准AI、翻譯、資料分析或外部SaaS工具。</td>
+<td>需AI工具與資料使用政策核准。</td>
+</tr>
+<tr>
+<td>禁止任意外部分享</td>
+<td>不得將測試資料透過Email、聊天、個人雲端、USB或未核准共享連結外傳。</td>
+<td>需Data Owner與Security核准。</td>
+</tr>
+<tr>
+<td>禁止永久保存測試資料</td>
+<td>測試資料不得無期限保存。</td>
+<td>需封存理由、保存期限與核准。</td>
+</tr>
+<tr>
+<td>禁止資料回流正式</td>
+<td>測試環境產生或修改之資料不得直接回寫正式環境。</td>
+<td>需變更核准、驗證與資料品質檢查。</td>
+</tr>
+<tr>
+<td>禁止供應商自行保留資料</td>
+<td>供應商不得於專案結束後保留測試資料、備份、快照或衍生資料。</td>
+<td>需合約明定封存或法定保存。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. AI、MLOps、RAG與資料科學測試資料管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>場景</th>
+<th>控制要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI模型評估資料</td>
+<td>評估資料集需標示來源、資料分類、授權、偏誤風險、PII狀態、版本與保存期限。</td>
+<td>AI評估資料清冊。</td>
+</tr>
+<tr>
+<td>模型微調資料</td>
+<td>正式資料用於微調需AI治理審查、資料授權、DPO審查、去識別與模型風險評估。</td>
+<td>AI資料使用核准。</td>
+</tr>
+<tr>
+<td>Prompt測試資料</td>
+<td>Prompt測試不得包含Secrets、PII或客戶資料，除非核准並受控。</td>
+<td>Prompt測試紀錄。</td>
+</tr>
+<tr>
+<td>RAG測試資料源</td>
+<td>測試RAG資料源需與正式資料源分離，或以遮罩/合成資料建立測試索引。</td>
+<td>RAG資料源清冊。</td>
+</tr>
+<tr>
+<td>向量資料庫測試索引</td>
+<td>測試向量索引需標示資料來源、嵌入模型版本、刪除機制與權限。</td>
+<td>向量庫版本紀錄。</td>
+</tr>
+<tr>
+<td>Notebook資料</td>
+<td>Notebook不得保存未核准正式資料或Secrets，輸出需定期清理。</td>
+<td>Notebook審查紀錄。</td>
+</tr>
+<tr>
+<td>AI Agent工具測試</td>
+<td>Agent測試資料不得觸發正式Email、付款、刪除、部署或外部客戶通知。</td>
+<td>Agent工具白名單與測試紀錄。</td>
+</tr>
+<tr>
+<td>外部AI供應商</td>
+<td>使用外部AI服務測試資料前需確認資料不訓練、保存期限、地區、刪除與DPA。</td>
+<td>供應商條款與設定證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 供應商與委外測試資料管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合約與NDA</td>
+<td>供應商使用測試資料前需簽署NDA，合約載明資料用途、限制、保護、刪除與通報義務。</td>
+<td>NDA、合約、SOW。</td>
+</tr>
+<tr>
+<td>資料最小化</td>
+<td>提供供應商之資料應為最小範圍、最少欄位、最短期限及最低敏感度。</td>
+<td>資料提供紀錄。</td>
+</tr>
+<tr>
+<td>遮罩要求</td>
+<td>供應商原則僅可取得合成或遮罩資料。</td>
+<td>遮罩驗證報告。</td>
+</tr>
+<tr>
+<td>存取方式</td>
+<td>優先使用受控環境或遠端受控存取，不得任意下載資料至供應商環境。</td>
+<td>存取紀錄、Session Recording。</td>
+</tr>
+<tr>
+<td>跨境與子處理者</td>
+<td>若資料傳輸至境外或子處理者，需DPO/Legal審查。</td>
+<td>DPA、子處理者清單。</td>
+</tr>
+<tr>
+<td>刪除證明</td>
+<td>供應商完成測試後需刪除資料、快照、備份、暫存與衍生資料。</td>
+<td>刪除證明。</td>
+</tr>
+<tr>
+<td>違規通報</td>
+<td>供應商若發生未授權存取、外洩或逾期保留，需依合約與事件程序通報。</td>
+<td>事件通報紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 測試資料生命週期與保存期限</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>生命週期階段</th>
+<th>管理要求</th>
+<th>保存 / 刪除要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請階段</td>
+<td>明確測試目的、資料範圍、Owner、環境、使用者與期限。</td>
+<td>未核准不得建立或移轉。</td>
+</tr>
+<tr>
+<td>建立階段</td>
+<td>依核准方式產生、遮罩、去識別、抽樣或載入。</td>
+<td>保留建立紀錄與遮罩驗證。</td>
+</tr>
+<tr>
+<td>使用階段</td>
+<td>僅限核准目的與人員使用，禁止外部分享與擴大用途。</td>
+<td>持續監控與存取紀錄。</td>
+</tr>
+<tr>
+<td>變更階段</td>
+<td>資料範圍、環境、用途、期限、使用者或供應商變更需重新核准。</td>
+<td>保存變更紀錄。</td>
+</tr>
+<tr>
+<td>複製階段</td>
+<td>資料再次複製、匯出、下載、同步或建立快照需核准與追蹤。</td>
+<td>建立資料副本清單。</td>
+</tr>
+<tr>
+<td>保存階段</td>
+<td>依測試期限、專案期限、法規、合約或查證需求保存。</td>
+<td>不得超過核准期限。</td>
+</tr>
+<tr>
+<td>刪除階段</td>
+<td>刪除主資料、副本、暫存、快照、備份、Notebook輸出、AI索引與供應商副本。</td>
+<td>保存刪除證明。</td>
+</tr>
+<tr>
+<td>關閉階段</td>
+<td>確認測試資料集狀態關閉，更新清冊與管理審查資料。</td>
+<td>清冊狀態更新。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 測試資料申請與核准矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料風險等級</th>
+<th>資料範例</th>
+<th>最低核准</th>
+<th>額外要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>低</td>
+<td>合成資料、公開範例資料、不含敏感內容之假資料。</td>
+<td>System Owner / QA Owner</td>
+<td>確保無真實PII或Secrets。</td>
+</tr>
+<tr>
+<td>中</td>
+<td>內部使用資料、低敏感業務資料、不可識別之統計資料。</td>
+<td>Data Owner / System Owner</td>
+<td>存取控制與保存期限。</td>
+</tr>
+<tr>
+<td>高</td>
+<td>機密資料、客戶資料、遮罩PII、正式資料抽樣。</td>
+<td>Data Owner / CISO，涉及PII需DPO。</td>
+<td>遮罩驗證、加密、DLP、刪除證明。</td>
+</tr>
+<tr>
+<td>極高</td>
+<td>未遮罩PII、高機密、正式交易資料、大量客戶資料、AI訓練正式資料。</td>
+<td>CISO、DPO、Data Owner、管理階層授權代表。</td>
+<td>原則禁止；需無替代方案、強補償控制、短期限與重評。</td>
+</tr>
+<tr>
+<td>AI高風險</td>
+<td>AI訓練/微調資料、RAG正式資料源、模型評估敏感資料。</td>
+<td>AI Governance、Data Owner、DPO、CISO。</td>
+<td>模型風險評估、資料授權、輸出監控、刪除與版本化。</td>
+</tr>
+<tr>
+<td>供應商高風險</td>
+<td>供應商取得遮罩正式資料或客戶資料。</td>
+<td>Supplier Management、Legal、Data Owner、CISO，涉及PII需DPO。</td>
+<td>NDA/DPA、存取限制、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 測試資料品質與可用性要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>品質面向</th>
+<th>要求</th>
+<th>驗證方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>代表性</td>
+<td>資料應涵蓋主要業務情境、邊界條件、錯誤條件與重要使用者角色。</td>
+<td>測試案例對映。</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>資料關聯、外鍵、交易狀態與時間序列需符合測試需求。</td>
+<td>資料完整性檢查。</td>
+</tr>
+<tr>
+<td>可重複性</td>
+<td>重要測試資料集應可重複產生或版本化保存。</td>
+<td>資料產生腳本與版本。</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>資料不得含未核准PII、Secrets或正式敏感值。</td>
+<td>DLP、Secrets掃描、抽樣檢查。</td>
+</tr>
+<tr>
+<td>效能適用性</td>
+<td>效能測試資料需模擬合理資料量、分布、歷史期間與負載特徵。</td>
+<td>效能測試準備紀錄。</td>
+</tr>
+<tr>
+<td>AI適用性</td>
+<td>AI測試資料需標示標籤、預期輸出、偏誤檢查、資料來源與授權。</td>
+<td>AI資料卡或評估集紀錄。</td>
+</tr>
+<tr>
+<td>更新頻率</td>
+<td>測試資料應依業務變更、Schema變更或測試需求更新。</td>
+<td>資料集版本紀錄。</td>
+</tr>
+<tr>
+<td>可刪除性</td>
+<td>測試資料應可定位、可刪除、可確認刪除範圍。</td>
+<td>刪除測試與清冊。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 測試資料監控與異常處理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>異常情境</th>
+<th>判定條件</th>
+<th>處置要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>未核准正式資料出現於測試環境</td>
+<td>DLP、抽查、資料庫掃描或人員通報發現未核准正式資料。</td>
+<td>立即限制存取、通報CISO/Data Owner/DPO，評估是否啟動事件。</td>
+</tr>
+<tr>
+<td>測試資料含Secrets</td>
+<td>Secrets掃描命中有效Key、Token、密碼、私鑰或憑證。</td>
+<td>立即撤銷輪替、清除資料、調查來源。</td>
+</tr>
+<tr>
+<td>測試資料外部分享</td>
+<td>發現測試資料被分享至個人雲端、Email、聊天工具、未核准SaaS或供應商。</td>
+<td>停止分享、回收連結、調查與通報。</td>
+</tr>
+<tr>
+<td>測試資料逾期保存</td>
+<td>資料超過核准期限未刪除或未續核。</td>
+<td>通知Owner，限制存取並要求刪除或重新核准。</td>
+</tr>
+<tr>
+<td>AI工具輸入敏感測試資料</td>
+<td>敏感測試資料輸入未核准AI工具或外部模型。</td>
+<td>依AI資料使用政策與事件程序處理。</td>
+</tr>
+<tr>
+<td>重新識別風險升高</td>
+<td>遮罩資料可與其他資料集結合識別個人或客戶。</td>
+<td>停止使用，重新遮罩或匿名化，DPO重評。</td>
+</tr>
+<tr>
+<td>供應商逾期保留資料</td>
+<td>供應商未於期限內刪除測試資料或未提供證明。</td>
+<td>依合約要求補救、暫停存取並升級風險。</td>
+</tr>
+<tr>
+<td>測試資料回流正式環境</td>
+<td>發現測試資料或假資料被寫入正式系統。</td>
+<td>立即隔離資料、修正、評估業務影響與事件等級。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 測試資料例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需使用未遮罩正式資料</td>
+<td>需證明無替代方案、最小化、短期限、隔離、加密、監控、刪除與事件準備。</td>
+<td>CISO / DPO / Data Owner / 管理階層授權代表</td>
+<td>最長30日，高風險每週追蹤。</td>
+</tr>
+<tr>
+<td>無法完成完整遮罩</td>
+<td>需說明限制、補償控制、剩餘風險、欄位排除與重新遮罩計畫。</td>
+<td>Data Owner / DPO / CISO</td>
+<td>最長60日。</td>
+</tr>
+<tr>
+<td>測試資料需跨境</td>
+<td>需DPIA、Legal審查、合約條款、地區風險、加密與刪除證明。</td>
+<td>DPO / Legal / CISO</td>
+<td>依案件核准。</td>
+</tr>
+<tr>
+<td>供應商需下載測試資料</td>
+<td>需NDA/DPA、最小資料、加密傳輸、存取紀錄、刪除證明與期限。</td>
+<td>Supplier Management / Data Owner / CISO</td>
+<td>專案期限內，最長90日。</td>
+</tr>
+<tr>
+<td>AI訓練需使用正式資料</td>
+<td>需AI風險評估、資料授權、DPO審查、資料不訓練條款、模型輸出風險與刪除計畫。</td>
+<td>AI Governance / DPO / CISO</td>
+<td>依AI風險設定，至少每季重評。</td>
+</tr>
+<tr>
+<td>測試資料需延長保存</td>
+<td>需說明原因、資料分類、剩餘風險、存取限制與新期限。</td>
+<td>Data Owner / Test Data Owner</td>
+<td>最長90日或專案期限。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 測試資料管理檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>需求明確</td>
+<td>是否清楚定義測試目的、資料範圍、環境、使用者、期限與Owner？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>替代方案</td>
+<td>是否優先評估合成資料、範例資料、Mock或遮罩資料？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>是否確認資料分類、PII、客戶資料、機密資料、AI資料與合約限制？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>核准完整</td>
+<td>是否取得Data Owner、DPO、CISO、AI Governance或供應商管理之必要核准？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>遮罩驗證</td>
+<td>遮罩、去識別或匿名化是否經驗證且重新識別風險可接受？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets排除</td>
+<td>測試資料是否不含正式Secrets、Token、API Key、憑證或私鑰？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>存取限制</td>
+<td>是否僅授權必要人員、系統與供應商存取測試資料？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>環境區隔</td>
+<td>測試資料是否僅存放於核准環境且與正式環境隔離？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI使用限制</td>
+<td>測試資料是否未輸入未核准AI工具或外部模型？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>監控紀錄</td>
+<td>資料存取、下載、匯出、刪除與異常是否有紀錄？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>是否設定保存期限並安排到期提醒或自動刪除？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>刪除證明</td>
+<td>測試完成或期限屆滿後是否刪除主資料、副本、快照、索引與暫存？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 測試資料清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料集編號</th>
+<th>資料集名稱</th>
+<th>系統 / 環境</th>
+<th>資料來源</th>
+<th>資料分類</th>
+<th>資料類型</th>
+<th>Owner</th>
+<th>使用目的</th>
+<th>保存期限</th>
+<th>狀態</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>TDM-0001</td>
+<td></td>
+<td></td>
+<td>□ 合成 □ 範例 □ 正式抽樣 □ 遮罩正式資料 □ AI評估 □ RAG資料源</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td>□ 測試 □ UAT □ 安全測試 □ 效能測試 □ AI測試 □ 供應商測試</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 待刪除 □ 已刪除 □ 封存</td>
+<td></td>
+</tr>
+<tr>
+<td>TDM-0002</td>
+<td></td>
+<td></td>
+<td>□ 合成 □ 範例 □ 正式抽樣 □ 遮罩正式資料 □ AI評估 □ RAG資料源</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td>□ 測試 □ UAT □ 安全測試 □ 效能測試 □ AI測試 □ 供應商測試</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 待刪除 □ 已刪除 □ 封存</td>
+<td></td>
+</tr>
+<tr>
+<td>TDM-0003</td>
+<td></td>
+<td></td>
+<td>□ 合成 □ 範例 □ 正式抽樣 □ 遮罩正式資料 □ AI評估 □ RAG資料源</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td>□ 測試 □ UAT □ 安全測試 □ 效能測試 □ AI測試 □ 供應商測試</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 使用中 □ 待刪除 □ 已刪除 □ 封存</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 測試資料申請表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位</th>
+<th>填寫內容</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>申請單號</td>
+<td>TDM-REQ-YYYY-0001</td>
+<td></td>
+</tr>
+<tr>
+<td>申請日期</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>申請人 / 單位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>系統 / 專案名稱</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>測試環境</td>
+<td>□ Dev □ Test □ UAT □ Staging □ Sandbox □ AI/MLOps □ Vendor</td>
+<td></td>
+</tr>
+<tr>
+<td>測試目的</td>
+<td>□ 功能 □ UAT □ 安全測試 □ 效能 □ 資料遷移 □ AI評估 □ RAG測試 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>資料來源</td>
+<td>□ 合成 □ 範例 □ 正式系統 □ SaaS □ 日誌 □ AI資料集 □ 其他</td>
+<td></td>
+</tr>
+<tr>
+<td>資料範圍</td>
+<td></td>
+<td>資料表、欄位、筆數、期間、文件或索引。</td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料 □ AI資料</td>
+<td></td>
+</tr>
+<tr>
+<td>替代方案評估</td>
+<td>□ 可用合成資料 □ 可用遮罩資料 □ 無替代方案，原因：______</td>
+<td></td>
+</tr>
+<tr>
+<td>遮罩方式</td>
+<td></td>
+<td>替代、亂數、泛化、Tokenization、匿名化等。</td>
+</tr>
+<tr>
+<td>使用者 / 供應商</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>刪除方式</td>
+<td></td>
+<td>主資料、副本、備份、索引、Notebook輸出等。</td>
+</tr>
+<tr>
+<td>核准角色</td>
+<td>Data Owner / DPO / CISO / AI Governance / Supplier Management</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 測試資料刪除確認表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>刪除項目</th>
+<th>檢查內容</th>
+<th>結果</th>
+<th>證據位置</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>主資料集</td>
+<td>核准測試資料主資料是否已刪除或封存？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>副本與匯出檔</td>
+<td>本機副本、CSV、Excel、JSON、備份下載檔是否已刪除？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料庫快照</td>
+<td>測試資料相關快照、Clone、Dump、Replica是否已刪除？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與暫存</td>
+<td>備份、暫存區、ETL中介檔、Cache是否已處理？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>RAG與向量索引</td>
+<td>RAG測試資料源、向量索引、Embedding與Metadata是否已刪除？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI輸入輸出</td>
+<td>Prompt、輸入、輸出、評估紀錄是否依保存要求處理？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商副本</td>
+<td>供應商是否已刪除資料並提供證明？</td>
+<td>□ 已刪除 □ 封存 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>權限撤銷</td>
+<td>測試資料存取帳號、共享連結與授權是否撤銷？</td>
+<td>□ 已撤銷 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>測試資料清冊狀態是否更新？</td>
+<td>□ 已更新 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>測試資料申請與核准</td>
+<td>測試目的、資料範圍、分類、核准、遮罩、保存期限與刪除要求。</td>
+<td>Test Data Management Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>測試資料清冊</td>
+<td>資料集編號、來源、分類、Owner、環境、用途、期限、狀態與刪除紀錄。</td>
+<td>Test Data Management Owner</td>
+<td>資料有效期間及刪除後至少3年。</td>
+</tr>
+<tr>
+<td>遮罩與去識別紀錄</td>
+<td>遮罩規則、欄位、方法、驗證結果、重新識別風險評估。</td>
+<td>Data Engineer / DPO</td>
+<td>至少3年或依法規要求。</td>
+</tr>
+<tr>
+<td>資料存取與傳輸紀錄</td>
+<td>資料載入、下載、存取、分享、匯出、傳輸與供應商存取紀錄。</td>
+<td>System Owner / SOC</td>
+<td>至少1至3年，依資料分類。</td>
+</tr>
+<tr>
+<td>AI測試資料紀錄</td>
+<td>模型、Prompt、RAG、向量索引、資料來源、授權、版本與刪除。</td>
+<td>AI Governance / MLOps Owner</td>
+<td>至少3年或模型有效期間。</td>
+</tr>
+<tr>
+<td>供應商資料使用紀錄</td>
+<td>資料提供、NDA/DPA、存取、使用、刪除證明與事件通報。</td>
+<td>Supplier Management / Data Owner</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>例外與風險接受</td>
+<td>例外原因、補償控制、核准、期限、重評與關閉證據。</td>
+<td>CISO / ISMS管理代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>刪除與封存證明</td>
+<td>主資料、副本、備份、快照、RAG索引、AI輸出與供應商副本刪除證明。</td>
+<td>Data Owner / System Owner</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>測試資料清冊完整率</td>
+<td>已登錄測試資料集 / 應登錄測試資料集。</td>
+<td>目標100%。</td>
+<td>測試資料治理完整性。</td>
+</tr>
+<tr>
+<td>合成/遮罩資料使用率</td>
+<td>使用合成或遮罩資料之測試資料集 / 全部測試資料集。</td>
+<td>趨勢應提升。</td>
+<td>降低正式資料風險。</td>
+</tr>
+<tr>
+<td>未核准正式資料使用數</td>
+<td>非正式環境發現未核准正式資料事件數。</td>
+<td>目標0。</td>
+<td>資料外洩預防。</td>
+</tr>
+<tr>
+<td>測試資料含Secrets命中數</td>
+<td>測試資料中偵測到有效Secrets、Token、Key或憑證數。</td>
+<td>目標0。</td>
+<td>Secrets外洩預防。</td>
+</tr>
+<tr>
+<td>測試資料逾期未刪除數</td>
+<td>超過保存期限仍未刪除或重新核准之資料集數。</td>
+<td>目標0。</td>
+<td>保存期限控制。</td>
+</tr>
+<tr>
+<td>遮罩驗證不合格率</td>
+<td>遮罩資料抽查或驗證不合格之比例。</td>
+<td>目標0或持續下降。</td>
+<td>遮罩品質管理。</td>
+</tr>
+<tr>
+<td>AI測試資料核准率</td>
+<td>AI/RAG/模型測試資料完成核准與版本紀錄比例。</td>
+<td>目標100%。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>供應商刪除證明取得率</td>
+<td>供應商測試資料於專案結束後取得刪除證明之比例。</td>
+<td>目標100%。</td>
+<td>供應鏈資料保護。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>測試資料申請</td>
+<td>測試資料是否於使用前提出需求並記錄目的、範圍、分類、環境與期限。</td>
+<td>測試資料申請表。</td>
+</tr>
+<tr>
+<td>替代方案與最小化</td>
+<td>是否優先使用合成、範例、Mock或最小化資料。</td>
+<td>替代方案評估紀錄。</td>
+</tr>
+<tr>
+<td>核准與隱私審查</td>
+<td>PII、客戶資料、正式資料或AI資料是否取得Data Owner、DPO、CISO或AI Governance核准。</td>
+<td>核准紀錄、DPIA。</td>
+</tr>
+<tr>
+<td>遮罩與去識別</td>
+<td>遮罩方法是否適當，是否驗證結果與重新識別風險。</td>
+<td>遮罩規則、驗證報告。</td>
+</tr>
+<tr>
+<td>Secrets排除</td>
+<td>測試資料、Repo、Notebook與匯出檔是否無正式Secrets。</td>
+<td>Secrets掃描報告。</td>
+</tr>
+<tr>
+<td>環境與存取控制</td>
+<td>測試資料是否僅存於核准環境，權限是否最小化且可追蹤。</td>
+<td>IAM、環境清冊、存取紀錄。</td>
+</tr>
+<tr>
+<td>AI與RAG資料</td>
+<td>AI/RAG測試資料是否具來源、授權、版本、權限、刪除與安全測試證據。</td>
+<td>AI資料清冊、RAG測試。</td>
+</tr>
+<tr>
+<td>供應商使用</td>
+<td>供應商取得測試資料是否有合約、NDA/DPA、存取限制與刪除證明。</td>
+<td>合約、刪除證明。</td>
+</tr>
+<tr>
+<td>保存與刪除</td>
+<td>測試完成或期限屆滿後是否刪除主資料、副本、快照、索引與暫存。</td>
+<td>刪除確認表。</td>
+</tr>
+<tr>
+<td>管理審查</td>
+<td>KPI/KRI、重大缺失、例外、未核准使用與改善是否納入管理審查。</td>
+<td>管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. 附錄A：測試資料風險評估表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>評估問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類</td>
+<td>資料是否包含PII、客戶資料、機密、高機密或受合約限制資料？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料量</td>
+<td>資料筆數、期間或文件量是否超過測試目的必要範圍？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>重新識別</td>
+<td>遮罩或去識別後是否仍可能透過其他資料重新識別？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>環境安全</td>
+<td>目標測試環境是否具加密、權限、日誌、DLP與網路隔離？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>使用者範圍</td>
+<td>是否僅限必要人員或供應商存取？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>AI或外部工具</td>
+<td>資料是否會輸入AI工具、外部SaaS或第三方服務？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>跨境傳輸</td>
+<td>資料是否會跨境或存放於境外雲端區域？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>保存期限</td>
+<td>是否設定明確刪除日期與刪除責任人？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與快照</td>
+<td>測試資料是否可能進入備份、快照、Log或索引？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>剩餘風險</td>
+<td>剩餘風險是否可接受或需風險接受？</td>
+<td>□ 可接受 □ 需改善 □ 需風險接受</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 附錄B：測試資料遮罩驗證案例建議</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>驗證案例</th>
+<th>驗證目的</th>
+<th>預期結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>姓名與識別碼檢查</td>
+<td>確認姓名、身分證號、護照、員工編號或客戶ID已遮罩。</td>
+<td>不得出現真實直接識別資料。</td>
+</tr>
+<tr>
+<td>Email與電話檢查</td>
+<td>確認Email、電話與地址已替代或泛化。</td>
+<td>不得可聯絡真實個人或客戶。</td>
+</tr>
+<tr>
+<td>關聯性檢查</td>
+<td>確認測試必要關聯仍可用，例如訂單與客戶關係。</td>
+<td>業務測試可執行，但不可識別真實個體。</td>
+</tr>
+<tr>
+<td>重新識別抽查</td>
+<td>以常見外部資料或內部輔助欄位嘗試重新識別。</td>
+<td>重新識別風險可接受。</td>
+</tr>
+<tr>
+<td>Secrets掃描</td>
+<td>掃描測試資料、匯出檔、Log、Notebook與Repo。</td>
+<td>不得命中有效Secrets。</td>
+</tr>
+<tr>
+<td>AI資料檢查</td>
+<td>確認Prompt、RAG資料與AI評估資料無未核准PII或Secrets。</td>
+<td>AI資料符合核准範圍。</td>
+</tr>
+<tr>
+<td>刪除驗證</td>
+<td>測試完成後檢查主資料、副本、索引、快照與暫存是否刪除。</td>
+<td>刪除證據完整。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

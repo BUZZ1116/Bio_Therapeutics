@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-MTX-001 ICT供應鏈風險矩陣</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-MTX-001 ICT供應鏈風險矩陣</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-MTX-001</td>
+<td>ICT供應鏈風險矩陣</td>
+<td>第四階：表單與紀錄 / MTX / 矩陣</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>供應商與雲端安全Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-MTX-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>供應商與雲端安全Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>矩陣建立</td>
+<td></td>
+<td>供應鏈風險管理負責人 / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC / 資安架構代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>採購與供應商管理審查</td>
+<td></td>
+<td>採購主管 / 供應商管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合規審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與技術審查</td>
+<td></td>
+<td>Cloud Security / IT架構負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS/DRP審查</td>
+<td></td>
+<td>BCMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / 供應鏈治理委員會 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 矩陣目的</h2>
+<p>本矩陣用於系統化識別、分析、評估、排序、處理與監督ICT供應鏈風險，將供應商、第四方、雲端服務、AI服務、軟體元件、資料中心、通訊服務、外包開發、開源元件與關鍵技術依賴之風險，連結至資訊資產、服務重要性、法規合約、SoA控制措施、風險處理計畫、監督指標與管理審查。</p>
+<p>本矩陣支援ISO/IEC 27001:2022 Annex A.5.21 ICT供應鏈資訊安全管理，並與A.5.19、A.5.20、A.5.22、A.5.23及資訊安全風險管理流程整合，形成可稽核、可追溯、可量測與可持續改善之ICT供應鏈風險治理證據。</p>
+
+<h2>2. 使用原則</h2>
+<ul>
+<li>所有中高風險ICT供應商、關鍵服務、雲端/AI/外包開發/資料處理供應商、第四方依賴與關鍵軟體元件，均應納入本矩陣。</li>
+<li>矩陣應於新供應商導入、重大變更、續約、事件後、年度審查、客戶/監管要求或新增關鍵第四方時更新。</li>
+<li>風險評分應考量可能性、衝擊、資料敏感性、服務重要性、供應鏈透明度、集中依賴、控制成熟度、合約完整性及殘餘風險。</li>
+<li>不可接受風險應轉入風險處理計畫、合約補強、補償控制、替代方案、供應商改善計畫、CAPA或剩餘風險接受流程。</li>
+</ul>
+
+<h2>3. ICT供應鏈範圍與分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應鏈類型</th>
+<th>範圍說明</th>
+<th>典型風險</th>
+<th>主要治理文件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端服務供應鏈</td>
+<td>SaaS、PaaS、IaaS、CDN、DNS、雲端資料庫、IAM、KMS、監控平台。</td>
+<td>資料跨境、共享責任不清、組態錯誤、集中依賴、區域中斷。</td>
+<td>、雲端服務使用政策、供應商登錄表。</td>
+</tr>
+<tr>
+<td>AI服務供應鏈</td>
+<td>LLM、AI API、模型供應商、MLOps、資料集、標註服務、AI代理。</td>
+<td>資料被訓練、模型變更、輸出錯誤、偏差、提示注入、AI事件。</td>
+<td>AI工具與資料使用政策、AI服務清冊、AI風險評估。</td>
+</tr>
+<tr>
+<td>軟體供應鏈</td>
+<td>商用軟體、開源元件、SDK、套件庫、CI/CD、外包開發、程式碼Repo。</td>
+<td>惡意套件、CVE、SBOM不足、授權風險、CI/CD遭入侵。</td>
+<td>SBOM、SCA報告、Secure SDLC紀錄。</td>
+</tr>
+<tr>
+<td>硬體與韌體供應鏈</td>
+<td>伺服器、網通設備、端點設備、IoT、韌體、維修零件。</td>
+<td>植入、韌體弱點、偽冒零件、EOL/EOS、維修資料外洩。</td>
+<td>資產清冊、設備安全基準、採購規格。</td>
+</tr>
+<tr>
+<td>資料中心與通訊供應鏈</td>
+<td>IDC、機房托管、電信、專線、VPN、網路維護。</td>
+<td>物理安全、中斷、區域災害、SLA不達標、單點依賴。</td>
+<td>BCP/DR、SLA、供應商登錄。</td>
+</tr>
+<tr>
+<td>資料與查證供應鏈</td>
+<td>資料供應商、GHG/ESG資料、排放係數、查證機構、研究資料。</td>
+<td>資料錯誤、版本失控、來源不可追溯、揭露錯誤。</td>
+<td>GHG資料治理、查證底稿、資料來源證據。</td>
+</tr>
+<tr>
+<td>維運與顧問供應鏈</td>
+<td>外包維運、遠端支援、顧問、稽核、測試實驗室。</td>
+<td>遠端存取濫用、證據外洩、利益衝突、權限未撤銷。</td>
+<td>遠端支援紀錄、合約條款、稽核計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. ICT供應鏈風險評估維度</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估維度</th>
+<th>說明</th>
+<th>高風險判定範例</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料敏感性</td>
+<td>供應商或元件接觸、處理、儲存或傳輸之資料敏感程度。</td>
+<td>高機密、大量PII、客戶資料、源碼、金鑰、事件證據、GHG查證底稿。</td>
+</tr>
+<tr>
+<td>服務重要性</td>
+<td>服務中斷、降級或失效對業務、客戶、法規與營運持續之影響。</td>
+<td>關鍵服務、RTO/RPO受影響、客戶SLA受影響、替代困難。</td>
+</tr>
+<tr>
+<td>供應鏈透明度</td>
+<td>直接供應商對第四方、子處理者、元件、區域與依賴關係揭露程度。</td>
+<td>第四方不可視、SBOM不足、子處理者拒絕揭露、雲端區域不明。</td>
+</tr>
+<tr>
+<td>控制成熟度</td>
+<td>供應商ISMS、弱點管理、事件管理、雲端安全、AI治理、BCP/DR能力。</td>
+<td>無ISO/SOC證據、弱點未修補、事件通報不明、BCP未測試。</td>
+</tr>
+<tr>
+<td>合約完整性</td>
+<td>合約是否涵蓋安全條款、DPA、稽核權、事件通報、退場、第四方與SLA。</td>
+<td>無DPA、無稽核權、無事件通報、無刪除證明、無第四方變更通知。</td>
+</tr>
+<tr>
+<td>集中依賴</td>
+<td>組織是否過度依賴單一供應商、單一雲區、單一模型或單一元件。</td>
+<td>無替代方案、供應商鎖定、單一雲區、單一AI API。</td>
+</tr>
+<tr>
+<td>外部威脅暴露</td>
+<td>供應鏈是否暴露於公開網路、高攻擊價值、地緣、制裁、政治或供應短缺風險。</td>
+<td>公開API、關鍵基礎設施、地緣風險、EOL/EOS設備。</td>
+</tr>
+<tr>
+<td>監督可行性</td>
+<td>組織是否可取得日誌、證據、稽核、KPI/KRI與改善追蹤。</td>
+<td>無日誌、拒絕稽核、證據過期、缺口無法追蹤。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 風險評分準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>分數</th>
+<th>可能性判定</th>
+<th>衝擊判定</th>
+<th>適用說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1 極低</td>
+<td>風險事件極少發生，控制成熟且有充分證據。</td>
+<td>即使發生，影響可忽略或可快速復原。</td>
+<td>低敏感資料、非關鍵服務、替代容易。</td>
+</tr>
+<tr>
+<td>2 低</td>
+<td>偶爾可能發生，控制大致有效。</td>
+<td>影響有限，局部流程受影響。</td>
+<td>一般內部服務、少量資料、可替代。</td>
+</tr>
+<tr>
+<td>3 中</td>
+<td>具有合理發生可能，控制或證據部分不足。</td>
+<td>可能影響重要流程、客戶服務或合規證據。</td>
+<td>重要服務、部分機密資料、供應商依賴中等。</td>
+</tr>
+<tr>
+<td>4 高</td>
+<td>已知弱點、控制不足、供應商不透明或歷史事件。</td>
+<td>可能造成重大營運、客戶、財務、合規或聲譽影響。</td>
+<td>高機密/PII、關鍵服務、雲端/AI/第四方高度依賴。</td>
+</tr>
+<tr>
+<td>5 極高</td>
+<td>風險即將發生、正在發生或控制明顯失效。</td>
+<td>可能造成重大事件、服務中斷、資料外洩、監管通報或客戶重大損害。</td>
+<td>核心供應鏈單點、不可替代、無合約/控制證據。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 風險等級與處理門檻</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險分數</th>
+<th>風險等級</th>
+<th>處理要求</th>
+<th>核准層級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1-4</td>
+<td>低</td>
+<td>接受並納入例行監督。</td>
+<td>供應商Owner / 服務Owner</td>
+</tr>
+<tr>
+<td>5-9</td>
+<td>中</td>
+<td>制定改善要求或監督計畫，於年度或變更時重評。</td>
+<td>ISMS代表 / 供應商管理</td>
+</tr>
+<tr>
+<td>10-15</td>
+<td>高</td>
+<td>建立風險處理計畫、合約補強、補償控制或附條件核准。</td>
+<td>CISO / Data Owner / 專項Owner</td>
+</tr>
+<tr>
+<td>16-25</td>
+<td>極高</td>
+<td>不得新增或續用，除非完成高層核准、立即補救、替代方案或正式剩餘風險接受。</td>
+<td>CISO / 最高管理階層授權代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. ICT供應鏈風險主矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險ID</th>
+<th>供應商/元件</th>
+<th>供應鏈類型</th>
+<th>風險描述</th>
+<th>可能性</th>
+<th>衝擊</th>
+<th>固有風險</th>
+<th>現有控制</th>
+<th>剩餘風險</th>
+<th>風險處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ICT-SCRM-R-001</td>
+<td></td>
+<td>□ 雲端　□ AI　□ 軟體　□ 硬體　□ 通訊　□ 外包　□ 資料</td>
+<td></td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-002</td>
+<td></td>
+<td>□ 雲端　□ AI　□ 軟體　□ 硬體　□ 通訊　□ 外包　□ 資料</td>
+<td></td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-003</td>
+<td></td>
+<td>□ 雲端　□ AI　□ 軟體　□ 硬體　□ 通訊　□ 外包　□ 資料</td>
+<td></td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-004</td>
+<td></td>
+<td>□ 雲端　□ AI　□ 軟體　□ 硬體　□ 通訊　□ 外包　□ 資料</td>
+<td></td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 供應商關鍵性與風險對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商編號</th>
+<th>供應商名稱</th>
+<th>服務重要性</th>
+<th>資料敏感性</th>
+<th>存取權限</th>
+<th>第四方依賴</th>
+<th>合約完整性</th>
+<th>綜合風險</th>
+<th>審查頻率</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SUP-001</td>
+<td></td>
+<td>□ 關鍵　□ 重要　□ 一般</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 特權　□ 一般　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+</tr>
+<tr>
+<td>SUP-002</td>
+<td></td>
+<td>□ 關鍵　□ 重要　□ 一般</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 特權　□ 一般　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+</tr>
+<tr>
+<td>SUP-003</td>
+<td></td>
+<td>□ 關鍵　□ 重要　□ 一般</td>
+<td>□ 高機密　□ 機密　□ 內部　□ 公開</td>
+<td>□ 特權　□ 一般　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 每月　□ 每季　□ 半年　□ 年度</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. ICT供應鏈威脅來源矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>威脅來源</th>
+<th>風險情境</th>
+<th>受影響供應鏈</th>
+<th>可能後果</th>
+<th>主要控制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>惡意供應商或內部人員</td>
+<td>供應商人員濫用權限、竊取資料、未授權下載或植入後門。</td>
+<td>外包維運、開發、雲端管理、遠端支援。</td>
+<td>資料外洩、系統破壞、供應鏈入侵。</td>
+<td>背景查核、NDA、MFA、PAM、Session Recording、最小權限。</td>
+</tr>
+<tr>
+<td>遭入侵供應商</td>
+<td>供應商被攻擊者入侵後作為跳板攻擊組織。</td>
+<td>SaaS、MSP、MSSP、遠端支援、CI/CD。</td>
+<td>橫向移動、勒索、憑證竊取。</td>
+<td>供應商監控、事件通報、零信任、網路隔離、存取審查。</td>
+</tr>
+<tr>
+<td>惡意軟體元件</td>
+<td>開源套件或商用元件被植入惡意程式碼。</td>
+<td>軟體供應鏈、CI/CD、SDK。</td>
+<td>資料竊取、後門、供應鏈攻擊。</td>
+<td>SBOM、SCA、簽章驗證、Repo保護、套件來源控管。</td>
+</tr>
+<tr>
+<td>雲端區域或平台中斷</td>
+<td>供應商雲端區域、DNS、CDN或IAM服務中斷。</td>
+<td>SaaS/PaaS/IaaS、CDN、DNS、IAM。</td>
+<td>服務不可用、客戶SLA違反。</td>
+<td>多區域、DR、備援、替代方案、SLA監督。</td>
+</tr>
+<tr>
+<td>AI模型或服務失效</td>
+<td>AI服務輸出錯誤、模型變更、資料外洩或濫用輸入資料訓練。</td>
+<td>AI API、GenAI、MLOps、資料標註。</td>
+<td>錯誤決策、資料外洩、法規/聲譽損害。</td>
+<td>AI條款、人類監督、輸出驗證、AI事件通報。</td>
+</tr>
+<tr>
+<td>地緣與法規變化</td>
+<td>供應商所在地政策、制裁、出口管制、跨境資料法規變化。</td>
+<td>雲端、硬體、資料處理、外包服務。</td>
+<td>服務中斷、資料轉移違法、供應短缺。</td>
+<td>法務監測、多供應商、資料地區控制、替代方案。</td>
+</tr>
+<tr>
+<td>查證與資料來源錯誤</td>
+<td>第三方資料、GHG係數、查證資料或供應鏈碳資料不準確。</td>
+<td>資料供應商、GHG/ESG、查證機構。</td>
+<td>揭露錯誤、查證不符合、客戶信任損害。</td>
+<td>資料來源驗證、版本控制、查證支援、對帳。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. ICT供應鏈弱點矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>弱點類型</th>
+<th>弱點描述</th>
+<th>典型證據缺口</th>
+<th>風險影響</th>
+<th>改善方向</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>合約弱點</td>
+<td>合約缺少事件通報、稽核權、DPA、退場、第四方揭露或SLA。</td>
+<td>未簽DPA、安全附件不足、責任上限不合理。</td>
+<td>事件無法協作、資料無法刪除、無法稽核。</td>
+<td>補充合約、安全附件、風險接受或限制使用。</td>
+</tr>
+<tr>
+<td>技術弱點</td>
+<td>供應商系統弱點、雲端組態錯誤、未加密、日誌不足。</td>
+<td>無滲測報告、無SOC報告、日誌不可取得。</td>
+<td>資料外洩、未偵測事件、服務中斷。</td>
+<td>安全證據、弱點修補、SIEM整合、CSPM。</td>
+</tr>
+<tr>
+<td>流程弱點</td>
+<td>供應商變更、事件、權限、刪除或退場流程不成熟。</td>
+<td>流程文件不足、無演練、無RCA/PIR。</td>
+<td>通報延誤、權限殘留、資料遺留。</td>
+<td>流程補強、演練、審查、KPI/KRI。</td>
+</tr>
+<tr>
+<td>供應鏈透明度弱點</td>
+<td>第四方、子處理者、軟體元件、資料地區不透明。</td>
+<td>不提供SBOM、不揭露子處理者。</td>
+<td>風險不可視、合規不可證明。</td>
+<td>揭露條款、第四方登錄、SBOM要求。</td>
+</tr>
+<tr>
+<td>能力弱點</td>
+<td>供應商安全、人力、BCP/DR、AI治理或隱私能力不足。</td>
+<td>無ISO/SOC、無DPO、無AI治理、無DR測試。</td>
+<td>控制失效、稽核不符合、事件處置不足。</td>
+<td>能力提升、替代供應商、附條件核准。</td>
+</tr>
+<tr>
+<td>監督弱點</td>
+<td>組織無法持續監督供應商績效、缺口與事件趨勢。</td>
+<td>無KPI/KRI、無定期審查、證據過期。</td>
+<td>風險累積、逾期缺口、管理盲點。</td>
+<td>建立監督計畫、GRC追蹤、管理審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 資料敏感度與供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料類型</th>
+<th>供應商處理情境</th>
+<th>風險等級建議</th>
+<th>必要控制</th>
+<th>專項審查</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開資料</td>
+<td>供應商僅處理已核准公開資料。</td>
+<td>低</td>
+<td>版本與發布核准。</td>
+<td>通常不需要。</td>
+</tr>
+<tr>
+<td>內部資料</td>
+<td>供應商存取內部流程、一般文件或支援資料。</td>
+<td>低至中</td>
+<td>NDA、存取控制、可接受使用。</td>
+<td>依情境。</td>
+</tr>
+<tr>
+<td>機密資料</td>
+<td>供應商處理客戶、合約、技術、財務、設計資料。</td>
+<td>中至高</td>
+<td>加密、DLP、合約條款、稽核權、事件通報。</td>
+<td>資安/法務。</td>
+</tr>
+<tr>
+<td>高機密資料</td>
+<td>供應商處理核心源碼、金鑰、大量客戶資料、事件證據。</td>
+<td>高至極高</td>
+<td>PAM、強加密、Session Recording、CISO核准、替代方案。</td>
+<td>CISO/高層。</td>
+</tr>
+<tr>
+<td>PII/敏感PII</td>
+<td>供應商處理個人資料、員工資料、客戶PII或敏感資料。</td>
+<td>高至極高</td>
+<td>DPA、DPIA、跨境評估、最小化、DPO審查。</td>
+<td>DPO/PIMS。</td>
+</tr>
+<tr>
+<td>AI輸入/輸出</td>
+<td>供應商處理Prompt、AI輸出、模型資料、訓練資料。</td>
+<td>中至極高</td>
+<td>AI條款、資料不訓練、人類監督、AI事件通報。</td>
+<td>AI治理。</td>
+</tr>
+<tr>
+<td>GHG/CO2資料</td>
+<td>供應商提供或查證碳資料、係數、盤查底稿。</td>
+<td>中至高</td>
+<td>版本控制、來源證據、查證支援、揭露限制。</td>
+<td>GHG資料治理。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 第四方供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>第四方ID</th>
+<th>第四方名稱</th>
+<th>依賴服務</th>
+<th>資料/服務影響</th>
+<th>透明度</th>
+<th>替代性</th>
+<th>風險等級</th>
+<th>控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4P-001</td>
+<td></td>
+<td></td>
+<td>□ 資料　□ 服務　□ AI　□ 雲端　□ 通訊</td>
+<td>□ 完整　□ 部分　□ 不透明</td>
+<td>□ 高　□ 中　□ 低　□ 無</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>4P-002</td>
+<td></td>
+<td></td>
+<td>□ 資料　□ 服務　□ AI　□ 雲端　□ 通訊</td>
+<td>□ 完整　□ 部分　□ 不透明</td>
+<td>□ 高　□ 中　□ 低　□ 無</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>4P-003</td>
+<td></td>
+<td></td>
+<td>□ 資料　□ 服務　□ AI　□ 雲端　□ 通訊</td>
+<td>□ 完整　□ 部分　□ 不透明</td>
+<td>□ 高　□ 中　□ 低　□ 無</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 軟體供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>元件/服務</th>
+<th>來源</th>
+<th>用途</th>
+<th>SBOM狀態</th>
+<th>弱點狀態</th>
+<th>授權風險</th>
+<th>維護狀態</th>
+<th>風險等級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 商用　□ 開源　□ 內部　□ 外包</td>
+<td></td>
+<td>□ 有　□ 無　□ 不適用</td>
+<td>□ 無高風險　□ 有高風險　□ 未掃描</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 活躍　□ EOL　□ 未知</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 商用　□ 開源　□ 內部　□ 外包</td>
+<td></td>
+<td>□ 有　□ 無　□ 不適用</td>
+<td>□ 無高風險　□ 有高風險　□ 未掃描</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 活躍　□ EOL　□ 未知</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 商用　□ 開源　□ 內部　□ 外包</td>
+<td></td>
+<td>□ 有　□ 無　□ 不適用</td>
+<td>□ 無高風險　□ 有高風險　□ 未掃描</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 活躍　□ EOL　□ 未知</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 雲端供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>雲端服務</th>
+<th>服務模式</th>
+<th>資料地區</th>
+<th>共享責任成熟度</th>
+<th>中斷影響</th>
+<th>組態風險</th>
+<th>跨境風險</th>
+<th>風險等級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ SaaS　□ PaaS　□ IaaS</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 高　□ 中　□ 低　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. AI供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>AI服務/模型</th>
+<th>AI用途</th>
+<th>資料是否用於訓練</th>
+<th>模型透明度</th>
+<th>人類監督</th>
+<th>輸出影響</th>
+<th>AI事件通報</th>
+<th>風險等級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ GenAI　□ API　□ 分類　□ 預測　□ 推薦　□ 自動化決策</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 必須　□ 建議　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ GenAI　□ API　□ 分類　□ 預測　□ 推薦　□ 自動化決策</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 必須　□ 建議　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+<tr>
+<td></td>
+<td>□ GenAI　□ API　□ 分類　□ 預測　□ 推薦　□ 自動化決策</td>
+<td>□ 是　□ 否　□ 可關閉　□ 待確認</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 必須　□ 建議　□ 無</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 完整　□ 部分　□ 不足</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. ICT集中依賴與單點風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>依賴項目</th>
+<th>供應商/服務</th>
+<th>影響範圍</th>
+<th>替代方案</th>
+<th>切換時間</th>
+<th>單點風險</th>
+<th>處理策略</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份服務</td>
+<td></td>
+<td>□ 全組織　□ 特定系統　□ 客戶服務</td>
+<td></td>
+<td>□ 即時　□ 1-7日　□ 8-30日　□ 30日以上</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>雲端平台</td>
+<td></td>
+<td>□ 全組織　□ 特定系統　□ 客戶服務</td>
+<td></td>
+<td>□ 即時　□ 1-7日　□ 8-30日　□ 30日以上</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>AI API/模型</td>
+<td></td>
+<td>□ 全組織　□ 特定系統　□ 客戶服務</td>
+<td></td>
+<td>□ 即時　□ 1-7日　□ 8-30日　□ 30日以上</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>資料中心/通訊</td>
+<td></td>
+<td>□ 全組織　□ 特定系統　□ 客戶服務</td>
+<td></td>
+<td>□ 即時　□ 1-7日　□ 8-30日　□ 30日以上</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td>關鍵軟體元件</td>
+<td></td>
+<td>□ 全組織　□ 特定系統　□ 客戶服務</td>
+<td></td>
+<td>□ 即時　□ 1-7日　□ 8-30日　□ 30日以上</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 合約條款缺口風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商</th>
+<th>缺口類型</th>
+<th>缺口描述</th>
+<th>可能後果</th>
+<th>風險等級</th>
+<th>補救方式</th>
+<th>完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ DPA　□ 稽核權　□ 事件通報　□ 退場　□ 第四方　□ SLA　□ AI條款</td>
+<td></td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補約　□ 安全附件　□ 補償控制　□ 風險接受</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td></td>
+<td>□ DPA　□ 稽核權　□ 事件通報　□ 退場　□ 第四方　□ SLA　□ AI條款</td>
+<td></td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補約　□ 安全附件　□ 補償控制　□ 風險接受</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td></td>
+<td>□ DPA　□ 稽核權　□ 事件通報　□ 退場　□ 第四方　□ SLA　□ AI條款</td>
+<td></td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 補約　□ 安全附件　□ 補償控制　□ 風險接受</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. PII與跨境供應鏈風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商/服務</th>
+<th>PII類型</th>
+<th>資料地區</th>
+<th>跨境機制</th>
+<th>子處理者</th>
+<th>DPIA需求</th>
+<th>隱私風險</th>
+<th>控制要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 一般PII　□ 敏感PII　□ 大量PII</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ DPA　□ SCC　□ 合約　□ 待確認</td>
+<td>□ 已揭露　□ 部分　□ 未揭露</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>□ 一般PII　□ 敏感PII　□ 大量PII</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ DPA　□ SCC　□ 合約　□ 待確認</td>
+<td>□ 已揭露　□ 部分　□ 未揭露</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>□ 一般PII　□ 敏感PII　□ 大量PII</td>
+<td>□ 台灣　□ EU　□ US　□ APAC　□ 全球</td>
+<td>□ DPA　□ SCC　□ 合約　□ 待確認</td>
+<td>□ 已揭露　□ 部分　□ 未揭露</td>
+<td>□ 需要　□ 不需要</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. BCP/DR與服務持續風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商/服務</th>
+<th>關鍵流程</th>
+<th>SLA可用性</th>
+<th>RTO/RPO支援</th>
+<th>DR證據</th>
+<th>最近演練</th>
+<th>中斷風險</th>
+<th>處理措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有　□ 無　□ 待補</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 供應商事件歷史與趨勢風險矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>供應商</th>
+<th>事件類型</th>
+<th>最近事件日期</th>
+<th>嚴重度</th>
+<th>根因類型</th>
+<th>改善狀態</th>
+<th>重複性</th>
+<th>風險趨勢</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>□ 資安　□ 隱私　□ AI　□ SLA　□ 服務中斷　□ 弱點</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 技術　□ 流程　□ 人員　□ 第四方　□ 合約</td>
+<td>□ 完成　□ 進行中　□ 未開始</td>
+<td>□ 是　□ 否</td>
+<td>□ 上升　□ 持平　□ 下降</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 資安　□ 隱私　□ AI　□ SLA　□ 服務中斷　□ 弱點</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 技術　□ 流程　□ 人員　□ 第四方　□ 合約</td>
+<td>□ 完成　□ 進行中　□ 未開始</td>
+<td>□ 是　□ 否</td>
+<td>□ 上升　□ 持平　□ 下降</td>
+</tr>
+<tr>
+<td></td>
+<td>□ 資安　□ 隱私　□ AI　□ SLA　□ 服務中斷　□ 弱點</td>
+<td>YYYY-MM-DD</td>
+<td>□ 高　□ 中　□ 低</td>
+<td>□ 技術　□ 流程　□ 人員　□ 第四方　□ 合約</td>
+<td>□ 完成　□ 進行中　□ 未開始</td>
+<td>□ 是　□ 否</td>
+<td>□ 上升　□ 持平　□ 下降</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. ICT供應鏈風險處理矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險ID</th>
+<th>處理策略</th>
+<th>處理措施</th>
+<th>Control Owner</th>
+<th>完成期限</th>
+<th>殘餘風險</th>
+<th>驗證方式</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ICT-SCRM-R-001</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 證據審查　□ 測試　□ 稽核　□ 演練</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-002</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 證據審查　□ 測試　□ 稽核　□ 演練</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-003</td>
+<td>□ 降低　□ 轉移　□ 接受　□ 避免</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 證據審查　□ 測試　□ 稽核　□ 演練</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. 供應鏈風險與SoA控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險ID</th>
+<th>適用Annex A控制</th>
+<th>SoA狀態</th>
+<th>控制適用理由</th>
+<th>控制Owner</th>
+<th>控制證據</th>
+<th>有效性</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ICT-SCRM-R-001</td>
+<td>□ A.5.19 □ A.5.20 □ A.5.21 □ A.5.22 □ A.5.23 □ 其他</td>
+<td>□ 適用　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 部分　□ 無效</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-002</td>
+<td>□ A.5.19 □ A.5.20 □ A.5.21 □ A.5.22 □ A.5.23 □ 其他</td>
+<td>□ 適用　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 部分　□ 無效</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-003</td>
+<td>□ A.5.19 □ A.5.20 □ A.5.21 □ A.5.22 □ A.5.23 □ 其他</td>
+<td>□ 適用　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 有效　□ 部分　□ 無效</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 供應鏈風險接受矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險ID</th>
+<th>剩餘風險描述</th>
+<th>接受理由</th>
+<th>補償控制</th>
+<th>接受期限</th>
+<th>核准層級</th>
+<th>重評日</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ICT-SCRM-R-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ AI治理　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ AI治理　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>ICT-SCRM-R-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ Data Owner　□ CISO　□ DPO　□ AI治理　□ 管理階層</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 監督頻率與審查強度矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險等級</th>
+<th>審查頻率</th>
+<th>必要證據</th>
+<th>審查活動</th>
+<th>升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>低</td>
+<td>年度或合約變更時</td>
+<td>基本合約、NDA、供應商資料。</td>
+<td>基本審查。</td>
+<td>發生事件、服務範圍擴大。</td>
+</tr>
+<tr>
+<td>中</td>
+<td>每半年或年度</td>
+<td>供應商問卷、安全證據、合約條款、事件紀錄。</td>
+<td>文件審查、缺口追蹤。</td>
+<td>高風險缺口、證據失效、重大變更。</td>
+</tr>
+<tr>
+<td>高</td>
+<td>每季或半年</td>
+<td>ISO/SOC、DPA、安全附件、第四方清冊、BCP/DR、弱點證據。</td>
+<td>專項審查、KPI/KRI、風險處理追蹤。</td>
+<td>缺口逾期、重大事件、合約不足。</td>
+</tr>
+<tr>
+<td>極高</td>
+<td>每月或管理階層指定頻率</td>
+<td>完整證據、稽核權、DR演練、替代方案、剩餘風險核准。</td>
+<td>治理委員會監督、CAPA、事件演練或供應商稽核。</td>
+<td>風險惡化、事件重複、供應商不配合。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. ICT供應鏈KPI/KRI矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標名稱</th>
+<th>目標/門檻</th>
+<th>資料來源</th>
+<th>頻率</th>
+<th>Owner</th>
+<th>異常處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>中高風險ICT供應商風險矩陣覆蓋率</td>
+<td>100%</td>
+<td>供應商登錄表 / 本矩陣</td>
+<td>每季</td>
+<td>供應商管理 / ISMS代表</td>
+<td>未納入者暫停或限制啟用</td>
+</tr>
+<tr>
+<td>高風險供應鏈缺口逾期數</td>
+<td>0</td>
+<td>風險處理計畫 / GRC</td>
+<td>每月</td>
+<td>ISMS代表</td>
+<td>升級CISO與管理審查</td>
+</tr>
+<tr>
+<td>第四方透明度完整率</td>
+<td>≥ 95%</td>
+<td>第四方供應鏈登錄表</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>補揭露或風險接受</td>
+</tr>
+<tr>
+<td>SBOM/SCA覆蓋率</td>
+<td>≥ 90%（適用時）</td>
+<td>SBOM / SCA平台</td>
+<td>每季</td>
+<td>DevSecOps</td>
+<td>補掃描或限制使用</td>
+</tr>
+<tr>
+<td>供應商安全證據有效率</td>
+<td>≥ 95%</td>
+<td>證據清單</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>補證或降級/暫停</td>
+</tr>
+<tr>
+<td>重大供應商事件通報準時率</td>
+<td>100%</td>
+<td>事件紀錄</td>
+<td>每月</td>
+<td>SOC</td>
+<td>事件後重評與CAPA</td>
+</tr>
+<tr>
+<td>關鍵供應商BCP/DR證據完整率</td>
+<td>≥ 95%</td>
+<td>BCP/DR證據</td>
+<td>半年</td>
+<td>BCMS負責人</td>
+<td>補證或替代方案</td>
+</tr>
+<tr>
+<td>AI供應鏈資料使用條款明確率</td>
+<td>100%（適用時）</td>
+<td>AI條款審查</td>
+<td>每季</td>
+<td>AI治理負責人</td>
+<td>限制AI使用或補約</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. ICT供應鏈預警指標矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>預警信號</th>
+<th>風險意義</th>
+<th>資料來源</th>
+<th>觸發後行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商安全證據到期或拒絕更新</td>
+<td>控制成熟度下降或透明度不足。</td>
+<td>證據清單、供應商回覆。</td>
+<td>提升風險等級、要求補件、限制續約。</td>
+</tr>
+<tr>
+<td>供應商發生重大外洩或勒索事件</td>
+<td>可能影響組織資料、服務或第四方。</td>
+<td>新聞、供應商通知、威脅情報。</td>
+<td>啟動事件後重評、要求RCA與影響說明。</td>
+</tr>
+<tr>
+<td>關鍵CVE影響供應商產品</td>
+<td>供應鏈弱點可能被利用。</td>
+<td>CVE、SBOM、SCA、廠商公告。</td>
+<td>要求修補、補償控制、臨時監控。</td>
+</tr>
+<tr>
+<td>雲端區域、DNS、CDN或IAM服務異常</td>
+<td>集中依賴與可用性風險升高。</td>
+<td>雲端狀態頁、監控、SOC。</td>
+<td>啟動BCP/DR與客戶通報準備。</td>
+</tr>
+<tr>
+<td>供應商頻繁變更第四方</td>
+<td>供應鏈不可視與合規風險升高。</td>
+<td>第四方通知、合約變更。</td>
+<td>重新評估第四方風險與DPA。</td>
+</tr>
+<tr>
+<td>AI模型條款或資料使用政策變更</td>
+<td>資料訓練、保留或輸出責任風險變化。</td>
+<td>供應商公告、條款更新。</td>
+<td>AI治理重審、限制使用或補約。</td>
+</tr>
+<tr>
+<td>地緣、制裁、出口管制或資料主權變化</td>
+<td>服務可用性、合規或供應穩定性受影響。</td>
+<td>法務監測、外部情報。</td>
+<td>法務重評、替代方案、資料轉移計畫。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. ICT供應鏈風險熱點地圖</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>熱點領域</th>
+<th>關聯供應商/服務</th>
+<th>主要風險</th>
+<th>風險等級</th>
+<th>治理措施</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>單一雲平台依賴</td>
+<td></td>
+<td>服務中斷、供應商鎖定、區域故障。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>Cloud Owner</td>
+</tr>
+<tr>
+<td>單一AI模型/API依賴</td>
+<td></td>
+<td>模型變更、輸出不穩定、資料使用條款變更。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>關鍵開源元件依賴</td>
+<td></td>
+<td>CVE、惡意套件、維護停滯。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>遠端維運供應商依賴</td>
+<td></td>
+<td>特權濫用、帳號洩漏、支援通道遭利用。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>資料中心/通訊單點</td>
+<td></td>
+<td>中斷、物理安全、區域災害。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>GHG資料來源依賴</td>
+<td></td>
+<td>來源錯誤、版本失控、查證不符合。</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td>GHG Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 風險處理優先順序矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>優先級</th>
+<th>判定條件</th>
+<th>處理時限</th>
+<th>治理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>P1 立即處理</td>
+<td>極高風險、重大事件、資料外洩、關鍵服務中斷、無合約控制且持續使用。</td>
+<td>立即啟動，7日內提出處理方案。</td>
+<td>CISO/高層督導、事件或CAPA、必要時暫停供應商。</td>
+</tr>
+<tr>
+<td>P2 高優先</td>
+<td>高風險、重大條款缺口、第四方不可視、高風險CVE、AI/PII缺口。</td>
+<td>30日內提出並啟動處理。</td>
+<td>風險處理計畫、附條件核准、專項審查。</td>
+</tr>
+<tr>
+<td>P3 中優先</td>
+<td>中風險、證據待補、控制部分不足、監督指標異常。</td>
+<td>60至90日內處理。</td>
+<td>供應商改善、補證、年度重評。</td>
+</tr>
+<tr>
+<td>P4 例行改善</td>
+<td>低風險或成熟度提升事項。</td>
+<td>依年度計畫。</td>
+<td>列入持續改善與供應商績效管理。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. ICT供應鏈風險處理措施庫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處理措施</th>
+<th>適用風險</th>
+<th>執行方式</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>補充合約條款</td>
+<td>事件通報、DPA、稽核權、退場、第四方揭露不足。</td>
+<td>簽署安全附件、DPA、SLA或補充協議。</td>
+<td>簽署版合約/附件。</td>
+</tr>
+<tr>
+<td>要求安全證據</td>
+<td>供應商控制成熟度不明。</td>
+<td>要求ISO/SOC、滲測摘要、弱點修補、BCP/DR證據。</td>
+<td>證據清單。</td>
+</tr>
+<tr>
+<td>限制存取範圍</td>
+<td>供應商過度存取或特權風險。</td>
+<td>最小權限、PAM、JIT、Session Recording。</td>
+<td>IAM/PAM紀錄。</td>
+</tr>
+<tr>
+<td>技術隔離</td>
+<td>供應商連線、API或系統介接風險。</td>
+<td>網路隔離、API Gateway、VPN限制、Zero Trust。</td>
+<td>架構圖、規則紀錄。</td>
+</tr>
+<tr>
+<td>替代供應商/多供應商</td>
+<td>集中依賴或單點失效。</td>
+<td>建立備援供應商、替代流程或內部接手能力。</td>
+<td>替代方案與演練紀錄。</td>
+</tr>
+<tr>
+<td>供應商改善計畫</td>
+<td>控制缺口、證據不足、事件後改善。</td>
+<td>要求改善計畫、期限、RCA、有效性驗證。</td>
+<td>供應商改善紀錄。</td>
+</tr>
+<tr>
+<td>暫停或終止服務</td>
+<td>不可接受風險或供應商不配合。</td>
+<td>停止新增、限制使用、啟動退場。</td>
+<td>退場紀錄、核准紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. ICT供應鏈證據矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據類型</th>
+<th>適用供應鏈</th>
+<th>最低要求</th>
+<th>保存位置</th>
+<th>有效期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27001證書</td>
+<td>中高風險供應商</td>
+<td>證書範圍需涵蓋提供服務。</td>
+<td>供應商文件庫</td>
+<td>證書到期日</td>
+</tr>
+<tr>
+<td>SOC 2 Type II報告</td>
+<td>SaaS、雲端、資料處理供應商</td>
+<td>審查期間、例外與補救計畫需評估。</td>
+<td>供應商文件庫</td>
+<td>報告涵蓋期後12個月</td>
+</tr>
+<tr>
+<td>SBOM/SCA報告</td>
+<td>軟體、外包開發、平台服務</td>
+<td>需涵蓋主要元件與高風險弱點。</td>
+<td>DevSecOps工具/GRC</td>
+<td>每版或每季</td>
+</tr>
+<tr>
+<td>DPA/子處理者清單</td>
+<td>PII處理供應商</td>
+<td>需包含子處理者、跨境、刪除與事件要求。</td>
+<td>合約系統/PIMS</td>
+<td>合約期間</td>
+</tr>
+<tr>
+<td>BCP/DR證據</td>
+<td>關鍵服務供應商</td>
+<td>需包含RTO/RPO、演練與改善。</td>
+<td>BCMS文件庫</td>
+<td>年度</td>
+</tr>
+<tr>
+<td>AI服務條款</td>
+<td>AI供應商</td>
+<td>需明確資料訓練、保留、模型變更與AI事件通報。</td>
+<td>AI治理文件庫</td>
+<td>條款變更時更新</td>
+</tr>
+<tr>
+<td>GHG查證/資料證據</td>
+<td>GHG資料供應商</td>
+<td>需可追溯來源、版本、方法與查證底稿。</td>
+<td>GHG文件庫</td>
+<td>依查證/法規要求</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. ICT供應鏈稽核抽樣矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>抽樣編號</th>
+<th>供應商/服務</th>
+<th>風險等級</th>
+<th>抽樣主題</th>
+<th>應備證據</th>
+<th>抽查結果</th>
+<th>缺口</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SMP-001</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 合約　□ DPA　□ 第四方　□ SBOM　□ BCP　□ AI　□ 雲端</td>
+<td></td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>SMP-002</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 合約　□ DPA　□ 第四方　□ SBOM　□ BCP　□ AI　□ 雲端</td>
+<td></td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+<tr>
+<td>SMP-003</td>
+<td></td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td>□ 合約　□ DPA　□ 第四方　□ SBOM　□ BCP　□ AI　□ 雲端</td>
+<td></td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>矩陣完整性</td>
+<td>ICT供應鏈中高風險供應商、第四方與關鍵元件是否納入矩陣？</td>
+<td>供應商清冊、本矩陣、第四方清冊</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>風險評估方法</td>
+<td>風險評分是否考量資料、服務、透明度、合約、控制與集中依賴？</td>
+<td>評分準則、風險主矩陣</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>第四方與ICT透明度</td>
+<td>是否掌握第四方、子處理者、SBOM、雲端區域與AI模型依賴？</td>
+<td>第四方清冊、SBOM、雲端/AI清冊</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>風險處理追蹤</td>
+<td>高/極高風險是否建立處理計畫、補救或風險接受？</td>
+<td>風險處理矩陣、接受紀錄</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>合約與證據</td>
+<td>供應商合約、DPA、事件通報、稽核權與退場證據是否完整？</td>
+<td>合約檢核表、證據矩陣</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>監督與KPI/KRI</td>
+<td>是否依風險等級執行監督並向管理階層報告？</td>
+<td>KPI/KRI、管理審查輸入</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+<tr>
+<td>事件後重評</td>
+<td>供應商重大事件後是否更新矩陣並啟動CAPA？</td>
+<td>事件紀錄、更新紀錄、CAPA</td>
+<td>□ 符合　□ 部分　□ 不符合</td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>ISMS代表</th>
+<th>供應商管理</th>
+<th>採購</th>
+<th>法務</th>
+<th>DPO</th>
+<th>AI治理</th>
+<th>BCMS/GHG</th>
+<th>服務Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>建立ICT供應鏈風險矩陣方法</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>維護供應商與第四方風險資料</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>執行ICT供應鏈風險評估</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>審查PII/AI/BCMS/GHG專項風險</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>A/R</td>
+<td>A/R</td>
+<td>A/R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>核准高/極高供應鏈風險處理</td>
+<td>A（重大）</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>追蹤風險處理與缺口</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>提交管理審查輸入</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>內部稽核與有效性驗證</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本矩陣對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>識別ICT供應鏈、外部依賴、地緣、法規、雲端與AI外部議題。</td>
+<td>第3、9、26、27章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>識別客戶、監管、資料主體、供應商與合約要求。</td>
+<td>第11、18、30章</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>定義ICT供應鏈風險治理角色責任。</td>
+<td>第0.1、33章</td>
+<td>CISO / 供應商管理</td>
+</tr>
+<tr>
+<td>6.1.2</td>
+<td>ICT供應鏈風險評估方法、準則與矩陣。</td>
+<td>第4-8章</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>6.1.3</td>
+<td>ICT供應鏈風險處理、SoA控制與風險接受。</td>
+<td>第21-23章</td>
+<td>CISO / 風險Owner</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>風險矩陣、證據與核准紀錄受控保存。</td>
+<td>第30、38章</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>ICT供應鏈風險治理納入運作控制。</td>
+<td>第24-29章</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>ICT供應鏈風險評鑑執行。</td>
+<td>第7-20章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>高/極高風險轉入風險處理與有效性驗證。</td>
+<td>第21、39章</td>
+<td>風險Owner</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>KPI/KRI監督ICT供應鏈風險。</td>
+<td>第25章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>內部稽核查核ICT供應鏈風險證據。</td>
+<td>第31、32章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>重大供應鏈風險、趨勢與資源需求納入管理審查。</td>
+<td>第36章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>供應鏈事件、缺口與重複風險導出CAPA。</td>
+<td>第37章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. Annex A控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>Annex A控制</th>
+<th>本矩陣對應內容</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.8</td>
+<td>專案與ICT供應鏈導入階段納入風險管理。</td>
+<td>專案供應商風險評估、導入審查</td>
+<td>PM / ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.9-A.5.10</td>
+<td>資訊資產與可接受使用。</td>
+<td>供應商接觸資訊資產、使用限制</td>
+<td>Data Owner</td>
+</tr>
+<tr>
+<td>A.5.12-A.5.14</td>
+<td>資訊分類、標示與傳輸。</td>
+<td>資料敏感度矩陣、傳輸控制</td>
+<td>Data Owner / IT</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取控制、身份、驗證資訊與權限。</td>
+<td>遠端存取、PAM、MFA、權限審查</td>
+<td>IT / SOC</td>
+</tr>
+<tr>
+<td>A.5.19</td>
+<td>供應商關係中的資訊安全。</td>
+<td>供應商風險矩陣與審查紀錄</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.20</td>
+<td>供應商服務協議中的資訊安全。</td>
+<td>合約缺口矩陣、安全附件</td>
+<td>法務 / 採購</td>
+</tr>
+<tr>
+<td>A.5.21</td>
+<td>ICT供應鏈資訊安全管理。</td>
+<td>本矩陣全章、第四方、SBOM、集中依賴</td>
+<td>CISO / 供應商管理</td>
+</tr>
+<tr>
+<td>A.5.22</td>
+<td>供應商服務監控、審查與變更管理。</td>
+<td>監督頻率、KPI/KRI、預警指標</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.23</td>
+<td>雲端服務使用資訊安全。</td>
+<td>雲端供應鏈風險矩陣</td>
+<td>Cloud Owner</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理與證據。</td>
+<td>供應商事件趨勢、通報與CAPA</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.30</td>
+<td>ICT營運持續就緒度。</td>
+<td>BCP/DR與服務持續風險矩陣</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.34</td>
+<td>法律、智慧財產、紀錄保護與PII。</td>
+<td>合約、PII、跨境、DPA與法規風險</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>A.8.25-A.8.30</td>
+<td>安全開發、測試與外包開發。</td>
+<td>軟體供應鏈、SBOM、SCA與外包開發風險</td>
+<td>DevSecOps</td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. 管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>輸入項目</th>
+<th>是否納入</th>
+<th>摘要</th>
+<th>責任角色</th>
+<th>提交日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高/極高ICT供應鏈風險清單</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>ISMS代表 / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應鏈集中依賴與單點風險</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>供應商管理 / BCMS</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>第四方、SBOM、雲端、AI不可視重大缺口</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>專項Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>重大供應商事件與事件後重評結果</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>SOC / 供應商管理</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應鏈風險處理逾期與風險接受事項</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>ISMS代表 / 風險Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應鏈治理資源、工具、替代方案或預算需求</td>
+<td>□ 是　□ 否</td>
+<td></td>
+<td>CISO / 採購</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>是否觸發CAPA</th>
+<th>CAPA編號</th>
+<th>原因摘要</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>高/極高ICT供應鏈風險逾期未處理</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>重大供應商事件顯示供應鏈控制失效</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>第四方不可視或SBOM缺口造成風險不可評估</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>合約條款缺口重複發生或供應商不配合改善</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+<tr>
+<td>關鍵供應商集中依賴未建立替代方案</td>
+<td>□ 是　□ 否</td>
+<td>CAPA-YYYY-___</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准版ICT供應鏈風險矩陣</td>
+<td>ISMS代表 / 供應商管理</td>
+<td>GRC / ISMS文件庫</td>
+<td>矩陣失效後至少3年</td>
+<td>需保留版本、審查與核准紀錄。</td>
+</tr>
+<tr>
+<td>供應商與第四方證據</td>
+<td>供應商管理</td>
+<td>供應商文件庫 / 第四方清冊</td>
+<td>供應商終止後至少3年</td>
+<td>需追蹤證據有效期限。</td>
+</tr>
+<tr>
+<td>SBOM、SCA與軟體供應鏈證據</td>
+<td>DevSecOps / System Owner</td>
+<td>DevSecOps平台 / GRC</td>
+<td>系統生命週期加至少3年</td>
+<td>需保存版本對應。</td>
+</tr>
+<tr>
+<td>雲端與AI供應鏈審查證據</td>
+<td>Cloud Owner / AI治理</td>
+<td>雲端/AI治理文件庫</td>
+<td>服務終止後至少3年</td>
+<td>條款變更時需更新。</td>
+</tr>
+<tr>
+<td>風險處理、接受與CAPA紀錄</td>
+<td>風險Owner / CAPA負責人</td>
+<td>GRC / CAPA系統</td>
+<td>結案後至少3年</td>
+<td>重大風險需追蹤至關閉。</td>
+</tr>
+<tr>
+<td>管理審查輸入與決議</td>
+<td>ISMS代表</td>
+<td>管理審查文件庫</td>
+<td>至少3年</td>
+<td>高風險供應鏈議題需追蹤至關閉。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. 有效性驗證矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>處理措施</th>
+<th>驗證方法</th>
+<th>驗證頻率</th>
+<th>驗證Owner</th>
+<th>有效性判定</th>
+<th>後續行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>補充合約條款</td>
+<td>審查簽署版合約、DPA、安全附件。</td>
+<td>完成時/年度</td>
+<td>法務 / ISMS代表</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商安全改善</td>
+<td>審查供應商改善證據、RCA、CAPA與測試。</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+<tr>
+<td>SBOM/SCA覆蓋</td>
+<td>抽查SBOM與SCA報告，確認高風險弱點處理。</td>
+<td>每季</td>
+<td>DevSecOps</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+<tr>
+<td>BCP/DR改善</td>
+<td>審查演練報告、RTO/RPO與復原證據。</td>
+<td>半年/年度</td>
+<td>BCMS負責人</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+<tr>
+<td>AI供應鏈控制</td>
+<td>審查資料使用條款、人類監督、AI事件通報與輸出驗證。</td>
+<td>每季/變更時</td>
+<td>AI治理負責人</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+<tr>
+<td>第四方透明度改善</td>
+<td>比對第四方清冊、子處理者通知與合約條款。</td>
+<td>每季</td>
+<td>供應商管理</td>
+<td>□ 有效　□ 部分　□ 無效</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的、使用原則與供應鏈範圍分類完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>風險評估維度、評分準則、風險等級、主矩陣與供應商關鍵性矩陣完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>威脅來源、弱點、資料敏感度、第四方、軟體、雲端與AI風險矩陣完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>集中依賴、合約缺口、PII跨境、BCP/DR、事件趨勢與風險處理矩陣完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>SoA對應、風險接受、監督頻率、KPI/KRI、預警、熱點與措施庫完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>證據、稽核抽樣、RACI、ISO條文、Annex A、管理審查與CAPA完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本矩陣對應要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27005</td>
+<td>ICT供應鏈風險識別、分析、評估、處理與接受。</td>
+<td>風險矩陣、處理矩陣、接受紀錄</td>
+<td>風險管理負責人</td>
+</tr>
+<tr>
+<td>ISO 31000</td>
+<td>供應鏈風險治理、監督、溝通、預警與持續改善。</td>
+<td>KPI/KRI、管理審查、CAPA</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701</td>
+<td>PII供應鏈、子處理者、跨境與DPA風險。</td>
+<td>PII跨境風險矩陣</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001</td>
+<td>AI供應鏈、模型、資料使用、人類監督與AI事件風險。</td>
+<td>AI供應鏈風險矩陣</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI風險來源、事件、後果、控制與利益相關者影響。</td>
+<td>AI風險熱點、AI事件紀錄</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>ICT供應鏈中斷、RTO/RPO、BCP/DR與替代方案。</td>
+<td>BCP/DR風險矩陣</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>ICT供應鏈風險矩陣支援稽核抽樣與證據追溯。</td>
+<td>稽核抽樣矩陣</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI供應鏈治理、責任、監督與決策。</td>
+<td>AI治理矩陣、管理審查</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>供應鏈碳資料、查證底稿、排放係數與揭露風險。</td>
+<td>GHG供應鏈證據、資料風險</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>42. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本矩陣之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>組織控制措施管理程序</td>
+<td>定義Annex A.5組織控制與ICT供應鏈治理要求。</td>
+</tr>
+<tr>
+<td></td>
+<td>供應商資訊安全登錄表</td>
+<td>提供供應商主檔、分級與風險輸入。</td>
+</tr>
+<tr>
+<td></td>
+<td>第四方供應鏈登錄表</td>
+<td>提供第四方、第五方與子處理者依賴資料。</td>
+</tr>
+<tr>
+<td></td>
+<td>雲端服務與AI服務清冊</td>
+<td>提供雲端與AI服務供應鏈風險輸入。</td>
+</tr>
+<tr>
+<td></td>
+<td>供應商合約資安條款檢核表</td>
+<td>提供合約條款缺口與補救輸入。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊安全風險登錄表</td>
+<td>承接ICT供應鏈風險。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊安全風險處理計畫表</td>
+<td>承接不可接受供應鏈風險之處理措施。</td>
+</tr>
+<tr>
+<td></td>
+<td>風險處理與SoA對應矩陣</td>
+<td>承接供應鏈風險與SoA控制對應。</td>
+</tr>
+<tr>
+<td>ISMS-091/092/093/101系列</td>
+<td>監督量測、稽核、管理審查與CAPA</td>
+<td>承接KPI/KRI、稽核、管理決策與改善。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>44. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISMS ICT供應鏈風險治理之正式企業級矩陣，可支援ISO/IEC 27001:2022 Annex A.5.21「Managing information security in the ICT supply chain」，並與A.5.19供應商關係、A.5.20供應商協議、A.5.22供應商服務監控與變更管理、A.5.23雲端服務安全，以及ISO/IEC 27005風險管理、ISO/IEC 27701隱私治理、ISO/IEC 42001 AI治理與ISO 22301營運持續要求整合。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

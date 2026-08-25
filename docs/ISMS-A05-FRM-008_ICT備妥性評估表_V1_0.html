@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-FRM-008 ICT備妥性評估表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #234; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 4px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+.checkbox { white-space: nowrap; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A05-FRM-008 ICT備妥性評估表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-FRM-008</td>
+<td>ICT備妥性評估表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-FRM-008</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">姓名</th>
+<th style="vertical-align: top;">職稱</th>
+<th style="vertical-align: top;">簽核/確認</th>
+<th style="vertical-align: top;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">表單建立</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">ICT Continuity Owner / ISMS管理代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT服務Owner審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">System Owner / Service Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT營運審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">IT營運主管 / 基礎架構負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資訊安全審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / SOC負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端與網路審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">Cloud Security Owner / Network Security Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">業務持續審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">BCMS負責人 / 流程Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商管理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">供應商管理 / 採購 / 法務（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">隱私與法遵審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">DPO / 法務 / 法遵（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI治理與GHG資料治理審查</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">AI治理負責人 / GHG資料治理負責人（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">核准</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">CISO / IT營運主管 / 授權代表</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 表單目的</h2>
+<p>本表用於評估ICT服務支援營運持續之備妥程度，確認服務在正常營運、重大變更、事故應變、災難復原、雲端或供應商中斷、勒索軟體、資料毀損、關鍵人員不可用及其他中斷情境下，是否已建立足以達成業務持續目標之治理、技術、流程、資源與證據。</p>
+<p>本表同時作為ISO/IEC 27001:2022 Annex A.5.30「ICT readiness for business continuity」與A.5.29「Information security during disruption」之稽核證據，並支援風險評鑑、營運衝擊分析、復原策略設計、復原測試、供應商持續性審查、管理審查及持續改進。</p>
+<h2>2. 使用時機</h2>
+<ul>
+<li>新ICT服務、雲端服務、SaaS、AI服務、資料平台或外包服務導入前。</li>
+<li>關鍵ICT服務年度或定期營運持續性審查。</li>
+<li>重大變更、雲端區域切換、架構重設、系統升級、供應商更換或資料流向變更前後。</li>
+<li>重大事件、服務中斷、災難復原測試、演練或事件檢討後。</li>
+<li>客戶、主管機關、驗證機構、稽核員或合約要求提供ICT備妥性證據時。</li>
+</ul>
+<div class="notice"><p>填寫本表時，應以可驗證證據為基礎。凡填列「已完成」或「符合」者，應可提供文件、系統截圖、設定紀錄、測試報告、日誌、合約、SLA、供應商證明、核准紀錄或其他稽核證據。</p></div>
+<h2>3. 評估基本資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<td style="vertical-align: top;">評估編號</td>
+<td style="vertical-align: top;">ICT-READY-YYYY-XXX</td>
+<td style="vertical-align: top;">評估日期</td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ICT服務 / 系統名稱</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">服務Owner / 系統Owner</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">支援業務流程</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">流程Owner / Data Owner</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務類型</td>
+<td style="vertical-align: top;">□ 內部系統　□ SaaS　□ PaaS　□ IaaS　□ 網路服務　□ 資料庫　□ 備份平台　□ SOC/監控　□ AI服務　□ GHG/ESG平台　□ 其他：____</td>
+<td style="vertical-align: top;">服務重要性</td>
+<td style="vertical-align: top;">□ Tier 1　□ Tier 2　□ Tier 3　□ Tier 4　□ 特殊合規/證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">部署位置</td>
+<td style="vertical-align: top;">□ 內部機房　□ 私有雲　□ 公有雲　□ 混合雲　□ 多雲　□ 供應商託管　□ 跨境處理</td>
+<td style="vertical-align: top;">主要地區 / 區域</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料分類</td>
+<td style="vertical-align: top;">□ 公開　□ 內部　□ 機密　□ 高機密　□ PII　□ 客戶資料　□ 交易資料　□ 原始碼　□ AI資料　□ GHG/CO2資料</td>
+<td style="vertical-align: top;">是否屬關鍵服務</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">評估觸發原因</td>
+<td style="vertical-align: top;">□ 新服務導入　□ 年度審查　□ 重大變更　□ 事件後檢討　□ 演練後更新　□ 供應商變更　□ 客戶/稽核要求　□ 其他：____</td>
+<td style="vertical-align: top;">評估範圍說明</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">上次評估日期</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">上次評估結果</td>
+<td style="vertical-align: top;">□ 通過　□ 有條件通過　□ 未通過　□ 不適用</td>
+</tr>
+</tbody>
+</table>
+<h2>4. ICT服務描述與依賴關係</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">項目</th>
+<th style="vertical-align: top;">內容描述</th>
+<th style="vertical-align: top;">Owner</th>
+<th style="vertical-align: top;">證據/文件連結</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">服務目的與主要功能</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">支援之關鍵業務活動</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">使用者族群與數量</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">上游系統 / 資料來源</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">下游系統 / 資料接收方</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料庫 / 儲存服務</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">身份驗證與授權服務</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">網路、DNS、憑證、WAF、CDN或API Gateway依賴</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份、日誌、監控與告警依賴</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商、第四方、外包或代管服務依賴</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI模型、RAG、資料集、Prompt、MLOps依賴（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/CO2資料、查證證據或外部揭露依賴（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>5. 業務衝擊與復原目標確認</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">評估項目</th>
+<th style="vertical-align: top;">填寫內容 / 選項</th>
+<th style="vertical-align: top;">責任角色</th>
+<th style="vertical-align: top;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">最大可容忍中斷期間（MTPD）</td>
+<td style="vertical-align: top;">□ 0-4小時　□ 4-24小時　□ 1-3日　□ 3-7日　□ 7日以上　□ 依法規/合約：____</td>
+<td style="vertical-align: top;">流程Owner / BCMS負責人</td>
+<td style="vertical-align: top;">BIA紀錄、合約、SLA</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原時間目標（RTO）</td>
+<td style="vertical-align: top;">目標：____ 小時 / 日；理由：____</td>
+<td style="vertical-align: top;">流程Owner / Service Owner</td>
+<td style="vertical-align: top;">BIA、服務承諾</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原點目標（RPO）</td>
+<td style="vertical-align: top;">目標：____ 分鐘 / 小時 / 日；理由：____</td>
+<td style="vertical-align: top;">Data Owner / Service Owner</td>
+<td style="vertical-align: top;">備份策略、資料變動分析</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">最低營運水準（MBCO）</td>
+<td style="vertical-align: top;">中斷期間最低可接受服務量、使用者數、交易量、報表或資料處理能力：____</td>
+<td style="vertical-align: top;">流程Owner</td>
+<td style="vertical-align: top;">營運持續計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務優先順序</td>
+<td style="vertical-align: top;">□ 第一優先　□ 第二優先　□ 第三優先　□ 依事件情境決定</td>
+<td style="vertical-align: top;">BCMS / IT營運</td>
+<td style="vertical-align: top;">復原優先矩陣</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷財務衝擊</td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 重大；說明：____</td>
+<td style="vertical-align: top;">流程Owner / 財務</td>
+<td style="vertical-align: top;">BIA</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷合規衝擊</td>
+<td style="vertical-align: top;">□ 無　□ 低　□ 中　□ 高　□ 法定通報；說明：____</td>
+<td style="vertical-align: top;">法務 / DPO / 合規</td>
+<td style="vertical-align: top;">法規清冊、合約</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷客戶衝擊</td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 重大客訴/違約；說明：____</td>
+<td style="vertical-align: top;">業務Owner / 客戶服務</td>
+<td style="vertical-align: top;">SLA、客戶要求</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷資訊安全衝擊</td>
+<td style="vertical-align: top;">□ 機密性　□ 完整性　□ 可用性　□ 可追溯性　□ 隱私　□ 證據完整性；說明：____</td>
+<td style="vertical-align: top;">CISO / Data Owner</td>
+<td style="vertical-align: top;">風險評鑑</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷對AI或自動化決策衝擊</td>
+<td style="vertical-align: top;">□ 不適用　□ AI服務不可用　□ 模型輸出延遲　□ 人工覆核不足　□ 決策品質下降</td>
+<td style="vertical-align: top;">AI治理負責人</td>
+<td style="vertical-align: top;">AI服務評估</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">中斷對GHG/ESG資料衝擊</td>
+<td style="vertical-align: top;">□ 不適用　□ 查證時程延誤　□ 證據遺失　□ 版本不一致　□ 外部揭露延遲</td>
+<td style="vertical-align: top;">GHG資料Owner</td>
+<td style="vertical-align: top;">查證計畫、資料清冊</td>
+</tr>
+</tbody>
+</table>
+<h2>6. ICT備妥性成熟度與評分準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">分數</th>
+<th style="vertical-align: top;">成熟度</th>
+<th style="vertical-align: top;">判定說明</th>
+<th style="vertical-align: top;">可接受性</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">0</td>
+<td style="vertical-align: top;">未建立</td>
+<td style="vertical-align: top;">未定義要求、Owner、流程或證據，無法證明可恢復。</td>
+<td style="vertical-align: top;">不可接受，需立即建立改善計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">初始</td>
+<td style="vertical-align: top;">已有部分作業或人員經驗，但文件不足、未測試或依賴個人。</td>
+<td style="vertical-align: top;">原則不可接受，僅限低風險短期補救。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">部分建立</td>
+<td style="vertical-align: top;">已有文件化流程與部分控制，但範圍不完整、證據不足或未定期測試。</td>
+<td style="vertical-align: top;">可有條件接受，需限期改善。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">已建立</td>
+<td style="vertical-align: top;">流程、角色、技術控制、測試與證據完整，能合理達成RTO/RPO。</td>
+<td style="vertical-align: top;">可接受，需定期維護。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">受控與監測</td>
+<td style="vertical-align: top;">具自動監控、指標、告警、供應商證據、演練與趨勢分析。</td>
+<td style="vertical-align: top;">良好，可作為關鍵服務基準。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">最佳化</td>
+<td style="vertical-align: top;">具跨區/多雲/自動化復原、持續驗證、攻防/混沌測試、治理決策回饋。</td>
+<td style="vertical-align: top;">優良，可作為標竿。</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">整體判定</th>
+<th style="vertical-align: top;">條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">通過</td>
+<td style="vertical-align: top;">所有關鍵控制項不得低於3分，且無重大未解決風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">有條件通過</td>
+<td style="vertical-align: top;">少數非關鍵控制低於3分，已有責任人、期限、補償控制與管理階層接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">未通過</td>
+<td style="vertical-align: top;">任一關鍵控制為0或1分，或無法證明可達成既定RTO/RPO，或存在不可接受之高風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">需升級審查</td>
+<td style="vertical-align: top;">涉及Tier 1服務、PII重大風險、雲端重大依賴、法定通報、客戶SLA違約風險或高剩餘風險接受。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 治理、角色與文件化備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">服務Owner、流程Owner、Data Owner與代理人已明確指派。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">ICT備妥性範圍、服務邊界、關鍵依賴與責任已文件化。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">RTO、RPO、MTPD、MBCO已由業務與ICT共同確認。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">營運持續、災難復原、事件回應、緊急變更與供應商通報流程已對接。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">年度審查、重大變更後審查與事件後檢討機制已建立。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 架構、容量與高可用備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">架構設計支援既定可用性與復原目標。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">關鍵元件已識別單點故障並具備補救或接受紀錄。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">容量、效能、儲存、網路頻寬與授權限制已定期監測。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">高可用、容錯、負載平衡、叢集或跨區設計已依服務等級配置。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">基礎設施、雲端組態、IaC或系統設定具版本控管與重建能力。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>9. 備份、還原與資料完整性備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">備份範圍涵蓋資料庫、檔案、設定、憑證、程式碼、日誌、雲端組態與關鍵證據。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">備份頻率與保存期限符合RPO、法規、合約與資料分類要求。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">備份資料已加密、限制存取並具不可變、離線、隔離或防刪除保護。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">還原測試已定期執行並由業務或Data Owner驗收。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">資料還原後具筆數、Hash、Checksum、交易對帳或版本一致性驗證。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>10. 災難復原與切換備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">已建立DRP或復原Runbook，包含啟動條件、指揮角色、復原順序、操作步驟與回切程序。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">復原環境、備援環境或替代平台可於RTO內啟用。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">DNS、憑證、金鑰、IAM、網路、API端點與外部介接切換要求已納入。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">復原測試、桌上演練或實際切換測試已定期執行。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">復原期間之安全控制、日誌、監控與緊急變更流程可持續運作。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 安全監控、事件與證據備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">日誌來源、SIEM、EDR、NDR、DLP、雲端監控與告警可支援中斷期間偵測。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">事件分級、通報、升級、決策與對外溝通窗口已定義。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">涉及攻擊或資料破壞時，能在復原前保全必要數位證據。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">中斷期間臨時權限、供應商存取、緊急變更與手動作業均可追蹤。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">事件後Lessons Learned、根因分析、CAPA與風險登錄更新流程已建立。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>12. 供應商、雲端與第三方備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">關鍵供應商SLA、RTO/RPO承諾、支援時段、通報時限與升級窗口已確認。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">供應商BCP/DRP、稽核報告、SOC報告或等效保證證據已取得並審查。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">雲端服務區域、可用區、資料備份、資料匯出、退出方案與共享責任已確認。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">第四方或子處理者依賴已登錄，並具變更通知與風險重評機制。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">供應商服務中斷時之替代方案、臨時流程或客戶溝通機制已建立。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>13. 隱私、AI與GHG/ESG特殊資料備妥性</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">序號</th>
+<th style="vertical-align: top;">控制項 / 評估問題</th>
+<th style="vertical-align: top;">成熟度分數</th>
+<th style="vertical-align: top;">是否符合</th>
+<th style="vertical-align: top;">現況說明</th>
+<th style="vertical-align: top;">證據 / 文件連結</th>
+<th style="vertical-align: top;">缺口與改善需求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;">PII處理活動在中斷、復原與備份還原期間仍符合合法性、最小化、跨境與保存期限要求。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;">AI服務、模型API、RAG資料庫、模型版本與人工覆核流程具替代方案或降級作業。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;">AI輸入輸出、模型資料、Prompt、訓練資料或推論日誌之備份與存取控制已定義。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;">GHG/CO2活動數據、排放係數、計算底稿、查證證據與揭露版本具備份、版本控管與完整性保護。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;">特殊資料之復原測試不會造成未授權揭露、資料污染、證據鏈破壞或違反合約限制。</td>
+<td style="vertical-align: top;">□ 0　□ 1　□ 2　□ 3　□ 4　□ 5</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>14. RTO / RPO 達成能力檢核</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">項目</th>
+<th style="vertical-align: top;">目標值</th>
+<th style="vertical-align: top;">目前能力</th>
+<th style="vertical-align: top;">差距判定</th>
+<th style="vertical-align: top;">補償控制 / 改善措施</th>
+<th style="vertical-align: top;">責任人</th>
+<th style="vertical-align: top;">期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">RTO</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 無差距　□ 有差距　□ 未測試</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RPO</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 無差距　□ 有差距　□ 未測試</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MTPD</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 無差距　□ 有差距　□ 未確認</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">MBCO</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 可達成　□ 部分達成　□ 不可達成</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">服務可用性SLA</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 可達成　□ 部分達成　□ 不可達成</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料完整性驗證時間</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 可達成　□ 部分達成　□ 不可達成</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">復原後業務驗收時間</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 可達成　□ 部分達成　□ 不可達成</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>15. 中斷情境適用性評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">中斷情境</th>
+<th style="vertical-align: top;">是否適用</th>
+<th style="vertical-align: top;">可能影響</th>
+<th style="vertical-align: top;">現有備妥措施</th>
+<th style="vertical-align: top;">剩餘風險</th>
+<th style="vertical-align: top;">是否需演練/測試</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">資料中心或機房不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">雲端區域或可用區中斷</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SaaS供應商重大中斷</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">網路、DNS、VPN或專線中斷</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">勒索軟體或資料加密破壞</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">資料庫毀損、誤刪或同步錯誤</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">身份服務、MFA或PAM不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">SOC、SIEM、EDR或監控不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵人員、場所或遠距工作不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商或第四方服務中斷</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">AI模型/API/RAG服務不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">GHG/ESG資料平台或查證證據不可用</td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 證據清單與稽核追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">證據類型</th>
+<th style="vertical-align: top;">最低應保存內容</th>
+<th style="vertical-align: top;">保存位置</th>
+<th style="vertical-align: top;">保存期限</th>
+<th style="vertical-align: top;">Owner</th>
+<th style="vertical-align: top;">已取得</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">BIA / 業務衝擊分析</td>
+<td style="vertical-align: top;">RTO、RPO、MTPD、MBCO、流程優先順序與核准紀錄。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依紀錄保存期限清冊</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">架構與依賴文件</td>
+<td style="vertical-align: top;">系統架構圖、資料流、網路圖、雲端區域、IAM與供應商依賴。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依文件管制程序</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份與還原證據</td>
+<td style="vertical-align: top;">備份排程、成功率、失敗處理、還原測試、完整性驗證。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依紀錄保存期限清冊</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">DRP / Runbook</td>
+<td style="vertical-align: top;">復原步驟、啟動條件、角色、聯絡方式、回切程序。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依文件管制程序</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">演練與測試紀錄</td>
+<td style="vertical-align: top;">桌上演練、技術復原測試、切換測試、發現事項與改善。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依紀錄保存期限清冊</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">監控與日誌證據</td>
+<td style="vertical-align: top;">SIEM、EDR、雲端日誌、網路日誌、警示與事件紀錄。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依日誌保存要求</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商證據</td>
+<td style="vertical-align: top;">SLA、支援承諾、BCP/DRP、SOC報告、事件通報條款、第四方清單。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依合約與紀錄要求</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">風險與改善紀錄</td>
+<td style="vertical-align: top;">風險登錄、處理計畫、剩餘風險接受、CAPA與管理審查輸入。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">依ISMS紀錄要求</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+<h2>17. 缺口、風險與改善計畫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">編號</th>
+<th style="vertical-align: top;">缺口 / 風險描述</th>
+<th style="vertical-align: top;">影響之RTO/RPO/控制項</th>
+<th style="vertical-align: top;">風險等級</th>
+<th style="vertical-align: top;">處理方式</th>
+<th style="vertical-align: top;">責任人</th>
+<th style="vertical-align: top;">目標完成日</th>
+<th style="vertical-align: top;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">1</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top;">□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 未開始　□ 進行中　□ 已完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">2</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top;">□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 未開始　□ 進行中　□ 已完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">3</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top;">□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 未開始　□ 進行中　□ 已完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">4</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top;">□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 未開始　□ 進行中　□ 已完成</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">5</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 低　□ 中　□ 高　□ 極高</td>
+<td style="vertical-align: top;">□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 未開始　□ 進行中　□ 已完成</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 整體評估結論</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<td style="vertical-align: top;">總分</td>
+<td style="vertical-align: top;">____ / 175</td>
+<td style="vertical-align: top;">平均成熟度</td>
+<td style="vertical-align: top;">____</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">關鍵控制最低分</td>
+<td style="vertical-align: top;">____</td>
+<td style="vertical-align: top;">是否存在0或1分關鍵控制</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">RTO可達成性</td>
+<td style="vertical-align: top;">□ 可達成　□ 有條件可達成　□ 不可達成　□ 未測試</td>
+<td style="vertical-align: top;">RPO可達成性</td>
+<td style="vertical-align: top;">□ 可達成　□ 有條件可達成　□ 不可達成　□ 未測試</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">整體判定</td>
+<td style="vertical-align: top;">□ 通過　□ 有條件通過　□ 未通過　□ 需升級審查</td>
+<td style="vertical-align: top;">下次複評日期</td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">是否需更新風險登錄</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;">是否需更新SoA / 控制措施對應</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">是否需啟動改善計畫</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;">是否需管理階層接受剩餘風險</td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">評估結論摘要</td>
+<td style="vertical-align: top;">請說明主要優勢、重大缺口、不可接受風險、補償控制、決策依據與後續追蹤要求。</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 簽核與追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">角色</th>
+<th style="vertical-align: top;">姓名</th>
+<th style="vertical-align: top;">意見</th>
+<th style="vertical-align: top;">簽核</th>
+<th style="vertical-align: top;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">ICT服務Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">流程Owner / Data Owner</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">IT營運主管</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">CISO / 資訊安全負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">BCMS負責人</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商管理 / 法務 / DPO / AI治理 / GHG資料治理（如適用）</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">核准者</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 附錄：快速評估摘要表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top;">面向</th>
+<th style="vertical-align: top;">得分</th>
+<th style="vertical-align: top;">主要缺口</th>
+<th style="vertical-align: top;">是否可接受</th>
+<th style="vertical-align: top;">後續行動</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;">治理與文件化</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">架構與容量</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">備份與還原</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">災難復原與切換</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">安全監控與事件</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">供應商與雲端</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">隱私、AI與GHG/ESG</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 是　□ 否　□ 不適用</td>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">整體結論</td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;"></td>
+<td style="vertical-align: top;">□ 通過　□ 有條件通過　□ 未通過</td>
+<td style="vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+<p class="small">文件備註：本表為ICT備妥性評估與稽核證據表單。填寫完成後，應依文件化資訊管制程序保存，並將重大缺口納入風險登錄、改善計畫、管理審查或供應商審查流程。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

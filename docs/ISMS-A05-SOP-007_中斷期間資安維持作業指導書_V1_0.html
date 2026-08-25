@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-SOP-007 中斷期間資安維持作業指導書</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A05-SOP-007 中斷期間資安維持作業指導書</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-SOP-007</td>
+<td>中斷期間資安維持作業指導書</td>
+<td>第三階：作業指導書 / SOP / 作業指導書</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>CISO / 授權技術或營運主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-SOP-007</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件建立</td>
+<td></td>
+<td>ISMS管理代表 / BCMS Owner / ICT Readiness Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / SOC Owner / Incident Response Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations / Infrastructure / Cloud / Network Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>業務持續審查</td>
+<td></td>
+<td>Business Process Owner / Service Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料保護與法務審查</td>
+<td></td>
+<td>DPO / Legal（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商管理審查</td>
+<td></td>
+<td>Supplier Management / Procurement（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>管理階層核准</td>
+<td></td>
+<td>CISO / CIO / BCMS管理代表 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 作業目的</h2>
+<p>本作業指導書規範組織於營運中斷、ICT服務中斷、災害復原、資安事件、供應商中斷、場所不可用、網路中斷、雲端服務異常、勒索軟體、資料毀損或其他緊急事件期間，如何維持最低必要資訊安全控制，避免組織為了快速恢復服務而犧牲機密性、完整性、可用性、隱私、法規合規、客戶承諾與證據保全。</p>
+<p>本文件的核心目標是在中斷期間確保「不中斷資安治理、不降低必要控制、不失去可追溯性、不破壞證據、不擴大資料外洩、不產生未授權存取、不讓臨時措施永久化」，並確保復原後能回到正常控制狀態且完成事後檢討與改善。</p>
+
+<h2>2. 作業原則</h2>
+<ul>
+<li>中斷期間仍應維持風險導向之資訊安全控制；任何控制暫停、降低或繞過，均需核准、記錄、期限、補償控制與事後復原。</li>
+<li>恢復服務不得以未授權存取、共享帳號、未加密資料移轉、未驗證備份、未掃描系統、未保全證據或未受控變更作為代價。</li>
+<li>中斷期間應優先保護人員安全、關鍵業務、客戶資料、個人資料、身份服務、特權帳號、備份、金鑰、日誌、證據與核心資產。</li>
+<li>替代作業、手工作業、臨時帳號、臨時系統、臨時網路、臨時供應商或臨時雲端資源，均需納入資安控制與追蹤清冊。</li>
+<li>若中斷事件同時涉及資安事件，應以事件管理、證據保全、通報、調查與復原完整性為優先，不得任意重建或清除證據。</li>
+<li>中斷結束後應完成控制復原、臨時權限撤銷、資料同步驗證、日誌保存、風險重評、CAPA與管理審查輸入。</li>
+</ul>
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>中斷期間</td>
+<td>因災害、故障、資安事件、供應商異常、網路中斷、場所不可用或其他原因造成正常業務或ICT服務無法按既定水準運作之期間。</td>
+</tr>
+<tr>
+<td>資安維持</td>
+<td>於中斷期間持續維持最低必要資訊安全控制，包括身份驗證、存取控制、日誌、監控、加密、備份、資料保護、證據保存與變更控制。</td>
+</tr>
+<tr>
+<td>替代作業</td>
+<td>當正常系統、流程、場所或供應商不可用時，採用手工作業、備援系統、雲端替代、紙本流程、臨時流程或外部服務維持業務運作。</td>
+</tr>
+<tr>
+<td>臨時控制</td>
+<td>為因應中斷期間特殊情況而暫時採用之安全控制或替代控制，需有明確期限、Owner、核准與復原計畫。</td>
+</tr>
+<tr>
+<td>控制繞過</td>
+<td>暫停、降低或避開既有安全控制之行為，例如停用MFA、共用帳號、開放防火牆、跳過審批或停止日誌。</td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>在原控制不可用或需暫停時，用於降低風險之替代安全措施。</td>
+</tr>
+<tr>
+<td>最低可接受控制</td>
+<td>即使在中斷期間也不得省略或需替代維持之核心安全控制。</td>
+</tr>
+<tr>
+<td>復原完整性</td>
+<td>確認復原後系統、資料、設定、權限、日誌、金鑰與業務資料一致、可信、未遭竄改或遺漏之狀態。</td>
+</tr>
+<tr>
+<td>保管鏈</td>
+<td>證據、影像、日誌、備份、磁碟、文件或調查資料從取得到保存、移交、分析、歸檔過程之完整紀錄。</td>
+</tr>
+<tr>
+<td>危機通訊</td>
+<td>中斷期間對內部、客戶、供應商、監管機關、媒體或其他利害關係人之授權溝通。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 啟動條件與適用情境</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>情境類別</th>
+<th>啟動條件</th>
+<th>資安維持重點</th>
+<th>升級對象</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>重大ICT中斷</td>
+<td>核心系統、網路、雲端、身份服務、資料庫或關鍵應用不可用，影響SLA/RTO。</td>
+<td>臨時權限、備援切換、日誌、資料同步、變更與供應商通報。</td>
+<td>ICT Readiness Owner / CIO / CISO</td>
+</tr>
+<tr>
+<td>資安事件造成中斷</td>
+<td>勒索軟體、入侵、資料外洩、惡意破壞、DDoS或供應鏈攻擊造成中斷。</td>
+<td>隔離、證據保全、復原可信度、憑證輪替、清潔備份與通報。</td>
+<td>Incident Manager / CISO</td>
+</tr>
+<tr>
+<td>場所不可用</td>
+<td>辦公室、機房、資料中心、弱電間或支援設施不可進入或不可用。</td>
+<td>遠端工作、安全區域替代、場外資產、門禁/CCTV、實體證據。</td>
+<td>Facility / BCMS Owner</td>
+</tr>
+<tr>
+<td>供應商中斷</td>
+<td>雲端、電信、外包、維護、物流或關鍵ICT供應商服務中斷。</td>
+<td>替代供應商、資料保護、服務切換、供應商責任與SLA證據。</td>
+<td>Supplier Owner / Procurement</td>
+</tr>
+<tr>
+<td>資料損毀或遺失</td>
+<td>資料庫、檔案、備份、設定或交易紀錄毀損、不一致或不可用。</td>
+<td>備份驗證、還原完整性、資料一致性、稽核軌跡。</td>
+<td>Data Owner / IT</td>
+</tr>
+<tr>
+<td>人員不可用</td>
+<td>關鍵人員、SOC、IT、管理者或供應商大量不可用。</td>
+<td>代理授權、職務分離、緊急權限、知識保存與交接紀錄。</td>
+<td>HR / Management</td>
+</tr>
+<tr>
+<td>法規或合約通報事件</td>
+<td>中斷可能影響個資、客戶服務、監管承諾或合約義務。</td>
+<td>通報時限、事實一致、證據、客戶溝通與法務審查。</td>
+<td>Legal / DPO / Communications</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 角色與責任</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>中斷期間主要責任</th>
+<th>必要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO</td>
+<td>決定資安控制最低要求、控制繞過核准、重大風險接受、事件升級與對外資安說明。</td>
+<td>安全決策紀錄、風險接受。</td>
+</tr>
+<tr>
+<td>BCMS Owner</td>
+<td>協調營運持續程序、BIA/RTO/RPO要求、業務替代作業與管理階層決策。</td>
+<td>BCP啟動與狀態紀錄。</td>
+</tr>
+<tr>
+<td>ICT Readiness Owner</td>
+<td>協調ICT復原、災備切換、服務優先順序、復原測試與技術狀態報告。</td>
+<td>復原計畫與狀態報告。</td>
+</tr>
+<tr>
+<td>Incident Manager</td>
+<td>若涉及資安事件，負責事件指揮、證據保全、調查、遏止、根除與復原協調。</td>
+<td>事件紀錄、時間軸。</td>
+</tr>
+<tr>
+<td>SOC / Monitoring Owner</td>
+<td>維持事件偵測、日誌收集、告警、威脅監控、異常追蹤與值班。</td>
+<td>監控與告警紀錄。</td>
+</tr>
+<tr>
+<td>IT Operations</td>
+<td>執行系統復原、備援切換、帳號調整、網路調整、備份還原、系統驗證與控制復原。</td>
+<td>工單、變更、驗收紀錄。</td>
+</tr>
+<tr>
+<td>Application / Service Owner</td>
+<td>確認服務復原優先序、替代流程、資料完整性、交易重放與業務驗收。</td>
+<td>服務驗收與業務確認。</td>
+</tr>
+<tr>
+<td>Data Owner</td>
+<td>確認資料分類、復原資料、資料一致性、個資/客戶資料影響與資料保護要求。</td>
+<td>資料驗證與影響評估。</td>
+</tr>
+<tr>
+<td>IAM / PAM Owner</td>
+<td>管理緊急帳號、特權存取、權限展延、撤權、憑證輪替與存取審查。</td>
+<td>權限與特權紀錄。</td>
+</tr>
+<tr>
+<td>DPO / Legal</td>
+<td>評估個資、客戶合約、監管、證據、對外通報與法律風險。</td>
+<td>通報與法務審查。</td>
+</tr>
+<tr>
+<td>Communications</td>
+<td>依授權訊息進行內部、客戶、媒體、供應商或利害關係人溝通。</td>
+<td>溝通紀錄。</td>
+</tr>
+<tr>
+<td>Supplier Owner</td>
+<td>聯繫供應商、取得狀態、SLA、替代方案、事件證據與改善承諾。</td>
+<td>供應商狀態與會議紀錄。</td>
+</tr>
+<tr>
+<td>Management Team</td>
+<td>決定重大取捨、資源配置、服務恢復優先序、風險接受與對外承諾。</td>
+<td>管理決策紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 中斷期間最低可接受資安控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制領域</th>
+<th>最低要求</th>
+<th>不得省略事項</th>
+<th>補償控制範例</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身分驗證</td>
+<td>維持MFA、具名帳號、最小權限與特權帳號管制。</td>
+<td>不得長期共用帳號或停用MFA且無核准。</td>
+<td>臨時帳號限時、PAM、人工審批、登入監控。</td>
+</tr>
+<tr>
+<td>特權存取</td>
+<td>緊急權限需核准、限時、記錄、事後審查與撤銷。</td>
+<td>不得無紀錄使用Root/Admin。</td>
+<td>Break-glass帳號封存、雙人控制、Session錄影。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>維持核心系統、身份、網路、備援、雲端與安全設備日誌收集。</td>
+<td>不得為恢復效能而停止關鍵日誌。</td>
+<td>本地暫存日誌、手動匯出、增加SOC巡檢。</td>
+</tr>
+<tr>
+<td>網路安全</td>
+<td>臨時開放防火牆、VPN、ACL或遠端連線需核准、期限與監控。</td>
+<td>不得永久開放Any-to-Any或未限制管理介面。</td>
+<td>白名單、限時規則、跳板機、連線審查。</td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>維持加密、資料最小化、傳輸保護與敏感資料處理限制。</td>
+<td>不得將敏感資料傳至未核准平台。</td>
+<td>加密容器、受控SFTP、臨時DLP監控。</td>
+</tr>
+<tr>
+<td>備份與還原</td>
+<td>還原前確認備份完整、未感染、符合RPO並保留原始證據。</td>
+<td>不得使用未驗證或疑似被污染備份。</td>
+<td>隔離還原環境、Hash驗證、惡意程式掃描。</td>
+</tr>
+<tr>
+<td>變更控制</td>
+<td>緊急變更可簡化但不可無紀錄；事後需補審查。</td>
+<td>不得無Owner、無時間、無回復計畫。</td>
+<td>緊急CAB、變更日誌、事後回顧。</td>
+</tr>
+<tr>
+<td>供應商控制</td>
+<td>供應商臨時支援需授權、NDA、連線限制與作業紀錄。</td>
+<td>不得讓供應商無監控遠端存取。</td>
+<td>限時VPN、Session紀錄、陪同操作。</td>
+</tr>
+<tr>
+<td>實體安全</td>
+<td>替代場所、災備站點、臨時工作區需最低門禁、訪客與資產管制。</td>
+<td>不得將設備與資料置於未受控場所。</td>
+<td>人工保全、臨時清冊、場外資產控管。</td>
+</tr>
+<tr>
+<td>溝通安全</td>
+<td>危機通訊需使用授權內容與核准渠道，避免揭露弱點或敏感資訊。</td>
+<td>不得未經核准對外透露攻擊細節或客戶影響。</td>
+<td>通訊模板、發言人機制、Legal審查。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 中斷期間資安維持作業流程</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>作業要求</th>
+<th>責任角色</th>
+<th>輸出證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 啟動與分類</td>
+<td>確認中斷類型、影響範圍、是否涉及資安事件、資料影響與服務優先序。</td>
+<td>BCMS Owner / Incident Manager / CISO</td>
+<td>啟動紀錄、事件分類。</td>
+</tr>
+<tr>
+<td>2. 指揮與授權</td>
+<td>建立指揮架構、聯絡窗口、決策權限、會議節奏與記錄方式。</td>
+<td>Management Team / CISO</td>
+<td>指揮紀錄。</td>
+</tr>
+<tr>
+<td>3. 風險快速評估</td>
+<td>評估可用性、機密性、完整性、隱私、法規、供應商與客戶影響。</td>
+<td>Security / Business / Legal</td>
+<td>快速風險評估。</td>
+</tr>
+<tr>
+<td>4. 控制維持清單</td>
+<td>確認不可降低控制、可暫時替代控制、需核准繞過控制與補償控制。</td>
+<td>CISO / Control Owners</td>
+<td>資安維持清單。</td>
+</tr>
+<tr>
+<td>5. 遏止與保全</td>
+<td>若涉及資安事件，先隔離、保存證據、保全日誌與避免破壞調查。</td>
+<td>Incident Manager / SOC</td>
+<td>證據保全紀錄。</td>
+</tr>
+<tr>
+<td>6. 替代作業啟用</td>
+<td>啟用手工作業、備援系統、災備站點、遠端工作、臨時供應商或雲端替代。</td>
+<td>BCMS / Service Owner</td>
+<td>替代作業紀錄。</td>
+</tr>
+<tr>
+<td>7. 緊急存取管理</td>
+<td>核准臨時帳號、特權、VPN、防火牆、供應商連線與到期撤銷。</td>
+<td>IAM / PAM / CISO</td>
+<td>緊急權限紀錄。</td>
+</tr>
+<tr>
+<td>8. 復原與驗證</td>
+<td>還原系統、資料、設定、連線、監控與安全基準，驗證完整性。</td>
+<td>IT / Application Owner / Data Owner</td>
+<td>復原驗收紀錄。</td>
+</tr>
+<tr>
+<td>9. 對內外通報</td>
+<td>依授權內容與時限向內部、客戶、供應商、監管或其他利害關係人溝通。</td>
+<td>Communications / Legal / DPO</td>
+<td>通報紀錄。</td>
+</tr>
+<tr>
+<td>10. 控制回復</td>
+<td>撤銷臨時權限、關閉臨時連線、移除例外、恢復正常監控與變更流程。</td>
+<td>Control Owners</td>
+<td>控制回復清單。</td>
+</tr>
+<tr>
+<td>11. 事後檢討</td>
+<td>完成RCA、CAPA、風險重評、管理審查輸入、演練更新與文件修訂。</td>
+<td>CISO / BCMS Owner</td>
+<td>事後檢討報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 臨時措施、控制繞過與風險接受</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>臨時措施類型</th>
+<th>核准要求</th>
+<th>必要補償控制</th>
+<th>結束要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>臨時管理員權限</td>
+<td>需CISO/IAM/PAM或Incident Manager核准，明確期限與用途。</td>
+<td>Session紀錄、命令紀錄、雙人見證或事後審查。</td>
+<td>期限到期立即撤銷並審查活動。</td>
+</tr>
+<tr>
+<td>防火牆/ACL臨時開放</td>
+<td>需Network Owner與Security核准，限定來源、目的、Port與期限。</td>
+<td>日誌監控、流量審查、變更單。</td>
+<td>關閉規則並確認無殘留。</td>
+</tr>
+<tr>
+<td>MFA暫停或替代</td>
+<td>原則禁止；若必要需CISO核准並限制範圍。</td>
+<td>強密碼、VPN、裝置信任、人工回撥驗證、登入監控。</td>
+<td>恢復MFA並審查登入紀錄。</td>
+</tr>
+<tr>
+<td>供應商遠端支援</td>
+<td>需Supplier Owner、IT與Security核准。</td>
+<td>限時VPN、MFA、Session錄影、陪同操作。</td>
+<td>撤權、回收帳號、保存紀錄。</td>
+</tr>
+<tr>
+<td>臨時資料傳輸</td>
+<td>需Data Owner核准並確認分類、加密與接收者。</td>
+<td>加密傳輸、Hash、接收確認、DLP審查。</td>
+<td>刪除暫存並保存交付證據。</td>
+</tr>
+<tr>
+<td>手工作業表單</td>
+<td>需Business Owner與Data Owner核准。</td>
+<td>編號、簽核、存取限制、後續系統補登與核對。</td>
+<td>補登、歸檔或銷毀。</td>
+</tr>
+<tr>
+<td>臨時雲端/替代平台</td>
+<td>需Cloud Owner、Security、Legal/DPO視情況核准。</td>
+<td>IAM、加密、地區、日誌、資料最小化、合約確認。</td>
+<td>資料移回、刪除、權限撤銷。</td>
+</tr>
+<tr>
+<td>日誌暫停或降低</td>
+<td>原則禁止；如技術限制需CISO核准。</td>
+<td>本地保留、手動匯出、縮短間隔、提高人工監控。</td>
+<td>恢復日誌並補收可取得紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 資安維持檢查表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>檢查問題</th>
+<th>結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>啟動紀錄</td>
+<td>是否已正式記錄中斷啟動時間、範圍、等級與指揮角色？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>事件判定</td>
+<td>是否判定中斷是否涉及資安事件、資料外洩或惡意活動？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>最低控制</td>
+<td>是否已確認中斷期間不可降低之最低資安控制？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>緊急權限</td>
+<td>所有臨時帳號、特權、供應商存取是否核准、限時與記錄？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌監控</td>
+<td>身份、網路、系統、雲端、備援與安全設備日誌是否仍被保存或替代收集？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份驗證</td>
+<td>復原前是否驗證備份完整性、可用性與未感染狀態？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資料保護</td>
+<td>替代作業、手工作業或資料傳輸是否維持加密、最小化與存取限制？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>變更紀錄</td>
+<td>緊急變更是否有Owner、時間、目的、風險、回復方案與事後審查？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商狀態、支援、遠端連線、SLA與事件證據是否受控？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>通報溝通</td>
+<td>內外部通報是否經授權、準確、一致且避免揭露敏感細節？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>控制回復</td>
+<td>中斷後是否撤銷臨時權限、關閉臨時連線、復原安全基準？</td>
+<td>□ 符合 □ 不符合 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>表格垂直對齊</td>
+<td>本文件所有表格內容文字是否均已向上對齊？</td>
+<td>□ 符合</td>
+<td>已於CSS設定 td, th { vertical-align: top; }。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 中斷期間資安狀態紀錄表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄時間</th>
+<th>服務 / 系統</th>
+<th>中斷狀態</th>
+<th>資安控制狀態</th>
+<th>臨時措施</th>
+<th>風險等級</th>
+<th>Owner</th>
+<th>下一步</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 中斷 □ 降級 □ 替代作業 □ 復原中 □ 已復原</td>
+<td>□ 正常 □ 降級 □ 暫停 □ 替代控制</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 中斷 □ 降級 □ 替代作業 □ 復原中 □ 已復原</td>
+<td>□ 正常 □ 降級 □ 暫停 □ 替代控制</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 中斷 □ 降級 □ 替代作業 □ 復原中 □ 已復原</td>
+<td>□ 正常 □ 降級 □ 暫停 □ 替代控制</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 中斷 □ 降級 □ 替代作業 □ 復原中 □ 已復原</td>
+<td>□ 正常 □ 降級 □ 暫停 □ 替代控制</td>
+<td></td>
+<td>□ Critical □ High □ Medium □ Low</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 緊急權限與臨時控制清冊範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>編號</th>
+<th>臨時措施 / 權限</th>
+<th>申請原因</th>
+<th>核准者</th>
+<th>開始時間</th>
+<th>結束時間</th>
+<th>補償控制</th>
+<th>撤銷確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>TMP-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 未撤銷 □ 已撤銷 □ 延長核准</td>
+</tr>
+<tr>
+<td>TMP-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 未撤銷 □ 已撤銷 □ 延長核准</td>
+</tr>
+<tr>
+<td>TMP-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 未撤銷 □ 已撤銷 □ 延長核准</td>
+</tr>
+<tr>
+<td>TMP-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD HH:MM</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td>□ 未撤銷 □ 已撤銷 □ 延長核准</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 復原前後資安驗證要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>驗證領域</th>
+<th>復原前要求</th>
+<th>復原後要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份與存取</td>
+<td>確認緊急帳號、特權與供應商權限用途與期限。</td>
+<td>撤銷臨時權限，審查所有高權限活動。</td>
+<td>IAM/PAM紀錄。</td>
+</tr>
+<tr>
+<td>系統完整性</td>
+<td>確認復原來源可信、映像/備份未被污染。</td>
+<td>執行弱點掃描、惡意程式掃描、基準檢查。</td>
+<td>掃描與驗收紀錄。</td>
+</tr>
+<tr>
+<td>資料完整性</td>
+<td>確認備份版本、交易缺口、RPO與資料一致性。</td>
+<td>業務Owner確認資料、交易與報表一致。</td>
+<td>資料驗證紀錄。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>確認復原過程能保存必要日誌。</td>
+<td>恢復正常日誌收集、告警、SIEM與監控。</td>
+<td>監控截圖與Log。</td>
+</tr>
+<tr>
+<td>網路安全</td>
+<td>確認臨時規則與隔離策略。</td>
+<td>關閉臨時規則，回復防火牆、ACL與分段策略。</td>
+<td>網路變更紀錄。</td>
+</tr>
+<tr>
+<td>金鑰與憑證</td>
+<td>確認是否需輪替密碼、金鑰、憑證、Token或API Key。</td>
+<td>完成輪替、失效舊憑證並驗證應用。</td>
+<td>輪替紀錄。</td>
+</tr>
+<tr>
+<td>備份策略</td>
+<td>確認復原後備份重新啟用。</td>
+<td>執行首次備份、驗證還原點與保留策略。</td>
+<td>備份報告。</td>
+</tr>
+<tr>
+<td>替代資料</td>
+<td>確認手工作業、臨時表單與替代平台資料。</td>
+<td>完成補登、核對、歸檔或安全銷毀。</td>
+<td>補登與銷毀紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 通訊與通報安全要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>溝通對象</th>
+<th>安全要求</th>
+<th>核准角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>內部員工</td>
+<td>提供必要指引、替代作業方式、注意事項與通報管道。</td>
+<td>BCMS Owner / CISO / Communications</td>
+<td>內部公告。</td>
+</tr>
+<tr>
+<td>管理階層</td>
+<td>提供事實、風險、決策選項、客戶/法規影響與資安狀態。</td>
+<td>Incident Manager / BCMS Owner</td>
+<td>管理簡報。</td>
+</tr>
+<tr>
+<td>客戶</td>
+<td>內容需準確、一致、避免過度揭露弱點或未確認資訊。</td>
+<td>Legal / Communications / Business Owner</td>
+<td>客戶通知。</td>
+</tr>
+<tr>
+<td>供應商</td>
+<td>要求狀態回報、SLA、事件證據、替代方案與改善計畫。</td>
+<td>Supplier Owner / Procurement</td>
+<td>供應商紀錄。</td>
+</tr>
+<tr>
+<td>監管機關</td>
+<td>依法律、合約與DPO/Legal評估後於時限內通報。</td>
+<td>Legal / DPO / CISO</td>
+<td>通報證據。</td>
+</tr>
+<tr>
+<td>媒體/公眾</td>
+<td>僅由授權發言人對外溝通。</td>
+<td>Communications / Management / Legal</td>
+<td>新聞聲明。</td>
+</tr>
+<tr>
+<td>執法/司法</td>
+<td>交付證據或資訊需經Legal核准並保留保管鏈。</td>
+<td>Legal / CISO</td>
+<td>交付紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 例外管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外情境</th>
+<th>最低要求</th>
+<th>核准層級</th>
+<th>期限與重評</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>為復原需暫時降低控制</td>
+<td>需風險評估、補償控制、核准、期限與回復計畫。</td>
+<td>CISO / Management視風險</td>
+<td>每24小時或依事件節奏重評。</td>
+</tr>
+<tr>
+<td>無法維持MFA</td>
+<td>需限制來源、使用裝置信任、人工回撥、登入監控與短期限。</td>
+<td>CISO / IAM Owner</td>
+<td>最短期限，原則不超過24至72小時。</td>
+</tr>
+<tr>
+<td>無法保存完整日誌</td>
+<td>需建立替代收集、人工紀錄、系統快照或本地匯出。</td>
+<td>CISO / SOC Owner</td>
+<td>每日重評。</td>
+</tr>
+<tr>
+<td>需使用未核准替代平台</td>
+<td>需資料分類、DPO/Legal視情況審查、加密與到期刪除。</td>
+<td>CISO / Data Owner / Legal</td>
+<td>單次核准。</td>
+</tr>
+<tr>
+<td>供應商無法提供SLA證據</td>
+<td>需記錄通話、Email、狀態頁、工單與替代證據。</td>
+<td>Supplier Owner / CISO</td>
+<td>中斷期間每日追蹤。</td>
+</tr>
+<tr>
+<td>無法立即撤銷臨時權限</td>
+<td>需主管與CISO核准延長，增加監控與審查。</td>
+<td>CISO / IAM Owner</td>
+<td>每日重評至撤銷。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 事後檢討與改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢討項目</th>
+<th>檢討問題</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>事件時間軸</td>
+<td>是否完整記錄發現、決策、控制變更、復原、通報與結案時間？</td>
+<td>事件時間軸。</td>
+</tr>
+<tr>
+<td>控制有效性</td>
+<td>最低資安控制是否有效維持？哪些控制被降低或繞過？</td>
+<td>控制有效性報告。</td>
+</tr>
+<tr>
+<td>臨時措施</td>
+<td>臨時帳號、臨時網路、臨時平台、手工作業是否已撤銷或歸檔？</td>
+<td>控制回復清單。</td>
+</tr>
+<tr>
+<td>資料完整性</td>
+<td>復原資料是否完整、一致、未遭竄改且與RPO/RTO一致？</td>
+<td>資料驗證報告。</td>
+</tr>
+<tr>
+<td>通報合規</td>
+<td>客戶、監管、供應商、內部通報是否符合時限與授權？</td>
+<td>通報檢討。</td>
+</tr>
+<tr>
+<td>供應商表現</td>
+<td>供應商回應、SLA、支援品質與證據是否符合要求？</td>
+<td>供應商評估。</td>
+</tr>
+<tr>
+<td>人員與決策</td>
+<td>角色、代理、值班、指揮、溝通與決策是否有效？</td>
+<td>組織改善建議。</td>
+</tr>
+<tr>
+<td>風險重評</td>
+<td>事件後是否需更新風險登錄、BIA、RTO/RPO、BCP/DR或控制措施？</td>
+<td>風險更新。</td>
+</tr>
+<tr>
+<td>CAPA</td>
+<td>是否建立根本原因分析、矯正措施、預防措施、Owner與期限？</td>
+<td>CAPA紀錄。</td>
+</tr>
+<tr>
+<td>演練更新</td>
+<td>是否需更新演練腳本、教育訓練、Runbook與技術文件？</td>
+<td>更新計畫。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 紀錄保存與文件化資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>保存內容</th>
+<th>保存責任</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>中斷啟動與指揮紀錄</td>
+<td>啟動時間、範圍、指揮角色、會議紀錄、決策與狀態報告。</td>
+<td>BCMS Owner / Incident Manager</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>資安維持紀錄</td>
+<td>最低控制、臨時措施、控制繞過、補償控制、核准與復原確認。</td>
+<td>CISO / ISMS代表</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>緊急權限紀錄</td>
+<td>臨時帳號、特權、供應商存取、VPN、防火牆與撤銷紀錄。</td>
+<td>IAM / PAM / Network Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>日誌與證據</td>
+<td>系統日誌、SIEM、雲端Log、門禁/CCTV、快照、Hash、保管鏈。</td>
+<td>SOC / Incident Manager</td>
+<td>依事件等級至少3至7年。</td>
+</tr>
+<tr>
+<td>備份與復原紀錄</td>
+<td>備份驗證、還原、資料一致性、掃描、業務驗收與RPO/RTO結果。</td>
+<td>IT Operations / Data Owner</td>
+<td>至少3年。</td>
+</tr>
+<tr>
+<td>通報與溝通紀錄</td>
+<td>內部、客戶、供應商、監管、媒體、法律或執法溝通內容與核准。</td>
+<td>Communications / Legal</td>
+<td>至少3年或依法規。</td>
+</tr>
+<tr>
+<td>供應商紀錄</td>
+<td>供應商工單、狀態、SLA、會議、根因、改善與合約證據。</td>
+<td>Supplier Owner</td>
+<td>合約期間及終止後至少3年。</td>
+</tr>
+<tr>
+<td>事後檢討與CAPA</td>
+<td>RCA、Lessons Learned、CAPA、風險更新、管理審查與演練更新。</td>
+<td>ISMS/BCMS Owner</td>
+<td>至少3年。</td>
+</tr>
+</tbody>
+</table>
+<h2>17. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>最低控制維持率</td>
+<td>中斷期間最低可接受資安控制維持正常或有補償控制之比例。</td>
+<td>Critical服務目標100%。</td>
+<td>資安韌性。</td>
+</tr>
+<tr>
+<td>臨時權限逾期數</td>
+<td>超過核准期限未撤銷之臨時權限數。</td>
+<td>目標0。</td>
+<td>特權風險。</td>
+</tr>
+<tr>
+<td>日誌中斷時間</td>
+<td>關鍵日誌或監控中斷累計時間。</td>
+<td>依SLA；重大中斷需管理審查。</td>
+<td>偵測能力。</td>
+</tr>
+<tr>
+<td>復原驗證通過率</td>
+<td>復原後完成安全、資料、業務驗收之服務比例。</td>
+<td>目標100%。</td>
+<td>復原可信度。</td>
+</tr>
+<tr>
+<td>備份驗證成功率</td>
+<td>中斷事件使用備份前完成驗證且可用之比例。</td>
+<td>目標100%。</td>
+<td>資料復原能力。</td>
+</tr>
+<tr>
+<td>通報準時率</td>
+<td>法規、合約、客戶或內部通報於時限內完成比例。</td>
+<td>目標100%。</td>
+<td>合規性。</td>
+</tr>
+<tr>
+<td>臨時控制回復完成率</td>
+<td>中斷結束後完成撤銷、關閉、移除與復原之臨時控制比例。</td>
+<td>目標100%。</td>
+<td>回復正常控制。</td>
+</tr>
+<tr>
+<td>重複中斷原因數</td>
+<td>同類原因重複造成中斷之次數。</td>
+<td>持續下降。</td>
+<td>根因改善。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>啟動與角色</td>
+<td>是否有中斷啟動、角色分工、指揮與決策紀錄。</td>
+<td>啟動紀錄、會議紀錄。</td>
+</tr>
+<tr>
+<td>最低控制</td>
+<td>是否定義並維持中斷期間最低資安控制。</td>
+<td>資安維持清單。</td>
+</tr>
+<tr>
+<td>臨時措施</td>
+<td>控制繞過、臨時權限、臨時連線是否核准、限時與回復。</td>
+<td>臨時控制清冊。</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>中斷期間是否維持監控、日誌保存與告警回應。</td>
+<td>SIEM/Log/告警紀錄。</td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td>備份是否驗證，復原後資料完整性與安全狀態是否確認。</td>
+<td>備份與復原報告。</td>
+</tr>
+<tr>
+<td>事件與證據</td>
+<td>涉及資安事件時是否保全證據與保管鏈。</td>
+<td>事件紀錄、Hash、保管鏈。</td>
+</tr>
+<tr>
+<td>供應商管理</td>
+<td>供應商中斷或支援是否有工單、SLA、狀態與改善。</td>
+<td>供應商紀錄。</td>
+</tr>
+<tr>
+<td>通報管理</td>
+<td>內外部通報是否授權、準確、準時且避免敏感資訊外洩。</td>
+<td>通報紀錄。</td>
+</tr>
+<tr>
+<td>控制回復</td>
+<td>中斷後是否撤銷臨時控制並回復正常流程。</td>
+<td>控制回復清單。</td>
+</tr>
+<tr>
+<td>事後改善</td>
+<td>是否完成RCA、CAPA、風險更新、BCP/DR更新與管理審查。</td>
+<td>事後檢討報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 附錄A：中斷期間資安維持決策紀錄範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>決策編號</th>
+<th>時間</th>
+<th>議題</th>
+<th>決策內容</th>
+<th>風險影響</th>
+<th>核准者</th>
+<th>追蹤Owner</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DEC-001</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未完成 □ 執行中 □ 已完成</td>
+</tr>
+<tr>
+<td>DEC-002</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未完成 □ 執行中 □ 已完成</td>
+</tr>
+<tr>
+<td>DEC-003</td>
+<td>YYYY-MM-DD HH:MM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未完成 □ 執行中 □ 已完成</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 附錄B：控制回復確認表範本</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制項目</th>
+<th>中斷期間狀態</th>
+<th>回復要求</th>
+<th>確認人</th>
+<th>確認日期</th>
+<th>結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MFA / 身分驗證</td>
+<td>□ 正常 □ 降級 □ 暫停 □ 替代控制</td>
+<td>恢復正常MFA與登入政策。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+<tr>
+<td>特權帳號</td>
+<td>□ 正常 □ 臨時增加 □ 替代控制</td>
+<td>撤銷臨時權限並審查活動。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+<tr>
+<td>防火牆 / VPN</td>
+<td>□ 正常 □ 臨時開放 □ 替代控制</td>
+<td>關閉臨時規則與連線。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+<tr>
+<td>日誌 / 監控</td>
+<td>□ 正常 □ 中斷 □ 替代收集</td>
+<td>恢復SIEM/監控並補收可取得日誌。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+<tr>
+<td>備份</td>
+<td>□ 正常 □ 暫停 □ 重新建立</td>
+<td>恢復備份排程並驗證還原點。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+<tr>
+<td>資料傳輸</td>
+<td>□ 正常 □ 臨時流程 □ 手工作業</td>
+<td>刪除暫存、補登系統、完成資料核對。</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 通過 □ 不通過</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

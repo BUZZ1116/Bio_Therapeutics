@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-FRM-007 雲端服務風險評估表</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 20px; font-size: 17px; color: #27496d; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+<h1>ISMS-A05-FRM-007 雲端服務風險評估表</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-FRM-007</td>
+<td>雲端服務風險評估表</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>供應商與雲端安全Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-FRM-007</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>供應商與雲端安全Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>評估建立</td>
+<td></td>
+<td>服務Owner / Cloud Security Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>ISMS管理代表 / CISO代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端架構審查</td>
+<td></td>
+<td>Cloud Architect / IT架構負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法務與合約審查</td>
+<td></td>
+<td>法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與DPA審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>AI治理審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>BCMS/DRP審查</td>
+<td></td>
+<td>BCMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>GHG/ESG資料審查</td>
+<td></td>
+<td>GHG資料治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>最終核准</td>
+<td></td>
+<td>CISO / 服務Owner / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 表單目的</h2>
+<p>本評估表用於識別、分析、評價與記錄雲端服務導入、使用、變更、續約及退場之資訊安全風險，確保雲端服務在資料分類、存取控制、加密、共享責任、供應商、第四方、PII、AI、跨境、營運持續、日誌監控、事件應變與合約要求等面向受到適當評估與處理。</p>
+<p>本表單可作為雲端服務准入、上線、續約、年度重評、事件後重評、管理審查、內部稽核與外部驗證之正式證據。</p>
+<h2>2. 使用原則</h2>
+<ul>
+<li>所有中高風險雲端服務、處理機密以上資訊、PII、客戶資料、AI資料、GHG/CO2資料或支援關鍵營運之雲端服務，均應完成本風險評估表。</li>
+<li>雲端風險評估應以實際用途、資料流、供應商條款、共享責任、技術控制與營運影響為基礎，不得僅依供應商品牌或市場聲譽判定。</li>
+<li>評估結果若存在不可接受風險，應建立風險處理計畫、補償控制、剩餘風險接受或限制使用條件。</li>
+<li>雲端服務用途、資料類型、使用者範圍、區域、供應商、第四方、AI功能或核心組態發生重大變更時，應重新評估。</li>
+</ul>
+<h2>3. 雲端服務基本資料</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th style="width:20%;">雲端服務名稱</th>
+<td style="width:30%;"></td>
+<th style="width:20%;">清冊編號</th>
+<td style="width:30%;">CLD-SVC-YYYY-NNN</td>
+</tr>
+<tr>
+<th>供應商名稱</th>
+<td></td>
+<th>供應商編號</th>
+<td>SUP-YYYY-NNN</td>
+</tr>
+<tr>
+<th>服務模式</th>
+<td colspan="3">□ SaaS　□ PaaS　□ IaaS　□ CaaS　□ Serverless　□ AI雲端服務　□ 雲端資料平台　□ 混合雲　□ 其他</td>
+</tr>
+<tr>
+<th>部署型態</th>
+<td>□ 公有雲　□ 私有雲　□ 混合雲　□ 社群雲　□ 供應商託管</td>
+<th>使用狀態</th>
+<td>□ 申請中　□ 試用　□ 導入中　□ 使用中　□ 變更中　□ 退場中</td>
+</tr>
+<tr>
+<th>服務Owner</th>
+<td></td>
+<th>系統Owner</th>
+<td></td>
+</tr>
+<tr>
+<th>Data Owner</th>
+<td></td>
+<th>Cloud Security Owner</th>
+<td></td>
+</tr>
+<tr>
+<th>主要使用部門</th>
+<td></td>
+<th>預估使用人數</th>
+<td></td>
+</tr>
+<tr>
+<th>主要業務用途</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>是否涉及客戶服務</th>
+<td>□ 是　□ 否</td>
+<th>是否屬關鍵服務</th>
+<td>□ 是　□ 否　□ 待確認</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 資料與處理範圍識別</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料類型</th>
+<th>是否涉及</th>
+<th>最高分類</th>
+<th>處理方式</th>
+<th>資料量/頻率</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>內部文件/流程資料</td>
+<td>□ 是　□ 否</td>
+<td>□ 內部　□ 機密　□ 高機密</td>
+<td>□ 儲存　□ 傳輸　□ 分析　□ 分享　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>客戶資料</td>
+<td>□ 是　□ 否</td>
+<td>□ 機密　□ 高機密　□ 受合約限制</td>
+<td>□ 儲存　□ 傳輸　□ 處理　□ 分享　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PII/個人資料</td>
+<td>□ 是　□ 否</td>
+<td>□ 一般PII　□ 敏感PII　□ 大量PII</td>
+<td>□ 收集　□ 處理　□ 儲存　□ 傳輸　□ 刪除</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>原始碼/技術文件</td>
+<td>□ 是　□ 否</td>
+<td>□ 機密　□ 高機密</td>
+<td>□ 儲存　□ 分析　□ 版本控管　□ 交付　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI輸入/輸出/模型資料</td>
+<td>□ 是　□ 否</td>
+<td>□ 內部　□ 機密　□ 高機密</td>
+<td>□ Prompt　□ 訓練　□ 推論　□ 評估　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GHG/CO2與ESG資料</td>
+<td>□ 是　□ 否</td>
+<td>□ 內部　□ 機密　□ 查證資料</td>
+<td>□ 收集　□ 計算　□ 查證　□ 揭露　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>金鑰、憑證、Secrets</td>
+<td>□ 是　□ 否</td>
+<td>□ 高機密</td>
+<td>□ 儲存　□ 管理　□ 傳輸　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>5. 資料流向與區域識別</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料流編號</th>
+<th>來源</th>
+<th>雲端處理/儲存區域</th>
+<th>目的地</th>
+<th>跨境傳輸</th>
+<th>子處理者/第四方</th>
+<th>保護措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DF-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DF-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DF-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DF-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待確認</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>6. 初始風險分級判定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>判定面向</th>
+<th>低風險</th>
+<th>中風險</th>
+<th>高風險</th>
+<th>本案判定</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料敏感性</td>
+<td>不處理內部以上資料</td>
+<td>內部或少量機密資料</td>
+<td>高機密、PII、客戶資料、源碼或金鑰</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務重要性</td>
+<td>非關鍵、容易替代</td>
+<td>重要但可短期中斷</td>
+<td>關鍵服務、客戶服務、RTO/RPO或合約SLA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>存取範圍</td>
+<td>少數內部使用者</td>
+<td>多部門或外部使用者</td>
+<td>外部客戶、供應商、管理員或特權存取</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商成熟度</td>
+<td>具有效ISO/SOC與透明條款</td>
+<td>部分證據或部分條款不足</td>
+<td>證據不足、條款不可接受或第四方不可視</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>跨境/法規</td>
+<td>不跨境且無特殊法規</td>
+<td>部分跨境或一般法規</td>
+<td>PII跨境、客戶資料主權或監管要求</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI/自動化決策</td>
+<td>不涉及AI</td>
+<td>一般輔助性AI</td>
+<td>高影響AI、模型訓練、客戶互動或自動化決策</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>總體初判</td>
+<td>低</td>
+<td>中</td>
+<td>高/極高</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>7. 共享責任評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>責任領域</th>
+<th>雲端供應商責任</th>
+<th>組織責任</th>
+<th>共同責任缺口</th>
+<th>是否可接受</th>
+<th>處理措施</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>身份與存取管理</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>資料保護與加密</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>網路與連線安全</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>事件應變與通報</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除與退場</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 是　□ 否　□ 待補</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>8. 供應商與合約風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商登錄</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全證明</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>合約安全條款</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SLA與服務水準</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>稽核權與證據提供</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>子處理者/第四方</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務變更通知</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>事件通報</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>退場與資料刪除</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>9. IAM與存取控制風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SSO整合</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MFA啟用</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>最小權限</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>角色與權限矩陣</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>特權管理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>外部帳號</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務帳號/API Key</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>權限定期審查</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>離職與異動移除</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>10. 資料保護、加密與Secrets風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料分類標示</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>儲存加密</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>傳輸加密</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KMS/金鑰管理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BYOK/CMK/HSM</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Secrets管理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DLP/CASB</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料保留期限</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除與銷毀證明</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>11. 網路、API與暴露面風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>公開暴露面</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>管理介面保護</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>網路隔離</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>WAF/API Gateway</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TLS與憑證</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>速率限制與防濫用</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全組態基準</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>滲透測試/弱點掃描</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>攻擊面監測</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>12. 日誌、監控與偵測風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>管理活動日誌</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>使用者存取日誌</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>API呼叫日誌</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料匯出/下載日誌</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌保存期限</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SIEM整合</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>異常行為偵測</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>告警分級</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌不可否認性</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>13. 弱點、修補與安全組態風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商弱點管理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>修補時效</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全公告訂閱</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CIS/雲端基準</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>組態漂移偵測</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>容器/映像安全</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IaC安全檢查</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>例外管理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>證據保留</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>14. PII、隱私與跨境風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PII合法目的</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DPA/資料處理協議</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料主體權利</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>跨境傳輸依據</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料落地/區域限制</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>子處理者透明度</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>敏感PII保護</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DPIA必要性</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>隱私事件通報</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>15. AI雲端服務風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI服務核准</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Prompt/輸入保留</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料用於訓練</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>模型供應商條款</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>高影響AI用途</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>人類監督</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI輸出覆核</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>模型變更通知</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI事件通報</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>16. BCMS/DRP與服務可用性風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>可用性SLA</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RTO/RPO支援</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>備份策略</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>跨區備援</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>復原測試</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>容量與擴充</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DDoS防護</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>中斷通報</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>營運替代方案</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>17. GHG/ESG資料與永續治理風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>能源與資料中心區域</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GHG資料處理</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>碳資料完整性</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>查證證據保護</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應鏈碳資料</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>對外揭露資料</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料可追溯性</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI/雲端能源依賴</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>永續聲明證據</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>18. 事件應變、鑑識與通報風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端事件通報窗口</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>事件分級</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>客戶/主管機關通報</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>數位證據保存</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌調閱SLA</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>聯合演練</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>根因分析</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>事件後改善</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>法務保全</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>19. 退場、移轉與資料可攜性風險評估</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>評估項目</th>
+<th>控制目標/檢核重點</th>
+<th>目前狀態</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料匯出格式</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>移轉工具</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>帳號與權限撤銷</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除證明</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>備份副本刪除</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>合約終止支援</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vendor Lock-in</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>退場演練</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>殘留風險</td>
+<td>依雲端服務風險等級、資料分類、共享責任與合約義務，確認控制設計、實作證據、持續監督要求與缺口。</td>
+<td>□ 符合　□ 部分　□ 不符合　□ 不適用</td>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>20. 風險評分與處理彙總</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險編號</th>
+<th>風險情境</th>
+<th>影響資產/資料</th>
+<th>衝擊</th>
+<th>可能性</th>
+<th>固有風險</th>
+<th>處理選項</th>
+<th>處理措施</th>
+<th>剩餘風險</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-002</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-003</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-004</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-005</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-006</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R-007</td>
+<td></td>
+<td></td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td>□ 5 □ 4 □ 3 □ 2 □ 1</td>
+<td></td>
+<td>□ 降低　□ 避免　□ 移轉　□ 接受</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>21. 風險接受與限制使用條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th>是否准入/續用</th>
+<td colspan="3">□ 核准使用　□ 條件式核准　□ 暫緩　□ 不核准</td>
+</tr>
+<tr>
+<th>使用限制</th>
+<td colspan="3">□ 不得處理PII　□ 不得處理高機密　□ 不得外部分享　□ 僅限特定部門　□ 僅限特定區域　□ 需完成改善後使用</td>
+</tr>
+<tr>
+<th>必要補償控制</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>剩餘風險說明</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>風險接受人</th>
+<td></td>
+<th>接受日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>接受期限</th>
+<td>YYYY-MM-DD</td>
+<th>到期重評</th>
+<td>□ 是　□ 否</td>
+</tr>
+</tbody>
+</table>
+<h2>22. 改善追蹤計畫</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>改善編號</th>
+<th>缺口/風險</th>
+<th>改善措施</th>
+<th>責任人</th>
+<th>期限</th>
+<th>狀態</th>
+<th>完成證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AP-001</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-002</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-003</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-004</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-005</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-006</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+<tr>
+<td>AP-007</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 已完成　□ 逾期</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>23. 證據清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>證據類型</th>
+<th>紀錄類型</th>
+<th>版本/日期</th>
+<th>保存位置</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27001或SOC報告</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商安全白皮書/控制說明</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DPA/合約/SLA</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料流圖與架構圖</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>安全組態截圖</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IAM與MFA設定證據</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日誌與監控證據</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>備份與復原測試紀錄</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>弱點掃描/修補證據</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>資料刪除或退場證明</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>24. 重評觸發條件</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發條件</th>
+<th>是否發生</th>
+<th>處理要求</th>
+<th>重評期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>新增PII、客戶資料、高機密或受監管資料</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>服務模式、部署區域或資料流向變更</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>新增AI功能、自動化決策或模型訓練用途</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>供應商合約、DPA、SLA或子處理者變更</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>重大安全事件、資料外洩或稽核發現</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>關鍵營運依賴、RTO/RPO或BCMS要求改變</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>法規、客戶合約或監管要求改變</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>續約、退場或移轉前評估</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>25. 流程活動與稽核證據摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理主題</th>
+<th>輸出/稽核證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>雲端服務准入</td>
+<td>本評估表、核准紀錄、使用限制與雲端清冊更新。</td>
+</tr>
+<tr>
+<td>供應商與ICT供應鏈</td>
+<td>供應商登錄、合約檢核、第四方登錄與服務監督紀錄。</td>
+</tr>
+<tr>
+<td>風險管理</td>
+<td>風險評分、處理計畫、剩餘風險接受與風險登錄更新。</td>
+</tr>
+<tr>
+<td>隱私治理</td>
+<td>DPA、DPIA、跨境評估、PII處理與資料主體權利證據。</td>
+</tr>
+<tr>
+<td>AI治理</td>
+<td>AI服務核准、Prompt/訓練條款、人類監督與AI事件通報證據。</td>
+</tr>
+<tr>
+<td>事件與營運持續</td>
+<td>事件通報、鑑識證據、RTO/RPO、備份復原與演練紀錄。</td>
+</tr>
+<tr>
+<td>績效與稽核</td>
+<td>KPI/KRI、控制有效性、內稽底稿、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+<h2>26. 最終評估結論</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<tbody>
+<tr>
+<th>總體風險等級</th>
+<td>□ 極高　□ 高　□ 中　□ 低</td>
+<th>是否納入風險登錄</th>
+<td>□ 是　□ 否</td>
+</tr>
+<tr>
+<th>准入決策</th>
+<td>□ 核准　□ 條件式核准　□ 不核准　□ 補件後再議</td>
+<th>決策日期</th>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<th>決策理由</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>必要追蹤事項</th>
+<td colspan="3"></td>
+</tr>
+<tr>
+<th>下一次審查日</th>
+<td>YYYY-MM-DD</td>
+<th>審查頻率</th>
+<td>□ 每季　□ 每半年　□ 每年　□ 重大變更時</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

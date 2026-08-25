@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-REG-001 資訊及相關資產清冊</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+h3 { margin-top: 18px; font-size: 17px; color: #333; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+.notice { border-left: 5px solid #1f3b5b; padding: 10px 14px; background: #f7f9fb; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-REG-001 資訊及相關資產清冊</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-REG-001</td>
+<td>資訊及相關資產清冊</td>
+<td>第四階：表單與紀錄 / REG / 清冊</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>資訊資產Owner / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-REG-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>資訊資產Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱 / 單位</th>
+<th>簽核 / 確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>清冊建立</td>
+<td></td>
+<td>Asset Management Owner / ISMS管理代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資訊安全審查</td>
+<td></td>
+<td>CISO / 資安負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>IT營運審查</td>
+<td></td>
+<td>IT Operations Owner / Infrastructure Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資料治理審查</td>
+<td></td>
+<td>Data Owner / Data Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>雲端與AI資產審查</td>
+<td></td>
+<td>Cloud Security Owner / AI Governance Owner / MLOps Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商資產審查</td>
+<td></td>
+<td>Supplier Management Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>隱私與法遵審查</td>
+<td></td>
+<td>DPO / 法務 / 法遵負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>CISO / IT營運主管 / 授權代表</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 清冊目的</h2>
+<p>本清冊用於識別、登錄、分類、指定Owner、評估重要性、確認保護需求及追蹤所有資訊及相關資產，使組織能夠建立完整的資產基礎，支援資訊安全風險評估、控制措施選擇、存取控制、資料分類、事件應變、營運持續、供應商管理、雲端安全、AI治理、隱私保護、內部稽核與管理審查。</p>
+<p>本清冊為ISMS核心文件化資訊之一。所有風險評估、適用性聲明書、控制措施有效性檢查、弱點管理、日誌監控、備份復原、存取審查、供應商審查與AI模型治理，均應能追溯至本清冊或其延伸子清冊。</p>
+
+<h2>2. 登錄與維護原則</h2>
+<ul>
+<li>所有資訊及相關資產應於建立、取得、租用、採購、開發、上線、接入、外包、雲端部署、AI導入或正式使用前完成登錄。</li>
+<li>每一項資產應指定明確Owner，Owner須負責資產分類、使用授權、風險確認、存取審查、保護要求、異動與退場確認。</li>
+<li>清冊應保持正確、完整、即時且可追溯，並至少定期盤點；重大變更、事件、供應商變更、雲端架構變更或AI模型變更時應即時更新。</li>
+<li>清冊資料本身可能揭露組織系統架構、IP、供應商、資料分類、資安控制與關鍵流程，應依內部使用或更高分級保護。</li>
+<li>資產分類、資料分類、風險等級、備份、監控、弱點修補、存取控制與退場要求應相互一致，不得各自獨立維護而造成治理落差。</li>
+</ul>
+
+<h2>3. 資產分類與登錄範圍</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產類別</th>
+<th>資產範圍說明</th>
+<th>登錄重點</th>
+<th>主要Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資訊 / 資料資產</td>
+<td>文件、紀錄、資料集、資料庫資料、客戶資料、個人資料、交易資料、營運資料、碳資料、模型訓練資料。</td>
+<td>資料分類、Owner、保存期限、PII、跨境、備份、刪除、DLP與存取限制。</td>
+<td>Data Owner / Business Owner</td>
+</tr>
+<tr>
+<td>應用系統資產</td>
+<td>Web系統、行動App、API、內部系統、客戶系統、ERP、CRM、Moodle、資料平台、工作流程系統。</td>
+<td>系統Owner、環境、資料分類、API、日誌、備份、弱點、RTO/RPO。</td>
+<td>System Owner / Application Owner</td>
+</tr>
+<tr>
+<td>基礎設施資產</td>
+<td>伺服器、虛擬機、容器平台、Kubernetes、儲存、資料庫、中介軟體、備份平台。</td>
+<td>主機名稱、IP、位置、Owner、修補、監控、備份、生命週期。</td>
+<td>Infrastructure Owner</td>
+</tr>
+<tr>
+<td>網路與安全設備</td>
+<td>防火牆、交換器、路由器、VPN、WAF、IDS/IPS、Proxy、DNS、NDR、DLP、SIEM、SOAR、EDR。</td>
+<td>管理介面、規則Owner、日誌來源、維護合約、韌體版本。</td>
+<td>Network / Security Owner</td>
+</tr>
+<tr>
+<td>端點與使用者設備</td>
+<td>筆電、桌機、行動裝置、平板、遠端工作設備、測試設備、共享設備。</td>
+<td>使用者、設備序號、MDM/EDR、加密、位置、退場。</td>
+<td>Endpoint Owner / HR / IT</td>
+</tr>
+<tr>
+<td>雲端與SaaS資產</td>
+<td>IaaS、PaaS、SaaS、雲端帳戶、訂閱、Project、VPC/VNet、儲存桶、KMS、Serverless、雲端資料庫。</td>
+<td>雲端區域、帳號、資料分類、IAM、CSPM、日誌、供應商。</td>
+<td>Cloud Owner / Service Owner</td>
+</tr>
+<tr>
+<td>AI與MLOps資產</td>
+<td>AI模型、Prompt模板、RAG資料源、向量資料庫、Embedding、模型服務、AI Agent、MLOps平台、外部AI API。</td>
+<td>模型版本、資料來源、Prompt Owner、風險等級、AI安全測試、供應商。</td>
+<td>AI Governance Owner / MLOps Owner</td>
+</tr>
+<tr>
+<td>軟體與授權資產</td>
+<td>商用軟體、開源元件、SDK、套件、資料庫授權、模型授權、API授權。</td>
+<td>授權條款、版本、弱點、使用範圍、到期日、智慧財產權。</td>
+<td>Software Asset Owner / Legal</td>
+</tr>
+<tr>
+<td>身分與憑證資產</td>
+<td>使用者帳號、特權帳號、服務帳號、API Key、憑證、金鑰、Token、SSH Key、MFA裝置。</td>
+<td>Owner、用途、權限、輪替、到期、保管、撤銷。</td>
+<td>IAM Owner / Key Owner</td>
+</tr>
+<tr>
+<td>實體與環境資產</td>
+<td>機房、辦公室、安全區域、機櫃、門禁、監視器、UPS、空調、消防、環境感測器。</td>
+<td>位置、安全等級、進出控制、維護、環境風險。</td>
+<td>Facility Owner / IT</td>
+</tr>
+<tr>
+<td>供應商與外包資產</td>
+<td>供應商代管系統、外部SOC、MSSP、雲端供應商、AI供應商、外包維運工具。</td>
+<td>合約、SLA、資料處理、存取、事件通報、退場。</td>
+<td>Supplier Management Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 清冊欄位定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>欄位名稱</th>
+<th>填寫說明</th>
+<th>是否必要</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產編號</td>
+<td>唯一識別碼，建議格式 ASSET-YYYY-0001 或依類別使用 DATA/APP/CLD/AI/NET/END 等前綴。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產名稱</td>
+<td>資產正式名稱或可識別名稱。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產類別</td>
+<td>依第3章分類選擇。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產描述</td>
+<td>說明資產用途、支援流程、主要功能或資料內容。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產Owner</td>
+<td>對資產使用、分類、授權、風險與退場負責之人。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>保管 / 維運單位</td>
+<td>負責日常維護、設定、備份、監控或保管之單位。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>使用單位 / 使用者範圍</td>
+<td>使用此資產之部門、角色、客戶、供應商或系統。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>業務流程</td>
+<td>資產支援之主要業務流程、服務或管理系統流程。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產位置</td>
+<td>實體位置、雲端區域、資料中心、SaaS供應商或儲存位置。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>環境</td>
+<td>正式、測試、開發、預備、災備、封存、外包、雲端、AI實驗等。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資料分類</td>
+<td>公開、內部、機密、高機密、PII、客戶資料、受合約限制資料等。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>機密性等級</td>
+<td>1低至5高，依資料敏感度與未授權揭露影響評定。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>完整性等級</td>
+<td>1低至5高，依資料或服務被竄改之影響評定。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>可用性等級</td>
+<td>1低至5高，依服務中斷對業務、合約、客戶與營運之影響評定。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>資產重要性</td>
+<td>依CIA、法規、業務關鍵性、客戶影響、AI或隱私風險判定。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>RTO / RPO</td>
+<td>若為服務或資料資產，填寫復原時間目標與復原點目標。</td>
+<td>條件必要</td>
+</tr>
+<tr>
+<td>主要控制措施</td>
+<td>列出適用之控制措施，例如MFA、加密、備份、DLP、SIEM、EDR、CSPM、AI Guardrail。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>備份要求</td>
+<td>備份頻率、保存期限、復原測試與是否不可變。</td>
+<td>條件必要</td>
+</tr>
+<tr>
+<td>日誌與監控</td>
+<td>是否納入日誌、SIEM、EDR、DLP、CSPM或AI監控。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>弱點與修補</td>
+<td>修補責任、掃描頻率、版本或弱點追蹤方式。</td>
+<td>條件必要</td>
+</tr>
+<tr>
+<td>供應商 / 合約</td>
+<td>若由供應商提供或代管，填寫供應商、合約、SLA與退場要求。</td>
+<td>條件必要</td>
+</tr>
+<tr>
+<td>生命週期狀態</td>
+<td>規劃、導入、使用中、暫停、封存、退場中、已退場。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>最近盤點日期</td>
+<td>最近一次確認清冊內容正確性之日期。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>下次審查日期</td>
+<td>預計下次盤點或審查日期。</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>備註</td>
+<td>其他限制、例外、風險、特殊控制或關聯文件。</td>
+<td>選填</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. 資產重要性與CIA分級準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>等級</th>
+<th>機密性判定</th>
+<th>完整性判定</th>
+<th>可用性判定</th>
+<th>資產重要性判斷</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1 低</td>
+<td>公開或低敏感資訊，外洩影響有限。</td>
+<td>錯誤或竄改影響有限且容易修正。</td>
+<td>短期不可用影響有限。</td>
+<td>一般輔助或低風險資產。</td>
+</tr>
+<tr>
+<td>2 中低</td>
+<td>內部資訊，外洩可能造成輕微營運或聲譽影響。</td>
+<td>錯誤可能造成部門層級作業延誤。</td>
+<td>中斷可能造成單一部門短期不便。</td>
+<td>一般內部營運資產。</td>
+</tr>
+<tr>
+<td>3 中</td>
+<td>含內部重要資料、營運資料或受限制資訊。</td>
+<td>錯誤可能影響主要流程、客戶服務或報表。</td>
+<td>中斷可能影響主要流程或SLA。</td>
+<td>重要營運資產。</td>
+</tr>
+<tr>
+<td>4 高</td>
+<td>含機密、客戶資料、PII、合約限制資料、AI模型或敏感技術資訊。</td>
+<td>錯誤可能造成重大營運、合規、客戶或財務影響。</td>
+<td>中斷可能影響關鍵服務、法規或客戶承諾。</td>
+<td>關鍵資產或高風險資產。</td>
+</tr>
+<tr>
+<td>5 重大</td>
+<td>含高機密、大量PII、核心商業機密、特權憑證、重大AI/碳揭露底稿或重大合規資料。</td>
+<td>錯誤可能造成重大法規違反、重大財務損失、重大事件或不可逆影響。</td>
+<td>中斷可能造成重大服務中斷、危機、客戶大量影響或營運停止。</td>
+<td>極關鍵資產，需最高等級保護與管理審查。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. 資訊及相關資產主清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>資產名稱</th>
+<th>資產類別</th>
+<th>資產描述 / 用途</th>
+<th>Owner</th>
+<th>維運 / 保管單位</th>
+<th>使用單位 / 範圍</th>
+<th>環境</th>
+<th>位置 / 區域</th>
+<th>資料分類</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>重要性</th>
+<th>主要控制措施</th>
+<th>備份 / RTO / RPO</th>
+<th>日誌監控</th>
+<th>生命週期狀態</th>
+<th>最近盤點日</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ASSET-0001</td>
+<td></td>
+<td>資訊 / 資料資產</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 規劃 □ 使用中 □ 暫停 □ 封存 □ 退場中 □ 已退場</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASSET-0002</td>
+<td></td>
+<td>應用系統資產</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 規劃 □ 使用中 □ 暫停 □ 封存 □ 退場中 □ 已退場</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASSET-0003</td>
+<td></td>
+<td>基礎設施資產</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 規劃 □ 使用中 □ 暫停 □ 封存 □ 退場中 □ 已退場</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASSET-0004</td>
+<td></td>
+<td>雲端與SaaS資產</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 規劃 □ 使用中 □ 暫停 □ 封存 □ 退場中 □ 已退場</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>ASSET-0005</td>
+<td></td>
+<td>AI與MLOps資產</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII □ 客戶資料</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□1 □2 □3 □4 □5</td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 規劃 □ 使用中 □ 暫停 □ 封存 □ 退場中 □ 已退場</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 資訊 / 資料資產明細清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資料資產編號</th>
+<th>資料集 / 文件 / 紀錄名稱</th>
+<th>資料Owner</th>
+<th>資料來源</th>
+<th>資料內容摘要</th>
+<th>資料分類</th>
+<th>是否含PII</th>
+<th>是否含客戶資料</th>
+<th>保存期限</th>
+<th>儲存位置</th>
+<th>使用目的</th>
+<th>存取限制</th>
+<th>DLP / 加密 / 遮蔽</th>
+<th>刪除 / 封存要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DATA-0001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DATA-0002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DATA-0003</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 應用系統與API資產明細清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>系統編號</th>
+<th>系統 / API名稱</th>
+<th>Owner</th>
+<th>用途</th>
+<th>使用者範圍</th>
+<th>環境</th>
+<th>資料分類</th>
+<th>對外暴露</th>
+<th>認證方式</th>
+<th>主要技術 / 平台</th>
+<th>資料庫 / 介接</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>安全測試狀態</th>
+<th>日誌監控</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>APP-0001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 開發 □ 測試 □ 正式 □ 災備</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ SSO □ MFA □ API Key □ OAuth □ 其他</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ SIEM □ App Log □ API Gateway □ 未納入</td>
+<td></td>
+</tr>
+<tr>
+<td>APP-0002</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 開發 □ 測試 □ 正式 □ 災備</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ SSO □ MFA □ API Key □ OAuth □ 其他</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ SIEM □ App Log □ API Gateway □ 未納入</td>
+<td></td>
+</tr>
+<tr>
+<td>API-0001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 開發 □ 測試 □ 正式 □ 災備</td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td>□ 是 □ 否</td>
+<td>□ SSO □ MFA □ API Key □ OAuth □ 其他</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ SIEM □ API Gateway □ 未納入</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 基礎設施、端點與網路資產明細清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>主機 / 設備名稱</th>
+<th>類別</th>
+<th>Owner</th>
+<th>IP / 識別資訊</th>
+<th>位置 / 區域</th>
+<th>環境</th>
+<th>作業系統 / 韌體</th>
+<th>用途</th>
+<th>重要性</th>
+<th>EDR/MDM</th>
+<th>弱點掃描</th>
+<th>備份</th>
+<th>日誌監控</th>
+<th>維護合約</th>
+<th>生命週期狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>INF-0001</td>
+<td></td>
+<td>□ 伺服器 □ VM □ DB □ 儲存 □ 容器平台</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 開發 □ 測試 □ 正式 □ 災備</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td></td>
+<td>□ 使用中 □ 封存 □ 退場中</td>
+</tr>
+<tr>
+<td>END-0001</td>
+<td></td>
+<td>□ 筆電 □ 桌機 □ 行動裝置 □ 共享設備</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 辦公 □ 遠端 □ 特權使用</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td>□ 是 □ 否</td>
+<td></td>
+<td>□ 使用中 □ 封存 □ 退場中</td>
+</tr>
+<tr>
+<td>NET-0001</td>
+<td></td>
+<td>□ 防火牆 □ 交換器 □ VPN □ WAF □ IDS/IPS □ Proxy</td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 正式 □ 測試</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 不適用</td>
+<td>□ 是 □ 否</td>
+<td>□ 設定備份 □ 無</td>
+<td>□ SIEM □ 本機 □ 未納入</td>
+<td></td>
+<td>□ 使用中 □ 封存 □ 退場中</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 雲端、SaaS與供應商代管資產明細清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>雲端 / SaaS / 代管服務名稱</th>
+<th>供應商</th>
+<th>服務類型</th>
+<th>Owner</th>
+<th>資料分類</th>
+<th>區域 / 資料所在地</th>
+<th>是否處理PII</th>
+<th>是否外部連線</th>
+<th>IAM / MFA</th>
+<th>日誌可用性</th>
+<th>備份 / 匯出</th>
+<th>合約 / SLA</th>
+<th>供應商風險等級</th>
+<th>退場要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CLD-0001</td>
+<td></td>
+<td></td>
+<td>□ IaaS □ PaaS □ SaaS □ AIaaS □ MSSP</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 已啟用 □ 未啟用 □ 不適用</td>
+<td>□ 可用 □ 受限 □ 不可用</td>
+<td>□ 有 □ 無 □ 供應商提供</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+</tr>
+<tr>
+<td>SaaS-0001</td>
+<td></td>
+<td></td>
+<td>□ SaaS □ 協作平台 □ CRM □ HR □ 財務 □ AI工具</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 已啟用 □ 未啟用 □ 不適用</td>
+<td>□ 可用 □ 受限 □ 不可用</td>
+<td>□ 有 □ 無 □ 供應商提供</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+</tr>
+<tr>
+<td>SP-0001</td>
+<td></td>
+<td></td>
+<td>□ 外包維運 □ 代管系統 □ 資安服務 □ 顧問服務</td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密</td>
+<td></td>
+<td>□ 是 □ 否</td>
+<td>□ 是 □ 否</td>
+<td>□ 已啟用 □ 未啟用 □ 不適用</td>
+<td>□ 可用 □ 受限 □ 不可用</td>
+<td>□ 有 □ 無 □ 供應商提供</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. AI模型、Prompt、RAG與MLOps資產關聯清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>AI資產編號</th>
+<th>AI資產名稱</th>
+<th>資產類型</th>
+<th>Owner</th>
+<th>模型 / Prompt版本</th>
+<th>用途</th>
+<th>資料來源</th>
+<th>資料分類</th>
+<th>供應商 / 模型來源</th>
+<th>風險等級</th>
+<th>安全測試狀態</th>
+<th>監控狀態</th>
+<th>關聯清冊</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI-0001</td>
+<td></td>
+<td>□ 模型 □ Prompt □ RAG □ Agent □ MLOps □ AI API</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ 已監控 □ 部分監控 □ 未監控</td>
+<td>□ □ </td>
+<td></td>
+</tr>
+<tr>
+<td>AI-0002</td>
+<td></td>
+<td>□ 模型 □ Prompt □ RAG □ Agent □ MLOps □ AI API</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ 已監控 □ 部分監控 □ 未監控</td>
+<td>□ □ </td>
+<td></td>
+</tr>
+<tr>
+<td>AI-0003</td>
+<td></td>
+<td>□ 模型 □ Prompt □ RAG □ Agent □ MLOps □ AI API</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>□ 公開 □ 內部 □ 機密 □ 高機密 □ PII</td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td>□ 未測試 □ 已測試 □ 有缺失 □ 已複測</td>
+<td>□ 已監控 □ 部分監控 □ 未監控</td>
+<td>□ □ </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 身分、憑證、金鑰與Secrets資產清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>資產名稱</th>
+<th>類型</th>
+<th>Owner</th>
+<th>用途</th>
+<th>保存位置 / 系統</th>
+<th>有效期限</th>
+<th>輪替頻率</th>
+<th>存取限制</th>
+<th>監控方式</th>
+<th>退場 / 撤銷要求</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SEC-0001</td>
+<td></td>
+<td>□ 特權帳號 □ 服務帳號 □ API Key □ 憑證 □ 金鑰 □ Token □ SSH Key</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SEC-0002</td>
+<td></td>
+<td>□ 特權帳號 □ 服務帳號 □ API Key □ 憑證 □ 金鑰 □ Token □ SSH Key</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SEC-0003</td>
+<td></td>
+<td>□ 特權帳號 □ 服務帳號 □ API Key □ 憑證 □ 金鑰 □ Token □ SSH Key</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 軟體、授權、開源元件與智慧財產資產清冊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>資產編號</th>
+<th>軟體 / 元件 / 授權名稱</th>
+<th>類型</th>
+<th>Owner</th>
+<th>版本</th>
+<th>授權型態</th>
+<th>使用範圍</th>
+<th>供應商 / 來源</th>
+<th>到期日</th>
+<th>弱點追蹤</th>
+<th>授權限制</th>
+<th>退場 / 替代方案</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SW-0001</td>
+<td></td>
+<td>□ 商用軟體 □ 開源元件 □ SDK □ 模型授權 □ API授權</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ SCA □ 手動 □ 供應商通知 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SW-0002</td>
+<td></td>
+<td>□ 商用軟體 □ 開源元件 □ SDK □ 模型授權 □ API授權</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ SCA □ 手動 □ 供應商通知 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SW-0003</td>
+<td></td>
+<td>□ 商用軟體 □ 開源元件 □ SDK □ 模型授權 □ API授權</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ SCA □ 手動 □ 供應商通知 □ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 資產盤點與更新要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發情境</th>
+<th>更新要求</th>
+<th>責任角色</th>
+<th>必要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>新資產取得或建立</td>
+<td>使用前完成登錄、Owner指定、分類、控制需求與風險初判。</td>
+<td>申請單位 / Asset Owner</td>
+<td>資產登錄紀錄、核准紀錄。</td>
+</tr>
+<tr>
+<td>資產重大變更</td>
+<td>用途、資料分類、位置、供應商、連線、權限、雲端區域、AI模型版本變更時更新清冊。</td>
+<td>Asset Owner / Change Owner</td>
+<td>變更單、清冊修訂紀錄。</td>
+</tr>
+<tr>
+<td>定期盤點</td>
+<td>至少依年度或風險分級週期確認資產存在、Owner、分類、狀態與控制要求。</td>
+<td>Asset Management Owner</td>
+<td>盤點紀錄、差異處理。</td>
+</tr>
+<tr>
+<td>事件後檢查</td>
+<td>資安事件、資料外洩、弱點事件或AI事件後檢查受影響資產登錄完整性。</td>
+<td>Incident Manager / Asset Owner</td>
+<td>事件檢討、清冊更新。</td>
+</tr>
+<tr>
+<td>供應商變更</td>
+<td>供應商服務、SaaS、雲端、AI API、代管環境或合約變更時更新資產資訊。</td>
+<td>Supplier Management / Service Owner</td>
+<td>供應商通知、重評紀錄。</td>
+</tr>
+<tr>
+<td>資產退場</td>
+<td>退場前確認資料移轉/刪除、帳號撤銷、備份封存、憑證撤銷與證據保存。</td>
+<td>Asset Owner / IT / Data Owner</td>
+<td>退場紀錄、刪除證明。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 資產清冊品質檢核表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢核項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>完整性</td>
+<td>是否涵蓋ISMS範圍內所有資訊、系統、雲端、AI、供應商、端點、網路與資料資產？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>Owner指定</td>
+<td>每項資產是否有明確Owner與維運/保管單位？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>分類正確</td>
+<td>資料分類、CIA與重要性是否與實際業務、法規、合約及風險一致？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>控制連動</td>
+<td>資產是否連動存取控制、備份、監控、弱點、DLP、供應商及AI治理要求？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>資產異動、上線、退場、供應商變更與AI版本變更是否即時更新？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>證據保存</td>
+<td>盤點、審查、差異處理與核准證據是否保存？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+<tr>
+<td>不一致處理</td>
+<td>發現資產清冊與實際環境不一致時，是否建立改善或風險處理紀錄？</td>
+<td>□ 是　□ 否　□ 部分</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 清冊盤點差異與改善追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>差異編號</th>
+<th>發現日期</th>
+<th>差異描述</th>
+<th>受影響資產</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>Owner</th>
+<th>期限</th>
+<th>狀態</th>
+<th>驗證結果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DIFF-001</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>DIFF-002</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 例外接受</td>
+<td></td>
+</tr>
+<tr>
+<td>DIFF-003</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+<td></td>
+<td>□ 低 □ 中 □ 高 □ 重大</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始 □ 進行中 □ 已完成 □ 例外接受</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 資產退場檢核摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>退場項目</th>
+<th>檢核問題</th>
+<th>結果</th>
+<th>證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資料處置</td>
+<td>資料是否已依分類、保存期限、法規與合約完成移轉、封存、刪除或去識別？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>帳號與權限</td>
+<td>相關使用者、服務帳號、API Key、Token、憑證與特權是否撤銷？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>備份與日誌</td>
+<td>備份、日誌、事件證據與稽核紀錄是否依保存期限保留？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>供應商退場</td>
+<td>供應商是否完成資料刪除、帳號停用、合約終止與退場證明？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>資產處置</td>
+<td>硬體、媒體、雲端資源、DNS、API、憑證與授權是否停用或銷毀？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>清冊更新</td>
+<td>資產狀態是否更新為封存、退場中或已退場？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>Owner確認</td>
+<td>Asset Owner、Data Owner、IT與CISO是否確認退場完成？</td>
+<td>□ 是 □ 否 □ 不適用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. KPI/KRI與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>指標</th>
+<th>定義</th>
+<th>目標 / 門檻</th>
+<th>用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>資產登錄完整率</td>
+<td>已登錄資產 / 應登錄資產。</td>
+<td>ISMS範圍內目標100%。</td>
+<td>清冊完整性與稽核準備。</td>
+</tr>
+<tr>
+<td>資產Owner完整率</td>
+<td>已指定Owner資產 / 已登錄資產。</td>
+<td>目標100%。</td>
+<td>責任歸屬。</td>
+</tr>
+<tr>
+<td>高重要性資產控制覆蓋率</td>
+<td>高/重大資產已具備必要控制措施之比例。</td>
+<td>目標100%。</td>
+<td>控制措施有效性。</td>
+</tr>
+<tr>
+<td>清冊盤點完成率</td>
+<td>於期限內完成盤點之資產比例。</td>
+<td>依年度計畫目標。</td>
+<td>資產治理成熟度。</td>
+</tr>
+<tr>
+<td>清冊差異逾期率</td>
+<td>逾期未處理之清冊差異 / 全部差異。</td>
+<td>高風險差異目標0。</td>
+<td>缺口管理。</td>
+</tr>
+<tr>
+<td>未納管雲端 / SaaS資產數</td>
+<td>發現未登錄或未核准之雲端、SaaS或AI服務數。</td>
+<td>目標0。</td>
+<td>Shadow IT / Shadow AI風險。</td>
+</tr>
+<tr>
+<td>資產退場完成率</td>
+<td>完成退場檢核之退場資產比例。</td>
+<td>目標100%。</td>
+<td>資料刪除與權限撤銷。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 稽核檢查重點</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>稽核項目</th>
+<th>檢查重點</th>
+<th>可接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>清冊完整性</td>
+<td>是否涵蓋ISMS範圍內資訊、系統、基礎設施、雲端、供應商、AI與資料資產。</td>
+<td>主清冊、子清冊、CMDB、雲端清冊、AI清冊。</td>
+</tr>
+<tr>
+<td>Owner與責任</td>
+<td>每項資產是否指定Owner，Owner是否確認分類、風險與控制。</td>
+<td>Owner欄位、審查簽核、盤點紀錄。</td>
+</tr>
+<tr>
+<td>分類與CIA</td>
+<td>資產分類、資料分類、CIA與重要性是否合理並與風險評估一致。</td>
+<td>分級紀錄、風險登錄、SoA。</td>
+</tr>
+<tr>
+<td>控制措施連動</td>
+<td>高重要性資產是否已納入存取控制、備份、監控、弱點、事件、DLP與BCP。</td>
+<td>控制證據、有效性檢查表。</td>
+</tr>
+<tr>
+<td>清冊維護</td>
+<td>新資產、變更、退場、供應商變更與AI模型版本變更是否更新清冊。</td>
+<td>變更單、退場紀錄、更新紀錄。</td>
+</tr>
+<tr>
+<td>盤點與差異處理</td>
+<td>定期盤點是否執行，差異是否追蹤改善或風險接受。</td>
+<td>盤點報告、差異追蹤表。</td>
+</tr>
+<tr>
+<td>文件化資訊保護</td>
+<td>清冊本身是否受控保存、限制存取、版本管理並防止未授權揭露。</td>
+<td>文件權限、版本紀錄、存取紀錄。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 附錄A：資產編號建議規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>前綴</th>
+<th>資產類型</th>
+<th>範例</th>
+<th>說明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DATA</td>
+<td>資訊 / 資料資產</td>
+<td>DATA-2026-0001</td>
+<td>資料集、文件、紀錄、碳資料、訓練資料。</td>
+</tr>
+<tr>
+<td>APP</td>
+<td>應用系統</td>
+<td>APP-2026-0001</td>
+<td>Web、App、內部系統、客戶系統。</td>
+</tr>
+<tr>
+<td>API</td>
+<td>API服務</td>
+<td>API-2026-0001</td>
+<td>內部API、外部API、AI API。</td>
+</tr>
+<tr>
+<td>INF</td>
+<td>基礎設施</td>
+<td>INF-2026-0001</td>
+<td>伺服器、VM、資料庫、儲存、Kubernetes。</td>
+</tr>
+<tr>
+<td>NET</td>
+<td>網路 / 安全設備</td>
+<td>NET-2026-0001</td>
+<td>防火牆、VPN、WAF、Proxy、DNS。</td>
+</tr>
+<tr>
+<td>END</td>
+<td>端點設備</td>
+<td>END-2026-0001</td>
+<td>筆電、桌機、行動裝置。</td>
+</tr>
+<tr>
+<td>CLD</td>
+<td>雲端資產</td>
+<td>CLD-2026-0001</td>
+<td>Cloud Account、VPC、Storage、KMS、Serverless。</td>
+</tr>
+<tr>
+<td>SaaS</td>
+<td>SaaS服務</td>
+<td>SaaS-2026-0001</td>
+<td>協作、CRM、HR、財務、AI工具。</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>AI與MLOps資產</td>
+<td>AI-2026-0001</td>
+<td>模型、Prompt、RAG、Agent、MLOps。</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>軟體與授權</td>
+<td>SW-2026-0001</td>
+<td>商用軟體、開源元件、模型授權。</td>
+</tr>
+<tr>
+<td>SEC</td>
+<td>身分與憑證</td>
+<td>SEC-2026-0001</td>
+<td>特權帳號、API Key、憑證、金鑰。</td>
+</tr>
+<tr>
+<td>SP</td>
+<td>供應商代管資產</td>
+<td>SP-2026-0001</td>
+<td>外包、MSSP、代管系統、外部SOC。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>

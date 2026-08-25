@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-A05-PRO-001 組織控制措施管理程序</title>
+<style>
+body {
+ font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+ line-height: 1.6;
+ margin: 24px;
+ color: #222;
+}
+.isms-document { max-width: 1280px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 20px; color: #1f3b5b; }
+table { margin: 12px 0 22px 0; }
+th { background: #f2f2f2; font-weight: bold; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<section class="isms-document">
+
+<h1>ISMS-A05-PRO-001 組織控制措施管理程序</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-A05-PRO-001</td>
+<td>組織控制措施管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Annex A.5 / 組織、資產、供應鏈、事件與營運持續</td>
+<td>組織控制Owner / CISO</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Annex-A.5 / ISMS-A05-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>組織控制Owner / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>姓名</th>
+<th>職稱</th>
+<th>簽核/確認</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>編製</td>
+<td></td>
+<td>ISMS管理代表 / Control Governance Owner</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>CISO / 資訊安全負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>風險管理負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>法務 / 法遵負責人</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>DPO / PIMS負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>AI治理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>BCMS / DRP負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>供應商管理負責人（如適用）</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>審查</td>
+<td></td>
+<td>內部稽核主管</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>核准</td>
+<td></td>
+<td>最高管理階層授權代表 / CISO</td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>1. 程序目的</h2>
+<p>本程序用於建立、實施、維持與持續改善ISO/IEC 27001:2022 Annex A.5組織控制措施之治理與管理機制，確保組織控制措施可依風險處理結果、SoA適用性、法規合約要求、營運需求、供應鏈與雲端依賴、PIMS/AIMS/BCMS/GHG專項治理需求被有效規劃、執行、監督、驗證與改善。</p>
+<p>本程序同時作為Annex A.5.1至A.5.37組織控制措施之共同管理程序，支援控制Owner指派、控制目標設定、控制實施證據保存、控制有效性驗證、KPI/KRI監督、內部稽核、管理審查、SoA更新及CAPA改善。</p>
+
+<h2>2. 適用範圍</h2>
+<ul>
+<li>適用於Annex A.5所有組織控制措施之適用性判定、控制設計、實施、維護、證據保存、監督量測與有效性驗證。</li>
+<li>適用於資訊安全政策、角色責任、職責分離、管理責任、主管機關與專業團體聯繫、威脅情資、專案安全、資產管理、資訊分類、存取權限、供應商、雲端、事件管理、營運持續、法規合約、隱私、獨立審查、政策符合性與文件化程序。</li>
+<li>適用於與組織控制相關之內部部門、流程Owner、Control Owner、風險Owner、供應商、外包商、雲端服務商、客戶服務團隊、DPO、AI治理負責人、BCMS負責人、GHG資料治理負責人與內部稽核人員。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>名詞</th>
+<th>定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>組織控制措施</td>
+<td>ISO/IEC 27001:2022 Annex A.5所列之管理、治理、政策、流程、角色、供應商、合規與營運管理類控制措施。</td>
+</tr>
+<tr>
+<td>Control Owner</td>
+<td>對特定控制措施之設計、實施、證據、有效性、缺口改善與稽核回覆負責之角色。</td>
+</tr>
+<tr>
+<td>Control Governance Owner</td>
+<td>負責整體控制治理、清冊、SoA連結、監督量測與管理審查輸入之角色。</td>
+</tr>
+<tr>
+<td>控制目標</td>
+<td>控制措施欲達成之風險降低、合規、營運、治理或證據目標。</td>
+</tr>
+<tr>
+<td>控制證據</td>
+<td>可證明控制措施已按要求執行之文件化資訊，例如政策、清冊、紀錄、報告、工單、會議紀錄、系統紀錄與核准紀錄。</td>
+</tr>
+<tr>
+<td>控制有效性</td>
+<td>控制措施是否已設計適當、實施到位、持續運作並達成預期風險降低或合規效果。</td>
+</tr>
+<tr>
+<td>SoA</td>
+<td>適用性聲明，列明Annex A控制措施之適用性、實施狀態、排除理由與證據。</td>
+</tr>
+<tr>
+<td>控制缺口</td>
+<td>控制未設計、未實施、未持續運作、未保存證據或無法達成預期效果之情形。</td>
+</tr>
+<tr>
+<td>補償控制</td>
+<td>原控制不可行或不足時，採用替代措施以降低相同或相近風險之控制。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 組織控制措施治理原則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>治理原則</th>
+<th>說明</th>
+<th>管理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險導向</td>
+<td>所有Annex A.5控制措施之適用與實施需以風險評鑑、風險處理、合規義務與營運需求為基礎。</td>
+<td>控制措施不得僅形式化列示，需能對應風險與實際運作。</td>
+</tr>
+<tr>
+<td>責任明確</td>
+<td>每項控制措施需指定Control Owner、執行角色、審查角色與核准角色。</td>
+<td>責任需納入RACI與SoA。</td>
+</tr>
+<tr>
+<td>證據可稽核</td>
+<td>控制措施需定義證據型態、保存位置、保存期限與證據Owner。</td>
+<td>無證據不得視為控制有效。</td>
+</tr>
+<tr>
+<td>SoA一致性</td>
+<td>控制措施之適用性、實施狀態與證據需與SoA一致。</td>
+<td>控制變更需同步更新SoA。</td>
+</tr>
+<tr>
+<td>跨治理整合</td>
+<td>控制措施需支援ISMS、PIMS、AIMS、BCMS、GHG/CO2資料治理及供應鏈治理。</td>
+<td>專項Owner需參與相關控制審查。</td>
+</tr>
+<tr>
+<td>持續監督</td>
+<td>控制措施需透過KPI/KRI、控制自評、內部稽核、事件、CAPA與管理審查持續監督。</td>
+<td>重大缺口需升級CISO或管理階層。</td>
+</tr>
+<tr>
+<td>持續改善</td>
+<td>控制失效、稽核發現、事件與風險變化需導致控制改善。</td>
+<td>必要時啟動CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>5. Annex A.5組織控制措施管理流程總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>流程階段</th>
+<th>主要活動</th>
+<th>輸入</th>
+<th>輸出</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1. 控制識別與清冊建立</td>
+<td>識別Annex A.5控制措施、控制Owner、適用範圍與相關文件。</td>
+<td>ISO/IEC 27001 Annex A、SoA、風險登錄</td>
+<td>組織控制措施清冊</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>2. 適用性判定</td>
+<td>依風險、合規、客戶、流程與專項需求判定控制是否適用。</td>
+<td>風險評鑑、法規合約、ISMS範圍</td>
+<td>適用性判定結果</td>
+<td>CISO / ISMS代表</td>
+</tr>
+<tr>
+<td>3. 控制設計與實施規劃</td>
+<td>定義控制目標、活動、頻率、證據、Owner與資源。</td>
+<td>風險處理計畫、SoA</td>
+<td>控制實施計畫</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>4. 控制執行與證據保存</td>
+<td>依計畫執行控制並保存紀錄。</td>
+<td>控制計畫、程序文件</td>
+<td>控制執行證據</td>
+<td>Control Owner / 執行人員</td>
+</tr>
+<tr>
+<td>5. 監督與有效性驗證</td>
+<td>透過自評、KPI/KRI、抽查、稽核與證據審查驗證。</td>
+<td>執行證據、KPI/KRI</td>
+<td>有效性驗證紀錄</td>
+<td>ISMS代表 / 稽核主管</td>
+</tr>
+<tr>
+<td>6. 缺口與CAPA管理</td>
+<td>對控制缺口、不符合、事件或逾期進行改善。</td>
+<td>稽核發現、事件、控制自評</td>
+<td>CAPA與改善紀錄</td>
+<td>CAPA負責人</td>
+</tr>
+<tr>
+<td>7. SoA與管理審查更新</td>
+<td>更新SoA、管理審查輸入與持續改善計畫。</td>
+<td>控制狀態、有效性、CAPA</td>
+<td>更新版SoA、管理審查輸入</td>
+<td>ISMS代表 / CISO</td>
+</tr>
+</tbody>
+</table>
+
+<h2>6. Annex A.5控制群組分類</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制群組</th>
+<th>涵蓋控制</th>
+<th>管理重點</th>
+<th>主要Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>治理與政策</td>
+<td>A.5.1-A.5.4</td>
+<td>政策、角色、職責分離、管理責任。</td>
+<td>CISO / ISMS代表</td>
+</tr>
+<tr>
+<td>外部聯繫與情資</td>
+<td>A.5.5-A.5.7</td>
+<td>主管機關、專業團體、威脅情資來源與運用。</td>
+<td>CISO / SOC / 法務</td>
+</tr>
+<tr>
+<td>專案與資產管理</td>
+<td>A.5.8-A.5.14</td>
+<td>專案安全、資產清冊、可接受使用、歸還、分類、標示、資訊傳輸。</td>
+<td>PMO / Asset Owner / Data Owner</td>
+</tr>
+<tr>
+<td>存取治理</td>
+<td>A.5.15-A.5.18</td>
+<td>存取控制、身份管理、驗證資訊、存取權限。</td>
+<td>IAM Owner / System Owner</td>
+</tr>
+<tr>
+<td>供應商與雲端</td>
+<td>A.5.19-A.5.23</td>
+<td>供應商關係、合約、ICT供應鏈、監督、雲端服務。</td>
+<td>供應商管理 / Cloud Owner</td>
+</tr>
+<tr>
+<td>事件管理</td>
+<td>A.5.24-A.5.28</td>
+<td>事件規劃、評估、應變、學習與證據蒐集。</td>
+<td>SOC / Incident Commander</td>
+</tr>
+<tr>
+<td>營運持續</td>
+<td>A.5.29-A.5.30</td>
+<td>中斷期間資安、ICT就緒度。</td>
+<td>BCMS / DRP負責人</td>
+</tr>
+<tr>
+<td>合規與文件化</td>
+<td>A.5.31-A.5.37</td>
+<td>法規合約、智慧財產、紀錄保護、隱私、獨立審查、符合性與文件化程序。</td>
+<td>法務 / DPO / 文件管制 / 稽核主管</td>
+</tr>
+</tbody>
+</table>
+
+<h2>7. 控制措施清冊主表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制編號</th>
+<th>控制名稱</th>
+<th>適用性</th>
+<th>Control Owner</th>
+<th>實施狀態</th>
+<th>主要文件/程序</th>
+<th>主要證據</th>
+<th>審查頻率</th>
+<th>風險連結</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.1</td>
+<td>資訊安全政策</td>
+<td>□ 適用　□ 不適用</td>
+<td>CISO</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>ISMS政策文件</td>
+<td>政策核准與公告</td>
+<td>年度</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.2</td>
+<td>資訊安全角色與責任</td>
+<td>□ 適用　□ 不適用</td>
+<td>ISMS代表</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>RACI / 職責文件</td>
+<td>任命與RACI紀錄</td>
+<td>年度</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.3</td>
+<td>職責分離</td>
+<td>□ 適用　□ 不適用</td>
+<td>流程Owner</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>權責矩陣</td>
+<td>權限審查紀錄</td>
+<td>年度/變更</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.4</td>
+<td>管理責任</td>
+<td>□ 適用　□ 不適用</td>
+<td>部門主管</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>管理責任程序</td>
+<td>管理確認紀錄</td>
+<td>年度</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.5</td>
+<td>與主管機關聯繫</td>
+<td>□ 適用　□ 不適用</td>
+<td>法務 / CISO</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>主管機關聯絡清冊</td>
+<td>通報與聯絡紀錄</td>
+<td>年度/事件</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.6</td>
+<td>與專業團體聯繫</td>
+<td>□ 適用　□ 不適用</td>
+<td>CISO / SOC</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>專業團體清冊</td>
+<td>會員/參與紀錄</td>
+<td>年度</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.7</td>
+<td>威脅情資</td>
+<td>□ 適用　□ 不適用</td>
+<td>SOC</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>威脅情資程序</td>
+<td>情資紀錄、偵測規則</td>
+<td>月/季</td>
+<td>R-YYYY-___</td>
+</tr>
+<tr>
+<td>A.5.8</td>
+<td>專案管理中的資訊安全</td>
+<td>□ 適用　□ 不適用</td>
+<td>PMO / CISO</td>
+<td>□ 未實施　□ 部分　□ 已實施</td>
+<td>專案安全審查程序</td>
+<td>專案安全審查紀錄</td>
+<td>專案觸發</td>
+<td>R-YYYY-___</td>
+</tr>
+</tbody>
+</table>
+
+<h2>8. 控制Owner與責任管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>角色</th>
+<th>責任</th>
+<th>最低要求</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CISO</td>
+<td>負責組織控制措施治理、重大控制核准與重大缺口升級。</td>
+<td>至少每季檢視重大控制狀態。</td>
+<td>治理會議紀錄</td>
+</tr>
+<tr>
+<td>ISMS管理代表</td>
+<td>維護控制清冊、SoA連結、控制證據與管理審查輸入。</td>
+<td>確保控制清冊與SoA一致。</td>
+<td>控制清冊、SoA</td>
+</tr>
+<tr>
+<td>Control Owner</td>
+<td>設計、執行、監督、保存證據並改善指定控制。</td>
+<td>定期完成控制自評與證據更新。</td>
+<td>自評與證據紀錄</td>
+</tr>
+<tr>
+<td>流程Owner</td>
+<td>確保控制措施落實於流程並與實際作業一致。</td>
+<td>將控制要求納入程序與SOP。</td>
+<td>流程紀錄</td>
+</tr>
+<tr>
+<td>Risk Owner</td>
+<td>確認控制是否能降低所負責風險。</td>
+<td>參與控制有效性評估。</td>
+<td>風險處理與接受紀錄</td>
+</tr>
+<tr>
+<td>文件管制負責人</td>
+<td>保存受控程序、紀錄與外部文件。</td>
+<td>確保證據版本、權限與保存期限受控。</td>
+<td>文件庫與權限紀錄</td>
+</tr>
+<tr>
+<td>內部稽核主管</td>
+<td>獨立查核組織控制措施設計與運作有效性。</td>
+<td>依稽核方案執行查核。</td>
+<td>稽核報告</td>
+</tr>
+</tbody>
+</table>
+
+<h2>9. 控制適用性判定準則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>判定因素</th>
+<th>適用判定問題</th>
+<th>判定結果</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險評鑑結果</td>
+<td>是否存在需該控制處理之風險、威脅、弱點或控制缺口？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>風險管理 / CISO</td>
+</tr>
+<tr>
+<td>法規合約要求</td>
+<td>是否有法規、監管、合約、SLA、DPA或客戶要求明確要求？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>法務 / 業務</td>
+</tr>
+<tr>
+<td>ISMS範圍</td>
+<td>是否與ISMS範圍內流程、系統、資產、資料或地點相關？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>外包與供應鏈</td>
+<td>是否涉及供應商、ICT供應鏈、雲端或第四方？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>PIMS/AIMS/BCMS/GHG</td>
+<td>是否涉及PII、AI系統、營運持續或碳資料治理？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>專項Owner</td>
+</tr>
+<tr>
+<td>組織政策承諾</td>
+<td>是否為組織政策、治理要求或管理階層承諾所需？</td>
+<td>□ 適用　□ 不適用　□ 待確認</td>
+<td>CISO</td>
+</tr>
+</tbody>
+</table>
+
+<h2>10. 控制設計與實施要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>設計項目</th>
+<th>要求</th>
+<th>責任角色</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>控制目標</td>
+<td>需說明控制欲降低之風險、欲符合之要求或欲達成之治理目標。</td>
+<td>Control Owner</td>
+<td>控制目標說明</td>
+</tr>
+<tr>
+<td>控制活動</td>
+<td>需明確定義執行步驟、頻率、輸入、輸出與核准要求。</td>
+<td>Control Owner / 流程Owner</td>
+<td>控制實施計畫</td>
+</tr>
+<tr>
+<td>責任角色</td>
+<td>需指定Owner、執行人、審查人、核准人與代理人。</td>
+<td>ISMS代表</td>
+<td>RACI</td>
+</tr>
+<tr>
+<td>證據要求</td>
+<td>需定義必要證據、保存位置、保存期限與證據Owner。</td>
+<td>文件管制 / Control Owner</td>
+<td>證據清單</td>
+</tr>
+<tr>
+<td>監督指標</td>
+<td>需定義KPI/KRI、門檻、頻率與升級條件。</td>
+<td>ISMS代表 / Control Owner</td>
+<td>KPI/KRI表</td>
+</tr>
+<tr>
+<td>SoA連結</td>
+<td>需記錄控制適用性、實施狀態、排除理由與證據。</td>
+<td>ISMS代表</td>
+<td>SoA</td>
+</tr>
+<tr>
+<td>有效性驗證</td>
+<td>需定義驗證方法，例如抽查、測試、稽核、報表或演練。</td>
+<td>ISMS代表 / 稽核主管</td>
+<td>有效性驗證計畫</td>
+</tr>
+</tbody>
+</table>
+
+<h2>11. 控制實施計畫表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制編號</th>
+<th>控制目標</th>
+<th>控制活動</th>
+<th>執行頻率</th>
+<th>Owner</th>
+<th>所需資源</th>
+<th>交付物/證據</th>
+<th>完成期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.__</td>
+<td></td>
+<td></td>
+<td>□ 日　□ 週　□ 月　□ 季　□ 年　□ 事件觸發</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td></td>
+<td></td>
+<td>□ 日　□ 週　□ 月　□ 季　□ 年　□ 事件觸發</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td></td>
+<td></td>
+<td>□ 日　□ 週　□ 月　□ 季　□ 年　□ 事件觸發</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td></td>
+<td></td>
+<td>□ 日　□ 週　□ 月　□ 季　□ 年　□ 事件觸發</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>12. 政策與治理控制管理（A.5.1-A.5.4）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.1 資訊安全政策</td>
+<td>政策需由管理階層核准、發布、溝通並定期審查。</td>
+<td>政策制修訂、公告、訓練、審查。</td>
+<td>核准版政策、公告紀錄、審查紀錄</td>
+<td>CISO / ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.2 資訊安全角色與責任</td>
+<td>需定義並指派資安角色、責任與權限。</td>
+<td>建立RACI、任命Owner、定期審查。</td>
+<td>職責文件、任命紀錄、RACI</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.3 職責分離</td>
+<td>衝突職責需識別、分離或採補償控制。</td>
+<td>職責衝突分析、權限設計、審查。</td>
+<td>職責分離矩陣、權限審查</td>
+<td>流程Owner / IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.4 管理責任</td>
+<td>管理者需確保人員依政策程序履行安全責任。</td>
+<td>主管確認、績效要求、違規處理、宣導。</td>
+<td>主管確認紀錄、訓練/違規紀錄</td>
+<td>部門主管</td>
+</tr>
+</tbody>
+</table>
+
+<h2>13. 外部聯繫與威脅情資控制管理（A.5.5-A.5.7）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.5 與主管機關聯繫</td>
+<td>需建立主管機關聯絡與通報管道。</td>
+<td>維護聯絡清冊、通報矩陣、事件通報演練。</td>
+<td>主管機關清冊、通報紀錄</td>
+<td>法務 / CISO</td>
+</tr>
+<tr>
+<td>A.5.6 與專業團體聯繫</td>
+<td>需維持與專業團體、資安社群、產業組織之聯繫。</td>
+<td>參與ISAC/CERT、標準組織、專業活動。</td>
+<td>會員紀錄、活動紀錄、情資紀錄</td>
+<td>CISO / SOC</td>
+</tr>
+<tr>
+<td>A.5.7 威脅情資</td>
+<td>需收集、分析、運用並分享威脅情資。</td>
+<td>情資來源管理、IoC導入、偵測規則更新、風險重評。</td>
+<td>情資報告、偵測規則、風險重評</td>
+<td>SOC</td>
+</tr>
+</tbody>
+</table>
+
+<h2>14. 專案與資產資訊控制管理（A.5.8-A.5.14）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.8 專案管理中的資訊安全</td>
+<td>專案需納入資訊安全要求與風險評估。</td>
+<td>專案啟動審查、上線安全檢核、變更管理。</td>
+<td>專案安全審查紀錄</td>
+<td>PMO / CISO</td>
+</tr>
+<tr>
+<td>A.5.9 資訊與其他相關資產清冊</td>
+<td>資訊與相關資產需登錄、分類並指定Owner。</td>
+<td>資產盤點、Owner指定、異動更新。</td>
+<td>資產清冊</td>
+<td>Asset Owner</td>
+</tr>
+<tr>
+<td>A.5.10 資訊與其他相關資產之可接受使用</td>
+<td>需定義資產與資訊可接受使用規則。</td>
+<td>制定規範、使用者宣導、違規處理。</td>
+<td>可接受使用政策、訓練紀錄</td>
+<td>ISMS代表 / HR</td>
+</tr>
+<tr>
+<td>A.5.11 資產歸還</td>
+<td>離職、轉調、合約結束時需歸還資產。</td>
+<td>離退流程、資產回收、帳號停用。</td>
+<td>資產歸還紀錄</td>
+<td>HR / Asset Owner</td>
+</tr>
+<tr>
+<td>A.5.12 資訊分類</td>
+<td>資訊需依機密性、重要性與合規要求分類。</td>
+<td>分類準則、資料盤點、分級標示。</td>
+<td>資料分類清冊</td>
+<td>Data Owner</td>
+</tr>
+<tr>
+<td>A.5.13 資訊標示</td>
+<td>資訊需依分類結果進行適當標示。</td>
+<td>文件標示、系統欄位、標籤管理。</td>
+<td>標示紀錄、文件模板</td>
+<td>Data Owner / 文件管制</td>
+</tr>
+<tr>
+<td>A.5.14 資訊傳輸</td>
+<td>資訊傳輸需依分類採取安全通道與授權。</td>
+<td>傳輸規則、加密、外部分享審查。</td>
+<td>傳輸紀錄、外部分享核准</td>
+<td>Data Owner / IT</td>
+</tr>
+</tbody>
+</table>
+
+<h2>15. 存取治理控制管理（A.5.15-A.5.18）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.15 存取控制</td>
+<td>需依業務與資訊安全要求建立存取控制規則。</td>
+<td>存取政策、角色權限、審查機制。</td>
+<td>存取控制政策、角色矩陣</td>
+<td>IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.16 身分管理</td>
+<td>使用者、系統與服務身份需完整生命週期管理。</td>
+<td>帳號申請、異動、停用、唯一身份。</td>
+<td>帳號工單、IAM報表</td>
+<td>IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.17 驗證資訊</td>
+<td>密碼、金鑰、憑證與驗證資訊需受控保護。</td>
+<td>密碼規則、MFA、憑證管理、密鑰輪替。</td>
+<td>MFA報表、憑證清冊</td>
+<td>IAM / IT</td>
+</tr>
+<tr>
+<td>A.5.18 存取權限</td>
+<td>存取權限需依最小權限核發並定期審查。</td>
+<td>權限核准、特權管理、定期審查。</td>
+<td>權限審查紀錄</td>
+<td>System Owner / IAM</td>
+</tr>
+</tbody>
+</table>
+
+<h2>16. 供應商與雲端控制管理（A.5.19-A.5.23）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.19 供應商關係中的資訊安全</td>
+<td>供應商關係需建立資訊安全要求。</td>
+<td>供應商分級、合約條款、導入審查。</td>
+<td>供應商風險評估</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.20 供應商協議中的資訊安全</td>
+<td>供應商協議需納入安全、隱私、通報與稽核要求。</td>
+<td>合約審查、SLA、DPA、責任分工。</td>
+<td>合約、安全附件、DPA</td>
+<td>法務 / 供應商管理</td>
+</tr>
+<tr>
+<td>A.5.21 ICT供應鏈管理</td>
+<td>需管理ICT產品與服務供應鏈風險。</td>
+<td>第四方識別、組件風險、供應鏈事件通報。</td>
+<td>供應鏈清冊、風險評估</td>
+<td>供應商管理 / IT</td>
+</tr>
+<tr>
+<td>A.5.22 供應商服務監督、審查與變更管理</td>
+<td>需監督供應商服務與變更。</td>
+<td>SLA監控、SOC報告審查、服務變更評估。</td>
+<td>SLA報告、SOC審查</td>
+<td>供應商Owner</td>
+</tr>
+<tr>
+<td>A.5.23 雲端服務使用之資訊安全</td>
+<td>雲端服務需依共享責任、組態、存取、日誌與資料位置控制。</td>
+<td>雲端審查、CSPM、雲端權限審查。</td>
+<td>雲端審查、共享責任矩陣</td>
+<td>Cloud Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>17. 事件管理控制管理（A.5.24-A.5.28）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.24 資訊安全事件管理規劃與準備</td>
+<td>需建立事件管理流程、角色、工具與通報機制。</td>
+<td>事件程序、分級、通報矩陣、演練。</td>
+<td>事件程序、演練紀錄</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.25 資訊安全事件評估與決策</td>
+<td>事件需被評估、分級並決定處理方式。</td>
+<td>事件初判、分級、升級、決策紀錄。</td>
+<td>事件分級紀錄</td>
+<td>Incident Commander</td>
+</tr>
+<tr>
+<td>A.5.26 資訊安全事件應變</td>
+<td>需依程序執行遏止、根除、復原與溝通。</td>
+<td>事件應變、證據保存、通報、復原。</td>
+<td>事件時間線、處置紀錄</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>A.5.27 從資訊安全事件中學習</td>
+<td>事件後需進行PIR並導出改善。</td>
+<td>PIR、RCA、CAPA、控制更新。</td>
+<td>PIR、CAPA</td>
+<td>CISO / CAPA負責人</td>
+</tr>
+<tr>
+<td>A.5.28 證據蒐集</td>
+<td>需識別、蒐集、保護與保存事件證據。</td>
+<td>鑑識程序、證據鏈、日誌保存。</td>
+<td>證據清單、保管紀錄</td>
+<td>SOC / 法務</td>
+</tr>
+</tbody>
+</table>
+
+<h2>18. 營運持續控制管理（A.5.29-A.5.30）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.29 中斷期間之資訊安全</td>
+<td>營運中斷時需維持適當資訊安全水準。</td>
+<td>BCP安全要求、替代流程、危機存取控制。</td>
+<td>BCP、危機紀錄</td>
+<td>BCMS負責人 / CISO</td>
+</tr>
+<tr>
+<td>A.5.30 ICT就緒度以支援營運持續</td>
+<td>ICT需具備支援營運持續之就緒能力。</td>
+<td>BIA、DRP、備份、復原演練、RTO/RPO驗證。</td>
+<td>DRP、演練報告</td>
+<td>DRP / IT</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19. 合規與文件化控制管理（A.5.31-A.5.37）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制</th>
+<th>控制要求</th>
+<th>主要活動</th>
+<th>證據</th>
+<th>Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.31 法律、法規、監管與合約要求</td>
+<td>需識別、登錄並管理適用要求。</td>
+<td>法規合約清冊、符合性審查、差距處理。</td>
+<td>法規清冊、合規審查</td>
+<td>法務 / ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.32 智慧財產權</td>
+<td>需保護智慧財產與遵守軟體授權。</td>
+<td>授權盤點、開源審查、IP條款。</td>
+<td>授權清冊、開源審查</td>
+<td>法務 / IT</td>
+</tr>
+<tr>
+<td>A.5.33 紀錄保護</td>
+<td>紀錄需受保護以防遺失、未授權存取或竄改。</td>
+<td>紀錄保存矩陣、權限、備份與銷毀。</td>
+<td>紀錄保存清冊</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>A.5.34 隱私與PII保護</td>
+<td>需依適用要求保護PII與隱私。</td>
+<td>PII清冊、DPIA、DPA、DSR、隱私事件管理。</td>
+<td>DPIA、PII紀錄</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>A.5.35 資訊安全獨立審查</td>
+<td>需定期獨立審查資訊安全管理方法與控制。</td>
+<td>內部稽核、外部審查、客戶稽核回應。</td>
+<td>稽核報告、審查紀錄</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>A.5.36 符合資訊安全政策、規則與標準</td>
+<td>需定期確認符合內部政策、規則與標準。</td>
+<td>控制自評、合規檢查、KPI/KRI。</td>
+<td>自評紀錄、符合性檢查</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.37 文件化作業程序</td>
+<td>關鍵作業程序需文件化、受控且可取得。</td>
+<td>SOP制修訂、版本、發布、訓練。</td>
+<td>受控程序、發行紀錄</td>
+<td>文件管制 / 流程Owner</td>
+</tr>
+</tbody>
+</table>
+
+<h2>20. 控制證據要求矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制類別</th>
+<th>典型證據</th>
+<th>保存Owner</th>
+<th>保存位置</th>
+<th>保存期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>政策與治理</td>
+<td>政策、RACI、任命、治理會議紀錄。</td>
+<td>ISMS代表</td>
+<td>ISMS文件庫</td>
+<td>有效期間加至少3年</td>
+</tr>
+<tr>
+<td>外部聯繫與情資</td>
+<td>主管機關清冊、專業團體紀錄、情資報告、偵測規則。</td>
+<td>CISO / SOC</td>
+<td>ISMS文件庫 / SOC平台</td>
+<td>至少3年</td>
+</tr>
+<tr>
+<td>資產與資訊管理</td>
+<td>資產清冊、資料分類、標示、傳輸與歸還紀錄。</td>
+<td>Asset/Data Owner</td>
+<td>ISMS文件庫 / ITSM</td>
+<td>至少3年</td>
+</tr>
+<tr>
+<td>存取治理</td>
+<td>帳號工單、角色矩陣、權限審查、MFA報表。</td>
+<td>IAM Owner</td>
+<td>IAM / ITSM / ISMS文件庫</td>
+<td>至少3年</td>
+</tr>
+<tr>
+<td>供應商與雲端</td>
+<td>合約、SLA、DPA、SOC、供應商審查、雲端組態報告。</td>
+<td>供應商管理 / Cloud Owner</td>
+<td>供應商文件庫</td>
+<td>合約期間加至少3年</td>
+</tr>
+<tr>
+<td>事件管理</td>
+<td>事件紀錄、分級、時間線、PIR、證據鏈、CAPA。</td>
+<td>SOC / CISO</td>
+<td>事件管理平台</td>
+<td>至少3年</td>
+</tr>
+<tr>
+<td>營運持續</td>
+<td>BIA、BCP、DRP、演練、復原測試。</td>
+<td>BCMS / DRP</td>
+<td>BCMS文件庫</td>
+<td>至少3年</td>
+</tr>
+<tr>
+<td>合規與文件化</td>
+<td>法規清冊、符合性審查、紀錄保存、DPIA、稽核報告、SOP。</td>
+<td>法務 / 文件管制 / DPO</td>
+<td>ISMS文件庫</td>
+<td>依要求保存</td>
+</tr>
+</tbody>
+</table>
+
+<h2>21. 控制有效性驗證方法</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>驗證方法</th>
+<th>適用情境</th>
+<th>驗證重點</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>控制自評</td>
+<td>例行控制、Owner自我檢查。</td>
+<td>控制是否按頻率執行、證據是否完整。</td>
+<td>控制自評紀錄</td>
+</tr>
+<tr>
+<td>證據審查</td>
+<td>文件、紀錄、報告與清冊類控制。</td>
+<td>證據是否完整、最新、可追溯。</td>
+<td>證據審查紀錄</td>
+</tr>
+<tr>
+<td>抽樣測試</td>
+<td>交易、權限、事件、供應商、文件紀錄。</td>
+<td>抽樣結果是否符合準則。</td>
+<td>抽樣測試紀錄</td>
+</tr>
+<tr>
+<td>技術驗證</td>
+<td>雲端、IAM、SIEM、備份、弱點、組態。</td>
+<td>技術控制是否配置正確且持續運作。</td>
+<td>技術驗證報告</td>
+</tr>
+<tr>
+<td>演練測試</td>
+<td>事件應變、BCP/DRP、通報、危機溝通。</td>
+<td>角色、流程、時間目標與復原能力。</td>
+<td>演練報告</td>
+</tr>
+<tr>
+<td>內部稽核</td>
+<td>高風險控制、年度稽核範圍。</td>
+<td>控制設計與運作有效性。</td>
+<td>內部稽核報告</td>
+</tr>
+<tr>
+<td>外部審查</td>
+<td>驗證、客戶稽核、第三方評估。</td>
+<td>符合標準、合約與外部要求。</td>
+<td>外部審查報告</td>
+</tr>
+</tbody>
+</table>
+
+<h2>22. KPI/KRI與監督指標</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>監督項目</th>
+<th>KPI/KRI</th>
+<th>目標/門檻</th>
+<th>頻率</th>
+<th>責任角色</th>
+<th>升級條件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5控制實施率</td>
+<td>已實施控制數 / 適用控制數</td>
+<td>≥ ___%</td>
+<td>每季</td>
+<td>ISMS代表</td>
+<td>低於目標</td>
+</tr>
+<tr>
+<td>控制證據完整率</td>
+<td>證據完整控制數 / 應具備證據控制數</td>
+<td>≥ ___%</td>
+<td>每季</td>
+<td>文件管制 / Control Owner</td>
+<td>重大控制無證據</td>
+</tr>
+<tr>
+<td>控制有效性通過率</td>
+<td>有效性驗證通過控制數 / 驗證控制數</td>
+<td>≥ ___%</td>
+<td>每半年/年度</td>
+<td>ISMS代表</td>
+<td>高風險控制未通過</td>
+</tr>
+<tr>
+<td>SoA一致性</td>
+<td>SoA與控制清冊一致項目比例</td>
+<td>100%</td>
+<td>每季</td>
+<td>ISMS代表</td>
+<td>任何重大不一致</td>
+</tr>
+<tr>
+<td>供應商控制審查完成率</td>
+<td>高風險供應商完成審查比例</td>
+<td>100%</td>
+<td>年度/季度</td>
+<td>供應商管理</td>
+<td>高風險未審查</td>
+</tr>
+<tr>
+<td>事件PIR完成率</td>
+<td>重大事件完成PIR比例</td>
+<td>100%</td>
+<td>每季</td>
+<td>SOC / CISO</td>
+<td>重大事件未PIR</td>
+</tr>
+<tr>
+<td>法規合約符合性缺口數</td>
+<td>與A.5.31相關缺口數</td>
+<td>下降趨勢</td>
+<td>每季</td>
+<td>法務 / ISMS代表</td>
+<td>高風險合規缺口</td>
+</tr>
+<tr>
+<td>文件化程序更新準時率</td>
+<td>應更新程序按期完成比例</td>
+<td>≥ ___%</td>
+<td>每季</td>
+<td>文件管制</td>
+<td>重大程序過期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>23. 組織控制措施自評表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制編號</th>
+<th>自評問題</th>
+<th>自評結果</th>
+<th>證據位置</th>
+<th>缺口/改善</th>
+<th>Owner</th>
+<th>日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.__</td>
+<td>控制是否已依SoA與程序要求實施？</td>
+<td>□ 符合　□ 部分符合　□ 不符合　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td>控制是否有完整、最新且可追溯之證據？</td>
+<td>□ 符合　□ 部分符合　□ 不符合　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td>控制是否已指定Owner並定期審查？</td>
+<td>□ 符合　□ 部分符合　□ 不符合　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td>控制是否與風險、法規、合約及SoA一致？</td>
+<td>□ 符合　□ 部分符合　□ 不符合　□ 不適用</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>A.5.__</td>
+<td>控制是否達成預期風險降低或合規效果？</td>
+<td>□ 符合　□ 部分符合　□ 不符合　□ 待驗證</td>
+<td></td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>24. 控制缺口與改善追蹤</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>缺口編號</th>
+<th>控制編號</th>
+<th>缺口類型</th>
+<th>缺口描述</th>
+<th>風險等級</th>
+<th>改善措施</th>
+<th>責任人</th>
+<th>完成期限</th>
+<th>狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>GAP-YYYY-001</td>
+<td>A.5.__</td>
+<td>□ 未實施　□ 部分實施　□ 無證據　□ 控制無效　□ SoA不一致</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>GAP-YYYY-002</td>
+<td>A.5.__</td>
+<td>□ 未實施　□ 部分實施　□ 無證據　□ 控制無效　□ SoA不一致</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+<tr>
+<td>GAP-YYYY-003</td>
+<td>A.5.__</td>
+<td>□ 未實施　□ 部分實施　□ 無證據　□ 控制無效　□ SoA不一致</td>
+<td></td>
+<td>□ 高　□ 中　□ 低</td>
+<td></td>
+<td></td>
+<td>YYYY-MM-DD</td>
+<td>□ 未開始　□ 進行中　□ 完成　□ 逾期</td>
+</tr>
+</tbody>
+</table>
+
+<h2>25. SoA更新與一致性管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發情境</th>
+<th>SoA更新要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險處理新增控制</td>
+<td>新增或調整Annex A.5控制適用性與實施狀態。</td>
+<td>ISMS代表</td>
+<td>SoA更新紀錄</td>
+</tr>
+<tr>
+<td>控制實施狀態變更</td>
+<td>控制由未實施、部分實施變為已實施或反之。</td>
+<td>Control Owner / ISMS代表</td>
+<td>控制證據、SoA</td>
+</tr>
+<tr>
+<td>控制排除理由變更</td>
+<td>控制不適用理由或背景條件變更。</td>
+<td>CISO / ISMS代表</td>
+<td>排除理由核准</td>
+</tr>
+<tr>
+<td>法規合約要求變更</td>
+<td>要求新增導致控制適用性改變。</td>
+<td>法務 / ISMS代表</td>
+<td>法規合約清冊</td>
+</tr>
+<tr>
+<td>稽核發現或CAPA</td>
+<td>SoA與實際控制不一致時需修正。</td>
+<td>ISMS代表 / CAPA負責人</td>
+<td>稽核/CAPA紀錄</td>
+</tr>
+<tr>
+<td>PIMS/AIMS/BCMS/GHG專項需求</td>
+<td>專項治理要求影響A.5控制時更新。</td>
+<td>專項Owner / ISMS代表</td>
+<td>專項審查紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>26. 與風險處理之連結</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>連結項目</th>
+<th>要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險對應</td>
+<td>每項適用控制應連結至少一項風險、合規義務或治理需求。</td>
+<td>風險管理 / ISMS代表</td>
+<td>風險控制矩陣</td>
+</tr>
+<tr>
+<td>控制處理效果</td>
+<td>控制應說明降低可能性、降低後果或支援合規之作用。</td>
+<td>Control Owner</td>
+<td>控制設計紀錄</td>
+</tr>
+<tr>
+<td>剩餘風險</td>
+<td>控制實施後需評估剩餘風險是否可接受。</td>
+<td>風險Owner</td>
+<td>剩餘風險接受</td>
+</tr>
+<tr>
+<td>處理計畫</td>
+<td>未實施或未有效之控制需納入風險處理計畫。</td>
+<td>風險Owner / Control Owner</td>
+<td>風險處理計畫</td>
+</tr>
+<tr>
+<td>有效性驗證</td>
+<td>控制有效性結果需回饋至風險評鑑與處理。</td>
+<td>ISMS代表</td>
+<td>驗證紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>27. 與PIMS、AIMS、BCMS、GHG治理整合</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>治理領域</th>
+<th>Annex A.5控制關聯</th>
+<th>整合要求</th>
+<th>主要Owner</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PIMS / 隱私</td>
+<td>A.5.31、A.5.33、A.5.34、A.5.36、A.5.37</td>
+<td>PII清冊、DPIA、DPA、資料主體請求與隱私事件需連結組織控制。</td>
+<td>DPO</td>
+<td>PII清冊、DPIA、DPA</td>
+</tr>
+<tr>
+<td>AIMS / AI治理</td>
+<td>A.5.1、A.5.2、A.5.7、A.5.8、A.5.19-A.5.23、A.5.31</td>
+<td>AI政策、AI角色、AI風險、AI供應商、AI事件與AI合規要求需納入控制治理。</td>
+<td>AI治理負責人</td>
+<td>AI清冊、AI風險評估</td>
+</tr>
+<tr>
+<td>BCMS / DRP</td>
+<td>A.5.24-A.5.30</td>
+<td>事件管理、危機處理、營運中斷、ICT就緒度與復原控制需整合。</td>
+<td>BCMS負責人</td>
+<td>BIA、BCP、DRP、演練</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>A.5.12、A.5.13、A.5.14、A.5.31、A.5.33、A.5.37</td>
+<td>碳資料分類、標示、傳輸、法規客戶要求、紀錄保護與作業程序需納入控制。</td>
+<td>GHG資料治理負責人</td>
+<td>盤查底稿、查證紀錄</td>
+</tr>
+<tr>
+<td>供應鏈治理</td>
+<td>A.5.19-A.5.23</td>
+<td>供應商、ICT供應鏈、雲端服務與第四方需依風險與合約監督。</td>
+<td>供應商管理</td>
+<td>供應商審查、SLA、SOC</td>
+</tr>
+</tbody>
+</table>
+
+<h2>28. 組織控制措施變更管理</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>變更類型</th>
+<th>觸發情境</th>
+<th>管理要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>控制新增</td>
+<td>新增風險、法規、合約或SoA適用性變更。</td>
+<td>需建立控制設計、Owner、證據與驗證方法。</td>
+</tr>
+<tr>
+<td>控制修訂</td>
+<td>控制活動、頻率、Owner、證據或工具變更。</td>
+<td>需評估風險、文件更新與溝通。</td>
+</tr>
+<tr>
+<td>控制停用/排除</td>
+<td>控制不再適用或由其他控制取代。</td>
+<td>需核准排除理由並更新SoA。</td>
+</tr>
+<tr>
+<td>控制失效</td>
+<td>控制未運作、無證據或驗證未通過。</td>
+<td>需啟動CAPA或風險處理。</td>
+</tr>
+<tr>
+<td>重大外部變更</td>
+<td>標準、法規、雲端、供應商或客戶要求變更。</td>
+<td>需評估控制適用性與文件修訂。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>29. 控制外包與第三方執行要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>外包控制情境</th>
+<th>要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>供應商代執行控制</td>
+<td>需以合約、SLA、控制證明與審查確認控制有效。</td>
+<td>供應商管理 / Control Owner</td>
+<td>合約、SLA、SOC報告</td>
+</tr>
+<tr>
+<td>雲端服務提供控制</td>
+<td>需確認共享責任、雲端組態與供應商控制覆蓋範圍。</td>
+<td>Cloud Owner</td>
+<td>共享責任矩陣、CSPM報告</td>
+</tr>
+<tr>
+<td>MSSP/SOC代管</td>
+<td>需定義監控範圍、告警SLA、升級機制與報告。</td>
+<td>SOC / 供應商管理</td>
+<td>服務報告、事件紀錄</td>
+</tr>
+<tr>
+<td>顧問或外部稽核支援</td>
+<td>需確保保密、證據存取與審查獨立性。</td>
+<td>ISMS代表 / 法務</td>
+<td>NDA、審查報告</td>
+</tr>
+<tr>
+<td>第三方證據引用</td>
+<td>SOC、ISO證書、測試報告需審查有效期間與範圍。</td>
+<td>供應商管理 / CISO</td>
+<td>第三方報告審查紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>30. 控制例外與風險接受</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>例外類型</th>
+<th>適用情境</th>
+<th>要求</th>
+<th>核准角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>暫時不符合</td>
+<td>控制短期無法完全達成要求。</td>
+<td>需記錄原因、期限、補償控制與重評日期。</td>
+<td>CISO / 風險Owner</td>
+<td>例外核准紀錄</td>
+</tr>
+<tr>
+<td>控制不可行</td>
+<td>受技術、合約、成本、相容性或外部依賴限制。</td>
+<td>需評估替代方案與剩餘風險。</td>
+<td>CISO / 管理階層</td>
+<td>補償控制評估</td>
+</tr>
+<tr>
+<td>SoA排除</td>
+<td>控制不適用於ISMS範圍或無相關風險。</td>
+<td>需記錄清楚排除理由與核准。</td>
+<td>CISO / ISMS代表</td>
+<td>SoA排除理由</td>
+</tr>
+<tr>
+<td>供應商控制例外</td>
+<td>供應商未能提供控制證據或控制不足。</td>
+<td>需要求改善、補償控制或風險接受。</td>
+<td>供應商管理 / CISO</td>
+<td>供應商例外紀錄</td>
+</tr>
+<tr>
+<td>緊急營運例外</td>
+<td>事件或中斷期間暫時偏離正式控制。</td>
+<td>需事後補審、記錄風險與復原正常控制。</td>
+<td>Incident Commander / CISO</td>
+<td>事件與例外紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>31. 控制溝通與教育訓練</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>溝通/訓練項目</th>
+<th>對象</th>
+<th>內容</th>
+<th>頻率/時機</th>
+<th>Owner</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Annex A.5控制責任宣導</td>
+<td>Control Owner、流程Owner</td>
+<td>控制目的、責任、證據、KPI/KRI。</td>
+<td>年度/任命時</td>
+<td>ISMS代表</td>
+<td>訓練紀錄</td>
+</tr>
+<tr>
+<td>政策與可接受使用宣導</td>
+<td>全體人員</td>
+<td>政策、資產使用、資訊分類、通報責任。</td>
+<td>年度/到職</td>
+<td>HR / ISMS代表</td>
+<td>閱讀確認、測驗</td>
+</tr>
+<tr>
+<td>供應商安全要求溝通</td>
+<td>供應商、採購、服務Owner</td>
+<td>合約要求、SLA、通報、證據提交。</td>
+<td>導入/續約/變更</td>
+<td>供應商管理</td>
+<td>供應商會議紀錄</td>
+</tr>
+<tr>
+<td>事件管理訓練</td>
+<td>SOC、IT、法務、DPO、管理層</td>
+<td>事件分級、通報、應變、證據蒐集。</td>
+<td>年度/演練</td>
+<td>SOC / CISO</td>
+<td>演練紀錄</td>
+</tr>
+<tr>
+<td>專項治理控制訓練</td>
+<td>DPO、AI Owner、BCMS、GHG Owner</td>
+<td>專項控制、證據與合規要求。</td>
+<td>導入/變更</td>
+<td>專項Owner</td>
+<td>專項訓練紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>32. 管理審查輸入彙整</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>管理審查輸入</th>
+<th>是否納入</th>
+<th>輸入摘要</th>
+<th>責任角色</th>
+<th>完成期限</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Annex A.5控制實施與有效性總覽</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>ISMS代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>SoA適用性、實施狀態與重大變更</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>CISO / ISMS代表</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>控制缺口、重大不符合與CAPA狀態</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>CAPA負責人</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>供應商、ICT供應鏈與雲端控制狀態</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>供應商管理 / Cloud Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>事件管理、PIR與控制改善狀態</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>SOC / CISO</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>法規、合約、隱私與文件化控制缺口</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>法務 / DPO / 文件管制</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>PIMS/AIMS/BCMS/GHG專項控制狀態</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>專項Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>資源、工具、能力與預算需求</td>
+<td>□ 否　□ 是</td>
+<td></td>
+<td>CISO / Control Owner</td>
+<td>YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+
+<h2>33. CAPA與持續改善</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>觸發來源</th>
+<th>問題類型</th>
+<th>處理要求</th>
+<th>責任角色</th>
+<th>證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>控制自評不符合</td>
+<td>控制未實施、未按期執行或證據不足。</td>
+<td>啟動改善計畫或CAPA。</td>
+<td>Control Owner / CAPA負責人</td>
+<td>自評與CAPA紀錄</td>
+</tr>
+<tr>
+<td>內部稽核發現</td>
+<td>控制設計或運作有效性不足。</td>
+<td>執行RCA、矯正措施與有效性驗證。</td>
+<td>CAPA負責人</td>
+<td>稽核報告、CAPA</td>
+</tr>
+<tr>
+<td>外部驗證或客戶稽核缺失</td>
+<td>控制與標準、合約或客戶要求不一致。</td>
+<td>制定改善計畫並回覆。</td>
+<td>ISMS代表 / CISO</td>
+<td>外部稽核回覆</td>
+</tr>
+<tr>
+<td>資安事件或PIR</td>
+<td>事件根因顯示控制不足或失效。</td>
+<td>更新控制、程序、訓練與監控。</td>
+<td>SOC / CISO</td>
+<td>PIR、CAPA</td>
+</tr>
+<tr>
+<td>SoA不一致</td>
+<td>SoA與控制實際狀態不一致。</td>
+<td>修正SoA與控制清冊。</td>
+<td>ISMS代表</td>
+<td>SoA更新紀錄</td>
+</tr>
+<tr>
+<td>供應商控制缺口</td>
+<td>供應商未達要求或證據不足。</td>
+<td>要求供應商改善或執行替代方案。</td>
+<td>供應商管理</td>
+<td>供應商改善紀錄</td>
+</tr>
+</tbody>
+</table>
+
+<h2>34. RACI責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>活動</th>
+<th>最高管理階層</th>
+<th>CISO</th>
+<th>ISMS代表</th>
+<th>Control Owner</th>
+<th>風險管理</th>
+<th>法務/DPO</th>
+<th>IT/SOC</th>
+<th>供應商管理</th>
+<th>BCMS/AI/GHG</th>
+<th>內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准組織控制治理原則</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>建立Annex A.5控制清冊</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>判定控制適用性</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>設計控制與證據要求</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>執行控制活動</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>I</td>
+<td>R（適用）</td>
+<td>R（適用）</td>
+<td>R（適用）</td>
+<td>R（適用）</td>
+<td>I</td>
+</tr>
+<tr>
+<td>保存控制證據</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>控制有效性驗證</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>SoA更新</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>缺口與CAPA</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>管理審查提報</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>內部稽核查核</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+</tr>
+</tbody>
+</table>
+
+<h2>35. ISO/IEC 27001條文對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>ISO/IEC 27001條款</th>
+<th>本程序對應內容</th>
+<th>證據位置</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4.1 組織與其情境</td>
+<td>組織控制措施依內外部議題與治理需求設計。</td>
+<td>第4、9章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>4.2 關注方需求與期望</td>
+<td>控制涵蓋主管機關、客戶、供應商、資料主體與專業團體要求。</td>
+<td>第13、16、19章</td>
+<td>法務 / ISMS代表</td>
+</tr>
+<tr>
+<td>4.3 ISMS範圍</td>
+<td>Annex A.5控制適用性依ISMS範圍判定。</td>
+<td>第2、9章</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>4.4 ISMS及其流程</td>
+<td>組織控制措施落實於ISMS流程與文件化資訊。</td>
+<td>第5、10章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>5.1 領導與承諾</td>
+<td>管理階層核准政策、責任、資源與重大控制決策。</td>
+<td>第8、32章</td>
+<td>最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td>5.2 資訊安全政策</td>
+<td>A.5.1直接支援政策建立、發布、溝通與審查。</td>
+<td>第12章</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>5.3 角色責任與權限</td>
+<td>A.5.2、A.5.3、A.5.4與RACI定義責任。</td>
+<td>第8、12、34章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>6.1 風險與機會</td>
+<td>控制適用性與設計連結風險評鑑與風險處理。</td>
+<td>第9、26章</td>
+<td>風險管理</td>
+</tr>
+<tr>
+<td>6.2 資訊安全目標</td>
+<td>控制KPI/KRI支援資訊安全目標達成。</td>
+<td>第22章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>6.3 變更規劃</td>
+<td>控制變更需評估、核准並更新SoA。</td>
+<td>第28章</td>
+<td>Change Owner</td>
+</tr>
+<tr>
+<td>7.1 Resources</td>
+<td>控制實施需配置人力、工具、預算與外部服務。</td>
+<td>第10、11章</td>
+<td>CISO / Control Owner</td>
+</tr>
+<tr>
+<td>7.2 Competence</td>
+<td>控制Owner與執行人員需具備控制能力。</td>
+<td>第31章</td>
+<td>HR / ISMS代表</td>
+</tr>
+<tr>
+<td>7.3 Awareness</td>
+<td>政策、通報、資產使用、資料分類與事件責任需宣導。</td>
+<td>第31章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>7.4 Communication</td>
+<td>主管機關、專業團體、供應商、事件與管理審查需溝通。</td>
+<td>第13、31、32章</td>
+<td>溝通Owner</td>
+</tr>
+<tr>
+<td>7.5 Documented Information</td>
+<td>控制程序、證據、清冊與紀錄需受控保存。</td>
+<td>第20、37章</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>8.1 Operational planning and control</td>
+<td>組織控制措施需依規劃執行並保存證據。</td>
+<td>第10、11、23章</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>8.2 Risk assessment</td>
+<td>控制有效性與缺口回饋風險評鑑。</td>
+<td>第21、26章</td>
+<td>風險管理</td>
+</tr>
+<tr>
+<td>8.3 Risk treatment</td>
+<td>Annex A.5控制作為風險處理措施。</td>
+<td>第26章</td>
+<td>風險處理Owner</td>
+</tr>
+<tr>
+<td>9.1 Performance evaluation</td>
+<td>KPI/KRI、自評與有效性驗證評估控制績效。</td>
+<td>第21、22、23章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>9.2 Internal audit</td>
+<td>內部稽核查核控制設計與運作有效性。</td>
+<td>第21、38章</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>9.3 Management review</td>
+<td>控制狀態、缺口、資源與CAPA納入管理審查。</td>
+<td>第32章</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>10.1/10.2 Improvement and corrective action</td>
+<td>控制不符合、事件、稽核缺失導出CAPA與改善。</td>
+<td>第33章</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>36. Annex A.5完整控制對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制編號</th>
+<th>控制名稱</th>
+<th>本程序主要管理章節</th>
+<th>主要證據</th>
+<th>主要Owner</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.1</td>
+<td>資訊安全政策</td>
+<td>第12章</td>
+<td>政策、核准、公告、審查紀錄</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>A.5.2</td>
+<td>資訊安全角色與責任</td>
+<td>第12章</td>
+<td>RACI、任命紀錄</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>A.5.3</td>
+<td>職責分離</td>
+<td>第12章</td>
+<td>職責分離矩陣、權限審查</td>
+<td>流程Owner</td>
+</tr>
+<tr>
+<td>A.5.4</td>
+<td>管理責任</td>
+<td>第12章</td>
+<td>管理確認、主管審查</td>
+<td>部門主管</td>
+</tr>
+<tr>
+<td>A.5.5</td>
+<td>與主管機關聯繫</td>
+<td>第13章</td>
+<td>主管機關清冊、通報紀錄</td>
+<td>法務 / CISO</td>
+</tr>
+<tr>
+<td>A.5.6</td>
+<td>與專業團體聯繫</td>
+<td>第13章</td>
+<td>專業團體清冊、活動紀錄</td>
+<td>CISO / SOC</td>
+</tr>
+<tr>
+<td>A.5.7</td>
+<td>威脅情資</td>
+<td>第13章</td>
+<td>情資報告、偵測規則</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>A.5.8</td>
+<td>專案管理中的資訊安全</td>
+<td>第14章</td>
+<td>專案安全審查</td>
+<td>PMO / CISO</td>
+</tr>
+<tr>
+<td>A.5.9-A.5.14</td>
+<td>資產與資訊管理控制</td>
+<td>第14章</td>
+<td>資產清冊、分類、標示、傳輸紀錄</td>
+<td>Asset/Data Owner</td>
+</tr>
+<tr>
+<td>A.5.15-A.5.18</td>
+<td>存取治理控制</td>
+<td>第15章</td>
+<td>IAM紀錄、權限審查</td>
+<td>IAM Owner</td>
+</tr>
+<tr>
+<td>A.5.19-A.5.23</td>
+<td>供應商與雲端控制</td>
+<td>第16章</td>
+<td>供應商審查、合約、SLA、SOC</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>A.5.24-A.5.28</td>
+<td>事件管理控制</td>
+<td>第17章</td>
+<td>事件紀錄、PIR、證據鏈</td>
+<td>SOC / CISO</td>
+</tr>
+<tr>
+<td>A.5.29-A.5.30</td>
+<td>營運持續控制</td>
+<td>第18章</td>
+<td>BIA、BCP、DRP、演練報告</td>
+<td>BCMS / DRP</td>
+</tr>
+<tr>
+<td>A.5.31-A.5.37</td>
+<td>合規與文件化控制</td>
+<td>第19章</td>
+<td>法規清冊、DPIA、稽核報告、SOP</td>
+<td>法務 / DPO / 文件管制</td>
+</tr>
+</tbody>
+</table>
+
+<h2>37. 文件化資訊與保存要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄項目</th>
+<th>保存責任</th>
+<th>保存位置</th>
+<th>保存期限</th>
+<th>注意事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>核准版組織控制措施管理程序</td>
+<td>文件管制 / ISMS代表</td>
+<td>ISMS文件庫</td>
+<td>有效期間加至少3年</td>
+<td>需保留審查、核准與版本紀錄。</td>
+</tr>
+<tr>
+<td>Annex A.5控制措施清冊</td>
+<td>ISMS代表</td>
+<td>ISMS文件庫 / GRC</td>
+<td>至少3年</td>
+<td>需與SoA一致。</td>
+</tr>
+<tr>
+<td>控制實施計畫與執行紀錄</td>
+<td>Control Owner</td>
+<td>GRC / ITSM / ISMS文件庫</td>
+<td>至少3年</td>
+<td>需可追溯至控制編號。</td>
+</tr>
+<tr>
+<td>控制證據與有效性驗證紀錄</td>
+<td>Control Owner / ISMS代表</td>
+<td>ISMS文件庫 / 各工具平台</td>
+<td>至少3年</td>
+<td>需依資料分類限制存取。</td>
+</tr>
+<tr>
+<td>供應商與雲端控制證據</td>
+<td>供應商管理 / Cloud Owner</td>
+<td>供應商文件庫</td>
+<td>合約期間加至少3年</td>
+<td>需依保密要求控管。</td>
+</tr>
+<tr>
+<td>事件與BCMS控制證據</td>
+<td>SOC / BCMS負責人</td>
+<td>事件平台 / BCMS文件庫</td>
+<td>至少3年或依法規要求</td>
+<td>重大事件需保存PIR與CAPA。</td>
+</tr>
+<tr>
+<td>PIMS/AIMS/GHG專項控制證據</td>
+<td>DPO / AI / GHG Owner</td>
+<td>專項文件庫</td>
+<td>依專項要求</td>
+<td>涉及PII或敏感資料需限制存取。</td>
+</tr>
+<tr>
+<td>CAPA與改善紀錄</td>
+<td>CAPA負責人</td>
+<td>CAPA系統 / ISMS文件庫</td>
+<td>結案後至少3年</td>
+<td>需保存有效性驗證。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>38. 內部稽核與外部驗證查核提示</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>查核主題</th>
+<th>查核問題</th>
+<th>應備證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>控制適用性</td>
+<td>Annex A.5控制是否依風險與SoA判定適用性？</td>
+<td>SoA、控制清冊</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>控制Owner</td>
+<td>每項控制是否指定Owner與責任？</td>
+<td>RACI、任命紀錄</td>
+<td>CISO / ISMS代表</td>
+</tr>
+<tr>
+<td>控制實施</td>
+<td>控制是否依程序與計畫實施？</td>
+<td>控制實施紀錄</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>證據完整性</td>
+<td>控制證據是否完整、最新、可追溯？</td>
+<td>證據清單、文件庫</td>
+<td>文件管制</td>
+</tr>
+<tr>
+<td>SoA一致性</td>
+<td>SoA與實際控制狀態是否一致？</td>
+<td>SoA、控制證據</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>控制有效性</td>
+<td>控制是否經自評、測試、稽核或驗證確認有效？</td>
+<td>有效性驗證紀錄</td>
+<td>ISMS代表 / 稽核主管</td>
+</tr>
+<tr>
+<td>供應商與雲端</td>
+<td>供應商與雲端控制是否有合約、SLA與證據？</td>
+<td>供應商審查、SOC、SLA</td>
+<td>供應商管理</td>
+</tr>
+<tr>
+<td>事件與營運持續</td>
+<td>事件管理與BCMS控制是否定期演練與改善？</td>
+<td>事件紀錄、演練報告</td>
+<td>SOC / BCMS</td>
+</tr>
+<tr>
+<td>合規與隱私</td>
+<td>法規合約、智慧財產、紀錄保護與PII控制是否落實？</td>
+<td>法規清冊、DPIA、保存矩陣</td>
+<td>法務 / DPO</td>
+</tr>
+<tr>
+<td>CAPA與改善</td>
+<td>控制缺口是否啟動CAPA並驗證有效性？</td>
+<td>CAPA紀錄</td>
+<td>CAPA負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>39. 整合標準對應矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>標準/治理領域</th>
+<th>本程序整合要求</th>
+<th>主要證據</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISO/IEC 27002</td>
+<td>Annex A.5控制實施指引、控制目的與屬性管理。</td>
+<td>控制清冊、證據紀錄</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>ISO/IEC 27005 / ISO 31000</td>
+<td>控制措施需連結風險評鑑、風險處理與剩餘風險。</td>
+<td>風險控制矩陣</td>
+<td>風險管理</td>
+</tr>
+<tr>
+<td>ISO/IEC 27701 / PIMS</td>
+<td>A.5.31、5.33、5.34等控制支援隱私與PII保護。</td>
+<td>PII清冊、DPIA、DPA</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>ISO/IEC 42001 / AIMS</td>
+<td>政策、角色、專案、供應商、事件與合規控制支援AI治理。</td>
+<td>AI清冊、AI風險評估</td>
+<td>AI治理負責人</td>
+</tr>
+<tr>
+<td>ISO/IEC 23894</td>
+<td>AI風險來源、控制、利害關係人影響與監督需納入控制治理。</td>
+<td>AI風險控制紀錄</td>
+<td>AI風險Owner</td>
+</tr>
+<tr>
+<td>ISO 22301 / BCMS</td>
+<td>A.5.29-A.5.30支援營運持續與ICT就緒度。</td>
+<td>BIA、BCP、DRP、演練</td>
+<td>BCMS負責人</td>
+</tr>
+<tr>
+<td>ISO 19011</td>
+<td>獨立審查、內部稽核與控制符合性檢查。</td>
+<td>稽核方案、稽核報告</td>
+<td>稽核主管</td>
+</tr>
+<tr>
+<td>ISO 38507</td>
+<td>AI治理控制需納入管理責任、監督與決策。</td>
+<td>AI治理會議紀錄</td>
+<td>AI治理委員會</td>
+</tr>
+<tr>
+<td>GHG/CO2資料治理</td>
+<td>分類、標示、傳輸、紀錄保護、法規要求與文件化程序支援碳資料治理。</td>
+<td>GHG資料證據</td>
+<td>GHG資料治理負責人</td>
+</tr>
+</tbody>
+</table>
+
+<h2>40. 表單與紀錄清單</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>紀錄類型</th>
+<th>用途</th>
+<th>責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>組織控制措施清冊</td>
+<td>登錄Annex A.5控制適用性、Owner、狀態與證據。</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>組織控制措施實施計畫表</td>
+<td>規劃控制目標、活動、頻率、資源與證據。</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>組織控制措施自評表</td>
+<td>由Control Owner定期自評控制設計與運作。</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>Annex A.5控制措施與風險對應矩陣</td>
+<td>連結控制、風險、SoA、Owner與證據。</td>
+<td>ISMS代表</td>
+</tr>
+<tr>
+<td>組織控制措施執行與證據紀錄</td>
+<td>保存控制執行證據。</td>
+<td>Control Owner</td>
+</tr>
+<tr>
+<td>組織控制措施有效性驗證紀錄</td>
+<td>保存控制有效性驗證結果。</td>
+<td>ISMS代表 / 稽核主管</td>
+</tr>
+<tr>
+<td>組織控制措施管理報告</td>
+<td>彙整控制狀態、缺口、KPI/KRI與管理審查輸入。</td>
+<td>ISMS代表</td>
+</tr>
+</tbody>
+</table>
+
+<h2>41. 附件與證據索引</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>附件編號</th>
+<th>附件/證據名稱</th>
+<th>資訊來源</th>
+<th>責任單位</th>
+<th>保存位置</th>
+<th>備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ATT-01</td>
+<td>Annex A.5控制措施清冊</td>
+<td></td>
+<td>ISMS代表</td>
+<td>ISMS文件庫</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-02</td>
+<td>SoA適用性聲明</td>
+<td>SoA</td>
+<td>ISMS代表</td>
+<td>ISMS文件庫</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-03</td>
+<td>控制措施實施計畫</td>
+<td></td>
+<td>Control Owner</td>
+<td>GRC / ISMS文件庫</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-04</td>
+<td>控制執行與證據紀錄</td>
+<td></td>
+<td>Control Owner</td>
+<td>ISMS文件庫 / 工具平台</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-05</td>
+<td>控制有效性驗證紀錄</td>
+<td></td>
+<td>ISMS代表</td>
+<td>ISMS文件庫</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-06</td>
+<td>風險與控制對應矩陣</td>
+<td></td>
+<td>風險管理 / ISMS代表</td>
+<td>GRC</td>
+<td></td>
+</tr>
+<tr>
+<td>ATT-07</td>
+<td>供應商、雲端、SOC與SLA證據</td>
+<td>供應商文件</td>
+<td>供應商管理</td>
+<td>供應商文件庫</td>
+<td>如適用</td>
+</tr>
+<tr>
+<td>ATT-08</td>
+<td>事件、BCMS、PIMS、AIMS、GHG專項證據</td>
+<td>專項文件</td>
+<td>專項Owner</td>
+<td>專項文件庫</td>
+<td>如適用</td>
+</tr>
+<tr>
+<td>ATT-09</td>
+<td>CAPA、稽核與管理審查紀錄</td>
+<td>ISMS-092/093/101系列</td>
+<td>稽核主管 / CAPA負責人</td>
+<td>ISMS文件庫</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>42. Enterprise Ultimate Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>檢查項目</th>
+<th>完成</th>
+<th>證據/備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>文件基本資料、審查核准、目的、範圍與名詞定義完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>組織控制措施治理原則、流程總覽與控制群組分類完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>控制清冊、Owner責任、適用性判定、控制設計與實施要求完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>A.5.1-A.5.37各控制管理要求完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>控制證據、有效性驗證、KPI/KRI、自評、缺口與SoA更新完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>風險處理、PIMS/AIMS/BCMS/GHG、供應商雲端、控制變更與例外管理完整</td>
+<td>□ 是　□ 否　□ 不適用</td>
+<td></td>
+</tr>
+<tr>
+<td>溝通訓練、管理審查、CAPA與RACI完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>ISO條文、Annex A.5、整合標準對應完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>表單紀錄、附件索引、保存要求與稽核提示完整</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+<tr>
+<td>可支援內部稽核、外部驗證、客戶稽核與管理審查</td>
+<td>□ 是　□ 否</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>43. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件類型／主題</th>
+<th>文件名稱/類型</th>
+<th>與本程序之關聯</th>
+</tr></thead>
+<tbody>
+<tr>
+<td></td>
+<td>ISMS治理手冊</td>
+<td>定義ISMS整體治理架構與Annex A控制治理原則。</td>
+</tr>
+<tr>
+<td></td>
+<td>資訊安全領導與治理程序</td>
+<td>支援管理階層承諾、角色責任與控制治理。</td>
+</tr>
+<tr>
+<td>ISMS-061系列</td>
+<td>資訊安全風險管理文件</td>
+<td>控制措施需依風險評鑑與處理結果設計。</td>
+</tr>
+<tr>
+<td>ISMS-081系列</td>
+<td>運作規劃與控制文件</td>
+<td>Annex A.5控制措施需納入運作控制計畫。</td>
+</tr>
+<tr>
+<td>ISMS-082系列</td>
+<td>資訊安全風險評鑑文件</td>
+<td>提供控制適用性與控制缺口之風險依據。</td>
+</tr>
+<tr>
+<td>ISMS-083系列</td>
+<td>資訊安全風險處理文件</td>
+<td>控制措施作為風險處理方案並更新SoA。</td>
+</tr>
+<tr>
+<td>ISMS-A05系列</td>
+<td>組織控制措施表單、清冊、矩陣與紀錄</td>
+<td>本程序之操作層文件與證據。</td>
+</tr>
+<tr>
+<td>ISMS-075系列</td>
+<td>文件化資訊管理文件</td>
+<td>控制證據、程序、清冊與紀錄需受控保存。</td>
+</tr>
+<tr>
+<td>ISMS-091系列</td>
+<td>監督量測分析評估文件</td>
+<td>控制KPI/KRI與有效性監督依據。</td>
+</tr>
+<tr>
+<td>ISMS-092系列</td>
+<td>內部稽核文件</td>
+<td>稽核Annex A.5控制措施設計與運作有效性。</td>
+</tr>
+<tr>
+<td>ISMS-093系列</td>
+<td>管理審查文件</td>
+<td>控制缺口、有效性、資源與CAPA納入管理審查。</td>
+</tr>
+<tr>
+<td>ISMS-101系列</td>
+<td>CAPA文件</td>
+<td>控制缺口、不符合與事件根因導出CAPA。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>45. Enterprise Ultimate Certification Declaration</h2>
+<p>本文件為ISO/IEC 27001:2022 Annex A.5組織控制措施管理之正式企業級程序文件，可支援Annex A.5.1至A.5.37所有組織控制措施之適用性判定、實施、證據保存、SoA連結、有效性驗證、管理審查與持續改善，並支援ISO/IEC 27002、ISO/IEC 27005、ISO 31000、ISO/IEC 27701、ISO/IEC 42001、ISO/IEC 23894、ISO 22301、ISO 19011、ISO 38507與GHG/CO2資料治理整合治理之稽核證據。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section>
+<script src="../assets/document-dates.js"></script></body>
+</html>
