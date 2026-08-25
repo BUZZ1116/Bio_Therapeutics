@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-053-PRO-001 資安角色、責任與權限管理程序</title>
+<style>
+body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}.isms-document{max-width:3000px;margin:0 auto}h1{font-size:28px;border-bottom:3px solid #333;padding-bottom:8px;text-align:center;color:#1f4e79}h2{margin-top:30px;font-size:21px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}h3{margin-top:20px;font-size:17px;color:#333}table{margin:12px 0 24px 0}th{background:#d9eaf7;font-weight:bold;text-align:left}td,th{vertical-align:top!important}.note{background:#fff7e6;border:1px solid #f0c36d;padding:12px;margin:12px 0}.small{font-size:13px;color:#555}
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-053-PRO-001 資安角色、責任與權限管理程序</h1>
+<div class="note">
+<strong>程序定位：</strong>本程序為ISMS/PIMS/AI/GHG治理中角色、責任、權限、代理人、職責區隔、能力確認、任命與審查的主要程序文件。所有角色任命應可追溯至RACI權責矩陣、資訊安全責任任命書、SoA、風險登錄表、資產清冊、權限紀錄、稽核與管理審查證據。</div>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-053-PRO-001</td>
+<td>資安角色、責任與權限管理程序</td>
+<td>第二階：程序書 / PRO / 程序</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 5 / 領導、政策、角色與治理</td>
+<td>ISMS管理代表 / CISO</td>
+<td>CISO / ISMS管理代表 / 授權流程主管</td>
+<td>受控文件庫 / ISMS / Clause-5 / ISMS-053-PRO-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>ISMS管理代表 / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO辦公室 / 文件管制負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全治理委員會主席</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">HR / 能力與訓練負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">內部稽核方案負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層 / 資訊安全治理委員會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 目的</h2>
+<p>本程序旨在建立資訊安全管理系統（ISMS）、隱私資訊管理系統（PIMS）、AI治理與GHG/CO2資料治理相關角色、責任與權限之識別、分派、正式任命、溝通、能力確認、代理安排、職責區隔、利益衝突管理、定期審查與持續改善機制，以確保管理系統能有效運作並具備可稽核之責任證據鏈。</p>
+<p>本程序亦用於整合ISO/IEC 27001:2022 Clause 5.3之組織角色、責任與權限要求，以及ISO/IEC 27002:2022組織、人員、實體與技術控制措施中涉及責任分派、資產擁有權、存取權限、事件責任、供應商管理、控制Owner、稽核獨立性與管理審查輸入之要求。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">程序章節 / 管理主題</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1. 目的</td>
+<td style="vertical-align: top !important;">用於將管理階層領導承諾、政策要求及RACI角色分派轉化為可操作之任命、授權、職責區隔與能力管理程序。</td>
+<td style="vertical-align: top !important;">程序目的、責任分派與任命依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2. 適用範圍</td>
+<td style="vertical-align: top !important;">用於確認本程序涵蓋哪些ISMS/PIMS/AI/GHG範圍、資訊資產、AI服務、碳資料資產、系統、供應商及流程角色。</td>
+<td style="vertical-align: top !important;">角色適用範圍、範圍聲明、資產與資料Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4. 名詞與定義</td>
+<td style="vertical-align: top !important;">用於統一角色、責任、權限、RACI、Owner、代理人、職責區隔及任命等術語，避免文件間定義不一致。</td>
+<td style="vertical-align: top !important;">一致化名詞定義。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5. 權責總覽</td>
+<td style="vertical-align: top !important;">用於定義最高管理階層、ISMS管理代表、CISO、PIMS、AI、GHG、Risk Owner、Asset Owner、Control Owner、稽核與CAPA等角色之主要責任。</td>
+<td style="vertical-align: top !important;">角色責任摘要、任命書、能力紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6. 管理原則</td>
+<td style="vertical-align: top !important;">用於規範正式指派、最小權限、職責區隔、稽核獨立性、第三方責任、事件通報及CAPA原則。</td>
+<td style="vertical-align: top !important;">角色與權限管理原則、稽核要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1 識別ISMS/PIMS角色需求</td>
+<td style="vertical-align: top !important;">用於依組織情境、關注方、範圍、流程、資產、AI/GHG資料與供應鏈識別必要角色。</td>
+<td style="vertical-align: top !important;">角色需求清單、Owner清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2 定義角色責任與權限</td>
+<td style="vertical-align: top !important;">用於將角色名稱、責任、權限、報告線、代理人、資格能力與文件化資訊責任寫入任命書及RACI。</td>
+<td style="vertical-align: top !important;">角色說明、任命書、權限清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.3 建立RACI權責矩陣</td>
+<td style="vertical-align: top !important;">用於建立管理系統條款、流程、控制措施、風險、資產、PIMS、AI、GHG及稽核活動之RACI權責分派。</td>
+<td style="vertical-align: top !important;">RACI權責矩陣、SoA與控制對應。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 正式任命與授權</td>
+<td style="vertical-align: top !important;">用於正式任命ISMS、CISO、PIMS、AI、GHG、Risk Owner、Asset Owner、System Owner、Control Owner及稽核員等關鍵角色。</td>
+<td style="vertical-align: top !important;">簽署版任命書、治理會議決議、能力證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 權限管理與最小權限</td>
+<td style="vertical-align: top !important;">用於將角色責任轉換為帳號、特權、資料存取、日誌監控、加密及定期權限審查要求。</td>
+<td style="vertical-align: top !important;">權限申請、核准、審查、日誌與加密證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.6 職責區隔與利益衝突管理</td>
+<td style="vertical-align: top !important;">用於確認申請、核准、執行、審查、稽核是否適當區隔，並管理利益衝突與補償控制。</td>
+<td style="vertical-align: top !important;">職責區隔檢查、利益衝突聲明、補償控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.7 代理人與備援安排</td>
+<td style="vertical-align: top !important;">用於設定關鍵角色代理人、代理範圍、代理期限、能力要求及重大核准代理限制。</td>
+<td style="vertical-align: top !important;">代理人指定、備援安排、管理審查資源決議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.8 能力與認知要求</td>
+<td style="vertical-align: top !important;">用於建立角色能力要求、訓練計畫、認知宣導、稽核員能力與有效性評估。</td>
+<td style="vertical-align: top !important;">能力矩陣、訓練紀錄、認知測驗。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.9 溝通與公告</td>
+<td style="vertical-align: top !important;">用於將角色、責任、權限、變更、供應商責任及外部聯絡窗口向相關人員與第三方溝通。</td>
+<td style="vertical-align: top !important;">溝通矩陣、公告、合約/SOW/NDA責任條款。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.10 角色變更與交接</td>
+<td style="vertical-align: top !important;">用於組織、流程、系統、AI、PII、GHG或供應商變更時調整角色責任、權限、文件與交接證據。</td>
+<td style="vertical-align: top !important;">變更影響評估、權限調整、交接紀錄、文件修訂申請。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.11 定期審查</td>
+<td style="vertical-align: top !important;">用於年度及重大變更後審查角色、RACI、權限、代理人、職責區隔、稽核獨立性與能力。</td>
+<td style="vertical-align: top !important;">年度審查紀錄、稽核發現、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.12 監督與改進</td>
+<td style="vertical-align: top !important;">用於將角色責任失效、權限異常、訓練不足、責任重疊或稽核不獨立納入CAPA及持續改善。</td>
+<td style="vertical-align: top !important;">CAPA、有效性驗證、改善紀錄、管理審查輸出。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8. RACI權責矩陣範例</td>
+<td style="vertical-align: top !important;">用於提供政策、範圍、風險、SoA、資產、權限、供應商、AI、PII、GHG、事件、稽核及CAPA之實作範例。</td>
+<td style="vertical-align: top !important;">RACI範例與實作模板。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9. 授權層級與權限管理要求</td>
+<td style="vertical-align: top !important;">用於定義政策、風險接受、存取、文件、對外揭露、供應商、例外與事件升級之授權層級。</td>
+<td style="vertical-align: top !important;">授權矩陣、風險接受、對外揭露核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10. 職責區隔控制要求</td>
+<td style="vertical-align: top !important;">用於具體檢查存取申請、系統開發、風險與稽核、供應商、資料揭露與事件結案之職責衝突。</td>
+<td style="vertical-align: top !important;">職責區隔評估、權限審查、補償控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">11. 角色能力與訓練要求</td>
+<td style="vertical-align: top !important;">用於定義高階管理、ISMS、CISO、PIMS、AI、GHG、內稽、控制Owner與全體員工之能力與訓練證據。</td>
+<td style="vertical-align: top !important;">能力需求、訓練紀錄、資格紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12. 程序輸入、活動與輸出</td>
+<td style="vertical-align: top !important;">用於描述本程序如何接收範圍、流程、風險、SoA、組織異動、事件與管理審查資訊，並輸出角色清單、任命書、RACI與改善紀錄。</td>
+<td style="vertical-align: top !important;">程序輸入/輸出、流程證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">13. 監督、量測與管理審查輸入</td>
+<td style="vertical-align: top !important;">用於設定角色任命完整性、RACI完整性、權限審查、職責區隔、能力訓練與第三方責任之KPI/KRI。</td>
+<td style="vertical-align: top !important;">KPI/KRI、管理審查輸入、CAPA。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>ISMS與PIMS之治理、範圍、政策、風險、控制措施、稽核、管理審查及改善相關角色。</li>
+<li>資訊安全、隱私、AI治理、GHG資料治理、雲端服務、ICT供應鏈、營運持續與事件管理責任。</li>
+<li>資訊資產、系統、資料、AI模型、PII、GHG資料、文件化資訊及供應商之擁有權與保護責任。</li>
+<li>使用者、系統管理員、特殊權限帳號、第三方人員及外包人員之權限責任。</li>
+<li>內部稽核員、控制措施負責人、風險擁有者、流程負責人及管理審查參與人員之資格與獨立性。</li>
+<li>角色任命、代理人、權限授予、職責區隔、角色異動、離職交接及定期審查活動。</li>
+</ul>
+
+<h2>4. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS</td>
+<td style="vertical-align: top !important;">Information Security Management System，資訊安全管理系統，用於建立、實施、維持及持續改善資訊安全管理之制度。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS</td>
+<td style="vertical-align: top !important;">Privacy Information Management System，隱私資訊管理系統，用於管理PII處理責任、隱私風險與資料主體權利。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色</td>
+<td style="vertical-align: top !important;">於ISMS、PIMS、AI治理、GHG資料治理或控制措施運作中，具有特定任務、責任或決策權限之職能或職位。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">責任</td>
+<td style="vertical-align: top !important;">角色對特定活動、控制措施、文件化資訊、風險、資產、資料、系統或決策結果應負責之事項。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">權限</td>
+<td style="vertical-align: top !important;">角色被授權執行、核准、存取、決策、變更、查核或揭露資訊與系統之範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI</td>
+<td style="vertical-align: top !important;">Responsible、Accountable、Consulted、Informed，用於定義執行者、負責核准者、諮詢者與被告知者之責任矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險擁有者</td>
+<td style="vertical-align: top !important;">對特定資訊安全、隱私、AI或GHG資料風險具有決策、接受、處理與資源協調責任之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資產擁有者</td>
+<td style="vertical-align: top !important;">對資訊資產、資料資產、系統、AI模型、GHG資料或支援資源之分類、使用、保護、存取及生命週期負責之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制措施負責人</td>
+<td style="vertical-align: top !important;">負責規劃、實施、監督、提供證據及改善特定資訊安全控制措施之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">職責區隔</td>
+<td style="vertical-align: top !important;">透過分離申請、核准、執行、審查與稽核權限，降低舞弊、錯誤、未授權活動或利益衝突之管理安排。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">授權任命</td>
+<td style="vertical-align: top !important;">最高管理階層或授權主管以正式文件指定角色、責任、權限、代理人及生效期間之活動。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">代理人</td>
+<td style="vertical-align: top !important;">於主要角色不可用、休假、離職、利益衝突或緊急事件時，依授權接替其職責與權限之人員。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI系統擁有者</td>
+<td style="vertical-align: top !important;">對AI系統、模型、資料集、Prompt、RAG、使用情境、風險與控制措施負責之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PII角色</td>
+<td style="vertical-align: top !important;">與個人可識別資訊處理相關之PII controller、PII processor、隱私負責人、資料保護角色或處理活動負責人。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料擁有者</td>
+<td style="vertical-align: top !important;">對GHG/CO2活動數據、排放係數、碳證據、AI能源與碳資料、揭露資料或查證資料負責之角色。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 權責總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">主要責任</th>
+<th style="vertical-align: top !important;">主要輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">核准ISMS/PIMS政策、範圍、角色任命、重大風險接受、重大資源配置、管理審查輸出、重大不符合矯正措施與持續改善方向。</td>
+<td style="vertical-align: top !important;">政策核准、治理會議紀錄、管理審查決議、重大風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">確保ISMS建立、實施、維持與改善；協調角色責任、流程整合、風險管理、SoA、稽核、管理審查與驗證準備。</td>
+<td style="vertical-align: top !important;">RACI、任命書、管理審查輸入、稽核支援資料。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全負責人 / CISO</td>
+<td style="vertical-align: top !important;">統籌資訊安全治理、技術控制、事件管理、威脅監測、資安策略、控制有效性及資安事件升級。</td>
+<td style="vertical-align: top !important;">控制證據、事件報告、權限審查、日誌監控。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / 隱私負責人</td>
+<td style="vertical-align: top !important;">負責PII處理活動、隱私風險、資料主體權利、PII controller/processor責任、隱私事件與PIMS稽核證據。</td>
+<td style="vertical-align: top !important;">隱私風險評估、PII處理證據、資料主體請求紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">負責AI系統治理、AI角色與責任、AI風險、人工監督、AI供應商、AI安全開發與AI永續治理。</td>
+<td style="vertical-align: top !important;">AI風險評估、AI服務審查、AI供應商評估、人工監督紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">永續 / GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">負責氣候變遷議題判定、GHG/CO2資料治理、AI服務能源與碳資料、永續揭露審查及查證證據。</td>
+<td style="vertical-align: top !important;">氣候議題判定、碳證據清冊、GHG資料治理紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">維護風險管理方法、風險準則、風險評鑑、風險處理計畫、剩餘風險接受與風險登錄表。</td>
+<td style="vertical-align: top !important;">風險準則、風險登錄表、風險處理追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險擁有者</td>
+<td style="vertical-align: top !important;">對指定風險進行評估、處理、接受、監督與回報，並確保風險處理措施獲得資源與執行。</td>
+<td style="vertical-align: top !important;">風險評鑑、風險處理計畫、剩餘風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資產擁有者</td>
+<td style="vertical-align: top !important;">負責資訊資產、資料、系統、AI模型、GHG資料、文件與服務之分類、授權、存取、保護與生命週期管理。</td>
+<td style="vertical-align: top !important;">資產清冊、分類分級、存取授權。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">系統擁有者</td>
+<td style="vertical-align: top !important;">負責系統可用性、安全需求、存取審查、變更核准、日誌、備份、弱點修補與營運控制。</td>
+<td style="vertical-align: top !important;">系統權限審查、變更核准、備份還原、日誌監控證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料擁有者</td>
+<td style="vertical-align: top !important;">定義資料分類、合法使用、保留、揭露、共享、品質與存取授權，並協助隱私與資料安全風險評估。</td>
+<td style="vertical-align: top !important;">資料分類、保存期限、共享核准、遮罩/刪除要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制措施負責人</td>
+<td style="vertical-align: top !important;">對指定控制措施之設計、實施、運作證據、有效性評估、異常回報與改善追蹤負責。</td>
+<td style="vertical-align: top !important;">控制證據、有效性評估、KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商管理負責人</td>
+<td style="vertical-align: top !important;">管理供應商資安、ICT供應鏈、雲端服務、AI供應商、外包服務、SLA、合約要求與持續監督。</td>
+<td style="vertical-align: top !important;">供應商評估、合約條款、AI/雲端供應商GHG與資訊安全評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人力資源負責人</td>
+<td style="vertical-align: top !important;">管理任用前篩選、聘用條款、保密承諾、教育訓練、職務異動、離職、紀律與人員認知。</td>
+<td style="vertical-align: top !important;">能力紀錄、訓練紀錄、離職/異動交接。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法務 / 合規負責人</td>
+<td style="vertical-align: top !important;">識別法規、合約、智慧財產、隱私、AI治理、GHG揭露及監理要求，並提供合規審查。</td>
+<td style="vertical-align: top !important;">法規與合約清冊、對外揭露審查、合約審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;">規劃內部稽核方案、確保稽核員能力與獨立性、核准稽核計畫、彙整稽核報告與追蹤發現事項。</td>
+<td style="vertical-align: top !important;">稽核方案、稽核發現事項追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">依稽核準則執行訪談、抽樣、證據審查、控制測試、稽核發現記錄及追蹤驗證。</td>
+<td style="vertical-align: top !important;">稽核工作底稿、訪談紀錄、稽核發現。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件管理負責人</td>
+<td style="vertical-align: top !important;">負責資安事件準備、通報、分類、處置、升級、鑑識證據、事後檢討與CAPA連結。</td>
+<td style="vertical-align: top !important;">事件處理紀錄、日誌證據、CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全體員工與外包人員</td>
+<td style="vertical-align: top !important;">遵守資訊安全、隱私、AI使用、GHG資料治理、通報、保密及可接受使用要求。</td>
+<td style="vertical-align: top !important;">訓練與認知紀錄、事件通報紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 管理原則</h2>
+<ul>
+<li>ISMS/PIMS角色、責任與權限應由最高管理階層或授權管理者正式指派、溝通並保存文件化證據。</li>
+<li>每一項重要ISMS流程、風險、資訊資產、控制措施、文件化資訊與稽核證據，均應具備明確負責角色。</li>
+<li>角色分派應符合能力、獨立性、職責區隔、利益衝突迴避及最小權限原則。</li>
+<li>特殊權限、重大風險接受、對外揭露、重大事件結案、SoA核准與管理審查輸出，應有明確授權層級。</li>
+<li>角色與權限應於組織異動、流程變更、系統變更、供應商變更、AI服務變更、PII處理變更或重大事件後即時審查。</li>
+<li>內部稽核員應保持稽核獨立性，不得稽核其自身負責之活動或控制措施。</li>
+<li>第三方、外包人員與供應商若執行ISMS相關活動，應於合約、SOW、NDA或服務協議中明確規範責任、權限與證據要求。</li>
+<li>角色責任之有效性應透過KPI/KRI、內部稽核、事件檢討、管理審查與CAPA進行監督與改進。</li>
+</ul>
+
+<h2>7. 作業程序</h2>
+<h3>7.1 識別ISMS/PIMS角色需求</h3>
+<p>ISMS管理代表應依ISMS範圍、PIMS範圍、AI服務範圍、GHG資料治理需求、法規合約要求、風險評鑑、SoA、控制措施、組織架構與流程活動，識別必要角色。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色需求來源</th>
+<th style="vertical-align: top !important;">識別內容</th>
+<th style="vertical-align: top !important;">應用方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織情境與關注方</td>
+<td style="vertical-align: top !important;">內外部議題、關注方需求、法規合約、氣候變遷、AI監管與供應鏈要求。</td>
+<td style="vertical-align: top !important;">判定是否需新增法務、AI治理、GHG資料治理、供應商管理或客戶回應角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS/PIMS/AI/GHG範圍</td>
+<td style="vertical-align: top !important;">ISMS範圍、PIMS角色、AI服務範圍、GHG資料與碳證據範圍。</td>
+<td style="vertical-align: top !important;">確認範圍內流程、系統、資料與外部服務是否有Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">流程與控制措施</td>
+<td style="vertical-align: top !important;">管理流程、Annex A控制措施、控制措施Owner與稽核證據。</td>
+<td style="vertical-align: top !important;">建立流程Owner、Control Owner、證據Owner與核准Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊資產與資料</td>
+<td style="vertical-align: top !important;">資訊資產、PII、AI模型、GHG/CO2資料、文件化資訊及供應商服務。</td>
+<td style="vertical-align: top !important;">指定Asset Owner、Data Owner、System Owner、Carbon Data Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險與事件</td>
+<td style="vertical-align: top !important;">資訊安全、隱私、AI、GHG、供應鏈、雲端、資料中心與事件風險。</td>
+<td style="vertical-align: top !important;">指定Risk Owner、事件管理負責人、CAPA負責人。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.2 定義角色責任與權限</h3>
+<p>每一角色應明確定義其責任、權限、報告線、代理人、資格能力、文件化資訊責任及其與其他角色之關係。定義內容至少包括角色名稱、任命依據、主要職責、核准權限、存取權限、文件/紀錄責任、能力要求、代理條件、回報對象、職責區隔限制及利益衝突要求。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">定義項目</th>
+<th style="vertical-align: top !important;">最低要求</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">角色名稱與任命依據</td>
+<td style="vertical-align: top !important;">應與RACI矩陣、組織架構、職務說明、SoA或資產清冊一致。</td>
+<td style="vertical-align: top !important;">角色清單、任命書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">責任與活動</td>
+<td style="vertical-align: top !important;">應明確指出角色負責之流程、控制措施、文件、風險、資產、系統或資料。</td>
+<td style="vertical-align: top !important;">職責說明、流程責任分派。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">權限與限制</td>
+<td style="vertical-align: top !important;">應定義核准、審查、存取、變更、揭露、例外與風險接受權限。</td>
+<td style="vertical-align: top !important;">授權矩陣、權限清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力與代理人</td>
+<td style="vertical-align: top !important;">應定義最低能力、訓練、資格、代理人及代理限制。</td>
+<td style="vertical-align: top !important;">能力紀錄、代理人紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件化資訊責任</td>
+<td style="vertical-align: top !important;">應明確指定應建立、維護、保存、提交或審查之文件與紀錄。</td>
+<td style="vertical-align: top !important;">文件Owner、紀錄保存要求。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.3 建立RACI權責矩陣</h3>
+<p>ISMS管理代表應建立並維護ISMS/PIMS/AI RACI權責矩陣，以對應各管理流程、標準條款、控制措施、風險、資產、文件化資訊及稽核證據。</p>
+<ul>
+<li>ISO/IEC 27001 Clause 4至10之管理系統流程。</li>
+<li>ISO/IEC 27002 Annex A組織、人員、實體與技術控制措施。</li>
+<li>風險評鑑、風險處理、SoA、控制有效性評估。</li>
+<li>資產管理、存取控制、供應商安全、事件管理、BC/ICT備妥性、合規。</li>
+<li>PIMS、AI治理、GHG資料治理與對外揭露責任。</li>
+<li>內部稽核、管理審查、不符合與持續改善。</li>
+</ul>
+
+<h3>7.4 正式任命與授權</h3>
+<p>對ISMS重要角色，應以任命書、會議紀錄、職務說明、授權清單、系統權限設定或其他可稽核方式正式指派。正式任命應由最高管理階層或授權主管核准，受任人應確認理解責任、權限、保密、事件通報、證據保存及利益衝突揭露義務。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">任命角色</th>
+<th style="vertical-align: top !important;">任命方式</th>
+<th style="vertical-align: top !important;">最低確認事項</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO</td>
+<td style="vertical-align: top !important;">任命書、治理會議紀錄、組織公告。</td>
+<td style="vertical-align: top !important;">管理系統責任、政策落實、控制措施統籌、事件升級與管理審查支援。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS / AI / GHG負責人</td>
+<td style="vertical-align: top !important;">任命書、RACI矩陣、專項政策引用。</td>
+<td style="vertical-align: top !important;">隱私、AI與GHG資料治理責任、風險評估及對外揭露審查責任。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Risk Owner / Asset Owner / Control Owner</td>
+<td style="vertical-align: top !important;">風險登錄表、資產清冊、SoA與任命書。</td>
+<td style="vertical-align: top !important;">風險處理、資產分類、控制證據與有效性維護。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">稽核方案、任命書、能力紀錄與獨立性聲明。</td>
+<td style="vertical-align: top !important;">稽核能力、獨立性、不得稽核自身責任。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商 / 外包角色</td>
+<td style="vertical-align: top !important;">合約、SOW、NDA、供應商評估與服務管理紀錄。</td>
+<td style="vertical-align: top !important;">責任、權限、證據提交、保密及事件通報義務。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.5 權限管理與最小權限</h3>
+<p>角色權限應依職責、資訊分類、業務需要、法規要求與風險評估結果授予。權限授予應遵循最小權限、需知原則、職責區隔及定期審查原則。</p>
+<ul>
+<li>新角色或職務異動時，應重新確認權限需求。</li>
+<li>特殊權限應經系統擁有者或授權主管核准。</li>
+<li>臨時權限應設定有效期間及到期移除要求。</li>
+<li>第三方權限應依合約、NDA、遠端存取與監控要求管理。</li>
+<li>離職、轉調或合約終止時，應即時移除或調整權限。</li>
+<li>權限審查結果應保存紀錄，異常應納入改善追蹤。</li>
+</ul>
+
+<h3>7.6 職責區隔與利益衝突管理</h3>
+<p>組織應識別可能造成舞弊、錯誤、未授權活動、隱私違規、資料竄改、稽核不獨立或揭露失準之職責衝突，並以流程、權限、審查或監控進行控制。若因人力限制無法完全區隔，應建立補償控制，例如主管複核、日誌監控、抽樣檢查、事後審查或定期稽核。</p>
+
+<h3>7.7 代理人與備援安排</h3>
+<p>對於關鍵ISMS角色，應指定代理人，以確保請假、離職、事故、危機、重大事件或營運中斷期間責任不中斷。代理人應具備必要能力與權限，代理權限應明確定義期間、範圍及限制，重大核准權限之代理應事前授權或由最高管理階層核准。</p>
+
+<h3>7.8 能力與認知要求</h3>
+<p>ISMS相關角色應具備執行其職責所需之能力。HR、ISMS管理代表及角色主管應依能力、認知與教育訓練管理程序，建立角色能力需求與訓練計畫。能力評估應考量職務與控制措施複雜度、資訊安全、隱私、AI治理、GHG資料治理、法規合約要求、所需技術或稽核能力，以及過往事件、稽核發現與改善結果。</p>
+
+<h3>7.9 溝通與公告</h3>
+<p>角色、責任與權限應向相關人員溝通。溝通方式可包括任命書、會議紀錄、組織圖、RACI矩陣、工作說明書、內部公告、訓練課程或系統權限通知。對外部人員、供應商、外包商與顧問，應於合約、採購文件、SOW、NDA、服務條款或專案啟動會議中說明資訊安全責任與限制。</p>
+
+<h3>7.10 角色變更與交接</h3>
+<p>當組織架構、流程、系統、AI服務、PII處理、GHG資料治理、供應商關係或人員職務發生變更時，應審查角色責任與權限是否需調整。交接範圍至少包括未完成任務、風險、事件、CAPA、管理審查行動、文件、紀錄、清冊、控制措施、稽核證據、系統、資料、工具、金鑰、特殊權限、外部服務帳號及外部聯絡事項。</p>
+
+<h3>7.11 定期審查</h3>
+<p>ISMS管理代表應至少每年審查一次角色、責任與權限，並於重大變更、重大事件、稽核發現或管理審查要求時進行臨時審查。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">審查項目</th>
+<th style="vertical-align: top !important;">審查重點</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">角色適切性</td>
+<td style="vertical-align: top !important;">角色是否仍符合ISMS/PIMS/AI/GHG治理範圍與組織現況。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI完整性</td>
+<td style="vertical-align: top !important;">RACI矩陣是否完整、正確且已溝通。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Owner完整性</td>
+<td style="vertical-align: top !important;">風險、控制措施、資產、系統與文件是否均有負責人。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">權限必要性</td>
+<td style="vertical-align: top !important;">特殊權限與核准權限是否仍有業務必要性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">職責區隔</td>
+<td style="vertical-align: top !important;">職責區隔是否有效，補償控制是否足夠。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力與代理</td>
+<td style="vertical-align: top !important;">內部稽核員是否維持獨立性與能力，代理人是否有效且具備必要能力。</td>
+</tr>
+</tbody>
+</table>
+<h3>7.12 監督與改進</h3>
+<p>角色責任與權限管理之有效性應納入監督、內部稽核、管理審查與持續改善。若發現角色不明、責任重疊、權限過大、職責衝突、代理不足、訓練不足或稽核不獨立，應依不符合與矯正措施管理程序處理。</p>
+<h2>8. RACI權責矩陣範例</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">活動</th>
+<th style="vertical-align: top !important;">R 執行負責</th>
+<th style="vertical-align: top !important;">A 最終負責 / 核准</th>
+<th style="vertical-align: top !important;">C 諮詢</th>
+<th style="vertical-align: top !important;">I 通知</th>
+<th style="vertical-align: top !important;">主要文件化資訊</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS政策核准</td>
+<td style="vertical-align: top !important;">ISMS管理代表、CISO</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">法務、PIMS負責人、AI治理負責人、GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">全體員工</td>
+<td style="vertical-align: top !important;"> 資訊安全政策<br> 政策審查紀錄表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍界定</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">流程負責人、資產擁有者、PIMS負責人、AI治理負責人、GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;"> ISMS與PIMS範圍管理程序<br> ISMS範圍聲明書</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全風險評鑑</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">風險擁有者</td>
+<td style="vertical-align: top !important;">資產擁有者、控制措施負責人、CISO、PIMS負責人、AI治理負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序<br> 資訊安全風險評鑑表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險處理計畫</td>
+<td style="vertical-align: top !important;">風險擁有者</td>
+<td style="vertical-align: top !important;">最高管理階層或授權管理者</td>
+<td style="vertical-align: top !important;">控制措施負責人、CISO、供應商管理負責人</td>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;"> 資訊安全風險處理計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA適用性聲明</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">風險管理負責人、控制措施負責人、內部稽核負責人</td>
+<td style="vertical-align: top !important;">驗證窗口</td>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資產清冊維護</td>
+<td style="vertical-align: top !important;">資產擁有者</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">系統擁有者、資料擁有者、IT單位</td>
+<td style="vertical-align: top !important;">CISO</td>
+<td style="vertical-align: top !important;"> 資訊及相關資產清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">存取權限核准</td>
+<td style="vertical-align: top !important;">資產擁有者 / 系統擁有者</td>
+<td style="vertical-align: top !important;">部門主管或授權主管</td>
+<td style="vertical-align: top !important;">CISO、HR、資料擁有者</td>
+<td style="vertical-align: top !important;">使用者</td>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商風險評估</td>
+<td style="vertical-align: top !important;">供應商管理負責人</td>
+<td style="vertical-align: top !important;">採購主管 / 風險擁有者</td>
+<td style="vertical-align: top !important;">CISO、法務、PIMS負責人、AI治理負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI系統風險評估</td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI系統擁有者</td>
+<td style="vertical-align: top !important;">CISO、資料擁有者、PIMS負責人、風險管理負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"> AI系統資訊安全風險評估表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PII處理活動管理</td>
+<td style="vertical-align: top !important;">PIMS負責人</td>
+<td style="vertical-align: top !important;">資料擁有者 / PII controller代表</td>
+<td style="vertical-align: top !important;">法務、CISO、流程負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"> 隱私風險評估表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料治理</td>
+<td style="vertical-align: top !important;">永續 / GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">資料擁有者 / 最高管理階層</td>
+<td style="vertical-align: top !important;">CISO、AI治理負責人、法務、PIMS負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策<br> GHG/CO2資料與碳證據清冊</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資訊安全事件處理</td>
+<td style="vertical-align: top !important;">事件管理負責人</td>
+<td style="vertical-align: top !important;">CISO</td>
+<td style="vertical-align: top !important;">系統擁有者、法務、PIMS負責人、HR</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;"> 日誌、監控與事件偵測作業指導書</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;">ISMS管理代表、受稽單位、CISO</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">CISO、PIMS負責人、AI治理負責人、風險管理負責人</td>
+<td style="vertical-align: top !important;">相關主管</td>
+<td style="vertical-align: top !important;"> 管理審查程序<br> 管理審查輸入資料彙整表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">不符合與CAPA</td>
+<td style="vertical-align: top !important;">不符合責任單位</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 最高管理階層</td>
+<td style="vertical-align: top !important;">內部稽核負責人、風險管理負責人</td>
+<td style="vertical-align: top !important;">相關關注方</td>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 授權層級與權限管理要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">授權主題</th>
+<th style="vertical-align: top !important;">授權角色</th>
+<th style="vertical-align: top !important;">授權範圍</th>
+<th style="vertical-align: top !important;">限制與證據要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">政策與治理決策</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">ISMS政策、PIMS政策、AI治理政策、GHG資料政策、重大風險接受、資源配置、管理審查輸出。</td>
+<td style="vertical-align: top !important;">應保存會議紀錄、核准紀錄或簽核證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險接受</td>
+<td style="vertical-align: top !important;">風險擁有者 / 最高管理階層</td>
+<td style="vertical-align: top !important;">依風險等級核准剩餘風險接受、風險處理豁免、臨時例外。</td>
+<td style="vertical-align: top !important;">高風險或跨部門風險須最高管理階層核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">存取授權</td>
+<td style="vertical-align: top !important;">資產擁有者 / 系統擁有者</td>
+<td style="vertical-align: top !important;">使用者帳號、特殊權限、資料存取、系統管理權限、外部存取。</td>
+<td style="vertical-align: top !important;">須符合最小權限、職責區隔與定期審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件核准</td>
+<td style="vertical-align: top !important;">文件所有人 / 授權主管</td>
+<td style="vertical-align: top !important;">政策、程序、SOP、表單、紀錄格式、矩陣與清冊。</td>
+<td style="vertical-align: top !important;">重大文件須依文件化資訊管制程序核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">對外揭露</td>
+<td style="vertical-align: top !important;">最高管理階層 / 授權發言人 / 法務</td>
+<td style="vertical-align: top !important;">資安聲明、隱私聲明、AI治理聲明、GHG或永續揭露、客戶問卷回覆。</td>
+<td style="vertical-align: top !important;">須事前審查資料來源、保密、合約與法規風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商核准</td>
+<td style="vertical-align: top !important;">採購主管 / 供應商管理負責人</td>
+<td style="vertical-align: top !important;">新供應商、雲端服務、AI工具、外包服務、查證服務。</td>
+<td style="vertical-align: top !important;">高風險供應商須CISO、PIMS、AI治理或GHG資料治理負責人參與審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">例外核准</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表 / 風險擁有者</td>
+<td style="vertical-align: top !important;">控制措施例外、修補例外、存取例外、資料處理例外、AI工具例外。</td>
+<td style="vertical-align: top !important;">須記錄理由、風險、期限、補償控制與再審日期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件升級</td>
+<td style="vertical-align: top !important;">CISO / 事件管理負責人</td>
+<td style="vertical-align: top !important;">重大資安事件、PII事件、AI事件、GHG資料事件、供應鏈事件。</td>
+<td style="vertical-align: top !important;">依事件等級通知管理階層、法務、客戶或主管機關。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 職責區隔控制要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">區隔主題</th>
+<th style="vertical-align: top !important;">控制要求</th>
+<th style="vertical-align: top !important;">稽核證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">存取申請與核准</td>
+<td style="vertical-align: top !important;">申請人不得自行核准自身權限；系統管理員不得核准其自身特殊權限。</td>
+<td style="vertical-align: top !important;">權限申請紀錄、核准紀錄、定期存取審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">系統開發與上線</td>
+<td style="vertical-align: top !important;">開發、測試、上線核准與生產環境操作應區隔；緊急變更應事後審查。</td>
+<td style="vertical-align: top !important;">變更紀錄、部署紀錄、測試證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險評估與稽核</td>
+<td style="vertical-align: top !important;">風險控制執行者不得單獨稽核其自身控制措施，必要時由獨立稽核員執行。</td>
+<td style="vertical-align: top !important;">稽核員獨立性聲明、稽核計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商選用與驗收</td>
+<td style="vertical-align: top !important;">供應商需求提出、採購核准、技術驗收與付款核准應適當分離。</td>
+<td style="vertical-align: top !important;">採購紀錄、驗收紀錄、供應商評估。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料輸入與揭露</td>
+<td style="vertical-align: top !important;">GHG、PII、AI治理或資安績效資料之編製、審查與對外揭露應分離。</td>
+<td style="vertical-align: top !important;">資料審查紀錄、揭露核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件處理與結案</td>
+<td style="vertical-align: top !important;">事件處理人員不得單獨核准重大事件結案；重大事件須由CISO或授權主管審查。</td>
+<td style="vertical-align: top !important;">事件報告、CAPA結案紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 角色能力與訓練要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">能力要求</th>
+<th style="vertical-align: top !important;">證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">ISMS基本要求、風險治理、資安政策、AI治理、隱私保護、氣候與GHG資料治理、管理審查責任。</td>
+<td style="vertical-align: top !important;">年度管理階層簡報、管理審查參與紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISO/IEC 27001、ISO/IEC 27002、ISO/IEC 27005、內部稽核、驗證準備、文件化資訊管理。</td>
+<td style="vertical-align: top !important;">訓練紀錄、稽核經驗、專業資格或任命書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO / 資安負責人</td>
+<td style="vertical-align: top !important;">資安治理、技術控制、事件管理、威脅風險、雲端安全、供應鏈安全、安全開發。</td>
+<td style="vertical-align: top !important;">履歷、訓練、證照、事件演練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS負責人</td>
+<td style="vertical-align: top !important;">ISO/IEC 27701、PII處理、資料主體權利、隱私風險、資料保護法規、跨境傳輸。</td>
+<td style="vertical-align: top !important;">訓練紀錄、法規研習、任命書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI治理、AI風險、AI安全、資料治理、人工監督、模型供應商、ISO/IEC 42001與ISO/IEC 23894概念。</td>
+<td style="vertical-align: top !important;">訓練紀錄、AI專案經驗、治理會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">GHG盤查資料治理、活動數據、排放係數、碳證據、AI能源與碳資料、對外揭露審查。</td>
+<td style="vertical-align: top !important;">碳證據清冊、查證資料、訓練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核員</td>
+<td style="vertical-align: top !important;">ISO 19011稽核原則、稽核方案、訪談技巧、抽樣、證據評估、ISO/IEC 27001與控制措施要求。</td>
+<td style="vertical-align: top !important;">稽核員資格清冊、稽核實績、獨立性聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制措施負責人</td>
+<td style="vertical-align: top !important;">所負責控制措施之目的、實施方式、證據要求、KPI/KRI、異常通報與改善方法。</td>
+<td style="vertical-align: top !important;">控制措施訓練紀錄、有效性檢查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">全體員工</td>
+<td style="vertical-align: top !important;">資訊安全政策、可接受使用、密碼、釣魚防範、資料分類、事件通報、AI工具使用、隱私與保密。</td>
+<td style="vertical-align: top !important;">年度認知訓練紀錄、測驗紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 程序輸入、活動與輸出</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">輸入</th>
+<th style="vertical-align: top !important;">主要活動</th>
+<th style="vertical-align: top !important;">輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍、組織架構、政策、流程清單</td>
+<td style="vertical-align: top !important;">識別ISMS/PIMS/AI/GHG治理所需角色。</td>
+<td style="vertical-align: top !important;">角色清單、角色定義。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險評鑑、SoA、控制措施清單</td>
+<td style="vertical-align: top !important;">指定風險擁有者、控制措施負責人與證據提供人。</td>
+<td style="vertical-align: top !important;">控制措施責任分派。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">組織職務、部門權責、系統與資料清冊</td>
+<td style="vertical-align: top !important;">建立RACI矩陣與職責區隔要求。</td>
+<td style="vertical-align: top !important;">ISMS/PIMS/AI RACI權責矩陣。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">法規、合約、客戶與驗證要求</td>
+<td style="vertical-align: top !important;">確認CISO、PIMS、AI、GHG、稽核與供應商管理責任。</td>
+<td style="vertical-align: top !important;">任命書與權限清單。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">人員能力與訓練紀錄</td>
+<td style="vertical-align: top !important;">評估角色能力與訓練需求。</td>
+<td style="vertical-align: top !important;">能力需求矩陣、訓練計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">重大變更、組織異動、事件、稽核發現</td>
+<td style="vertical-align: top !important;">重新審查角色責任、代理人與權限。</td>
+<td style="vertical-align: top !important;">權責更新、改善追蹤紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查輸入與績效指標</td>
+<td style="vertical-align: top !important;">評估角色責任與權限管理有效性。</td>
+<td style="vertical-align: top !important;">管理審查決議、資源與改善事項。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 監督、量測與管理審查輸入</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">監督主題</th>
+<th style="vertical-align: top !important;">建議KPI / KRI</th>
+<th style="vertical-align: top !important;">管理審查輸入</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">角色任命完整性</td>
+<td style="vertical-align: top !important;">關鍵角色任命完成率、過期任命數、未指定代理人數。</td>
+<td style="vertical-align: top !important;">角色任命缺口與資源需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI矩陣完整性</td>
+<td style="vertical-align: top !important;">流程/控制措施具明確RACI比例、未指派責任之控制措施數。</td>
+<td style="vertical-align: top !important;">權責矩陣更新需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">權限審查</td>
+<td style="vertical-align: top !important;">權限審查完成率、逾期未移除權限數、特殊權限異常數。</td>
+<td style="vertical-align: top !important;">存取控制與職責區隔風險。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">職責區隔</td>
+<td style="vertical-align: top !important;">職責衝突件數、補償控制未完成數、高風險衝突未核准數。</td>
+<td style="vertical-align: top !important;">職責區隔改善與資源需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">能力與訓練</td>
+<td style="vertical-align: top !important;">關鍵角色訓練完成率、能力缺口數、稽核員資格到期數。</td>
+<td style="vertical-align: top !important;">訓練計畫與能力提升需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件與不符合</td>
+<td style="vertical-align: top !important;">角色責任相關事件數、權限濫用事件數、責任不明導致延誤件數。</td>
+<td style="vertical-align: top !important;">CAPA與控制改善需求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與第三方</td>
+<td style="vertical-align: top !important;">第三方角色責任文件完整率、外部權限審查完成率。</td>
+<td style="vertical-align: top !important;">供應商管理改善需求。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 紀錄保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄名稱</th>
+<th style="vertical-align: top !important;">保存單位</th>
+<th style="vertical-align: top !important;">保存期間</th>
+<th style="vertical-align: top !important;">保存方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資訊安全責任任命書</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / HR</td>
+<td style="vertical-align: top !important;">R3：任命有效期間及終止後至少5年；涉及重大治理、外部驗證或法規責任者依R4/R5或較長要求。</td>
+<td style="vertical-align: top !important;">受控電子檔或紙本</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">R3：至少5年或至新版取代後5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色與權限審查紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">特殊權限核准紀錄</td>
+<td style="vertical-align: top !important;">系統擁有者 / CISO</td>
+<td style="vertical-align: top !important;">R3：至少5年或依系統、法規、合約要求。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">職責區隔衝突評估紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 風險管理負責人</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核員獨立性聲明</td>
+<td style="vertical-align: top !important;">內部稽核負責人</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔或紙本</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色能力需求矩陣</td>
+<td style="vertical-align: top !important;">HR / ISMS管理代表</td>
+<td style="vertical-align: top !important;">R3：至少5年或至新版取代後5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">教育訓練與能力評估紀錄</td>
+<td style="vertical-align: top !important;">HR / 訓練管理單位</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">代理人指定與交接紀錄</td>
+<td style="vertical-align: top !important;">各角色主管 / ISMS管理代表</td>
+<td style="vertical-align: top !important;">R3：至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 流程圖</h2>
+<ol>
+<li>確認ISMS/PIMS/AI/GHG範圍、組織架構、流程、資產、風險與控制措施。</li>
+<li>識別ISMS、PIMS、AI治理、GHG資料治理及控制措施所需角色。</li>
+<li>定義各角色之責任、權限、代理人、能力與職責區隔要求。</li>
+<li>建立或更新ISMS/PIMS/AI RACI權責矩陣。</li>
+<li>由最高管理階層或授權主管正式任命關鍵角色。</li>
+<li>依職責授予必要權限並保存授權證據。</li>
+<li>向相關人員、供應商與外包人員溝通角色責任。</li>
+<li>依能力需求安排訓練、認知與資格維持。</li>
+<li>執行權限審查、職責區隔檢查、代理人檢查與角色有效性審查。</li>
+<li>於組織、流程、系統、AI服務、PII處理或GHG資料治理變更時更新角色責任。</li>
+<li>將角色責任與權限管理結果納入內部稽核與管理審查。</li>
+<li>對角色責任缺失、權限異常或能力不足執行CAPA與持續改善。</li>
+</ol>
+<h2>17. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">文件類型</th>
+<th style="vertical-align: top !important;">與本程序之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">MAN</td>
+<td style="vertical-align: top !important;">定義ISMS整體治理架構與管理系統責任配置。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全領導與治理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供最高管理階層、治理委員會與管理代表之治理責任。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全治理委員會會議紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">保存重大角色任命、授權、責任異動與治理會議決議。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">提供資訊安全角色責任與權限管理之政策基礎。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI資訊安全與治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義AI系統擁有者、AI治理負責人、人工監督與AI安全責任。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義PII相關角色、隱私責任與資料主體權利處理責任。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義GHG資料、AI永續資料與永續揭露治理責任。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為本程序之主要權責對照輸出與稽核依據。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全責任任命書</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">用於正式任命ISMS/PIMS/AI/GHG與控制措施角色。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供風險擁有者、風險評估人員與風險接受權限之要求。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">每項控制措施之適用性、實施狀態與證據需對應控制措施負責人。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">將控制措施與風險、CIA、AI、PII、氣候等風險面向建立責任對應。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">定義資訊及相關資產、資料、系統、AI模型與GHG資料Owner責任。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">提供資訊及相關資產Owner任命與責任證據來源。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI服務與碳足跡資料資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">提供AI服務與碳足跡資料資產Owner任命與責任證據來源。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">將本程序定義之角色權限轉換為帳號、權限與審查作業。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 能力、認知與教育訓練管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">定義角色能力、訓練、資格與認知管理。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">確保受任角色及全體人員理解責任、政策、通報與不符合後果。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供角色任命、責任變更、供應商責任與對外揭露之溝通方法。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">定義本程序、任命書、RACI與相關紀錄之文件管制。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">要求內部稽核員具備能力、獨立性並避免稽核自身職責。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核發現事項追蹤表</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">追蹤與角色責任、權限、職責區隔或任命缺口相關之稽核發現。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">角色責任、權限、資源、能力與職責區隔問題應納入管理審查。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">角色不明、責任失效、權限濫用或訓練不足應依CAPA處理。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供角色責任與權限管理之持續改善追蹤。</td>
+<td style="vertical-align: top !important;">於角色識別、任命、RACI分派、能力確認、權限控制、稽核、管理審查與CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">檢查項目</th>
+<th style="vertical-align: top !important;">完成</th>
+<th style="vertical-align: top !important;">證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">目的、適用範圍、參考標準、名詞定義與權責總覽完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第1至5章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理原則與7.1至7.12作業程序完整，且可操作</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第6至7章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI範例、授權層級、職責區隔、能力要求與程序輸入輸出完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第8至12章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">所有表格符合指定HTML格式且每個 th / td 均向上對齊</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">已完成HTML格式檢查。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. Enterprise Certification Declaration</h2>
+<p>本文件為資安角色、責任與權限管理之正式企業級程序文件，可支援ISO/IEC 27001:2022 Clause 5.3組織角色、責任與權限，Clause 7.2能力，Clause 7.3認知，Clause 7.4溝通，Clause 7.5文件化資訊，Clause 8運作，Clause 9績效評估、內部稽核與管理審查，Clause 10改善，以及Annex A.5.2、A.5.3、A.6.3、A.8.2、A.8.3、A.8.15、A.8.16、A.8.32等控制要求之證據鏈。實際採用時，應依組織授權層級、職稱、人資流程、系統權限、供應商合約、AI/PIMS/GHG適用範圍及驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISMS-061-REG-001 資訊安全風險登錄表</title>
+<style>
+body {
+  margin: 0;
+  background: #eef2f7;
+  color: #1f2933;
+  font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.78;
+}
+.page {
+  max-width: 1240px;
+  margin: 28px auto;
+  background: #fff;
+  border: 1px solid #d5dde8;
+  box-shadow: 0 12px 34px rgba(31, 41, 51, .09);
+  padding: 34px 44px 56px;
+}
+h1 {
+  margin: 0 0 8px;
+  color: #12385f;
+  font-size: 31px;
+}
+.subtitle {
+  margin: 0 0 22px;
+  color: #52616f;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 34px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #235f8f;
+  color: #12385f;
+  font-size: 22px;
+}
+h3 {
+  margin: 24px 0 8px;
+  color: #1f4f78;
+}
+p {
+  margin: 10px 0 14px;
+}
+table {
+  margin: 14px 0 24px;
+  font-size: 14px;
+}
+th {
+  background: #dcebf8;
+  color: #12385f;
+  text-align: left;
+}
+td {
+  background: #fff;
+}
+ul {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  padding-left: 22px;
+}
+.note {
+  background: #edf6ff;
+  border-left: 5px solid #235f8f;
+  padding: 13px 16px;
+  margin: 16px 0 22px;
+}
+.statement {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+}
+.org-chart {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+  color: #12385f;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  overflow: auto;
+  white-space: pre;
+}
+.procedure-flow {
+  white-space: pre-wrap;
+}
+.ca-text-flow {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px;
+  margin: 18px 0 24px;
+}
+.ca-flow-title {
+  text-align: center;
+  color: #12385f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.ca-flow-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+.ca-flow-head {
+  background: #dcebf8;
+  border: 1px solid #7f9fbd;
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+}
+.ca-cell {
+  min-height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ca-box,
+.ca-note,
+.ca-decision-box {
+  border: 1px solid #12385f;
+  background: #fff;
+  color: #1f2933;
+  text-align: center;
+  padding: 10px 12px;
+  line-height: 1.35;
+  max-width: 300px;
+  width: 78%;
+}
+.ca-note {
+  border-style: dashed;
+}
+.ca-decision-box {
+  border-radius: 2px;
+  background: #eef6ff;
+  font-weight: 700;
+}
+.ca-down,
+.ca-cross,
+.ca-loop {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+}
+.ca-cross {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.ca-cross span,
+.ca-loop span {
+  display: block;
+  border-top: 2px solid #12385f;
+  padding-top: 3px;
+}
+.ca-cross .left {
+  text-align: left;
+}
+.ca-cross .right {
+  text-align: right;
+}
+.ca-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  justify-items: center;
+}
+.ca-simple-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-simple-flow .ca-box,
+.ca-simple-flow .ca-note,
+.ca-simple-flow .ca-decision-box {
+  max-width: 440px;
+  width: min(440px, 92%);
+}
+.ca-branch {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+  align-items: start;
+  justify-items: center;
+}
+.ca-branch-path {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-branch-label {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+}
+.ca-return {
+  border: 1px dashed #12385f;
+  color: #12385f;
+  background: #fff;
+  padding: 8px 10px;
+  text-align: center;
+  width: min(360px, 88%);
+}
+.flow-image-figure {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px;
+  margin: 18px 0 24px;
+  text-align: center;
+}
+.flow-image {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #7f9fbd;
+}
+.flowchart {
+  margin: 18px auto 24px;
+  max-width: 900px;
+}
+.flow-step {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px 16px;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.flow-id {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  background: #12385f;
+  min-width: 34px;
+  height: 28px;
+  padding: 0 8px;
+  flex: 0 0 auto;
+}
+.flow-text {
+  font-weight: 700;
+  color: #12385f;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+.flow-meta {
+  color: #52616f;
+  font-size: 13px;
+}
+.flow-arrow {
+  text-align: center;
+  font-weight: 700;
+  color: #235f8f;
+  padding: 6px 0;
+}
+.footer {
+  margin-top: 38px;
+  color: #64748b;
+  font-size: 13px;
+}
+</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<main class="page">
+<h1>ISMS-061-REG-001 資訊安全風險登錄表</h1>
+<p class="subtitle">ISMS 文件｜ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</p>
+<div class="note"><ul>
+<li>本文件以 【公司名稱】 作為待填組織名稱，正式發行前應替換為公司登記名稱、品牌名稱、營運據點與組織架構。</li>
+<li>本版文件以第三方驗證、供應商管理系統審查、跨管理系統整合及課程操作為目的進行重寫。</li>
+<li>所有表格格式、保存等級 / 期限及文件分級規則依 ISMS-075-PRO-001 文件化資訊管制程序執行。</li>
+</ul></div>
+<h2>0. 文件管制資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">文件編號</th>
+<th style="vertical-align: top !important; width: 28%;">文件名稱</th>
+<th style="vertical-align: top !important; width: 12%;">文件類型</th>
+<th style="vertical-align: top !important; width: 14%;">版本</th>
+<th style="vertical-align: top !important; width: 16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width: 16%;">文件分級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISMS-061-REG-001</td>
+<td>資訊安全風險登錄表</td>
+<td>第四階：表單與紀錄 / REG / 清冊</td>
+<td>V2.2</td>
+<td>R7 / 7 年</td>
+<td>Internal / 內部</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">組織名稱</th>
+<th style="vertical-align: top !important; width: 16%;">適用條款</th>
+<th style="vertical-align: top !important; width: 18%;">文件Owner</th>
+<th style="vertical-align: top !important; width: 18%;">核准權責</th>
+<th style="vertical-align: top !important; width: 16%;">保存位置</th>
+<th style="vertical-align: top !important; width: 18%;">正式使用前確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>【公司名稱】</td>
+<td>ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-6 / ISMS-061-REG-001</td>
+<td style="vertical-align: top !important; width: 18%;">正式發行前應完成文件制修訂申請、跨部門審查、最高管理階層或授權主管核准、生效日設定與受控發布。</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 登錄表目的</h2>
+<p>登錄與QMS文件化資訊、顧客資料、供應商平台、設計資料、檢驗紀錄、雲端服務及資訊資產相關之資訊安全風險，並追蹤Risk owner、CIA需求、控制措施、風險處理計畫、剩餘風險及狀態。</p>
+<p>本登錄表不是說明性文件，而是實際用於登錄、追蹤、審查與提供稽核證據的受控清冊。每一筆資料均應能追溯至來源、責任Owner、判定準則、更新日期、狀態與關聯文件。</p>
+<h2>2. 使用時機</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 25%;">使用情境</th>
+<th style="vertical-align: top !important; width: 40%;">觸發事件</th>
+<th style="vertical-align: top !important; width: 35%;">最低輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">年度風險管理</td>
+<td style="vertical-align: top !important; width: 40%;">年度風險準則審查、例行流程風險評鑑、管理審查前風險資料彙整。</td>
+<td style="vertical-align: top !important; width: 35%;">形成核准準則、評鑑紀錄、處理計畫、剩餘風險與管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">事件型風險管理</td>
+<td style="vertical-align: top !important; width: 40%;">重大變更、客訴、供應鏈中斷、KPI惡化、稽核發現、氣候事件、AI或隱私風險觸發。</td>
+<td style="vertical-align: top !important; width: 35%;">完成事件型風險評鑑、處理決策、控制措施與追蹤證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 欄位設計與填寫要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 25%;">欄位</th>
+<th style="vertical-align: top !important; width: 50%;">填寫說明</th>
+<th style="vertical-align: top !important; width: 25%;">必填 / 責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">風險ID</td>
+<td style="vertical-align: top !important; width: 50%;">唯一識別編號，應可連結品質風險總登錄表、資訊安全風險評估表、處理計畫與剩餘風險接受單。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">資訊資產 / 資料類別</td>
+<td style="vertical-align: top !important; width: 50%;">填寫系統、平台、文件庫、顧客資料、設計資料、檢驗紀錄、供應商資料或其他資訊資產。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 資產Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">受影響QMS流程</td>
+<td style="vertical-align: top !important; width: 50%;">標示受影響流程、產品/服務生命週期階段、外部供應者或顧客介面。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">CIA需求</td>
+<td style="vertical-align: top !important; width: 50%;">判定機密性、完整性、可用性需求與優先順序。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 資產Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">威脅 / 脆弱性</td>
+<td style="vertical-align: top !important; width: 50%;">登錄威脅來源、弱點、既有控制不符合事項發現、不符合事項發現或事件觸發。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 控制Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">Risk owner / 風險當責者</td>
+<td style="vertical-align: top !important; width: 50%;">於風險識別階段指派Risk owner，包含部門、職稱、指派日期與職權邊界。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 授權主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">目前風險等級</td>
+<td style="vertical-align: top !important; width: 50%;">依核准風險準則填寫衝擊、可能性、風險值、等級及評分依據。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / Risk owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">控制措施 / 處理計畫</td>
+<td style="vertical-align: top !important; width: 50%;">連結既有控制、待新增控制、ISMS-061-FRM-003管理系統風險處理計畫及實施期限。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / Risk owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">剩餘風險與接受</td>
+<td style="vertical-align: top !important; width: 50%;">記錄控制後剩餘風險、接受理由、核准人、有效期限與重新審查日期。</td>
+<td style="vertical-align: top !important; width: 25%;">視需要 / Risk owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">狀態與監督</td>
+<td style="vertical-align: top !important; width: 50%;">開啟、處理中、監督中、逾期、關閉；<br>並列出KRI/KPI、審查頻率與報告對象。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 管理系統代表</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 登錄主表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 10.000%;">風險ID</th>
+<th style="vertical-align: top !important; width: 10.000%;">資訊資產 / 資料類別</th>
+<th style="vertical-align: top !important; width: 10.000%;">受影響QMS流程</th>
+<th style="vertical-align: top !important; width: 10.000%;">CIA需求</th>
+<th style="vertical-align: top !important; width: 10.000%;">威脅 / 脆弱性</th>
+<th style="vertical-align: top !important; width: 10.000%;">Risk owner / 風險當責者</th>
+<th style="vertical-align: top !important; width: 10.000%;">目前風險等級</th>
+<th style="vertical-align: top !important; width: 10.000%;">控制措施 / 處理計畫</th>
+<th style="vertical-align: top !important; width: 10.000%;">剩餘風險與接受</th>
+<th style="vertical-align: top !important; width: 10.000%;">狀態與監督</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 10.000%;">待填-001</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">低 / 中 / 高 / 重大</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">開啟 / 處理中 / 監督中 / 關閉</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 10.000%;">待填-002</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">低 / 中 / 高 / 重大</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">開啟 / 處理中 / 監督中 / 關閉</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 10.000%;">待填-003</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">低 / 中 / 高 / 重大</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">待填</td>
+<td style="vertical-align: top !important; width: 10.000%;">開啟 / 處理中 / 監督中 / 關閉</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 欄位完整性與審查規則</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">控制點</th>
+<th style="vertical-align: top !important; width: 50%;">要求</th>
+<th style="vertical-align: top !important; width: 32%;">不接受情形</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">唯一識別</td>
+<td style="vertical-align: top !important; width: 50%;">每一筆資料需有唯一ID或編號，並可連結表單、紀錄、報告、系統資料或外部來源文件。</td>
+<td style="vertical-align: top !important; width: 32%;">多筆資料使用相同編號、無編號、無法追溯來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">Owner清楚</td>
+<td style="vertical-align: top !important; width: 50%;">每一筆資料需有責任Owner，且Owner能說明維護、審查、更新、升級與保存責任。</td>
+<td style="vertical-align: top !important; width: 32%;">只填部門名稱、未指派責任人、Owner離職後未更新。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">狀態可判定</td>
+<td style="vertical-align: top !important; width: 50%;">狀態應能判斷是否有效、待處理、逾期、停用、關閉或需升級。</td>
+<td style="vertical-align: top !important; width: 32%;">狀態空白、只寫OK、已完成但無完成證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">證據可追溯</td>
+<td style="vertical-align: top !important; width: 50%;">應列出或連結客觀證據，例如表單、紀錄、報告、合約、證書、照片、系統截圖或會議決議。</td>
+<td style="vertical-align: top !important; width: 32%;">只寫口頭確認、無證據連結、證據版本不明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">定期審查</td>
+<td style="vertical-align: top !important; width: 50%;">應依風險、要求、設備、供應商或登錄性質定義審查頻率與下次審查日。</td>
+<td style="vertical-align: top !important; width: 32%;">清冊建立後未審查、到期未處理、無變更紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 審查、核准與保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">項目</th>
+<th style="vertical-align: top !important; width: 76%;">要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">審查</td>
+<td style="vertical-align: top !important; width: 76%;">由流程Owner、管理系統代表、Risk owner、設備Owner、供應商管理Owner或指定Reviewer依登錄表性質審查完整性、正確性與有效性。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">核准</td>
+<td style="vertical-align: top !important; width: 76%;">涉及高/重大風險、顧客承諾、法規、剩餘風險接受、供應商資格、量測有效性或重大變更時，應依授權矩陣核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">保存</td>
+<td style="vertical-align: top !important; width: 76%;">依 R5 / 5 年 保存。若客戶、法規、第三方驗證或 Legal Hold 要求較長期限，採較嚴格要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">互動版</td>
+<td style="vertical-align: top !important; width: 76%;">本登錄表另提供互動式版本供課程演練、現場填寫、列印/PDF、Word匯出與JSON匯出。正式使用時仍應納入受控文件庫。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 共用文件化資訊控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 34%;">共用文件</th>
+<th style="vertical-align: top !important; width: 66%;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-PRO-001 文件化資訊管制程序</td>
+<td style="vertical-align: top !important; width: 66%;">控制本文件建立、審查、核准、發布、變更、保存與作廢。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-REG-001 管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 66%;">登錄本文件編號、版本、Owner、分級、狀態、保存位置與審查週期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 66%;">定義本文件與相關紀錄之保存等級、期限、位置與期滿處置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-MTX-001 文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 66%;">定義 Public / 公開、Internal / 內部、Confidential / 機密、Highly Confidential / 高度機密之存取與分享要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-SOP-001 受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 66%;">定義受控文件庫命名、版本、權限、發布、封存、備份與日誌作業。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 版本修訂紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">版本</th>
+<th style="vertical-align: top !important; width: 16%;">日期</th>
+<th style="vertical-align: top !important; width: 50%;">修訂摘要</th>
+<th style="vertical-align: top !important; width: 20%;">核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 14%;">V2.2</td>
+<td style="vertical-align: top !important; width: 16%;">2026-07-01</td>
+<td style="vertical-align: top !important; width: 50%;">重寫為具欄位要求、登錄主表、審查規則與互動版支援之登錄表文件。</td>
+<td style="vertical-align: top !important; width: 20%;">Pending approval</td>
+</tr>
+</tbody>
+</table>
+
+<p class="footer">Prepared for 【公司名稱】 / 【Company Legal Name】. Replace bracketed placeholders before controlled release.</p>
+</main>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+<script src="../assets/document-dates.js"></script></body>
+</html>

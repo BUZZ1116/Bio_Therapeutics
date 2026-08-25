@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISMS-061-FRM-003 管理系統風險處理計畫</title>
+<style>
+body {
+  margin: 0;
+  background: #eef2f7;
+  color: #1f2933;
+  font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.78;
+}
+.page {
+  max-width: 1240px;
+  margin: 28px auto;
+  background: #fff;
+  border: 1px solid #d5dde8;
+  box-shadow: 0 12px 34px rgba(31, 41, 51, .09);
+  padding: 34px 44px 56px;
+}
+h1 {
+  margin: 0 0 8px;
+  color: #12385f;
+  font-size: 31px;
+}
+.subtitle {
+  margin: 0 0 22px;
+  color: #52616f;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 34px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #235f8f;
+  color: #12385f;
+  font-size: 22px;
+}
+h3 {
+  margin: 24px 0 8px;
+  color: #1f4f78;
+}
+p {
+  margin: 10px 0 14px;
+}
+table {
+  margin: 14px 0 24px;
+  font-size: 14px;
+}
+th {
+  background: #dcebf8;
+  color: #12385f;
+  text-align: left;
+}
+td {
+  background: #fff;
+}
+ul {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  padding-left: 22px;
+}
+.note {
+  background: #edf6ff;
+  border-left: 5px solid #235f8f;
+  padding: 13px 16px;
+  margin: 16px 0 22px;
+}
+.statement {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+}
+.org-chart {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+  color: #12385f;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  overflow: auto;
+  white-space: pre;
+}
+.procedure-flow {
+  white-space: pre-wrap;
+}
+.ca-text-flow {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 18px;
+  margin: 18px 0 24px;
+}
+.ca-flow-title {
+  text-align: center;
+  color: #12385f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.ca-flow-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+.ca-flow-head {
+  background: #dcebf8;
+  border: 1px solid #7f9fbd;
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+}
+.ca-cell {
+  min-height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ca-box,
+.ca-note,
+.ca-decision-box {
+  border: 1px solid #12385f;
+  background: #fff;
+  color: #1f2933;
+  text-align: center;
+  padding: 10px 12px;
+  line-height: 1.35;
+  max-width: 300px;
+  width: 78%;
+}
+.ca-note {
+  border-style: dashed;
+}
+.ca-decision-box {
+  border-radius: 2px;
+  background: #eef6ff;
+  font-weight: 700;
+}
+.ca-down,
+.ca-cross,
+.ca-loop {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+}
+.ca-cross {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.ca-cross span,
+.ca-loop span {
+  display: block;
+  border-top: 2px solid #12385f;
+  padding-top: 3px;
+}
+.ca-cross .left {
+  text-align: left;
+}
+.ca-cross .right {
+  text-align: right;
+}
+.ca-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  justify-items: center;
+}
+.ca-simple-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-simple-flow .ca-box,
+.ca-simple-flow .ca-note,
+.ca-simple-flow .ca-decision-box {
+  max-width: 440px;
+  width: min(440px, 92%);
+}
+.ca-branch {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+  align-items: start;
+  justify-items: center;
+}
+.ca-branch-path {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ca-branch-label {
+  color: #12385f;
+  font-weight: 700;
+  text-align: center;
+}
+.ca-return {
+  border: 1px dashed #12385f;
+  color: #12385f;
+  background: #fff;
+  padding: 8px 10px;
+  text-align: center;
+  width: min(360px, 88%);
+}
+.flow-image-figure {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px;
+  margin: 18px 0 24px;
+  text-align: center;
+}
+.flow-image {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #7f9fbd;
+}
+.flowchart {
+  margin: 18px auto 24px;
+  max-width: 900px;
+}
+.flow-step {
+  border: 1px solid #9bb7d2;
+  background: #f8fbff;
+  padding: 14px 16px;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.flow-id {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  background: #12385f;
+  min-width: 34px;
+  height: 28px;
+  padding: 0 8px;
+  flex: 0 0 auto;
+}
+.flow-text {
+  font-weight: 700;
+  color: #12385f;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+.flow-meta {
+  color: #52616f;
+  font-size: 13px;
+}
+.flow-arrow {
+  text-align: center;
+  font-weight: 700;
+  color: #235f8f;
+  padding: 6px 0;
+}
+.footer {
+  margin-top: 38px;
+  color: #64748b;
+  font-size: 13px;
+}
+</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body>
+<main class="page">
+<h1>ISMS-061-FRM-003 管理系統風險處理計畫</h1>
+<p class="subtitle">ISMS 文件｜ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</p>
+<div class="note"><ul>
+<li>本文件以 【公司名稱】 作為待填組織名稱，正式發行前應替換為公司登記名稱、品牌名稱、營運據點與組織架構。</li>
+<li>本版文件以第三方驗證、供應商管理系統審查、跨管理系統整合及課程操作為目的進行重寫。</li>
+<li>所有表格格式、保存等級 / 期限及文件分級規則依 ISMS-075-PRO-001 文件化資訊管制程序執行。</li>
+</ul></div>
+<h2>0. 文件管制資訊</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">文件編號</th>
+<th style="vertical-align: top !important; width: 28%;">文件名稱</th>
+<th style="vertical-align: top !important; width: 12%;">文件類型</th>
+<th style="vertical-align: top !important; width: 14%;">版本</th>
+<th style="vertical-align: top !important; width: 16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width: 16%;">文件分級</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISMS-061-FRM-003</td>
+<td>管理系統風險處理計畫</td>
+<td>第四階：表單與紀錄 / FRM / 表單</td>
+<td>V2.2</td>
+<td>R7 / 7 年</td>
+<td>Internal / 內部</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">組織名稱</th>
+<th style="vertical-align: top !important; width: 16%;">適用條款</th>
+<th style="vertical-align: top !important; width: 18%;">文件Owner</th>
+<th style="vertical-align: top !important; width: 18%;">核准權責</th>
+<th style="vertical-align: top !important; width: 16%;">保存位置</th>
+<th style="vertical-align: top !important; width: 18%;">正式使用前確認</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>【公司名稱】</td>
+<td>ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-6 / ISMS-061-FRM-003</td>
+<td style="vertical-align: top !important; width: 18%;">正式發行前應完成文件制修訂申請、跨部門審查、最高管理階層或授權主管核准、生效日設定與受控發布。</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 表單 / 紀錄目的</h2>
+<p>依ISO 31000 6.5.3準備和實施風險處理計畫之要求，記錄處理選項理由與預期利益、當責與核准人員、建議措施、所需資源含偶發事件、績效衡量、限制事項、報告與監督要求，以及預計採取措施與完成時點。</p>
+<p>本表單依 ISMS-075-PRO-001 文件化資訊管制程序建立，作為 ISMS-061-PRO-001 管理系統風險與機會管理程序的配套文件。填寫內容應能支持 ISO 31000 風險管理流程中的範圍、全景、風險準則、風險識別、風險分析、風險評估、風險處理、剩餘風險、監督審查與文件化資訊。</p>
+<h2>2. 使用時機</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 25%;">使用情境</th>
+<th style="vertical-align: top !important; width: 40%;">觸發事件</th>
+<th style="vertical-align: top !important; width: 35%;">最低輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">年度風險管理</td>
+<td style="vertical-align: top !important; width: 40%;">年度風險準則審查、例行流程風險評鑑、管理審查前風險資料彙整。</td>
+<td style="vertical-align: top !important; width: 35%;">形成核准準則、評鑑紀錄、處理計畫、剩餘風險與管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">事件型風險管理</td>
+<td style="vertical-align: top !important; width: 40%;">重大變更、客訴、供應鏈中斷、KPI惡化、稽核發現、氣候事件、AI或隱私風險觸發。</td>
+<td style="vertical-align: top !important; width: 35%;">完成事件型風險評鑑、處理決策、控制措施與追蹤證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 相關文件於本表單各階段之使用矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">使用階段</th>
+<th style="vertical-align: top !important; width: 32%;">使用參考文件</th>
+<th style="vertical-align: top !important; width: 24%;">何時使用</th>
+<th style="vertical-align: top !important; width: 26%;">輸入 / 輸出銜接</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">建立範圍、全景與風險準則</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-041-FRM-001 / ISMS-041-FRM-002 / ISMS-041-FRM-003 內外部議題與氣候變遷判定表<br>ISMS-042-REG-001 QMS法規合約與利益相關方要求清冊<br>ISMS-044-MTX-001 QMS流程與條款對應矩陣<br>ISMS-061-FRM-002 風險準則與接受準則表</td>
+<td style="vertical-align: top !important; width: 24%;">年度風險準則審查、重大變更、產品/服務生命週期調整、氣候或法規事件。</td>
+<td style="vertical-align: top !important; width: 26%;">輸入全景、相關方要求及流程資訊；<br>輸出核准準則與評鑑範圍。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">風險識別、分析與評估</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-061-FRM-008 品質風險與機會評估表<br>ISMS-061-FRM-002 風險準則與接受準則表<br>ISMS-061-REG-005 品質風險與機會登錄表<br>ISMS-061-FRM-003 管理系統風險處理計畫</td>
+<td style="vertical-align: top !important; width: 24%;">流程風險評鑑、專案評估、供應商/客戶事件、KPI異常、資訊安全/AI/隱私/氣候專項評估。</td>
+<td style="vertical-align: top !important; width: 26%;">輸入事件、流程、資料與監督量測結果；<br>輸出風險等級與處理決策。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">風險處理與控制措施</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-061-FRM-003 管理系統風險處理計畫<br>ISMS-063-FRM-001 ISMS變更申請表<br>ISMS-102-FRM-002 / ISMS-102-FRM-002 矯正措施計畫與有效性查證表<br>ISMS-102-REC-001 改善追蹤報告</td>
+<td style="vertical-align: top !important; width: 24%;">風險等級達到需處理、需升級或不可接受範圍時。</td>
+<td style="vertical-align: top !important; width: 26%;">輸入風險評估結果；<br>輸出處理計畫、控制措施、期限、Owner與查證方式。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">剩餘風險接受與管理審查</td>
+<td style="vertical-align: top !important; width: 32%;">ISMS-061-FRM-004 剩餘風險接受單<br>ISMS-093-FRM-001 管理審查輸入彙整表<br>ISMS-093-REC-001 管理審查會議紀錄</td>
+<td style="vertical-align: top !important; width: 24%;">控制後仍有高風險、需要例外接受、重大資源決策或跨管理系統議題時。</td>
+<td style="vertical-align: top !important; width: 26%;">輸入剩餘風險、補償控制與監督資料；<br>輸出核准接受、限制條件與重新審查日期。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 風險當責者與欄位設計要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">要求項目</th>
+<th style="vertical-align: top !important; width: 52%;">執行要求</th>
+<th style="vertical-align: top !important; width: 26%;">客觀證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">ISO 31000 5.4.3 角色、職權、責任及當責</td>
+<td style="vertical-align: top !important; width: 52%;">最高管理階層與督導機構（如適用）應確保風險管理相關職務之職權、責任及當責，於組織各階層被分派與溝通。</td>
+<td style="vertical-align: top !important; width: 26%;">角色任命、RACI、程序書、風險登錄表、會議紀錄、管理審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">風險管理是核心責任</td>
+<td style="vertical-align: top !important; width: 52%;">流程Owner與風險當責者不得將風險管理視為品質部或Auditor的單獨工作；<br>風險管理應嵌入流程、目標、變更、供應商、CAPA與管理審查。</td>
+<td style="vertical-align: top !important; width: 26%;">流程KPI、風險評估表、風險處理計畫、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">風險當責者 (Risk owner)</td>
+<td style="vertical-align: top !important; width: 52%;">每一項已識別風險於風險識別階段即應指派 Risk owner。Risk owner 是對該風險之評估、處理、監督、升級及剩餘風險接受負當責之人員。</td>
+<td style="vertical-align: top !important; width: 26%;">風險評估表與風險登錄表中的 Risk owner 欄位、指派日期、職權及核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">職權與核准邊界</td>
+<td style="vertical-align: top !important; width: 52%;">Risk owner 可以核准之風險等級、處理選項、延期、剩餘風險接受及升級條件，應依風險準則與授權矩陣界定。</td>
+<td style="vertical-align: top !important; width: 26%;">風險準則、授權矩陣、剩餘風險接受單、管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 25%;">欄位</th>
+<th style="vertical-align: top !important; width: 50%;">填寫說明</th>
+<th style="vertical-align: top !important; width: 25%;">必填 / 責任</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">風險ID與風險描述</td>
+<td style="vertical-align: top !important; width: 50%;">引用風險評估表或風險登錄表之風險ID，描述風險事件、原因、後果與受影響流程。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">處理選項理由與預期利益</td>
+<td style="vertical-align: top !important; width: 50%;">說明選擇處理選項之理由、不採用其他選項之理由，以及預期取得之風險降低、機會、成本、交付、合規或顧客利益。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 授權主管</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">實施順序</td>
+<td style="vertical-align: top !important; width: 50%;">明確列出處理措施的優先順序、相依關係、先決條件、臨時控制與里程碑。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">Risk owner / 風險當責者</td>
+<td style="vertical-align: top !important; width: 50%;">定義對本風險負當責之Risk owner，包含姓名、部門/職稱、職權邊界、核准權限、代理人及升級路徑。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">核准與實施人員</td>
+<td style="vertical-align: top !important; width: 50%;">定義核准人、實施Owner、協作單位、資源Owner及必要的外部利益相關方。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / Risk owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">建議措施</td>
+<td style="vertical-align: top !important; width: 50%;">逐項列出控制措施、流程變更、文件修訂、訓練、供應商要求、系統控制、應變或補償控制。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 控制Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">所需資源含偶發事件</td>
+<td style="vertical-align: top !important; width: 50%;">定義人力、預算、設備、系統、外部服務、備援、臨時控制及偶發事件處理資源。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 資源Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">績效衡量</td>
+<td style="vertical-align: top !important; width: 50%;">定義KPI/KRI、目標值、資料來源、監督頻率、成功標準、查證與確證方式。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">限制事項</td>
+<td style="vertical-align: top !important; width: 50%;">記錄技術、資源、時程、合約、法規、顧客、供應商、資料或營運限制，以及限制管理方式。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 流程Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">報告與監督要求</td>
+<td style="vertical-align: top !important; width: 50%;">定義報告對象、頻率、格式、進度追蹤、升級條件、管理審查輸入與保存證據。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 管理系統代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 25%;">採取措施與完成時點</td>
+<td style="vertical-align: top !important; width: 50%;">填寫預計開始日、預計完成日、實際完成日、逾期原因、延期核准與狀態。</td>
+<td style="vertical-align: top !important; width: 25%;">必填 / 控制Owner</td>
+</tr>
+</tbody>
+</table>
+<h2>5. ISO 31000 6.5.3 風險處理計畫要求對應</h2>
+<p>風險處理計畫的目的，是把已選定的風險處理選項轉換成可實施、可溝通、可監督、可追蹤進展的安排。處理計畫應明確說明實施順序，並在適當時與利益相關方諮詢後，整合至組織既有管理計畫與流程中。</p>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 26%;">ISO 31000 6.5.3要求</th>
+<th style="vertical-align: top !important; width: 48%;">本表單必填內容</th>
+<th style="vertical-align: top !important; width: 26%;">不接受情形</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">選擇處理選項之理由，包含預期能獲得之利益</td>
+<td style="vertical-align: top !important; width: 48%;">說明為何選擇此處理選項、為何未選其他選項、預期降低的風險、提升的機會、避免的損失或可取得的管理效益。</td>
+<td style="vertical-align: top !important; width: 26%;">只寫降低風險、改善品質或照程序辦理，未說明理由與預期利益。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">當責並負責核准與實施計畫的人員</td>
+<td style="vertical-align: top !important; width: 48%;">明確列出Risk owner / 風險當責者、核准人、實施Owner、協作部門與必要的代理人。</td>
+<td style="vertical-align: top !important; width: 26%;">只有部門名稱，沒有具體角色、權限或核准責任。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">建議之措施</td>
+<td style="vertical-align: top !important; width: 48%;">逐項列出控制措施、流程變更、文件修訂、訓練、供應商要求、系統控制、應變或補償控制。</td>
+<td style="vertical-align: top !important; width: 26%;">只寫加強管理、持續追蹤、宣導，沒有可執行措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">所需的資源，包括偶發事件</td>
+<td style="vertical-align: top !important; width: 48%;">列出人力、預算、設備、系統、外部服務、訓練、備援、應變資源與偶發事件處理資源。</td>
+<td style="vertical-align: top !important; width: 26%;">未說明資源來源，或忽略臨時處置與應變資源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">績效衡量</td>
+<td style="vertical-align: top !important; width: 48%;">定義KPI/KRI、目標值、監督頻率、資料來源、成功標準與有效性判定方式。</td>
+<td style="vertical-align: top !important; width: 26%;">無量測方式，或只有完成/未完成。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">限制事項</td>
+<td style="vertical-align: top !important; width: 48%;">說明技術、資源、時程、合約、法規、顧客、供應商、資料或營運限制，以及限制如何被管理。</td>
+<td style="vertical-align: top !important; width: 26%;">未說明限制，導致計畫不可行或責任不清。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">要求的報告與監督</td>
+<td style="vertical-align: top !important; width: 48%;">定義報告對象、報告頻率、進度追蹤方式、升級條件、管理審查輸入與保存證據。</td>
+<td style="vertical-align: top !important; width: 26%;">無報告頻率、無監督責任或無升級條件。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 26%;">何時期望採取措施及何時完成</td>
+<td style="vertical-align: top !important; width: 48%;">填寫預計開始日、里程碑、預計完成日、實際完成日、逾期理由與重新核准。</td>
+<td style="vertical-align: top !important; width: 26%;">只有期限，沒有開始時間、里程碑或逾期處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 風險處理選項判定</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 16%;">處理選項</th>
+<th style="vertical-align: top !important; width: 28%;">適用情境</th>
+<th style="vertical-align: top !important; width: 34%;">最低要求</th>
+<th style="vertical-align: top !important; width: 22%;">輸出紀錄</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">避免風險</td>
+<td style="vertical-align: top !important; width: 28%;">活動、產品、服務、供應商或AI使用情境不可接受且無足夠控制。</td>
+<td style="vertical-align: top !important; width: 34%;">停止、取消、替代或改變範圍，並評估對顧客與合約的影響。</td>
+<td style="vertical-align: top !important; width: 22%;">處理計畫、變更紀錄、顧客溝通。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">移除風險來源</td>
+<td style="vertical-align: top !important; width: 28%;">風險來自特定流程、設備、供應商、資料來源、設計或系統設定。</td>
+<td style="vertical-align: top !important; width: 34%;">移除、替換、重新設計或取消不可靠來源。</td>
+<td style="vertical-align: top !important; width: 22%;">控制措施、設計/流程變更證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">降低可能性</td>
+<td style="vertical-align: top !important; width: 28%;">事件可能再發，需預防或偵測控制。</td>
+<td style="vertical-align: top !important; width: 34%;">建立檢核、審查、監督、訓練、供應商控制或系統控制。</td>
+<td style="vertical-align: top !important; width: 22%;">控制清單、訓練、KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">降低後果</td>
+<td style="vertical-align: top !important; width: 28%;">事件仍可能發生，但可降低影響。</td>
+<td style="vertical-align: top !important; width: 34%;">建立應變、隔離、備援、召回、復原、補償控制。</td>
+<td style="vertical-align: top !important; width: 22%;">應變紀錄、測試紀錄、演練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">分擔或移轉</td>
+<td style="vertical-align: top !important; width: 28%;">可透過合約、保險、外部專家或供應商條款分擔。</td>
+<td style="vertical-align: top !important; width: 34%;">確認移轉不代表責任消失，仍需監督有效性。</td>
+<td style="vertical-align: top !important; width: 22%;">合約、保險、供應商承諾。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 16%;">接受或承擔</td>
+<td style="vertical-align: top !important; width: 28%;">風險在接受準則內，或為追求機會而承擔。</td>
+<td style="vertical-align: top !important; width: 34%;">記錄理由、監督條件與重新審查日期。</td>
+<td style="vertical-align: top !important; width: 22%;">剩餘風險接受單、管理審查紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 風險處理計畫主表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 7%;">處理計畫編號</th>
+<th style="vertical-align: top !important; width: 7%;">關聯風險ID</th>
+<th style="vertical-align: top !important; width: 7%;">實施順序</th>
+<th style="vertical-align: top !important; width: 14%;">處理選項與選擇理由 / 預期利益</th>
+<th style="vertical-align: top !important; width: 7%;">Risk owner / 風險當責者</th>
+<th style="vertical-align: top !important; width: 7%;">核准人 / 實施負責人</th>
+<th style="vertical-align: top !important; width: 12%;">建議措施</th>
+<th style="vertical-align: top !important; width: 11%;">所需資源（含偶發事件）</th>
+<th style="vertical-align: top !important; width: 9%;">績效衡量</th>
+<th style="vertical-align: top !important; width: 7%;">限制事項</th>
+<th style="vertical-align: top !important; width: 8%;">報告與監督要求</th>
+<th style="vertical-align: top !important; width: 6%;">預計開始 / 完成</th>
+<th style="vertical-align: top !important; width: 5%;">狀態</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 7%;">待填</td>
+<td style="vertical-align: top !important; width: 7%;">待填</td>
+<td style="vertical-align: top !important; width: 7%;">1 / 2 / 3...</td>
+<td style="vertical-align: top !important; width: 14%;">說明選擇理由、預期降低的風險、可取得的利益，以及不採用其他選項的理由。</td>
+<td style="vertical-align: top !important; width: 7%;">姓名 / 部門 / 職稱 / 權限</td>
+<td style="vertical-align: top !important; width: 7%;">核准人與實施Owner</td>
+<td style="vertical-align: top !important; width: 12%;">逐項列出可執行措施、文件修訂、訓練、系統控制、供應商要求或應變安排。</td>
+<td style="vertical-align: top !important; width: 11%;">人力、預算、設備、系統、外部服務、備援或偶發事件資源。</td>
+<td style="vertical-align: top !important; width: 9%;">KPI/KRI、目標值、資料來源、監督頻率、成功標準。</td>
+<td style="vertical-align: top !important; width: 7%;">技術、資源、時程、合約、法規、顧客或供應商限制。</td>
+<td style="vertical-align: top !important; width: 8%;">報告對象、頻率、升級條件、管理審查輸入與保存證據。</td>
+<td style="vertical-align: top !important; width: 6%;">開始日 / 里程碑 / 完成日</td>
+<td style="vertical-align: top !important; width: 5%;">未開始 / 進行中 / 完成 / 逾期 / 升級 / 關閉</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 實施順序、整合與利益相關方諮詢</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 22%;">管理要求</th>
+<th style="vertical-align: top !important; width: 52%;">執行方式</th>
+<th style="vertical-align: top !important; width: 26%;">客觀證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">明確鑑別實施順序</td>
+<td style="vertical-align: top !important; width: 52%;">依風險等級、相依性、資源可用性、顧客或法規時限、暫時控制需求及快速降低風險的效果排序。</td>
+<td style="vertical-align: top !important; width: 26%;">處理計畫排序、里程碑、優先順序理由。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">與利益相關方諮詢</td>
+<td style="vertical-align: top !important; width: 52%;">在適當時與流程Owner、執行人員、顧客窗口、供應商、法遵、資訊安全、ESG/GHG、資源Owner或最高管理階層討論措施可行性與副作用。</td>
+<td style="vertical-align: top !important; width: 26%;">會議紀錄、核准紀錄、顧客/供應商溝通、諮詢結論。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">整合至管理計畫與流程</td>
+<td style="vertical-align: top !important; width: 52%;">將風險處理措施納入品質目標、流程KPI、CAPA、QMS變更、供應商改善、設計變更、訓練計畫或管理審查輸出。</td>
+<td style="vertical-align: top !important; width: 26%;">更新後計畫、程序、表單、KPI、CAPA、變更申請或管理審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 22%;">監督進展</td>
+<td style="vertical-align: top !important; width: 52%;">依計畫週期更新狀態、完成百分比、證據、障礙、延期、升級與剩餘風險變化。</td>
+<td style="vertical-align: top !important; width: 26%;">進度追蹤、KRI/KPI、狀態報告、升級紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 控制措施設計、查證與確證</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">確認項目</th>
+<th style="vertical-align: top !important; width: 52%;">執行要求</th>
+<th style="vertical-align: top !important; width: 30%;">接受證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">控制設計</td>
+<td style="vertical-align: top !important; width: 52%;">控制措施應對應風險原因、事件或後果，不得只寫加強宣導或持續注意。</td>
+<td style="vertical-align: top !important; width: 30%;">控制說明、責任人、頻率、準則、紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">資源可行性</td>
+<td style="vertical-align: top !important; width: 52%;">確認人力、預算、系統、供應商與時程可支援措施完成。</td>
+<td style="vertical-align: top !important; width: 30%;">資源核准、專案計畫、採購或訓練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">查證</td>
+<td style="vertical-align: top !important; width: 52%;">確認措施已依計畫完成，並有可追溯證據。</td>
+<td style="vertical-align: top !important; width: 30%;">完成紀錄、照片、系統截圖、文件版本、訓練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">確證</td>
+<td style="vertical-align: top !important; width: 52%;">確認措施有效降低風險、提升機會或防止再次發生。</td>
+<td style="vertical-align: top !important; width: 30%;">KPI/KRI趨勢、抽樣結果、客訴下降、稽核確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">升級</td>
+<td style="vertical-align: top !important; width: 52%;">措施無效、逾期或風險升高時，應重新評估並升級。</td>
+<td style="vertical-align: top !important; width: 30%;">重新評估、CAPA、管理審查輸入。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. 證據品質要求</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 18%;">品質要求</th>
+<th style="vertical-align: top !important; width: 46%;">說明</th>
+<th style="vertical-align: top !important; width: 36%;">不接受情形</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">完整性</td>
+<td style="vertical-align: top !important; width: 46%;">所有必填欄位、附件、審查結論、責任人與期限應完整。</td>
+<td style="vertical-align: top !important; width: 36%;">只寫已完成、無附件、無判定準則或無責任人。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">可追溯性</td>
+<td style="vertical-align: top !important; width: 46%;">應可追溯至產品/服務、流程、案件、批次、供應商、顧客、系統紀錄或外部來源文件。</td>
+<td style="vertical-align: top !important; width: 36%;">無日期、無編號、無案件連結、無版本。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">客觀性</td>
+<td style="vertical-align: top !important; width: 46%;">判定應基於準則、數據、事實、審查或授權，不得只寫主觀描述。</td>
+<td style="vertical-align: top !important; width: 36%;">僅寫正常、OK、符合但沒有證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">及時性</td>
+<td style="vertical-align: top !important; width: 46%;">應依程序規定時間建立、審查與保存，逾期需說明原因。</td>
+<td style="vertical-align: top !important; width: 36%;">事後補填但無補正說明或審查。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 18%;">一致性</td>
+<td style="vertical-align: top !important; width: 46%;">表單內容應與程序、清冊、報告、系統紀錄及外部文件一致。</td>
+<td style="vertical-align: top !important; width: 36%;">表單版本、資料或結論互相矛盾。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 審查、核准與保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 24%;">項目</th>
+<th style="vertical-align: top !important; width: 76%;">要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">審查</td>
+<td style="vertical-align: top !important; width: 76%;">填寫後由Risk owner、流程Owner、管理系統代表或指定Reviewer確認完整性、正確性、證據充分性及後續措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">核准</td>
+<td style="vertical-align: top !important; width: 76%;">涉及高/重大風險、剩餘風險接受、顧客承諾、法規、資源或重大變更時，應由Risk owner於授權範圍內核准；<br>超出權限時依授權矩陣升級核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">保存</td>
+<td style="vertical-align: top !important; width: 76%;">依 R3 / 3 年 保存。若客戶、法規、第三方驗證或 Legal Hold 要求較長期限，採較嚴格要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 24%;">互動版</td>
+<td style="vertical-align: top !important; width: 76%;">本表單另提供互動式版本供課程演練、現場填寫、列印/PDF、Word匯出與JSON匯出。正式使用時仍應納入受控文件庫。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. 共用文件化資訊控制</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 34%;">共用文件</th>
+<th style="vertical-align: top !important; width: 66%;">用途</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-PRO-001 文件化資訊管制程序</td>
+<td style="vertical-align: top !important; width: 66%;">控制本文件建立、審查、核准、發布、變更、保存與作廢。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-REG-001 管理系統文件總清冊</td>
+<td style="vertical-align: top !important; width: 66%;">登錄本文件編號、版本、Owner、分級、狀態、保存位置與審查週期。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-REG-002 管理系統紀錄保存期限清冊</td>
+<td style="vertical-align: top !important; width: 66%;">定義本文件與相關紀錄之保存等級、期限、位置與期滿處置。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-MTX-001 文件分級與存取控制矩陣</td>
+<td style="vertical-align: top !important; width: 66%;">定義 Public / 公開、Internal / 內部、Confidential / 機密、Highly Confidential / 高度機密之存取與分享要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important; width: 34%;">ISMS-075-SOP-001 受控文件庫作業指導書</td>
+<td style="vertical-align: top !important; width: 66%;">定義受控文件庫命名、版本、權限、發布、封存、備份與日誌作業。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 版本修訂紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width: 14%;">版本</th>
+<th style="vertical-align: top !important; width: 16%;">日期</th>
+<th style="vertical-align: top !important; width: 50%;">修訂摘要</th>
+<th style="vertical-align: top !important; width: 20%;">核准</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important; width: 14%;">V2.2</td>
+<td style="vertical-align: top !important; width: 16%;">2026-07-01</td>
+<td style="vertical-align: top !important; width: 50%;">依ISMS風險管理表格結構重整為管理系統共用風險表單，並納入ISO 31000風險處理與文件化資訊要求。</td>
+<td style="vertical-align: top !important; width: 20%;">Pending approval</td>
+</tr>
+</tbody>
+</table>
+
+<p class="footer">Prepared for 【公司名稱】 / 【Company Legal Name】. Replace bracketed placeholders before controlled release.</p>
+<h2>ISO/IEC 27005 資訊安全處理與控制決定補充</h2>
+<table>
+<thead><tr>
+<th>欄位</th>
+<th>必填內容</th>
+<th>查核要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>處理選項</td>
+<td>避免 / 修改可能性或後果 / 知情留存 / 分擔；選用與未選用理由</td>
+<td>資訊安全不得以追求機會為由把風險提高至超過核准準則。</td>
+</tr>
+<tr>
+<td>必要控制判定</td>
+<td>控制如何影響可能性/後果、Owner、運作頻率、監視、證據、例外與失效裕度</td>
+<td>只有對風險具實質作用的控制列為必要；既有控制不得自動視為有效。</td>
+</tr>
+<tr>
+<td>控制組合</td>
+<td>預防 / 偵測 / 矯正類型、相依性、失效情境與補償控制</td>
+<td>說明偵測後的回應及矯正安排，避免只有單一防線。</td>
+</tr>
+<tr>
+<td>Annex A與其他來源比較</td>
+<td>逐風險比較結果、遺漏控制、客製/產業控制及理由</td>
+<td>比較用於查找遺漏的必要控制，不得把全部Annex A自動納入。</td>
+</tr>
+<tr>
+<td>SoA連結</td>
+<td>控制編號、納入理由、實施狀態、排除理由、風險ID與證據位置</td>
+<td>風險評鑑、處理計畫、控制矩陣及SoA須一致。</td>
+</tr>
+<tr>
+<td>Risk owner核准</td>
+<td>核准人、日期、意見、資源、限制、預期剩餘風險及升級</td>
+<td>未核准或無法測試效果者不得宣告處理完成。</td>
+</tr>
+</tbody>
+</table></main>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div>
+<script src="../assets/document-dates.js"></script></body>
+</html>

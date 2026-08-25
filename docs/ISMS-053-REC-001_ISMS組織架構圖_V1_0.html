@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>ISMS-053-REC-001 ISMS組織架構圖</title>
+<style>
+body{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.75;margin:24px;color:#222}.isms-document{max-width:3200px;margin:0 auto}h1{font-size:28px;border-bottom:3px solid #333;padding-bottom:8px;text-align:center;color:#1f4e79}h2{margin-top:30px;font-size:21px;color:#1f3b5b;border-bottom:1px solid #ccc;padding-bottom:4px}h3{margin-top:20px;font-size:17px;color:#333}table{margin:12px 0 24px 0}th{background:#d9eaf7;font-weight:bold;text-align:left}td,th{vertical-align:top!important}.note{background:#fff7e6;border:1px solid #f0c36d;padding:12px;margin:12px 0}.small{font-size:13px;color:#555}pre.org-chart{background:#fff;border:1px solid #b7c5d8;padding:16px;white-space:pre;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:14px;line-height:1.55}
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-053-REC-001 ISMS組織架構圖</h1>
+<div class="note">
+<strong>文件定位：</strong>本文件為ISMS/PIMS/AI/GHG治理架構之正式紀錄，定義治理層級、三道防線、組織圖、角色Owner、委員會章程、報告線、代理人、稽核獨立性、Annex A控制Owner與驗證證據地圖，可作為Stage 1與Stage 2驗證、內部稽核、管理審查、風險評估、SoA、CAPA與持續改善之核心治理證據。</div>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-053-REC-001</td>
+<td>ISMS組織架構圖</td>
+<td>第四階：表單與紀錄 / REC / 紀錄</td>
+<td>V1.0</td>
+<td>R5 / 5 年</td>
+<td>Confidential / 機密</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO/IEC 27001:2022 Clause 5 / 領導、政策、角色與治理</td>
+<td>ISMS管理代表 / CISO</td>
+<td>流程Owner / ISMS管理代表 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-5 / ISMS-053-REC-001</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>ISMS管理代表 / CISO / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>0.1 審查與核准紀錄</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">姓名</th>
+<th style="vertical-align: top !important;">職稱 / 單位</th>
+<th style="vertical-align: top !important;">簽核 / 確認</th>
+<th style="vertical-align: top !important;">日期</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">編製</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">ISMS管理代表 / CISO辦公室 / 文件管制負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">資訊安全治理委員會主席</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">審查</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">內部稽核方案負責人</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">核准</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">最高管理階層 / 資訊安全治理委員會</td>
+<td style="vertical-align: top !important;"></td>
+<td style="vertical-align: top !important;">YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 文件目的</h2>
+<p>本文件用於定義組織在ISMS、PIMS、AI治理與GHG/CO2資料治理範圍內之組織架構、治理層級、角色責任、權限、報告線、代理機制、控制措施Owner、RACI責任分派、委員會章程、稽核獨立性與驗證證據對照。</p>
+<p>本文件亦用於證明ISO/IEC 27001:2022 Clause 5.3所要求之組織角色、責任與權限已被分派、溝通與維持，並可追溯至RACI矩陣、任命書、SoA、風險登錄表、資產清冊、內部稽核與管理審查。</p>
+<h2>1.1 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">文件章節 / 管理主題</th>
+<th style="vertical-align: top !important;">如何使用</th>
+<th style="vertical-align: top !important;">輸出 / 證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">1. 文件目的</td>
+<td style="vertical-align: top !important;">用於將管理階層承諾、政策要求、RACI權責分派及正式任命轉化為可視化組織架構與治理證據。</td>
+<td style="vertical-align: top !important;">組織架構目的、角色分派與任命依據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">2. 適用範圍</td>
+<td style="vertical-align: top !important;">用於確認本組織架構涵蓋的ISMS/PIMS/AI/GHG範圍、資訊資產、AI服務、碳足跡資料、系統、供應商與流程。</td>
+<td style="vertical-align: top !important;">架構適用範圍、範圍聲明、資產與資料Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">3. 名詞與定義</td>
+<td style="vertical-align: top !important;">用於統一治理角色、Owner、RACI、三道防線、代理人、控制Owner、Risk Owner等術語。</td>
+<td style="vertical-align: top !important;">一致化名詞與角色定義。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4. 整合治理架構總覽</td>
+<td style="vertical-align: top !important;">用於建立策略治理層、監督治理層、專責管理層、執行層與獨立保證層，並與管理審查及治理委員會運作連結。</td>
+<td style="vertical-align: top !important;">治理架構、會議紀錄、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5. 組織架構圖</td>
+<td style="vertical-align: top !important;">用於將正式角色、報告線、管理小組、控制Owner及文件Owner可視化，並供稽核訪談與驗證查閱。</td>
+<td style="vertical-align: top !important;">組織圖、角色清單、任命書、文件清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6. 三道防線模型</td>
+<td style="vertical-align: top !important;">用於區分第一道控制執行、第二道治理監督與第三道獨立稽核責任，避免稽核不獨立或責任混淆。</td>
+<td style="vertical-align: top !important;">三道防線矩陣、稽核獨立性證據、CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7. ISO/IEC 27001條文責任對照矩陣</td>
+<td style="vertical-align: top !important;">用於將Clause 4~10各條文責任對應至主要負責角色、協辦角色及驗證證據。</td>
+<td style="vertical-align: top !important;">條文責任矩陣、驗證證據地圖。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8. Annex A 93項控制措施逐項責任矩陣</td>
+<td style="vertical-align: top !important;">用於逐項指定93項控制措施Owner、協辦角色與驗證證據，並與SoA及控制措施與風險對應矩陣一致。</td>
+<td style="vertical-align: top !important;">控制Owner矩陣、SoA證據、控制有效性證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9. Asset / Data / System / AI / GHG Owner清冊架構</td>
+<td style="vertical-align: top !important;">用於建立資產、資料、系統、AI模型、AI風險、Prompt/RAG、Carbon Data與碳證據Owner責任。</td>
+<td style="vertical-align: top !important;">Owner清冊、資產清冊、碳證據清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10. ISO/IEC 27701 PII Controller / Processor責任矩陣</td>
+<td style="vertical-align: top !important;">用於分派PII controller、processor、DPO、PII Owner、法務與供應商管理責任。</td>
+<td style="vertical-align: top !important;">PIMS責任矩陣、PII處理與隱私風險證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">11. ISO/IEC 42001 AI生命週期治理矩陣</td>
+<td style="vertical-align: top !important;">用於分派AI生命週期各階段Owner，包括需求、資料、模型、風險、部署、人類監督、監控與退役。</td>
+<td style="vertical-align: top !important;">AI生命週期責任、AI風險評估、模型治理證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">12. GHG Scope 1/2/3與碳證據治理矩陣</td>
+<td style="vertical-align: top !important;">用於建立Scope 1/2/3、碳證據、揭露前審查及查證準備之資料Owner與治理責任。</td>
+<td style="vertical-align: top !important;">GHG資料責任矩陣、碳證據清冊、查證準備證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">13. 全面RACI Matrix</td>
+<td style="vertical-align: top !important;">用於將組織架構圖角色轉化為RACI權責分派，支援溝通、績效監督與稽核查核。</td>
+<td style="vertical-align: top !important;">RACI矩陣、溝通矩陣、KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">14. 管理委員會章程</td>
+<td style="vertical-align: top !important;">用於定義資訊安全、PIMS、AI及GHG治理委員會之目的、成員、頻率、輸入、輸出與紀錄要求。</td>
+<td style="vertical-align: top !important;">委員會章程、會議紀錄、管理審查輸入。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">15. 報告線、代理人與職務代理矩陣</td>
+<td style="vertical-align: top !important;">用於指定關鍵角色代理人、代理限制、代理觸發條件及權限調整要求。</td>
+<td style="vertical-align: top !important;">代理人矩陣、任命書、權限異動證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">16. 稽核獨立性與報告線要求</td>
+<td style="vertical-align: top !important;">用於確保內部稽核不稽核自身工作，重大發現可直接報告最高管理階層，並追蹤CAPA。</td>
+<td style="vertical-align: top !important;">稽核獨立性聲明、稽核發現追蹤、CAPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">17. 稽核訪談對照表</td>
+<td style="vertical-align: top !important;">用於Stage 1/Stage 2或內部稽核時，依角色安排訪談主題、典型問題與應提供證據。</td>
+<td style="vertical-align: top !important;">稽核訪談表、訪談紀錄、證據索引。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">18. Stage 1 / Stage 2驗證證據地圖</td>
+<td style="vertical-align: top !important;">用於外部驗證前確認Stage 1文件準備與Stage 2執行證據責任。</td>
+<td style="vertical-align: top !important;">驗證證據地圖、Stage準備清單。</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 適用範圍</h2>
+<ul>
+<li>組織ISMS範圍內之所有部門、流程、資訊資產、系統、雲端服務、供應商與外包流程。</li>
+<li>PIMS相關PII處理活動、資料主體權利、隱私風險、委外處理與隱私事件管理。</li>
+<li>AI治理相關AI系統、AI服務、AI模型、資料集、Prompt/RAG、AI供應商與AI生命週期治理。</li>
+<li>GHG/CO2資料、碳證據、Scope 1/2/3資料、揭露前審查、查證準備與氣候資訊安全議題。</li>
+<li>內部稽核、外部驗證、管理審查、CAPA與持續改善活動。</li>
+</ul>
+
+<h2>3. 名詞與定義</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">名詞</th>
+<th style="vertical-align: top !important;">定義</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS</td>
+<td style="vertical-align: top !important;">資訊安全管理系統，用於建立、實施、維持與持續改善資訊安全治理、風險管理與控制措施。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS</td>
+<td style="vertical-align: top !important;">隱私資訊管理系統，用於管理個人可識別資訊（PII）處理、隱私風險與資料主體權利。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理</td>
+<td style="vertical-align: top !important;">用於管理AI系統生命週期、AI風險、透明性、人類監督、資料治理與AI供應鏈之治理機制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG治理</td>
+<td style="vertical-align: top !important;">針對溫室氣體資料、碳證據、排放活動數據、排放係數、查證與揭露資料之治理機制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Owner</td>
+<td style="vertical-align: top !important;">對特定資產、資料、系統、模型、流程或控制措施負有保護、授權、風險判定與證據維護責任之角色。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI</td>
+<td style="vertical-align: top !important;">責任分派模型：R負責執行、A最終負責、C諮詢、I知會。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">三道防線</td>
+<td style="vertical-align: top !important;">第一道為業務與控制執行單位，第二道為風險與治理監督職能，第三道為內部稽核獨立保證。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">TOR</td>
+<td style="vertical-align: top !important;">Terms of Reference，委員會章程，定義目的、權限、成員、頻率、輸入、輸出與紀錄要求。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Carbon Data Owner</td>
+<td style="vertical-align: top !important;">對GHG/CO2活動數據、排放係數、計算底稿、AI能源資料與揭露資料負有完整性、正確性、可追溯性與查證準備責任之角色。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 整合治理架構總覽</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">治理層級</th>
+<th style="vertical-align: top !important;">組織角色 / 單位</th>
+<th style="vertical-align: top !important;">主要責任</th>
+<th style="vertical-align: top !important;">主要輸入</th>
+<th style="vertical-align: top !important;">主要輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">策略治理層</td>
+<td style="vertical-align: top !important;">董事會 / 最高管理階層</td>
+<td style="vertical-align: top !important;">核准政策、目標、資源、風險接受、重大治理方向與整合管理系統策略。</td>
+<td style="vertical-align: top !important;">外部議題、重大風險、管理審查輸入、驗證結果、法規/合約要求。</td>
+<td style="vertical-align: top !important;">治理決議、資源核准、風險接受、策略調整。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">監督治理層</td>
+<td style="vertical-align: top !important;">管理審查會議 / 資訊安全治理委員會</td>
+<td style="vertical-align: top !important;">監督ISMS/PIMS/AI/GHG整合治理績效、風險、稽核、CAPA、改善與資源需求。</td>
+<td style="vertical-align: top !important;">KPI/KRI、風險登錄表、SoA、稽核報告、CAPA、改善追蹤。</td>
+<td style="vertical-align: top !important;">管理審查決議、改善行動、資源需求、風險接受建議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">專責管理層</td>
+<td style="vertical-align: top !important;">CISO、ISMS管理代表、DPO、AI治理負責人、GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">建立制度、協調跨部門治理、維護證據、追蹤改善、準備內外部稽核。</td>
+<td style="vertical-align: top !important;">政策、標準要求、部門資料、事件、風險與控制測試結果。</td>
+<td style="vertical-align: top !important;">程序、矩陣、治理報告、稽核證據、改善追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">執行層</td>
+<td style="vertical-align: top !important;">IT、SOC、開發、雲端、供應鏈、人資、法務、業務單位</td>
+<td style="vertical-align: top !important;">執行控制措施、維護紀錄、處理事件、配合風險評估、稽核與改善。</td>
+<td style="vertical-align: top !important;">控制要求、SOP、風險處理計畫、管理決議。</td>
+<td style="vertical-align: top !important;">控制證據、執行紀錄、改善完成證據、KPI/KRI資料。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">獨立保證層</td>
+<td style="vertical-align: top !important;">內部稽核 / 稽核方案負責人</td>
+<td style="vertical-align: top !important;">獨立查核管理系統是否符合標準、組織要求與控制措施有效性。</td>
+<td style="vertical-align: top !important;">稽核方案、稽核準則、流程與控制證據。</td>
+<td style="vertical-align: top !important;">稽核報告、發現事項、改善建議、追蹤結果。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 組織架構圖（文字式，可直接顯示）</h2>
+<pre class="org-chart">最高管理階層 / 董事會
+│
+├─ 管理審查會議
+│
+└─ ISMS管理代表 / CISO
+ │
+ ├─ 資訊安全治理委員會 / ISMS推動小組
+ │ ├─ 組織全景與內外部議題管理負責人
+ │ ├─ 關注方需求與法規遵循管理負責人
+ │ ├─ ISMS與PIMS範圍管理負責人
+ │ ├─ ISMS流程整合與條款對應負責人
+ │ ├─ 資訊安全目標、績效與KPI/KRI管理負責人
+ │ ├─ 文件化資訊與紀錄保存負責人
+ │ ├─ 能力、訓練與認知負責人
+ │ ├─ 溝通、CAPA與持續改善負責人
+ │ └─ 文件化資訊及能力評估協調人
+ │
+ ├─ 風險管理與控制措施管理組織
+ │ ├─ 風險管理負責人
+ │ ├─ 風險登錄表維護負責人
+ │ ├─ 風險處理計畫負責人
+ │ ├─ SoA與控制措施對應負責人
+ │ ├─ 組織控制 Owner（Annex A.5）
+ │ ├─ 人員控制 Owner（Annex A.6）
+ │ ├─ 實體控制 Owner（Annex A.7）
+ │ └─ 技術控制 Owner（Annex A.8）
+ │
+ ├─ 事件應變與ICT備妥性管理組織
+ │ ├─ 資訊安全事件應變小組
+ │ ├─ 事件分級與升級負責人
+ │ ├─ 內外部溝通負責人
+ │ ├─ 法務 / 法遵支援
+ │ ├─ HR / 行政 / 職安支援
+ │ └─ IT / SOC / 備援與還原小組
+ │
+ ├─ PIMS隱私治理小組
+ │ ├─ DPO / PIMS負責人
+ │ ├─ PII Controller責任人
+ │ ├─ PII Processor管理負責人
+ │ ├─ 資料主體權利處理負責人
+ │ ├─ 隱私風險評估負責人
+ │ └─ 委外個資處理與跨境傳輸管理負責人
+ │
+ ├─ AI治理與AI系統安全管理小組
+ │ ├─ AI治理負責人
+ │ ├─ AI Product Owner
+ │ ├─ AI Model Owner
+ │ ├─ AI Risk Owner
+ │ ├─ Prompt / RAG Owner
+ │ ├─ AI資料治理負責人
+ │ └─ AI供應商與AI服務安全負責人
+ │
+ ├─ GHG/CO2資料與氣候治理小組
+ │ ├─ GHG資料治理負責人
+ │ ├─ Carbon Data Owner
+ │ ├─ Carbon Evidence Owner
+ │ ├─ Scope 1資料負責人
+ │ ├─ Scope 2資料負責人
+ │ ├─ Scope 3資料與供應鏈碳資料負責人
+ │ └─ 揭露前審查與查證準備負責人
+ │
+ ├─ 監督、量測、分析與評估小組
+ │ ├─ KPI/KRI追蹤負責人
+ │ ├─ 控制有效性測試負責人
+ │ ├─ 治理儀表板維護負責人
+ │ └─ 績效分析報告負責人
+ │
+ ├─ 內部稽核組織
+ │ ├─ 稽核方案負責人
+ │ ├─ 主任稽核員
+ │ ├─ 條文稽核員
+ │ ├─ Annex A控制稽核員
+ │ ├─ PIMS / AI / GHG專項稽核員
+ │ └─ 稽核發現追蹤負責人
+ │
+ └─ 不符合、矯正措施與持續改善小組
+ ├─ CAPA負責人
+ ├─ 根本原因分析負責人
+ ├─ 矯正措施追蹤負責人
+ ├─ 有效性驗證負責人
+ └─ 持續改善負責人</pre>
+<h2>6. 三道防線模型</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">防線</th>
+<th style="vertical-align: top !important;">組織角色</th>
+<th style="vertical-align: top !important;">核心責任</th>
+<th style="vertical-align: top !important;">不得替代之責任</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">第一道防線</td>
+<td style="vertical-align: top !important;">業務單位、IT、SOC、開發、供應鏈、資料/系統/AI/GHG Owner</td>
+<td style="vertical-align: top !important;">依政策與SOP執行控制措施、保護資產、維護證據、回報事件與風險。</td>
+<td style="vertical-align: top !important;">不得將日常控制責任完全轉移給ISMS或稽核單位。</td>
+<td style="vertical-align: top !important;">操作紀錄、控制執行證據、事件紀錄、供應商證據、資料品質紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">第二道防線</td>
+<td style="vertical-align: top !important;">CISO、ISMS管理代表、風險管理、DPO、AI治理、GHG治理、法遵</td>
+<td style="vertical-align: top !important;">制定治理要求、監督風險與控制、提供方法、審查證據、追蹤改善。</td>
+<td style="vertical-align: top !important;">不得取代第一道防線實際執行控制。</td>
+<td style="vertical-align: top !important;">風險登錄表、SoA、KPI/KRI、治理會議紀錄、審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">第三道防線</td>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">獨立評估管理系統符合性與有效性，提出稽核發現與改善建議。</td>
+<td style="vertical-align: top !important;">不得設計或執行受稽流程之日常控制。</td>
+<td style="vertical-align: top !important;">稽核方案、稽核計畫、稽核工作底稿、內部稽核報告、追蹤紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. ISO/IEC 27001條文責任對照矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">ISO/IEC 27001條款</th>
+<th style="vertical-align: top !important;">要求重點</th>
+<th style="vertical-align: top !important;">主要負責角色</th>
+<th style="vertical-align: top !important;">協辦角色</th>
+<th style="vertical-align: top !important;">驗證證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">4.1 理解組織與其情境</td>
+<td style="vertical-align: top !important;">識別與ISMS目的及成果相關之外部與內部議題。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 組織全景與內外部議題管理負責人</td>
+<td style="vertical-align: top !important;">最高管理階層、CISO、風險管理、各部門主管、PIMS/AI/GHG治理負責人</td>
+<td style="vertical-align: top !important;">內外部議題分析表、氣候變遷相關議題判定表、AI技術與監管趨勢影響分析表、ISMS組織全景分析報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.2 理解關注方需求與期望</td>
+<td style="vertical-align: top !important;">識別與資訊安全相關之關注方及其要求。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 關注方需求與法規遵循管理負責人</td>
+<td style="vertical-align: top !important;">法務、業務、採購、DPO、AI治理、GHG治理、供應商管理</td>
+<td style="vertical-align: top !important;">關注方識別表、關注方需求與期望分析表、資訊安全法規與合約要求清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.3 決定ISMS範圍</td>
+<td style="vertical-align: top !important;">界定ISMS邊界、適用範圍、地點、流程、資訊資產與外部介面。</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">最高管理階層、流程Owner、Asset Owner、IT、供應商管理</td>
+<td style="vertical-align: top !important;">ISMS範圍界定表、ISMS/PIMS氣候與AI服務範圍界定補充表、ISMS範圍聲明書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">4.4 ISMS及其流程</td>
+<td style="vertical-align: top !important;">建立、實施、維持與持續改善ISMS及必要流程。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">CISO、文件管制、風險管理、內部稽核、CAPA負責人、持續改善負責人</td>
+<td style="vertical-align: top !important;">ISMS流程與條款對應矩陣、文件總清冊、程序文件、流程KPI/KRI。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.1 領導與承諾</td>
+<td style="vertical-align: top !important;">最高管理階層展現領導、承諾與資源支持。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">政策核准、資訊安全治理委員會會議紀錄、資源核准、管理審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.2 政策</td>
+<td style="vertical-align: top !important;">建立、核准、溝通並維持資訊安全政策及延伸政策。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">CISO、法務、HR、PIMS、AI、GHG治理負責人</td>
+<td style="vertical-align: top !important;">資訊安全政策、AI資訊安全與治理政策、隱私與PII保護政策、氣候變遷、GHG資料與AI永續治理政策、政策審查紀錄表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">5.3 組織角色、責任與權限</td>
+<td style="vertical-align: top !important;">分派並溝通資訊安全相關角色、責任與權限。</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">各部門主管、HR、Owner角色</td>
+<td style="vertical-align: top !important;">本文件、ISMS/PIMS/AI RACI權責矩陣、資訊安全責任任命書。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.1 風險與機會</td>
+<td style="vertical-align: top !important;">建立資訊安全風險評估與處理方法。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">Asset Owner、Control Owner、PIMS、AI、GHG治理負責人</td>
+<td style="vertical-align: top !important;">風險準則與接受準則表、資訊安全風險登錄表、風險評鑑表、風險處理計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.2 資訊安全目標</td>
+<td style="vertical-align: top !important;">建立可量測目標與達成計畫。</td>
+<td style="vertical-align: top !important;">CISO / 績效評估負責人</td>
+<td style="vertical-align: top !important;">各責任單位</td>
+<td style="vertical-align: top !important;">KPI/KRI追蹤資料、績效分析、管理審查輸入資料彙整表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">6.3 變更規劃</td>
+<td style="vertical-align: top !important;">規劃管理系統變更並評估影響。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">CISO、流程Owner、風險管理負責人、文件管制負責人</td>
+<td style="vertical-align: top !important;">ISMS變更影響評估表、文件制修訂申請表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.1 資源</td>
+<td style="vertical-align: top !important;">提供ISMS所需人力、工具、預算與外部支援。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">CISO、財務、HR</td>
+<td style="vertical-align: top !important;">資源需求、管理審查決議、能力與訓練資源紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.2 能力</td>
+<td style="vertical-align: top !important;">確保人員具備必要能力。</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">各部門主管</td>
+<td style="vertical-align: top !important;">能力需求、訓練計畫、能力評估與訓練紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.3 認知</td>
+<td style="vertical-align: top !important;">確保人員了解政策、責任與不符合後果。</td>
+<td style="vertical-align: top !important;">HR / ISMS管理代表</td>
+<td style="vertical-align: top !important;">各部門主管</td>
+<td style="vertical-align: top !important;">資訊安全認知訓練、測驗、宣導紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.4 溝通</td>
+<td style="vertical-align: top !important;">定義內外部溝通需求。</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">法務、事件管理負責人、供應商管理負責人</td>
+<td style="vertical-align: top !important;">資訊安全溝通矩陣、事件通報紀錄、公告紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">7.5 文件化資訊</td>
+<td style="vertical-align: top !important;">建立、管制與保存文件化資訊。</td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+<td style="vertical-align: top !important;">文件所有人</td>
+<td style="vertical-align: top !important;">文件總清冊、紀錄保存期限清冊、外部來源文件清冊、文件制修訂申請表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.1 運作規劃與控制</td>
+<td style="vertical-align: top !important;">規劃、實施與控制ISMS運作。</td>
+<td style="vertical-align: top !important;">CISO / 各流程Owner</td>
+<td style="vertical-align: top !important;">控制Owner</td>
+<td style="vertical-align: top !important;">ISMS運作規劃與控制程序、控制執行證據、外包控制證據。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.2 資訊安全風險評鑑</td>
+<td style="vertical-align: top !important;">定期及重大變更時執行風險評鑑。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">Risk Owner、Asset Owner、Control Owner</td>
+<td style="vertical-align: top !important;">風險登錄表、風險評鑑表、AI/隱私/氣候風險評估表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">8.3 資訊安全風險處理</td>
+<td style="vertical-align: top !important;">執行風險處理計畫並接受剩餘風險。</td>
+<td style="vertical-align: top !important;">Risk Owner / Control Owner</td>
+<td style="vertical-align: top !important;">CISO、最高管理階層</td>
+<td style="vertical-align: top !important;">資訊安全風險處理執行作業指導書、風險處理計畫、剩餘風險接受申請表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.1 監督、量測、分析與評估</td>
+<td style="vertical-align: top !important;">監測ISMS績效與控制有效性。</td>
+<td style="vertical-align: top !important;">績效評估負責人</td>
+<td style="vertical-align: top !important;">Control Owner、CISO</td>
+<td style="vertical-align: top !important;">KPI/KRI、治理儀表板、控制有效性測試、績效分析報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.2 內部稽核</td>
+<td style="vertical-align: top !important;">規劃與執行內部稽核。</td>
+<td style="vertical-align: top !important;">稽核方案負責人</td>
+<td style="vertical-align: top !important;">稽核員、受稽單位</td>
+<td style="vertical-align: top !important;">稽核方案、計畫、報告、工作底稿、稽核發現事項追蹤表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">9.3 管理審查</td>
+<td style="vertical-align: top !important;">最高管理階層定期審查ISMS。</td>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">管理審查輸入資料彙整表、會議紀錄、管理審查決議。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.1 持續改善</td>
+<td style="vertical-align: top !important;">持續改善ISMS適切性、充分性與有效性。</td>
+<td style="vertical-align: top !important;">持續改善負責人</td>
+<td style="vertical-align: top !important;">各責任單位</td>
+<td style="vertical-align: top !important;">改善提案、改善追蹤報告、管理審查輸出。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">10.2 不符合與矯正措施</td>
+<td style="vertical-align: top !important;">處理不符合、根因分析、矯正措施與有效性驗證。</td>
+<td style="vertical-align: top !important;">CAPA負責人</td>
+<td style="vertical-align: top !important;">責任單位、CISO、內部稽核</td>
+<td style="vertical-align: top !important;">不符合報告、RCA、CAPA登錄、有效性驗證。</td>
+</tr>
+</tbody>
+</table>
+<h2>8. Annex A 93項控制措施逐項責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">控制編號</th>
+<th style="vertical-align: top !important;">控制措施要求</th>
+<th style="vertical-align: top !important;">主要Owner</th>
+<th style="vertical-align: top !important;">協辦角色</th>
+<th style="vertical-align: top !important;">驗證證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">A.5.1</td>
+<td style="vertical-align: top !important;">資訊安全政策</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+<td style="vertical-align: top !important;">ISMS管理代表、法務、HR、各部門主管</td>
+<td style="vertical-align: top !important;">核准版資訊安全政策、政策公告、政策審查紀錄、管理審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.2</td>
+<td style="vertical-align: top !important;">資訊安全角色與責任</td>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">各部門主管、HR、Owner角色</td>
+<td style="vertical-align: top !important;">本組織架構圖、RACI矩陣、任命書、授權紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.3</td>
+<td style="vertical-align: top !important;">職責區隔</td>
+<td style="vertical-align: top !important;">CISO / 風險管理負責人</td>
+<td style="vertical-align: top !important;">IT、HR、流程Owner、內部稽核</td>
+<td style="vertical-align: top !important;">職責區隔矩陣、權限審查、例外核准、稽核工作底稿</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.4</td>
+<td style="vertical-align: top !important;">管理階層責任</td>
+<td style="vertical-align: top !important;">最高管理階層 / 各部門主管</td>
+<td style="vertical-align: top !important;">CISO、ISMS管理代表、HR</td>
+<td style="vertical-align: top !important;">管理審查紀錄、部門目標、責任宣導、績效檢討</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.5</td>
+<td style="vertical-align: top !important;">與主管機關聯繫</td>
+<td style="vertical-align: top !important;">法務 / 法遵負責人</td>
+<td style="vertical-align: top !important;">CISO、PIMS負責人、事件應變負責人</td>
+<td style="vertical-align: top !important;">主管機關聯絡清冊、通報程序、通報紀錄、演練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.6</td>
+<td style="vertical-align: top !important;">與特殊利益團體聯繫</td>
+<td style="vertical-align: top !important;">CISO / 資安治理負責人</td>
+<td style="vertical-align: top !important;">SOC、威脅情資、法遵</td>
+<td style="vertical-align: top !important;">專業團體清單、訂閱紀錄、威脅情資紀錄、會議紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.7</td>
+<td style="vertical-align: top !important;">威脅情資</td>
+<td style="vertical-align: top !important;">SOC / 威脅情資負責人</td>
+<td style="vertical-align: top !important;">CISO、IT、風險管理</td>
+<td style="vertical-align: top !important;">威脅情資來源清單、分析報告、處置紀錄、規則調整紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.8</td>
+<td style="vertical-align: top !important;">專案管理中的資訊安全</td>
+<td style="vertical-align: top !important;">PMO / 專案Owner</td>
+<td style="vertical-align: top !important;">CISO、系統Owner、開發、採購</td>
+<td style="vertical-align: top !important;">專案安全檢核表、安全需求、風險評估、上線審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.9</td>
+<td style="vertical-align: top !important;">資訊及相關資產清冊</td>
+<td style="vertical-align: top !important;">Asset Owner / 資產管理負責人</td>
+<td style="vertical-align: top !important;">IT、各部門、Data Owner</td>
+<td style="vertical-align: top !important;">資訊資產清冊、資產Owner指派、盤點紀錄、分類分級紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.10</td>
+<td style="vertical-align: top !important;">資訊與資產可接受使用</td>
+<td style="vertical-align: top !important;">CISO / HR</td>
+<td style="vertical-align: top !important;">各部門主管、法務、IT</td>
+<td style="vertical-align: top !important;">可接受使用政策、員工簽署紀錄、宣導訓練、違規處理紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.11</td>
+<td style="vertical-align: top !important;">資產歸還</td>
+<td style="vertical-align: top !important;">HR / 資產管理負責人</td>
+<td style="vertical-align: top !important;">IT、部門主管、總務</td>
+<td style="vertical-align: top !important;">離職/調職清單、設備歸還紀錄、帳號停用紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.12</td>
+<td style="vertical-align: top !important;">資訊分類</td>
+<td style="vertical-align: top !important;">Data Owner / ISMS管理代表</td>
+<td style="vertical-align: top !important;">CISO、各部門、文件管制</td>
+<td style="vertical-align: top !important;">資訊分類分級表、標示規則、教育訓練、抽查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.13</td>
+<td style="vertical-align: top !important;">資訊標示</td>
+<td style="vertical-align: top !important;">Data Owner / 文件管制負責人</td>
+<td style="vertical-align: top !important;">各部門、IT、DLP管理員</td>
+<td style="vertical-align: top !important;">標示規範、文件範本、系統標籤設定、抽查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.14</td>
+<td style="vertical-align: top !important;">資訊傳輸</td>
+<td style="vertical-align: top !important;">CISO / Data Owner</td>
+<td style="vertical-align: top !important;">IT、PIMS負責人、法務、業務</td>
+<td style="vertical-align: top !important;">資訊傳輸程序、加密紀錄、傳輸授權、第三方傳輸紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.15</td>
+<td style="vertical-align: top !important;">存取控制</td>
+<td style="vertical-align: top !important;">IT權限管理負責人</td>
+<td style="vertical-align: top !important;">System Owner、HR、CISO</td>
+<td style="vertical-align: top !important;">存取控制政策、權限申請/異動/撤銷、定期權限審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.16</td>
+<td style="vertical-align: top !important;">身分管理</td>
+<td style="vertical-align: top !important;">IAM負責人</td>
+<td style="vertical-align: top !important;">HR、IT、System Owner</td>
+<td style="vertical-align: top !important;">身分生命週期流程、帳號清冊、身分驗證紀錄、異常帳號處理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.17</td>
+<td style="vertical-align: top !important;">鑑別資訊</td>
+<td style="vertical-align: top !important;">IT安全架構負責人</td>
+<td style="vertical-align: top !important;">System Owner、使用者、SOC</td>
+<td style="vertical-align: top !important;">密碼/MFA政策、MFA設定、密碼重設紀錄、例外核准</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.18</td>
+<td style="vertical-align: top !important;">存取權限</td>
+<td style="vertical-align: top !important;">System Owner / IAM負責人</td>
+<td style="vertical-align: top !important;">HR、部門主管、CISO</td>
+<td style="vertical-align: top !important;">權限矩陣、授權紀錄、權限複核、特權帳號審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.19</td>
+<td style="vertical-align: top !important;">供應商關係中的資訊安全</td>
+<td style="vertical-align: top !important;">供應商管理負責人</td>
+<td style="vertical-align: top !important;">CISO、採購、法務、業務Owner</td>
+<td style="vertical-align: top !important;">供應商安全政策、供應商分級、風險評估、合約條款</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.20</td>
+<td style="vertical-align: top !important;">供應商合約中的資訊安全</td>
+<td style="vertical-align: top !important;">採購 / 法務</td>
+<td style="vertical-align: top !important;">CISO、供應商管理、PIMS負責人</td>
+<td style="vertical-align: top !important;">合約安全條款、DPA、SLA、審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.21</td>
+<td style="vertical-align: top !important;">ICT供應鏈資訊安全</td>
+<td style="vertical-align: top !important;">ICT供應鏈管理負責人</td>
+<td style="vertical-align: top !important;">CISO、採購、IT、法務</td>
+<td style="vertical-align: top !important;">ICT供應鏈風險評估、第四方揭露、供應鏈監督紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.22</td>
+<td style="vertical-align: top !important;">供應商服務監督、審查與變更</td>
+<td style="vertical-align: top !important;">供應商服務Owner</td>
+<td style="vertical-align: top !important;">採購、CISO、IT、業務Owner</td>
+<td style="vertical-align: top !important;">供應商績效審查、SLA報告、變更審查、改善追蹤</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.23</td>
+<td style="vertical-align: top !important;">雲端服務使用資訊安全</td>
+<td style="vertical-align: top !important;">雲端服務Owner / Cloud Security負責人</td>
+<td style="vertical-align: top !important;">CISO、採購、法務、IT</td>
+<td style="vertical-align: top !important;">雲端安全評估、設定基準、供應商證明、雲端監控報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.24</td>
+<td style="vertical-align: top !important;">事件管理規劃與準備</td>
+<td style="vertical-align: top !important;">事件應變負責人 / CISO</td>
+<td style="vertical-align: top !important;">SOC、IT、法務、PIMS負責人、PR</td>
+<td style="vertical-align: top !important;">事件管理程序、通報矩陣、演練紀錄、角色分派</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.25</td>
+<td style="vertical-align: top !important;">資安事件評估與決策</td>
+<td style="vertical-align: top !important;">SOC / 事件分級負責人</td>
+<td style="vertical-align: top !important;">CISO、IT、PIMS負責人、法務</td>
+<td style="vertical-align: top !important;">事件分級紀錄、告警分析、升級紀錄、決策紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.26</td>
+<td style="vertical-align: top !important;">資安事件回應</td>
+<td style="vertical-align: top !important;">事件應變小組</td>
+<td style="vertical-align: top !important;">SOC、IT、法務、PIMS負責人、業務Owner</td>
+<td style="vertical-align: top !important;">事件工單、處置紀錄、溝通紀錄、復原紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.27</td>
+<td style="vertical-align: top !important;">由資安事件學習</td>
+<td style="vertical-align: top !important;">事件後檢討負責人</td>
+<td style="vertical-align: top !important;">CISO、SOC、CAPA負責人、流程Owner</td>
+<td style="vertical-align: top !important;">事件後檢討報告、RCA、改善追蹤、CAPA紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.28</td>
+<td style="vertical-align: top !important;">證據收集</td>
+<td style="vertical-align: top !important;">SOC / 法務</td>
+<td style="vertical-align: top !important;">IT、稽核、PIMS負責人、事件應變小組</td>
+<td style="vertical-align: top !important;">證據保全程序、Chain of custody、日誌保存、鑑識紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.29</td>
+<td style="vertical-align: top !important;">中斷期間資訊安全</td>
+<td style="vertical-align: top !important;">ICT備妥性負責人 / CISO</td>
+<td style="vertical-align: top !important;">IT、業務復原、供應商管理</td>
+<td style="vertical-align: top !important;">持續營運/復原計畫、演練紀錄、中斷期間控制清單、復原紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.30</td>
+<td style="vertical-align: top !important;">營運持續的ICT準備</td>
+<td style="vertical-align: top !important;">IT DRP負責人</td>
+<td style="vertical-align: top !important;">ICT備妥性負責人、CISO、System Owner</td>
+<td style="vertical-align: top !important;">DR計畫、RTO/RPO、備援測試、復原演練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.31</td>
+<td style="vertical-align: top !important;">法律、法規、監管與合約要求</td>
+<td style="vertical-align: top !important;">法務 / 法遵負責人</td>
+<td style="vertical-align: top !important;">CISO、PIMS負責人、採購、業務Owner</td>
+<td style="vertical-align: top !important;">法規合約要求清冊、合規評估、合約審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.32</td>
+<td style="vertical-align: top !important;">智慧財產權</td>
+<td style="vertical-align: top !important;">法務 / IP管理負責人</td>
+<td style="vertical-align: top !important;">IT、採購、開發、HR</td>
+<td style="vertical-align: top !important;">授權清冊、軟體授權紀錄、IP合約、稽核紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.33</td>
+<td style="vertical-align: top !important;">紀錄保護</td>
+<td style="vertical-align: top !important;">文件與紀錄管制負責人</td>
+<td style="vertical-align: top !important;">各紀錄Owner、IT、法務</td>
+<td style="vertical-align: top !important;">紀錄保存清冊、保存/銷毀紀錄、存取權限、備份紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.34</td>
+<td style="vertical-align: top !important;">隱私與PII保護</td>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">Data Owner、CISO、法務、IT</td>
+<td style="vertical-align: top !important;">PII清冊、隱私風險評估、資料主體請求、隱私事件、DPA</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.35</td>
+<td style="vertical-align: top !important;">資訊安全獨立審查</td>
+<td style="vertical-align: top !important;">內部稽核主管</td>
+<td style="vertical-align: top !important;">CISO、外部顧問、管理審查會議</td>
+<td style="vertical-align: top !important;">內部稽核報告、外部審查報告、改善追蹤</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.36</td>
+<td style="vertical-align: top !important;">政策、規則與標準符合性</td>
+<td style="vertical-align: top !important;">CISO / 合規監督負責人</td>
+<td style="vertical-align: top !important;">各Control Owner、內部稽核</td>
+<td style="vertical-align: top !important;">符合性檢查、控制自評、稽核工作底稿、例外追蹤</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.5.37</td>
+<td style="vertical-align: top !important;">文件化作業程序</td>
+<td style="vertical-align: top !important;">流程Owner / 文件管制負責人</td>
+<td style="vertical-align: top !important;">CISO、IT、業務單位</td>
+<td style="vertical-align: top !important;">SOP、版本紀錄、發布紀錄、訓練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.1</td>
+<td style="vertical-align: top !important;">篩選</td>
+<td style="vertical-align: top !important;">HR主管</td>
+<td style="vertical-align: top !important;">用人主管、法務、CISO</td>
+<td style="vertical-align: top !important;">背景查核政策、查核紀錄、職務風險分級</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.2</td>
+<td style="vertical-align: top !important;">聘僱條件</td>
+<td style="vertical-align: top !important;">HR / 法務</td>
+<td style="vertical-align: top !important;">CISO、用人主管</td>
+<td style="vertical-align: top !important;">聘僱合約、保密條款、資安責任條款</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.3</td>
+<td style="vertical-align: top !important;">資訊安全認知、教育與訓練</td>
+<td style="vertical-align: top !important;">HR / ISMS訓練負責人</td>
+<td style="vertical-align: top !important;">CISO、各部門主管</td>
+<td style="vertical-align: top !important;">訓練計畫、簽到/測驗、課程教材、成效評估</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.4</td>
+<td style="vertical-align: top !important;">懲戒流程</td>
+<td style="vertical-align: top !important;">HR / 法務</td>
+<td style="vertical-align: top !important;">CISO、部門主管</td>
+<td style="vertical-align: top !important;">懲戒程序、違規紀錄、調查紀錄、處置紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.5</td>
+<td style="vertical-align: top !important;">任用終止或變更後責任</td>
+<td style="vertical-align: top !important;">HR主管</td>
+<td style="vertical-align: top !important;">IT、部門主管、法務</td>
+<td style="vertical-align: top !important;">離職清單、權限撤銷、保密提醒、資產歸還</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.6</td>
+<td style="vertical-align: top !important;">保密或不揭露協議</td>
+<td style="vertical-align: top !important;">法務 / HR</td>
+<td style="vertical-align: top !important;">採購、供應商管理、CISO</td>
+<td style="vertical-align: top !important;">NDA、保密承諾、合約條款、審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.7</td>
+<td style="vertical-align: top !important;">遠距工作</td>
+<td style="vertical-align: top !important;">HR / CISO</td>
+<td style="vertical-align: top !important;">IT、部門主管、PIMS負責人</td>
+<td style="vertical-align: top !important;">遠距工作政策、設備清冊、VPN/MFA紀錄、教育訓練</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.6.8</td>
+<td style="vertical-align: top !important;">資安事件通報</td>
+<td style="vertical-align: top !important;">事件應變負責人 / HR</td>
+<td style="vertical-align: top !important;">CISO、SOC、全體員工</td>
+<td style="vertical-align: top !important;">事件通報程序、通報管道、宣導紀錄、事件通報紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.1</td>
+<td style="vertical-align: top !important;">實體安全周界</td>
+<td style="vertical-align: top !important;">設施 / 總務主管</td>
+<td style="vertical-align: top !important;">CISO、IT、資料中心負責人</td>
+<td style="vertical-align: top !important;">周界圖、門禁設定、巡檢紀錄、CCTV紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.2</td>
+<td style="vertical-align: top !important;">實體進入</td>
+<td style="vertical-align: top !important;">門禁管理負責人</td>
+<td style="vertical-align: top !important;">總務、HR、CISO</td>
+<td style="vertical-align: top !important;">門禁權限、訪客登記、進出紀錄、權限審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.3</td>
+<td style="vertical-align: top !important;">辦公室、房間與設施安全</td>
+<td style="vertical-align: top !important;">設施主管</td>
+<td style="vertical-align: top !important;">各部門、CISO、IT</td>
+<td style="vertical-align: top !important;">區域分級、門禁清單、巡檢表、改善紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.4</td>
+<td style="vertical-align: top !important;">實體安全監控</td>
+<td style="vertical-align: top !important;">設施安全負責人</td>
+<td style="vertical-align: top !important;">SOC、CISO、保全</td>
+<td style="vertical-align: top !important;">CCTV、警報紀錄、監控檢查、事件紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.5</td>
+<td style="vertical-align: top !important;">防護實體與環境威脅</td>
+<td style="vertical-align: top !important;">設施 / EHS主管</td>
+<td style="vertical-align: top !important;">IT、ICT備妥性負責人、CISO</td>
+<td style="vertical-align: top !important;">環境監控、消防/水浸/溫濕度紀錄、演練紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.6</td>
+<td style="vertical-align: top !important;">安全區域工作</td>
+<td style="vertical-align: top !important;">安全區域Owner</td>
+<td style="vertical-align: top !important;">CISO、設施、HR</td>
+<td style="vertical-align: top !important;">安全區域規則、進入授權、陪同紀錄、抽查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.7</td>
+<td style="vertical-align: top !important;">淨桌與淨螢幕</td>
+<td style="vertical-align: top !important;">各部門主管</td>
+<td style="vertical-align: top !important;">CISO、HR、內部稽核</td>
+<td style="vertical-align: top !important;">政策宣導、抽查紀錄、違規改善紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.8</td>
+<td style="vertical-align: top !important;">設備放置與保護</td>
+<td style="vertical-align: top !important;">IT / 設施主管</td>
+<td style="vertical-align: top !important;">資產Owner、CISO</td>
+<td style="vertical-align: top !important;">設備配置、機櫃管理、環境監控、保護措施紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.9</td>
+<td style="vertical-align: top !important;">場外資產安全</td>
+<td style="vertical-align: top !important;">Asset Owner / IT</td>
+<td style="vertical-align: top !important;">HR、CISO、使用者主管</td>
+<td style="vertical-align: top !important;">借用紀錄、加密設定、盤點紀錄、遺失通報</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.10</td>
+<td style="vertical-align: top !important;">儲存媒體</td>
+<td style="vertical-align: top !important;">IT / 資料Owner</td>
+<td style="vertical-align: top !important;">CISO、文件管制、PIMS負責人</td>
+<td style="vertical-align: top !important;">媒體清冊、加密紀錄、銷毀紀錄、借用/歸還紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.11</td>
+<td style="vertical-align: top !important;">支援性公用設施</td>
+<td style="vertical-align: top !important;">設施主管</td>
+<td style="vertical-align: top !important;">IT、資料中心負責人、ICT備妥性負責人</td>
+<td style="vertical-align: top !important;">UPS/電力/空調維護、測試紀錄、故障處理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.12</td>
+<td style="vertical-align: top !important;">纜線安全</td>
+<td style="vertical-align: top !important;">IT基礎設施負責人</td>
+<td style="vertical-align: top !important;">設施、CISO、資料中心</td>
+<td style="vertical-align: top !important;">佈線圖、機房巡檢、標示紀錄、變更紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.13</td>
+<td style="vertical-align: top !important;">設備維護</td>
+<td style="vertical-align: top !important;">IT / 設施主管</td>
+<td style="vertical-align: top !important;">供應商、Asset Owner</td>
+<td style="vertical-align: top !important;">維護合約、維護紀錄、授權維修、維修後檢查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.7.14</td>
+<td style="vertical-align: top !important;">設備安全處置或重複使用</td>
+<td style="vertical-align: top !important;">IT資產管理負責人</td>
+<td style="vertical-align: top !important;">總務、CISO、資料Owner</td>
+<td style="vertical-align: top !important;">抹除證明、銷毀紀錄、再利用檢查、資產清冊更新</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.1</td>
+<td style="vertical-align: top !important;">使用者端點設備</td>
+<td style="vertical-align: top !important;">端點管理負責人</td>
+<td style="vertical-align: top !important;">IT、CISO、使用者主管</td>
+<td style="vertical-align: top !important;">MDM/EDR設定、端點清冊、加密與修補紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.2</td>
+<td style="vertical-align: top !important;">特權存取權限</td>
+<td style="vertical-align: top !important;">IAM / PAM負責人</td>
+<td style="vertical-align: top !important;">System Owner、CISO、SOC</td>
+<td style="vertical-align: top !important;">特權帳號清冊、PAM紀錄、核准、定期審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.3</td>
+<td style="vertical-align: top !important;">資訊存取限制</td>
+<td style="vertical-align: top !important;">System Owner / Data Owner</td>
+<td style="vertical-align: top !important;">IAM、CISO、PIMS負責人</td>
+<td style="vertical-align: top !important;">權限矩陣、ACL設定、存取審查、資料分級控制</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.4</td>
+<td style="vertical-align: top !important;">原始碼存取</td>
+<td style="vertical-align: top !important;">開發主管 / Repo Owner</td>
+<td style="vertical-align: top !important;">CISO、DevSecOps、HR</td>
+<td style="vertical-align: top !important;">Repo權限、分支保護、存取審查、提交紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.5</td>
+<td style="vertical-align: top !important;">安全鑑別</td>
+<td style="vertical-align: top !important;">IAM負責人</td>
+<td style="vertical-align: top !important;">IT、System Owner、CISO</td>
+<td style="vertical-align: top !important;">MFA設定、SSO紀錄、密碼政策、登入異常監控</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.6</td>
+<td style="vertical-align: top !important;">容量管理</td>
+<td style="vertical-align: top !important;">IT維運負責人</td>
+<td style="vertical-align: top !important;">System Owner、雲端Owner、ICT備妥性負責人</td>
+<td style="vertical-align: top !important;">容量報表、監控閾值、擴充計畫、告警紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.7</td>
+<td style="vertical-align: top !important;">惡意軟體防護</td>
+<td style="vertical-align: top !important;">SOC / 端點安全負責人</td>
+<td style="vertical-align: top !important;">IT、使用者主管、CISO</td>
+<td style="vertical-align: top !important;">EDR/防毒設定、告警處理、掃描紀錄、隔離紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.8</td>
+<td style="vertical-align: top !important;">技術弱點管理</td>
+<td style="vertical-align: top !important;">弱點管理負責人</td>
+<td style="vertical-align: top !important;">IT、System Owner、SOC、開發</td>
+<td style="vertical-align: top !important;">弱點掃描、修補追蹤、風險接受、重測紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.9</td>
+<td style="vertical-align: top !important;">組態管理</td>
+<td style="vertical-align: top !important;">組態管理負責人</td>
+<td style="vertical-align: top !important;">IT、雲端Owner、CISO</td>
+<td style="vertical-align: top !important;">組態基準、CIS檢查、變更紀錄、偏差處理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.10</td>
+<td style="vertical-align: top !important;">資訊刪除</td>
+<td style="vertical-align: top !important;">Data Owner / IT</td>
+<td style="vertical-align: top !important;">PIMS負責人、System Owner、文件管制</td>
+<td style="vertical-align: top !important;">刪除程序、刪除證明、資料保留清冊、抽查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.11</td>
+<td style="vertical-align: top !important;">資料遮罩</td>
+<td style="vertical-align: top !important;">Data Owner / PIMS負責人</td>
+<td style="vertical-align: top !important;">開發、DBA、CISO</td>
+<td style="vertical-align: top !important;">遮罩規則、測試資料審查、遮罩結果、例外核准</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.12</td>
+<td style="vertical-align: top !important;">資料外洩防護</td>
+<td style="vertical-align: top !important;">DLP負責人 / CISO</td>
+<td style="vertical-align: top !important;">Data Owner、IT、SOC、PIMS負責人</td>
+<td style="vertical-align: top !important;">DLP政策、告警紀錄、處置紀錄、例外清單</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.13</td>
+<td style="vertical-align: top !important;">資訊備份</td>
+<td style="vertical-align: top !important;">備份管理負責人</td>
+<td style="vertical-align: top !important;">System Owner、IT、ICT備妥性負責人</td>
+<td style="vertical-align: top !important;">備份計畫、備份紀錄、還原測試、RPO/RTO證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.14</td>
+<td style="vertical-align: top !important;">資訊處理設施備援</td>
+<td style="vertical-align: top !important;">IT基礎設施負責人</td>
+<td style="vertical-align: top !important;">ICT備妥性負責人、System Owner、雲端Owner</td>
+<td style="vertical-align: top !important;">備援架構、HA測試、DR演練、可用性報表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.15</td>
+<td style="vertical-align: top !important;">日誌記錄</td>
+<td style="vertical-align: top !important;">SOC / 日誌管理負責人</td>
+<td style="vertical-align: top !important;">System Owner、IT、CISO</td>
+<td style="vertical-align: top !important;">日誌政策、SIEM收集、保存設定、完整性檢查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.16</td>
+<td style="vertical-align: top !important;">監控活動</td>
+<td style="vertical-align: top !important;">SOC負責人</td>
+<td style="vertical-align: top !important;">IT、CISO、System Owner</td>
+<td style="vertical-align: top !important;">監控規則、告警處理、日報/月報、事件工單</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.17</td>
+<td style="vertical-align: top !important;">時鐘同步</td>
+<td style="vertical-align: top !important;">IT基礎設施負責人</td>
+<td style="vertical-align: top !important;">SOC、System Owner</td>
+<td style="vertical-align: top !important;">NTP設定、時間同步檢查、偏差處理紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.18</td>
+<td style="vertical-align: top !important;">特權工具程式使用</td>
+<td style="vertical-align: top !important;">IT維運主管</td>
+<td style="vertical-align: top !important;">CISO、SOC、System Owner</td>
+<td style="vertical-align: top !important;">工具清冊、授權紀錄、使用日誌、審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.19</td>
+<td style="vertical-align: top !important;">營運系統軟體安裝</td>
+<td style="vertical-align: top !important;">IT變更管理負責人</td>
+<td style="vertical-align: top !important;">System Owner、CISO、使用者主管</td>
+<td style="vertical-align: top !important;">軟體白名單、安裝申請、變更紀錄、授權證明</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.20</td>
+<td style="vertical-align: top !important;">網路安全</td>
+<td style="vertical-align: top !important;">網路安全負責人</td>
+<td style="vertical-align: top !important;">SOC、IT、CISO</td>
+<td style="vertical-align: top !important;">網路架構圖、防火牆規則、網路掃描、審查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.21</td>
+<td style="vertical-align: top !important;">網路服務安全</td>
+<td style="vertical-align: top !important;">網路服務Owner</td>
+<td style="vertical-align: top !important;">供應商、CISO、IT</td>
+<td style="vertical-align: top !important;">網路服務合約、SLA、安全設定、監控報告</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.22</td>
+<td style="vertical-align: top !important;">網路區隔</td>
+<td style="vertical-align: top !important;">網路架構負責人</td>
+<td style="vertical-align: top !important;">CISO、IT、系統Owner</td>
+<td style="vertical-align: top !important;">網段設計、ACL/Firewall規則、測試紀錄、變更審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.23</td>
+<td style="vertical-align: top !important;">網頁過濾</td>
+<td style="vertical-align: top !important;">SOC / 端點安全負責人</td>
+<td style="vertical-align: top !important;">IT、CISO、HR</td>
+<td style="vertical-align: top !important;">Web過濾政策、封鎖紀錄、例外核准、告警處理</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.24</td>
+<td style="vertical-align: top !important;">密碼學使用</td>
+<td style="vertical-align: top !important;">密碼管理負責人 / CISO</td>
+<td style="vertical-align: top !important;">IT、Data Owner、PIMS負責人</td>
+<td style="vertical-align: top !important;">加密政策、金鑰管理、憑證清冊、加密設定證據</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.25</td>
+<td style="vertical-align: top !important;">安全開發生命週期</td>
+<td style="vertical-align: top !important;">開發主管 / DevSecOps負責人</td>
+<td style="vertical-align: top !important;">CISO、QA、Product Owner</td>
+<td style="vertical-align: top !important;">SDLC程序、安全需求、程式碼審查、上線核准</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.26</td>
+<td style="vertical-align: top !important;">應用安全要求</td>
+<td style="vertical-align: top !important;">Product Owner / 安全架構師</td>
+<td style="vertical-align: top !important;">開發、CISO、PIMS負責人</td>
+<td style="vertical-align: top !important;">安全需求清單、威脅建模、驗收測試、安全設計審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.27</td>
+<td style="vertical-align: top !important;">安全系統架構與工程原則</td>
+<td style="vertical-align: top !important;">安全架構師</td>
+<td style="vertical-align: top !important;">IT、開發、雲端Owner、CISO</td>
+<td style="vertical-align: top !important;">架構標準、設計審查、架構圖、例外核准</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.28</td>
+<td style="vertical-align: top !important;">安全程式碼</td>
+<td style="vertical-align: top !important;">開發主管 / DevSecOps</td>
+<td style="vertical-align: top !important;">開發人員、QA、CISO</td>
+<td style="vertical-align: top !important;">安全編碼規範、SAST結果、程式碼審查、修補紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.29</td>
+<td style="vertical-align: top !important;">開發與驗收安全測試</td>
+<td style="vertical-align: top !important;">QA / DevSecOps</td>
+<td style="vertical-align: top !important;">開發、CISO、Product Owner</td>
+<td style="vertical-align: top !important;">DAST/SAST、滲透測試、驗收紀錄、缺失修補</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.30</td>
+<td style="vertical-align: top !important;">委外開發</td>
+<td style="vertical-align: top !important;">委外開發Owner / 採購</td>
+<td style="vertical-align: top !important;">CISO、法務、開發主管</td>
+<td style="vertical-align: top !important;">委外合約、安全條款、交付驗收、程式碼審查</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.31</td>
+<td style="vertical-align: top !important;">開發、測試與正式環境區隔</td>
+<td style="vertical-align: top !important;">IT / DevOps負責人</td>
+<td style="vertical-align: top !important;">開發、CISO、System Owner</td>
+<td style="vertical-align: top !important;">環境清冊、網路/權限區隔、部署流程、抽查紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.32</td>
+<td style="vertical-align: top !important;">變更管理</td>
+<td style="vertical-align: top !important;">變更管理負責人</td>
+<td style="vertical-align: top !important;">CAB、System Owner、CISO</td>
+<td style="vertical-align: top !important;">變更申請、風險評估、核准紀錄、回復計畫</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.33</td>
+<td style="vertical-align: top !important;">測試資訊</td>
+<td style="vertical-align: top !important;">QA / Data Owner</td>
+<td style="vertical-align: top !important;">PIMS負責人、開發、CISO</td>
+<td style="vertical-align: top !important;">測試資料規範、去識別化/遮罩紀錄、測試資料刪除紀錄</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">A.8.34</td>
+<td style="vertical-align: top !important;">稽核測試期間資訊系統保護</td>
+<td style="vertical-align: top !important;">稽核方案負責人 / System Owner</td>
+<td style="vertical-align: top !important;">CISO、IT、內部稽核</td>
+<td style="vertical-align: top !important;">稽核測試計畫、測試授權、備份/回復措施、測試後檢查</td>
+</tr>
+</tbody>
+</table>
+<h2>9. Asset / Data / System / AI / GHG Owner清冊架構</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">Owner類型</th>
+<th style="vertical-align: top !important;">適用對象</th>
+<th style="vertical-align: top !important;">主要責任</th>
+<th style="vertical-align: top !important;">最低證據要求</th>
+<th style="vertical-align: top !important;">代理機制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Asset Owner</td>
+<td style="vertical-align: top !important;">資訊資產、文件、資料庫、應用服務、營運資料。</td>
+<td style="vertical-align: top !important;">分類分級、授權、保護要求、風險確認、保存與銷毀要求。</td>
+<td style="vertical-align: top !important;">資產清冊、分類分級表、存取授權、風險評估紀錄。</td>
+<td style="vertical-align: top !important;">由部門主管指派代理人，代理期間應保留授權紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Data Owner</td>
+<td style="vertical-align: top !important;">業務資料、PII、AI資料、GHG資料、碳證據。</td>
+<td style="vertical-align: top !important;">定義資料品質、授權、使用目的、保存期限、資料共享與揭露限制。</td>
+<td style="vertical-align: top !important;">資料清冊、資料流、授權紀錄、資料品質檢查。</td>
+<td style="vertical-align: top !important;">資料Owner缺席時由資料治理主管或部門主管代理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">System Owner</td>
+<td style="vertical-align: top !important;">應用系統、平台、雲端服務、資料中心系統。</td>
+<td style="vertical-align: top !important;">系統生命週期、安全需求、可用性、變更與退役管理。</td>
+<td style="vertical-align: top !important;">系統清冊、變更紀錄、備份測試、弱點修補紀錄。</td>
+<td style="vertical-align: top !important;">系統管理代理人須具備系統與資安責任知識。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Control Owner</td>
+<td style="vertical-align: top !important;">Annex A控制措施、PIMS/AI/GHG控制。</td>
+<td style="vertical-align: top !important;">確保控制設計、執行、證據與有效性測試。</td>
+<td style="vertical-align: top !important;">控制測試、SoA證據、SOP、KPI/KRI資料。</td>
+<td style="vertical-align: top !important;">應指定副Owner或流程代理人。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Model Owner</td>
+<td style="vertical-align: top !important;">AI模型、機器學習模型、生成式AI服務。</td>
+<td style="vertical-align: top !important;">模型用途、性能、風險、監控、變更、退役與輸出品質。</td>
+<td style="vertical-align: top !important;">模型卡、風險評估、測試紀錄、監控紀錄。</td>
+<td style="vertical-align: top !important;">由AI治理負責人指定代理Model Owner。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI Risk Owner</td>
+<td style="vertical-align: top !important;">高風險AI系統、AI服務、AI供應商。</td>
+<td style="vertical-align: top !important;">AI風險識別、處理、監督、剩餘風險與升級。</td>
+<td style="vertical-align: top !important;">AI風險評估表、處理計畫、監控報告。</td>
+<td style="vertical-align: top !important;">由AI治理負責人或風險管理負責人代理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Prompt / RAG Owner</td>
+<td style="vertical-align: top !important;">生成式AI Prompt、RAG知識庫、AI輸入模板。</td>
+<td style="vertical-align: top !important;">Prompt安全、資料外洩防護、輸出覆核與版本管理。</td>
+<td style="vertical-align: top !important;">Prompt清冊、測試紀錄、輸出覆核紀錄。</td>
+<td style="vertical-align: top !important;">由AI Product Owner指定代理。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Carbon Data Owner</td>
+<td style="vertical-align: top !important;">GHG活動數據、排放係數、碳盤查底稿、碳證據。</td>
+<td style="vertical-align: top !important;">資料完整性、正確性、版本、可追溯性、查證準備。</td>
+<td style="vertical-align: top !important;">碳證據清冊、盤查底稿、資料品質檢查。</td>
+<td style="vertical-align: top !important;">由GHG資料治理負責人指定代理。</td>
+</tr>
+</tbody>
+</table>
+<h2>10. ISO/IEC 27701 PII Controller / Processor責任矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">PIMS角色</th>
+<th style="vertical-align: top !important;">Controller責任</th>
+<th style="vertical-align: top !important;">Processor責任</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">核准隱私治理策略、資源與重大隱私風險接受。</td>
+<td style="vertical-align: top !important;">核准委外處理治理方向與資源。</td>
+<td style="vertical-align: top !important;">管理審查紀錄、資源核准、風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">監督PII處理合法性、資料主體權利、隱私風險評估與隱私事件。</td>
+<td style="vertical-align: top !important;">監督委外處理要求、DPA、供應商稽核與資料返還/刪除。</td>
+<td style="vertical-align: top !important;">隱私風險評估、PII清冊、資料主體請求紀錄、DPA。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PII Owner</td>
+<td style="vertical-align: top !important;">確認處理目的、最小化、保存期限、授權與資料品質。</td>
+<td style="vertical-align: top !important;">確認委外處理指示與資料使用限制。</td>
+<td style="vertical-align: top !important;">PII清冊、資料流、授權紀錄、保存期限清冊。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Legal / Compliance</td>
+<td style="vertical-align: top !important;">確認法規、合約、跨境傳輸與隱私聲明。</td>
+<td style="vertical-align: top !important;">確認委外契約、資料處理協議與通報義務。</td>
+<td style="vertical-align: top !important;">法規適用清冊、合約審查、隱私聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Vendor Manager</td>
+<td style="vertical-align: top !important;">確認第三方接觸PII之安全要求。</td>
+<td style="vertical-align: top !important;">管理Processor或Sub-processor之風險與證據。</td>
+<td style="vertical-align: top !important;">供應商評估、DPA、第三方證明。</td>
+</tr>
+</tbody>
+</table>
+<h2>11. ISO/IEC 42001 AI生命週期治理矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">AI生命週期階段</th>
+<th style="vertical-align: top !important;">主要Owner</th>
+<th style="vertical-align: top !important;">協辦角色</th>
+<th style="vertical-align: top !important;">治理要求</th>
+<th style="vertical-align: top !important;">驗證證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">需求與影響評估</td>
+<td style="vertical-align: top !important;">AI Product Owner</td>
+<td style="vertical-align: top !important;">AI Risk Owner、Legal、DPO</td>
+<td style="vertical-align: top !important;">確認用途、使用者、受影響群體、法規、隱私與資訊安全影響。</td>
+<td style="vertical-align: top !important;">AI使用申請、AI影響評估、關注方分析。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">資料取得與資料治理</td>
+<td style="vertical-align: top !important;">Data Owner</td>
+<td style="vertical-align: top !important;">DPO、Security、Data Engineer</td>
+<td style="vertical-align: top !important;">確認資料來源、授權、品質、偏誤、PII與資料保護。</td>
+<td style="vertical-align: top !important;">資料清冊、資料品質報告、PII評估、資料授權。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">模型開發與訓練</td>
+<td style="vertical-align: top !important;">Model Owner</td>
+<td style="vertical-align: top !important;">AI Engineer、Security、QA</td>
+<td style="vertical-align: top !important;">定義模型目標、測試、可解釋性、魯棒性與安全需求。</td>
+<td style="vertical-align: top !important;">模型卡、訓練紀錄、測試結果、安全測試紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">模型驗證與風險審查</td>
+<td style="vertical-align: top !important;">AI Risk Owner</td>
+<td style="vertical-align: top !important;">AI治理委員會、DPO、Legal</td>
+<td style="vertical-align: top !important;">審查風險、偏誤、公平性、人類監督、輸出限制與剩餘風險。</td>
+<td style="vertical-align: top !important;">AI風險評估、偏誤測試、審查會議紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">部署與變更</td>
+<td style="vertical-align: top !important;">System Owner</td>
+<td style="vertical-align: top !important;">IT、Cloud Owner、AI Product Owner</td>
+<td style="vertical-align: top !important;">控管部署、變更、權限、監控、回復與服務供應商責任。</td>
+<td style="vertical-align: top !important;">部署紀錄、變更紀錄、權限紀錄、監控設定。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">使用與人類監督</td>
+<td style="vertical-align: top !important;">Business Owner</td>
+<td style="vertical-align: top !important;">AI Product Owner、DPO、Security</td>
+<td style="vertical-align: top !important;">確保使用者訓練、輸出覆核、誤用控制與異常通報。</td>
+<td style="vertical-align: top !important;">使用SOP、訓練紀錄、輸出覆核、事件紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">監控與持續改善</td>
+<td style="vertical-align: top !important;">Model Owner</td>
+<td style="vertical-align: top !important;">AI Risk Owner、SOC、QA</td>
+<td style="vertical-align: top !important;">監控模型漂移、效能、安全事件、能源效率與風險變化。</td>
+<td style="vertical-align: top !important;">監控報告、事件紀錄、KPI/KRI、再評估紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">退役與資料處理</td>
+<td style="vertical-align: top !important;">System Owner</td>
+<td style="vertical-align: top !important;">Data Owner、Security、DPO</td>
+<td style="vertical-align: top !important;">安全退役、資料刪除/保留、模型存檔與知識移轉。</td>
+<td style="vertical-align: top !important;">退役紀錄、資料刪除證據、存檔紀錄。</td>
+</tr>
+</tbody>
+</table>
+<h2>12. GHG Scope 1/2/3與碳證據治理矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">GHG範疇 / 資料類型</th>
+<th style="vertical-align: top !important;">主要Owner</th>
+<th style="vertical-align: top !important;">協辦角色</th>
+<th style="vertical-align: top !important;">治理責任</th>
+<th style="vertical-align: top !important;">主要證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Scope 1 直接排放</td>
+<td style="vertical-align: top !important;">營運主管 / 設施主管</td>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">收集燃料、設備、製程直接排放資料並確保可追溯。</td>
+<td style="vertical-align: top !important;">燃料紀錄、設備清冊、活動數據、校正紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Scope 2 能源間接排放</td>
+<td style="vertical-align: top !important;">能源管理主管</td>
+<td style="vertical-align: top !important;">財務 / 設施 / GHG資料管理人</td>
+<td style="vertical-align: top !important;">維護用電、能源購買與排放係數資料。</td>
+<td style="vertical-align: top !important;">電費單、能源合約、排放係數版本、計算底稿。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Scope 3 其他間接排放</td>
+<td style="vertical-align: top !important;">供應鏈主管</td>
+<td style="vertical-align: top !important;">採購、供應商管理、GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">收集供應商、物流、商旅、雲端服務與產品相關碳資料。</td>
+<td style="vertical-align: top !important;">供應商碳資料、雲端碳報告、物流資料、查證聲明。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">碳證據管理</td>
+<td style="vertical-align: top !important;">Carbon Evidence Owner</td>
+<td style="vertical-align: top !important;">文件管制、GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">確保證據完整性、版本、保存、變更與查證可用性。</td>
+<td style="vertical-align: top !important;">碳證據清冊、保存紀錄、版本控制。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">揭露前審查</td>
+<td style="vertical-align: top !important;">GHG治理委員會</td>
+<td style="vertical-align: top !important;">Legal、CISO、DPO、財務</td>
+<td style="vertical-align: top !important;">確認揭露資料正確、完整、一致且未洩漏敏感資訊。</td>
+<td style="vertical-align: top !important;">揭露前審查表、核准紀錄、查證意見。</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 全面RACI Matrix</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">流程 / 活動</th>
+<th style="vertical-align: top !important;">最高管理階層</th>
+<th style="vertical-align: top !important;">CISO</th>
+<th style="vertical-align: top !important;">ISMS管理代表</th>
+<th style="vertical-align: top !important;">風險管理</th>
+<th style="vertical-align: top !important;">DPO</th>
+<th style="vertical-align: top !important;">AI治理</th>
+<th style="vertical-align: top !important;">GHG治理</th>
+<th style="vertical-align: top !important;">IT/SOC</th>
+<th style="vertical-align: top !important;">部門主管</th>
+<th style="vertical-align: top !important;">內部稽核</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織全景與內外部議題管理</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">關注方需求與法規遵循管理</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">ISMS範圍與流程維護</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">政策核准與溝通</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險評估與風險處理</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">SoA與控制措施維護</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">文件化資訊管制</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">事件管理與通報</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">供應商與ICT供應鏈治理</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS隱私治理</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理與AI風險</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG/CO2資料治理</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">KPI/KRI與績效分析</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">A/R</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">管理審查</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">不符合與CAPA</td>
+<td style="vertical-align: top !important;">I</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">持續改善</td>
+<td style="vertical-align: top !important;">A</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">C</td>
+<td style="vertical-align: top !important;">R</td>
+<td style="vertical-align: top !important;">I</td>
+</tr>
+</tbody>
+</table>
+<h2>14. 管理委員會章程（TOR）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">委員會</th>
+<th style="vertical-align: top !important;">目的</th>
+<th style="vertical-align: top !important;">成員</th>
+<th style="vertical-align: top !important;">頻率</th>
+<th style="vertical-align: top !important;">最低輸入</th>
+<th style="vertical-align: top !important;">最低輸出</th>
+<th style="vertical-align: top !important;">紀錄要求</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">資訊安全治理委員會</td>
+<td style="vertical-align: top !important;">監督ISMS治理、重大風險、控制有效性、事件、供應鏈與資源需求。</td>
+<td style="vertical-align: top !important;">最高管理階層代表、CISO、ISMS管理代表、IT、風險、法務、HR、業務主管。</td>
+<td style="vertical-align: top !important;">每季至少一次，重大事件可臨時召開。</td>
+<td style="vertical-align: top !important;">KPI/KRI、風險登錄表、SoA、事件摘要、供應商風險、CAPA。</td>
+<td style="vertical-align: top !important;">風險處理決議、資源建議、控制改善、管理審查輸入。</td>
+<td style="vertical-align: top !important;">議程、簡報、會議紀錄、決議追蹤表。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">PIMS治理委員會</td>
+<td style="vertical-align: top !important;">監督PII處理、隱私風險、資料主體權利、隱私風險評估、委外處理與隱私事件。</td>
+<td style="vertical-align: top !important;">DPO、法務、CISO、Data Owner、業務單位、供應商管理。</td>
+<td style="vertical-align: top !important;">每季至少一次。</td>
+<td style="vertical-align: top !important;">PII清冊、資料主體請求、隱私事件、隱私風險評估、委外處理證據。</td>
+<td style="vertical-align: top !important;">隱私改善決議、隱私風險評估要求、委外補強、通報決策。</td>
+<td style="vertical-align: top !important;">會議紀錄、隱私風險追蹤、核准紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理委員會</td>
+<td style="vertical-align: top !important;">監督AI系統生命週期、AI風險、模型品質、人類監督、AI供應商與AI永續。</td>
+<td style="vertical-align: top !important;">AI治理負責人、AI Product Owner、Model Owner、AI Risk Owner、DPO、CISO、法務。</td>
+<td style="vertical-align: top !important;">每季至少一次，高風險AI系統上線前必須審查。</td>
+<td style="vertical-align: top !important;">AI風險評估、模型測試、資料治理、供應商資料、監控報告。</td>
+<td style="vertical-align: top !important;">AI上線核准、風險處理、限制條件、監控要求。</td>
+<td style="vertical-align: top !important;">AI審查紀錄、模型卡、風險接受、監控紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG治理委員會</td>
+<td style="vertical-align: top !important;">監督GHG資料、碳證據、揭露前審查、查證準備與氣候相關資訊安全風險。</td>
+<td style="vertical-align: top !important;">GHG治理負責人、Carbon Data Owner、CISO、財務、供應鏈、法務、永續負責人。</td>
+<td style="vertical-align: top !important;">每季至少一次，揭露或查證前加開。</td>
+<td style="vertical-align: top !important;">活動數據、排放係數、碳證據清冊、資料品質檢查、供應商碳資料。</td>
+<td style="vertical-align: top !important;">揭露核准、查證補強、資料修正、供應商改善。</td>
+<td style="vertical-align: top !important;">會議紀錄、揭露審查、查證準備證據。</td>
+</tr>
+</tbody>
+</table>
+<h2>15. 報告線、代理人與職務代理矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">角色</th>
+<th style="vertical-align: top !important;">主要職務</th>
+<th style="vertical-align: top !important;">第一代理人</th>
+<th style="vertical-align: top !important;">第二代理人</th>
+<th style="vertical-align: top !important;">代理觸發條件</th>
+<th style="vertical-align: top !important;">代理限制</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層授權代表</td>
+<td style="vertical-align: top !important;">核准政策、重大資源、重大風險接受。</td>
+<td style="vertical-align: top !important;">副總經理 / 授權主管</td>
+<td style="vertical-align: top !important;">治理委員會主席</td>
+<td style="vertical-align: top !important;">出差、請假、職缺或緊急決策。</td>
+<td style="vertical-align: top !important;">重大風險接受需保留書面授權。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO</td>
+<td style="vertical-align: top !important;">統籌ISMS治理、事件升級、控制有效性與驗證準備。</td>
+<td style="vertical-align: top !important;">副CISO</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">CISO無法履職或重大事件需要即時決策。</td>
+<td style="vertical-align: top !important;">代理人不得核准自身負責事項之稽核結案。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">隱私治理、隱私風險評估、資料主體權利與隱私事件。</td>
+<td style="vertical-align: top !important;">隱私管理代表</td>
+<td style="vertical-align: top !important;">法務主管</td>
+<td style="vertical-align: top !important;">DPO無法履職或隱私事件需立即處理。</td>
+<td style="vertical-align: top !important;">重大隱私事件通報仍需DPO或法務最終確認。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI風險、AI上線審查、模型治理。</td>
+<td style="vertical-align: top !important;">AI Risk Owner</td>
+<td style="vertical-align: top !important;">AI Product Owner</td>
+<td style="vertical-align: top !important;">AI治理負責人缺席或高風險AI系統審查。</td>
+<td style="vertical-align: top !important;">Model Owner不得單獨核准自身模型風險接受。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">GHG資料品質、碳證據、揭露與查證準備。</td>
+<td style="vertical-align: top !important;">Carbon Data Owner</td>
+<td style="vertical-align: top !important;">永續負責人</td>
+<td style="vertical-align: top !important;">揭露或查證前缺席時。</td>
+<td style="vertical-align: top !important;">重大揭露資料修正需管理階層核准。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核主管</td>
+<td style="vertical-align: top !important;">稽核方案與稽核報告。</td>
+<td style="vertical-align: top !important;">主任稽核員</td>
+<td style="vertical-align: top !important;">指定合格稽核員</td>
+<td style="vertical-align: top !important;">稽核主管缺席。</td>
+<td style="vertical-align: top !important;">代理人不得稽核自身責任範圍。</td>
+</tr>
+</tbody>
+</table>
+<h2>16. 稽核獨立性與報告線要求</h2>
+<p>內部稽核應維持獨立性與客觀性。稽核方案負責人應確保稽核員不得稽核其自身工作範圍，且重大稽核發現、重複不符合與重大風險應可直接提報最高管理階層或管理審查會議。內部稽核結果不得由受稽單位自行核准結案，矯正措施有效性驗證應由具適當能力且具客觀性之人員執行。</p>
+<h2>17. 稽核訪談對照表</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">受訪角色</th>
+<th style="vertical-align: top !important;">稽核訪談主題</th>
+<th style="vertical-align: top !important;">典型問題</th>
+<th style="vertical-align: top !important;">應提供證據</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">最高管理階層</td>
+<td style="vertical-align: top !important;">組織全景、領導承諾、政策、目標、資源、風險接受。</td>
+<td style="vertical-align: top !important;">如何確認ISMS範圍與組織策略一致？如何確保ISMS資源充足？</td>
+<td style="vertical-align: top !important;">組織全景分析、政策核准、管理審查紀錄、資源決議、風險接受紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">CISO / ISMS管理代表</td>
+<td style="vertical-align: top !important;">ISMS範圍、角色責任、SoA、控制有效性、治理績效。</td>
+<td style="vertical-align: top !important;">如何確保控制措施已分派Owner並有效運作？</td>
+<td style="vertical-align: top !important;">本文件、RACI、任命書、SoA、KPI/KRI、治理儀表板、稽核追蹤。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+<td style="vertical-align: top !important;">風險準則、風險評估、處理計畫、剩餘風險。</td>
+<td style="vertical-align: top !important;">風險Owner如何確認風險與處理措施？</td>
+<td style="vertical-align: top !important;">風險準則、風險登錄表、風險處理計畫。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">DPO / PIMS負責人</td>
+<td style="vertical-align: top !important;">PII清冊、隱私風險評估、資料主體請求、隱私事件。</td>
+<td style="vertical-align: top !important;">如何確保PII Controller/Processor責任明確？</td>
+<td style="vertical-align: top !important;">PII清冊、隱私風險評估、DPA、資料主體請求紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">AI治理負責人</td>
+<td style="vertical-align: top !important;">AI生命週期、AI風險、模型Owner、人類監督、AI供應商。</td>
+<td style="vertical-align: top !important;">高風險AI系統上線前如何審查？</td>
+<td style="vertical-align: top !important;">AI風險評估、模型卡、審查紀錄、監控報告。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">GHG資料治理負責人</td>
+<td style="vertical-align: top !important;">GHG資料完整性、碳證據、Scope 1/2/3、揭露前審查。</td>
+<td style="vertical-align: top !important;">碳資料如何確保可追溯並可查證？</td>
+<td style="vertical-align: top !important;">碳證據清冊、盤查底稿、揭露審查紀錄。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">內部稽核</td>
+<td style="vertical-align: top !important;">稽核獨立性、稽核方案、發現追蹤、CAPA。</td>
+<td style="vertical-align: top !important;">如何避免稽核自身工作？</td>
+<td style="vertical-align: top !important;">稽核方案、稽核員資格、工作底稿、稽核報告。</td>
+</tr>
+</tbody>
+</table>
+<h2>18. Stage 1 / Stage 2 驗證證據地圖</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">驗證階段</th>
+<th style="vertical-align: top !important;">查核主題</th>
+<th style="vertical-align: top !important;">對應文件 / 證據</th>
+<th style="vertical-align: top !important;">責任角色</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">Stage 1</td>
+<td style="vertical-align: top !important;">組織全景、關注方與ISMS範圍</td>
+<td style="vertical-align: top !important;">組織全景分析報告、關注方識別表、ISMS範圍聲明書、流程架構。</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 組織全景與關注方管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 1</td>
+<td style="vertical-align: top !important;">政策、角色、責任與權限</td>
+<td style="vertical-align: top !important;">資訊安全政策、本文件、RACI、任命書、治理委員會紀錄。</td>
+<td style="vertical-align: top !important;">最高管理階層 / CISO</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 1</td>
+<td style="vertical-align: top !important;">風險方法與SoA</td>
+<td style="vertical-align: top !important;">風險準則、風險登錄表、SoA、控制措施與風險對應矩陣。</td>
+<td style="vertical-align: top !important;">風險管理負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 1</td>
+<td style="vertical-align: top !important;">文件化資訊管制</td>
+<td style="vertical-align: top !important;">文件總清冊、紀錄保存期限清冊、外部來源文件清冊、文件管制程序。</td>
+<td style="vertical-align: top !important;">文件管制負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 2</td>
+<td style="vertical-align: top !important;">控制措施執行證據</td>
+<td style="vertical-align: top !important;">SoA證據、控制測試、技術紀錄、供應商紀錄、資產清冊。</td>
+<td style="vertical-align: top !important;">Control Owner</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 2</td>
+<td style="vertical-align: top !important;">內部稽核與管理審查</td>
+<td style="vertical-align: top !important;">稽核方案、稽核發現事項追蹤表、管理審查輸入資料彙整表、管理審查決議。</td>
+<td style="vertical-align: top !important;">稽核主管 / ISMS管理代表</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 2</td>
+<td style="vertical-align: top !important;">CAPA與持續改善</td>
+<td style="vertical-align: top !important;">不符合、根因分析、矯正措施、有效性驗證、持續改善追蹤。</td>
+<td style="vertical-align: top !important;">CAPA負責人 / 持續改善負責人</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Stage 2</td>
+<td style="vertical-align: top !important;">PIMS / AI / GHG延伸治理</td>
+<td style="vertical-align: top !important;">隱私風險評估、AI風險評估、碳證據清冊、AI模型能源效率與碳資料安全證據。</td>
+<td style="vertical-align: top !important;">DPO / AI治理 / GHG治理負責人</td>
+</tr>
+</tbody>
+</table>
+<h2>19. 流程活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>文件名稱／主題</th>
+<th style="vertical-align: top !important;">文件類型</th>
+<th style="vertical-align: top !important;">與本文件之關聯</th>
+<th style="vertical-align: top !important;">如何使用</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;"> ISMS治理手冊</td>
+<td style="vertical-align: top !important;">MAN</td>
+<td style="vertical-align: top !important;">定義管理系統整體治理架構與治理原則。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 組織全景與內外部議題管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供組織全景、內外部議題及氣候/AI趨勢對組織架構調整之輸入。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS組織全景分析報告</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為治理架構設計與管理審查之組織全景證據。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 關注方需求與法規遵循管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供關注方、法規與合約要求對治理角色與報告線之輸入。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全法規與合約要求清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為法規、監管、合約與對外溝通角色設定之依據。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS與PIMS範圍管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供ISMS/PIMS範圍，以確認組織架構圖涵蓋邊界。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS範圍聲明書</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">作為架構圖中流程、地點、系統、供應商與外部介面之範圍證據。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程整合管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">確保本文件中各管理小組與ISMS流程整合一致。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS流程與條款對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">用於將組織角色對應至ISO條款與流程。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全領導與治理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">提供最高管理階層、治理委員會與管理代表之治理責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全治理委員會會議紀錄</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">保存治理委員會任命、架構調整與重大決議。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">最高管理階層對資訊安全政策與方向之承諾。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI資訊安全與治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義AI治理組織與AI系統角色責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 隱私與PII保護政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義PIMS、PII與隱私治理角色責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 氣候變遷、GHG資料與AI永續治理政策</td>
+<td style="vertical-align: top !important;">POL</td>
+<td style="vertical-align: top !important;">定義GHG資料、AI永續資料與氣候治理責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI RACI權責矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">作為本組織架構圖之RACI分派依據。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全責任任命書</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">用於正式任命本組織架構圖所列關鍵角色。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全、隱私與AI風險管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">承接Owner與控制責任至風險評估、風險處理與風險接受。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 適用性聲明書 SoA</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">每項控制措施之適用性、實施狀態與證據需對應控制措施負責人。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 控制措施與風險對應矩陣</td>
+<td style="vertical-align: top !important;">MTX</td>
+<td style="vertical-align: top !important;">將控制措施、風險、CIA、AI、PII、氣候變遷與Owner責任對應。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全風險登錄表</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為風險Owner、風險處理責任與風險監督之主要紀錄。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS資源管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">用於治理架構所需資源、工具、人力與外部支援配置。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 能力、認知與教育訓練管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">確保組織架構中各角色具備必要能力與訓練。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全認知管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">確保各角色理解責任、政策、通報與不符合後果。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊安全溝通管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">用於角色任命、報告線、事件通報與對外溝通。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 文件化資訊管制程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">確保本文件及相關治理證據受控與保存。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS文件總清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">記錄本文件在ISMS文件總清冊中之文件分級、版本與保存要求。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> ISMS/PIMS/AI/GHG紀錄保存期限清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">定義本文件、任命書、RACI、稽核與管理審查證據之保存期限。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> GHG/CO2資料與碳證據清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">支援GHG/CO2資料治理小組與Carbon Evidence Owner之證據管理。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 供應商與ICT供應鏈安全管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">支援供應商與ICT供應鏈管理角色、合約責任與供應商證據。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">定義Asset Owner、Data Owner與資產生命週期責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 資訊及相關資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為資訊及相關資產Owner與控制責任證據來源。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> AI服務與碳足跡資料資產清冊</td>
+<td style="vertical-align: top !important;">REG</td>
+<td style="vertical-align: top !important;">作為AI服務、碳足跡資料資產Owner與AI/GHG治理證據來源。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 實體安全控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">支援實體控制Owner與設施/資料中心安全責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 技術控制措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">支援技術控制Owner、System Owner、IAM、SOC、開發與變更責任。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 監督、量測、分析與評估程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">追蹤治理角色、控制Owner與KPI/KRI成效。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核方案管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">依本文件角色、責任與證據矩陣規劃稽核。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 稽核發現事項追蹤表</td>
+<td style="vertical-align: top !important;">REC</td>
+<td style="vertical-align: top !important;">追蹤本文件相關之稽核發現及改善。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">將治理架構、角色有效性、資源需求與重大風險納入管理審查。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 管理審查輸入資料彙整表</td>
+<td style="vertical-align: top !important;">FRM</td>
+<td style="vertical-align: top !important;">彙整治理架構、角色、資源、績效、稽核與CAPA輸入。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 不符合與矯正措施管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">角色責任不清、控制Owner缺失或證據不足時轉CAPA。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;"> 持續改善管理程序</td>
+<td style="vertical-align: top !important;">PRO</td>
+<td style="vertical-align: top !important;">治理成熟度、RACI、Owner與委員會運作可持續改善。</td>
+<td style="vertical-align: top !important;">於治理架構設計、角色任命、RACI分派、風險/控制Owner指定、稽核、管理審查及CAPA追蹤時作為依據及證據來源。</td>
+</tr>
+</tbody>
+</table>
+<h2>20. 紀錄保存</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">紀錄名稱</th>
+<th style="vertical-align: top !important;">保存單位</th>
+<th style="vertical-align: top !important;">保存期間</th>
+<th style="vertical-align: top !important;">保存方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">ISMS組織架構圖</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 文件管制負責人</td>
+<td style="vertical-align: top !important;">R3：至少5年或至新版取代後5年；涉及外部驗證或重大治理責任者依R4/R5或較長要求。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">治理委員會章程與會議紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 委員會秘書</td>
+<td style="vertical-align: top !important;">R3：至少5年；重大風險、外部驗證或法規要求依較長保存期限。</td>
+<td style="vertical-align: top !important;">受控電子檔或紙本</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">角色任命與代理人紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / HR</td>
+<td style="vertical-align: top !important;">任命有效期間及終止後至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔或紙本</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">RACI與Owner對應紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少5年或至新版取代後5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">控制Owner與SoA對應紀錄</td>
+<td style="vertical-align: top !important;">ISMS管理代表 / 風險管理負責人</td>
+<td style="vertical-align: top !important;">至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">稽核訪談與驗證證據地圖</td>
+<td style="vertical-align: top !important;">內部稽核負責人 / ISMS管理代表</td>
+<td style="vertical-align: top !important;">至少5年。</td>
+<td style="vertical-align: top !important;">受控電子檔</td>
+</tr>
+</tbody>
+</table>
+<h2>21. Enterprise Certification Checklist</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important;">檢查項目</th>
+<th style="vertical-align: top !important;">完成</th>
+<th style="vertical-align: top !important;">證據 / 備註</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="vertical-align: top !important;">組織架構圖已涵蓋ISMS、PIMS、AI治理、GHG/CO2資料治理、稽核、CAPA與持續改善</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第5章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">三道防線、條文責任矩陣、Annex A 93項控制Owner矩陣完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第6至8章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">Owner清冊、PIMS、AI、GHG、RACI、委員會TOR、代理人、稽核獨立性、訪談表與驗證證據地圖完整</td>
+<td style="vertical-align: top !important;">□ 是　□ 否</td>
+<td style="vertical-align: top !important;">第9至18章。</td>
+</tr>
+<tr>
+<td style="vertical-align: top !important;">所有表格符合指定HTML格式且每個 th / td 均向上對齊</td>
+<td style="vertical-align: top !important;">□ 是</td>
+<td style="vertical-align: top !important;">已完成HTML格式檢查。</td>
+</tr>
+</tbody>
+</table>
+<h2>23. Enterprise Certification Declaration</h2>
+<p>本文件為ISMS/PIMS/AI/GHG治理組織架構之正式企業級紀錄文件，可支援ISO/IEC 27001:2022 Clause 5.3組織角色、責任與權限，Clause 7.2能力，Clause 7.4溝通，Clause 7.5文件化資訊，Clause 9.2內部稽核，Clause 9.3管理審查，以及Annex A全控制群組Owner分派與控制證據追溯要求。實際採用時，應依組織正式職稱、授權層級、資料中心/雲端/AI/PII/GHG適用範圍、供應商關係及驗證機構要求進行在地化調整。</p>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>

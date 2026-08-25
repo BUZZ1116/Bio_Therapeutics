@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>ISMS-061-MTX-002 控制措施與風險對應矩陣</title>
+<style>
+body { font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif; line-height: 1.6; margin: 24px; color: #222; }
+.isms-document { max-width: 2200px; margin: 0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #333; padding-bottom: 8px; }
+h2 { margin-top: 30px; font-size: 21px; color: #1f3b5b; }
+table { margin: 12px 0 24px 0; }
+th { background: #f2f2f2; font-weight: bold; text-align: left; }
+td, th { vertical-align: top; }
+p, li { font-size: 15px; }
+.small { font-size: 13px; color: #555; }
+
+.document-control{font-size:13px;margin:10px 0 16px;}
+.document-control th{white-space:nowrap;}
+@media(max-width:900px){.document-control{display:block;overflow-x:auto;white-space:normal;}}</style>
+<style>.tksg-copyright{margin-top:28px;padding-top:10px;border-top:1px solid #999;font-size:11px;color:#555;text-align:center;}@media print{.tksg-copyright{position:fixed;left:0;right:0;bottom:0;padding-top:4px;background:#fff;border-top:1px solid #777;}}</style>
+</head>
+<body><section class="isms-document">
+<h1>ISMS-061-MTX-002 控制措施與風險對應矩陣</h1>
+<h2>0. 文件管制資訊</h2>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件編號</th>
+<th style="vertical-align: top !important; width:28%;">文件名稱</th>
+<th style="vertical-align: top !important; width:12%;">文件類型</th>
+<th style="vertical-align: top !important; width:14%;">版本</th>
+<th style="vertical-align: top !important; width:16%;">保存等級 / 期限</th>
+<th style="vertical-align: top !important; width:16%;">文件分級</th>
+</tr></thead>
+<tbody><tr>
+<td>ISMS-061-MTX-002</td>
+<td>控制措施與風險對應矩陣</td>
+<td>第四階：表單與紀錄 / MTX / 矩陣</td>
+<td>V2.2</td>
+<td>R7 / 7 年</td>
+<td>Internal / 內部</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">組織名稱</th>
+<th style="vertical-align: top !important; width:16%;">適用條款</th>
+<th style="vertical-align: top !important; width:18%;">文件Owner</th>
+<th style="vertical-align: top !important; width:18%;">核准權責</th>
+<th style="vertical-align: top !important; width:16%;">保存位置</th>
+<th style="vertical-align: top !important; width:18%;">正式使用前確認</th>
+</tr></thead>
+<tbody><tr>
+<td>【公司名稱】</td>
+<td>ISO 31000；ISO/IEC 27001:2022 Clause 6.1；並保留 ISO 9001、ISO/IEC 27701、ISO/IEC 42001、ISO 22301、ISO 14064/14067 與 GHG Protocol 介面</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner</td>
+<td>最高管理階層 / 管理系統治理委員會 / 授權主管</td>
+<td>受控文件庫 / ISMS / Clause-6 / ISMS-061-MTX-002</td>
+<td style="vertical-align: top !important;">正式發行前應完成文件制修訂申請、文件Owner審查、適用單位會簽、核准權責核准、生效日設定、文件總清冊登錄與受控發布。</td>
+</tr></tbody>
+</table>
+<table class="document-control" style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th style="vertical-align: top !important; width:14%;">文件狀態</th>
+<th style="vertical-align: top !important; width:14%;">生效日期</th>
+<th style="vertical-align: top !important; width:16%;">審查週期</th>
+<th style="vertical-align: top !important; width:14%;">下次審查日</th>
+<th style="vertical-align: top !important; width:20%;">審查權責</th>
+<th style="vertical-align: top !important; width:22%;">變更管制紀錄</th>
+</tr></thead>
+<tbody><tr>
+<td>Draft / 草案</td>
+<td>待核准後設定</td>
+<td>每年或重大變更</td>
+<td>待生效日確定後計算</td>
+<td>管理系統代表 / 風險管理負責人 / 專項風險Owner / 文件管制負責人</td>
+<td>ISMS-075-FRM-001 文件制修訂申請表 / ISMS-075-REG-001 管理系統文件總清冊</td>
+</tr></tbody>
+</table>
+<h2>1. 目的</h2>
+<p>本矩陣為ISMS風險治理之核心追溯文件，用於確認每一項控制措施是否有效支援機密性、完整性、可用性，以及是否涵蓋AI、PII、氣候變遷、GHG/CO2資料、供應鏈與雲端等專項風險。矩陣結果應作為SoA、風險登錄表、風險處理計畫、剩餘風險接受、內部稽核、控制有效性測試與管理審查的依據。</p>
+<h2>2. 矩陣符號</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>符號</th>
+<th>意義</th>
+<th>使用方式</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>●</td>
+<td>主要控制面向</td>
+<td>控制措施直接降低該風險面向，應具備明確控制證據與定期有效性驗證。</td>
+</tr>
+<tr>
+<td>○</td>
+<td>輔助控制面向</td>
+<td>控制措施間接支援該風險面向，可作為治理、補強或佐證控制。</td>
+</tr>
+<tr>
+<td>△</td>
+<td>條件式適用</td>
+<td>僅於該控制涉及特定系統、資料、供應商、AI、PII、GHG/CO2或氣候情境時適用。</td>
+</tr>
+<tr>
+<td>—</td>
+<td>通常不適用</td>
+<td>一般情境下無直接關聯，但可由風險Owner依實際風險指定。</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 管理活動與輸出摘要</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>階段</th>
+<th>如何使用</th>
+<th>輸出</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險來源匯入</td>
+<td>將一般資訊安全、AI、隱私、氣候變遷、GHG/CO2資料與已登錄風險匯入本矩陣。</td>
+<td>形成風險面向、專項標籤與控制需求。</td>
+</tr>
+<tr>
+<td>控制與SoA銜接</td>
+<td>將SoA與實體、技術、AI、備份、備援、加密、日誌、AI能源效率控制導入矩陣。</td>
+<td>形成控制措施、控制Owner、控制證據與SoA一致性。</td>
+</tr>
+<tr>
+<td>供應鏈與資產控制</td>
+<td>確認控制是否涵蓋資訊資產、供應商、雲端、AI服務與碳資料供應鏈。</td>
+<td>形成供應鏈、雲端、資產與碳資料控制對應。</td>
+</tr>
+<tr>
+<td>風險處理與接受</td>
+<td>當矩陣顯示控制缺口、控制不足或風險未充分覆蓋時使用。</td>
+<td>建立處理計畫、補償控制、剩餘風險接受與管理審查議題。</td>
+</tr>
+<tr>
+<td>監督、稽核與改善</td>
+<td>依矩陣選取關鍵控制進行監督量測、稽核抽樣、管理審查與CAPA。</td>
+<td>形成控制有效性、稽核證據與改善措施。</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 控制措施 × CIA × 專項風險總矩陣（93項完整控制措施）</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制編號</th>
+<th>控制措施</th>
+<th>控制措施要求</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>AI</th>
+<th>PII</th>
+<th>氣候變遷</th>
+<th>GHG/CO2資料</th>
+<th>供應鏈</th>
+<th>雲端</th>
+<th>SoA狀態</th>
+<th>對應文件</th>
+<th>風險登錄對應</th>
+<th>控制證據</th>
+<th>對應理由</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5.1</td>
+<td>資訊安全政策<br><span class="small">Policies for information security</span>
+</td>
+<td>建立、核准、發布並維持資訊安全政策，確保政策支援組織目標、風險管理與控制方向。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。建立、核准、發布並維持資訊安全政策，確保政策支援組織目標、風險管理與控制方向。</td>
+</tr>
+<tr>
+<td>A.5.2</td>
+<td>資訊安全角色與責任<br><span class="small">Information security roles and responsibilities</span>
+</td>
+<td>定義、分派並溝通資訊安全、風險、控制、證據與核准責任。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。定義、分派並溝通資訊安全、風險、控制、證據與核准責任。</td>
+</tr>
+<tr>
+<td>A.5.3</td>
+<td>職務區隔<br><span class="small">Segregation of duties</span>
+</td>
+<td>將衝突職責分離，降低未授權變更、舞弊、錯誤或濫用權限風險。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。將衝突職責分離，降低未授權變更、舞弊、錯誤或濫用權限風險。</td>
+</tr>
+<tr>
+<td>A.5.4</td>
+<td>管理階層責任<br><span class="small">Management responsibilities</span>
+</td>
+<td>要求管理階層確保人員依政策、程序與控制要求執行資訊安全責任。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。要求管理階層確保人員依政策、程序與控制要求執行資訊安全責任。</td>
+</tr>
+<tr>
+<td>A.5.5</td>
+<td>與主管機關聯繫<br><span class="small">Contact with authorities</span>
+</td>
+<td>建立與主管機關、監理機構、執法機關或通報窗口之聯繫機制。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。建立與主管機關、監理機構、執法機關或通報窗口之聯繫機制。</td>
+</tr>
+<tr>
+<td>A.5.6</td>
+<td>與專業團體聯繫<br><span class="small">Contact with special interest groups</span>
+</td>
+<td>維持與專業團體、威脅情資社群、產業組織及標準組織之聯繫。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。維持與專業團體、威脅情資社群、產業組織及標準組織之聯繫。</td>
+</tr>
+<tr>
+<td>A.5.7</td>
+<td>威脅情資<br><span class="small">Threat intelligence</span>
+</td>
+<td>蒐集、分析並應用威脅情資，以支持風險評估、防護、偵測與應變。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。蒐集、分析並應用威脅情資，以支持風險評估、防護、偵測與應變。</td>
+</tr>
+<tr>
+<td>A.5.8</td>
+<td>專案管理中的資訊安全<br><span class="small">Information security in project management</span>
+</td>
+<td>將資訊安全、隱私、AI、供應鏈與營運持續要求納入專案生命週期。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：AI、供應鏈。將資訊安全、隱私、AI、供應鏈與營運持續要求納入專案生命週期。</td>
+</tr>
+<tr>
+<td>A.5.9</td>
+<td>資訊及相關資產清冊<br><span class="small">Inventory of information and other associated assets</span>
+</td>
+<td>建立並維護資訊、系統、服務、資料、AI模型、碳資料與相關資產清冊。</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：I。建立並維護資訊、系統、服務、資料、AI模型、碳資料與相關資產清冊。</td>
+</tr>
+<tr>
+<td>A.5.10</td>
+<td>資訊及相關資產可接受使用<br><span class="small">Acceptable use of information and other associated assets</span>
+</td>
+<td>定義資訊、系統、裝置、AI工具、雲端與資料之可接受使用規則。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：AI。定義資訊、系統、裝置、AI工具、雲端與資料之可接受使用規則。</td>
+</tr>
+<tr>
+<td>A.5.11</td>
+<td>資產歸還<br><span class="small">Return of assets</span>
+</td>
+<td>確保員工、供應商或第三方於離職、契約終止或角色變更時歸還資產。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。確保員工、供應商或第三方於離職、契約終止或角色變更時歸還資產。</td>
+</tr>
+<tr>
+<td>A.5.12</td>
+<td>資訊分類<br><span class="small">Classification of information</span>
+</td>
+<td>依敏感度、法規、業務價值、PII、AI與GHG資料特性分類資訊。</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：I。依敏感度、法規、業務價值、PII、AI與GHG資料特性分類資訊。</td>
+</tr>
+<tr>
+<td>A.5.13</td>
+<td>資訊標示<br><span class="small">Labelling of information</span>
+</td>
+<td>依分類要求標示文件、資料、系統輸出、AI產出與碳證據。</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：I。依分類要求標示文件、資料、系統輸出、AI產出與碳證據。</td>
+</tr>
+<tr>
+<td>A.5.14</td>
+<td>資訊傳輸<br><span class="small">Information transfer</span>
+</td>
+<td>保護組織內外部資訊傳輸，包括PII、機密、AI資料與碳資料。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 資訊及相關資產清冊<br> 資訊分類分級表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。保護組織內外部資訊傳輸，包括PII、機密、AI資料與碳資料。</td>
+</tr>
+<tr>
+<td>A.5.15</td>
+<td>存取控制<br><span class="small">Access control</span>
+</td>
+<td>依業務需求、最小權限、資料分類與風險管理存取控制。</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C。依業務需求、最小權限、資料分類與風險管理存取控制。</td>
+</tr>
+<tr>
+<td>A.5.16</td>
+<td>身分管理<br><span class="small">Identity management</span>
+</td>
+<td>管理人員、系統、服務帳號、AI服務帳號與供應商帳號身分生命週期。</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C。管理人員、系統、服務帳號、AI服務帳號與供應商帳號身分生命週期。</td>
+</tr>
+<tr>
+<td>A.5.17</td>
+<td>鑑別資訊<br><span class="small">Authentication information</span>
+</td>
+<td>保護密碼、金鑰、Token、API Key、AI服務憑證與其他鑑別資訊。</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>加密設定、金鑰輪替、憑證管理、API Key管理紀錄</td>
+<td>主要覆蓋：C。保護密碼、金鑰、Token、API Key、AI服務憑證與其他鑑別資訊。</td>
+</tr>
+<tr>
+<td>A.5.18</td>
+<td>存取權限<br><span class="small">Access rights</span>
+</td>
+<td>核准、配置、審查、調整與撤銷使用者及系統存取權限。</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C。核准、配置、審查、調整與撤銷使用者及系統存取權限。</td>
+</tr>
+<tr>
+<td>A.5.19</td>
+<td>供應商關係中的資訊安全<br><span class="small">Information security in supplier relationships</span>
+</td>
+<td>將資訊安全要求納入供應商關係與供應鏈治理。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>供應商評估、合約條款、SLA、DPA、第四方清單、供應商改善追蹤</td>
+<td>主要覆蓋：供應鏈。將資訊安全要求納入供應商關係與供應鏈治理。</td>
+</tr>
+<tr>
+<td>A.5.20</td>
+<td>供應商協議中的資訊安全<br><span class="small">Addressing information security within supplier agreements</span>
+</td>
+<td>在合約、SLA、DPA、NDA及安全附件中明確規範資訊安全要求。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>供應商評估、合約條款、SLA、DPA、第四方清單、供應商改善追蹤</td>
+<td>主要覆蓋：供應鏈。在合約、SLA、DPA、NDA及安全附件中明確規範資訊安全要求。</td>
+</tr>
+<tr>
+<td>A.5.21</td>
+<td>ICT供應鏈資訊安全管理<br><span class="small">Managing information security in the ICT supply chain</span>
+</td>
+<td>管理ICT供應鏈、第四方、雲端、AI服務與關鍵技術依賴風險。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>供應商評估、合約條款、SLA、DPA、第四方清單、供應商改善追蹤</td>
+<td>主要覆蓋：供應鏈。管理ICT供應鏈、第四方、雲端、AI服務與關鍵技術依賴風險。</td>
+</tr>
+<tr>
+<td>A.5.22</td>
+<td>供應商服務監控、審查與變更管理<br><span class="small">Monitoring, review and change management of supplier services</span>
+</td>
+<td>監控供應商服務、變更、SLA、事件、控制證據與風險狀態。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>供應商評估、合約條款、SLA、DPA、第四方清單、供應商改善追蹤</td>
+<td>主要覆蓋：供應鏈。監控供應商服務、變更、SLA、事件、控制證據與風險狀態。</td>
+</tr>
+<tr>
+<td>A.5.23</td>
+<td>雲端服務使用資訊安全<br><span class="small">Information security for use of cloud services</span>
+</td>
+<td>規範雲端服務採購、配置、存取、資料保護、監控、退出與供應商責任。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 供應商與ICT供應鏈安全管理程序<br> 供應商資訊安全風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>供應商評估、合約條款、SLA、DPA、第四方清單、供應商改善追蹤</td>
+<td>主要覆蓋：AI、供應鏈、雲端。規範雲端服務採購、配置、存取、資料保護、監控、退出與供應商責任。</td>
+</tr>
+<tr>
+<td>A.5.24</td>
+<td>資訊安全事件管理規劃與準備<br><span class="small">Information security incident management planning and preparation</span>
+</td>
+<td>建立事件管理規劃、角色、通報、演練與準備要求。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。建立事件管理規劃、角色、通報、演練與準備要求。</td>
+</tr>
+<tr>
+<td>A.5.25</td>
+<td>資訊安全事件評估與決策<br><span class="small">Assessment and decision on information security events</span>
+</td>
+<td>評估安全事件並決定是否升級為資訊安全事件。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。評估安全事件並決定是否升級為資訊安全事件。</td>
+</tr>
+<tr>
+<td>A.5.26</td>
+<td>資訊安全事件回應<br><span class="small">Response to information security incidents</span>
+</td>
+<td>依事件類型執行遏止、根因分析、溝通、復原與改善。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。依事件類型執行遏止、根因分析、溝通、復原與改善。</td>
+</tr>
+<tr>
+<td>A.5.27</td>
+<td>由資訊安全事件中學習<br><span class="small">Learning from information security incidents</span>
+</td>
+<td>將事件經驗轉化為風險重評、控制改善、教育與CAPA。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。將事件經驗轉化為風險重評、控制改善、教育與CAPA。</td>
+</tr>
+<tr>
+<td>A.5.28</td>
+<td>證據蒐集<br><span class="small">Collection of evidence</span>
+</td>
+<td>以可採信方式蒐集、保存與保護事件、稽核、查證與法律證據。</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 威脅情資分析紀錄</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：I。以可採信方式蒐集、保存與保護事件、稽核、查證與法律證據。</td>
+</tr>
+<tr>
+<td>A.5.29</td>
+<td>中斷期間資訊安全<br><span class="small">Information security during disruption</span>
+</td>
+<td>確保業務中斷、災害、氣候事件或重大事故期間維持資訊安全控制。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：A、氣候。確保業務中斷、災害、氣候事件或重大事故期間維持資訊安全控制。</td>
+</tr>
+<tr>
+<td>A.5.30</td>
+<td>營運持續之ICT整備<br><span class="small">ICT readiness for business continuity</span>
+</td>
+<td>確保ICT服務、雲端、備援、備份與關鍵系統支援營運持續需求。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：A、氣候。確保ICT服務、雲端、備援、備份與關鍵系統支援營運持續需求。</td>
+</tr>
+<tr>
+<td>A.5.31</td>
+<td>法律、法規、監管與合約要求<br><span class="small">Legal, statutory, regulatory and contractual requirements</span>
+</td>
+<td>識別、維持並遵循適用法律、監管、合約、AI、隱私與GHG要求。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：供應鏈。識別、維持並遵循適用法律、監管、合約、AI、隱私與GHG要求。</td>
+</tr>
+<tr>
+<td>A.5.32</td>
+<td>智慧財產權<br><span class="small">Intellectual property rights</span>
+</td>
+<td>保護軟體、資料、模型、訓練資料、文件與第三方內容之智慧財產權。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。保護軟體、資料、模型、訓練資料、文件與第三方內容之智慧財產權。</td>
+</tr>
+<tr>
+<td>A.5.33</td>
+<td>紀錄保護<br><span class="small">Protection of records</span>
+</td>
+<td>保護管理系統、風險、稽核、PII、AI、GHG與合規紀錄之完整性與可用性。</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>紀錄清冊、保存期限、存取紀錄、PII/DPIA紀錄、稽核證據</td>
+<td>主要覆蓋：I、GHG。保護管理系統、風險、稽核、PII、AI、GHG與合規紀錄之完整性與可用性。</td>
+</tr>
+<tr>
+<td>A.5.34</td>
+<td>隱私與PII保護<br><span class="small">Privacy and protection of PII</span>
+</td>
+<td>依隱私要求保護PII，支援資料主體權利、合法性、最小化與安全處理。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序<br> 隱私風險評估表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>紀錄清冊、保存期限、存取紀錄、PII/DPIA紀錄、稽核證據</td>
+<td>主要覆蓋：PII。依隱私要求保護PII，支援資料主體權利、合法性、最小化與安全處理。</td>
+</tr>
+<tr>
+<td>A.5.35</td>
+<td>資訊安全獨立審查<br><span class="small">Independent review of information security</span>
+</td>
+<td>定期或依風險執行資訊安全管理系統與控制之獨立審查。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。定期或依風險執行資訊安全管理系統與控制之獨立審查。</td>
+</tr>
+<tr>
+<td>A.5.36</td>
+<td>符合政策、規則與標準<br><span class="small">Compliance with policies, rules and standards</span>
+</td>
+<td>監督與驗證組織是否符合政策、程序、標準與控制要求。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：供應鏈。監督與驗證組織是否符合政策、程序、標準與控制要求。</td>
+</tr>
+<tr>
+<td>A.5.37</td>
+<td>文件化作業程序<br><span class="small">Documented operating procedures</span>
+</td>
+<td>建立、維護並使用受控作業程序，以確保控制一致執行。</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 管理系統風險與機會管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。建立、維護並使用受控作業程序，以確保控制一致執行。</td>
+</tr>
+<tr>
+<td>A.6.1</td>
+<td>篩選<br><span class="small">Screening</span>
+</td>
+<td>依角色風險執行任用前或委任前背景與資格篩選。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。依角色風險執行任用前或委任前背景與資格篩選。</td>
+</tr>
+<tr>
+<td>A.6.2</td>
+<td>聘僱條款與條件<br><span class="small">Terms and conditions of employment</span>
+</td>
+<td>於聘僱或委任條款中納入資訊安全、保密、PII、AI與合規責任。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。於聘僱或委任條款中納入資訊安全、保密、PII、AI與合規責任。</td>
+</tr>
+<tr>
+<td>A.6.3</td>
+<td>資訊安全認知、教育與訓練<br><span class="small">Information security awareness, education and training</span>
+</td>
+<td>提供資訊安全、隱私、AI、供應鏈與氣候/GHG資料安全訓練。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。提供資訊安全、隱私、AI、供應鏈與氣候/GHG資料安全訓練。</td>
+</tr>
+<tr>
+<td>A.6.4</td>
+<td>懲戒程序<br><span class="small">Disciplinary process</span>
+</td>
+<td>針對違反資訊安全政策與程序之行為建立正式懲戒流程。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。針對違反資訊安全政策與程序之行為建立正式懲戒流程。</td>
+</tr>
+<tr>
+<td>A.6.5</td>
+<td>離職或職務變更後責任<br><span class="small">Responsibilities after termination or change of employment</span>
+</td>
+<td>於離職或職務變更後持續適用保密、歸還、權限撤銷與資料保護要求。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。於離職或職務變更後持續適用保密、歸還、權限撤銷與資料保護要求。</td>
+</tr>
+<tr>
+<td>A.6.6</td>
+<td>保密或不揭露協議<br><span class="small">Confidentiality or non-disclosure agreements</span>
+</td>
+<td>依資訊分類、PII、AI資料、碳資料與商業機密簽署保密協議。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：供應鏈。依資訊分類、PII、AI資料、碳資料與商業機密簽署保密協議。</td>
+</tr>
+<tr>
+<td>A.6.7</td>
+<td>遠距工作<br><span class="small">Remote working</span>
+</td>
+<td>保護遠距工作環境、裝置、網路、資料、雲端與AI工具使用安全。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。保護遠距工作環境、裝置、網路、資料、雲端與AI工具使用安全。</td>
+</tr>
+<tr>
+<td>A.6.8</td>
+<td>資訊安全事件通報<br><span class="small">Information security event reporting</span>
+</td>
+<td>要求人員及時通報資訊安全事件、弱點、PII事件、AI事故與供應商事件。</td>
+<td>○</td>
+<td>○</td>
+<td>△</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：治理支援。要求人員及時通報資訊安全事件、弱點、PII事件、AI事故與供應商事件。</td>
+</tr>
+<tr>
+<td>A.7.1</td>
+<td>實體安全邊界<br><span class="small">Physical security perimeters</span>
+</td>
+<td>建立安全邊界保護機房、辦公室、資料中心與支援設施。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。建立安全邊界保護機房、辦公室、資料中心與支援設施。</td>
+</tr>
+<tr>
+<td>A.7.2</td>
+<td>實體進入<br><span class="small">Physical entry</span>
+</td>
+<td>管制與記錄人員、訪客、供應商及維護人員之實體進入。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。管制與記錄人員、訪客、供應商及維護人員之實體進入。</td>
+</tr>
+<tr>
+<td>A.7.3</td>
+<td>辦公室、房間與設施安全<br><span class="small">Securing offices rooms and facilities</span>
+</td>
+<td>保護辦公室、機房、儲存區、會議室與關鍵設施。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。保護辦公室、機房、儲存區、會議室與關鍵設施。</td>
+</tr>
+<tr>
+<td>A.7.4</td>
+<td>實體安全監控<br><span class="small">Physical security monitoring</span>
+</td>
+<td>使用監控、告警、巡檢與紀錄監督實體安全狀態。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。使用監控、告警、巡檢與紀錄監督實體安全狀態。</td>
+</tr>
+<tr>
+<td>A.7.5</td>
+<td>防範實體與環境威脅<br><span class="small">Protecting against physical and environmental threats</span>
+</td>
+<td>防範火災、淹水、高溫、停電、氣候事件與環境威脅。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A、氣候。防範火災、淹水、高溫、停電、氣候事件與環境威脅。</td>
+</tr>
+<tr>
+<td>A.7.6</td>
+<td>安全區域工作<br><span class="small">Working in secure areas</span>
+</td>
+<td>規範在安全區域工作之行為、限制、陪同與資料處理要求。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。規範在安全區域工作之行為、限制、陪同與資料處理要求。</td>
+</tr>
+<tr>
+<td>A.7.7</td>
+<td>桌面與螢幕淨空<br><span class="small">Clear desk and clear screen</span>
+</td>
+<td>降低文件、螢幕、PII、機密資料與登入狀態暴露風險。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。降低文件、螢幕、PII、機密資料與登入狀態暴露風險。</td>
+</tr>
+<tr>
+<td>A.7.8</td>
+<td>設備安置與保護<br><span class="small">Equipment siting and protection</span>
+</td>
+<td>安全安置並保護設備免於未授權接觸、損壞與環境威脅。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。安全安置並保護設備免於未授權接觸、損壞與環境威脅。</td>
+</tr>
+<tr>
+<td>A.7.9</td>
+<td>場外資產安全<br><span class="small">Security of assets off-premises</span>
+</td>
+<td>保護帶離場域之裝置、媒體、文件、備份與遠距工作資產。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。保護帶離場域之裝置、媒體、文件、備份與遠距工作資產。</td>
+</tr>
+<tr>
+<td>A.7.10</td>
+<td>儲存媒體<br><span class="small">Storage media</span>
+</td>
+<td>管理儲存媒體之使用、保管、傳輸、清除、銷毀與歸還。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。管理儲存媒體之使用、保管、傳輸、清除、銷毀與歸還。</td>
+</tr>
+<tr>
+<td>A.7.11</td>
+<td>支援設施<br><span class="small">Supporting utilities</span>
+</td>
+<td>確保電力、空調、消防、水冷、網路與支援設施可用且受監控。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A、氣候。確保電力、空調、消防、水冷、網路與支援設施可用且受監控。</td>
+</tr>
+<tr>
+<td>A.7.12</td>
+<td>纜線安全<br><span class="small">Cabling security</span>
+</td>
+<td>保護電力、網路與通訊纜線免於攔截、損壞與未授權接入。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。保護電力、網路與通訊纜線免於攔截、損壞與未授權接入。</td>
+</tr>
+<tr>
+<td>A.7.13</td>
+<td>設備維護<br><span class="small">Equipment maintenance</span>
+</td>
+<td>安全維護設備，保護資料、設定與維修紀錄。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。安全維護設備，保護資料、設定與維修紀錄。</td>
+</tr>
+<tr>
+<td>A.7.14</td>
+<td>設備安全汰除或再使用<br><span class="small">Secure disposal or re-use of equipment</span>
+</td>
+<td>設備汰除或再使用前安全清除資料、移除標籤與更新清冊。</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 實體與環境安全管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>門禁紀錄、監控紀錄、支援設施檢查、維護紀錄、巡檢紀錄</td>
+<td>主要覆蓋：A。設備汰除或再使用前安全清除資料、移除標籤與更新清冊。</td>
+</tr>
+<tr>
+<td>A.8.1</td>
+<td>使用者端點裝置<br><span class="small">User endpoint devices</span>
+</td>
+<td>保護筆電、桌機、行動裝置與端點存取、資料與設定。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。保護筆電、桌機、行動裝置與端點存取、資料與設定。</td>
+</tr>
+<tr>
+<td>A.8.2</td>
+<td>特權存取權限<br><span class="small">Privileged access rights</span>
+</td>
+<td>嚴格控制、審查、監控與記錄特權存取。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。嚴格控制、審查、監控與記錄特權存取。</td>
+</tr>
+<tr>
+<td>A.8.3</td>
+<td>資訊存取限制<br><span class="small">Information access restriction</span>
+</td>
+<td>依業務需求、分類與權限限制資訊與系統存取。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。依業務需求、分類與權限限制資訊與系統存取。</td>
+</tr>
+<tr>
+<td>A.8.4</td>
+<td>原始碼存取<br><span class="small">Access to source code</span>
+</td>
+<td>保護原始碼、儲存庫、分支、機密與CI/CD存取。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。保護原始碼、儲存庫、分支、機密與CI/CD存取。</td>
+</tr>
+<tr>
+<td>A.8.5</td>
+<td>安全鑑別<br><span class="small">Secure authentication</span>
+</td>
+<td>使用安全鑑別機制，包括MFA、強密碼、憑證與Token保護。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。使用安全鑑別機制，包括MFA、強密碼、憑證與Token保護。</td>
+</tr>
+<tr>
+<td>A.8.6</td>
+<td>容量管理<br><span class="small">Capacity management</span>
+</td>
+<td>監測、規劃與調整容量，以確保服務、AI、雲端與儲存可用。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、A。監測、規劃與調整容量，以確保服務、AI、雲端與儲存可用。</td>
+</tr>
+<tr>
+<td>A.8.7</td>
+<td>惡意軟體防護<br><span class="small">Protection against malware</span>
+</td>
+<td>部署惡意軟體防護、偵測、隔離、更新與應變措施。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。部署惡意軟體防護、偵測、隔離、更新與應變措施。</td>
+</tr>
+<tr>
+<td>A.8.8</td>
+<td>技術弱點管理<br><span class="small">Management of technical vulnerabilities</span>
+</td>
+<td>識別、評估、修補、例外管理與追蹤技術弱點。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。識別、評估、修補、例外管理與追蹤技術弱點。</td>
+</tr>
+<tr>
+<td>A.8.9</td>
+<td>組態管理<br><span class="small">Configuration management</span>
+</td>
+<td>建立、維護與監控安全組態基準，防止未授權變更。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。建立、維護與監控安全組態基準，防止未授權變更。</td>
+</tr>
+<tr>
+<td>A.8.10</td>
+<td>資訊刪除<br><span class="small">Information deletion</span>
+</td>
+<td>依保存期限、刪除請求與退役要求安全刪除資訊。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、PII、GHG。依保存期限、刪除請求與退役要求安全刪除資訊。</td>
+</tr>
+<tr>
+<td>A.8.11</td>
+<td>資料遮罩<br><span class="small">Data masking</span>
+</td>
+<td>在測試、分析、AI、共享與非生產環境中遮罩敏感資料。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、PII。在測試、分析、AI、共享與非生產環境中遮罩敏感資料。</td>
+</tr>
+<tr>
+<td>A.8.12</td>
+<td>資料外洩防護<br><span class="small">Data leakage prevention</span>
+</td>
+<td>偵測並防止敏感資料、PII、原始碼、碳資料與機密外洩。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、PII。偵測並防止敏感資料、PII、原始碼、碳資料與機密外洩。</td>
+</tr>
+<tr>
+<td>A.8.13</td>
+<td>資訊備份<br><span class="small">Information backup</span>
+</td>
+<td>依RPO/RTO與資料分類建立、保護、測試與監控備份。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>○</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 備份與還原作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>備份紀錄、還原測試、DR演練、RTO/RPO測試</td>
+<td>主要覆蓋：C、I、A、氣候、GHG、雲端。依RPO/RTO與資料分類建立、保護、測試與監控備份。</td>
+</tr>
+<tr>
+<td>A.8.14</td>
+<td>資訊處理設施備援<br><span class="small">Redundancy of information processing facilities</span>
+</td>
+<td>建立備援設施、服務、系統或雲端區域支援可用性。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>●</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 備援管理作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>備份紀錄、還原測試、DR演練、RTO/RPO測試</td>
+<td>主要覆蓋：C、I、A、氣候、供應鏈、雲端。建立備援設施、服務、系統或雲端區域支援可用性。</td>
+</tr>
+<tr>
+<td>A.8.15</td>
+<td>日誌<br><span class="small">Logging</span>
+</td>
+<td>記錄使用者、系統、管理、AI、PII與關鍵操作，支援追溯。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 日誌、監控與事件偵測作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>日誌樣本、SIEM告警、監控報表、時間同步紀錄</td>
+<td>主要覆蓋：C、I、GHG。記錄使用者、系統、管理、AI、PII與關鍵操作，支援追溯。</td>
+</tr>
+<tr>
+<td>A.8.16</td>
+<td>監控活動<br><span class="small">Monitoring activities</span>
+</td>
+<td>監控系統、網路、端點、雲端、AI與安全事件。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 日誌、監控與事件偵測作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>日誌樣本、SIEM告警、監控報表、時間同步紀錄</td>
+<td>主要覆蓋：C、I、A。監控系統、網路、端點、雲端、AI與安全事件。</td>
+</tr>
+<tr>
+<td>A.8.17</td>
+<td>時間同步<br><span class="small">Clock synchronization</span>
+</td>
+<td>同步系統時間，確保日誌、事件、交易與證據可比對。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 日誌、監控與事件偵測作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>日誌樣本、SIEM告警、監控報表、時間同步紀錄</td>
+<td>主要覆蓋：C、I。同步系統時間，確保日誌、事件、交易與證據可比對。</td>
+</tr>
+<tr>
+<td>A.8.18</td>
+<td>特殊工具程式使用<br><span class="small">Use of privileged utility programs</span>
+</td>
+<td>限制並監控具高風險或可繞過控制之工具程式。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。限制並監控具高風險或可繞過控制之工具程式。</td>
+</tr>
+<tr>
+<td>A.8.19</td>
+<td>營運系統軟體安裝<br><span class="small">Installation of software on operational systems</span>
+</td>
+<td>控制營運系統軟體安裝、白名單、核准與變更。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。控制營運系統軟體安裝、白名單、核准與變更。</td>
+</tr>
+<tr>
+<td>A.8.20</td>
+<td>網路安全<br><span class="small">Networks security</span>
+</td>
+<td>設計、保護、監控與隔離網路，以降低未授權存取與攻擊。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、A、雲端。設計、保護、監控與隔離網路，以降低未授權存取與攻擊。</td>
+</tr>
+<tr>
+<td>A.8.21</td>
+<td>網路服務安全<br><span class="small">Security of network services</span>
+</td>
+<td>管理內外部網路服務、SLA、安全功能與供應商責任。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>●</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、A、供應鏈、雲端。管理內外部網路服務、SLA、安全功能與供應商責任。</td>
+</tr>
+<tr>
+<td>A.8.22</td>
+<td>網路區隔<br><span class="small">Segregation of networks</span>
+</td>
+<td>依風險、資料分類、環境與業務需求區隔網路。</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I、A、雲端。依風險、資料分類、環境與業務需求區隔網路。</td>
+</tr>
+<tr>
+<td>A.8.23</td>
+<td>網頁過濾<br><span class="small">Web filtering</span>
+</td>
+<td>限制惡意、未授權或高風險網站存取。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>政策程序、核准紀錄、設定截圖、工單、審查紀錄、測試報告</td>
+<td>主要覆蓋：C、I。限制惡意、未授權或高風險網站存取。</td>
+</tr>
+<tr>
+<td>A.8.24</td>
+<td>密碼學使用<br><span class="small">Use of cryptography</span>
+</td>
+<td>依風險採用加密、簽章、雜湊與金鑰管理保護資料。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>●</td>
+<td>—</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> 加密與金鑰管理作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>加密設定、金鑰輪替、憑證管理、API Key管理紀錄</td>
+<td>主要覆蓋：C、I、PII、GHG、雲端。依風險採用加密、簽章、雜湊與金鑰管理保護資料。</td>
+</tr>
+<tr>
+<td>A.8.25</td>
+<td>安全開發生命週期<br><span class="small">Secure development life cycle</span>
+</td>
+<td>將安全需求、設計、開發、測試、部署與維護納入SDLC。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。將安全需求、設計、開發、測試、部署與維護納入SDLC。</td>
+</tr>
+<tr>
+<td>A.8.26</td>
+<td>應用系統安全需求<br><span class="small">Application security requirements</span>
+</td>
+<td>在應用系統規劃、採購與開發中定義安全需求。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。在應用系統規劃、採購與開發中定義安全需求。</td>
+</tr>
+<tr>
+<td>A.8.27</td>
+<td>安全系統架構與工程原則<br><span class="small">Secure system architecture and engineering principles</span>
+</td>
+<td>依安全架構、零信任、隔離、最小權限與防禦縱深設計系統。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。依安全架構、零信任、隔離、最小權限與防禦縱深設計系統。</td>
+</tr>
+<tr>
+<td>A.8.28</td>
+<td>安全編碼<br><span class="small">Secure coding</span>
+</td>
+<td>使用安全編碼標準、程式碼審查與弱點修正。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。使用安全編碼標準、程式碼審查與弱點修正。</td>
+</tr>
+<tr>
+<td>A.8.29</td>
+<td>開發與驗收安全測試<br><span class="small">Security testing in development and acceptance</span>
+</td>
+<td>於開發、測試與驗收階段執行安全測試與修正。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>○</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。於開發、測試與驗收階段執行安全測試與修正。</td>
+</tr>
+<tr>
+<td>A.8.30</td>
+<td>委外開發<br><span class="small">Outsourced development</span>
+</td>
+<td>管理委外開發安全要求、交付物、程式碼、測試與智慧財產權。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI、供應鏈。管理委外開發安全要求、交付物、程式碼、測試與智慧財產權。</td>
+</tr>
+<tr>
+<td>A.8.31</td>
+<td>開發、測試與生產環境區隔<br><span class="small">Separation of development test and production environments</span>
+</td>
+<td>區隔開發、測試、UAT與生產環境，降低錯誤與未授權存取。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI。區隔開發、測試、UAT與生產環境，降低錯誤與未授權存取。</td>
+</tr>
+<tr>
+<td>A.8.32</td>
+<td>變更管理<br><span class="small">Change management</span>
+</td>
+<td>控制系統、服務、組態、AI模型、資料流程與供應商變更。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>●</td>
+<td>●</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI、供應鏈、雲端。控制系統、服務、組態、AI模型、資料流程與供應商變更。</td>
+</tr>
+<tr>
+<td>A.8.33</td>
+<td>測試資訊<br><span class="small">Test information</span>
+</td>
+<td>保護測試資料，避免未授權使用真實PII或機密資料。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>●</td>
+<td>●</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序<br> AI系統安全開發與使用作業指導書</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I、AI、PII。保護測試資料，避免未授權使用真實PII或機密資料。</td>
+</tr>
+<tr>
+<td>A.8.34</td>
+<td>稽核測試期間資訊系統保護<br><span class="small">Protection of information systems during audit testing</span>
+</td>
+<td>稽核與測試活動不得危害系統、資料、服務與證據完整性。</td>
+<td>●</td>
+<td>●</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>適用</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險登錄表<br> 技術控制措施管理程序</td>
+<td>依風險登錄表填入對應風險編號；若無直接風險，應對應法規、合約或管理目標。</td>
+<td>安全需求、架構審查、程式碼審查、安全測試、變更核准、測試資料證據</td>
+<td>主要覆蓋：C、I。稽核與測試活動不得危害系統、資料、服務與證據完整性。</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 控制群組 × 專項風險覆蓋彙整矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>控制群組</th>
+<th>控制項數</th>
+<th>CIA主要覆蓋</th>
+<th>AI</th>
+<th>PII</th>
+<th>氣候變遷</th>
+<th>GHG/CO2</th>
+<th>供應鏈</th>
+<th>雲端</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A.5 組織控制</td>
+<td>37</td>
+<td>C:4 / I:5 / A:2</td>
+<td>AI:3</td>
+<td>PII:1</td>
+<td>氣候:2</td>
+<td>GHG:1</td>
+<td>供應鏈:8</td>
+<td>雲端:1</td>
+</tr>
+<tr>
+<td>A.6 人員控制</td>
+<td>8</td>
+<td>C:0 / I:0 / A:0</td>
+<td>AI:0</td>
+<td>PII:0</td>
+<td>氣候:0</td>
+<td>GHG:0</td>
+<td>供應鏈:1</td>
+<td>雲端:0</td>
+</tr>
+<tr>
+<td>A.7 實體控制</td>
+<td>14</td>
+<td>C:0 / I:0 / A:14</td>
+<td>AI:0</td>
+<td>PII:0</td>
+<td>氣候:2</td>
+<td>GHG:0</td>
+<td>供應鏈:0</td>
+<td>雲端:0</td>
+</tr>
+<tr>
+<td>A.8 技術控制</td>
+<td>34</td>
+<td>C:34 / I:34 / A:7</td>
+<td>AI:9</td>
+<td>PII:5</td>
+<td>氣候:2</td>
+<td>GHG:4</td>
+<td>供應鏈:4</td>
+<td>雲端:7</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 風險登錄 × 控制措施 × SoA追溯矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>風險編號</th>
+<th>風險情境</th>
+<th>主要控制措施</th>
+<th>CIA</th>
+<th>專項面向</th>
+<th>SoA控制</th>
+<th>必要證據</th>
+<th>後續處理</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ISMS-RISK-YYYY-001</td>
+<td>特權帳號濫用造成PII未授權存取</td>
+<td>A.5.15<br>A.5.16<br>A.5.17<br>A.5.18<br>A.8.2<br>A.8.5<br>A.8.15</td>
+<td>C● I● A○</td>
+<td>PII</td>
+<td> 適用性聲明書 SoA</td>
+<td>權限審查、PAM報表、MFA設定、日誌抽樣</td>
+<td>依建立處理計畫。</td>
+</tr>
+<tr>
+<td>ISMS-RISK-YYYY-002</td>
+<td>AI客服輸出錯誤或洩漏敏感資料</td>
+<td>A.5.8<br>A.5.10<br>A.5.23<br>A.8.25<br>A.8.26<br>A.8.27<br>A.8.29<br>A.8.32</td>
+<td>C● I● A○</td>
+<td>AI<br>PII<br>Cloud</td>
+<td> 適用性聲明書 SoA</td>
+<td>AI測試、Prompt審查、RAG權限、人工覆核</td>
+<td>依與追蹤。</td>
+</tr>
+<tr>
+<td>ISMS-RISK-YYYY-003</td>
+<td>GHG/CO2資料錯誤影響對外揭露</td>
+<td>A.5.9<br>A.5.12<br>A.5.13<br>A.5.31<br>A.5.33<br>A.8.10<br>A.8.13<br>A.8.15<br>A.8.24</td>
+<td>C● I● A●</td>
+<td>GHG/CO2<br>Climate<br>Supplier</td>
+<td> 適用性聲明書 SoA</td>
+<td>碳證據清冊、版本紀錄、查證抽樣、存取紀錄</td>
+<td>依與追蹤。</td>
+</tr>
+<tr>
+<td>ISMS-RISK-YYYY-004</td>
+<td>氣候事件造成雲端服務或資料中心中斷</td>
+<td>A.5.23<br>A.5.29<br>A.5.30<br>A.7.5<br>A.7.11<br>A.8.6<br>A.8.13<br>A.8.14<br>A.8.20<br>A.8.21</td>
+<td>C○ I○ A●</td>
+<td>Climate<br>Cloud<br>Supplier</td>
+<td> 適用性聲明書 SoA</td>
+<td>支援設施檢查、DR演練、備份還原測試、SLA報告</td>
+<td>依建立氣候風險處理。</td>
+</tr>
+</tbody>
+</table>
+<h2>7. 控制缺口判定與改善矩陣</h2>
+<table style="width: 100%; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="8">
+<thead><tr>
+<th>缺口類型</th>
+<th>判定條件</th>
+<th>處理要求</th>
+<th>輸出項目</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>風險無主要控制</td>
+<td>中高以上風險在第4章矩陣中沒有任何●控制。</td>
+<td>建立控制措施或正式接受剩餘風險。</td>
+<td> 資訊安全風險處理計畫<br> 剩餘風險接受單</td>
+</tr>
+<tr>
+<td>CIA覆蓋不足</td>
+<td>風險主要影響C/I/A之一，但控制矩陣未以●或○覆蓋該面向。</td>
+<td>重新選擇控制、補充控制或調整SoA。</td>
+<td> 適用性聲明書 SoA<br> 資訊安全風險處理計畫</td>
+</tr>
+<tr>
+<td>AI/PII/GHG/氣候未標示</td>
+<td>專項風險未在第4章專項欄位標示。</td>
+<td>由專項Owner重評並更新矩陣。</td>
+<td> AI系統資訊安全風險評估表<br> 隱私風險評估表<br> 氣候變遷資訊安全風險評估表</td>
+</tr>
+<tr>
+<td>控制無證據</td>
+<td>控制列為●但缺乏可稽核證據。</td>
+<td>補齊證據或建立CAPA。</td>
+<td> 監督、量測、分析與評估程序<br> 不符合與矯正措施管理程序</td>
+</tr>
+<tr>
+<td>SoA不一致</td>
+<td>SoA與本矩陣之適用性、狀態、證據或Owner不一致。</td>
+<td>更新SoA或本矩陣並保留修訂紀錄。</td>
+<td> 適用性聲明書 SoA</td>
+</tr>
+</tbody>
+</table>
+<div class="tksg-copyright">© 2026 TechKnowledge Services Group (TKSG). All Rights Reserved.</div></section><script src="../assets/document-dates.js"></script></body>
+</html>
